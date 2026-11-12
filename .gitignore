@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+
+# Test and coverage outputs
+coverage/
+playwright-report/
+test-results/
+.nyc_output/
+
+# Environment variables (keep the public template)
+.env
+.env.*
+!.env.example
+
+# Logs and runtime files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.pid.lock
+
+# Package-manager and tooling caches
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.pnpm-store/
+*.tsbuildinfo
+.eslintcache
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor and temporary files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+
