@@ -1,0 +1,12 @@
+{
+  "name": "daily-mini-games-0001-target-tap",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node preview-server.mjs",
+    "test": "node --test",
+    "test:browser:chrome": "node tests/browser-smoke.mjs chrome http://127.0.0.1:4173/ ../../reports/0001_target-tap_browser-evidence",
+    "test:browser:edge": "node tests/browser-smoke.mjs edge http://127.0.0.1:4173/ ../../reports/0001_target-tap_browser-evidence"
+  }
+}

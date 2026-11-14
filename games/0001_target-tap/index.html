@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <title>ターゲットタップ | Daily Mini Games</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="game-title">
+      <section id="ready-screen" class="screen screen--centered" aria-labelledby="game-title">
+        <p class="eyebrow">DAILY MINI GAME 0001</p>
+        <h1 id="game-title">ターゲットタップ</h1>
+        <p class="lead">30秒間で、できるだけ多くのターゲットを狙おう！</p>
+        <ul class="rules" aria-label="遊び方">
+          <li>赤い丸をクリックまたはタップすると1点</li>
+          <li>PCではTabで選び、Enter／Spaceでも操作可能</li>
+          <li>ミスしても減点はありません</li>
+        </ul>
+        <p class="best-line">自己ベスト：<strong id="ready-best-score">0</strong>点</p>
+        <button id="start-button" class="primary-button" type="button">スタート</button>
+        <p id="ready-notice" class="notice" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="play-screen" class="screen screen--playing" aria-label="ゲームプレイ" hidden>
+        <header class="hud" aria-label="現在のゲーム状況">
+          <p>スコア <strong id="score-value">0</strong></p>
+          <p>残り時間 <strong id="time-value">30</strong>秒</p>
+        </header>
+        <div id="playfield" class="playfield" aria-label="ターゲットが現れるプレイ領域">
+          <button
+            id="target-button"
+            class="target"
+            type="button"
+            aria-label="ターゲットをタップまたはクリック"
+          ></button>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen screen--centered" aria-labelledby="result-title" hidden>
+        <p class="eyebrow">TIME UP</p>
+        <h2 id="result-title">30秒チャレンジ終了！</h2>
+        <div class="result-grid">
+          <p>今回のスコア<strong id="final-score">0</strong><span>点</span></p>
+          <p>自己ベスト<strong id="result-best-score">0</strong><span>点</span></p>
+        </div>
+        <p id="result-message" class="result-message" aria-live="polite"></p>
+        <button id="replay-button" class="primary-button" type="button">もう一度</button>
+        <p id="result-notice" class="notice" role="status" aria-live="polite"></p>
+      </section>
+
+      <noscript>このゲームを遊ぶにはJavaScriptを有効にしてください。</noscript>
+    </main>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
