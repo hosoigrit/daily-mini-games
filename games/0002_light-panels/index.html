@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <title>ひかりのパネル | Daily Mini Games</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="game-title">
+      <p id="storage-notice" class="storage-notice" role="status" aria-live="polite" hidden></p>
+
+      <section id="title-screen" class="screen screen--centered" aria-labelledby="game-title">
+        <p class="eyebrow">DAILY MINI GAME 0002</p>
+        <h1 id="game-title">ひかりのパネル</h1>
+        <ul class="rules" aria-label="遊び方">
+          <li>パネルを押すと、自分と上下左右が反転</li>
+          <li>すべてのひかりを消せばステージクリア</li>
+          <li>時間制限なし。少ない手数に挑戦しよう</li>
+        </ul>
+        <p id="progress-summary" class="progress-summary"></p>
+        <div class="button-row button-row--centered">
+          <button id="start-button" class="button button--primary" type="button">S01を始める</button>
+          <button id="open-select-button" class="button button--secondary" type="button">ステージ一覧</button>
+        </div>
+      </section>
+
+      <section id="select-screen" class="screen" aria-labelledby="select-title" hidden>
+        <header class="screen-header">
+          <div>
+            <p class="eyebrow">STAGE SELECT</p>
+            <h2 id="select-title">ステージ一覧</h2>
+          </div>
+          <button id="select-back-button" class="button button--ghost" type="button">タイトルへ</button>
+        </header>
+        <p class="section-lead">解放済みのステージは何度でも遊べます。</p>
+        <div id="stage-list" class="stage-list" aria-label="ステージ選択"></div>
+      </section>
+
+      <section id="play-screen" class="screen" aria-labelledby="play-title" hidden>
+        <header class="play-header">
+          <div>
+            <p class="eyebrow">LIGHT PANELS</p>
+            <h2 id="play-title">ステージ <span id="stage-number">01</span></h2>
+          </div>
+          <p class="move-counter">手数 <strong id="move-count">0</strong></p>
+        </header>
+        <p id="board-description" class="sr-only">点灯中のパネルをすべて消してください。</p>
+        <div id="board" class="board" aria-describedby="board-description"></div>
+        <div class="button-row button-row--centered play-actions">
+          <button id="restart-button" class="button button--secondary" type="button">やり直し</button>
+          <button id="play-select-button" class="button button--ghost" type="button">一覧へ</button>
+        </div>
+      </section>
+
+      <section id="cleared-screen" class="screen screen--centered" aria-labelledby="cleared-title" hidden>
+        <p class="eyebrow">STAGE CLEAR</p>
+        <h2 id="cleared-title" tabindex="-1">ステージクリア！</h2>
+        <div class="result-card">
+          <p>ステージ <strong id="cleared-stage">01</strong></p>
+          <p>クリア手数 <strong id="cleared-moves">0</strong></p>
+          <p>自己ベスト <strong id="cleared-best">0</strong></p>
+        </div>
+        <p id="record-message" class="record-message" aria-live="polite"></p>
+        <div class="button-row button-row--centered">
+          <button id="next-button" class="button button--primary" type="button">次へ</button>
+          <button id="replay-button" class="button button--secondary" type="button">再挑戦</button>
+          <button id="cleared-select-button" class="button button--ghost" type="button">一覧へ</button>
+        </div>
+      </section>
+
+      <section id="all-cleared-screen" class="screen screen--centered" aria-labelledby="all-cleared-title" hidden>
+        <p class="eyebrow">ALL STAGES CLEAR</p>
+        <h2 id="all-cleared-title" tabindex="-1">全ステージ制覇！</h2>
+        <p class="all-cleared-copy">6つの盤面から、すべてのひかりを消しました。</p>
+        <div class="result-card">
+          <p>最終ステージ <strong>S06</strong></p>
+          <p>クリア手数 <strong id="final-stage-moves">0</strong></p>
+          <p>自己ベスト <strong id="final-stage-best">0</strong></p>
+        </div>
+        <div class="button-row button-row--centered">
+          <button id="all-replay-button" class="button button--secondary" type="button">S06に再挑戦</button>
+          <button id="all-select-button" class="button button--primary" type="button">ステージ一覧へ</button>
+        </div>
+      </section>
+
+      <section id="error-screen" class="screen screen--centered" aria-labelledby="error-title" hidden>
+        <p class="eyebrow">LOAD ERROR</p>
+        <h2 id="error-title">ゲームを読み込めません</h2>
+        <p>ステージデータを確認して、ページを再読み込みしてください。</p>
+      </section>
+
+      <noscript>このゲームを遊ぶにはJavaScriptを有効にしてください。</noscript>
+    </main>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
