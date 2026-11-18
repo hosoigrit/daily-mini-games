@@ -1,0 +1,8 @@
+{
+  "name": "daily-mini-games-0003-30sec-survival",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}
