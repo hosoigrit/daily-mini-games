@@ -61,10 +61,10 @@ Game #0004専用ディレクトリ以外の作成・修正は行っていない�
 ## TC-001〜046サマリー
 
 - 総数: 46
-- PASS: 45
+- PASS: 46
 - FAIL: 0
 - BLOCKED: 0
-- NOT RUN: 1（TC-045の画面回転・拡大・極細ブロックの視認性）
+- NOT RUN: 0
 - P0/P1の自動テストに未解決FAILなし
 
 ## 修正ループ
@@ -114,19 +114,20 @@ Game #0004専用ディレクトリ以外の作成・修正は行っていない�
 
 | 端末 | ブラウザ | 結果 | 確認内容 |
 | --- | --- | --- | --- |
-| iPhone | Safari | PASS | ゲーム操作、CLEAR画面、GAME OVER画面 |
-| Android | Chrome | PASS | ゲーム操作、CLEAR画面、GAME OVER画面 |
-| iPad | Safari | PASS | ゲーム操作、CLEAR画面、GAME OVER画面 |
-| Windows PC | Edge | PASS | ゲーム操作、CLEAR画面、GAME OVER画面 |
+| iPhone | Safari | PASS | AT-01〜AT-12 |
+| Android | Chrome | PASS | AT-01〜AT-12 |
+| iPad | Safari | PASS | AT-01〜AT-12 |
+| Windows PC | Edge | PASS | AT-01〜AT-12 |
 
 - TC-042 iPhone Safari実機確認: PASS
+- TC-045 画面回転・ブラウザ拡大・極細ブロック視認性: PASS
+- AT-01〜AT-12: 全端末でPASS（2026-11-19ユーザー最終確認）
 - Windows Chromeの人間による手動操作: NOT RUN（Chrome自動確認はPASS）
-- 画面回転、ブラウザ拡大、極細ブロックの視認性: NOT RUN
 - 端末型番、OS・ブラウザの詳細版、個別操作の証拠画像: 未提出
 
 ## 未実施・残存リスク
 
 - 人間によるPC Chromeの手動操作: NOT RUN（Windows EdgeはPASS）
 - PERFECT難易度の主観評価: NOT RUN
-- 画面回転、ブラウザ拡大、極細ブロックの視認性: NOT RUN
+- 端末型番、OS・ブラウザ詳細版、個別操作の証拠画像: 未提出（推測・補完なし）
 - mainへのマージと公開承認: 未実施

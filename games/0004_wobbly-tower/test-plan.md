@@ -18,14 +18,14 @@
 | TC-042 | P1 | PASS | 2026-11-19、ユーザー本人がiPhone Safari実機でゲーム操作、CLEAR、GAME OVERを確認 |
 | TC-043 | P2 | PASS | 文字契約テストとPC/モバイル画像で確認 |
 | TC-044 | P2 | PASS | 揺れ前後でモデル不変、reduced motion時オフセット0 |
-| TC-045 | P2 | NOT RUN | CSS契約はPASS。画面回転・拡大・体感確認は人間未実施 |
+| TC-045 | P2 | PASS | CSS契約PASS。2026-11-19、ユーザー本人がAT-11（画面回転・拡大）とAT-12（極細ブロック視認性）を全端末で確認 |
 | TC-046 | P0 | PASS | 既存0001〜0003の自動テスト30/30、36/36、45/45。既存ファイル変更なし |
 
 ## TCサマリー
 
 | 総数 | PASS | FAIL | BLOCKED | NOT RUN |
 | ---: | ---: | ---: | ---: | ---: |
-| 46 | 45 | 0 | 0 | 1 |
+| 46 | 46 | 0 | 0 | 0 |
 
 ## 独立レビュー指摘の回帰テスト
 
@@ -68,5 +68,6 @@
 - LAN追加テスト: 7件
 - Nodeテスト合計: 76件（既存69＋LAN追加7、76 PASS / 0 FAIL）
 - iPhone Safari、Android Chrome、iPad Safari、Windows Edgeの実機／実ブラウザ操作: PASS（2026-11-19ユーザー報告）
+- AT-01〜AT-12: 全端末でPASS（2026-11-19ユーザー最終確認）
 - Windows Chromeの人間による手動操作: NOT RUN（Chrome自動確認はPASS）
-- 画面回転、ブラウザ拡大、極細ブロックの視認性: NOT RUN
+- 画面回転、ブラウザ拡大、極細ブロックの視認性: PASS
