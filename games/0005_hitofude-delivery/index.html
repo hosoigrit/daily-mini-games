@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#173f4f">
+    <title>ひとふで配達 | Game #0005</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="title-screen" class="screen title-screen" aria-labelledby="game-title">
+        <div class="brand-mark" aria-hidden="true">🚚</div>
+        <p class="eyebrow">DAILY MINI GAME #0005</p>
+        <h1 id="game-title">ひとふで配達</h1>
+        <p class="lead">荷物を全部集めて、同じ道を通らずゴールへ！</p>
+        <button id="start-button" class="primary-button" type="button">あそぶ</button>
+        <div class="how-to">
+          <h2>遊び方</h2>
+          <p>となりのマスをタップするか、道をなぞって配達します。通れるのは上下左右だけです。</p>
+        </div>
+      </section>
+
+      <section id="stage-screen" class="screen" aria-labelledby="stage-title" hidden>
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow">CHOOSE A ROUTE</p>
+            <h2 id="stage-title">ステージを選ぶ</h2>
+          </div>
+          <button id="back-title-button" class="text-button" type="button">タイトルへ</button>
+        </div>
+        <p id="storage-warning" class="notice warning" role="status" hidden></p>
+        <p id="all-clear-summary" class="notice success" hidden></p>
+        <div id="stage-grid" class="stage-grid"></div>
+      </section>
+
+      <section id="play-screen" class="screen play-screen" aria-labelledby="play-title" hidden>
+        <header class="play-header">
+          <div>
+            <p class="eyebrow">DELIVERY ROUTE</p>
+            <h2 id="play-title">ステージ <span id="stage-number">1</span></h2>
+          </div>
+          <div class="score-card"><span>スコア</span><strong id="score-value">1000</strong></div>
+        </header>
+
+        <div class="status-strip" aria-live="polite">
+          <span>📦 <strong id="parcel-value">0/1</strong></span>
+          <span>💡 <strong id="hint-value">2/2</strong></span>
+        </div>
+
+        <div id="board" class="board" role="grid" aria-label="配達盤面"></div>
+        <p id="play-message" class="play-message" role="status">となりのマスをタップするか、道をなぞってください</p>
+
+        <div class="controls" aria-label="ゲーム操作">
+          <button id="undo-button" type="button">↶ 1マス戻る</button>
+          <button id="reset-button" type="button">リセット</button>
+          <button id="hint-button" class="hint-button" type="button">💡 ヒント</button>
+        </div>
+        <button id="exit-button" class="text-button exit-button" type="button">ステージ選択へ</button>
+      </section>
+
+      <section id="result-screen" class="screen result-screen" aria-labelledby="result-title" hidden>
+        <p class="eyebrow">DELIVERY COMPLETE</p>
+        <h2 id="result-title">配達完了！</h2>
+        <div id="result-stars" class="result-stars" aria-label="星3">★★★</div>
+        <p id="result-label" class="result-label">PERFECT</p>
+        <p class="result-score"><strong id="result-score">1000</strong><span>点</span></p>
+        <p id="best-message" class="notice success"></p>
+        <p id="result-storage-warning" class="notice warning" role="status" hidden></p>
+        <p id="total-score" class="total-score"></p>
+        <div class="result-actions">
+          <button id="retry-button" type="button">もう一度</button>
+          <button id="next-button" class="primary-button" type="button">次のステージ</button>
+          <button id="result-stage-button" class="text-button" type="button">ステージを選ぶ</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
+

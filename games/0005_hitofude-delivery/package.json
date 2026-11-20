@@ -1,0 +1,11 @@
+{
+  "name": "daily-mini-games-0005-hitofude-delivery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node tests/preview-server.mjs",
+    "browser-check": "node tests/browser-check.mjs"
+  }
+}
+
