@@ -2,11 +2,11 @@
 
 ## 1. 総合判定
 
-**品質ゲートはHOLD**。修正後に実行可能な計画ケースはPASSしたが、人間が正式手順で行うIN-07とBR-01〜05、および#0005公開導線を対象とするRG-03の計7件はNOT RUN。ユーザーはiPhone Safari、iPad Safari、Android ChromeでLAN配信版が起動・実行できることを確認したが、全6面・全例外操作の正式受入ではないためPASSへ変更しない。ユーザーは残存リスクを認識したうえで2026-11-20に公開を明示承認した。
+**品質ゲートはHOLD、公開は承認済み・完了**。修正後に実行可能な計画ケースと公開後導線RG-03はPASSした。人間が正式手順で行うIN-07とBR-01〜05の計6件はNOT RUN。ユーザーはiPhone Safari、iPad Safari、Android ChromeでLAN配信版が起動・実行できることを確認したが、全6面・全例外操作の正式受入ではないためPASSへ変更しない。ユーザーは残存リスクを認識したうえで2026-11-20に公開を明示承認し、同日にGitHub Pages公開と実URL確認を完了した。
 
 | 総数 | PASS | FAIL | BLOCKED | NOT RUN | N/A |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 56 | 49 | 0 | 0 | 7 | 0 |
+| 56 | 50 | 0 | 0 | 6 | 0 |
 
 ## 2. 実行環境
 
@@ -78,7 +78,7 @@
 | BR-05 | NOT RUN | Android Chrome実機 | ユーザーがLAN配信版の起動・実行を確認。ただし正式手順・全6面の証拠なし |
 | RG-01 | PASS | Node＋Chrome | 相対CSS/JS、サブパスURLで起動、外部通信0 |
 | RG-02 | PASS | Node回帰 | #0001 30/30、#0002 36/36、#0003 45/45、#0004 76/76 |
-| RG-03 | NOT RUN | 公開後の導線検証 | `docs/`と既存ゲームにtracked差分がないことは確認済み。#0005の公開用コピー・トップページ導線は未実装／未公開であり、実リンク動作は未検証 |
+| RG-03 | PASS | GitHub Pages実URL＋ブラウザ操作 | 一覧にGame #0005表示、リンク起動、ステージ1移動、ヒント動作、CSS/JS読込、既存Game #0001〜#0004リンク維持、対象URL8件HTTP 200、コンソールエラー0 |
 
 ## 4. 実行コマンドと終了コード
 
@@ -97,6 +97,11 @@
 | `npm test` | `games/0003_30sec-survival` | 0 | 45/45 PASS |
 | `npm test` | `games/0004_wobbly-tower` | 0 | 76/76 PASS |
 | `git diff --name-only -- docs games/0001_target-tap ... games/0004_wobbly-tower` | リポジトリルート | 0 | 出力なし |
+| `Get-FileHash -Algorithm SHA256` | ソース／`docs/games/0005_hitofude-delivery` | 0 | 実行時8ファイルすべて一致 |
+| `npm run browser-check` | ソース版 | 0 | UI-01〜05、IR-0005-02〜04、例外0・外部通信0 |
+| `GAME_ROOT=<docs版> npm run browser-check` | 公開用コピー | 0 | ソース版と同じシナリオPASS、例外0・外部通信0 |
+| 公開URL HTTP GET | GitHub Pages | 0 | 一覧、Game #0001〜#0005、#0005 CSS/JSの8 URLがすべて200 |
+| 公開URLブラウザ操作 | GitHub Pages | 0 | 一覧→#0005→ステージ1→1マス移動→ヒントを確認、コンソールエラー0 |
 
 ## 5. 修正ループ
 
@@ -139,7 +144,6 @@
 | P1 | iPad Safari・Android Chrome正式受入未完了 | BR-04/05 | 起動確認済み。実機で正式手順を実施 |
 | P1 | 低性能実機のヒント停止感 | 各面初期・途中でヒント時間を測る | 実測を記録。頻繁なUNAVAILABLEなら仕様変更せず再設計を相談 |
 | P2 | 難易度・文言の人間試遊 | 6面を順にプレイ | 独立レビュー／人間受入で調整案を出し、ルール変更は承認後に行う |
-| P1 | RG-03公開後導線 | #0005の`docs/`コピーとトップページ導線が別途承認・実装された後にリンクを操作 | 現工程ではNOT RUN。Git／公開許可後に別途検証 |
 
 ## 9. 独立レビュー指摘の対応結果
 
@@ -149,5 +153,5 @@
 | IR-0005-02 Medium | PASS | 純粋な合法前進列挙と行き止まり判定、即時案内を追加 | Node IR-0005-02A〜D、Chrome deadEndUi | 実機表示は未確認 |
 | IR-0005-03 Medium | PASS | 保存失敗直後のリザルトへ再読込後に残らない旨を表示 | Node IR-0005-01D/03、Chrome failedSaveResult、画像 | 実機保存禁止環境は未確認 |
 | IR-0005-04 Low | PASS | 強調時間2.5秒、操作・画面切替時のタイマー取消と世代無効化 | Chrome hintVisible/hintExpired/afterStaleHintTimer | 実機の見え方は未確認 |
-| IR-0005-05 証跡 | PASS | RG-03をNOT RUNへ変更し、既存無変更確認と公開後リンク未検証を分離 | 56件集計49 PASS / 7 NOT RUN | 公開導線実装後にRG-03を実行 |
+| IR-0005-05 証跡 | PASS | 公開前はRG-03をNOT RUNとし、既存無変更確認と公開後リンク未検証を分離 | 修正時49 PASS / 7 NOT RUN、公開後50 PASS / 6 NOT RUN | 2026-11-20に実URLでRG-03を実行しPASS |
 
