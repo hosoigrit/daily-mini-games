@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101713">
+  <title>交差点パニック</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./ui/app.mjs"></script>
+</head>
+<body>
+  <main class="shell" id="game" data-status="READY">
+    <header class="masthead">
+      <p><span class="mark" aria-hidden="true">✣</span> DAILY MINI GAMES <span class="edition">/ 0006</span></p>
+      <p class="difficulty"><span class="dot" aria-hidden="true"></span> HARD-A <small>試験用難易度</small></p>
+    </header>
+    <div class="layout">
+      <section class="intro" id="title-panel">
+        <h1>交差点<span>パニック</span></h1>
+        <p class="intro-copy">信号を切り替え、交差点を60秒間守ろう。<br>同じ方向に9台目が到着するとゲームオーバー。</p>
+        <button type="button" class="primary" id="start">スタート <kbd>Enter</kbd></button>
+        <p class="keyboard-guide"><kbd>1</kbd> 東西　<kbd>2</kbd> 南北　<kbd>P</kbd> 一時停止・再開</p>
+        <details class="traffic-guide" id="traffic-guide">
+          <summary id="traffic-guide-summary">交通ルール・攻略のヒント</summary>
+          <div class="traffic-guide-content">
+            <p>車両が来る方向は時間帯によって変わります。北・南・東・西の待機台数を見て、青信号を切り替えましょう。</p>
+            <table aria-label="時間帯ごとの交通量">
+              <thead><tr><th scope="col">時間帯</th><th scope="col">到着ペース</th><th scope="col">南北 / 東西</th></tr></thead>
+              <tbody id="traffic-guide-rows"></tbody>
+            </table>
+            <p id="traffic-guide-switch"></p>
+            <p id="traffic-guide-loss"></p>
+            <p>攻略のコツ：赤信号側が混雑する前に切り替えを判断しましょう。方向の確率は各時間帯の傾向で、次の1台を予告するものではありません。</p>
+          </div>
+        </details>
+      </section>
+      <section class="dashboard" id="dashboard" aria-label="ゲーム情報" hidden>
+        <div class="hud">
+          <div><span>残り時間</span><strong><span id="remaining">60.0</span><small>秒</small></strong></div>
+          <div><span>スコア</span><strong id="score">0</strong></div>
+          <button class="pause-button" type="button" id="pause" aria-label="一時停止 (P)"><span aria-hidden="true">Ⅱ</span> 一時停止</button>
+        </div>
+        <div class="signal-line">
+          <span class="signal-dot" id="signal-dot" aria-hidden="true"></span>
+          <strong id="signal-label">東西 青</strong>
+          <span id="transition-time"></span>
+        </div>
+      </section>
+      <section class="board-panel" id="board-panel" aria-label="交差点と方向別の待機台数">
+        <div class="board">
+          <svg id="intersection" viewBox="0 0 480 480" aria-hidden="true">
+            <defs>
+              <pattern id="ground" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 16V0H16" fill="none" stroke="#365447" stroke-opacity=".35"/></pattern>
+              <g id="corner">
+                <rect x="12" y="12" width="160" height="160" rx="21" fill="#21382d" stroke="#3a5647"/>
+                <rect x="22" y="22" width="140" height="140" rx="15" fill="url(#ground)"/>
+                <path d="M24 53V24h29m108 108v29h-29" fill="none" stroke="#638171" stroke-opacity=".48" stroke-width="2"/>
+                <rect x="69" y="64" width="68" height="72" rx="11" fill="#2a4436" stroke="#3b5848"/>
+                <path d="M84 83h38m-38 10h26m-26 10h38" stroke="#55705e" stroke-width="2" opacity=".55"/>
+                <circle cx="48" cy="130" r="8" fill="#385744"/><circle cx="42" cy="111" r="5" fill="#41634e"/>
+              </g>
+              <g id="crossing" stroke="#b8c8b9" stroke-width="4" opacity=".75">
+                <path d="M192 180v11m11-11v11m11-11v11m11-11v11m11-11v11m11-11v11m11-11v11m11-11v11m11-11v11m11-11v11"/>
+              </g>
+              <g id="markings" fill="none" stroke="#8da296" stroke-width="2" opacity=".65">
+                <path d="M240 0v171" stroke-dasharray="12 9"/>
+                <path d="M184 0v169m112-169v169" opacity=".6"/>
+                <path d="M199 164h29m-14-27v14l-5-6m5 6 5-6"/>
+              </g>
+              <g id="car">
+                <rect x="-7" y="-7" width="14" height="14" rx="4" fill="currentColor" stroke="#0c1811" stroke-width="1.5"/>
+                <path d="M-4-2h8v4h-8z" fill="#1e3b35"/>
+                <path d="M-4 4h2m4 0h2" stroke="#f1f5ce" stroke-width="1.1"/>
+              </g>
+            </defs>
+            <rect width="480" height="480" fill="#182821"/>
+            <path d="M178 0h124v178h178v124H302v178H178V302H0V178h178Z" fill="#2b3730"/>
+            <path d="M178 0v158q0 20-20 20H0m302-178v158q0 20 20 20h158M178 480V322q0-20-20-20H0m302 178V322q0-20 20-20h158" stroke="#718576" stroke-width="2" fill="none"/>
+            <use href="#corner"/><use href="#corner" transform="rotate(90 240 240)"/><use href="#corner" transform="rotate(180 240 240)"/><use href="#corner" transform="rotate(270 240 240)"/>
+            <use href="#markings"/><use href="#markings" transform="rotate(90 240 240)"/><use href="#markings" transform="rotate(180 240 240)"/><use href="#markings" transform="rotate(270 240 240)"/>
+            <use href="#crossing"/><use href="#crossing" transform="rotate(90 240 240)"/><use href="#crossing" transform="rotate(180 240 240)"/><use href="#crossing" transform="rotate(270 240 240)"/>
+            <rect x="206" y="206" width="68" height="68" rx="9" fill="none" stroke="#9ba48b" stroke-dasharray="4 7" opacity=".36"/>
+            <g id="road-signals"></g>
+            <g id="cars"></g>
+            <g id="passing"></g>
+          </svg>
+          <div class="queue north" data-direction="N"><span>北</span><strong>0</strong><span class="capacity">/ 8</span><small>通常</small></div>
+          <div class="queue east" data-direction="E"><span>東</span><strong>0</strong><span class="capacity">/ 8</span><small>通常</small></div>
+          <div class="queue south" data-direction="S"><span>南</span><strong>0</strong><span class="capacity">/ 8</span><small>通常</small></div>
+          <div class="queue west" data-direction="W"><span>西</span><strong>0</strong><span class="capacity">/ 8</span><small>通常</small></div>
+        </div>
+      </section>
+      <section class="controls" id="controls" aria-label="信号操作" hidden>
+        <button type="button" class="direction" id="east-west"><span class="arrow" aria-hidden="true">↔</span><span>東西 <small></small></span><kbd>1</kbd></button>
+        <button type="button" class="direction" id="north-south"><span class="arrow" aria-hidden="true">↕</span><span>南北 <small></small></span><kbd>2</kbd></button>
+      </section>
+      <section class="records" id="records" aria-label="最高記録">
+        <div><span>最高クリア</span><strong id="best-clear">—</strong></div>
+        <div><span>最高挑戦</span><strong id="best-attempt">—</strong></div>
+        <p id="storage-warning" role="status" hidden></p>
+      </section>
+    </div>
+    <div class="sr-only" id="announcements" role="status" aria-atomic="true"></div>
+    <dialog id="pause-dialog" aria-labelledby="pause-heading" aria-describedby="pause-reason">
+      <h2 id="pause-heading">一時停止</h2>
+      <p id="pause-reason"></p>
+      <button type="button" class="primary" id="resume" autofocus>再開 <kbd>Enter</kbd></button>
+      <button type="button" class="secondary" id="pause-retry">新しい挑戦</button>
+    </dialog>
+    <dialog id="result-dialog" aria-labelledby="result-heading" aria-describedby="result-reason">
+      <h2 id="result-heading"></h2>
+      <p id="result-reason"></p>
+      <dl class="result-stats" id="result-stats">
+        <div><dt>得点</dt><dd id="final-score"></dd></div>
+        <div><dt>通過台数</dt><dd id="final-passed"></dd></div>
+        <div><dt>生存時間</dt><dd id="final-time"></dd></div>
+        <div><dt>切替回数</dt><dd id="final-switches"></dd></div>
+        <div><dt>最高クリア</dt><dd id="final-best-clear"></dd></div>
+        <div><dt>最高挑戦</dt><dd id="final-best-attempt"></dd></div>
+      </dl>
+      <p id="result-storage-warning" role="status" hidden></p>
+      <p id="session-reference"></p>
+      <details id="fault-info" hidden><summary>診断情報</summary><pre id="fault-code"></pre></details>
+      <button type="button" class="primary" id="retry" autofocus>次の挑戦 <kbd>Enter</kbd></button>
+    </dialog>
+  </main>
+</body>
+</html>
