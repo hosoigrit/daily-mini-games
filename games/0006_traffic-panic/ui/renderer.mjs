@@ -19,7 +19,7 @@ const formatRecord = (value) => value === null ? "—" : String(value);
 const seconds = (ticks) => (ticks * PLAY_CONFIG.tickDurationMs / 1000).toFixed(1);
 
 export function describeResult(status, session) {
-  if (status === "ERROR") return ["技術的問題による停止", "診断情報を確認するか、新しいセッションで再試行できます。"];
+  if (status === "ERROR") return ["ゲームを続けられませんでした", "「次の挑戦」からもう一度お試しください。"];
   if (session.result === "CLEAR") return ["CLEAR", "60秒間、交差点を守り切りました。"];
   const direction = Object.keys(FAILURE_DIRECTIONS).find((key) => FAILURE_DIRECTIONS[key] === session.failureDirection);
   return ["GRIDLOCK", `${DIRECTIONS[direction]}から9台目が到着し、渋滞が発生しました。`];
@@ -140,7 +140,9 @@ export function createRenderer(doc) {
     byId("fault-info").hidden = !isError;
     byId("fault-info").open = false;
     text(byId("fault-code"), isError ? JSON.stringify(fault, null, 2) : "");
-    text(byId("session-reference"), session ? `HARD-A · seed ${session.seedId}` : "HARD-A");
+    const reference = byId("session-reference");
+    reference.hidden = !session;
+    text(reference, session ? `プレイ番号 ${session.seedId}` : "");
     const warning = byId("result-storage-warning");
     warning.hidden = records.warning === null;
     text(warning, records.warning ?? "");

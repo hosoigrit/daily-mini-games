@@ -30,9 +30,6 @@ p, h1, h2 { margin: 0; }
 }
 .mark { color: var(--lime); font-size: 1.25rem; vertical-align: middle; margin-right: 5px; }
 .edition { color: var(--muted); }
-.difficulty { color: var(--lime); }
-.difficulty small { color: var(--muted); font: 500 .69rem system-ui, sans-serif; letter-spacing: 0; }
-.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); margin-right: 3px; }
 .layout { display: grid; gap: 12px; max-width: 540px; margin-inline: auto; }
 .intro { padding: 6px 0 4px; }
 h1 { font-size: clamp(2rem, 9vw, 4.8rem); line-height: 1.08; letter-spacing: -.045em; font-weight: 900; }
