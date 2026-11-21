@@ -1,0 +1,8 @@
+{
+  "name": "daily-mini-games-0006-traffic-panic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}
