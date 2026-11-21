@@ -178,6 +178,7 @@ try {
     await load(url);
   }
   assert.equal(await status(), "READY");
+  assert.doesNotMatch(await evaluate("document.querySelector('.masthead').textContent"), /試験|テスト|HARD-A/i);
   await shot("01-ready-1280");
   await click("traffic-guide-summary");
   assert.equal(await evaluate("document.getElementById('traffic-guide').open"), true);
@@ -290,6 +291,7 @@ try {
   assert.equal(await status(), "FINISHED");
   assert.equal(await label("result-heading"), "GRIDLOCK");
   assert.match(await label("result-reason"), /北から9台目/);
+  assert.equal(await label("session-reference"), "プレイ番号 2001");
   assert.equal(await label("final-score"), "280");
   assert.equal(await label("final-time"), "44.9 秒");
   assert.equal(await label("final-best-clear"), "—");
@@ -311,6 +313,7 @@ try {
   await key("2", "Digit2", 50);
   await tick(4);
   assert.equal(await label("result-heading"), "CLEAR");
+  assert.equal(await label("session-reference"), "プレイ番号 2001");
   assert.equal(await label("final-time"), "60.0 秒");
   assert.equal(await label("final-score"), "490");
   assert.equal(await label("final-best-clear"), "490");
@@ -389,7 +392,8 @@ try {
   await click("pause");
   await click("pause-retry");
   assert.equal(await status(), "ERROR");
-  assert.match(await label("result-heading"), /技術的問題による停止/);
+  assert.equal(await label("result-heading"), "ゲームを続けられませんでした");
+  assert.equal(await evaluate("document.getElementById('session-reference').hidden"), true);
   assert.equal(JSON.parse(await label("fault-code")).code, "PLAY_SEED_UNAVAILABLE");
   await shot("13-seed-retry-fallback-1280");
   await evaluate("e3Test.restoreEntropy()");

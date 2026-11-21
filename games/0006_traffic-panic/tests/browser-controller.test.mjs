@@ -200,7 +200,7 @@ test("E3-UT-17 a session fault stops technical play with a distinct explanation 
   h.dispatch("START");
   assert.equal(h.status, "ERROR");
   assert.equal(h.view.fault.code, "SESSION_UPDATE_FAILED");
-  assert.match(describeResult(h.status, h.view.session)[0], /技術的問題/);
+  assert.equal(describeResult(h.status, h.view.session)[0], "ゲームを続けられませんでした");
   h.dispatch("RETRY");
   assert.equal(h.status, "READY");
 });
