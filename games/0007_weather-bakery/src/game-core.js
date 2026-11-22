@@ -45,6 +45,10 @@ export function calculateTrade(scenarioId, day, price, baked, cash) {
   });
 }
 
+export function totalProfit(state) {
+  return state.cash - INITIAL_CASH;
+}
+
 export function rankForProfit(scenarioId, profit) {
   const week = getScenario(scenarioId);
   if (!week || !Number.isSafeInteger(profit)) {
