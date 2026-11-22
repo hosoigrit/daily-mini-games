@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7efdf">
+  <title>おてんきベーカリー</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <main id="game">
+    <h1>おてんきベーカリー</h1>
+    <noscript><p>遊ぶにはJavaScriptを有効にしてください。</p></noscript>
+  </main>
+  <dialog id="abort-dialog" aria-labelledby="abort-title" aria-describedby="abort-message">
+    <h2 id="abort-title">途中でやめますか？</h2>
+    <p id="abort-message">この週の進行が消えます。タイトルに戻りますか？</p>
+    <div class="actions">
+      <button type="button" data-action="CANCEL_ABORT" autofocus>続ける</button>
+      <button type="button" class="primary" data-action="CONFIRM_ABORT">タイトルに戻る</button>
+    </div>
+  </dialog>
+</body>
+</html>
