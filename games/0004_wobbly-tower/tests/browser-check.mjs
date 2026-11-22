@@ -116,11 +116,28 @@ try {
   await writeFile(pausedMissScreenshotPath, Buffer.from(pausedMissScreenshot.data, "base64"));
   const missResumeStable = await touchHold(client, '[data-action="resume"]', 150);
   assert(missResumeStable, "MISS settling resume button remains connected during touch hold");
-  await delay(100);
-  assert(
-    await evaluate(client, `document.querySelector('#game-overlay').textContent.includes('GAME OVER')`),
-    "second immediate drop reaches GAME OVER",
-  );
+  const gameOver = await evaluate(client, `(async () => {
+    const deadline = performance.now() + 2000;
+    let observed;
+    do {
+      const overlay = document.querySelector('#game-overlay');
+      const style = getComputedStyle(overlay);
+      observed = {
+        visible: !overlay.hidden && overlay.getClientRects().length > 0
+          && style.visibility === 'visible' && Number(style.opacity) > 0,
+        text: overlay.textContent.trim(),
+        status: document.querySelector('#status-message').textContent,
+      };
+      if (observed.visible && overlay.innerText.includes('GAME OVER')) {
+        return { reached: true, ...observed };
+      }
+      const remaining = deadline - performance.now();
+      if (remaining <= 0) break;
+      await new Promise((resolve) => setTimeout(resolve, Math.min(40, remaining)));
+    } while (performance.now() < deadline);
+    return { reached: false, ...observed };
+  })()`);
+  assert(gameOver.reached, `second immediate drop reaches GAME OVER within 2000ms; last observed: ${JSON.stringify(gameOver)}`);
   const retryStable = await touchHold(client, '[data-action="retry"]', 150);
   assert(retryStable, "retry button remains connected during touch hold");
   await delay(80);
