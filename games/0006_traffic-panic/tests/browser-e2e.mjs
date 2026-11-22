@@ -162,18 +162,25 @@ try {
   if (pages) {
     await load(origin + PAGES_PREFIX, ".game-list");
     const links = await evaluate("Array.from(document.querySelectorAll('.game-list .game-link'), a => [a.getAttribute('href'), a.href, a.textContent.trim()])");
-    assert.deepEqual(links.map(([href]) => href), [
+    const gameHref = "./games/0006_traffic-panic/";
+    const legacyHrefs = [
       "./games/0001_target-tap/", "./games/0002_light-panels/", "./games/0003_30sec-survival/",
-      "./games/0004_wobbly-tower/", "./games/0005_hitofude-delivery/", "./games/0006_traffic-panic/",
-    ]);
-    assert.equal(links.at(-1)[2], "Game 0006：交差点パニック");
-    for (const [, target] of links.slice(0, -1)) assert.equal((await fetch(target)).status, 200);
+      "./games/0004_wobbly-tower/", "./games/0005_hitofude-delivery/", gameHref,
+    ];
+    const hrefs = links.map(([href]) => href);
+    assert.deepEqual(hrefs.slice(0, legacyHrefs.length), legacyHrefs);
+    assert.equal(new Set(hrefs).size, hrefs.length, "Pages game links must have unique hrefs");
+
+    const gameLink = links.find(([href]) => href === gameHref);
+    assert.equal(gameLink?.[2], "Game 0006：交差点パニック");
+    for (const [, target] of links) assert.equal((await fetch(target)).status, 200, target);
     await shot("12-pages-index-1280");
-    await evaluate("document.querySelector('.game-list li:last-child a').id = 'tested-game-link'; globalThis.e3BeforeNavigation = true");
+    const gameLinkSelector = `.game-list .game-link[href="${gameHref}"]`;
+    await evaluate(`document.querySelector(${JSON.stringify(gameLinkSelector)}).id = 'tested-game-link'; globalThis.e3BeforeNavigation = true`);
     await click("tested-game-link");
     await waitForDocument("#road-signals > g");
     assert.equal(await evaluate("location.href"), url);
-    pass("E5-E2E-01", "Pages index lists all six games, legacy links respond, actual click opens #0006 under /daily-mini-games/");
+    pass("E5-E2E-01", "Pages index preserves six legacy links, all links respond, actual click opens #0006 under /daily-mini-games/");
   } else {
     await load(url);
   }
