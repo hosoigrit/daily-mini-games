@@ -1,0 +1,297 @@
+{
+  "schemaVersion": "planning-v0.4",
+  "rulesVersion": "rules-v3",
+  "description": "設計資料・検算オラクル。ゲーム実装ではない。v0.4では雨天価格5のペナルティを5に変更。",
+  "settings": {
+    "initialCash": 30,
+    "unitCost": 2,
+    "maxBake": 12,
+    "prices": [
+      3,
+      4,
+      5
+    ],
+    "defaultPrice": 4,
+    "dayCount": 5,
+    "forecastMinDelta": -2,
+    "forecastMaxDelta": 2,
+    "demandCap": 12,
+    "weatherPricePenalties": {
+      "はれ": {
+        "3": 0,
+        "4": 1,
+        "5": 3
+      },
+      "くもり": {
+        "3": 0,
+        "4": 2,
+        "5": 4
+      },
+      "あめ": {
+        "3": 0,
+        "4": 2,
+        "5": 5
+      }
+    },
+    "starRateNumerator": {
+      "star1": 58,
+      "star2": 75,
+      "star3": 90
+    },
+    "starRateDenominator": 100
+  },
+  "scenarios": [
+    {
+      "id": "W01",
+      "name": "はじめての一週間",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "くもり",
+          "baseDemand": 7,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 2,
+          "weather": "あめ",
+          "baseDemand": 4,
+          "demandDelta": -1
+        },
+        {
+          "dayNo": 3,
+          "weather": "はれ",
+          "baseDemand": 8,
+          "demandDelta": 0
+        },
+        {
+          "dayNo": 4,
+          "weather": "くもり",
+          "baseDemand": 7,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 5,
+          "weather": "はれ",
+          "baseDemand": 9,
+          "demandDelta": 2
+        }
+      ],
+      "verifiedMaxProfit": 60,
+      "starThresholds": {
+        "star1": 35,
+        "star2": 45,
+        "star3": 54
+      }
+    },
+    {
+      "id": "W02",
+      "name": "あめの月曜日",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "あめ",
+          "baseDemand": 6,
+          "demandDelta": 2
+        },
+        {
+          "dayNo": 2,
+          "weather": "くもり",
+          "baseDemand": 8,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 3,
+          "weather": "あめ",
+          "baseDemand": 5,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 4,
+          "weather": "はれ",
+          "baseDemand": 8,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 5,
+          "weather": "くもり",
+          "baseDemand": 9,
+          "demandDelta": 2
+        }
+      ],
+      "verifiedMaxProfit": 69,
+      "starThresholds": {
+        "star1": 41,
+        "star2": 52,
+        "star3": 63
+      }
+    },
+    {
+      "id": "W03",
+      "name": "晴れのお祭り",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "はれ",
+          "baseDemand": 8,
+          "demandDelta": -1
+        },
+        {
+          "dayNo": 2,
+          "weather": "はれ",
+          "baseDemand": 10,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 3,
+          "weather": "くもり",
+          "baseDemand": 9,
+          "demandDelta": 0
+        },
+        {
+          "dayNo": 4,
+          "weather": "はれ",
+          "baseDemand": 9,
+          "demandDelta": 2
+        },
+        {
+          "dayNo": 5,
+          "weather": "あめ",
+          "baseDemand": 6,
+          "demandDelta": -2
+        }
+      ],
+      "verifiedMaxProfit": 79,
+      "starThresholds": {
+        "star1": 46,
+        "star2": 60,
+        "star3": 72
+      }
+    },
+    {
+      "id": "W04",
+      "name": "きまぐれ空",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "くもり",
+          "baseDemand": 10,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 2,
+          "weather": "はれ",
+          "baseDemand": 7,
+          "demandDelta": 2
+        },
+        {
+          "dayNo": 3,
+          "weather": "あめ",
+          "baseDemand": 5,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 4,
+          "weather": "くもり",
+          "baseDemand": 6,
+          "demandDelta": 2
+        },
+        {
+          "dayNo": 5,
+          "weather": "はれ",
+          "baseDemand": 8,
+          "demandDelta": 2
+        }
+      ],
+      "verifiedMaxProfit": 66,
+      "starThresholds": {
+        "star1": 39,
+        "star2": 50,
+        "star3": 60
+      }
+    },
+    {
+      "id": "W05",
+      "name": "雨のち快晴",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "あめ",
+          "baseDemand": 5,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 2,
+          "weather": "あめ",
+          "baseDemand": 6,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 3,
+          "weather": "くもり",
+          "baseDemand": 8,
+          "demandDelta": 2
+        },
+        {
+          "dayNo": 4,
+          "weather": "はれ",
+          "baseDemand": 10,
+          "demandDelta": -1
+        },
+        {
+          "dayNo": 5,
+          "weather": "はれ",
+          "baseDemand": 9,
+          "demandDelta": 0
+        }
+      ],
+      "verifiedMaxProfit": 67,
+      "starThresholds": {
+        "star1": 39,
+        "star2": 51,
+        "star3": 61
+      }
+    },
+    {
+      "id": "W06",
+      "name": "曇り空の商店街",
+      "days": [
+        {
+          "dayNo": 1,
+          "weather": "くもり",
+          "baseDemand": 9,
+          "demandDelta": 1
+        },
+        {
+          "dayNo": 2,
+          "weather": "くもり",
+          "baseDemand": 7,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 3,
+          "weather": "あめ",
+          "baseDemand": 5,
+          "demandDelta": -2
+        },
+        {
+          "dayNo": 4,
+          "weather": "くもり",
+          "baseDemand": 10,
+          "demandDelta": -1
+        },
+        {
+          "dayNo": 5,
+          "weather": "はれ",
+          "baseDemand": 7,
+          "demandDelta": 2
+        }
+      ],
+      "verifiedMaxProfit": 60,
+      "starThresholds": {
+        "star1": 35,
+        "star2": 45,
+        "star3": 54
+      }
+    }
+  ]
+}

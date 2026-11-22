@@ -1,0 +1,8 @@
+{
+  "name": "daily-mini-games-0007-weather-bakery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}
