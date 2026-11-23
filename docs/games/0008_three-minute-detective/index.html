@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#212a31">
+  <meta name="description" content="3人の証言と客観的な証拠を組み合わせ、真犯人を論理的に立証する短編推理ゲーム。">
+  <title>3分探偵 | Game #0008</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> DAILY MINI GAMES <span class="game-number">/ 0008</span></div>
+      <span class="edition">A CASE OF LOGIC</span>
+    </header>
+    <section class="hero" aria-labelledby="game-heading">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> CASE FILES / 全4事件</p>
+        <h1 id="game-heading"><span>3分</span>探偵</h1>
+        <p class="hero-en">THREE MINUTE DETECTIVE</p>
+        <p class="hero-desc">嘘を見抜くだけでは、事件は解けない。<br>証拠を重ねて、真犯人を<strong>立証</strong>せよ。</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="4つの事件ファイルの象徴として、青い宝石の消えたガラス展示ケース">
+        <div class="wall-light"></div>
+        <div class="glass-top"></div><div class="glass-side"></div>
+        <div class="pedestal"><div class="jewel-outline">◆</div><span>THE BLUE GEM</span></div>
+        <div class="case-label">CASE FILES <span>ARCHIVE</span></div>
+      </div>
+    </section>
+    <main id="app" aria-label="推理ゲーム"></main>
+    <footer class="footer"><span>© Daily Mini Games / Original Mystery</span><span>GAME 0008 · v0.7.4 QA PREVIEW</span></footer>
+  </div>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="accuse-dialog" aria-labelledby="accuse-title" aria-describedby="accuse-desc">
+    <h2 id="accuse-title">この推理で告発しますか？</h2>
+    <p id="accuse-desc">確定後に立証を判定します。不成立の場合はスコアが減点されます。</p>
+    <div class="dialog-actions"><button type="button" class="btn btn-muted" data-action="cancel-accuse">証拠を見直す</button><button type="button" class="btn btn-primary" data-action="confirm-accuse">告発を確定</button></div>
+  </dialog>
+  <dialog id="reveal-dialog" aria-labelledby="reveal-title" aria-describedby="reveal-desc">
+    <h2 id="reveal-title">真相を確認しますか？</h2>
+    <p id="reveal-desc">真相を確認すると、この挑戦は自力解決として記録されません。</p>
+    <div class="dialog-actions"><button type="button" class="btn btn-muted" data-action="cancel-reveal">捜査を続ける</button><button type="button" class="btn btn-primary" data-action="confirm-reveal">真相を見る</button></div>
+  </dialog>
+  <dialog id="abort-dialog" aria-labelledby="abort-title" aria-describedby="abort-desc">
+    <h2 id="abort-title">捜査を中断しますか？</h2>
+    <p id="abort-desc">今回の証拠選択とスコアは失われます。これまでの自力解決記録は残ります。</p>
+    <div class="dialog-actions"><button type="button" class="btn btn-muted" data-action="cancel-abort">捜査を続ける</button><button type="button" class="btn btn-primary" data-action="confirm-abort">事件一覧へ戻る</button></div>
+  </dialog>
+  <noscript><p class="no-script">このゲームにはJavaScriptが必要です。ブラウザでJavaScriptを有効にしてください。</p></noscript>
+</body>
+</html>
