@@ -22,9 +22,9 @@ test('CASE004 distinguishes authentic-looking paper from authorized permit', () 
   const c=byCase('harbor');
   const a=byTruth(c,'har-a');
   assert.match(c.rules.join(' '),/正規.*承認.*無効/);
-  assert.match(a.premise,/印刷は正規の審査承認とは別/);
-  assert.match(card(a,'H101').body,/正規の審査承認記録はない/);
-  assert.match(card(a,'H102').body,/19:54.*印刷ログ/);
+  assert.match(a.premise,/操作は正規の審査承認とは別/);
+  assert.match(card(a,'H101').body,/正規の審査承認はなく/);
+  assert.match(card(a,'H102').body,/19:54.*印刷.*有効化/);
   assert.match(card(a,'H103').body,/掌紋認証.*タクミ/);
   assert.match(a.explanation,/承認を経ずに通行書を作成/);
   assert.doesNotMatch(card(a,'H101').body,/正規発行記録はない/);

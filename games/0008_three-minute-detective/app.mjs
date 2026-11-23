@@ -38,7 +38,7 @@ function renderSuspects(){return `<div class="suspects">${persons().map(p=>`<div
 function renderHome(){
  const c=caseInfo();
  return `<section class="paper-panel home-panel">
-    <div class="subhead"><div><p class="tiny-label">SELECT CASE FILE</p><h2>捜査する事件を選ぶ</h2></div><span class="case-pill">全${CASES.length}事件 / ${VARIANTS.length}真相</span></div>
+    <div class="subhead"><div><p class="tiny-label">SELECT CASE FILE</p><h2 tabindex="-1" data-view-heading>捜査する事件を選ぶ</h2></div><span class="case-pill">全${CASES.length}事件 / ${VARIANTS.length}真相</span></div>
     <p class="section-guide">事件を選び、複数の真相を立証しよう。未解決の真相から優先して出題されます。</p>
     <div class="case-select-grid">${CASES.map(item=>`<button type="button" class="case-select ${c.id===item.id?'is-current':''}" data-action="select-case" data-id="${item.id}" data-testid="case-${item.id}" aria-pressed="${c.id===item.id}"><span class="tiny-label">CASE ${item.number} / ${esc(item.theme)}</span><strong>${esc(item.name)}</strong><span class="case-progress">自力解決 ${caseSolved(item)} / ${item.variants.length}</span></button>`).join('')}</div>
     ${renderProgress()}
@@ -79,7 +79,7 @@ function renderBoard(){
 }
 function renderPlaying(){
   return `<section class="game-layout">${renderContext()}<section class="paper-panel gameplay-panel">${renderProgress()}
-   <div class="play-heading"><div><p class="tiny-label">CASE ${caseInfo().number} / ${esc(caseInfo().name)}</p><h2>犯人を論理で追いつめろ</h2></div><span class="play-clock">経過 <b id="elapsed-clock">${formatTime(elapsed())}</b></span></div>
+   <div class="play-heading"><div><p class="tiny-label">CASE ${caseInfo().number} / ${esc(caseInfo().name)}</p><h2 tabindex="-1" data-view-heading>犯人を論理で追いつめろ</h2></div><span class="play-clock">経過 <b id="elapsed-clock">${formatTime(elapsed())}</b></span></div>
    <div class="mobile-context"><button type="button" class="btn btn-muted mobile-context-toggle" data-action="toggle-context" aria-expanded="${state.showContext}">${state.showContext?'事件の前提と証言を閉じる ▲':'事件の前提と証言を開く ▼'}</button>${state.showContext?`<div class="mobile-context-body">${renderContext()}</div>`:''}</div>
    <div class="game-utilities"><button type="button" class="btn btn-text" data-action="abort">捜査を中断して事件一覧へ戻る</button></div>
    <nav class="tabs" aria-label="捜査画面の切り替え"><button type="button" data-action="tab-investigate" class="tab ${state.tab==='investigate'?'active':''}" aria-current="${state.tab==='investigate'?'page':'false'}">証拠を調べる <span>${state.variant.evidence.length}件</span></button><button type="button" data-action="tab-board" class="tab ${state.tab==='board'?'active':''}" aria-current="${state.tab==='board'?'page':'false'}">推理ボード <span>${state.evidence.length}件選択</span></button></nav>
@@ -91,7 +91,7 @@ function renderResult(){
   const won=state.resultType==='self-clear';
   const reviewed=state.resultType==='review-clear';
   return `<section class="paper-panel result-panel">${renderProgress()}
-    <div class="result-emblem">${won?'✦':'⌕'}</div><p class="tiny-label center">CASE FILE CLOSED</p><h2>${won?'事件解決！':reviewed?'再挑戦クリア！':'事件の真相'}</h2>
+    <div class="result-emblem">${won?'✦':'⌕'}</div><p class="tiny-label center">CASE FILE CLOSED</p><h2 tabindex="-1" data-view-heading>${won?'事件解決！':reviewed?'再挑戦クリア！':'事件の真相'}</h2>
     <p class="result-sub">${won?'証拠から犯人を立証しました。':reviewed?'既に真相を確認した事件を再び立証しました。初見・自力解決記録には加算されません。':'今回は解説を確認しました。自力解決記録には加算されません。'}</p>
     ${won?`<div class="result-stats"><div><span>スコア</span><strong>${state.score}</strong><small> / 1000</small></div><div><span>解決時間</span><strong>${formatTime(state.elapsed)}</strong></div><div><span>評価</span><strong aria-label="${starsForScore(state.score)}つ星">${'★'.repeat(starsForScore(state.score))}${'☆'.repeat(3-starsForScore(state.score))}</strong></div></div>`:''}
     <div class="solution-box"><p class="tiny-label">THE TRUTH</p><h3>真犯人：${p.name}</h3><p class="solution-method">手口：${esc(v.method)}</p><p>${esc(v.explanation)}</p><div class="twist"><strong>事件のポイント</strong><p>${esc(v.twist)}</p></div></div>
@@ -114,7 +114,11 @@ function render({scrollTo=null}={}){
     if(replacement && !replacement.disabled)replacement.focus({preventScroll:true});
   }
   const targets={game:'.gameplay-panel',tabs:'.tabs',home:'.home-panel',result:'.result-panel'};
-  if(scrollTo && targets[scrollTo])app.querySelector(targets[scrollTo])?.scrollIntoView({block:'start',behavior:'auto'});
+  if(scrollTo){
+    const target=app.querySelector(targets[scrollTo]);
+    target.querySelector('[data-view-heading]')?.focus({preventScroll:true});
+    target.scrollIntoView({block:'start',behavior:'auto'});
+  }
 }
 function startCase(){
   state.variant=chooseVariant([...progress.solved,...progress.revealed],Math.random,state.selectedCaseId);

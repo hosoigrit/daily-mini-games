@@ -1,6 +1,6 @@
 {
   "name": "game-0008-three-minute-detective",
-  "version": "0.7.4-qa-preview",
+  "version": "0.7.5-qa-preview",
   "private": true,
   "type": "module",
   "scripts": {
