@@ -1,4 +1,5 @@
 import { VARIANTS, CASES, suspectsFor } from './case-data.mjs';
+import { PROOF_CONTRACTS } from './proof-contracts.mjs';
 
 export const MAX_EVIDENCE = 4;
 /** Shuffle evidence display order once per investigation. Evidence IDs/facts never change. */
@@ -40,17 +41,56 @@ export function provenFacts(variant, evidenceIds){
   const selected=new Set(evidenceIds);
   return new Set(variant.evidence.filter(e=>selected.has(e.id)).flatMap(e=>e.facts));
 }
-/** Returns a private diagnostic for tests/score. The UI never tells incorrect culprit vs missing evidence. */
-export function evaluateProof(variant, suspectId, evidenceIds){
+/** Candidate culprit is derived from selected eyewitness/authorization evidence,
+ * never from variant.culprit (the separately maintained answer key). */
+export function deriveProofActor(variant,evidenceIds){
+  const spec=PROOF_CONTRACTS[variant?.id];
+  if(!spec)return null;
+  const selected=new Set(evidenceIds);
+  const actorIds=new Set(Object.entries(spec.actorEvidence)
+    .filter(([id])=>selected.has(id))
+    .map(([,actor])=>actor));
+  return actorIds.size===1?[...actorIds][0]:null;
+}
+/** The UI intentionally hides diagnostic distinctions to prevent trial-and-error. */
+export function evaluateProof(variant,suspectId,evidenceIds){
   if(!variant||!legalSelection(variant,evidenceIds)||!suspectsFor(variant).some(s=>s.id===suspectId)){
     return {status:'invalid-input',success:false,missing:variant?.requiredFacts??[]};
   }
+  const spec=PROOF_CONTRACTS[variant.id];
+  if(!spec||validateProofContract(variant).length)return {status:'invalid-input',success:false,missing:[]};
   const facts=provenFacts(variant,evidenceIds);
-  const missing=variant.requiredFacts.filter(f=>!facts.has(f));
-  if(missing.length){return {status:'insufficient',success:false,missing};}
-  if(suspectId!==variant.culprit){return {status:'wrong-person',success:false,missing:[]};}
+  const missing=spec.requiredFacts.filter(f=>!facts.has(f));
+  if(missing.length)return {status:'insufficient',success:false,missing};
+  const actor=deriveProofActor(variant,evidenceIds);
+  if(!actor)return {status:'insufficient',success:false,missing:['actor']};
+  if(suspectId!==actor)return {status:'wrong-person',success:false,missing:[]};
   return {status:'solved',success:true,missing:[]};
 }
+
+/** Audit evidence IDs, person identities, the key timestamp and the answer key. */
+export function validateProofContract(variant){
+  const errors=[];const spec=PROOF_CONTRACTS[variant?.id];
+  if(!spec)return [`${variant?.id??'unknown'}: missing independent proof contract`];
+  const candidates=suspectsFor(variant),suspects=new Map(candidates.map(s=>[s.id,s.name]));
+  const answerIds=new Set(Object.values(spec.actorEvidence));
+  if(answerIds.size!==1)errors.push(`${variant.id}: evidence identifies multiple actors`);
+  if(!answerIds.has(variant.culprit))errors.push(`${variant.id}: culprit disagrees with independent evidence`);
+  if(JSON.stringify(spec.requiredFacts)!==JSON.stringify(variant.requiredFacts))errors.push(`${variant.id}: required facts disagree with independent contract`);
+  const evidenceById=new Map(variant.evidence.map(e=>[e.id,e]));
+  const actorCards=variant.evidence.filter(e=>e.facts.includes('actor'));
+  if(actorCards.length!==Object.keys(spec.actorEvidence).length)errors.push(`${variant.id}: unmapped actor proof card`);
+  for(const [id,actor] of Object.entries(spec.actorEvidence)){
+    const card=evidenceById.get(id),name=suspects.get(actor);
+    if(!card||!card.facts.includes('actor')||!name){errors.push(`${variant.id}: invalid actor proof ${id}`);continue;}
+    const mentioned=candidates.filter(s=>card.body.includes(s.name));
+    if(mentioned.length!==1||mentioned[0].id!==actor)errors.push(`${variant.id}: actor name in ${id} disagrees with contract`);
+    if(!card.body.includes(spec.moment))errors.push(`${variant.id}: timestamp in ${id} disagrees with contract`);
+  }
+  for(const e of actorCards)if(!(e.id in spec.actorEvidence))errors.push(`${variant.id}: missing actor annotation ${e.id}`);
+  return errors;
+}
+
 export function calculateScore({insufficient=0,wrongPerson=0,hints=0}={}){
   const numbers=[insufficient,wrongPerson,hints];
   if(numbers.some(n=>!Number.isInteger(n)||n<0)){throw new RangeError('Counts must be nonnegative integers');}
@@ -68,7 +108,9 @@ export function validateCatalog(){
     if(new Set(c.variants.map(v=>v.culprit)).size!==3)errors.push(`${c.id}: culprit variation missing`);
     if(new Set(c.variants.map(v=>v.method)).size!==3)errors.push(`${c.id}: method variation missing`);
   }
+  if(Object.keys(PROOF_CONTRACTS).length!==VARIANTS.length)errors.push('independent proof contracts count differs from variants');
   for(const v of VARIANTS){
+    errors.push(...validateProofContract(v));
     const suspects=new Set(suspectsFor(v).map(s=>s.id));
     if(!caseIds.has(v.caseId))errors.push(`${v.id}: unknown case`);
     if(v.statements.length!==suspects.size)errors.push(`${v.id}: statement count mismatch`);

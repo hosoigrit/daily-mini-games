@@ -1,6 +1,6 @@
 import { CASES, VARIANTS, caseById, suspectsFor } from './case-data.mjs';
 import { chooseVariant, evaluateProof, calculateScore, starsForScore, MAX_EVIDENCE, shuffledEvidenceIds } from './engine.mjs';
-import { loadProgress, saveProgress, addClear } from './storage.mjs';
+import { loadProgress, saveProgress, addClear, markRevealed } from './storage.mjs';
 
 const THEME_COLORS=Object.freeze({
   home:'#212a31',
@@ -18,10 +18,11 @@ const esc=(value)=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 const storage=(()=>{try{return window.localStorage;}catch{return {getItem(){return null;},setItem(){throw new Error('Storage unavailable');}};}})();
 let progress=loadProgress(storage);
 let savedSuccessfully=true;
-const state={phase:'home',selectedCaseId:'blue-gem',variant:null,tab:'investigate',showContext:true,evidence:[],evidenceOrder:[],suspect:null,wrongProof:0,wrongPerson:0,hintLevel:0,feedback:'',startedAt:0,elapsed:0,score:0,assisted:false};
+const state={phase:'home',selectedCaseId:'blue-gem',variant:null,tab:'investigate',showContext:true,evidence:[],evidenceOrder:[],suspect:null,wrongProof:0,wrongPerson:0,hintLevel:0,feedback:'',startedAt:0,elapsed:0,score:0,assisted:false,resultType:''};
 const caseInfo=()=>caseById(state.variant?.caseId ?? state.selectedCaseId);
 const caseSolved=c=>c.variants.filter(v=>progress.solved.includes(v.id)).length;
 const countSolved=()=>caseSolved(caseInfo());
+const unseenCount=c=>c.variants.filter(v=>!progress.solved.includes(v.id)&&!progress.revealed.includes(v.id)).length;
 const persons=()=>caseInfo().suspects;
 const personById=id=>persons().find(s=>s.id===id);
 const elapsed=()=>state.startedAt?Math.max(0,Math.round((performance.now()-state.startedAt)/1000)):0;
@@ -45,8 +46,8 @@ function renderHome(){
     <p class="lead">${esc(c.lead)}</p>${renderSuspects()}
     <div class="briefing"><div class="briefing-mark">!</div><p><strong>遊び方</strong><br>証言と証拠を調べ、犯人を1人選び、根拠を2〜4件提示。立証が成立すると解決です。通常モードに時間制限はありません。</p></div>
     <details class="rules"><summary>公平な推理のための共通前提 <span aria-hidden="true">＋</span></summary><ul>${c.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></details>
-    <button class="btn btn-primary btn-wide" data-action="start">${caseSolved(c)===0?'事件の捜査を始める':'別の真相を捜査する'} <span aria-hidden="true">→</span></button>
-    <p class="microcopy">事件ごとの3つの真相は犯人・手口・証拠関係が変わります。${caseSolved(c)===3?'この事件の真相は3つとも解決済みです。':'未解決の真相を優先します。'}</p>
+    <button class="btn btn-primary btn-wide" data-action="start">${unseenCount(c)>0?'未体験の真相を捜査する':'もう一度捜査する'} <span aria-hidden="true">→</span></button>
+    <p class="microcopy">事件ごとの3つの真相は犯人・手口・証拠関係が変わります。${unseenCount(c)===0?'この事件に未体験の真相はありません。':'未体験の真相を優先します。'}</p>
     ${!savedSuccessfully?'<p class="storage-warning" role="status">保存が利用できないため進行状況が保持されない可能性があります。</p>':''}
     </section>`;
 }
@@ -87,13 +88,14 @@ function renderPlaying(){
 }
 function renderResult(){
   const v=state.variant,p=personById(v.culprit),c=caseInfo();
-  const won=!state.assisted;
+  const won=state.resultType==='self-clear';
+  const reviewed=state.resultType==='review-clear';
   return `<section class="paper-panel result-panel">${renderProgress()}
-    <div class="result-emblem">${won?'✦':'⌕'}</div><p class="tiny-label center">CASE FILE CLOSED</p><h2>${won?'事件解決！':'事件の真相'}</h2>
-    <p class="result-sub">${won?'証拠から犯人を立証しました。':'今回は解説を確認しました。自力解決記録には加算されません。'}</p>
+    <div class="result-emblem">${won?'✦':'⌕'}</div><p class="tiny-label center">CASE FILE CLOSED</p><h2>${won?'事件解決！':reviewed?'再挑戦クリア！':'事件の真相'}</h2>
+    <p class="result-sub">${won?'証拠から犯人を立証しました。':reviewed?'既に真相を確認した事件を再び立証しました。初見・自力解決記録には加算されません。':'今回は解説を確認しました。自力解決記録には加算されません。'}</p>
     ${won?`<div class="result-stats"><div><span>スコア</span><strong>${state.score}</strong><small> / 1000</small></div><div><span>解決時間</span><strong>${formatTime(state.elapsed)}</strong></div><div><span>評価</span><strong aria-label="${starsForScore(state.score)}つ星">${'★'.repeat(starsForScore(state.score))}${'☆'.repeat(3-starsForScore(state.score))}</strong></div></div>`:''}
     <div class="solution-box"><p class="tiny-label">THE TRUTH</p><h3>真犯人：${p.name}</h3><p class="solution-method">手口：${esc(v.method)}</p><p>${esc(v.explanation)}</p><div class="twist"><strong>事件のポイント</strong><p>${esc(v.twist)}</p></div></div>
-    <div class="result-actions"><button class="btn btn-primary" data-action="start">${countSolved()<c.variants.length?'未解決の真相に挑戦 →':'もう一度捜査する →'}</button><button class="btn btn-muted" data-action="home">事件一覧へ戻る</button></div>
+    <div class="result-actions"><button class="btn btn-primary" data-action="start">${unseenCount(c)>0?'未体験の真相に挑戦 →':'もう一度捜査する →'}</button><button class="btn btn-muted" data-action="home">事件一覧へ戻る</button></div>
     <p class="microcopy">真相の違いは解決後に確認できます。次の挑戦では事件の内容が変わる可能性があります。</p>
    </section>`;
 }
@@ -115,8 +117,8 @@ function render({scrollTo=null}={}){
   if(scrollTo && targets[scrollTo])app.querySelector(targets[scrollTo])?.scrollIntoView({block:'start',behavior:'auto'});
 }
 function startCase(){
-  state.variant=chooseVariant(progress.solved,Math.random,state.selectedCaseId);
-  Object.assign(state,{phase:'playing',tab:'investigate',showContext:true,evidence:[],evidenceOrder:shuffledEvidenceIds(state.variant),suspect:null,wrongProof:0,wrongPerson:0,hintLevel:0,feedback:'',startedAt:performance.now(),elapsed:0,score:0,assisted:false});
+  state.variant=chooseVariant([...progress.solved,...progress.revealed],Math.random,state.selectedCaseId);
+  Object.assign(state,{phase:'playing',tab:'investigate',showContext:true,evidence:[],evidenceOrder:shuffledEvidenceIds(state.variant),suspect:null,wrongProof:0,wrongPerson:0,hintLevel:0,feedback:'',startedAt:performance.now(),elapsed:0,score:0,assisted:false,resultType:''});
   render({scrollTo:'game'});announce('捜査を開始しました。証拠を確認してください。');
 }
 function toggleCard(id){
@@ -136,12 +138,21 @@ function submit(){
     state.tab='board';render();announce('立証は成立しませんでした。');return;
   }
   state.score=calculateScore({insufficient:state.wrongProof,wrongPerson:state.wrongPerson,hints:state.hintLevel});
-  state.elapsed=elapsed();state.phase='result';state.assisted=false;
-  progress=addClear(progress,state.variant.id,{score:state.score,elapsed:state.elapsed,stars:starsForScore(state.score)});
-  savedSuccessfully=saveProgress(storage,progress);
+  state.elapsed=elapsed();state.phase='result';
+  const alreadyRevealed=progress.revealed.includes(state.variant.id);
+  state.assisted=alreadyRevealed;state.resultType=alreadyRevealed?'review-clear':'self-clear';
+  if(!alreadyRevealed){
+    progress=addClear(progress,state.variant.id,{score:state.score,elapsed:state.elapsed,stars:starsForScore(state.score)});
+    savedSuccessfully=saveProgress(storage,progress);
+  }
   render({scrollTo:'result'});announce('事件を解決しました。');
 }
-function reveal(){state.phase='result';state.assisted=true;state.elapsed=elapsed();render({scrollTo:'result'});announce('真相の解説を表示しました。');}
+function reveal(){
+  progress=markRevealed(progress,state.variant.id);
+  savedSuccessfully=saveProgress(storage,progress);
+  state.phase='result';state.assisted=true;state.resultType='reveal';state.elapsed=elapsed();
+  render({scrollTo:'result'});announce('真相の解説を表示しました。');
+}
 function handleAction(action,id){
   if(action==='select-case' && state.phase==='home' && caseById(id)){state.selectedCaseId=id;render();return;}
   if(action==='start'){startCase();return;}

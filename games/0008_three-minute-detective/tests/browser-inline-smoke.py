@@ -17,7 +17,7 @@ CASES=[
 def build_inline_page():
     html=(GAME/'index.html').read_text(encoding='utf-8')
     css=(GAME/'styles.css').read_text(encoding='utf-8')
-    js='\n'.join(re.sub(r'(?m)^export ', '', re.sub(r'(?m)^import .*?;\n', '', (GAME/name).read_text(encoding='utf-8'))) for name in ('additional-cases.mjs','case-data.mjs','engine.mjs','storage.mjs','app.mjs'))
+    js='\n'.join(re.sub(r'(?m)^export ', '', re.sub(r'(?m)^import .*?;\n', '', (GAME/name).read_text(encoding='utf-8'))) for name in ('additional-cases.mjs','case-data.mjs','proof-contracts.mjs','engine.mjs','storage.mjs','app.mjs'))
     html=html.replace('<link rel="stylesheet" href="./styles.css">',f'<style>{css}</style>')
     html=html.replace('<script type="module" src="./app.mjs"></script>','')
     return html.replace('</body>',f'<script>{js}</script></body>')
@@ -42,6 +42,7 @@ def run():
                   Object.defineProperty(window, 'localStorage', {configurable:true,value:{getItem:k=>dict.get(k)??null,setItem:(k,v)=>dict.set(k,String(v))}});
                 ''')
                 page=context.new_page()
+                page.set_default_timeout(7000)
                 errors=[]
                 page.on('pageerror',lambda exc:errors.append(str(exc)))
                 page.set_content(html,wait_until='load')
@@ -90,10 +91,8 @@ def run():
                             page.locator('button[data-action="tab-board"]').first.click()
                             page.get_by_role('button',name='ヒント1を見る').click()
                             page.get_by_role('button',name='ヒント2を見る').click()
-                            page.get_by_role('button',name='真相を見る（自力解決にはならない）').click()
-                            page.get_by_role('button',name='真相を見る',exact=True).click()
-                            assert page.get_by_test_id('progress').inner_text().strip()=='1 / 3'
-                            page.locator('button[data-action="start"]').click()
+                            # Reveal/replay regression is covered separately.
+                            page.locator('button[data-action="tab-investigate"]').first.click()
                         for id in ids:page.get_by_test_id('evidence-'+id).click()
                         if case_id=='blue-gem' and index==0:
                             accuse(page,'aoi')
