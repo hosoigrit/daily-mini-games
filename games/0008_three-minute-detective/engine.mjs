@@ -1,5 +1,7 @@
 import { VARIANTS, CASES, suspectsFor } from './case-data.mjs';
 import { PROOF_CONTRACTS } from './proof-contracts.mjs';
+import { EVIDENCE_PROPOSITIONS } from './evidence-propositions.mjs';
+import { APPROVED_NARRATIVES } from './approved-narratives.mjs';
 
 export const MAX_EVIDENCE = 4;
 /** Shuffle evidence display order once per investigation. Evidence IDs/facts never change. */
@@ -47,9 +49,12 @@ export function deriveProofActor(variant,evidenceIds){
   const spec=PROOF_CONTRACTS[variant?.id];
   if(!spec)return null;
   const selected=new Set(evidenceIds);
-  const actorIds=new Set(Object.entries(spec.actorEvidence)
-    .filter(([id])=>selected.has(id))
-    .map(([,actor])=>actor));
+  const assertionById=EVIDENCE_PROPOSITIONS[variant.id] ?? {};
+  const actorIds=new Set(Object.keys(spec.actorEvidence)
+    .filter(id=>selected.has(id))
+    .map(id=>assertionById[id])
+    .filter(claim=>claim?.fact==='actor' && claim.polarity==='affirmed' && claim.exclusive && claim.time===spec.moment)
+    .map(claim=>claim.actor));
   return actorIds.size===1?[...actorIds][0]:null;
 }
 /** The UI intentionally hides diagnostic distinctions to prevent trial-and-error. */
@@ -68,9 +73,37 @@ export function evaluateProof(variant,suspectId,evidenceIds){
   return {status:'solved',success:true,missing:[]};
 }
 
-/** Audit evidence IDs, person identities, the key timestamp and the answer key. */
+/**
+ * Any narrative edit needs independent approval of the exact text baseline.
+ * This is a fail-closed integrity gate, NOT automatic Japanese semantic parsing.
+ */
+export function validateCaseNarrative(caseRecord){
+  const reviewed=APPROVED_NARRATIVES.cases[caseRecord?.id];
+  if(!reviewed)return [`${caseRecord?.id??'unknown'}: missing approved case narrative`];
+  const errors=[];
+  if(caseRecord.lead!==reviewed.lead)errors.push(`${caseRecord.id}: unreviewed case lead`);
+  if(JSON.stringify(caseRecord.rules)!==JSON.stringify(reviewed.rules))errors.push(`${caseRecord.id}: unreviewed case rules`);
+  return errors;
+}
+export function validateVariantNarrative(variant){
+  const reviewed=APPROVED_NARRATIVES.variants[variant?.id];
+  if(!reviewed)return [`${variant?.id??'unknown'}: missing approved variant narrative`];
+  const errors=[];
+  for(const key of ['method','premise','hints','explanation','twist','statements']){
+    if(JSON.stringify(variant[key])!==JSON.stringify(reviewed[key]))errors.push(`${variant.id}: unreviewed ${key}`);
+  }
+  const evidence=new Map(variant.evidence.map(e=>[e.id,e]));
+  if(evidence.size!==Object.keys(reviewed.evidence).length)errors.push(`${variant.id}: evidence count differs from approved narrative`);
+  for(const [id,approved] of Object.entries(reviewed.evidence)){
+    const card=evidence.get(id);
+    if(!card || ['kind','title','body'].some(key=>card[key]!==approved[key]))errors.push(`${variant.id}: unreviewed evidence ${id}`);
+  }
+  for(const id of evidence.keys())if(!(id in reviewed.evidence))errors.push(`${variant.id}: unapproved evidence card ${id}`);
+  return errors;
+}
+/** Audit reviewed prose, structured propositions, actor identification, answer key. */
 export function validateProofContract(variant){
-  const errors=[];const spec=PROOF_CONTRACTS[variant?.id];
+  const errors=validateVariantNarrative(variant);const spec=PROOF_CONTRACTS[variant?.id];
   if(!spec)return [`${variant?.id??'unknown'}: missing independent proof contract`];
   const candidates=suspectsFor(variant),suspects=new Map(candidates.map(s=>[s.id,s.name]));
   const answerIds=new Set(Object.values(spec.actorEvidence));
@@ -78,10 +111,24 @@ export function validateProofContract(variant){
   if(!answerIds.has(variant.culprit))errors.push(`${variant.id}: culprit disagrees with independent evidence`);
   if(JSON.stringify(spec.requiredFacts)!==JSON.stringify(variant.requiredFacts))errors.push(`${variant.id}: required facts disagree with independent contract`);
   const evidenceById=new Map(variant.evidence.map(e=>[e.id,e]));
+  const propositions=EVIDENCE_PROPOSITIONS[variant.id] ?? {};
   const actorCards=variant.evidence.filter(e=>e.facts.includes('actor'));
   if(actorCards.length!==Object.keys(spec.actorEvidence).length)errors.push(`${variant.id}: unmapped actor proof card`);
+  const factCards=variant.evidence.filter(e=>e.facts.length);
+  if(Object.keys(propositions).length!==factCards.length)errors.push(`${variant.id}: proposition coverage mismatch`);
+  for(const e of factCards){
+    const claim=propositions[e.id];
+    if(!claim){errors.push(`${variant.id}: missing proposition ${e.id}`);continue;}
+    if(e.facts.length!==1 || e.facts[0]!==claim.fact)errors.push(`${variant.id}: proposition fact mismatch ${e.id}`);
+    if(claim.polarity!=='affirmed' || !e.body.includes(claim.time))errors.push(`${variant.id}: proposition polarity/time mismatch ${e.id}`);
+    if(claim.fact==='actor' && (!claim.actor || !claim.exclusive || claim.time!==spec.moment))errors.push(`${variant.id}: invalid actor proposition ${e.id}`);
+    if(claim.fact!=='actor' && (claim.actor!==null||claim.exclusive))errors.push(`${variant.id}: invalid non-actor proposition ${e.id}`);
+  }
+  for(const id of Object.keys(propositions))if(!evidenceById.has(id) || !evidenceById.get(id).facts.length)errors.push(`${variant.id}: unmapped proposition ${id}`);
   for(const [id,actor] of Object.entries(spec.actorEvidence)){
     const card=evidenceById.get(id),name=suspects.get(actor);
+    const claim=propositions[id];
+    if(!claim||claim.fact!=='actor'||claim.actor!==actor||claim.polarity!=='affirmed'||claim.time!==spec.moment||!claim.exclusive)errors.push(`${variant.id}: actor proposition disagrees with contract ${id}`);
     if(!card||!card.facts.includes('actor')||!name){errors.push(`${variant.id}: invalid actor proof ${id}`);continue;}
     const mentioned=candidates.filter(s=>card.body.includes(s.name));
     if(mentioned.length!==1||mentioned[0].id!==actor)errors.push(`${variant.id}: actor name in ${id} disagrees with contract`);
@@ -102,6 +149,7 @@ export function validateCatalog(){
   const ids=new Set();
   const caseIds=new Set();
   for(const c of CASES){
+    errors.push(...validateCaseNarrative(c));
     if(caseIds.has(c.id))errors.push(`duplicate case ${c.id}`);
     caseIds.add(c.id);
     if(c.variants.length!==3)errors.push(`${c.id}: expected 3 variants`);
@@ -109,6 +157,9 @@ export function validateCatalog(){
     if(new Set(c.variants.map(v=>v.method)).size!==3)errors.push(`${c.id}: method variation missing`);
   }
   if(Object.keys(PROOF_CONTRACTS).length!==VARIANTS.length)errors.push('independent proof contracts count differs from variants');
+  if(Object.keys(EVIDENCE_PROPOSITIONS).length!==VARIANTS.length)errors.push('proposition contracts count differs from variants');
+  if(Object.keys(APPROVED_NARRATIVES.variants).length!==VARIANTS.length)errors.push('approved narratives count differs from variants');
+  if(Object.keys(APPROVED_NARRATIVES.cases).length!==CASES.length)errors.push('approved case narratives count differs from catalog');
   for(const v of VARIANTS){
     errors.push(...validateProofContract(v));
     const suspects=new Set(suspectsFor(v).map(s=>s.id));

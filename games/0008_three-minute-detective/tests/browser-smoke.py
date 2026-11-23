@@ -9,16 +9,24 @@ import os
 import shutil
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.request import urlopen
 from threading import Thread
 from playwright.sync_api import sync_playwright
 
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[3]
 GAME='games/0008_three-minute-detective/'
 
 
 def run():
     server=ThreadingHTTPServer(('127.0.0.1',0),functools.partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
     thread=Thread(target=server.serve_forever,daemon=True);thread.start()
+    # The game is served from the repository root. Fail early on a 404,
+    # rather than confusing a wrong path with an inaccessible browser.
+    for path in (GAME, GAME+'engine.mjs', GAME+'approved-narratives.mjs'):
+        with urlopen(f'http://127.0.0.1:{server.server_port}/{path}',timeout=5) as response:
+            assert response.status==200,(path,response.status)
+            assert response.read(256),(path,'empty response')
+    print('Local HTTP asset preflight PASS (index + two ES modules: 200)',flush=True)
     with sync_playwright() as pw:
         binary=os.getenv('CHROME_BIN') or shutil.which('chromium') or shutil.which('google-chrome')
         launch={'headless':True}

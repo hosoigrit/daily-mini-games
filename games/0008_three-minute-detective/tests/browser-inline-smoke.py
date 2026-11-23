@@ -17,7 +17,7 @@ CASES=[
 def build_inline_page():
     html=(GAME/'index.html').read_text(encoding='utf-8')
     css=(GAME/'styles.css').read_text(encoding='utf-8')
-    js='\n'.join(re.sub(r'(?m)^export ', '', re.sub(r'(?m)^import .*?;\n', '', (GAME/name).read_text(encoding='utf-8'))) for name in ('additional-cases.mjs','case-data.mjs','proof-contracts.mjs','engine.mjs','storage.mjs','app.mjs'))
+    js='\n'.join(re.sub(r'(?m)^export ', '', re.sub(r'(?m)^import .*?;\n', '', (GAME/name).read_text(encoding='utf-8'))) for name in ('additional-cases.mjs','case-data.mjs','proof-contracts.mjs','evidence-propositions.mjs','approved-narratives.mjs','engine.mjs','storage.mjs','app.mjs'))
     html=html.replace('<link rel="stylesheet" href="./styles.css">',f'<style>{css}</style>')
     html=html.replace('<script type="module" src="./app.mjs"></script>','')
     return html.replace('</body>',f'<script>{js}</script></body>')
