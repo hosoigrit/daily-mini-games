@@ -1,0 +1,60 @@
+{
+  "specVersion": "v0.9.1-CANDIDATE",
+  "status": "NOT_APPROVED",
+  "source": "Game0009 v0.7 design sample only; no production legacy saves confirmed",
+  "legacyKey": "daily-mini-games:0009:v1",
+  "legacyRulesetVersion": "0.7.0",
+  "historicalFingerprint": "f2dcadaca004693a4c186c30f55513f6300437953885486aa343a4492dff11c6",
+  "progressV2Key": "daily-mini-games:0009:progress:v2",
+  "settingsV1Key": "daily-mini-games:0009:settings:v1",
+  "expectedAfterConfirmedMigration": {
+    "rulesetLabel": "design-v0.7.0 historical",
+    "progress": {
+      "main-01": {
+        "maxStars": 3,
+        "bestNoHintStars": 2
+      },
+      "main-02": {
+        "maxStars": 1,
+        "bestNoHintStars": 0
+      }
+    },
+    "existingCurrentRulesetMustNotChange": true,
+    "legacyKeyMustNotChange": true,
+    "clearCountMustNotBePersisted": true
+  },
+  "tests": [
+    {
+      "id": "E3-01",
+      "name": "double-submit-idempotency-no-clearCount"
+    },
+    {
+      "id": "E3-02",
+      "name": "monotonic-stars-no-clearCount"
+    },
+    {
+      "id": "E3-03",
+      "name": "legacy-v1-sample-schema-valid-preview-only"
+    },
+    {
+      "id": "E3-04",
+      "name": "explicit-migration-historical-ruleset-only"
+    },
+    {
+      "id": "E3-05",
+      "name": "merge-existing-v2-monotonically-and-idempotently"
+    },
+    {
+      "id": "E3-06",
+      "name": "reject-invalid-or-unknown-legacy-without-write"
+    },
+    {
+      "id": "E3-07",
+      "name": "lock-storage-backup-failure-no-write"
+    },
+    {
+      "id": "E3-08",
+      "name": "settings-migration-only-with-explicit-consent"
+    }
+  ]
+}
