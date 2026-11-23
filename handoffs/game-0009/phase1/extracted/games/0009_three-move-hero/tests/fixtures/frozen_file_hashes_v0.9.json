@@ -1,0 +1,19 @@
+{
+  "version": "v0.9",
+  "alg": "sha256",
+  "files": {
+    "data/game0009_stage_manifest_v0.9.json": "ab0e9c0410856609b14bef5fcf8aff08c60f64dea5c126aee4f0667c2b9ec7b6",
+    "data/game0009_stage_manifest_schema_v0.9.json": "2bfde539eb5e1493d7762dec82630f315d7137b50d12d7d4843ae1b37f2c397a",
+    "data/game0009_risk_register_v0.9.json": "f722bf942a1434fed100704b7b4752e47e692cc3168ad0ed2f15c9331b0d88e5",
+    "tests/fixtures/game0009_full_960_expected_v0.9.json": "19407425c355258d858e5db92b96e9e781640e34cdaccffdac6dbd6567a70459",
+    "tests/fixtures/game0009_golden_tests_v0.9.json": "ec5e50456a2d991f76b333c6408d4caffdd0fb4dde60bc9f892fd41d1d76300e",
+    "tests/fixtures/game0009_edge_expected_v0.9.json": "d505aef09cffd6892f6cb9652f737bac3344dbbabcc11df612a8d6d93ef8b493",
+    "tests/fixtures/game0009_storage_acceptance_v0.9.json": "e05670ff2f93a647ec20bc3bb58da012a7f48e3214fee3ba095825eb7286257b",
+    "tests/fixtures/game0009_ruleset_canonical_payload_v1.json": "ec0a17a42753e80242a863fe3a97688faef52cff13d67cdbf32c5980cfdfcc73",
+    "tests/fixtures/game0009_ruleset_fingerprint_vectors_v1.json": "5f99410cf1f82febf780cb3ad68e0333e77d5438b4d00df0883790668c8bcaa6",
+    "tests/fixtures/game0009_progress_schema_v0.9.json": "257ebefe5323bf9ddd059ce472428ba279cc3a29eb47a0ea38e1f31e038858e1",
+    "tests/fixtures/game0009_progress_example_v0.9.json": "39818754c7983852d8aaffd51c2009915f9b4f364f6f9a31cc045d987df069b6",
+    "tests/fixtures/game0009_settings_schema_v0.9.json": "eec8b8bda00c2a49c85455aab1886880c2fb4e601742b6c60a2c5210e4bf5f57",
+    "tests/fixtures/game0009_settings_example_v0.9.json": "9d53778b36ed26252999598cb4de7e8a49150dda1df7599a6f3f0286a781b28c"
+  }
+}

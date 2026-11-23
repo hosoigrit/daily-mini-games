@@ -1,0 +1,9 @@
+{
+  "fingerprintSpecVersion": 1,
+  "algorithm": "SHA-256(UTF-8 canonical JSON as specified in normative spec)",
+  "sameFingerprintAfterPresentationOrHintChange": "56a8502f8ac2b90597bedf90b940ff5536b6cf231f541a5b1e6c87ff21bfc620",
+  "differentFingerprintAfterFirstStageAlphabeticallyEnemyHpPlus1": "1af2ece2674cf320a0210e8018ca9bc485845cbb7d199eec8158b46e95b2de0f",
+  "canonicalRulesetFingerprint": "56a8502f8ac2b90597bedf90b940ff5536b6cf231f541a5b1e6c87ff21bfc620",
+  "canonicalPayloadBytesWithoutTerminalNewline": 7658,
+  "legacyUnreproducedV08DesignFingerprint": "56401f4e8a9e005d4dd410cd33816ff468b0530143e43c3e8d91bc9ac90ccdff"
+}

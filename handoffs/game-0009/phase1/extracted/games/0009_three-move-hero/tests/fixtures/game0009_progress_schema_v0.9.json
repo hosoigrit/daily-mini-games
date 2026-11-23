@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game0009:v0.9:progress-store",
+  "title": "Game 0009 versioned progress v2 (draft)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "saveSchemaVersion",
+    "gameId",
+    "revision",
+    "rulesets"
+  ],
+  "properties": {
+    "saveSchemaVersion": {
+      "const": 2
+    },
+    "gameId": {
+      "const": "0009_three-move-hero"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "rulesets": {
+      "type": "object",
+      "patternProperties": {
+        "^[0-9a-f]{64}$": {
+          "$ref": "#/$defs/ruleset"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "ruleset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "progress"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "progress": {
+          "type": "object",
+          "maxProperties": 16,
+          "patternProperties": {
+            "^(main|extra)-0[1-8]$": {
+              "$ref": "#/$defs/record"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxStars",
+        "bestNoHintStars"
+      ],
+      "properties": {
+        "maxStars": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "bestNoHintStars": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "bestNoHintStars": {
+                "const": 3
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "maxStars": {
+                "const": 3
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "bestNoHintStars": {
+                "const": 2
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "maxStars": {
+                "minimum": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

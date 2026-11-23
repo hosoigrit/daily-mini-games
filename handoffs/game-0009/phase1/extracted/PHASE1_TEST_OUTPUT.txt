@@ -1,0 +1,80 @@
+
+> test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: all 13 copied frozen artifacts exactly match approved source bytes
+ok 1 - all 13 copied frozen artifacts exactly match approved source bytes
+  ---
+  duration_ms: 4.077903
+  type: 'test'
+  ...
+# Subtest: frozen manifests contain 16 uniquely identified stages and six cards
+ok 2 - frozen manifests contain 16 uniquely identified stages and six cards
+  ---
+  duration_ms: 0.848817
+  type: 'test'
+  ...
+# Subtest: all 960 ordered original plans are present exactly once
+ok 3 - all 960 ordered original plans are present exactly once
+  ---
+  duration_ms: 4.919849
+  type: 'test'
+  ...
+# Subtest: frozen unique victory sequence and star distributions are consistent
+ok 4 - frozen unique victory sequence and star distributions are consistent
+  ---
+  duration_ms: 1.303386
+  type: 'test'
+  ...
+# Subtest: golden vectors match full plan oracle exactly
+ok 5 - golden vectors match full plan oracle exactly
+  ---
+  duration_ms: 2.125743
+  type: 'test'
+  ...
+# Subtest: every second-level hint starts one verified 3-star winning plan
+ok 6 - every second-level hint starts one verified 3-star winning plan
+  ---
+  duration_ms: 0.528852
+  type: 'test'
+  ...
+# Subtest: frozen edge and storage test catalogs have expected cardinality
+ok 7 - frozen edge and storage test catalogs have expected cardinality
+  ---
+  duration_ms: 0.441029
+  type: 'test'
+  ...
+# Subtest: frozen canonical file has correct exact digest and byte length
+ok 8 - frozen canonical file has correct exact digest and byte length
+  ---
+  duration_ms: 1.505863
+  type: 'test'
+  ...
+# Subtest: manifest produces the same bytes and digest as independently frozen reference
+ok 9 - manifest produces the same bytes and digest as independently frozen reference
+  ---
+  duration_ms: 9.261191
+  type: 'test'
+  ...
+# Subtest: presentation and hint changes do not change fingerprint
+ok 10 - presentation and hint changes do not change fingerprint
+  ---
+  duration_ms: 0.747694
+  type: 'test'
+  ...
+# Subtest: first stage enemy HP change matches frozen divergence vector
+ok 11 - first stage enemy HP change matches frozen divergence vector
+  ---
+  duration_ms: 0.800444
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 130.007483

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.9.0",
+  "freezeRecommendation": "FREEZE_READY_USER_APPROVAL_PENDING",
+  "items": [
+    {
+      "id": "R-04",
+      "name": "難易度の実測不足",
+      "status": "OPEN_POST_PLAYABLE",
+      "decision": "初見8名程度（初心者4・経験者4）で失敗理由・挑戦回数・ヒント利用率を記録。探索的基準で不適切なら調整。設計凍結阻害せず公開品質ゲートに残す。",
+      "closure": "初見ユーザビリティ試験実施・是正後に閉鎖判断"
+    },
+    {
+      "id": "R-06",
+      "name": "斬撃使用率93.75%",
+      "status": "PARTIAL_ACCEPTED_WITH_MONITORING",
+      "decision": "6カード維持。112勝利手順中105で斬撃。基本攻撃の高使用率を既知リスクとして受容、単調さの実測次第で星目標/敵行動から再調整。",
+      "closure": "プレイテストで単調さ評価を実施して閉鎖判断"
+    },
+    {
+      "id": "R-07",
+      "name": "裏面の体験差",
+      "status": "PARTIAL_POST_PLAYABLE",
+      "decision": "裏1星3を魔法弾＋HP4へ変更し、裏8と同一星3解法の重複を減らす。体験差は初見テストで確認。",
+      "closure": "裏面を別問題として認識できるかユーザーテストで確認"
+    },
+    {
+      "id": "R-09",
+      "name": "裏8の星2下限不整合",
+      "status": "CLOSED_IN_PROPOSED_DATA",
+      "decision": "v0.7時点で星2HP4に是正済み。v0.8でも維持。",
+      "closure": "凍結承認後に正式CLOSED"
+    },
+    {
+      "id": "R-10",
+      "name": "ルール更新と進捗互換",
+      "status": "SPECIFIED_NOT_IMPLEMENTED",
+      "decision": "ルール指紋を計算しrulesetsを別保存。旧記録を保存し、新ルールの星は未取得として表示。クリア解放は旧＋新記録の和集合。",
+      "closure": "移行・表示・ルール差分の実機テスト完了"
+    },
+    {
+      "id": "R-11",
+      "name": "複数タブ保存競合",
+      "status": "SPECIFIED_NOT_IMPLEMENTED",
+      "decision": "Web Locks排他取得→保存直前に再読込→単調MAX統合→単一キー書込→読み戻し。locks非対応/拒否は保存停止モード。clearCount廃止。",
+      "closure": "2タブ競合・保存失敗・非対応環境を実機で検証"
+    },
+    {
+      "id": "R-12",
+      "name": "破損データの誤修復・上書き",
+      "status": "SPECIFIED_NOT_IMPLEMENTED",
+      "decision": "不正/未知形式は元値への上書き禁止。有効レコード救済はプレビュー・バックアップ確認・明示承認後のみ。大小関係はスキーマ条件分岐と論理検証で二重確認。",
+      "closure": "破損・バックアップ失敗・復旧キャンセルのE2E完了"
+    },
+    {
+      "id": "R-13",
+      "name": "ルール指紋の規範化不足",
+      "status": "SPECIFIED_IN_V09_PENDING_APPROVAL",
+      "decision": "カタログのname/description除外、戦闘と進行ルール、ステージの指定10項目をステージID順に列挙し、キーソート+コンパクトUTF-8 JSONのSHA-256で確定。テストベクトルを同梱。",
+      "closure": "指紋テストベクトル照合とv0.9正式設計凍結承認後。実機での保存検証はR-10/11へ残す。"
+    }
+  ]
+}
