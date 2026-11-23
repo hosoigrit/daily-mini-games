@@ -41,3 +41,21 @@ for (const [variant, record, alternatives, id, actor] of [
     }
   });
 }
+
+test('時計塔BのK204はアキラ本人による無効化の確定と完了を映している', () => {
+  const body = card('clk-b', 'K204');
+  assert.match(body, /17:52.*アキラ本人.*専用キー.*生体認証/);
+  assert.match(body, /「18:00の鐘を無効化」.*確定.*完了.*連続映像/);
+});
+
+test('時計塔BはK203とK204をそれぞれ受理し、必要な証拠が欠ければ不成立', () => {
+  const variant = VARIANTS.find(item => item.id === 'clk-b');
+  for (const actorCard of ['K203', 'K204']) {
+    const proof = ['K201', 'K202', actorCard];
+    assert.equal(evaluateProof(variant, 'akira', proof).status, 'solved', actorCard);
+    for (const omitted of proof) {
+      const incomplete = proof.filter(id => id !== omitted);
+      assert.equal(evaluateProof(variant, 'akira', incomplete).status, 'insufficient', omitted);
+    }
+  }
+});
