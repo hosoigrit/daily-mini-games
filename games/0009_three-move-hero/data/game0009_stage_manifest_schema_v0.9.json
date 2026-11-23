@@ -1,0 +1,1113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game0009:v0.9:stage-manifest",
+  "title": "Game 0009 Stage Manifest v0.8 design proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "gameId",
+    "displayName",
+    "locale",
+    "manifestStatus",
+    "cardCatalog",
+    "enemyActionCatalog",
+    "passiveCatalog",
+    "combatRules",
+    "progression",
+    "stages"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.9.0"
+    },
+    "gameId": {
+      "const": "0009_three-move-hero"
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locale": {
+      "const": "ja-JP"
+    },
+    "manifestStatus": {
+      "const": "PROPOSED_NOT_APPROVED"
+    },
+    "cardCatalog": {
+      "type": "object",
+      "required": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "heal",
+        "counter"
+      ],
+      "minProperties": 6,
+      "maxProperties": 6,
+      "properties": {
+        "slash": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "damageType",
+            "baseDamage",
+            "consumesFocus",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "斬撃"
+            },
+            "kind": {
+              "const": "attack"
+            },
+            "damageType": {
+              "const": "physical"
+            },
+            "baseDamage": {
+              "const": 4
+            },
+            "consumesFocus": {
+              "const": true
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "magic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "damageType",
+            "baseDamage",
+            "consumesFocus",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "魔法弾"
+            },
+            "kind": {
+              "const": "attack"
+            },
+            "damageType": {
+              "const": "magic"
+            },
+            "baseDamage": {
+              "const": 3
+            },
+            "consumesFocus": {
+              "const": false
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "guard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "attackReduction",
+            "durationTurns",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "ガード"
+            },
+            "kind": {
+              "const": "defense"
+            },
+            "attackReduction": {
+              "const": 5
+            },
+            "durationTurns": {
+              "const": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "focus": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "nextSlashBonus",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "気合"
+            },
+            "kind": {
+              "const": "buff"
+            },
+            "nextSlashBonus": {
+              "const": 4
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "heal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "healAmount",
+            "clampToMaxHp",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "回復"
+            },
+            "kind": {
+              "const": "heal"
+            },
+            "healAmount": {
+              "const": 3
+            },
+            "clampToMaxHp": {
+              "const": true
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "counter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "kind",
+            "attackReduction",
+            "retaliationDamage",
+            "retaliationType",
+            "description"
+          ],
+          "properties": {
+            "name": {
+              "const": "カウンター"
+            },
+            "kind": {
+              "const": "counter"
+            },
+            "attackReduction": {
+              "const": 3
+            },
+            "retaliationDamage": {
+              "const": 2
+            },
+            "retaliationType": {
+              "const": "direct"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "enemyActionCatalog": {
+      "type": "object",
+      "required": [
+        "attack",
+        "physicalGuard",
+        "magicWard"
+      ],
+      "properties": {
+        "attack": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "description",
+            "requiresPower"
+          ],
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "requiresPower": {
+              "const": true
+            }
+          }
+        },
+        "physicalGuard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "description",
+            "physicalReduction",
+            "attacks"
+          ],
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "physicalReduction": {
+              "const": 3
+            },
+            "attacks": {
+              "const": false
+            }
+          }
+        },
+        "magicWard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "description",
+            "magicReduction",
+            "attacks"
+          ],
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "magicReduction": {
+              "const": 2
+            },
+            "attacks": {
+              "const": false
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "passiveCatalog": {
+      "type": "object",
+      "required": [
+        "thornArmor"
+      ],
+      "properties": {
+        "thornArmor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "description",
+            "damage"
+          ],
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "damage": {
+              "const": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "combatRules": {
+      "type": "object",
+      "required": [
+        "handSize",
+        "planSize",
+        "maxTurns",
+        "duplicateCardsInPlan",
+        "inputOrder",
+        "heroActsFirst",
+        "enemyActForecastFullyVisible",
+        "noRandomness",
+        "victory",
+        "defeat",
+        "healingCap",
+        "damageFloor",
+        "focusPersistence",
+        "thornTrigger",
+        "counterTrigger",
+        "counterDamageType",
+        "turnOrder",
+        "starScope",
+        "earlyVictory"
+      ],
+      "properties": {
+        "handSize": {
+          "const": 5
+        },
+        "planSize": {
+          "const": 3
+        },
+        "maxTurns": {
+          "const": 3
+        },
+        "duplicateCardsInPlan": {
+          "const": false
+        },
+        "inputOrder": {
+          "const": "selectedCardOrder"
+        },
+        "heroActsFirst": {
+          "const": true
+        },
+        "enemyActForecastFullyVisible": {
+          "const": true
+        },
+        "noRandomness": {
+          "const": true
+        },
+        "victory": {
+          "const": "enemyHpReachesZeroBeforeHeroDeath"
+        },
+        "defeat": {
+          "const": [
+            "heroHpReachesZero",
+            "enemySurvivesAfterTurn3"
+          ]
+        },
+        "healingCap": {
+          "const": "heroMaxHp"
+        },
+        "damageFloor": {
+          "const": 0
+        },
+        "focusPersistence": {
+          "const": "untilNextExecutedSlashOrCombatEnds"
+        },
+        "thornTrigger": {
+          "const": "onExecutedSlashWithPositiveFinalDamageIfEnemyStillAlive"
+        },
+        "counterTrigger": {
+          "const": "enemyAttackActionOccurredAndHeroAliveEvenIfAttackDamageZero"
+        },
+        "counterDamageType": {
+          "const": "direct_ignores_defense_and_thorn"
+        },
+        "turnOrder": {
+          "const": [
+            "setEnemyStance",
+            "executeHeroCard",
+            "checkEnemyDefeat",
+            "resolveThornIfApplicable",
+            "checkHeroDefeat",
+            "resolveEnemyAttackIfApplicable",
+            "checkHeroDefeat",
+            "resolveCounterIfApplicable",
+            "checkEnemyDefeat",
+            "checkTurn3Timeout"
+          ]
+        },
+        "starScope": {
+          "const": "onlyExecutedCardsCount"
+        },
+        "earlyVictory": {
+          "const": "stopImmediately;unusedPlannedCardsAreNotExecuted"
+        }
+      },
+      "additionalProperties": false
+    },
+    "progression": {
+      "type": "object",
+      "required": [
+        "initialUnlocked",
+        "unlockBy",
+        "highestStarsNeverDecrease",
+        "hintUsageScope",
+        "noHintClear"
+      ],
+      "properties": {
+        "initialUnlocked": {
+          "const": "main-01"
+        },
+        "unlockBy": {
+          "type": "string"
+        },
+        "highestStarsNeverDecrease": {
+          "const": true
+        },
+        "hintUsageScope": {
+          "type": "string"
+        },
+        "noHintClear": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/stage"
+      },
+      "allOf": [
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-01"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-02"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-03"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-04"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-05"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-06"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-07"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "main-08"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-01"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-02"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-03"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-04"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-05"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-06"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-07"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "stageId"
+            ],
+            "properties": {
+              "stageId": {
+                "const": "extra-08"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "cardId": {
+      "enum": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "heal",
+        "counter"
+      ]
+    },
+    "stageId": {
+      "type": "string",
+      "pattern": "^(main|extra)-0[1-8]$"
+    },
+    "enemyAction": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "attack"
+            },
+            "power": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99
+            }
+          },
+          "required": [
+            "type",
+            "power"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "physicalGuard",
+                "magicWard"
+              ]
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "objective": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "finishWithinTurns"
+            },
+            "maxTurns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          "required": [
+            "type",
+            "maxTurns"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "cardExecuted",
+                "cardNotExecuted"
+              ]
+            },
+            "cardId": {
+              "$ref": "#/$defs/cardId"
+            }
+          },
+          "required": [
+            "type",
+            "cardId"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stageId",
+        "group",
+        "order",
+        "title",
+        "heroMaxHp",
+        "enemyMaxHp",
+        "hand",
+        "enemyActions",
+        "passives",
+        "rating",
+        "hints",
+        "tutorial",
+        "unlockAfter"
+      ],
+      "properties": {
+        "stageId": {
+          "$ref": "#/$defs/stageId"
+        },
+        "group": {
+          "enum": [
+            "main",
+            "extra"
+          ]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "heroMaxHp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "enemyMaxHp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "hand": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/cardId"
+          }
+        },
+        "enemyActions": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/enemyAction"
+          }
+        },
+        "passives": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 1,
+          "items": {
+            "const": "thornArmor"
+          }
+        },
+        "rating": {
+          "type": "object",
+          "required": [
+            "star2MinHp",
+            "star3"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "star2MinHp": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "star3": {
+              "type": "object",
+              "required": [
+                "minHp",
+                "objective"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "minHp": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "objective": {
+                  "$ref": "#/$defs/objective"
+                }
+              }
+            }
+          }
+        },
+        "hints": {
+          "type": "object",
+          "required": [
+            "level1",
+            "level2"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "level1": {
+              "type": "string",
+              "minLength": 1
+            },
+            "level2": {
+              "type": "object",
+              "required": [
+                "type",
+                "cardId"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "firstCard"
+                },
+                "cardId": {
+                  "$ref": "#/$defs/cardId"
+                }
+              }
+            }
+          }
+        },
+        "tutorial": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unlockAfter": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/stageId"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "group": {
+                "const": "main"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "^main-0[1-8]$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "group": {
+                "const": "extra"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "^extra-0[1-8]$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 1
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-01$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 2
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-02$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 3
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-03$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 4
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-04$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 5
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-05$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 6
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-06$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 7
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-07$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "order": {
+                "const": 8
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "stageId": {
+                "pattern": "-08$"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

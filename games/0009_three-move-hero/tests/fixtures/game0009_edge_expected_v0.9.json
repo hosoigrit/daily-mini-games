@@ -1,0 +1,665 @@
+{
+  "schemaVersion": "0.9.0",
+  "title": "Synthetic Boundary Cases",
+  "scope": "Design-only expected outcomes; hero card phases are deterministic. One-step expected is recorded to check effect order.",
+  "cases": [
+    {
+      "testId": "EDGE-01_guard_full",
+      "scenario": {
+        "heroMaxHp": 5,
+        "heroStartHp": 5,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "guard",
+          "slash",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "guard",
+      "expectedAtAssertion": {
+        "heroHp": 5,
+        "enemyHp": 10,
+        "state": "ongoing"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 5,
+        "enemyHp": 3,
+        "executed": [
+          "guard",
+          "slash",
+          "magic"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-02_heal_cap",
+      "scenario": {
+        "heroMaxHp": 5,
+        "heroStartHp": 5,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "heal",
+          "slash",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "heal",
+      "expectedAtAssertion": {
+        "heroHp": 5,
+        "enemyHp": 10,
+        "state": "ongoing"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 5,
+        "enemyHp": 3,
+        "executed": [
+          "heal",
+          "slash",
+          "magic"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-03_focus_through_magic",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 20,
+        "enemyActions": [
+          {
+            "type": "magicWard"
+          },
+          {
+            "type": "magicWard"
+          },
+          {
+            "type": "magicWard"
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "focus",
+          "magic",
+          "slash"
+        ]
+      },
+      "assertAfterCard": "slash",
+      "expectedAtAssertion": {
+        "heroHp": 10,
+        "enemyHp": 11,
+        "state": "lose_timeout"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 10,
+        "enemyHp": 11,
+        "executed": [
+          "focus",
+          "magic",
+          "slash"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-04_physical_guard",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "physicalGuard"
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "slash",
+          "magic",
+          "guard"
+        ]
+      },
+      "assertAfterCard": "slash",
+      "expectedAtAssertion": {
+        "heroHp": 10,
+        "enemyHp": 9,
+        "state": "ongoing"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 10,
+        "enemyHp": 6,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-05_magic_ward",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "magicWard"
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "magic",
+          "slash",
+          "guard"
+        ]
+      },
+      "assertAfterCard": "magic",
+      "expectedAtAssertion": {
+        "heroHp": 10,
+        "enemyHp": 9,
+        "state": "ongoing"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 10,
+        "enemyHp": 5,
+        "executed": [
+          "magic",
+          "slash",
+          "guard"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-06_thorn_killing_slash",
+      "scenario": {
+        "heroMaxHp": 1,
+        "heroStartHp": 1,
+        "enemyStartHp": 4,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 5
+          }
+        ],
+        "passives": [
+          "thornArmor"
+        ],
+        "plan": [
+          "slash",
+          "guard",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "slash",
+      "expectedAtAssertion": {
+        "heroHp": 1,
+        "enemyHp": 0,
+        "state": "win"
+      },
+      "fullExpected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 1,
+        "enemyHp": 0,
+        "executed": [
+          "slash"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-07_thorn_kills_hero",
+      "scenario": {
+        "heroMaxHp": 1,
+        "heroStartHp": 1,
+        "enemyStartHp": 5,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 5
+          }
+        ],
+        "passives": [
+          "thornArmor"
+        ],
+        "plan": [
+          "slash",
+          "guard",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "slash",
+      "expectedAtAssertion": {
+        "heroHp": 0,
+        "enemyHp": 1,
+        "state": "lose_dead"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 1,
+        "executed": [
+          "slash"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-08_dead_counter_no_reflect",
+      "scenario": {
+        "heroMaxHp": 1,
+        "heroStartHp": 1,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 4
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "counter",
+          "guard",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "counter",
+      "expectedAtAssertion": {
+        "heroHp": 0,
+        "enemyHp": 10,
+        "state": "lose_dead"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 10,
+        "executed": [
+          "counter"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-09_zero_damage_counter",
+      "scenario": {
+        "heroMaxHp": 4,
+        "heroStartHp": 4,
+        "enemyStartHp": 2,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 5
+          },
+          {
+            "type": "attack",
+            "power": 5
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "counter",
+          "guard",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "counter",
+      "expectedAtAssertion": {
+        "heroHp": 4,
+        "enemyHp": 0,
+        "state": "win"
+      },
+      "fullExpected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "executed": [
+          "counter"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-10_counter_vs_stance",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "physicalGuard"
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "counter",
+          "slash",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "counter",
+      "expectedAtAssertion": {
+        "heroHp": 10,
+        "enemyHp": 10,
+        "state": "ongoing"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 10,
+        "enemyHp": 3,
+        "executed": [
+          "counter",
+          "slash",
+          "magic"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-11_counter_not_thorn",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 2,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 4
+          },
+          {
+            "type": "attack",
+            "power": 4
+          },
+          {
+            "type": "attack",
+            "power": 4
+          }
+        ],
+        "passives": [
+          "thornArmor"
+        ],
+        "plan": [
+          "counter",
+          "slash",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "counter",
+      "expectedAtAssertion": {
+        "heroHp": 9,
+        "enemyHp": 0,
+        "state": "win"
+      },
+      "fullExpected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 9,
+        "enemyHp": 0,
+        "executed": [
+          "counter"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-12_timeout_alive",
+      "scenario": {
+        "heroMaxHp": 10,
+        "heroStartHp": 10,
+        "enemyStartHp": 20,
+        "enemyActions": [
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "guard",
+          "focus",
+          "heal"
+        ]
+      },
+      "assertAfterCard": "heal",
+      "expectedAtAssertion": {
+        "heroHp": 10,
+        "enemyHp": 20,
+        "state": "lose_timeout"
+      },
+      "fullExpected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 10,
+        "enemyHp": 20,
+        "executed": [
+          "guard",
+          "focus",
+          "heal"
+        ]
+      }
+    },
+    {
+      "testId": "EDGE-13_heal_partial_cap",
+      "scenario": {
+        "heroMaxHp": 5,
+        "heroStartHp": 4,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "physicalGuard"
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [],
+        "plan": [
+          "heal",
+          "slash",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "heal",
+      "expectedAtAssertion": {
+        "heroHp": 5,
+        "enemyHp": 10,
+        "state": "ongoing"
+      },
+      "verificationMethod": "manual arithmetic: min(5,4+3)=5"
+    },
+    {
+      "testId": "EDGE-14_thorn_after_reduced_slash",
+      "scenario": {
+        "heroMaxHp": 2,
+        "heroStartHp": 2,
+        "enemyStartHp": 10,
+        "enemyActions": [
+          {
+            "type": "physicalGuard"
+          },
+          {
+            "type": "attack",
+            "power": 0
+          },
+          {
+            "type": "attack",
+            "power": 0
+          }
+        ],
+        "passives": [
+          "thornArmor"
+        ],
+        "plan": [
+          "slash",
+          "guard",
+          "magic"
+        ]
+      },
+      "assertAfterCard": "slash",
+      "expectedAtAssertion": {
+        "heroHp": 1,
+        "enemyHp": 9,
+        "state": "ongoing"
+      },
+      "verificationMethod": "manual arithmetic: 4-3=1>0 so thorn deals 1"
+    }
+  ],
+  "interactionTests": [
+    {
+      "testId": "EDGE-14_skip_is_presentation_only",
+      "given": "same stage + selected plan with or without animation skip",
+      "expected": "same outcome, hero HP, enemy HP, stars, executed cards, and one-time persistence"
+    },
+    {
+      "testId": "EDGE-15_double_submit",
+      "given": "start button tapped rapidly multiple times",
+      "expected": "one combat result and at most one clearCount increment"
+    },
+    {
+      "testId": "EDGE-16_reload_during_battle",
+      "given": "page reload before result screen",
+      "expected": "no persisted victory or loss; start from stage-select; no partial combat recovery"
+    },
+    {
+      "testId": "EDGE-17_save_storage_throws",
+      "given": "localStorage read/write throws SecurityError or QuotaExceededError",
+      "expected": "playable in memory; explicit unsaved-progress warning; no false saved message"
+    },
+    {
+      "testId": "EDGE-18_corrupt_save",
+      "given": "truncated or schema-invalid save",
+      "expected": "discard invalid records; restore valid records if safely recoverable; no crash; show recovery warning"
+    },
+    {
+      "testId": "EDGE-19_future_save_version",
+      "given": "save data created by a newer unsupported saveSchemaVersion",
+      "expected": "read-only preservation: do not overwrite original key; session-only play with warning"
+    },
+    {
+      "testId": "EDGE-20_card_not_executed",
+      "given": "a 2-turn victory with an unused third selected card",
+      "expected": "third card is not in executed history or cardExecuted objective evaluation"
+    },
+    {
+      "testId": "EDGE-21_reduced_motion",
+      "given": "system prefers-reduced-motion or player setting",
+      "expected": "no essential animation; full logs and results remain accessible"
+    },
+    {
+      "testId": "EDGE-22_save_monotonicity",
+      "given": "a later 1-star clear after a 3-star clear, or a hint-aided clear after no-hint clear",
+      "expected": "maxStars and bestNoHintStars must not decrease; clearCount increments once per completed win"
+    },
+    {
+      "testId": "EDGE-23_ruleset_migration",
+      "given": "an older rulesetVersion under known schema and existing best stars",
+      "expected": "do not silently reset prior achievements; follow approved migration policy or protect original save"
+    },
+    {
+      "testId": "EDGE-24_two_tabs",
+      "given": "two tabs update the same save nearly simultaneously",
+      "expected": "no silent regression of stars or no-hint clear; if not supported, detect/warn and prevent unsafe overwrite"
+    }
+  ],
+  "reference": "INHERITED_V07_COMBAT_BOUNDARY_CASES_RECHECKED_WITH_V08_DESIGN_CALCULATOR"
+}
