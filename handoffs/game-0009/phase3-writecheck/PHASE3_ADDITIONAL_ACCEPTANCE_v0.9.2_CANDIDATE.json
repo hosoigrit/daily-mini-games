@@ -1,0 +1,33 @@
+{
+  "specVersion": "v0.9.2-CANDIDATE",
+  "status": "NOT_APPROVED",
+  "scope": "post-write readback uncertainty; mock tests only",
+  "preserves": ["v0.9 freeze", "v0.9.1 errata", "Phase 1/2 22 files"],
+  "cases": [
+    {
+      "id": "E3-09",
+      "given": "setItem returns successfully; subsequent getItem throws",
+      "expected": "status=unverified; do not report saved or unchanged; do not retry/rollback blindly"
+    },
+    {
+      "id": "E3-10",
+      "given": "E3-09 then getItem succeeds and latest valid record already includes intended stars",
+      "expected": "status=saved; no second setItem; no extra revision increment"
+    },
+    {
+      "id": "E3-11",
+      "given": "E3-09 then latest valid record does not include intended stars",
+      "expected": "under Web Lock re-read, monotonic-merge, write only if needed, verify readback; never lower other progress"
+    },
+    {
+      "id": "E3-12",
+      "given": "E3-09 then latest data is corrupt, unknown schema, or fingerprint collision",
+      "expected": "status=blocked; no overwrite of original data"
+    },
+    {
+      "id": "E3-13",
+      "given": "E3-09 then another tab successfully updates a different stage before verification",
+      "expected": "under Web Lock preserve both stage records and monotonic stars, do not lose newer data"
+    }
+  ]
+}
