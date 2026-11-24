@@ -1,0 +1,64 @@
+.action-preview { max-width: 59rem; }
+.motion-arena { position: relative; margin-block: 1rem; isolation: isolate; }
+.motion-arena .battle-stage { margin: 0; min-height: clamp(12rem, 42vw, 27rem); }
+.motion-arena .fighter { transition: transform 140ms ease-out, filter 130ms ease-out; }
+.motion-arena [data-acting="true"] .fighter img { animation: none; }
+[data-hero-pose="step"] .fighter--hero { transform: translateX(13%) rotate(3deg); }
+[data-hero-pose="swing"] .fighter--hero { transform: translateX(22%) rotate(8deg); }
+[data-hero-pose="cast"] .fighter--hero { transform: rotate(-6deg); }
+[data-hero-pose="brace"] .fighter--hero { transform: translateY(3%) scaleY(.92) rotate(-4deg); }
+[data-hero-pose="recover"] .fighter--hero { transform: translateY(-3%) scale(1.035); }
+[data-hero-pose="hit-left"] .fighter--hero { transform: translateX(-8%) rotate(-8deg); filter: brightness(1.22); }
+[data-hero-pose="recoil-left"] .fighter--hero { transform: translateX(-5%) rotate(-6deg); }
+[data-hero-pose="victor"] .fighter--hero { transform: translateY(-3%) rotate(-7deg); }
+[data-hero-pose="fallen"] .fighter--hero { transform: translateY(15%) rotate(-28deg) scale(.82); filter: saturate(.68); }
+[data-enemy-pose="crouch"] .fighter--enemy { transform: translateY(6%) scaleY(.87) scaleX(1.04); }
+[data-enemy-pose="approach"] .fighter--enemy { transform: translateX(-29%) rotate(-8deg); }
+[data-enemy-pose="claw"] .fighter--enemy { transform: translateX(-38%) rotate(-12deg); }
+[data-enemy-pose="chant"] .fighter--enemy { transform: translateY(-3%) rotate(4deg); }
+[data-enemy-pose="hit-right"] .fighter--enemy { transform: translateX(8%) rotate(8deg); filter: brightness(1.22); }
+[data-enemy-pose="recoil-right"] .fighter--enemy { transform: translateX(5%) rotate(6deg); }
+[data-enemy-pose="down"] .fighter--enemy { transform: translateY(14%) rotate(28deg) scale(.76); filter: saturate(.65); }
+[data-enemy-pose="menace"] .fighter--enemy { transform: rotate(-8deg) scale(1.06); }
+.motion-effects { pointer-events: none; position: absolute; inset: 0; overflow: hidden; border-radius: inherit; }
+.motion-effect, .motion-pose { position: absolute; height: auto; display: block; object-fit: contain; }
+.motion-effect { width: clamp(3rem, 17%, 9rem); top: 49%; transform: translate(-50%, -50%); }
+.motion-pose { width: clamp(3rem, 15%, 8rem); top: 33%; transform: translate(-50%, -50%); }
+.motion-effect[data-position="hero"] { left: 34%; }
+.motion-effect[data-position="enemy"] { left: 69%; }
+.motion-effect[data-position="center"] { left: 50%; }
+.motion-effect[data-effect="clock"] { top: 34%; }
+.motion-effect[data-effect="heal"] { animation: heal-lift ease-out both; }
+@keyframes heal-lift {
+  from { transform: translate(-50%, -36%); opacity: .72; }
+  to { transform: translate(-50%, -62%); opacity: 1; }
+}
+.motion-pose[data-position="hero"] { left: 40%; }
+.motion-pose[data-position="enemy"] { left: 63%; }
+.motion-effect[data-position="forward"], .motion-effect[data-position="backward"] { width: clamp(2rem, 10%, 5rem); animation-timing-function: linear; animation-fill-mode: both; }
+.motion-effect[data-position="forward"] { left: 65%; animation-name: travel-right; }
+.motion-effect[data-position="backward"] { left: 34%; animation-name: travel-left; }
+@keyframes travel-right { from { left: 34%; } to { left: 65%; } }
+@keyframes travel-left { from { left: 67%; } to { left: 34%; } }
+.motion-arena [data-reduced="true"] .fighter { transition: none; transform: none; filter: none; }
+.motion-arena [data-reduced="true"][data-hero-pose="fallen"] .fighter--hero,
+.motion-arena [data-reduced="true"][data-enemy-pose="down"] .fighter--enemy { transform: rotate(12deg) scale(.87); }
+.motion-effects[data-reduced="true"] .motion-effect { animation: none; }
+.motion-panel { padding: clamp(.75rem, 3vw, 1.25rem); border: 1px solid #645978; border-radius: 1rem; background: #21253b; }
+.motion-panel h2 { margin-block: .9rem .2rem; font-size: 1.25rem; }
+.motion-fields, .motion-buttons { display: flex; flex-wrap: wrap; gap: .55rem; align-items: end; }
+.motion-fields > div { flex: 1 1 12rem; min-width: 0; }
+.motion-fields [hidden] { display: none; }
+.motion-fields label { display: block; margin-bottom: .25rem; }
+.motion-buttons { margin-top: .7rem; align-items: center; }
+.motion-panel button, .motion-panel select { min-height: 44px; min-width: 44px; color: inherit; font: inherit; }
+.motion-panel button { border: 1px solid #a596b8; border-radius: .55rem; padding: .3rem .8rem; background: #35344d; }
+.motion-panel button:not(:disabled) { cursor: pointer; }
+.motion-panel .play-button { background: #ffd797; color: #241d2c; border-color: #ffd797; font-weight: 700; }
+.motion-panel button:disabled { opacity: .65; }
+.motion-panel select { width: 100%; background: #2a2e46; border: 1px solid #a596b8; border-radius: .55rem; padding: .35rem .55rem; }
+.motion-status { margin: .7rem 0 0; color: #ffd797; font-weight: 700; }
+@media (prefers-reduced-motion: reduce) {
+  .motion-arena .fighter { transition: none; }
+  .motion-effects .motion-effect { animation: none; }
+}
