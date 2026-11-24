@@ -4,11 +4,13 @@
 
 | セッション | 対象機種／ブラウザ | 状態 |
 |---|---|---|
-| D01 | Windows 11 / Chrome | NOT_RUN |
-| D02 | Windows 11 / Edge | NOT_RUN |
-| D03 | Galaxy S26 / Chrome | NOT_RUN |
-| D04 | iPhone SE2 / Safari | NOT_RUN |
-| D05 | iPad mini 6 / Safari | NOT_RUN |
+| D01 | Windows 11 / Chrome | PASS |
+| D02 | Windows 11 / Edge | PASS |
+| D03 | Galaxy S26 / Chrome | PASS |
+| D04 | iPhone SE2 / Safari | PASS |
+| D05 | iPad mini 6 / Safari | PASS |
+
+上表のPASSは2026-11-24のユーザー報告に基づく正式公開版の環境単位の総合判定。下表は個別セッション用の記録テンプレートであり、個別チェック項目の合否・証跡は未報告。
 
 - セッションID：
 - 担当者ID、実施日時・タイムゾーン：
