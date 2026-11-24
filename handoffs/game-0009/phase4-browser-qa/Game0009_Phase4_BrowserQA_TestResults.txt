@@ -1,0 +1,609 @@
+Node.js: v24.22.3
+Command: npm_config_node_options='--test-isolation=none --test-reporter=tap' npm test
+
+
+> test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: all 960 frozen ordered plans match every result field
+ok 1 - all 960 frozen ordered plans match every result field
+  ---
+  duration_ms: 19.049765
+  type: 'test'
+  ...
+# Subtest: all 64 frozen golden vectors match every result field
+ok 2 - all 64 frozen golden vectors match every result field
+  ---
+  duration_ms: 0.347552
+  type: 'test'
+  ...
+# Subtest: rejects invalid plans and stage data before resolving any turn
+ok 3 - rejects invalid plans and stage data before resolving any turn
+  ---
+  duration_ms: 0.928507
+  type: 'test'
+  ...
+# Subtest: all 960 battles are deterministic and leave frozen inputs intact
+ok 4 - all 960 battles are deterministic and leave frozen inputs intact
+  ---
+  duration_ms: 34.670319
+  type: 'test'
+  ...
+# Subtest: star objectives use the executed sequence on early victory
+ok 5 - star objectives use the executed sequence on early victory
+  ---
+  duration_ms: 0.423404
+  type: 'test'
+  ...
+# Subtest: EDGE-01_guard_full
+ok 6 - EDGE-01_guard_full
+  ---
+  duration_ms: 0.4346
+  type: 'test'
+  ...
+# Subtest: EDGE-02_heal_cap
+ok 7 - EDGE-02_heal_cap
+  ---
+  duration_ms: 0.106246
+  type: 'test'
+  ...
+# Subtest: EDGE-03_focus_through_magic
+ok 8 - EDGE-03_focus_through_magic
+  ---
+  duration_ms: 0.200315
+  type: 'test'
+  ...
+# Subtest: EDGE-04_physical_guard
+ok 9 - EDGE-04_physical_guard
+  ---
+  duration_ms: 0.242087
+  type: 'test'
+  ...
+# Subtest: EDGE-05_magic_ward
+ok 10 - EDGE-05_magic_ward
+  ---
+  duration_ms: 0.526295
+  type: 'test'
+  ...
+# Subtest: EDGE-06_thorn_killing_slash
+ok 11 - EDGE-06_thorn_killing_slash
+  ---
+  duration_ms: 0.214205
+  type: 'test'
+  ...
+# Subtest: EDGE-07_thorn_kills_hero
+ok 12 - EDGE-07_thorn_kills_hero
+  ---
+  duration_ms: 0.110453
+  type: 'test'
+  ...
+# Subtest: EDGE-08_dead_counter_no_reflect
+ok 13 - EDGE-08_dead_counter_no_reflect
+  ---
+  duration_ms: 0.057414
+  type: 'test'
+  ...
+# Subtest: EDGE-09_zero_damage_counter
+ok 14 - EDGE-09_zero_damage_counter
+  ---
+  duration_ms: 0.175238
+  type: 'test'
+  ...
+# Subtest: EDGE-10_counter_vs_stance
+ok 15 - EDGE-10_counter_vs_stance
+  ---
+  duration_ms: 0.206464
+  type: 'test'
+  ...
+# Subtest: EDGE-11_counter_not_thorn
+ok 16 - EDGE-11_counter_not_thorn
+  ---
+  duration_ms: 0.06117
+  type: 'test'
+  ...
+# Subtest: EDGE-12_timeout_alive
+ok 17 - EDGE-12_timeout_alive
+  ---
+  duration_ms: 0.041642
+  type: 'test'
+  ...
+# Subtest: EDGE-13_heal_partial_cap
+ok 18 - EDGE-13_heal_partial_cap
+  ---
+  duration_ms: 0.041691
+  type: 'test'
+  ...
+# Subtest: EDGE-14_thorn_after_reduced_slash
+ok 19 - EDGE-14_thorn_after_reduced_slash
+  ---
+  duration_ms: 0.038166
+  type: 'test'
+  ...
+# Subtest: all 13 copied frozen artifacts exactly match approved source bytes
+ok 20 - all 13 copied frozen artifacts exactly match approved source bytes
+  ---
+  duration_ms: 2.076959
+  type: 'test'
+  ...
+# Subtest: frozen manifests contain 16 uniquely identified stages and six cards
+ok 21 - frozen manifests contain 16 uniquely identified stages and six cards
+  ---
+  duration_ms: 0.403484
+  type: 'test'
+  ...
+# Subtest: all 960 ordered original plans are present exactly once
+ok 22 - all 960 ordered original plans are present exactly once
+  ---
+  duration_ms: 2.807225
+  type: 'test'
+  ...
+# Subtest: frozen unique victory sequence and star distributions are consistent
+ok 23 - frozen unique victory sequence and star distributions are consistent
+  ---
+  duration_ms: 0.800829
+  type: 'test'
+  ...
+# Subtest: golden vectors match full plan oracle exactly
+ok 24 - golden vectors match full plan oracle exactly
+  ---
+  duration_ms: 1.07261
+  type: 'test'
+  ...
+# Subtest: every second-level hint starts one verified 3-star winning plan
+ok 25 - every second-level hint starts one verified 3-star winning plan
+  ---
+  duration_ms: 0.368663
+  type: 'test'
+  ...
+# Subtest: frozen edge and storage test catalogs have expected cardinality
+ok 26 - frozen edge and storage test catalogs have expected cardinality
+  ---
+  duration_ms: 0.248476
+  type: 'test'
+  ...
+# Subtest: frozen canonical file has correct exact digest and byte length
+ok 27 - frozen canonical file has correct exact digest and byte length
+  ---
+  duration_ms: 0.105025
+  type: 'test'
+  ...
+# Subtest: manifest produces the same bytes and digest as independently frozen reference
+ok 28 - manifest produces the same bytes and digest as independently frozen reference
+  ---
+  duration_ms: 6.812463
+  type: 'test'
+  ...
+# Subtest: presentation and hint changes do not change fingerprint
+ok 29 - presentation and hint changes do not change fingerprint
+  ---
+  duration_ms: 0.772848
+  type: 'test'
+  ...
+# Subtest: first stage enemy HP change matches frozen divergence vector
+ok 30 - first stage enemy HP change matches frozen divergence vector
+  ---
+  duration_ms: 0.367451
+  type: 'test'
+  ...
+# Subtest: SAVE-01 initial startup unlocks only main-01
+ok 31 - SAVE-01 initial startup unlocks only main-01
+  ---
+  duration_ms: 11.361593
+  type: 'test'
+  ...
+# Subtest: SAVE-02 replay cannot reduce current or no-hint stars
+ok 32 - SAVE-02 replay cannot reduce current or no-hint stars
+  ---
+  duration_ms: 2.255061
+  type: 'test'
+  ...
+# Subtest: SAVE-03 historical stars are separate and still unlock stages
+ok 33 - SAVE-03 historical stars are separate and still unlock stages
+  ---
+  duration_ms: 0.603298
+  type: 'test'
+  ...
+# Subtest: SAVE-04 cosmetic changes keep stars in the current ruleset
+ok 34 - SAVE-04 cosmetic changes keep stars in the current ruleset
+  ---
+  duration_ms: 0.737196
+  type: 'test'
+  ...
+# Subtest: SAVE-05 changing a star condition separates records
+ok 35 - SAVE-05 changing a star condition separates records
+  ---
+  duration_ms: 0.796002
+  type: 'test'
+  ...
+# Subtest: SAVE-06 explicitly migrates the approved synthetic v1 source
+ok 36 - SAVE-06 explicitly migrates the approved synthetic v1 source
+  ---
+  duration_ms: 1.027744
+  type: 'test'
+  ...
+# Subtest: SAVE-07 future schema is read-only
+ok 37 - SAVE-07 future schema is read-only
+  ---
+  duration_ms: 0.68585
+  type: 'test'
+  ...
+# Subtest: SAVE-08 inconsistent stars only offer an explicit recovery
+ok 38 - SAVE-08 inconsistent stars only offer an explicit recovery
+  ---
+  duration_ms: 0.678118
+  type: 'test'
+  ...
+# Subtest: SAVE-09 malformed JSON can be exported before confirmed recovery
+ok 39 - SAVE-09 malformed JSON can be exported before confirmed recovery
+  ---
+  duration_ms: 0.695093
+  type: 'test'
+  ...
+# Subtest: SAVE-10 partial recovery previews two records and backs up before writing
+ok 40 - SAVE-10 partial recovery previews two records and backs up before writing
+  ---
+  duration_ms: 0.716545
+  type: 'test'
+  ...
+# Subtest: SAVE-11 backup failure preserves original bytes and export
+ok 41 - SAVE-11 backup failure preserves original bytes and export
+  ---
+  duration_ms: 1.733222
+  type: 'test'
+  ...
+# Subtest: SAVE-12 simultaneous same-stage saves merge maxima
+ok 42 - SAVE-12 simultaneous same-stage saves merge maxima
+  ---
+  duration_ms: 0.942167
+  type: 'test'
+  ...
+# Subtest: SAVE-13 separate tabs retain both stages and old history despite stale reads
+ok 43 - SAVE-13 separate tabs retain both stages and old history despite stale reads
+  ---
+  duration_ms: 0.916459
+  type: 'test'
+  ...
+# Subtest: SAVE-14 retry is idempotent without clearCount
+ok 44 - SAVE-14 retry is idempotent without clearCount
+  ---
+  duration_ms: 0.735272
+  type: 'test'
+  ...
+# Subtest: SAVE-15 unsupported Web Locks returns a memory-mode outcome without writing
+ok 45 - SAVE-15 unsupported Web Locks returns a memory-mode outcome without writing
+  ---
+  duration_ms: 0.503301
+  type: 'test'
+  ...
+# Subtest: SAVE-16 cancelling a queued request never writes
+ok 46 - SAVE-16 cancelling a queued request never writes
+  ---
+  duration_ms: 2.978727
+  type: 'test'
+  ...
+# Subtest: SAVE-17 quota and security errors do not claim success or erase prior stars
+ok 47 - SAVE-17 quota and security errors do not claim success or erase prior stars
+  ---
+  duration_ms: 0.630228
+  type: 'test'
+  ...
+# Subtest: SAVE-18 reload restores stars without any in-progress battle data
+ok 48 - SAVE-18 reload restores stars without any in-progress battle data
+  ---
+  duration_ms: 0.729394
+  type: 'test'
+  ...
+# Subtest: SAVE-19 old main-08 completion unlocks extra-01 without current stars
+ok 49 - SAVE-19 old main-08 completion unlocks extra-01 without current stars
+  ---
+  duration_ms: 0.628015
+  type: 'test'
+  ...
+# Subtest: SAVE-20 invalid stage ID cannot unlock any stage
+ok 50 - SAVE-20 invalid stage ID cannot unlock any stage
+  ---
+  duration_ms: 3.148527
+  type: 'test'
+  ...
+# Subtest: SAVE-21 conflicting ruleset bindings block writes
+ok 51 - SAVE-21 conflicting ruleset bindings block writes
+  ---
+  duration_ms: 0.334703
+  type: 'test'
+  ...
+# Subtest: SAVE-22 feature detection and refused lock protect mock storage; devices deferred
+ok 52 - SAVE-22 feature detection and refused lock protect mock storage; devices deferred
+  ---
+  duration_ms: 3.221264
+  type: 'test'
+  ...
+# Subtest: SAVE-23 display settings are last-write-wins and separate from progress
+ok 53 - SAVE-23 display settings are last-write-wins and separate from progress
+  ---
+  duration_ms: 0.811205
+  type: 'test'
+  ...
+# Subtest: SAVE-24 migration uses a synthetic fixture only and does not auto-detect into v2
+ok 54 - SAVE-24 migration uses a synthetic fixture only and does not auto-detect into v2
+  ---
+  duration_ms: 0.515039
+  type: 'test'
+  ...
+# Subtest: SAVE-25 names, explanations and hints preserve canonical bytes
+ok 55 - SAVE-25 names, explanations and hints preserve canonical bytes
+  ---
+  duration_ms: 2.082617
+  type: 'test'
+  ...
+# Subtest: SAVE-26 changed HP yields frozen divergence and preserves old record
+ok 56 - SAVE-26 changed HP yields frozen divergence and preserves old record
+  ---
+  duration_ms: 3.172683
+  type: 'test'
+  ...
+# Subtest: SAVE-27 canonical payload bytes and all fingerprint-bearing expectations agree
+ok 57 - SAVE-27 canonical payload bytes and all fingerprint-bearing expectations agree
+  ---
+  duration_ms: 3.526984
+  type: 'test'
+  ...
+# Subtest: E3-01 double save writes once without clearCount
+ok 58 - E3-01 double save writes once without clearCount
+  ---
+  duration_ms: 1.21529
+  type: 'test'
+  ...
+# Subtest: E3-02 late low and hinted wins cannot lower either star field
+ok 59 - E3-02 late low and hinted wins cannot lower either star field
+  ---
+  duration_ms: 0.697868
+  type: 'test'
+  ...
+# Subtest: E3-03 frozen legacy sample is preview-only until explicitly confirmed
+ok 60 - E3-03 frozen legacy sample is preview-only until explicitly confirmed
+  ---
+  duration_ms: 0.629107
+  type: 'test'
+  ...
+# Subtest: E3-04 confirmed migration writes only historical stars and keeps both sources
+ok 61 - E3-04 confirmed migration writes only historical stars and keeps both sources
+  ---
+  duration_ms: 0.555618
+  type: 'test'
+  ...
+# Subtest: E3-05 existing v2 stars are never lowered and re-migration does not rewrite
+ok 62 - E3-05 existing v2 stars are never lowered and re-migration does not rewrite
+  ---
+  duration_ms: 0.650037
+  type: 'test'
+  ...
+# Subtest: E3-06 invalid or inaccessible legacy source is protected
+ok 63 - E3-06 invalid or inaccessible legacy source is protected
+  ---
+  duration_ms: 1.59606
+  type: 'test'
+  ...
+# Subtest: E3-07 migration failures before progress write preserve both main keys
+ok 64 - E3-07 migration failures before progress write preserve both main keys
+  ---
+  duration_ms: 1.88101
+  type: 'test'
+  ...
+# Subtest: E3-08 settings consent is separate and existing settings win
+ok 65 - E3-08 settings consent is separate and existing settings win
+  ---
+  duration_ms: 0.657097
+  type: 'test'
+  ...
+# Subtest: E3-09 readback uncertainty never reports saved or rolls back
+ok 66 - E3-09 readback uncertainty never reports saved or rolls back
+  ---
+  duration_ms: 0.554456
+  type: 'test'
+  ...
+# Subtest: E3-10 confirmed recheck performs no second write or revision change
+ok 67 - E3-10 confirmed recheck performs no second write or revision change
+  ---
+  duration_ms: 0.497022
+  type: 'test'
+  ...
+# Subtest: E3-11 recheck merges missing stars with the latest data
+ok 68 - E3-11 recheck merges missing stars with the latest data
+  ---
+  duration_ms: 0.580154
+  type: 'test'
+  ...
+# Subtest: E3-12 corrupt and incompatible data block recheck without losing source
+ok 69 - E3-12 corrupt and incompatible data block recheck without losing source
+  ---
+  duration_ms: 1.019251
+  type: 'test'
+  ...
+# Subtest: E3-13 newer separate-tab update survives safe verification
+ok 70 - E3-13 newer separate-tab update survives safe verification
+  ---
+  duration_ms: 0.69936
+  type: 'test'
+  ...
+# Subtest: settings do not claim success on post-write readback exception
+ok 71 - settings do not claim success on post-write readback exception
+  ---
+  duration_ms: 0.12224
+  type: 'test'
+  ...
+# Subtest: UI-01 both stage groups show frozen names and only main-01 opens initially
+ok 72 - UI-01 both stage groups show frozen names and only main-01 opens initially
+  ---
+  duration_ms: 2.072492
+  type: 'test'
+  ...
+# Subtest: UI-02 a confirmed clear unlocks its manifest successor
+ok 73 - UI-02 a confirmed clear unlocks its manifest successor
+  ---
+  duration_ms: 2.578337
+  type: 'test'
+  ...
+# Subtest: UI-03 planning renders exactly three frozen enemy actions and initial HP
+ok 74 - UI-03 planning renders exactly three frozen enemy actions and initial HP
+  ---
+  duration_ms: 0.771687
+  type: 'test'
+  ...
+# Subtest: UI-04 cards toggle from hand and cannot duplicate or exceed three
+ok 75 - UI-04 cards toggle from hand and cannot duplicate or exceed three
+  ---
+  duration_ms: 0.620664
+  type: 'test'
+  ...
+# Subtest: UI-05 moving slots changes the actual action order
+ok 76 - UI-05 moving slots changes the actual action order
+  ---
+  duration_ms: 2.14575
+  type: 'test'
+  ...
+# Subtest: UI-06 incomplete plan disables start and never calls engine
+ok 77 - UI-06 incomplete plan disables start and never calls engine
+  ---
+  duration_ms: 0.581015
+  type: 'test'
+  ...
+# Subtest: UI-07 hint viewing survives closing and resets on retry without reducing stars
+ok 78 - UI-07 hint viewing survives closing and resets on retry without reducing stars
+  ---
+  duration_ms: 0.827829
+  type: 'test'
+  ...
+# Subtest: UI-08 repeated start and finish produce one simulation and one save
+ok 79 - UI-08 repeated start and finish produce one simulation and one save
+  ---
+  duration_ms: 0.599243
+  type: 'test'
+  ...
+# Subtest: UI-09 replay consumes exact engine frames and presents the result unchanged
+ok 80 - UI-09 replay consumes exact engine frames and presents the result unchanged
+  ---
+  duration_ms: 0.758657
+  type: 'test'
+  ...
+# Subtest: UI-10 early victory shows the unused card without logging it as played
+ok 81 - UI-10 early victory shows the unused card without logging it as played
+  ---
+  duration_ms: 0.639422
+  type: 'test'
+  ...
+# Subtest: UI-11 skip and normal completion give identical result and single save
+ok 82 - UI-11 skip and normal completion give identical result and single save
+  ---
+  duration_ms: 1.388806
+  type: 'test'
+  ...
+# Subtest: UI-12 result renders victory, defeat, stars, final HP and timeout cause
+ok 83 - UI-12 result renders victory, defeat, stars, final HP and timeout cause
+  ---
+  duration_ms: 0.997018
+  type: 'test'
+  ...
+# Subtest: UI-13 startup and result warn without falsely claiming a save
+ok 84 - UI-13 startup and result warn without falsely claiming a save
+  ---
+  duration_ms: 1.31714
+  type: 'test'
+  ...
+# Subtest: UI-14 unverified persists until readback succeeds and never blindly retries
+ok 85 - UI-14 unverified persists until readback succeeds and never blindly retries
+  ---
+  duration_ms: 0.988366
+  type: 'test'
+  ...
+# Subtest: UI-15 showing recovery previews leaves raw progress untouched
+ok 86 - UI-15 showing recovery previews leaves raw progress untouched
+  ---
+  duration_ms: 0.887437
+  type: 'test'
+  ...
+# Subtest: UI-16 historical clear unlocks successor while current stars stay zero
+ok 87 - UI-16 historical clear unlocks successor while current stars stay zero
+  ---
+  duration_ms: 0.520436
+  type: 'test'
+  ...
+# Subtest: UI-17 page departure stops playback before any result save
+ok 88 - UI-17 page departure stops playback before any result save
+  ---
+  duration_ms: 0.583219
+  type: 'test'
+  ...
+# Subtest: UI-18 OS reduced motion completes instantly with full log
+ok 89 - UI-18 OS reduced motion completes instantly with full log
+  ---
+  duration_ms: 1.285814
+  type: 'test'
+  ...
+# Subtest: UI-19 keyboard controls have native buttons, move names and focus targets
+ok 90 - UI-19 keyboard controls have native buttons, move names and focus targets
+  ---
+  duration_ms: 0.742834
+  type: 'test'
+  ...
+# Subtest: UI-20 CSS defines responsive grid, narrow controls and safe-area padding
+ok 91 - UI-20 CSS defines responsive grid, narrow controls and safe-area padding
+  ---
+  duration_ms: 0.22418
+  type: 'test'
+  ...
+# Subtest: UI-21 normal controller flow renders all seven states and settings save
+ok 92 - UI-21 normal controller flow renders all seven states and settings save
+  ---
+  duration_ms: 0.872975
+  type: 'test'
+  ...
+# Subtest: UI-23 saving unavailable permits session-only clear and successor
+ok 93 - UI-23 saving unavailable permits session-only clear and successor
+  ---
+  duration_ms: 0.599063
+  type: 'test'
+  ...
+# Subtest: UI-24 saved and session-only records carry distinct visible labels
+ok 94 - UI-24 saved and session-only records carry distinct visible labels
+  ---
+  duration_ms: 0.896371
+  type: 'test'
+  ...
+# Subtest: UI-25 consecutive wins are queued behind an unresolved save and retain both star maxima
+ok 95 - UI-25 consecutive wins are queued behind an unresolved save and retain both star maxima
+  ---
+  duration_ms: 0.919064
+  type: 'test'
+  ...
+# Subtest: UI-26 safe recheck updates result and blocked recheck never replays pending writes
+ok 96 - UI-26 safe recheck updates result and blocked recheck never replays pending writes
+  ---
+  duration_ms: 0.921818
+  type: 'test'
+  ...
+# Subtest: UI-27 recovery and legacy operations require preview and explicit separate confirmation
+ok 97 - UI-27 recovery and legacy operations require preview and explicit separate confirmation
+  ---
+  duration_ms: 0.776644
+  type: 'test'
+  ...
+# Subtest: UI-28 fresh initialization discards volatile progress and unfinished playback
+ok 98 - UI-28 fresh initialization discards volatile progress and unfinished playback
+  ---
+  duration_ms: 1.845959
+  type: 'test'
+  ...
+1..98
+# tests 98
+# suites 0
+# pass 98
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 210.06883
+
+Exit code: 0
+Browser QA NOT_EXECUTED: UI-19 keyboard/focus, UI-20 responsive rendering, and browser console/resource loading.
+UI-19 and UI-20 in the TAP output cover Node/static assertions only.
