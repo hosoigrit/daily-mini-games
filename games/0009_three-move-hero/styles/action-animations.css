@@ -83,6 +83,7 @@
   z-index: 2;
 }
 .motion-effects .r01-focus-ring { animation: r01-ring-spread ease-out both; }
+.motion-effects .r01-heal-ring { animation-name: none; }
 .motion-effects .r01-focus-sparks,
 .motion-effects .r01-heal-sparks { animation: r01-sparks-rise ease-out both; z-index: 3; }
 .motion-effects .r01-heal-glow { animation: r01-heal-bloom ease-out both; }

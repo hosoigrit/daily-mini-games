@@ -214,6 +214,22 @@ test('R01-T03 heal shows a green ritual ring, multiple particles and a delayed g
   assert.match(css, /0%, 45% \{ opacity: 0; \}/);
 });
 
+test('R01-RG01 the M08 floor ring opts out of the legacy heal-lift animation', async () => {
+  const [ring, sparks, glow] = phaseFiles(await trace('heal'), 160);
+  assert.match(ring.className, /\bmotion-effect\b/);
+  assert.equal(ring.data.effect, 'heal');
+  assert.match(ring.className, /\br01-heal-ring\b/);
+  assert.match(sparks.className, /\br01-heal-sparks\b/);
+  assert.match(glow.className, /\br01-heal-glow\b/);
+
+  const legacy = css.match(/\.motion-effect\[data-effect="heal"\]\s*\{[^}]*animation:\s*heal-lift\b/);
+  const override = css.match(/\.motion-effects \.r01-heal-ring\s*\{\s*animation-name:\s*none;\s*\}/);
+  assert.ok(legacy, 'the legacy effect stays available');
+  assert.ok(override && override.index > legacy.index, 'the R01 floor ring must override the legacy animation');
+  assert.match(css, /\.r01-heal-sparks\s*\{\s*animation:\s*r01-sparks-rise\b/);
+  assert.match(css, /\.r01-heal-glow\s*\{\s*animation:\s*r01-heal-bloom\b/);
+});
+
 test('R01-T04 magic ward has a translucent double ring and opening expansion', async () => {
   const files = phaseFiles(await trace('magic-ward'), 235);
   assert.equal(refs(files)[0], 'r01-ward');
