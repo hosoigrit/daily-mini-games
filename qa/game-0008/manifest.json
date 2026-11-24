@@ -1,0 +1,69 @@
+{
+  "game_number": "0008",
+  "source_sha": "ceeac60018b470c5f1bbd2141645cffca7d2813e",
+  "pages_candidate_sha": "3657b2c75c314d84284a598b4f8932d68c1f7931",
+  "qa_base_sha": "36eebcad1d0b9233b7abd24ac9f22b2bc8ac134e",
+  "files": [
+    {
+      "path": "qa/game-0008/README.md",
+      "sha256": "ce69b8d9355b74e2686d983b8e736eee2e0474af82cd2c256296ba2fc8964b82"
+    },
+    {
+      "path": "qa/game-0008/SHA256SUMS.txt",
+      "sha256": "4e5747b037c5c9d88ccc571494a7eb3a29081235b210bfb03baa07b9198f366a"
+    },
+    {
+      "path": "qa/game-0008/ZIP-SHA256.txt",
+      "sha256": "91878b9c94b47674ac281cf8381d5106694956078acabf70bc0612a96d316f32"
+    },
+    {
+      "path": "qa/game-0008/acceptance-results.csv",
+      "sha256": "1ff4e411adba8bd32a9f0176918cf4ec38bd79197d1f1458f91083985a8bc0ed"
+    },
+    {
+      "path": "qa/game-0008/ai-evaluation-prompt.md",
+      "sha256": "b6062020edabe1c88e97d33d31caa6c7fc9993c0b663f731194163ba7bf34847"
+    },
+    {
+      "path": "qa/game-0008/ai-result-template.md",
+      "sha256": "97ee700b98fc78f05f43a2617faab993fd4a7249665df487f1dcbefeaa8e3a32"
+    },
+    {
+      "path": "qa/game-0008/device-checksheet.md",
+      "sha256": "c041bb5b91f14b4c338702b7b5724b39f0bbe9389656c77acbec9e33dac570a8"
+    },
+    {
+      "path": "qa/game-0008/exclusions.md",
+      "sha256": "9925ea6ed97805eaabdb21b2afd9f45109290e0a9cf62bb7971ff4efced1057d"
+    },
+    {
+      "path": "qa/game-0008/human-play-instructions.md",
+      "sha256": "d15835bdeec630907b037c560d29e7c69fd75b59b95a6a3213adc3e41936ef83"
+    },
+    {
+      "path": "qa/game-0008/human-response-template.md",
+      "sha256": "be34ebfabe9f0bc1272bf9748761a79431037a5960f03a4bc186a4dc4c15a825"
+    },
+    {
+      "path": "qa/game-0008/release-gate.md",
+      "sha256": "fd72dc0322e535fb63a80c0a7ac168514a8aaba47ef9992d456e7716b6b427bf"
+    }
+  ],
+  "manifest_self": {
+    "path": "qa/game-0008/manifest.json",
+    "verification": "SHA-256 compared independently after remote readback"
+  },
+  "not_run": {
+    "ai_evaluations": 12,
+    "human_truths": 12,
+    "human_target_independent_participants_per_truth": 2,
+    "device_environments": [
+      "Windows 11 Chrome",
+      "Windows 11 Edge",
+      "Galaxy S26 Chrome",
+      "iPhone SE2 Safari",
+      "iPad mini 6 Safari"
+    ]
+  },
+  "release_decision": "HOLD"
+}

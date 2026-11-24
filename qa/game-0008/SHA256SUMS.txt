@@ -1,0 +1,10 @@
+295e40a03890e93f8fa4c59f38b5602590654d3c147cff6d324d2fa4f5501d45  daily-mini-games/games/0008_three-minute-detective/additional-cases.mjs
+db4fd6ab7ebb229264d39fc8a733b111606811bdb6399656e9443a3ff18a9de5  daily-mini-games/games/0008_three-minute-detective/app.mjs
+1d4f2751ffa78dc0586807758e488c2c3bbe4b4c5dbf2dbff468300510f78dbf  daily-mini-games/games/0008_three-minute-detective/approved-narratives.mjs
+f7519e69c717fbebe139f1dafa8a91b3b165f8574b5ecca8643d3ad8035fefef  daily-mini-games/games/0008_three-minute-detective/case-data.mjs
+2347875ef048df4b7293b18a4863b9c937fcbe11c11eaa149edce75a058bfb25  daily-mini-games/games/0008_three-minute-detective/engine.mjs
+d65fdc02fc70d0f83157fedcdda9f3f21a2821bea3ba196e18813ac9772f0208  daily-mini-games/games/0008_three-minute-detective/evidence-propositions.mjs
+5e42f340a0ec042ac8bca530a8f385da78f89ce50a5d80e79a4cab779d047be0  daily-mini-games/games/0008_three-minute-detective/index.html
+f2891d77a50bb4f335a899b17b160616bc924a13d16423acb2e1fbb932a6a8d6  daily-mini-games/games/0008_three-minute-detective/proof-contracts.mjs
+9a8022f59a0869919022419ef5fa2b1899badc9fa88629e347c51b2157632794  daily-mini-games/games/0008_three-minute-detective/storage.mjs
+ccc11dea5e0f4de90c1dbcb55fa611419fbc10f665817727247d06c9e29ca45b  daily-mini-games/games/0008_three-minute-detective/styles.css

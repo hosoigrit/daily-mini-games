@@ -1,0 +1,22 @@
+﻿種別,公開用集計枠,対象環境または集計項目,実施件数または到達数,対象件数または目標,状態
+AI本文,AI-01,,0,1,NOT_RUN
+AI本文,AI-02,,0,1,NOT_RUN
+AI本文,AI-03,,0,1,NOT_RUN
+AI本文,AI-04,,0,1,NOT_RUN
+AI本文,AI-05,,0,1,NOT_RUN
+AI本文,AI-06,,0,1,NOT_RUN
+AI本文,AI-07,,0,1,NOT_RUN
+AI本文,AI-08,,0,1,NOT_RUN
+AI本文,AI-09,,0,1,NOT_RUN
+AI本文,AI-10,,0,1,NOT_RUN
+AI本文,AI-11,,0,1,NOT_RUN
+AI本文,AI-12,,0,1,NOT_RUN
+人間初見,HUMAN-COVERAGE,1名以上が実施した真相数,0,12,NOT_RUN
+人間初見,HUMAN-TWO,独立した初見2名以上が実施した真相数,0,12,NOT_RUN
+実機,DEVICE-01,Windows 11 Chrome,0,1,NOT_RUN
+実機,DEVICE-02,Windows 11 Edge,0,1,NOT_RUN
+実機,DEVICE-03,Galaxy S26 Chrome,0,1,NOT_RUN
+実機,DEVICE-04,iPhone SE2 Safari,0,1,NOT_RUN
+実機,DEVICE-05,iPad mini 6 Safari,0,1,NOT_RUN
+公開管理,BLOCKERS,公開阻害事項は公開判定管理シートで管理,,,HOLD
+公開管理,RELEASE,最終公開判定,,,HOLD
