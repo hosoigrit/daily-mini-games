@@ -1,0 +1,10 @@
+{
+  "name": "game-0008-three-minute-detective",
+  "version": "0.7.5-qa-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node --input-type=module -e \"import {validateCatalog} from './engine.mjs'; const errors=validateCatalog(); if(errors.length){console.error(errors);process.exitCode=1}else console.log('Case catalog validation: PASS')\""
+  }
+}
