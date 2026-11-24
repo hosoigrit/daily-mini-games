@@ -1,8 +1,8 @@
-# Game #0008『3分探偵』v0.7.4 レビュー修正版（ローカル・未公開）
+# Game #0008『3分探偵』v0.7.5 レビュー版（Draft PR・未公開）
 
 「事件固定・真相変化型」の短編ロジック推理ゲーム。4事件×3真相=**12通り**を収録。ソース、HTML、CSS、ロジック、テスト、学習記録は全てこのゲーム専用ディレクトリ内に配置。
 
-**未公開**：v0.7.4修正版はローカルのみ。GitHub Draft PR #14にはv0.7.3を登録済み。今回、Push・PR更新・マージ・GitHub Pages公開・既存ゲーム変更は行っていません。
+**未公開**：本ゲームは [GitHub Draft PR #14](https://github.com/hosoigrit/daily-mini-games/pull/14) の専用ブランチでレビュー中です。`main`へのマージ、GitHub Pagesへの公開、実機確認はいずれも未完了です。
 
 ## すぐに遊ぶ
 
@@ -30,7 +30,7 @@ ZIP内の `PLAY_OFFLINE.html` をブラウザで開いてください。単体HT
 
 `cd games/0008_three-minute-detective`
 
-- `npm test`: Node組み込みのテスト（v0.6で89/89 PASS）
+- `npm test`: Node組み込みのテスト。現在の件数と合否は実行時の結果を確認してください。
 - `npm run validate`: 4事件・12真相の定義・解答可能性を検証（PASS）
 - `python tests/browser-inline-smoke.py`: HTML/JSを単一ページに束ねてChromiumで操作検証する、代替テスト。実行にはPython PlaywrightとChromiumが必要。
 - `python tests/browser-smoke.py`: ローカルHTTPで**実モジュール読み込み**と保存を確認するテスト。この実行環境では未実施。PCで実行要。
@@ -90,3 +90,11 @@ CASE004の導入文も不正操作の実行者を特定する趣旨に明確化�
 - RIR-06: HTTP E2Eのドキュメントルートをリポジトリルートに修正し、index・JSモジュールがHTTP 200で取得できることを事前検査する。
 - 否定表現、証拠文面変更、ルール・前提変更、人物・時刻変更に対する変異テストを追加。
 - `approved-narratives.mjs` の原文と `evidence-propositions.mjs` の命題は、事件設計者以外の人間が推理の一意性・証拠と実行者の結びつきをレビューすることが最終条件。
+
+
+## v0.7.5 統合上の注意とHTTPテストの互換性
+
+- このブランチの現行実装は、`approved-narratives.mjs` による証拠・事件文面の承認済みベースライン、`evidence-propositions.mjs` の構造化命題、`proof-contracts.mjs` の独立した論証条件を照合する。ローカルv0.7.4の別実装をファイル単位で上書きしない。
+- `tests/semantic-integrity.test.mjs` に否定文、別人物、別経路、時刻・ルールの改変を拒否する回帰試験がある。ただしシナリオの日本語を機械が完全に論証する機能ではなく、独立レビューが必要。
+- `tests/browser-smoke.py` は`/daily-mini-games/`のサブパスを一時コピーで再現する。シンボリックリンクの作成権限を要求しないため、Windows 11でも実行できる設計。Python PlaywrightとChromiumが必要で、実機でのPASSは別途確認する。
+- 既存のGame #0001〜#0007、公開用`docs/`、CI設定は本レビューPRで変更していない。**公開判定はHOLD**。

@@ -1,8 +1,8 @@
 """Real local-HTTP module-loading smoke. Run on user's PC after installing Playwright.
 
 Requires Python Playwright and a Chromium installation. This does NOT contact GitHub.
-The sandbox environment may block loopback navigation, so this test is shipped but
-not claimed to have run there.
+The sandbox environment may block loopback navigation. The HTTP fixture uses
+a temporary directory copy, not a Windows-privileged symlink.
 """
 import functools
 import os
@@ -27,7 +27,11 @@ class RecordingHandler(SimpleHTTPRequestHandler):
 
 def run():
     with TemporaryDirectory() as root:
-        (Path(root) / SUBPATH).symlink_to(ROOT, target_is_directory=True)
+        source = ROOT / 'games' / '0008_three-minute-detective'
+        if not (source / 'index.html').is_file():
+            raise FileNotFoundError(f'Missing Game #0008 entry: {source}')
+        destination = Path(root) / SUBPATH / 'games' / '0008_three-minute-detective'
+        shutil.copytree(source, destination, ignore=shutil.ignore_patterns('__pycache__', '*.pyc', 'node_modules'))
         run_browser(root)
 
 
