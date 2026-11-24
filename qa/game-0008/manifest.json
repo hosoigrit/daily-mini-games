@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "qa/game-0008/README.md",
-      "sha256": "ce69b8d9355b74e2686d983b8e736eee2e0474af82cd2c256296ba2fc8964b82"
+      "sha256": "37fb8dda9bed7c98b7a3aacbdd595d27c61ddfbbf14e274e2c3b8ad9235c0b04"
     },
     {
       "path": "qa/game-0008/SHA256SUMS.txt",
@@ -18,7 +18,7 @@
     },
     {
       "path": "qa/game-0008/acceptance-results.csv",
-      "sha256": "0db8b62307cf3fc341d67a18d2f6dfe3477cb5336c7df9794877beda196f9783"
+      "sha256": "16ccdac6b4acfeaeb9775856134e5026b86c534c3270041b24fe2a6ab26e47d0"
     },
     {
       "path": "qa/game-0008/ai-evaluation-prompt.md",
@@ -30,7 +30,7 @@
     },
     {
       "path": "qa/game-0008/device-checksheet.md",
-      "sha256": "c041bb5b91f14b4c338702b7b5724b39f0bbe9389656c77acbec9e33dac570a8"
+      "sha256": "6a74a6a3d7a5f7affeafe2a71ebab94561760270f64ab8a7d7aaf78df8d5bd37"
     },
     {
       "path": "qa/game-0008/exclusions.md",
@@ -46,7 +46,7 @@
     },
     {
       "path": "qa/game-0008/release-gate.md",
-      "sha256": "d9bb89f76d492240c4e65276b96639b5ae6489fdefd095bc974ae4127e24dd99"
+      "sha256": "93d59dae439b9262cad2917077346fa3bcd8c2179bda2bd019dcb323da2c258c"
     }
   ],
   "manifest_self": {
@@ -58,7 +58,7 @@
     "human_truths": 12,
     "human_target_independent_participants_per_truth": 2
   },
-  "release_decision": "HOLD",
+  "release_decision": "ACCEPTED",
   "evaluation_phase": {
     "status": "CLOSED_USER_APPROVED",
     "approval_date_utc": "2026-11-24",
@@ -66,17 +66,31 @@
       "exhaustive_ai_blind_evaluations",
       "exhaustive_human_first_play_coverage"
     ],
-    "fixed_github_real_device_verification": "RUN"
+    "fixed_github_real_device_verification": "PASS"
   },
   "user_reported_verification": {
     "recorded_utc": "2026-11-24",
     "device_environments": 5,
-    "device_status": "RUN",
+    "device_status": "PASS",
     "human_third_party_confirmation": "RUN",
-    "per_item_outcomes": "NOT_REPORTED"
+    "per_item_outcomes": "NOT_REPORTED",
+    "human_third_party_acceptance": "ACCEPTED"
   },
   "publication": {
     "status": "PUBLISHED",
     "commit_sha": "f673df23f0624f580eb62942322fd6c3d6ada7f2"
+  },
+  "final_acceptance": {
+    "status": "ACCEPTED",
+    "approved_by": "USER",
+    "approval_date_utc": "2026-11-24",
+    "residual_risk_accepted": true,
+    "device_pass_count": 5,
+    "device_total": 5,
+    "device_result_basis": "USER_REPORTED_ENVIRONMENT_LEVEL",
+    "human_qualitative": "ACCEPTED",
+    "exhaustive_coverage": "NOT_RUN",
+    "waived_requirements_preserved": true,
+    "sites_deletion": "NOT_CONFIRMED"
   }
 }
