@@ -13,6 +13,13 @@ const effectPositions = {
   armor: ['enemy', 'armor'], ward: ['enemy', 'ward'], thorns: ['enemy', 'thorns'],
   rebound: ['backward', 'thorns'], victory: ['hero', 'gold'], menace: ['enemy', 'claw'], clock: ['center', 'clock'],
 };
+// Preserve the event identifiers and timer phases while selecting R01 art by motion.
+const reinforcedEffects = {
+  focus: { gold: ['focus-ring', 'focus-aura', 'focus-sparks'] },
+  heal: { heal: ['heal-ring', 'heal-sparks', 'heal-glow'] },
+  'magic-ward': { ward: ['ward'] },
+  thorns: { thorns: ['thorns'], rebound: ['rebound'], 'hero-impact': ['impact'] },
+};
 const heroPoseArt = { swing: 'sword-sweep', victor: 'sword-raised', cast: 'casting' };
 const enemyPoseArt = { claw: 'claws-out', menace: 'claws-out', chant: 'rune-eye' };
 
@@ -39,7 +46,7 @@ export function createMotionPreview({
     return image;
   }
 
-  function frame(value, duration = 0) {
+  function frame(value, duration = 0, motionId) {
     stage.dataset.heroPose = value?.hero ?? 'idle';
     stage.dataset.enemyPose = value?.enemy ?? 'idle';
     stage.dataset.acting = String(Boolean(value));
@@ -48,10 +55,24 @@ export function createMotionPreview({
     const children = [];
     if (value?.effect) {
       const [position, view] = effectPositions[value.effect];
-      const effect = sprite(EFFECTS, view, 'motion-effect', position);
-      effect.dataset.effect = value.effect;
-      effect.style.animationDuration = `${duration}ms`;
-      children.push(effect);
+      const layers = reinforcedEffects[motionId]?.[value.effect];
+      if (!layers) {
+        const effect = sprite(EFFECTS, view, 'motion-effect', position);
+        effect.dataset.effect = value.effect;
+        effect.style.animationDuration = `${duration}ms`;
+        children.push(effect);
+      } else {
+        const visibleLayers = motionId === 'thorns' && value.effect === 'hero-impact' && reduced()
+          ? [...layers, 'thorns', 'direction']
+          : layers;
+        for (const [index, layer] of visibleLayers.entries()) {
+          const type = index === 0 ? 'motion-effect ' : '';
+          const effect = sprite(EFFECTS, `r01-${layer}`, `${type}r01-layer r01-${layer}`, position);
+          if (index === 0) effect.dataset.effect = value.effect;
+          effect.style.animationDuration = `${duration}ms`;
+          children.push(effect);
+        }
+      }
     }
     if (heroPoseArt[value?.hero]) children.push(sprite(HERO_POSES, heroPoseArt[value.hero], 'motion-pose', 'hero'));
     if (enemyPoseArt[value?.enemy]) children.push(sprite(ENEMY_POSES, enemyPoseArt[value.enemy], 'motion-pose', 'enemy'));
@@ -62,7 +83,7 @@ export function createMotionPreview({
     const { motion, index } = run;
     const value = reduced() ? (motion.terminal ? motion.phases.at(-1) : motion.still) : motion.phases[index];
     const next = motion.phases[index + 1]?.at ?? motion.duration;
-    frame(value, next - motion.phases[index].at);
+    frame(value, next - motion.phases[index].at, motion.id);
   }
 
   function stop() {

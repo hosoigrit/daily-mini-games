@@ -62,3 +62,71 @@
   .motion-arena .fighter { transition: none; }
   .motion-effects .motion-effect { animation: none; }
 }
+
+/* R01 artwork is attached only to the four reinforced motions. */
+.motion-effects .r01-layer {
+  position: absolute;
+  display: block;
+  width: clamp(4rem, 39%, 23rem);
+  height: auto;
+  left: 26%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.motion-effects .r01-focus-ring,
+.motion-effects .r01-heal-ring {
+  top: auto;
+  bottom: calc(2.9rem + clamp(.4rem, 2.1vw, 1.65rem));
+  width: clamp(4rem, 34%, 20rem);
+  transform: translate(-50%, 50%);
+  z-index: 2;
+}
+.motion-effects .r01-focus-ring { animation: r01-ring-spread ease-out both; }
+.motion-effects .r01-focus-sparks,
+.motion-effects .r01-heal-sparks { animation: r01-sparks-rise ease-out both; z-index: 3; }
+.motion-effects .r01-heal-glow { animation: r01-heal-bloom ease-out both; }
+.motion-effects .r01-ward,
+.motion-effects .r01-thorns { left: 74%; width: clamp(5rem, 42%, 25rem); }
+.motion-effects .r01-ward { animation: r01-ward-open ease-out both; }
+.motion-effects .r01-thorns { animation: r01-thorns-open ease-out both; }
+.motion-effects .r01-rebound {
+  width: clamp(2.75rem, 19%, 10rem);
+  left: 28%;
+  animation: r01-rebound-left linear both;
+  z-index: 3;
+}
+.motion-effects .r01-impact { left: 27%; width: clamp(3rem, 32%, 18rem); z-index: 3; }
+.motion-effects .r01-direction { left: 50%; width: clamp(2.75rem, 22%, 10rem); z-index: 2; }
+
+@keyframes r01-ring-spread {
+  from { transform: translate(-50%, 50%) scale(.46); }
+  to { transform: translate(-50%, 50%) scale(1); }
+}
+@keyframes r01-sparks-rise {
+  from { transform: translate(-50%, -38%); opacity: .65; }
+  to { transform: translate(-50%, -67%); opacity: 1; }
+}
+@keyframes r01-heal-bloom {
+  0%, 45% { opacity: 0; }
+  85%, 100% { opacity: .82; }
+}
+@keyframes r01-ward-open {
+  from { transform: translate(-50%, -50%) scale(.68); }
+  40%, 100% { transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes r01-thorns-open {
+  from { transform: translate(-50%, -50%) scale(.78); }
+  65%, 100% { transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes r01-rebound-left {
+  from { left: 72%; }
+  to { left: 28%; }
+}
+
+.motion-effects[data-reduced="true"] .r01-layer { animation: none; }
+.motion-effects[data-reduced="true"] .r01-heal-glow { opacity: .55; }
+@media (prefers-reduced-motion: reduce) {
+  .motion-effects .r01-layer { animation: none; }
+  .motion-effects .r01-heal-glow { opacity: .55; }
+}
