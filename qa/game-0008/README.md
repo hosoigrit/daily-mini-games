@@ -1,6 +1,6 @@
 # Game #0008 受入テスト管理
 
-検証対象は固定ソースと固定公開候補。SHAは [manifest.json](manifest.json) を参照。現在の公開判定は **HOLD**。
+検証対象は固定ソースと固定公開候補。SHAは [manifest.json](manifest.json) を参照。公開状態は **PUBLISHED（公開済み）**、最終受入判定は **ACCEPTED（ユーザー承認済み）**。2026-11-24のユーザー報告による正式公開版5環境の総合PASSと第三者の定性的評価の受入を記録。網羅評価の未実施とWAIVEDは維持する。
 
 - AI評価の運営には [評価依頼プロンプト](ai-evaluation-prompt.md) と [公開用結果テンプレート](ai-result-template.md) を使用する。評価者には別チャットで対象資料とプロンプトだけを渡す。GitHubソース、他の評価結果、採点資料を参照しないよう依頼する。
 - 人間の初見評価は [手順書](human-play-instructions.md) と [回答テンプレート](human-response-template.md) を使用する。進行役が同一事件を未経験の参加者に割り当て、12真相の網羅と各真相2名以上の到達数を集計する。
