@@ -46,7 +46,7 @@
     },
     {
       "path": "qa/game-0008/release-gate.md",
-      "sha256": "fd72dc0322e535fb63a80c0a7ac168514a8aaba47ef9992d456e7716b6b427bf"
+      "sha256": "3ac10629630de2ee5db3a4580f1db0eca7fb422f269354fb29ec0278a0ab78ec"
     }
   ],
   "manifest_self": {
@@ -65,5 +65,14 @@
       "iPad mini 6 Safari"
     ]
   },
-  "release_decision": "HOLD"
+  "release_decision": "HOLD",
+  "evaluation_phase": {
+    "status": "CLOSED_USER_APPROVED",
+    "approval_date_utc": "2026-11-24",
+    "waived_prepublication_requirements": [
+      "exhaustive_ai_blind_evaluations",
+      "exhaustive_human_first_play_coverage"
+    ],
+    "fixed_github_real_device_verification": "NOT_RUN"
+  }
 }
