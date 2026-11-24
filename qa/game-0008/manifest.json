@@ -18,7 +18,7 @@
     },
     {
       "path": "qa/game-0008/acceptance-results.csv",
-      "sha256": "1ff4e411adba8bd32a9f0176918cf4ec38bd79197d1f1458f91083985a8bc0ed"
+      "sha256": "0db8b62307cf3fc341d67a18d2f6dfe3477cb5336c7df9794877beda196f9783"
     },
     {
       "path": "qa/game-0008/ai-evaluation-prompt.md",
@@ -46,7 +46,7 @@
     },
     {
       "path": "qa/game-0008/release-gate.md",
-      "sha256": "3ac10629630de2ee5db3a4580f1db0eca7fb422f269354fb29ec0278a0ab78ec"
+      "sha256": "d9bb89f76d492240c4e65276b96639b5ae6489fdefd095bc974ae4127e24dd99"
     }
   ],
   "manifest_self": {
@@ -56,14 +56,7 @@
   "not_run": {
     "ai_evaluations": 12,
     "human_truths": 12,
-    "human_target_independent_participants_per_truth": 2,
-    "device_environments": [
-      "Windows 11 Chrome",
-      "Windows 11 Edge",
-      "Galaxy S26 Chrome",
-      "iPhone SE2 Safari",
-      "iPad mini 6 Safari"
-    ]
+    "human_target_independent_participants_per_truth": 2
   },
   "release_decision": "HOLD",
   "evaluation_phase": {
@@ -73,6 +66,17 @@
       "exhaustive_ai_blind_evaluations",
       "exhaustive_human_first_play_coverage"
     ],
-    "fixed_github_real_device_verification": "NOT_RUN"
+    "fixed_github_real_device_verification": "RUN"
+  },
+  "user_reported_verification": {
+    "recorded_utc": "2026-11-24",
+    "device_environments": 5,
+    "device_status": "RUN",
+    "human_third_party_confirmation": "RUN",
+    "per_item_outcomes": "NOT_REPORTED"
+  },
+  "publication": {
+    "status": "PUBLISHED",
+    "commit_sha": "f673df23f0624f580eb62942322fd6c3d6ada7f2"
   }
 }

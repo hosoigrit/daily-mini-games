@@ -11,12 +11,13 @@ AI本文,AI-09,,0,1,NOT_RUN
 AI本文,AI-10,,0,1,NOT_RUN
 AI本文,AI-11,,0,1,NOT_RUN
 AI本文,AI-12,,0,1,NOT_RUN
+人間初見,HUMAN-QUALITATIVE,人間・第三者による確認完了（ユーザー報告）,,,RUN
 人間初見,HUMAN-COVERAGE,1名以上が実施した真相数,0,12,NOT_RUN
 人間初見,HUMAN-TWO,独立した初見2名以上が実施した真相数,0,12,NOT_RUN
-実機,DEVICE-01,Windows 11 Chrome,0,1,NOT_RUN
-実機,DEVICE-02,Windows 11 Edge,0,1,NOT_RUN
-実機,DEVICE-03,Galaxy S26 Chrome,0,1,NOT_RUN
-実機,DEVICE-04,iPhone SE2 Safari,0,1,NOT_RUN
-実機,DEVICE-05,iPad mini 6 Safari,0,1,NOT_RUN
+実機,DEVICE-01,Windows 11 Chrome,1,1,RUN
+実機,DEVICE-02,Windows 11 Edge,1,1,RUN
+実機,DEVICE-03,Galaxy S26 Chrome,1,1,RUN
+実機,DEVICE-04,iPhone SE2 Safari,1,1,RUN
+実機,DEVICE-05,iPad mini 6 Safari,1,1,RUN
 公開管理,BLOCKERS,公開阻害事項は公開判定管理シートで管理,,,HOLD
 公開管理,RELEASE,最終公開判定,,,HOLD
