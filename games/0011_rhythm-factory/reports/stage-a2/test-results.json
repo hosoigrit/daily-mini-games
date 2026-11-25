@@ -1,0 +1,295 @@
+{
+  "fixedBase": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+  "executor": "Codex /root",
+  "browserRunStartUtc": "2026-11-25T23:08:08.826Z",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "finalExit": 0,
+      "rootAttempts": 3,
+      "priorExitCodes": [
+        2,
+        2
+      ]
+    },
+    {
+      "command": "npm run lint",
+      "finalExit": 0,
+      "rootAttempts": 1
+    },
+    {
+      "command": "npm run check:architecture",
+      "finalExit": 0,
+      "rootAttempts": 1
+    },
+    {
+      "command": "npm test",
+      "finalExit": 0,
+      "unique": 25,
+      "rootExecutions": 50,
+      "priorFullPasses": 1
+    },
+    {
+      "command": "npm run build",
+      "finalExit": 0,
+      "rootAttempts": 1
+    },
+    {
+      "command": "npm run test:e2e -- --reporter=list,json",
+      "finalExit": 1,
+      "unique": 12,
+      "pass": 10,
+      "fail": 2
+    }
+  ],
+  "finalVitestCounts": {
+    "component": 2,
+    "contract": 11,
+    "integration": 1,
+    "unit": 11
+  },
+  "vitest": [
+    {
+      "path": "tests/component/foundation-screen.test.tsx",
+      "case": "POC-13: React displays the store projection without writing state during render",
+      "status": "passed",
+      "durationMs": 65.00005999999996
+    },
+    {
+      "path": "tests/component/foundation-screen.test.tsx",
+      "case": "POC-14: Strict Mode remount keeps exactly one subscription, listener, frame and test resource",
+      "status": "passed",
+      "durationMs": 5.813470999999936
+    },
+    {
+      "path": "tests/contract/audio-events.test.ts",
+      "case": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
+      "status": "passed",
+      "durationMs": 4.098688999999993
+    },
+    {
+      "path": "tests/contract/public-types.test.ts",
+      "case": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
+      "status": "passed",
+      "durationMs": 1.5619259999999997
+    },
+    {
+      "path": "tests/contract/public-types.test.ts",
+      "case": "the layer ports project the entire public surface and retain the internal lifecycle contracts",
+      "status": "passed",
+      "durationMs": 0.322070999999994
+    },
+    {
+      "path": "tests/contract/public-types.test.ts",
+      "case": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
+      "status": "passed",
+      "durationMs": 0.15854799999999614
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
+      "status": "passed",
+      "durationMs": 2.209653000000003
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.8865289999999959
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-C projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.2789139999999861
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
+      "status": "passed",
+      "durationMs": 1.8234529999999722
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-E keeps a valid sealed frame until disposal and drops the old note and lanes afterwards",
+      "status": "passed",
+      "durationMs": 1.5487849999999526
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-F rejects mutations of nested data and isolates each rendering view",
+      "status": "passed",
+      "durationMs": 0.5497080000000096
+    },
+    {
+      "path": "tests/contract/render-snapshot.test.ts",
+      "case": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
+      "status": "passed",
+      "durationMs": 0.6243560000000343
+    },
+    {
+      "path": "tests/integration/composition.test.ts",
+      "case": "connects one synthetic state owner to the UI and renderer and tears down the connection",
+      "status": "passed",
+      "durationMs": 3.7830550000000045
+    },
+    {
+      "path": "tests/unit/audio-clock.test.ts",
+      "case": "TC-D1-001〜004 absolute ticks converts the approved BPM examples without accumulating rounded intervals",
+      "status": "passed",
+      "durationMs": 1.790978999999993
+    },
+    {
+      "path": "tests/unit/audio-clock.test.ts",
+      "case": "TC-D1-001〜004 absolute ticks rejects nonfinite, fractional, negative and overflowing values before use",
+      "status": "passed",
+      "durationMs": 0.6135639999999967
+    },
+    {
+      "path": "tests/unit/audio-clock.test.ts",
+      "case": "IF-03/04 fixed-generation clock applies the signed offset once and does not replace the anchor after an observation",
+      "status": "passed",
+      "durationMs": 0.5939580000000007
+    },
+    {
+      "path": "tests/unit/audio-clock.test.ts",
+      "case": "IF-03/04 fixed-generation clock TC-D4-030 checks the 20 ms / +1 μs boundary and prohibits continuation",
+      "status": "passed",
+      "durationMs": 0.6621370000000013
+    },
+    {
+      "path": "tests/unit/audio-clock.test.ts",
+      "case": "IF-03/04 fixed-generation clock rejects backward, stalled and unavailable observations, invalid opening anchors and stale generations",
+      "status": "passed",
+      "durationMs": 0.33521899999999505
+    },
+    {
+      "path": "tests/unit/audio-preparation.test.ts",
+      "case": "TC-D4-001/039/042 POC-17 keeps one render in flight and retains only the final selected preparation",
+      "status": "passed",
+      "durationMs": 3.354141999999996
+    },
+    {
+      "path": "tests/unit/audio-preparation.test.ts",
+      "case": "TC-D4-001/039/042 POC-17 reports invalid content and rendering failure, then retries rather than caching failure",
+      "status": "passed",
+      "durationMs": 0.5383740000000046
+    },
+    {
+      "path": "tests/unit/game-store.test.ts",
+      "case": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 keeps the same reference and emits no notification for an equal projection",
+      "status": "passed",
+      "durationMs": 3.462185000000005
+    },
+    {
+      "path": "tests/unit/game-store.test.ts",
+      "case": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 updates the public reference and emits a single notification for one state change",
+      "status": "passed",
+      "durationMs": 2.4626010000000065
+    },
+    {
+      "path": "tests/unit/game-store.test.ts",
+      "case": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 protects nested arrays and error values and keeps a defensive copy of the source",
+      "status": "passed",
+      "durationMs": 0.7277860000000089
+    },
+    {
+      "path": "tests/unit/game-store.test.ts",
+      "case": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 unsubscribes idempotently and removes only the matching registration",
+      "status": "passed",
+      "durationMs": 0.4428489999999954
+    }
+  ],
+  "playwright": [
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13367
+    },
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 3200
+    },
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 10484
+    },
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 4927
+    },
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 2718
+    },
+    {
+      "path": "stage-a2a-audio.spec.ts",
+      "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+      "project": "webkit",
+      "status": "failed",
+      "durationMs": 3205
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 275
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1586
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 595
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 202
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 528
+    },
+    {
+      "path": "subpath.spec.ts",
+      "case": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 448
+    }
+  ],
+  "stageA1Regression": {
+    "vitestPass": 18,
+    "browserPass": 6,
+    "staticPass": 3
+  },
+  "designOriginal": "310 parent TC remain NOT RUN; this report records only executed parts."
+}

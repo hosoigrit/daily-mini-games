@@ -1,0 +1,113 @@
+{
+  "fixedBase": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+  "poc": [
+    {
+      "id": "POC-01",
+      "a2": "PARTIAL",
+      "overall": "NOT RUN",
+      "evidence": "Real offline waveforms passed across three engines. Live start/replay confirmed on Chromium. Cross-engine live completion is pending."
+    },
+    {
+      "id": "POC-02",
+      "a2": "HOLD",
+      "overall": "HOLD",
+      "evidence": "Chromium passes the short probe. Firefox activation fails. WPE fixed-anchor drift exceeds the bound and stops."
+    },
+    {
+      "id": "POC-03",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-04",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-05",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-06",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-07",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-08",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-09",
+      "a2": "N/A",
+      "overall": "NOT RUN",
+      "evidence": "Physical devices belong to Stage A-3."
+    },
+    {
+      "id": "POC-10",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-11",
+      "a2": "N/A",
+      "overall": "NOT RUN",
+      "evidence": "Stage A overall evidence belongs to Stage A-3."
+    },
+    {
+      "id": "POC-12",
+      "a2": "N/A",
+      "overall": "NOT RUN",
+      "evidence": "Stage A overall issue closure belongs to Stage A-3."
+    },
+    {
+      "id": "POC-13",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "A-1 regression passes. No actual judgement/React load comparison."
+    },
+    {
+      "id": "POC-14",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "A-1 regression passes. Engine/inputs/storage integration not executed."
+    },
+    {
+      "id": "POC-15",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "No engine test for this gate reached the approved prerequisite stage."
+    },
+    {
+      "id": "POC-16",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "A-1 dev/dist regression passes. The actual game scenario is pending."
+    },
+    {
+      "id": "POC-17",
+      "a2": "PARTIAL",
+      "overall": "NOT RUN",
+      "evidence": "The two preparation and retry cases passed with controlled renderer results; actual offline rendering was separately verified."
+    },
+    {
+      "id": "POC-18",
+      "a2": "NOT RUN",
+      "overall": "NOT RUN",
+      "evidence": "A-1 type and architecture regression passes. A-2 contract integration is partial."
+    }
+  ]
+}

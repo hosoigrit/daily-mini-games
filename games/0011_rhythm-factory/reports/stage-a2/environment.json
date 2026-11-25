@@ -1,0 +1,15 @@
+{
+  "fixedBase": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+  "node": "26.13.1",
+  "npm": "11.20.0",
+  "playwright": "1.65.1",
+  "platform": "Debian GNU/Linux 13, x86_64",
+  "approvedLockSha256": "5f5cce304c990aa7c647c0f8b7789c8cbc674ba77d0e1bdd1b4edaf127d8b8cc",
+  "browserVersions": {
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0",
+    "webkit": "27.2"
+  },
+  "launchNotes": "Reused the A-1 task runtime, isolated XDG directories, Firefox local test-only sandbox setting and WebKit WPE wrapper with the same downloaded Debian libraries. No new OS package installed. ALSA diagnostic configuration was confined to one additional Firefox probe.",
+  "playwrightCommand": "npm run test:e2e -- --reporter=list,json"
+}

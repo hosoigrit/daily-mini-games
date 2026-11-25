@@ -1,0 +1,310 @@
+{
+  "fixedBase": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+  "executor": "Codex /root",
+  "poc": "POC-02",
+  "tc": [
+    "TC-D4-003",
+    "TC-D4-030",
+    "TC-D4-040",
+    "TC-D4-043"
+  ],
+  "at": [
+    "AT-043",
+    "AT-044",
+    "AT-083",
+    "AT-106",
+    "AT-120"
+  ],
+  "approvedMaxDifferenceMs": 20,
+  "observationIntervalMs": 100,
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "result": {
+        "status": "running",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.162,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.07017233333333334,
+          "anchorPerformanceMs": 3577.7000000001863
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.17036966666666667,
+              "performanceTime": 3677.899999999907
+            },
+            "now": 3687.2000000001863,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 3
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.27058999999999994,
+              "performanceTime": 3778.2000000001863
+            },
+            "now": 3787.3000000002794,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 82
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.37080233333333334,
+              "performanceTime": 3878.399999999907
+            },
+            "now": 3887.399999999907,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 70
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.4710126666666667,
+              "performanceTime": 3978.5
+            },
+            "now": 3987.7000000001863,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 40
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.571216,
+              "performanceTime": 4078.7000000001863
+            },
+            "now": 4087.899999999907,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 44
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.6714143333333333,
+              "performanceTime": 4179
+            },
+            "now": 4188,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 58
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.7716466666666666,
+              "performanceTime": 4279.200000000186
+            },
+            "now": 4288.200000000186,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 26
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.871834,
+              "performanceTime": 4379.399999999907
+            },
+            "now": 4388.300000000279,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 38
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.9720633333333334,
+              "performanceTime": 4479.600000000093
+            },
+            "now": 4488.5,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 9
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.0722606666666668,
+              "performanceTime": 4579.800000000279
+            },
+            "now": 4588.5,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 12
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.1724590000000001,
+              "performanceTime": 4680
+            },
+            "now": 4688.700000000186,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 13
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.2726763333333335,
+              "performanceTime": 4780.200000000186
+            },
+            "now": 4788.800000000279,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 4
+              }
+            }
+          }
+        ],
+        "lifecycle": [],
+        "staleStopIgnored": true,
+        "replay": {
+          "ok": true,
+          "value": {
+            "playbackId": "audio-2",
+            "sessionId": "a2a-live-proof",
+            "generation": 2,
+            "startAudioSec": 1.3646666666666667,
+            "startSongUs": 0,
+            "anchorAudioSec": 1.2726763333333335,
+            "anchorPerformanceMs": 4780.200000000186
+          }
+        },
+        "disposed": {
+          "rendering": 0,
+          "cached": 0,
+          "sources": 0,
+          "voices": 0
+        }
+      },
+      "testStatus": "passed",
+      "maxFixedAnchorDifferenceMs": 0.08233333333339488
+    },
+    "firefox": {
+      "version": "159.0",
+      "result": {
+        "status": "activation-unavailable",
+        "contextState": "suspended",
+        "currentTime": 0,
+        "timestamp": {
+          "contextTime": 0,
+          "performanceTime": 2455
+        }
+      },
+      "testStatus": "failed"
+    },
+    "webkit": {
+      "version": "27.2",
+      "result": {
+        "status": "safety-stop",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.066,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.013333333,
+          "anchorPerformanceMs": 2900
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.12,
+              "performanceTime": 3113
+            },
+            "now": 2997,
+            "observation": {
+              "ok": false,
+              "error": {
+                "code": "ERR-006",
+                "severity": "ERROR",
+                "messageKey": "clock.outOfSync",
+                "recoverable": false,
+                "sessionId": "a2a-live-proof"
+              }
+            }
+          }
+        ],
+        "stopped": true
+      },
+      "testStatus": "failed",
+      "maxFixedAnchorDifferenceMs": 106.33333300000001
+    }
+  },
+  "separateLocalDiagnostics": [
+    {
+      "engine": "Firefox 159.0",
+      "variant": "task-local ALSA null output configuration, playback latencyHint",
+      "samples": 8,
+      "valid": 0,
+      "state": "suspended",
+      "currentTime": 0,
+      "resume": "pending"
+    },
+    {
+      "engine": "WebKit 27.2",
+      "variant": "playback latencyHint on the same WPE launcher",
+      "samples": 8,
+      "valid": 8,
+      "maxDifferenceMs": 1064
+    },
+    {
+      "engine": "Chromium 159.0.8154.6",
+      "actor": "AG-10 /root/ag10",
+      "validSamples": 12,
+      "maxDifferenceMs": 0.089667
+    },
+    {
+      "engine": "Firefox 159.0",
+      "actor": "AG-10 /root/ag10",
+      "samples": 9,
+      "valid": 0,
+      "state": "suspended",
+      "currentTime": 0
+    },
+    {
+      "engine": "WebKit 27.2",
+      "actor": "AG-10 /root/ag10",
+      "audioDeltaMs": 706.667,
+      "performanceNowDeltaMs": 705,
+      "outputPerformanceDeltaMs": 1414,
+      "fixedAnchorDifferenceMs": 707.333
+    }
+  ],
+  "disposition": "HOLD. ERR-006 and source stop observed in WPE. No alternate anchor or product startup timeout introduced."
+}

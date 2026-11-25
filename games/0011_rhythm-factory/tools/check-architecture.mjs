@@ -9,6 +9,7 @@ const files = readdirSync(sourceRoot, { recursive: true })
   .map((name) => join(sourceRoot, name));
 const layers = {
   contracts: new Set(['contracts']),
+  content: new Set(['contracts', 'content']),
   domain: new Set(['contracts', 'domain']),
   app: new Set(['contracts', 'domain', 'app']),
   infrastructure: new Set(['contracts', 'infrastructure']),

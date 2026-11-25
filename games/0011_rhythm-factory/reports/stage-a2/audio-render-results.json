@@ -1,0 +1,160 @@
+{
+  "fixedBase": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+  "executor": "Codex /root",
+  "playwrightVersion": "1.65.1",
+  "mapping": {
+    "poc": "POC-01",
+    "tc": [
+      "TC-D4-001",
+      "TC-D4-041",
+      "TC-D5-003"
+    ],
+    "at": [
+      "AT-044",
+      "AT-083",
+      "AT-119"
+    ],
+    "scope": "Subset: 24-second trial, real OfflineAudioContext, synthetic 100ms four-SFX mix; no official five-track claim."
+  },
+  "allThreeOfflineChecks": "PASS",
+  "engines": {
+    "chromium": {
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.29440736770629883,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.06237667053937912,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.24950668215751648,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.44548091292381287,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        3257.399999999907,
+        3226.2999999998137,
+        3345.7999999998137
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "159.0.8154.6",
+      "outgoing": []
+    },
+    "firefox": {
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.2945835292339325,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.0623767115175724,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.2495068460702896,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.4455273151397705,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        357,
+        380,
+        336
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "159.0",
+      "outgoing": []
+    },
+    "webkit": {
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.29440730810165405,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.06237666681408882,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.24950666725635529,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.44548091292381287,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        2432,
+        2458,
+        2533
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "27.2",
+      "outgoing": []
+    }
+  },
+  "bounds": {
+    "music": 0.7079457843841379,
+    "sfxPerVoice": 0.0625,
+    "sfxMaximumVoices": 4,
+    "sfxBudget": 0.25,
+    "combinedTheoretical": 0.9579457843841379
+  },
+  "externalMusicServiceCalls": 0,
+  "notes": "Three render timings use a fresh OfflineAudioContext each. Combined observed peak is for the tested onset; theoretical bound uses separately enforced maxima. No physical output or subjective listening claim."
+}
