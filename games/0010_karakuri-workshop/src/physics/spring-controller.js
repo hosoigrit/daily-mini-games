@@ -1,3 +1,4 @@
+import {Manifold} from '../../vendor/planck/planck.mjs';
 import {advancePhysicsTick, applyVelocityLimit, normalizeContactPoint, validatePhysicsState} from './adapter.js';
 
 const MIN_ALIGNMENT = Math.cos(Math.PI / 6);
@@ -139,6 +140,7 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
   let otherCount = 0;
   const world = runtime.world;
   const radius = ball.getFixtureList().getShape().getRadius();
+  const endManifold = new Manifold();
   let raw, boundaryPositions, touchingAtBoundaries;
   let tracing = false;
   let toiPhase = false;
@@ -169,6 +171,19 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
         other.getLinearVelocityFromWorldPoint(point)),
       ...(impulse ? {normalImpulse: impulse.normalImpulses[i]} : {}),
     }));
+  }
+  function currentNormal(contact, {ballIsA}) {
+    const a = contact.getFixtureA();
+    const b = contact.getFixtureB();
+    const transformA = a.getBody().getTransform();
+    const transformB = b.getBody().getTransform();
+    // The last TOI callback can leave isTouching set after the bodies separate.
+    endManifold.recycle();
+    contact.evaluate(endManifold, transformA, transformB);
+    if (!endManifold.pointCount) return null;
+    const {normal} = endManifold.getWorldManifold(undefined, transformA, a.getShape().getRadius(),
+      transformB, b.getShape().getRadius());
+    return ballIsA ? {x: -normal.x, y: -normal.y} : vector(normal);
   }
   function sampleBoundary() {
     boundaryPositions.push(vector(ball.getPosition()));
@@ -217,7 +232,8 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
         if (!contact.isTouching()) continue;
         const info = pair(contact);
         if (!info) continue;
-        for (const {normal} of pointsFor(contact, info)) touchingAtEnd.push({id: info.id, normal});
+        const normal = currentNormal(contact, info);
+        if (normal) touchingAtEnd.push({id: info.id, normal});
       }
       const frame = {raw, tick: runtime.ticks, runId: runtime.runId, touchingAtEnd, touchingAtBoundaries: [...touchingAtBoundaries], boundaryPositions,
         ballPosition: vector(ball.getPosition()), radius};
