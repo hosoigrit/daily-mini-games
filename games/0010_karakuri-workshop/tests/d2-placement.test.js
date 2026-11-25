@@ -151,10 +151,13 @@ caseTest(9,1,'fixed ramp unavailable to edit, move, rotate, delete',()=>{
   for(const command of [{type:'move',gridX:6,gridY:4},{type:'rotate',angleDeg:30},{type:'delete'}]){
     const design=editor.createDesignEditor();
     const data={...design,selection:{state:'SELECTED',id}};
+    const reference=structuredClone(data);
     const result=editor.applyEditCommand(data,stage01,{...command,id});
     assert.equal(result.ok,false,'fixed edit was applied');
     assert.equal(result.reason,'FIXED_PART');
     assert.strictEqual(result.state,data);
+    assert.deepEqual(facts(stage01,result.state),facts(stage01,reference));
+    assert.deepEqual(result.state.selection,reference.selection);
     assert.deepEqual(stage01.fixed,fixed);
   }
 });
@@ -229,6 +232,9 @@ caseTest(34,2,'editor yields same canonical layout and inventory in either order
 caseTest(36,1,'draft rotations commit one placement',()=>{
   const base=editor.createDesignEditor();
   let d=check(stage01,base,{type:'new-part',partType:'R'});
+  const skipped=editor.applyEditCommand(d,stage01,{type:'rotate-draft',angleDeg:30});
+  assert.equal(skipped.reason,'ANGLE_STEP');
+  assert.deepEqual(facts(stage01,skipped.state),facts(stage01,base));
   for(const angleDeg of [15,30]){
     d=check(stage01,d,{type:'rotate-draft',angleDeg});
     assert.deepEqual(facts(stage01,d),facts(stage01,base));
@@ -243,6 +249,9 @@ caseTest(37,1,'invalid move and drag interruption preserve committed state',()=>
   const stage=stage03;
   const base=sol03.reduce((s,p)=>check(stage,s,add(p)),editor.createDesignEditor());
   const [platform,ramp]=sol03;
+  const direct=editor.applyEditCommand(base,stage,{type:'move',id:ramp.id,gridX:platform.gridX,gridY:platform.gridY});
+  assert.equal(direct.reason,'PLACEMENT_OVERLAP');
+  assert.strictEqual(direct.state,base);
   let d=check(stage,base,{type:'drag',id:ramp.id});
   const bad=editor.applyEditCommand(d,stage,{type:'commit-draft',gridX:platform.gridX,gridY:platform.gridY});
   assert.equal(bad.reason,'PLACEMENT_OVERLAP');
@@ -312,8 +321,19 @@ caseTest(40,1,'confirmation reset and best load retain the required state',()=>{
     const cancelled=check(stage,requesting,{type:'cancel'});
     assert.deepEqual(cancelled,base);
   }
-  const reset=check(stage,check(stage,base,{type:'request-reset'}),{type:'confirm'});
+  const resetBase=editor.createDesignEditor({...fixture,placements:[alt],history:[[],[sol01]]});
+  assert.notDeepEqual(resetBase.placements,base.placements);
+  const reset=check(stage,check(stage,resetBase,{type:'request-reset'}),{type:'confirm'});
   assert.deepEqual([reset.placements,reset.history,reset.trajectory,reset.progress],[[],[],null,fixture.progress]);
+  const unplaced=check(stage,editor.createDesignEditor(),{type:'new-part',partType:'R'});
+  const modal=check(stage,unplaced,{type:'request-reset'});
+  const turned=check(stage,modal,{type:'orientation-change'});
+  assert.equal(turned.selection.state,'IDLE');
+  assert.deepEqual(facts(stage,turned),facts(stage,unplaced));
+  const wrongId=editor.createDesignEditor({...fixture,best:[{...alt,id:'invalid id'}]});
+  const invalidLoad=editor.applyEditCommand(check(stage,wrongId,{type:'request-load-best'}),stage,{type:'confirm'});
+  assert.equal(invalidLoad.reason,'PART_ID');
+  assert.deepEqual(facts(stage,invalidLoad.state),facts(stage,wrongId));
   const loaded=check(stage,check(stage,base,{type:'request-load-best'}),{type:'confirm'});
   assert.deepEqual(loaded.placements,[alt]);
   assert.equal(loaded.history.length,3);

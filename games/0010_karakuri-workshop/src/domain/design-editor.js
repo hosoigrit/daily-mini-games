@@ -4,6 +4,8 @@ import {validateAngle} from './geometry.js';
 import {calculateInventory, validatePlacement} from './placement-validator.js';
 import {pushUndoSnapshot, restoreUndoSnapshot} from './undo-manager.js';
 
+const PLACEMENT_ID = /^[A-Za-z0-9_-]{1,32}$/u;
+const validId = id => typeof id === 'string' && PLACEMENT_ID.test(id);
 const idle = Object.freeze({state: 'IDLE'});
 const selected = id => ({state: 'SELECTED', id});
 const ok = state => ({ok: true, state});
@@ -66,6 +68,7 @@ function editExisting(editor, stage, command) {
     case 'move':
       return validateEdit(stage, editor, {...part, gridX: command.gridX, gridY: command.gridY}, part);
     case 'rotate':
+      if (Math.abs(command.angleDeg - part.angleDeg) !== 15) return reject(editor, 'ANGLE_STEP');
       return validateEdit(stage, editor, {...part, angleDeg: command.angleDeg}, part);
     default:
       return reject(editor, 'UNKNOWN_COMMAND');
@@ -74,7 +77,7 @@ function editExisting(editor, stage, command) {
 
 function addPart(editor, stage, command) {
   const {id, partType, gridX, gridY, angleDeg = 0} = command;
-  if (typeof id !== 'string' || !id || editor.placements.some(item => item.id === id)
+  if (!validId(id) || editor.placements.some(item => item.id === id)
     || stage.fixed.some(item => item.id === id)) {
     return reject(editor, 'PART_ID');
   }
@@ -85,7 +88,10 @@ function updateDraft(editor, command) {
   const {selection} = editor;
   const {draft} = selection;
   if (!draft) return reject(editor, 'NO_DRAFT');
-  if (command.type === 'rotate-draft' && !validateAngle(draft.type, command.angleDeg)) return reject(editor, 'ANGLE');
+  if (command.type === 'rotate-draft') {
+    if (Math.abs(command.angleDeg - draft.angleDeg) !== 15) return reject(editor, 'ANGLE_STEP');
+    if (!validateAngle(draft.type, command.angleDeg)) return reject(editor, 'ANGLE');
+  }
   const change = command.type === 'rotate-draft' ? {angleDeg: command.angleDeg}
     : {gridX: command.gridX, gridY: command.gridY};
   return ok({...editor, selection: {...selection, draft: {...draft, ...change}}});
@@ -102,7 +108,7 @@ function confirm(editor, stage) {
     const item = {id, type, gridX, gridY, angleDeg};
     const result = validatePlacement(stage, parts, item);
     if (!result.ok) return reject(cancelPendingEdit(editor), result.reason);
-    if (typeof id !== 'string' || !id || parts.some(part => part.id === id) || stage.fixed.some(fixed => fixed.id === id)) {
+    if (!validId(id) || parts.some(part => part.id === id) || stage.fixed.some(fixed => fixed.id === id)) {
       return reject(cancelPendingEdit(editor), 'PART_ID');
     }
     parts.push(item);
@@ -111,7 +117,11 @@ function confirm(editor, stage) {
 }
 
 export function applyEditCommand(editor, stage, command) {
-  if (command.type === 'cancel' || command.type === 'orientation-change') return ok(cancelPendingEdit(editor));
+  if (command.type === 'cancel') return ok(cancelPendingEdit(editor));
+  if (command.type === 'orientation-change') {
+    const settled = cancelPendingEdit(editor);
+    return ok(cancelPendingEdit(settled));
+  }
   if (editor.mode !== 'DESIGN') return reject(editor, 'NOT_DESIGN');
   const {selection} = editor;
   if (selection.state === 'CONFIRMING' && command.type !== 'confirm') return reject(editor, 'CONFIRMATION_PENDING');
