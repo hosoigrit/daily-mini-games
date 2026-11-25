@@ -145,14 +145,14 @@ test('frozen manifest, early mutation decision and raw evidence are independentl
 });
 
 test('engineering gate refuses incomplete evidence without requiring future cases early', () => {
-  const {evaluateEngineeringGate} = require('../qa/harness/gate.js');
+  const {evaluateFixtureEngineeringGate: evaluateEngineeringGate} = require('../qa/harness/gate.js');
   const policy = loadExecutionPolicy(policyBytes, policySha);
   const cases = new Map([
     ['current', {required: true, engineeringStage: 'E0'}],
     ['future', {required: true, engineeringStage: 'E7'}],
   ]);
   const verified = {regression: true, protection: true, scope: true, budget: true,
-    authorization: true, evidence: true, independentReview: true, dependencies: true};
+    authorization: true, evidence: true, independentReview: true, dependencies: true, hitlClear: true};
   const cfg = {stage: 'E0', policy, cases, gates: {}, verified, findings: [],
     mutationStatuses: {'MUT-12': 'PASS'}, results: new Map([['current', 'PASS'], ['future', 'NOT_RUN']])};
   assert.equal(evaluateEngineeringGate(cfg).canAdvance, true);
@@ -160,6 +160,7 @@ test('engineering gate refuses incomplete evidence without requiring future case
     assert.equal(evaluateEngineeringGate({...cfg, results: new Map([['current', status]])}).status, 'HOLD');
   }
   assert.equal(evaluateEngineeringGate({...cfg, verified: {...verified, independentReview: false}}).status, 'HOLD');
+  assert.equal(evaluateEngineeringGate({...cfg, verified: {...verified, hitlClear: false}}).status, 'HOLD');
   assert.equal(evaluateEngineeringGate({...cfg, findings: [{severity: 'HIGH', state: 'OPEN'}]}).status, 'HOLD');
   assert.equal(evaluateEngineeringGate({...cfg, mutationStatuses: {}}).status, 'HOLD');
   assert(evaluateEngineeringGate({...cfg, stage: 'E7'}).prerequisites.includes('E0'));
@@ -328,4 +329,148 @@ for (const [subcase,...variant] of fixedCorrections) {
 }
 test('TC-D8-009-C001: verify combined correction bounds', () => {
   for (const [, ...variant] of fixedCorrections) checkCorrectionBoundary(...variant);
+});
+
+const prohibitedChanges = [
+  ['C003','games/another-game/README.md','create',undefined],
+  ['C004','games/0010_karakuri-workshop/README.md','delete',undefined],
+  ['C005','games/0010_karakuri-workshop/README.md','rename',undefined],
+  ['C006','games/0010_karakuri-workshop/README.md','create','120000'],
+  ['C007','games/0010_karakuri-workshop/../README.md','create',undefined],
+  ['C008','/README.md','create',undefined],
+  ['C009','games/0010_karakuri-workshop/README.md','modify','160000'],
+];
+
+function inspectFixtureTree(directory) {
+  const {readdirSync, lstatSync, readlinkSync} = require('node:fs');
+  const entries = [];
+  function visit(parent, relative) {
+    for (const key of readdirSync(parent).sort()) {
+      const absolute = join(parent,key);
+      const path = relative ? `${relative}/${key}` : key;
+      const item = lstatSync(absolute);
+      if (item.isSymbolicLink()) entries.push([path, 'link', readlinkSync(absolute)]);
+      else if (item.isDirectory()) visit(absolute,path);
+      else entries.push([path,item.mode,digest(readFileSync(absolute))]);
+    }
+  }
+  visit(directory,'');
+  return entries;
+}
+
+for (const [id,path,operation,mode] of prohibitedChanges) {
+  test(`TC-D8-004-${id}: isolate and reject ${operation} before any filesystem mutation`, t => {
+    const {writeFileSync} = require('node:fs');
+    const root = mkdtempSync(join(tmpdir(),'game0010-scope-diff-'));
+    t.after(()=>rmSync(root,{recursive:true,force:true}));
+    const game = join(root,'games/0010_karakuri-workshop');
+    mkdirSync(game,{recursive:true});
+    const readme=join(game,'README.md');
+    writeFileSync(join(root,'protected'),'untouched');
+    if (mode==='120000') symlinkSync(join(root,'protected'),readme);
+    else writeFileSync(readme,'existing asset');
+    const before=inspectFixtureTree(root);
+    let dispatched=0;
+    assert.throws(() => {
+      validateChangeScope(root,scope,'E0',[{path,operation,mode}]);
+      dispatched++;
+    }, {code:'LS-02'});
+    assert.equal(dispatched,0);
+    assert.deepEqual(inspectFixtureTree(root),before);
+  });
+}
+
+test('TC-D8-002-C002: base and handoff SHA errors prevent fixture dispatch', () => {
+  const policy=loadExecutionPolicy(policyBytes,policySha);
+  let starts=0;
+  const open=(observed)=>{
+    validateAuthorization(policy,grant,observed,'create');
+    starts++;
+  };
+  open(actual);
+  for (const field of ['baseCommitSha','handoffCommitSha']) {
+    const prior=actual[field];
+    const changed=(prior[0] === 'a' ? 'b' : 'a')+prior.slice(1);
+    assert.throws(()=>open({...actual,[field]:changed}),{code:'LS-07'});
+  }
+  assert.equal(starts,1);
+});
+
+test('TC-D8-003-C002: reject repo, main and another game branch without dispatch', () => {
+  const policy=loadExecutionPolicy(policyBytes,policySha);
+  let starts=0;
+  const open=(observed)=>{
+    validateAuthorization(policy,grant,observed,'create');
+    starts++;
+  };
+  for (const unauthorized of [{repository:'another/repository'}, {branch:'main'}, {branch:'codex/game-0009-development'}]) {
+    assert.throws(()=>open({...actual,...unauthorized}),{code:'LS-14'});
+  }
+  assert.equal(starts,0);
+  open(actual);
+  assert.equal(starts,1);
+});
+
+test('TC-D8-017-C001: even RUN evidence fails the prerequisite for advance', () => {
+  const {evaluateFixtureEngineeringGate: evaluateEngineeringGate}=require('../qa/harness/gate.js');
+  const policy=loadExecutionPolicy(policyBytes,policySha);
+  const cases=new Map([['required',{required:true,engineeringStage:'E0'}]]);
+  const verified={scope:true,protection:true,authorization:true,budget:true,independentReview:true,
+    dependencies:true,evidence:true,regression:true,hitlClear:true};
+  for (const status of ['FAIL','NOT_RUN','BLOCKED','STALE','RUN','PASS']) {
+    const result=evaluateEngineeringGate({stage:'E0',policy,cases,results:new Map([['required',status]]),
+      gates:{},verified,findings:[],mutationStatuses:{'MUT-12':'PASS'}});
+    assert.equal(result.canAdvance,status==='PASS');
+  }
+});
+
+test('TC-D7-026-C001: stale spring dependents and incomplete prerequisites cannot advance', () => {
+  const {evaluateFixtureEngineeringGate: evaluateEngineeringGate} = require('../qa/harness/gate.js');
+  const {invalidateAffectedGates} = require('../qa/harness/impact.js');
+  const policy = loadExecutionPolicy(policyBytes,policySha);
+  const passed = Object.fromEntries(policy.execution.stages.map(stage=>[stage,'PASS']));
+  const springChange = invalidateAffectedGates({kind:'spring',activeStage:'E3',changeAuthorized:true,gates:passed});
+  assert.deepEqual(springChange.reopened,['E3','E5','E6','E7','E8']);
+  assert.equal(springChange.gates.E4,'PASS');
+  assert.equal(passed.E3,'PASS');
+  const input = {stage:'E5',policy,cases:new Map([['local',{required:true,engineeringStage:'E5'}]]),
+    results:new Map([['local','PASS']]),findings:[],mutationStatuses:{
+      'MUT-01':'PASS','MUT-06':'PASS','MUT-07':'PASS','MUT-08':'PASS','MUT-09':'PASS',
+    },verified:{scope:true,protection:true,authorization:true,budget:true,independentReview:true,
+      dependencies:true,evidence:true,regression:true,hitlClear:true}};
+  assert.equal(evaluateEngineeringGate({...input,gates:passed}).canAdvance,true);
+  for (const status of ['FAIL','NOT_RUN','BLOCKED','STALE']) {
+    assert.equal(evaluateEngineeringGate({...input,gates:{...passed,E3:status}}).canAdvance,false);
+  }
+  assert.equal(evaluateEngineeringGate({...input,gates:springChange.gates,
+    results:new Map([['local','NOT_RUN']])}).canAdvance,false);
+});
+
+test('TC-D8-018-C001: future E7 stays pending at E2 and E8 includes prior applicable automatic cases', () => {
+  const {evaluateFixtureEngineeringGate: evaluateEngineeringGate}=require('../qa/harness/gate.js');
+  const {verifyManifest}=require('../qa/harness/test-runner.js');
+  const policy=loadExecutionPolicy(policyBytes,policySha);
+  const cases=new Map([
+    ['current',{engineeringStage:'E2',method:'I',required:true}],
+    ['ui',{engineeringStage:'E7',method:'B',required:true}],
+    ['final',{engineeringStage:'E8',method:'I',required:true}],
+    ['realDevice',{engineeringStage:'HUMAN_QA',method:'D',required:true}],
+  ]);
+  const gates=Object.fromEntries(policy.execution.stages.map(stage=>[stage,'PASS']));
+  const mutationStatuses=Object.fromEntries(Object.keys(policy.execution.earlyMutationStages).map(id=>[id,'PASS']));
+  const verified={scope:true,protection:true,authorization:true,budget:true,independentReview:true,
+    dependencies:true,evidence:true,regression:true,hitlClear:true};
+  const cfg={stage:'E2',policy,cases,gates,findings:[],mutationStatuses,verified,
+    results:new Map([['current','PASS'],['ui','NOT_RUN'],['final','NOT_RUN'],['realDevice','NOT_RUN']])};
+  assert.equal(evaluateEngineeringGate(cfg).canAdvance,true);
+  cfg.results.set('current','STALE');
+  cfg.results.set('final','PASS');
+  const whenE8=evaluateEngineeringGate({...cfg,stage:'E8'});
+  assert.deepEqual(whenE8.pendingCases,['current','ui']);
+  assert.equal(whenE8.canAdvance,false);
+  const frozen=JSON.parse(readFileSync(join(handoff,'18_test_execution_manifest.json')));
+  const moved=structuredClone(frozen);
+  const stage2=moved.parents.flatMap(parent=>parent.cases).find(item=>item.required&&item.engineeringStage==='E2');
+  stage2.engineeringStage='E7';
+  assert.throws(()=>verifyManifest(frozen,moved),{code:'LS-09'});
 });

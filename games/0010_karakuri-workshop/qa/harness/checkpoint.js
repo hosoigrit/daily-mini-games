@@ -6,6 +6,7 @@ const {dirname} = require('node:path');
 const {isDeepStrictEqual} = require('node:util');
 const {
   reserveBudget, startReservation, settleBudgetUsage, releaseUnstartedReservation,
+  remediationLimits, checkEffectiveBudgetUsage,
 } = require('./budget.js');
 
 function hash(bytes) {
@@ -145,6 +146,7 @@ function recoverPersistedBudget({snapshotPath, rawPath, lockPath, expectedSnapsh
         hold('The initial checkpoint and raw event stream differ.');
       }
     }
+    checkEffectiveBudgetUsage(before.budget.ledger.usage, policy);
     const recoveryEvents = pendingRecovery(before.budget);
     if (!recoveryEvents.length) return before;
     if (!recorded.lastCheckpoint) {
@@ -152,6 +154,7 @@ function recoverPersistedBudget({snapshotPath, rawPath, lockPath, expectedSnapsh
     }
     const recoveryRaw = recoveryEvents.map(event => JSON.stringify(event) + '\n').join('');
     const budget = replayBudgetHistory(raw + recoveryRaw, policy);
+    checkEffectiveBudgetUsage(budget.ledger.usage, policy);
     const afterBytes = JSON.stringify({binding, previousSnapshotDigest: digest, budget}) + '\n';
     const savedHistory = appendRaw(rawPath, raw, recoveryRaw + checkpointRow(afterBytes));
     const published = replayHistory(savedHistory, policy);
@@ -190,7 +193,17 @@ function recoverPersistedBudget({snapshotPath, rawPath, lockPath, expectedSnapsh
 
 module.exports = {replayBudgetHistory, restoreCheckpoint, recoverPersistedBudget};
 
-function deriveCheckpointSchema(frozenBytes, grant, historicalCauses) {
+const checkpointSchemas = new WeakMap();
+
+function freezeSchema(value) {
+  if (value && typeof value === 'object') {
+    Object.values(value).forEach(freezeSchema);
+    Object.freeze(value);
+  }
+  return value;
+}
+
+function deriveCheckpointSchema(frozenBytes, grant, historicalCauses, effectiveBudget) {
   const extensionId = 'EXEC-GAME-0010-CP-EXT-20261125-01';
   const originalDigest = '6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05';
   const identities = {
@@ -214,15 +227,21 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses) {
   if (hash(frozenBytes) !== originalDigest) hold('The frozen checkpoint schema digest differs.');
   const candidates = Object.entries(historicalCauses).filter(([, count]) => count > 2);
   const rootCause = 'e0-budget-reservation-and-accounting';
-  if (!isDeepStrictEqual(candidates, [[rootCause, 5]])) {
+  const effective = effectiveBudget === undefined ? null : remediationLimits(effectiveBudget);
+  if (effective && (effective.stage.E0 !== 14 || effective.rootCause[rootCause] !== 6)) {
+    hold('The checkpoint convergence budget is not authorized.');
+  }
+  const historicalCount = historicalCauses[rootCause];
+  if (candidates.length !== 1 || candidates[0][0] !== rootCause
+    || ![5, effective ? effective.rootCause[rootCause] : 5].includes(historicalCount)) {
     hold('The grandfathered root cause does not match its approved historical ledger.');
   }
   const schema = JSON.parse(frozenBytes);
   const budget = schema.properties.budgetUsage.properties;
   const changes = [];
   for (const [field, name, maximum] of [
-    ['remediationByStage', 'E0', 11],
-    ['remediationByRootCause', rootCause, 5],
+    ['remediationByStage', 'E0', effective?.stage.E0 ?? 11],
+    ['remediationByRootCause', rootCause, effective?.rootCause[rootCause] ?? 5],
   ]) {
     const override = {[name]: {...budget[field].additionalProperties, maximum}};
     budget[field].properties = override;
@@ -234,6 +253,7 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses) {
     return Object.fromEntries(Object.entries(value).sort(([a], [b]) => a < b ? -1 : Number(a > b)));
   };
   const bytes = Buffer.from(JSON.stringify(schema, canonical, 2) + '\n');
+  checkpointSchemas.set(freezeSchema(schema), effectiveBudget ?? null);
   return {schema, bytes, changes, originalDigest, derivedDigest: hash(bytes), grandfatheredRootCause: rootCause};
 }
 
@@ -268,7 +288,10 @@ function matchesCheckpointSchema(value, schema) {
   }
 }
 
-function verifyFormalCheckpoint({bytes, schema, history, binding, previousBytes}) {
+function verifyFormalCheckpoint({bytes, schema, history, binding, previousBytes, effectiveBudget}) {
+  if (!checkpointSchemas.has(schema) || checkpointSchemas.get(schema) !== (effectiveBudget ?? null)) {
+    hold('Formal validation requires the verified derived schema and its matching budget.');
+  }
   const requiredBinding = ['approvalId', 'writerId', 'baseCommitSha', 'handoffCommitSha',
     'testedCommitSha', 'workspaceFingerprint'];
   if (!binding || requiredBinding.some(key =>
@@ -295,6 +318,7 @@ function verifyFormalCheckpoint({bytes, schema, history, binding, previousBytes}
     || !isDeepStrictEqual(snapshot.budgetUsage, history.budgetUsage)) {
     hold('Formal checkpoint totals and attempts differ from independently replayed history.');
   }
+  if (effectiveBudget) checkEffectiveBudgetUsage(snapshot.budgetUsage, effectiveBudget, true);
   if (previous && !matchesCheckpointSchema(previous, schema)) hold('The previous formal checkpoint is invalid.');
   if (snapshot.generation !== (previous ? previous.generation + 1 : 0)
     || snapshot.previousCheckpointId !== (previous?.checkpointId ?? null)

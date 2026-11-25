@@ -40,5 +40,37 @@
       }
     ],
     "scope": "Formal checkpoint validation only"
+  },
+  "checkpointConvergenceValidation": {
+    "approvalId": "EXEC-GAME-0010-E0-CONVERGENCE-20261125-01",
+    "originalDigest": "6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05",
+    "derivedDigest": "7849876c9b4d14be4d70a3154012d8b51931f78898cdbb5cb1c9af625c5b8b0e",
+    "changes": [
+      {
+        "op": "add",
+        "path": "/properties/budgetUsage/properties/remediationByStage/properties",
+        "value": {
+          "E0": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 14
+          }
+        }
+      },
+      {
+        "op": "add",
+        "path": "/properties/budgetUsage/properties/remediationByRootCause/properties",
+        "value": {
+          "e0-budget-reservation-and-accounting": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6
+          }
+        }
+      }
+    ],
+    "limitedCause": "e0-budget-reservation-and-accounting",
+    "lastRemediationRunId": "E0-CONVERGENCE-BUDGET-35",
+    "validation": "PASS"
   }
 }

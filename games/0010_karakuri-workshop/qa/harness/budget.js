@@ -1,5 +1,74 @@
 'use strict';
 
+const {isDeepStrictEqual} = require('node:util');
+const {loadExecutionPolicy} = require('./policy.js');
+
+const convergenceGrant = Object.freeze({
+  approvalId: 'EXEC-GAME-0010-E0-CONVERGENCE-20261125-01',
+  baseGrant: 'EXEC-GAME-0010-E0-E8-20261125-01',
+  resumeGrant: 'EXEC-GAME-0010-AUTONOMOUS-RESUME-20261125-01',
+  checkpointGrant: 'EXEC-GAME-0010-CP-EXT-20261125-01',
+  baseCommitSha: 'afbb965fe57c4772f91cbe67e59571180e9073f8',
+  handoffCommitSha: 'd5bae9f0afe6b6d860257e2dfec25e028e557a4f',
+  branch: 'codex/game-0010-development',
+  writerId: 'GAME0010-CODEX-PRIMARY-01',
+  policyDigest: 'b89f94b4bf800aefe5fd27c19a66b0a7715ccdb2f95d97af031b5984b6df3cfa',
+  allowedPathsDigest: 'e9b7f557cb26c535dd1ddb3f1903db060cd90ac49d2aa0d0d908d2174a98dbd6',
+  e0Limit: 14,
+  legacyCause: 'e0-budget-reservation-and-accounting',
+  legacyCauseLimit: 6,
+  legacyAllowedRunId: 'E0-CONVERGENCE-BUDGET-35',
+});
+
+const effectivePolicies = new WeakMap();
+
+function deriveEffectiveBudget(frozenPolicyBytes, externalGrant) {
+  if (!isDeepStrictEqual(externalGrant, convergenceGrant)) {
+    fail('LS-08', 'The convergence budget needs the matching external approval.');
+  }
+  const {budgets} = loadExecutionPolicy(frozenPolicyBytes, convergenceGrant.policyDigest);
+  Object.freeze(budgets.physicsCandidateStages);
+  for (const pool of Object.values(budgets.formalStagePools)) Object.freeze(pool);
+  Object.freeze(budgets.formalStagePools);
+  Object.freeze(budgets);
+  effectivePolicies.set(budgets, convergenceGrant);
+  return budgets;
+}
+
+function remediationLimits(policy) {
+  const approved = effectivePolicies.get(policy);
+  return {
+    stage: {E0: approved?.e0Limit ?? policy.remediationPerStage},
+    ordinaryStage: policy.remediationPerStage,
+    rootCause: approved ? {[approved.legacyCause]: approved.legacyCauseLimit} : {},
+    ordinaryRootCause: policy.majorRootCauseAttempts,
+    approvedHistoricalCorrection: approved?.legacyAllowedRunId,
+    total: policy.remediationTotal,
+    automatedSeconds: policy.automatedExecutionTimeSecondsTotal,
+  };
+}
+
+function checkEffectiveBudgetUsage(usage, policy, requireComplete = false) {
+  const numeric = value => Number.isSafeInteger(value) && value >= 0;
+  const dictionary = value => value != null && typeof value === 'object' && !Array.isArray(value);
+  if (!usage || !policy || (requireComplete && (
+    !numeric(usage.remediationTotal) || !numeric(usage.automatedSeconds)
+    || !dictionary(usage.remediationByStage) || !dictionary(usage.remediationByRootCause)))) {
+    fail('LS-13', 'The required budget proof is incomplete.');
+  }
+  const limits = remediationLimits(policy);
+  const byStage = Object.entries(usage.remediationByStage ?? {});
+  const causes = Object.entries(usage.remediationByRootCause ?? {});
+  const valid = byStage.every(([stage, used]) => engineeringStages.has(stage)
+    && count(used) <= (limits.stage[stage] ?? limits.ordinaryStage))
+    && causes.every(([cause, used]) => count(used) <=
+      (Object.hasOwn(limits.rootCause, cause) ? limits.rootCause[cause] : limits.ordinaryRootCause))
+    && count(usage.remediationTotal ?? 0) <= limits.total
+    && count(usage.automatedSeconds ?? 0) <= limits.automatedSeconds;
+  if (!valid) fail('LS-03', 'Checkpoint or gate use exceeds the effective authorization.');
+  return true;
+}
+
 const stageIds = new Set(Array.from({length: 10}, (_, index) => String(index + 1).padStart(2, '0')));
 const engineeringStages = new Set(Array.from({length: 9}, (_, index) => `E${index}`));
 
@@ -77,22 +146,31 @@ function resourceOperations(proposal, policy) {
   });
 }
 
-function remediationOperations(remediation, policy) {
+function remediationOperations(remediation, policy, runId, usage) {
   if (remediation === undefined) return [];
   const {stages, majorRootCause} = remediation;
   if (!Array.isArray(stages) || !stages.length || new Set(stages).size !== stages.length
     || stages.some(stage => !engineeringStages.has(stage))) {
     fail('INVALID_RESERVATION', 'A correction requires distinct engineering stages.');
   }
-  const operations = [operation('remediationTotal', 1, policy.remediationTotal)];
+  const limits = remediationLimits(policy);
+  const approved = effectivePolicies.get(policy);
+  const operations = [operation('remediationTotal', 1, limits.total)];
   for (const stage of stages) {
-    operations.push(operation('remediationByStage', 1, policy.remediationPerStage, stage));
+    operations.push(operation('remediationByStage', 1, limits.stage[stage] ?? limits.ordinaryStage, stage));
   }
   if (majorRootCause !== undefined) {
     if (typeof majorRootCause !== 'string' || !majorRootCause.trim()) {
       fail('INVALID_RESERVATION', 'A major correction requires a root cause identifier.');
     }
-    operations.push(operation('remediationByRootCause', 1, policy.majorRootCauseAttempts, majorRootCause));
+    if (approved && majorRootCause === approved.legacyCause
+      && (runId !== approved.legacyAllowedRunId || stages.length !== 1 || stages[0] !== 'E0'
+        || usage.remediationByRootCause?.[majorRootCause] !== approved.legacyCauseLimit - 1)) {
+      fail('LS-04', 'The historical accounting cause has only one specifically approved correction.');
+    }
+    const maximum = Object.hasOwn(limits.rootCause, majorRootCause)
+      ? limits.rootCause[majorRootCause] : limits.ordinaryRootCause;
+    operations.push(operation('remediationByRootCause', 1, maximum, majorRootCause));
   }
   return operations;
 }
@@ -151,7 +229,7 @@ function reserveBudget(current, proposal, policy) {
     fail('INVALID_RESERVATION', 'Search time must be included in automated time.');
   }
   const resources = resourceOperations(proposal, policy);
-  const remediation = remediationOperations(proposal.remediation, policy);
+  const remediation = remediationOperations(proposal.remediation, policy, runId, current.usage);
   if (!resources.length && !remediation.length) {
     fail('INVALID_RESERVATION', 'There are no bounds to reserve.');
   }
@@ -234,6 +312,9 @@ function releaseUnstartedReservation(current, runId, confirmedNotStarted) {
 }
 
 module.exports = {
+  deriveEffectiveBudget,
+  remediationLimits,
+  checkEffectiveBudgetUsage,
   permitsStageSearchSimulations,
   permitsPhysicsCandidates,
   reserveBudget,

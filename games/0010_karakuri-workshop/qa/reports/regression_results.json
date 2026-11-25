@@ -1,9 +1,9 @@
 {
-  "scope": "Fixed baseline independent of the Game #0010 worktree",
+  "runId": "E0-CONVERGENCE-REGRESSION-36",
   "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
   "node": "26.13.0",
-  "runId": "E0-R09-VALIDATION-21",
-  "casesPassed": 2019,
+  "failures": 0,
+  "skipped": 0,
   "passedPerGame": {
     "0001_target-tap": 30,
     "0002_light-panels": 36,
@@ -15,6 +15,328 @@
     "0008_three-minute-detective": 131,
     "0009_three-move-hero": 169
   },
-  "failures": 0,
-  "skipped": 0
+  "casesPassed": 2019,
+  "source": "qa/reports/raw-test-output.jsonl",
+  "fixedInventory": {
+    "0001_target-tap": [
+      "tests/game-logic.test.js"
+    ],
+    "0002_light-panels": [
+      "tests/distribution.test.mjs",
+      "tests/game-logic.test.mjs",
+      "tests/progress-store.test.mjs",
+      "tests/stages.test.mjs"
+    ],
+    "0003_30sec-survival": [
+      "tests/core.test.mjs",
+      "tests/input.test.mjs",
+      "tests/integration.test.mjs"
+    ],
+    "0004_wobbly-tower": [
+      "tests/ir04.test.mjs",
+      "tests/main.test.mjs",
+      "tests/preview-server.test.mjs",
+      "tests/renderer.test.mjs",
+      "tests/rules.test.mjs",
+      "tests/state.test.mjs",
+      "tests/storage.test.mjs",
+      "tests/ui-contract.test.mjs"
+    ],
+    "0005_hitofude-delivery": [
+      "tests/distribution.test.mjs",
+      "tests/game-core.test.mjs",
+      "tests/hint-solver.test.mjs",
+      "tests/input.test.mjs",
+      "tests/scoring.test.mjs",
+      "tests/stages.test.mjs",
+      "tests/storage.test.mjs"
+    ],
+    "0006_traffic-panic": [
+      "tests/bots.test.mjs",
+      "tests/browser-controller.test.mjs",
+      "tests/clear-transition.test.mjs",
+      "tests/experiment-statistics.test.mjs",
+      "tests/holdout-preparation.test.mjs",
+      "tests/persistence.test.mjs",
+      "tests/prng-spawn.test.mjs",
+      "tests/session-replay.test.mjs",
+      "tests/signal-engine.test.mjs",
+      "tests/simulation.test.mjs",
+      "tests/traffic-guide.test.mjs",
+      "tests/traffic-validator.test.mjs"
+    ],
+    "0007_weather-bakery": [
+      "tests/game-core.test.js",
+      "tests/scenario-catalog.test.js",
+      "tests/storage.test.js",
+      "tests/transitions.test.js"
+    ],
+    "0008_three-minute-detective": [
+      "tests/engine.test.mjs",
+      "tests/evidence-shuffle.test.mjs",
+      "tests/independent-proof.test.mjs",
+      "tests/narrative-regression.test.mjs",
+      "tests/proof-matrix.test.mjs",
+      "tests/public-proof.test.mjs",
+      "tests/revealed-progress.test.mjs",
+      "tests/semantic-integrity.test.mjs",
+      "tests/storage.test.mjs"
+    ],
+    "0009_three-move-hero": [
+      "tests/battle-core.test.mjs",
+      "tests/battle-edge.test.mjs",
+      "tests/battle-log-effects.test.mjs",
+      "tests/battle-log-motion.test.mjs",
+      "tests/game-battle-animation.test.mjs",
+      "tests/phase1_checksums.test.mjs",
+      "tests/phase1_contract.test.mjs",
+      "tests/phase1_fingerprint.test.mjs",
+      "tests/progress-storage.test.mjs",
+      "tests/ui-action-animation-r01.test.mjs",
+      "tests/ui-action-animation.test.mjs",
+      "tests/ui-animation-scene.test.mjs",
+      "tests/ui-flow.test.mjs"
+    ]
+  },
+  "receipts": {
+    "0001_target-tap": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/game-logic.test.js"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/game-logic.test.js"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "791445efe1b9a52e26d8b834215cbc9595f905aced497d1ac4fa716596b06e25",
+      "rawLogFile": "e0-convergence-regression-0001_target-tap.tap"
+    },
+    "0002_light-panels": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/distribution.test.mjs",
+        "tests/game-logic.test.mjs",
+        "tests/progress-store.test.mjs",
+        "tests/stages.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/distribution.test.mjs",
+        "tests/game-logic.test.mjs",
+        "tests/progress-store.test.mjs",
+        "tests/stages.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "59f1396bc739407c7fc4f788a7f502099fa93eeeb31680f799cc59f607da8533",
+      "rawLogFile": "e0-convergence-regression-0002_light-panels.tap"
+    },
+    "0003_30sec-survival": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/core.test.mjs",
+        "tests/input.test.mjs",
+        "tests/integration.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/core.test.mjs",
+        "tests/input.test.mjs",
+        "tests/integration.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "f97a1b830be58644eefa5d3a681c95a6d10bcbb508257ec9fee5fd27db06e52c",
+      "rawLogFile": "e0-convergence-regression-0003_30sec-survival.tap"
+    },
+    "0004_wobbly-tower": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/ir04.test.mjs",
+        "tests/main.test.mjs",
+        "tests/preview-server.test.mjs",
+        "tests/renderer.test.mjs",
+        "tests/rules.test.mjs",
+        "tests/state.test.mjs",
+        "tests/storage.test.mjs",
+        "tests/ui-contract.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/ir04.test.mjs",
+        "tests/main.test.mjs",
+        "tests/preview-server.test.mjs",
+        "tests/renderer.test.mjs",
+        "tests/rules.test.mjs",
+        "tests/state.test.mjs",
+        "tests/storage.test.mjs",
+        "tests/ui-contract.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "35b223593636f715774a25dacd74130851f9f5c471e6e5722ffee9d6e456b80d",
+      "rawLogFile": "e0-convergence-regression-0004_wobbly-tower.tap"
+    },
+    "0005_hitofude-delivery": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/distribution.test.mjs",
+        "tests/game-core.test.mjs",
+        "tests/hint-solver.test.mjs",
+        "tests/input.test.mjs",
+        "tests/scoring.test.mjs",
+        "tests/stages.test.mjs",
+        "tests/storage.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/distribution.test.mjs",
+        "tests/game-core.test.mjs",
+        "tests/hint-solver.test.mjs",
+        "tests/input.test.mjs",
+        "tests/scoring.test.mjs",
+        "tests/stages.test.mjs",
+        "tests/storage.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "23bc9fdd3be3d1dc12791b5111f60bf59dc556542c72abcee2283d1e2ff04449",
+      "rawLogFile": "e0-convergence-regression-0005_hitofude-delivery.tap"
+    },
+    "0006_traffic-panic": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/bots.test.mjs",
+        "tests/browser-controller.test.mjs",
+        "tests/clear-transition.test.mjs",
+        "tests/experiment-statistics.test.mjs",
+        "tests/holdout-preparation.test.mjs",
+        "tests/persistence.test.mjs",
+        "tests/prng-spawn.test.mjs",
+        "tests/session-replay.test.mjs",
+        "tests/signal-engine.test.mjs",
+        "tests/simulation.test.mjs",
+        "tests/traffic-guide.test.mjs",
+        "tests/traffic-validator.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/bots.test.mjs",
+        "tests/browser-controller.test.mjs",
+        "tests/clear-transition.test.mjs",
+        "tests/experiment-statistics.test.mjs",
+        "tests/holdout-preparation.test.mjs",
+        "tests/persistence.test.mjs",
+        "tests/prng-spawn.test.mjs",
+        "tests/session-replay.test.mjs",
+        "tests/signal-engine.test.mjs",
+        "tests/simulation.test.mjs",
+        "tests/traffic-guide.test.mjs",
+        "tests/traffic-validator.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "85a9df751ec6ff5c6cd991117e9af9359c915d897ccce31ef462e07a55266c15",
+      "rawLogFile": "e0-convergence-regression-0006_traffic-panic.tap"
+    },
+    "0007_weather-bakery": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/game-core.test.js",
+        "tests/scenario-catalog.test.js",
+        "tests/storage.test.js",
+        "tests/transitions.test.js"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/game-core.test.js",
+        "tests/scenario-catalog.test.js",
+        "tests/storage.test.js",
+        "tests/transitions.test.js"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "c778822490de9c59b3f6c7301e007e3fca0d24620bb1bc6dcc9335e5ecf7a44e",
+      "rawLogFile": "e0-convergence-regression-0007_weather-bakery.tap"
+    },
+    "0008_three-minute-detective": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/engine.test.mjs",
+        "tests/evidence-shuffle.test.mjs",
+        "tests/independent-proof.test.mjs",
+        "tests/narrative-regression.test.mjs",
+        "tests/proof-matrix.test.mjs",
+        "tests/public-proof.test.mjs",
+        "tests/revealed-progress.test.mjs",
+        "tests/semantic-integrity.test.mjs",
+        "tests/storage.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/engine.test.mjs",
+        "tests/evidence-shuffle.test.mjs",
+        "tests/independent-proof.test.mjs",
+        "tests/narrative-regression.test.mjs",
+        "tests/proof-matrix.test.mjs",
+        "tests/public-proof.test.mjs",
+        "tests/revealed-progress.test.mjs",
+        "tests/semantic-integrity.test.mjs",
+        "tests/storage.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "57776327f1043f4423b0ce856c4b0fae46ed0df99b3295084a02f65658311534",
+      "rawLogFile": "e0-convergence-regression-0008_three-minute-detective.tap"
+    },
+    "0009_three-move-hero": {
+      "runId": "E0-CONVERGENCE-REGRESSION-36",
+      "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testFiles": [
+        "tests/battle-core.test.mjs",
+        "tests/battle-edge.test.mjs",
+        "tests/battle-log-effects.test.mjs",
+        "tests/battle-log-motion.test.mjs",
+        "tests/game-battle-animation.test.mjs",
+        "tests/phase1_checksums.test.mjs",
+        "tests/phase1_contract.test.mjs",
+        "tests/phase1_fingerprint.test.mjs",
+        "tests/progress-storage.test.mjs",
+        "tests/ui-action-animation-r01.test.mjs",
+        "tests/ui-action-animation.test.mjs",
+        "tests/ui-animation-scene.test.mjs",
+        "tests/ui-flow.test.mjs"
+      ],
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "tests/battle-core.test.mjs",
+        "tests/battle-edge.test.mjs",
+        "tests/battle-log-effects.test.mjs",
+        "tests/battle-log-motion.test.mjs",
+        "tests/game-battle-animation.test.mjs",
+        "tests/phase1_checksums.test.mjs",
+        "tests/phase1_contract.test.mjs",
+        "tests/phase1_fingerprint.test.mjs",
+        "tests/progress-storage.test.mjs",
+        "tests/ui-action-animation-r01.test.mjs",
+        "tests/ui-action-animation.test.mjs",
+        "tests/ui-animation-scene.test.mjs",
+        "tests/ui-flow.test.mjs"
+      ],
+      "exitCode": 0,
+      "rawLogSha256": "e3e4488487eb8470ee6520f71a1f26dbe6fe6687890943b43db6886711fc6fec",
+      "rawLogFile": "e0-convergence-regression-0009_three-move-hero.tap"
+    }
+  }
 }
