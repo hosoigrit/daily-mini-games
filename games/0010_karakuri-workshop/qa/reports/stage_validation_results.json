@@ -1103,5 +1103,233 @@
       "rawLogSha256": "5c3fc74f8e0a5ff339b0775379f7d0ba52b048f09c482cad14cd3108ca04b85e"
     },
     "correction": "Fixed sampling independent of trace detail; no change to physics or placements"
+  },
+  "testScopeReviewSHA": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+  "observedPhysicalQuality": {
+    "runId": "CR007-E6-TICK-AUDIT",
+    "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+    "rawLogSha256": "0b4ab0c7a79049865f88f24612e258d413826c34b6c175dde3127294aadc5be5",
+    "proof": [
+      {
+        "stage": "01",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:01:0002",
+        "samples": 875,
+        "maxMeasuredPenetrationM": 0.0003382833309632516,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.05279963288683649
+      },
+      {
+        "stage": "02",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:02:0110",
+        "samples": 850,
+        "maxMeasuredPenetrationM": 0.0036297989555366117,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.060938930910872914
+      },
+      {
+        "stage": "03",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:03:0218",
+        "samples": 1045,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.05303891741956837
+      },
+      {
+        "stage": "04",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:04:0330",
+        "samples": 1165,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07855184110030823
+      },
+      {
+        "stage": "04",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:04:0342",
+        "samples": 855,
+        "maxMeasuredPenetrationM": 0.0022345771646958834,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07848333695838423
+      },
+      {
+        "stage": "05",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:05:0445",
+        "samples": 1200,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07855184110030826
+      },
+      {
+        "stage": "05",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:05:0457",
+        "samples": 1390,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07848333695838416
+      },
+      {
+        "stage": "06",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:06:0561",
+        "samples": 885,
+        "maxMeasuredPenetrationM": 0.005270402103058125,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.050029461277341085
+      },
+      {
+        "stage": "06",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:06:0572",
+        "samples": 975,
+        "maxMeasuredPenetrationM": 0.0018546710365814345,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.04217889965685562
+      },
+      {
+        "stage": "07",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:07:0676",
+        "samples": 1965,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.045102019325229274
+      },
+      {
+        "stage": "07",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:07:0699",
+        "samples": 1440,
+        "maxMeasuredPenetrationM": 0.0028717377213679784,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.08330792842398638
+      },
+      {
+        "stage": "08",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:08:0802",
+        "samples": 1315,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07855184110030836
+      },
+      {
+        "stage": "08",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:08:0815",
+        "samples": 925,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07848333695838423
+      },
+      {
+        "stage": "09",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:09:0918",
+        "samples": 1095,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07848333695838416
+      },
+      {
+        "stage": "09",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:09:0929",
+        "samples": 890,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07855184110030815
+      },
+      {
+        "stage": "10",
+        "role": "baseline",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:10:1032",
+        "samples": 920,
+        "maxMeasuredPenetrationM": 0.0034748535780744216,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07855184110030826
+      },
+      {
+        "stage": "10",
+        "role": "alternate",
+        "actualRunId": "CR007-E6-FORMAL-FINAL:10:1044",
+        "samples": 1180,
+        "maxMeasuredPenetrationM": 0,
+        "maxMeasuredSlowPenetrationM": 0,
+        "maxObservedPositionDeltaM": 0.07845995779184722
+      }
+    ],
+    "source": {
+      "runId": "CR007-E6-FORMAL-FINAL",
+      "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+      "exit": 0,
+      "actualSeconds": 10,
+      "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+      "stderrSha256": "55d3f20dd6ea81b3329ca9f6efda808255203c8b209244215ec5ef6d9ee74e49",
+      "category": "formalStage",
+      "pool": "E6",
+      "totals": {
+        "10": {
+          "generated": 12,
+          "worlds": 116,
+          "ticks": 21263
+        },
+        "01": {
+          "generated": 6,
+          "worlds": 108,
+          "ticks": 19505
+        },
+        "02": {
+          "generated": 6,
+          "worlds": 108,
+          "ticks": 18496
+        },
+        "03": {
+          "generated": 10,
+          "worlds": 112,
+          "ticks": 23598
+        },
+        "04": {
+          "generated": 12,
+          "worlds": 115,
+          "ticks": 25872
+        },
+        "05": {
+          "generated": 12,
+          "worlds": 116,
+          "ticks": 27338
+        },
+        "06": {
+          "generated": 10,
+          "worlds": 115,
+          "ticks": 20039
+        },
+        "07": {
+          "generated": 22,
+          "worlds": 126,
+          "ticks": 46863
+        },
+        "08": {
+          "generated": 12,
+          "worlds": 116,
+          "ticks": 30640
+        },
+        "09": {
+          "generated": 10,
+          "worlds": 114,
+          "ticks": 25461
+        }
+      }
+    },
+    "scope": "Native observed finite PP03 before/after substep and post-rule frames, measured overlap and normal outcomes. No continuous mathematical proof or induced fault is claimed.",
+    "totals": {
+      "worlds": 0,
+      "ticks": 0
+    }
   }
 }

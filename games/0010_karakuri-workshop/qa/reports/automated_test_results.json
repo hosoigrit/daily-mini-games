@@ -7179,7 +7179,7 @@
   },
   "E6": {
     "status": "PASS",
-    "sourceSHA": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+    "sourceSHA": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
     "mandatory": 125,
     "pass": 125,
     "cases": [
@@ -7188,9 +7188,9 @@
         "status": "PASS",
         "measured": "available hints retain arbitrary access order and confirm first ghost",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1538
         },
         "method": "I",
@@ -7203,9 +7203,9 @@
         "status": "PASS",
         "measured": "hint resolution leaves draft geometry and inventory unchanged",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1544
         },
         "method": "I",
@@ -7218,9 +7218,9 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1550
         },
         "method": "U",
@@ -7233,9 +7233,9 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1556
         },
         "method": "I",
@@ -7248,9 +7248,9 @@
         "status": "PASS",
         "measured": "only the ten stage IDs are legal",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1490
         },
         "method": "U",
@@ -7263,9 +7263,9 @@
         "status": "PASS",
         "measured": "translate the frozen lower-left coordinates",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1415
         },
         "method": "U",
@@ -7278,9 +7278,9 @@
         "status": "PASS",
         "measured": "fixed structures and goal protection fit the board",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1496
         },
         "method": "U",
@@ -7293,9 +7293,9 @@
         "status": "PASS",
         "measured": "all frozen initial ball, goal and fixed geometry are compatible",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1421
         },
         "method": "U",
@@ -7308,9 +7308,9 @@
         "status": "PASS",
         "measured": "approved inventory and star boundaries",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1502
         },
         "method": "U",
@@ -7337,9 +7337,9 @@
         "status": "PASS",
         "measured": "the 17 initial layouts are legal through normal commands",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1428
         },
         "method": "U",
@@ -7352,9 +7352,9 @@
         "status": "PASS",
         "measured": "the 17 initial layouts are legal through normal commands",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1435
         },
         "method": "I",
@@ -7537,9 +7537,9 @@
         "status": "PASS",
         "measured": "form all 17 formal stage layouts through ordinary edit commands",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1568
         },
         "method": "I",
@@ -8347,9 +8347,9 @@
         "status": "PASS",
         "measured": "unused added part does not constitute a distinct solution",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1574
         },
         "method": "I",
@@ -8413,7 +8413,12 @@
         "method": "P",
         "commandId": "CMD-07",
         "input": "数値異常・すり抜け注入",
-        "expected": "攻略認定拒否"
+        "expected": "攻略認定拒否",
+        "supplementalNativeControlSweep": {
+          "runId": "CR007-E6-TICK-AUDIT",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "0b4ab0c7a79049865f88f24612e258d413826c34b6c175dde3127294aadc5be5"
+        }
       },
       {
         "caseId": "TC-D4-017-C001",
@@ -8434,9 +8439,9 @@
         "status": "PASS",
         "measured": "generate every independently enumerated one-step legal layout",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1508
         },
         "method": "U",
@@ -8449,9 +8454,9 @@
         "status": "PASS",
         "measured": "illegal moves do not enter the legal denominator",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1514
         },
         "method": "U",
@@ -8464,9 +8469,9 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1442
         },
         "method": "U",
@@ -8479,9 +8484,9 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1448
         },
         "method": "U",
@@ -8494,9 +8499,9 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1454
         },
         "method": "U",
@@ -8509,9 +8514,9 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1460
         },
         "method": "U",
@@ -8744,9 +8749,9 @@
         "status": "PASS",
         "measured": "reject empty and insubstantial legal neighborhoods",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1466
         },
         "method": "U",
@@ -9459,9 +9464,9 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1562
         },
         "method": "I",
@@ -9474,9 +9479,9 @@
         "status": "PASS",
         "measured": "authorized cumulative geometry and size ranges",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1520
         },
         "method": "U",
@@ -9489,9 +9494,9 @@
         "status": "PASS",
         "measured": "adjustments remain relative to frozen initial baseline",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1472
         },
         "method": "U",
@@ -9504,9 +9509,9 @@
         "status": "PASS",
         "measured": "immutable gameplay and common physics stay fixed",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1478
         },
         "method": "I",
@@ -9533,9 +9538,9 @@
         "status": "PASS",
         "measured": "reserve at the last legal unit and reject at either search ceiling",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1526
         },
         "method": "I",
@@ -9548,9 +9553,9 @@
         "status": "PASS",
         "measured": "order and operation IDs do not affect the canonical key",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1484
         },
         "method": "U",
@@ -9563,9 +9568,9 @@
         "status": "PASS",
         "measured": "real geometry identity matches the frozen vector and order is canonical",
         "proof": {
-          "runId": "CR007-E6-TESTS",
-          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "runId": "CR007-E6-REVIEW-TESTS",
+          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
           "line": 1532
         },
         "method": "I",
@@ -9617,9 +9622,9 @@
       }
     ],
     "regression": {
-      "runId": "CR007-E6-TESTS",
-      "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
-      "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37"
+      "runId": "CR007-E6-REVIEW-TESTS",
+      "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+      "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b"
     }
   }
 }

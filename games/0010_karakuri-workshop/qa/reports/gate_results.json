@@ -167,7 +167,7 @@
   },
   "EG-06": {
     "status": "PASS",
-    "testedSHA": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+    "testedSHA": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
     "casePasses": 125,
     "initialUncleared": 10,
     "baselineStars3": 10,
@@ -176,6 +176,11 @@
     "hints": 30,
     "next": "E7",
     "protectedAssets": "IDENTICAL",
-    "commonPhysicsProfile": "PP03"
+    "commonPhysicsProfile": "PP03",
+    "allStageQualificationTrace": {
+      "runId": "CR007-E6-TICK-AUDIT",
+      "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+      "rawLogSha256": "0b4ab0c7a79049865f88f24612e258d413826c34b6c175dde3127294aadc5be5"
+    }
   }
 }
