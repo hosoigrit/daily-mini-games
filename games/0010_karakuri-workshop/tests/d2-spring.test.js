@@ -55,8 +55,9 @@ unit(16,1,'side back out-of-width off-surface and steep normal do not launch',()
     point({position:{x:5.16,y:2.4},normal:{x:1,y:0}}),
     point({position:{x:4.8,y:2.28},normal:{x:0,y:-1}}),
     point({position:{x:5.16001,y:2.52}}),
-    point({position:{x:4.8,y:2.546}}),
-    point({normal:{x:Math.sin(Math.PI/5),y:Math.cos(Math.PI/5)}}),
+    point({position:{x:4.8,y:2.545001}}),
+    point({normal:{x:Math.sin(30.001*Math.PI/180),y:Math.cos(30.001*Math.PI/180)}}),
+    point({position:{x:5.16,y:2.52},normal:{x:1,y:0}}),
   ];
   for(const p of variants){
     const control=springs.createSpringController([specimen]);
@@ -92,18 +93,24 @@ unit(21,1,'two complete clear ticks permit a new launch',()=>{
   assert.equal(control.state(specimen.id).phase,'READY');
   assert(control.completeTick(frame({raw:[event(specimen.id)]})).winner);
 });
-unit(22,1,'short clearance or interrupted absence remains in WAIT_RELEASE',()=>{
+unit(22,1,'short, single or interrupted absence remains in WAIT_RELEASE',()=>{
+  const pre=frame({raw:[event(specimen.id)]});
+  const nearGap=frame({ballPosition:positionFrom(normal,.359)});
+  const clearGap=frame({ballPosition:positionFrom(normal,.36)});
+  const interrupted={...clearGap,touchingAtBoundaries:[specimen.id]};
+  for(const steps of [[nearGap,nearGap],[clearGap],[clearGap,interrupted]]) {
+    const control=springs.createSpringController([specimen]);
+    assert(control.completeTick(pre).winner);
+    for(const step of steps) assert.equal(control.completeTick(step).winner,null);
+    assert.equal(control.state(specimen.id).phase,'WAIT_RELEASE');
+    assert.equal(control.completeTick(pre).winner,null);
+  }
   const control=springs.createSpringController([specimen]);
-  assert(control.completeTick(frame({raw:[event(specimen.id)]})).winner);
-  for(let i=0;i<2;i++) control.completeTick(frame({ballPosition:positionFrom(normal,.359)}));
-  assert.equal(control.state(specimen.id).quietTicks,0);
-  control.completeTick(frame({ballPosition:positionFrom(normal,.36)}));
+  assert(control.completeTick(pre).winner);
+  control.completeTick(clearGap);
   assert.equal(control.state(specimen.id).quietTicks,1);
-  const incomplete = {...frame({ballPosition:positionFrom(normal,.37)}),
-    boundaryPositions:[positionFrom(normal,.359),positionFrom(normal,.37)]};
+  const incomplete={...clearGap,boundaryPositions:[positionFrom(normal,.359),positionFrom(normal,.36)]};
   control.completeTick(incomplete);
-  assert.equal(control.state(specimen.id).quietTicks,0);
-  assert.equal(control.completeTick(frame({raw:[event(specimen.id, 'pre-solve',[point()],time(1))]})).winner,null);
   assert.equal(control.state(specimen.id).quietTicks,0);
 });
 const selection = count => Array.from({length:count},(_,i) => ({
@@ -172,7 +179,8 @@ for(const [index,alignment] of [-.501,-.5,-.499].entries()) test(
 for(const [index,distance] of [.25,.250001].entries()) test(
   `TC-D7-001-C00${index+5} outer separation ${distance}`,()=>{
     const control=springs.createSpringController([specimen]);
-    const result=control.completeTick(frame({raw:[event(specimen.id)],ballPosition:positionFrom(normal,.32+distance)}));
+    const result=control.completeTick(frame({raw:[event(specimen.id),event(specimen.id,'end-contact',[],time(1))],
+      ballPosition:positionFrom(normal,.32+distance)}));
     assert.equal(!!result.winner,distance<=.25);
   });
 test('TC-D7-001 blocking supplementary impulse, continued contact and later timing',()=>{
@@ -184,5 +192,33 @@ test('TC-D7-001 blocking supplementary impulse, continued contact and later timi
   const raw=obstruction(-.5,.01,false);
   assert(continued.completeTick(frame({raw})).winner);
   const used=springs.createSpringController([specimen]);
-  assert.equal(used.completeTick(frame({raw,touchingAtEnd:[{id:'roof',normal:{x:0,y:-1}}]})).winner,null);
+  assert.equal(used.completeTick(frame({raw,touchingAtEnd:[{id:'roof',normal:{x:Math.sqrt(.75),y:-.5}}]})).winner,null);
+});
+
+unit(23,2,'two actual eligible springs produce only one physical launch',()=>{
+  const runtime=physics.createWorld();
+  const p={x:4.8,y:3.6};
+  try {
+    const definitions=[-45,45].map((angleDeg,index)=>{
+      const radians=angleDeg*Math.PI/180;
+      const center={x:p.x-.321*Math.sin(radians),y:p.y-.321*Math.cos(radians)};
+      const id='actual-'+index;
+      const body=factory.createStaticBody(runtime.world,{...center,id,kind:'B',width:.72,height:.24,angleDeg});
+      return {body,id,center,angleDeg,gridX:center.x/.24,gridY:(7.2-center.y)/.24};
+    });
+    const ball=factory.createBall(runtime.world,p);
+    ball.setLinearVelocity({x:-.5,y:-2});
+    const original=ball.setLinearVelocity;
+    const calls=[];
+    ball.setLinearVelocity=function(value){
+      calls.push({x:value.x,y:value.y});
+      return original.call(this,value);
+    };
+    const simulation=springs.createSpringSimulation(runtime,ball,definitions);
+    const result=simulation.advanceTick();
+    assert(result.advanced);
+    assert.equal(new Set(result.eligible.map(candidate=>candidate.spring.id)).size,2);
+    assert.equal(calls.length,1,'only one physical launch per tick');
+    near(Math.hypot(calls[0].x,calls[0].y),9.5);
+  }finally{physics.disposeWorld(runtime);}
 });
