@@ -51,8 +51,13 @@ test('TC-D4-022-C001 reject empty and insubstantial legal neighborhoods', () => 
 test('TC-D4-026-C001 adjustments remain relative to frozen initial baseline', () => {
   const initial=stages.getInitialStages()[1];
   const shifted=x => ({...initial, goal:{...initial.goal, x:initial.goal.x+x}});
-  assert.deepEqual(governance.checkAdjustment(initial, shifted(.48)), {ok:true});
-  assert.deepEqual(governance.checkAdjustment(initial, shifted(.72)), {ok:false,reason:'GOAL_DISPLACEMENT'});
+  for (const sign of [-1,1]) {
+    const accepted=shifted(sign*.48);
+    const checkpoint=JSON.stringify(accepted);
+    assert.deepEqual(governance.checkAdjustment(initial, accepted), {ok:true});
+    assert.deepEqual(governance.checkAdjustment(initial, shifted(sign*.72)), {ok:false,reason:'GOAL_DISPLACEMENT'});
+    assert.equal(JSON.stringify(accepted),checkpoint);
+  }
 });
 
 test('TC-D4-027-C001 immutable gameplay and common physics stay fixed', () => {
@@ -61,6 +66,12 @@ test('TC-D4-027-C001 immutable gameplay and common physics stay fixed', () => {
     assert.deepEqual(governance.checkAdjustment(initial,{...initial,...changed}),
       {ok:false,reason:'IMMUTABLE_STAGE_FIELD'});
   }
+  assert.deepEqual(governance.checkAdjustment(initial,{
+    ...initial,fixed:[{...initial.fixed[0],angleDeg:15}],
+  }),{ok:false,reason:'FIXED_PART_IDENTITY'});
+  assert.deepEqual(governance.checkAdjustment(initial,{
+    ...initial,fixed:[...initial.fixed,{...initial.fixed[0],id:'unexpected-W'}],
+  }),{ok:false,reason:'DEFINITION_SHAPE'});
   assert.deepEqual(governance.checkAdjustment(initial,initial,{physicsUnchanged:false}), {ok:false,reason:'COMMON_PHYSICS'});
 });
 
@@ -68,6 +79,15 @@ test('TC-D4-029-C001 order and operation IDs do not affect the canonical key', (
   const base=search.fromSeed(seeds['03'].A);
   const modified=[...base].reverse().map((p,i)=>({...p,id:`new-${i}`}));
   assert.equal(search.placementKey(base),search.placementKey(modified));
+  const pair=search.uniqueStageCandidates([base,modified]);
+  assert.equal(pair.generated,2);
+  assert.equal(pair.candidates.length,1);
+  const triple=search.fromSeed([['R',10,20,15],['P',20,16,0],['B',30,10,15]]);
+  const permutations=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
+  const ordered=search.uniqueStageCandidates(permutations.map(p=>p.map(i=>triple[i])));
+  assert.equal(ordered.generated,6);
+  assert.equal(ordered.candidates.length,1);
+  assert.deepEqual(ordered.candidates[0].map(p=>p.type),['B','P','R']);
 });
 
 test('TC-D4-001-C001 only the ten stage IDs are legal', () => {
@@ -182,7 +202,7 @@ test('TC-D3-047-C001 hint resolution leaves draft geometry and inventory unchang
   assert.equal(JSON.stringify(supplied),original);
 });
 
-for(const id of ['TC-D3-048-C001','TC-D3-048-C002','TC-D4-024-C001']) test(`${id} obsolete compatibility rejects otherwise legal hint ghost`, async () => {
+for(const id of ['TC-D3-048-C001','TC-D3-048-C002']) test(`${id} obsolete compatibility rejects otherwise legal hint ghost`, async () => {
   const prior=stages.getInitialStages()[7], updated=stages.getStages()[7];
   const old=await stages.getStageIdentity(prior), identity=await stages.getStageIdentity(updated);
   assert.notEqual(old.compatibilityId,identity.compatibilityId);
@@ -191,7 +211,21 @@ for(const id of ['TC-D3-048-C001','TC-D3-048-C002','TC-D4-024-C001']) test(`${id
   assert.deepEqual(stages.resolveStageHint(old,[shape],3,true),shape);
 });
 
-test('TC-D4-008-C001 form all 17 formal stage layouts through ordinary edit commands', () => {
+test('TC-D4-024-C001 a one-grid change to only the fixed obstacle invalidates the certified ghost', async () => {
+  const stage=stages.getStages()[3];
+  const next=structuredClone(stage);
+  next.fixed[0].gridX++;
+  next.fixed[0].x+=.24;
+  assert(governance.checkAdjustment(stage,next).ok);
+  assert.deepEqual(stage.goal,next.goal);
+  const [original,changed]=await Promise.all([stages.getStageIdentity(stage),stages.getStageIdentity(next)]);
+  const ghost={level:3,compatibilityId:original.compatibilityId,parts:search.fromSeed(seeds['04'].B).slice(0,1)};
+  assert(stages.resolveStageHint(original,[ghost],3,true));
+  assert.equal(stages.resolveStageHint(changed,[ghost],3,true),null);
+});
+
+test('TC-D4-008-C001 form all 17 formal stage layouts through ordinary edit commands', async () => {
+  const {calculateInventory}=await import('../src/domain/placement-validator.js');
   const {layouts}=require('../qa/fixtures/stages.json');
   let total=0;
   for(const stage of stages.getStages()){
@@ -201,6 +235,8 @@ test('TC-D4-008-C001 form all 17 formal stage layouts through ordinary edit comm
       assert(built.ok,stage.id);
       assert.equal(search.placementKey(built.placements),search.placementKey(expected));
       assert.equal(built.placements.length,expected.length);
+      assert.deepEqual(calculateInventory(stage,built.placements),
+        Object.fromEntries(Object.entries(stage.inventory).map(([type,n])=>[type,n-expected.filter(p=>p.type===type).length])));
       total++;
     }
   }

@@ -6,6 +6,15 @@ export const fromSeed = seed => seed.map(([type, u, v, angleDeg = 0]) => ({type,
 export const placementKey = design => canonicalDesign(design)
   .map(p => `${p.type}:${p.gridX}:${p.gridY}:${p.angleDeg}`).join(';');
 
+export function uniqueStageCandidates(layouts) {
+  const unique = new Map();
+  for (const layout of layouts) {
+    const key = placementKey(layout);
+    if (!unique.has(key)) unique.set(key, canonicalDesign(layout));
+  }
+  return {generated: layouts.length, candidates: [...unique.values()]};
+}
+
 function compareLayouts(a, b) {
   const aa = canonicalDesign(a);
   const bb = canonicalDesign(b);
