@@ -523,12 +523,15 @@ child('TC-D5-008-C001',async()=>{
   return {actual:clear,terminalWriteCount:f.writes.length-1};
 });
 child('TC-D5-009-C001',async()=>{
-  const f=await instantiate('01');
+  const cleared=fixture();
+  cleared.stages['01'].progress={cleared:true,historicalBestStars:3};
+  cleared.stages['01'].currentBest=activeBest('01',[ramp]);
+  const f=await instantiate('01',cleared);
   const before=f.bytes.get(save.SAVE_KEY);
   const fail=run(f,'FAILED');assert.equal(fail.code,'FL-003');
   f.scene.dispatch({type:'redesign'});assert(f.scene.dispatch({type:'start'}));assert(f.scene.dispatch({type:'abort'}));
   assert.equal(f.bytes.get(save.SAVE_KEY),before);assert.equal(f.writes.length,0);
-  const isolate=await instantiate('01',fixture(),{makeExperiment(stage,design,options){
+  const isolate=await instantiate('01',cleared,{makeExperiment(stage,design,options){
     return {runId:options.runId,step:()=>({tick:1,position:stage.ball,error:true}),dispose(){}};
   }});
   const initial=isolate.bytes.get(save.SAVE_KEY);
@@ -539,20 +542,20 @@ child('TC-D5-009-C001',async()=>{
 });
 child('TC-D5-040-C001',async()=>{
   const existing=fixture();
-  for(const id of ['01','02','03','04'])existing.stages[id].progress={cleared:true,historicalBestStars:3};
-  existing.stages['04'].previousBest={...activeBest('04',[{id:'spring-old',type:'spring',gridX:6,gridY:25,angleDeg:15}]),
+  for(const id of ['01','02','03','04','05'])existing.stages[id].progress={cleared:true,historicalBestStars:3};
+  existing.stages['05'].previousBest={...activeBest('05',[{id:'spring-old',type:'spring',gridX:7,gridY:25,angleDeg:30}]),
     compatibilityId:'historic-id'};
-  const f=await instantiate('04',existing);
+  const f=await instantiate('05',existing);
   for(const p of [
-    {id:'right',partType:'P',gridX:35,gridY:10,angleDeg:0},
-    {id:'ramp',partType:'R',gridX:5,gridY:7,angleDeg:0},
-    {id:'spring',partType:'B',gridX:6,gridY:25,angleDeg:15},
+    {id:'right',partType:'P',gridX:35,gridY:26,angleDeg:0},
+    {id:'spring',partType:'B',gridX:7,gridY:25,angleDeg:30},
+    {id:'ramp',partType:'R',gridX:25,gridY:12,angleDeg:15},
   ])assert(f.scene.dispatch({type:'add',...p}));
   const terminal=run(f,'CLEARED');
-  const row=expectRevision(f,4).stages['04'];
+  const row=expectRevision(f,4).stages['05'];
   assert.equal(row.currentBest.usedParts,3);
-  assert.equal(row.currentBest.stars,2);
-  assert.deepEqual(row.previousBest,existing.stages['04'].previousBest);
+  assert.equal(row.currentBest.stars,3);
+  assert.deepEqual(row.previousBest,existing.stages['05'].previousBest);
   assert.equal(row.progress.historicalBestStars,3);
   return {terminal,best:row.currentBest};
 });
@@ -560,6 +563,8 @@ child('TC-D5-042-C001',async()=>{
   const f=await instantiate('01');
   assert(addNormal(f));run(f,'CLEARED');
   assert(f.scene.dispatch({type:'redesign'}));assert(f.scene.state().previousTrajectory);
+  assert(f.scene.dispatch({type:'request-reset'}));assert(f.scene.dispatch({type:'cancel'}));
+  expectRevision(f,2);assert(f.scene.state().previousTrajectory);
   assert(f.scene.dispatch({type:'request-reset'}));assert(f.scene.dispatch({type:'confirm'}));
   const saved=expectRevision(f,3).stages['01'];
   assert.deepEqual(saved.draft.placements,[]);

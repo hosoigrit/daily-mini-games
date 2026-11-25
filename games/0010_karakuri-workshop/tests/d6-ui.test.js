@@ -138,8 +138,9 @@ test('TC-D6-037-C001 actual normalized contact input crosses J/m and the real cl
     contacts:[{event:'post-solve',points:[{normalImpulse:.2*amount}]}]}}));
   collision(.149);assert.equal(events.length,0);
   collision(.15);assert.equal(events.length,1);
-  context.currentTime=.050;collision(.151);assert.equal(events.length,1);
+  context.currentTime=.099;collision(.151);assert.equal(events.length,1);
   context.currentTime=.100;collision(.151);assert.equal(events.length,2);
+  context.currentTime=.200;collision(.151);assert.equal(events.length,3);
   assert(events.every(e=>e.frequencies[0]===450));
 });
 test('TC-D6-038-C001 no spring tone without a selected live activation',async()=>{
@@ -168,7 +169,7 @@ test('TC-D6-040-C001 terminal audio is once per run and newly earned stars only'
   sound.begin('A');
   sound.end({runId:'A',status:'FAILED'});sound.end({runId:'A',status:'FAILED'});
   assert.equal(events.filter(e=>e.frequencies[0]===440).length,1);
-  for(const [id,newStars] of [['B',1],['C',2],['D',0]]){
+  for(const [id,newStars] of [['B',3],['C',2],['D',0]]){
     const earlier=events.filter(e=>e.frequencies[0]===880).length;
     sound.begin(id);
     sound.end({runId:id,status:'CLEARED',newStars});sound.end({runId:id,status:'CLEARED',newStars});

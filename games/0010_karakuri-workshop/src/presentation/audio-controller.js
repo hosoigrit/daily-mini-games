@@ -57,9 +57,9 @@ export function createAudioController(contextFactory = () => new AudioContext())
       const voice={priority:s.priority,stop(){
         try{
           const at=context.currentTime;
-          volume.gain.cancelAndHoldAtTime?.(at);
-          volume.gain.linearRampToValueAtTime(0,at+.012);
-          oscillator.stop(at+.014);
+          volume.gain.cancelScheduledValues?.(at);
+          volume.gain.setValueAtTime(0,at);
+          oscillator.stop(at);
         }catch{}
       }};
       active.add(voice);
