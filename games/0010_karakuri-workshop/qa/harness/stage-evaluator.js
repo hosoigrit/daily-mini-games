@@ -4,9 +4,27 @@ import {createStageExperiment} from '../../src/data/stage-definitions.js';
 
 const sha256 = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
+export function certificationEligible(result) {
+  return result.end === 'CLEARED' && result.required && !result.tunneling
+    && [result.lastPosition.x, result.lastPosition.y, result.minimumGoalDistanceUm].every(Number.isFinite);
+}
+
+export function isDistinctSolution(base, alternative, ablations = []) {
+  if (!certificationEligible(base) || !certificationEligible(alternative)
+    || base.stageFingerprint !== alternative.stageFingerprint) return false;
+  const orders = result => result.actions.map(({event, part}) => [event, part?.split(':')[0]]);
+  const key = ({type, gridX, gridY, angleDeg}) => `${type}:${gridX}:${gridY}:${angleDeg}`;
+  const baseline = new Set(base.placed.map(key));
+  const changedActions = new Set(alternative.placed.map(key).filter(id => !baseline.has(id)
+    && alternative.actions.some(action => action.part === id)));
+  return changedActions.size > 0 && JSON.stringify(orders(base)) !== JSON.stringify(orders(alternative))
+    && [...changedActions].every(id => ablations.some(a => a.removed === id
+      && (a.result === 'FAILED' || a.result === 'CLEARED' && a.sameResidualSequence === false)));
+}
+
 export function runStageSimulation(stage, design, {trace = false, runId} = {}) {
   const experiment = createStageExperiment(stage, design, {runId});
-  const trajectory = [];
+  const trajectory = [{tick: 0, ...stage.ball}];
   const records = [];
   const actions = [];
   const paths = [];
@@ -55,7 +73,7 @@ export function runStageSimulation(stage, design, {trace = false, runId} = {}) {
 
   try {
     while ((row = experiment.step())) {
-      if (trace || row.tick % 6 === 0 || row.status !== 'RUNNING') {
+      if (row.tick % 6 === 0 || row.status !== 'RUNNING') {
         trajectory.push({tick: row.tick, x: row.position.x, y: row.position.y});
       }
       if (trace) records.push(row);

@@ -51,6 +51,18 @@ export function getStages() {
   return result;
 }
 
+export function validateStageSet(entries) {
+  if (!Array.isArray(entries) || entries.length !== stages.length) return false;
+  const ids = new Set(entries.map(stage => stage?.id));
+  return stages.every((_, index) => ids.has(stageId(index)));
+}
+
+export function resolveStageHint(identity, hints, level, confirmPlacement = false) {
+  if (level === 3 && !confirmPlacement) return null;
+  const value = hints.find(item => item.level === level && item.compatibilityId === identity.compatibilityId);
+  return value ? structuredClone(value) : null;
+}
+
 const partName = {P: 'platform', R: 'ramp', S: 'seesaw', B: 'spring'};
 const engineSha = '70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1';
 const approvedSeesawMassRatio = 2.5;
