@@ -6,7 +6,7 @@ const {dirname} = require('node:path');
 const {isDeepStrictEqual} = require('node:util');
 const {
   reserveBudget, startReservation, settleBudgetUsage, releaseUnstartedReservation,
-  remediationLimits, checkEffectiveBudgetUsage,
+  remediationLimits, checkEffectiveBudgetUsage, architectureLimits,
 } = require('./budget.js');
 
 function hash(bytes) {
@@ -255,6 +255,19 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses, effectiveB
       target.maximum = value;
       changes.push({op: 'replace', path: `/properties/budgetUsage/properties/${path}`, value});
     }
+  }
+  const architecture = architectureLimits(effectiveBudget);
+  if (architecture) {
+    for (const [field, maximum] of [
+      ['formalSimulationsByPool', architecture.simulations], ['formalTicksByPool', architecture.ticks],
+    ]) {
+      const override = {E8: {...budget[field].additionalProperties, maximum}};
+      budget[field].properties = override;
+      changes.push({op: 'add', path: `/properties/budgetUsage/properties/${field}/properties`, value: override});
+    }
+    budget.physicsValidationSimulations.maximum = architecture.foundationWorlds;
+    changes.push({op: 'replace', path: '/properties/budgetUsage/properties/physicsValidationSimulations/maximum',
+      value: architecture.foundationWorlds});
   }
   // Canonical JSON matches the separately verified derivation, independent of input key order.
   const canonical = (_, value) => {

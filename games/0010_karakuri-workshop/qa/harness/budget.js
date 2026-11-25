@@ -30,14 +30,35 @@ const finalAutonomyGrant = Object.freeze({
   remediationLimit: 70,
 });
 
-const effectivePolicies = new WeakMap();
+const architectureGrant = Object.freeze({
+  approvalId: 'EXEC-GAME-0010-CR009-FINAL-ARCHITECTURE',
+  precedingGrant: finalAutonomyGrant.approvalId,
+  baseCommitSha: convergenceGrant.baseCommitSha,
+  handoffCommitSha: convergenceGrant.handoffCommitSha,
+  branch: convergenceGrant.branch,
+  writerId: convergenceGrant.writerId,
+  testedSha: 'bc1426cf1ff84cd18207073303e7d47fd83e5b12',
+  evidenceSha: 'e5a2c9e0689e4f7a1044a9ed3806b0a68c835d22',
+  foundationWorlds: 15000,
+  formalWorlds: 15000,
+  formalTicks: 18000000,
+  e8Worlds: 6000,
+  e8Ticks: 7200000,
+});
 
-function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant) {
+const effectivePolicies = new WeakMap();
+const architecturePolicies = new WeakSet();
+
+function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, finalArchitectureGrant) {
   if (!isDeepStrictEqual(externalGrant, convergenceGrant)) {
     fail('LS-08', 'The convergence budget needs the matching external approval.');
   }
   if (autonomyGrant !== undefined && !isDeepStrictEqual(autonomyGrant, finalAutonomyGrant)) {
     fail('LS-08', 'The final budget needs the matching CR008 external approval.');
+  }
+  if (finalArchitectureGrant !== undefined
+    && (!autonomyGrant || !isDeepStrictEqual(finalArchitectureGrant, architectureGrant))) {
+    fail('LS-08', 'The final architecture budget needs the matching CR009 external approval.');
   }
   const {budgets} = loadExecutionPolicy(frozenPolicyBytes, convergenceGrant.policyDigest);
   if (autonomyGrant) {
@@ -46,12 +67,26 @@ function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant) 
     budgets.remediationTotal = autonomyGrant.remediationLimit;
     budgets.remediationPerStage = autonomyGrant.remediationLimit;
   }
+  if (finalArchitectureGrant) {
+    budgets.physicsValidationSimulationsTotal = finalArchitectureGrant.foundationWorlds;
+    budgets.formalStageSimulationsTotal = finalArchitectureGrant.formalWorlds;
+    budgets.formalStageTicksTotal = finalArchitectureGrant.formalTicks;
+    Object.assign(budgets.formalStagePools.E8, {
+      simulations: finalArchitectureGrant.e8Worlds, ticks: finalArchitectureGrant.e8Ticks,
+    });
+    architecturePolicies.add(budgets);
+  }
   Object.freeze(budgets.physicsCandidateStages);
   for (const pool of Object.values(budgets.formalStagePools)) Object.freeze(pool);
   Object.freeze(budgets.formalStagePools);
   Object.freeze(budgets);
   effectivePolicies.set(budgets, convergenceGrant);
   return budgets;
+}
+
+function architectureLimits(policy) {
+  if (!architecturePolicies.has(policy)) return null;
+  return {foundationWorlds: policy.physicsValidationSimulationsTotal, ...policy.formalStagePools.E8};
 }
 
 function remediationLimits(policy) {
@@ -85,6 +120,19 @@ function checkEffectiveBudgetUsage(usage, policy, requireComplete = false) {
     && count(usage.remediationTotal ?? 0) <= limits.total
     && count(usage.automatedSeconds ?? 0) <= limits.automatedSeconds;
   if (!valid) fail('LS-03', 'Checkpoint or gate use exceeds the effective authorization.');
+  for (const [section, maximum] of Object.entries(globalMetrics)) {
+    if (count(usage[section] ?? 0) > policy[maximum]) {
+      fail('LS-03', 'Checkpoint or gate use exceeds the effective authorization.');
+    }
+  }
+  for (const [section, metric, total] of Object.values(formalMetrics)) {
+    const rows = Object.entries(usage[section] ?? {});
+    if (rows.some(([pool, used]) => !Object.hasOwn(policy.formalStagePools, pool)
+      || count(used) > policy.formalStagePools[pool][metric])
+      || rows.reduce((sum, [, used]) => sum + count(used), 0) > policy[total]) {
+      fail('LS-03', 'Checkpoint or gate use exceeds the effective authorization.');
+    }
+  }
   return true;
 }
 
@@ -333,6 +381,7 @@ function releaseUnstartedReservation(current, runId, confirmedNotStarted) {
 
 module.exports = {
   deriveEffectiveBudget,
+  architectureLimits,
   remediationLimits,
   checkEffectiveBudgetUsage,
   permitsStageSearchSimulations,

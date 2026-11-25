@@ -1,8 +1,8 @@
-import {createStaticBody} from '../physics/body-factory.js';
+import {bindGoalBodies, bindRuleSimulation} from '../physics/adapter.js';
 import {createSpringSimulation} from '../physics/spring-controller.js';
 import {createTrajectoryRecorder} from '../physics/trajectory-recorder.js';
 import {captureRunDesign, commitScore, initialProgress} from './score-service.js';
-import {attachTutorialPhysics, circleRectangleGap} from './tutorial-evaluator.js';
+import {createTutorialRules, isUpperSurface} from './tutorial-evaluator.js';
 
 const TOLERANCE = 1e-6;
 const GOAL_SPEED = .15;
@@ -18,11 +18,7 @@ export function goalGeometry() {
   return GOAL_RECTANGLES.map(box => ({...box}));
 }
 
-export function createGoal(world, origin) {
-  return goalGeometry().map((box, i) => createStaticBody(world, {
-    ...box, x: origin.x + box.x, y: origin.y + box.y, kind: 'goal', id: `goal-${i}`,
-  }));
-}
+export const createGoal = bindGoalBodies(goalGeometry);
 
 export function isInsideGoal(position, goal) {
   const x = position.x - goal.x;
@@ -67,43 +63,9 @@ export function evaluateTerminal({tick, position, stable, requiredUse, error}) {
   return {status: 'RUNNING', code: null};
 }
 
-export function createRuleSimulation(runtime, {ball, goal, solidBodies, parts, requirement, springSpeed}) {
-  const tutorial = attachTutorialPhysics(runtime, ball, parts, requirement);
-  const springs = parts.filter(part => part.type === 'B');
-  const simulator = createSpringSimulation(runtime, ball, springs, springSpeed);
-  const tracker = createGoalStability(goal);
-  const original = runtime.observe;
-  const radius = ball.getFixtureList().getShape().getRadius();
-  let samples = [];
-  function observe() {
-    const center = ball.getPosition();
-    const velocity = ball.getLinearVelocity();
-    const penetration = solidBodies.reduce((maximum, body) =>
-      Math.max(maximum, -circleRectangleGap(body, center, radius)), 0);
-    return {position: {x: center.x, y: center.y}, velocity: {x: velocity.x, y: velocity.y}, penetration};
-  }
-
-  runtime.observe = row => {
-    samples.push(observe());
-    tutorial.observeBoundary(row.phase, row.substep);
-    original?.(row);
-  };
-  tracker.observe(0, [observe()]);
-  return {
-    advanceTick() {
-      samples = [];
-      tutorial.beginTick();
-      const physical = simulator.advanceTick();
-      const boundary = observe();
-      if (!physical.advanced) return {error: true, tick: runtime.ticks + 1, position: boundary.position};
-      samples.push(boundary);
-      const usage = tutorial.completeTick(physical.activation);
-      const stability = tracker.observe(runtime.ticks, samples);
-      return {tick: runtime.ticks, position: boundary.position, stable: stability.achieved, requiredUse: usage.state.achieved,
-        samples, stability, usage};
-    },
-  };
-}
+export const createRuleSimulation = bindRuleSimulation({
+  createTutorialRules, isUpperSurface, createSpringSimulation, createGoalStability,
+});
 
 export function createResultSession({
   progress = initialProgress(), previousTrajectory = null, stageId: stage = null, onTerminal = () => {},

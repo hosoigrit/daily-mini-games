@@ -1,5 +1,3 @@
-import {Manifold} from '../../vendor/planck/planck.mjs';
-
 const ROUNDING = 8 * Number.EPSILON;
 const TOP_ALIGNMENT = Math.cos(Math.PI / 6);
 const FIVE_DEGREES = Math.PI / 36;
@@ -118,163 +116,14 @@ export function createRampContactTracker(runId, ramps, evaluator) {
   };
 }
 
-const vector = ({x, y}) => ({x, y});
-const difference = (a, b) => ({x: a.x - b.x, y: a.y - b.y});
-
-export function circleRectangleGap(body, position, radius) {
-  const {width, height} = body.getUserData();
-  const {x, y} = body.getLocalPoint(position);
-  const dx = Math.abs(x) - width / 2;
-  const dy = Math.abs(y) - height / 2;
-  return Math.hypot(Math.max(dx, 0), Math.max(dy, 0)) + Math.min(0, Math.max(dx, dy)) - radius;
-}
-
-export function attachTutorialPhysics(runtime, ball, parts, requirement) {
-  const evaluator = createTutorialEvaluator(runtime.runId, parts, requirement);
-  const definitions = new Map(parts.map(part => [part.body, part]));
+export function createTutorialRules(runId, parts, requirement) {
+  const evaluator = createTutorialEvaluator(runId, parts, requirement);
   const ramps = parts.filter(part => part.type === 'R' && !part.fixed);
-  const rampTracker = createRampContactTracker(runtime.runId, ramps, evaluator);
-  const latest = new WeakMap();
-  const wrapped = new WeakSet();
-  const episode = new Map();
-  const refreshed = new Manifold();
-  let sequence = 0;
-  let frames = [];
-  let raw = [];
-  const {world, runId} = runtime;
-  const radius = ball.getFixtureList().getShape().getRadius();
-
-  function contactPair(contact) {
-    const a = contact.getFixtureA();
-    const b = contact.getFixtureB();
-    const ballIsA = a.getBody() === ball;
-    if (!ballIsA && b.getBody() !== ball) return null;
-    const part = definitions.get((ballIsA ? b : a).getBody());
-    return part ? {a, b, part, sign: ballIsA ? -1 : 1} : null;
-  }
-
-  function contactGeometry(pair, manifold) {
-    if (!manifold?.pointCount) return null;
-    const {part, sign} = pair;
-    const point = vector(manifold.points[0]);
-    const normal = {x: sign * manifold.normal.x, y: sign * manifold.normal.y};
-    const localPoint = vector(part.body.getLocalPoint(point));
-    const {width, height} = part.body.getUserData();
-    const alignment = dot(normal, part.body.getWorldVector({x: 0, y: 1}));
-    return {
-      id: part.id, runId, point, normal, localPoint, normalAlignment: alignment, halfWidth: width / 2, halfHeight: height / 2,
-      upper: isUpperSurface({localPoint, halfWidth: width / 2, halfHeight: height / 2, normalAlignment: alignment}),
-    };
-  }
-
-  function finishEpisode(part) {
-    const active = episode.get(part.id);
-    if (active === undefined) return;
-    evaluator.observeSeesaw({id: part.id, runId, episode: active, ended: true});
-    episode.delete(part.id);
-  }
-
-  function watchLoad(contact) {
-    if (wrapped.has(contact)) return;
-    wrapped.add(contact);
-    const solve = contact.solveVelocityConstraint;
-    contact.solveVelocityConstraint = function(step) {
-      const before = latest.get(this);
-      if (!before || before.pair.part.type !== 'S' || !before.geometry.upper || !this.v_pointCount) {
-        return solve.call(this, step);
-      }
-      const {part, sign} = before.pair;
-      const {body} = part;
-      if (this.v_pointCount !== 1) throw new Error('Unobservable ball/board load point.');
-      const normalImpulseBefore = this.v_points[0].normalImpulse;
-      const omegaBefore = body.c_velocity.w;
-      const angleBefore = body.c_position.a;
-      const pivot = vector(part.joint.getAnchorA());
-      const result = solve.call(this, step);
-      const magnitude = this.v_points[0].normalImpulse - normalImpulseBefore;
-      if (magnitude > 1e-6) {
-        const {point} = before.geometry;
-        const impulse = {x: -sign * this.v_normal.x * magnitude, y: -sign * this.v_normal.y * magnitude};
-        const tangent = {x: Math.cos(angleBefore), y: Math.sin(angleBefore)};
-        const load = {...before.geometry, tick: runtime.ticks + 1, substep: runtime.substep, pivot, impulse,
-          offset: dot(difference(point, pivot), tangent), omegaBefore, omegaAfter: body.c_velocity.w, angleBefore,
-          angle: body.getAngle(), episode: episode.get(part.id)};
-        raw.push({event: 'solver-load', ...load});
-        evaluator.observeSeesaw(load);
-      }
-      return result;
-    };
-  }
-
-  function event(kind, contact, impulse) {
-    const pair = contactPair(contact);
-    if (!pair) return;
-    const {part} = pair;
-    const geometry = contactGeometry(pair, contact.getManifold().pointCount ? contact.getWorldManifold() : null);
-    raw.push({event: kind, tick: runtime.ticks + 1, substep: runtime.substep, id: part.id,
-      ...geometry, nativeTouching: contact.isTouching()});
-    if (kind === 'end-contact' || (kind === 'pre-solve' && !geometry?.upper)) {
-      finishEpisode(part);
-      latest.delete(contact);
-      return;
-    }
-    if (kind === 'pre-solve' && geometry) {
-      const approachSpeed = -dot(difference(ball.getLinearVelocityFromWorldPoint(geometry.point),
-        part.body.getLinearVelocityFromWorldPoint(geometry.point)), geometry.normal);
-      latest.set(contact, {pair, geometry, approachSpeed});
-      if (part.type === 'S' && geometry.upper) {
-        if (!episode.has(part.id)) episode.set(part.id, ++sequence);
-        watchLoad(contact);
-      }
-    }
-    if (kind !== 'post-solve' || part.type !== 'P') return;
-    const before = latest.get(contact);
-    if (!before) return;
-    const platform = {...before.geometry, approachSpeed: before.approachSpeed,
-      impulseY: before.geometry.normal.y * impulse.normalImpulses[0], ballMass: ball.getMass()};
-    raw.push({event: 'platform-impact', tick: runtime.ticks + 1, substep: runtime.substep, ...platform});
-    evaluator.observePlatform(platform);
-  }
-
-  for (const kind of ['begin-contact', 'end-contact', 'pre-solve', 'post-solve']) {
-    const callback = (contact, impulse) => event(kind, contact, impulse);
-    world.on(kind, callback);
-    runtime.subscriptions.push([kind, callback]);
-  }
-
+  const rampTracker = createRampContactTracker(runId, ramps, evaluator);
   return {
-    beginTick() {
-      frames = [];
-      raw = [];
-    },
-    observeBoundary(phase, substep) {
-      const position = vector(ball.getPosition());
-      const qualified = new Map();
-      const contacts = [];
-      for (let contact = world.getContactList(); contact; contact = contact.getNext()) {
-        const pair = contactPair(contact);
-        if (!pair) continue;
-        const {a, b, part} = pair;
-        const transformA = a.getBody().getTransform();
-        const transformB = b.getBody().getTransform();
-        refreshed.recycle();
-        contact.evaluate(refreshed, transformA, transformB);
-        if (!refreshed.pointCount) continue;
-        const geometry = contactGeometry(pair, refreshed.getWorldManifold(
-          undefined, transformA, a.getShape().getRadius(), transformB, b.getShape().getRadius()));
-        if (geometry) contacts.push(geometry);
-        if (geometry?.upper) qualified.set(part.id, geometry);
-      }
-      for (const part of parts) {
-        if (part.type !== 'S') continue;
-        if (qualified.has(part.id) && episode.has(part.id)) {
-          evaluator.observeSeesaw({id: part.id, runId, upper: true, episode: episode.get(part.id), angle: part.body.getAngle()});
-        } else if (!qualified.has(part.id)) finishEpisode(part);
-      }
-      frames.push({position, phase, substep, contacts, qualified: [...qualified.values()],
-        rampDistances: ramps.map(({id, body}) => ({id, gap: circleRectangleGap(body, position, radius)}))});
-    },
-    completeTick(activation) {
+    observeSeesaw: evaluator.observeSeesaw,
+    observePlatform: evaluator.observePlatform,
+    completeTick(frames, raw, activation) {
       if (activation) evaluator.observeSpring({...activation, runId});
       const ramp = rampTracker.completeTick(frames, raw);
       return {state: evaluator.snapshot(), ramp, frames, raw, activation};
