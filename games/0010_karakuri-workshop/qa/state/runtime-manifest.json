@@ -1,0 +1,44 @@
+{
+  "status": "E0_CANDIDATE_EVIDENCE",
+  "baseCommitSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+  "handoffCommitSha": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+  "approvedWriterId": "GAME0010-CODEX-PRIMARY-01",
+  "planck": {
+    "runtime": "vendor/planck/planck.mjs",
+    "sha256": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+    "license": "vendor/planck/LICENSE",
+    "licenseSha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+    "packageEntry": "package/dist/planck.mjs",
+    "esmImports": []
+  },
+  "checkpointValidation": {
+    "approvalId": "EXEC-GAME-0010-CP-EXT-20261125-01",
+    "originalSha256": "6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05",
+    "derivedSha256": "a5842347379cc81ddd961f0f8f5134956c45458682ab6ad0f177decc5e027205",
+    "diff": [
+      {
+        "op": "add",
+        "path": "/properties/budgetUsage/properties/remediationByStage/properties",
+        "value": {
+          "E0": {
+            "maximum": 11,
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "op": "add",
+        "path": "/properties/budgetUsage/properties/remediationByRootCause/properties",
+        "value": {
+          "e0-budget-reservation-and-accounting": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      }
+    ],
+    "scope": "Formal checkpoint validation only"
+  }
+}

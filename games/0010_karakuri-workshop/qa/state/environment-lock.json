@@ -1,0 +1,68 @@
+{
+  "status": "E0_CANDIDATE_EVIDENCE",
+  "os": "Debian 13",
+  "architecture": "x86_64",
+  "node": {
+    "version": "26.13.0",
+    "archiveSha256": "d28a96af6c38596f6d9d97c0ee531c13d238d757742387d1928de822d959e997"
+  },
+  "packages": {
+    "planck": {
+      "version": "1.5.1",
+      "distribution": "https://registry.npmjs.org/planck/-/planck-1.5.1.tgz",
+      "integrity": "sha512-x3nHPSyoNTAxN0v8UXrSwP0XVTG0e7JCENBVZljZ8PZOjbOo7aRHq2+fy+DOREDhfW52aq5GiwgIm+m8kIErKQ==",
+      "archiveSha256": "399a158e2ef778d03255da3414d8e899a771c7d4c55d7e5366c54af142dedd42",
+      "license": "MIT"
+    },
+    "playwright": {
+      "version": "1.65.0",
+      "distribution": "https://registry.npmjs.org/playwright/-/playwright-1.65.0.tgz",
+      "integrity": "sha512-F3AMWcR44qMBt4kq+6Kb6mX7bjGXshktKFOPULd7reED6ZJWevjbNRqysP7q+AATE9kdPEZBibex1BYsvpVoeA==",
+      "archiveSha256": "5c535e6d0b00411c7b926f2f39aeaa80b9daa9ccfa2dd5c21db718cd8808aa42",
+      "license": "Apache-2.0"
+    },
+    "playwright-core": {
+      "version": "1.65.0",
+      "distribution": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.65.0.tgz",
+      "integrity": "sha512-vNSKgH6YqtN7cdT/L334zo0a+YwkrpicyrHJlWWPIm/Q+Nn2SWInil01oT0mbu96U4GgoRtCYQD9CzJQgju+lA==",
+      "archiveSha256": "315247c55a793ca760b2f05bdcee0e6a53fd65b1f22d1d3de8323c8c9395add3",
+      "license": "Apache-2.0"
+    }
+  },
+  "planckRuntime": {
+    "observed": "PASS",
+    "esmSha256": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+    "licenseSha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca"
+  },
+  "browserRuntime": {
+    "chromium": {
+      "version": "158.0.8127.18",
+      "revision": "1254",
+      "observed": "PASS"
+    },
+    "firefox": {
+      "version": "159.0",
+      "revision": "1572",
+      "observed": "PASS"
+    },
+    "webkit": {
+      "version": "27.2",
+      "revision": "2388",
+      "observed": "PASS",
+      "launcherSha256": "053ebdbf611b6af50153c90d84b66f9b1bb3b78868969f18143b2c797e1b0eab",
+      "logSha256": "a4ff17ad8f390c7aa8ab60f45603a6b9621e6f2e03e2b9d2c02341a1a8211d1f"
+    }
+  },
+  "webkitOSRuntimeArchives": {
+    "libcairo-script-interpreter2_1.18.4-1+b1_amd64.deb": "52b45eb6e49c53c0a35ef45555a9457b094482eafef27d27cd777b916a2f06de",
+    "libgles2_1.7.0-1+b2_amd64.deb": "e12c18aa77939d122ee1dea520ba0440b97dc19200b7396e03dff03a3ece74c1",
+    "libgraphene-1.0-0_1.10.8-5_amd64.deb": "ddcf98f17f6c0a7c76974d7238be1468e59c186034c1b806638d32d9f446ea6e",
+    "libgtk-4-1_4.18.6+ds-2_amd64.deb": "51ab1114a57702e703cce745c24caf5bd31ec1d2a900c72fd15fe47c6c030e68",
+    "libgtk-4-common_4.18.6+ds-2_all.deb": "32f0ad042f983b1d53cd2c260d4042eda9041b6debb71beb91937196b1ff3f6b",
+    "libharfbuzz-icu0_10.2.0-1+deb13u1_amd64.deb": "0b45d951629e98673c0da73b2bcd0886a467d833bb3b7499892a168f247165d2",
+    "libhidapi-hidraw0_0.14.0-1+b2_amd64.deb": "89c546cb55be403ce63fe668baff2515979100a30fa07e2b97de186b9c07f01e",
+    "libhyphen0_2.8.8-7+b2_amd64.deb": "fa9dca7b8cf1381fd52800c44a385c5725a78a88bd705f7c39b1046a5293435e",
+    "liblzo2-2_2.10-3+b1_amd64.deb": "f3032201fe2928a87e13f05ce256ff3ac2a7860c7e594dc51ae6d7348a4466ce",
+    "libmanette-0.2-0_0.2.12-1_amd64.deb": "98841a467692c46fd1870275113235691ebbfe71a3524f6b2a0fa7e9c33c6e56"
+  }
+}
