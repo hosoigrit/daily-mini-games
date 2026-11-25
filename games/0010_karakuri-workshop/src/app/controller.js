@@ -46,6 +46,7 @@ export function createGameController({stages, identities, hints, storage, change
   }
   function loadDesign(next){
     dispose();
+    sound.stop();
     stage=next;
     const row=saveData().stages[stage.id];
     const storedBest=row.currentBest??row.previousBest;
@@ -181,7 +182,7 @@ export function createGameController({stages, identities, hints, storage, change
         session.abort();dispose();sound.stop();screen='DESIGN';current=null;snapshot=null;break;
       case 'redesign':
         if(!['CLEARED','FAILED','ERROR'].includes(screen)){accepted=false;break;}
-        screen='DESIGN';dialog=null;snapshot=null;current=null;break;
+        sound.stop();screen='DESIGN';dialog=null;snapshot=null;current=null;break;
       case 'edit-preparation': edit({type:'cancel'});break;
       case 'clear-selection':
         if(screen==='DESIGN'&&!dialog){
@@ -230,7 +231,7 @@ export function createGameController({stages, identities, hints, storage, change
       case 'reset-confirm':
         if(dialog?.type!=='SAVE_RESET'){accepted=false;break;}
         accepted=storage.reset(true);
-        if(accepted){dispose();screen='TITLE';stage=null;editor=null;session=null;ghost=null;}
+        if(accepted){dispose();sound.stop();screen='TITLE';stage=null;editor=null;session=null;ghost=null;}
         dialog=null;break;
       case 'hint-open':
         if(screen!=='DESIGN'){accepted=false;break;}
