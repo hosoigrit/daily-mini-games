@@ -261,8 +261,9 @@ async function launch(){
   let game=null;
   const change=createUI(()=>game);
   game=createGameController({stages,identities,hints:certifiedHints,storage,sound,change});
+  const audioNotice=document.getElementById('audio-notice');
   for(const name of ['pointerdown','keydown'])document.addEventListener(name,()=>{
-    sound.gesture().then(()=>{if(sound.unavailable())change(game.state());});
+    sound.gesture().then(()=>{audioNotice.hidden=!sound.unavailable();});
   },{capture:true});
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden)game.hidden();
