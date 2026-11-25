@@ -1,0 +1,222 @@
+{
+  "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+  "frozenHandoffSHA": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+  "frozenTreeEqual": true,
+  "candidates": 108,
+  "approvedControlPathsChanged": [
+    "games/0010_karakuri-workshop/qa/harness/budget.js",
+    "games/0010_karakuri-workshop/qa/harness/test-runner.js"
+  ],
+  "testSourceAndRuntimeHashes": {
+    "tests/d1-physics.test.js": "b451b30230cb9dfa09d54f64f01fbc1799fede090ff9794259f55a40403ed7d3",
+    "tests/d2-placement.test.js": "e1f9d0328a79cf6a92dbbaae1952cc7567595fc05673d9ee84b390cf6a11d479",
+    "tests/d2-seesaw.test.js": "1ae10ba8881f37deed5f8eccb58f8f9e060368d63b52dbea928edb5495c6a0f3",
+    "tests/d2-spring.test.js": "184ba79780cf738ee7db24d4a68293e874579044f9fd39615274e4198467bcb3",
+    "tests/d3-rules.test.js": "f1b4ee5999cde1b8b6c1fdfb559333368cb9219aba79a1e95341eb72aec81e36",
+    "tests/d4-stages.test.js": "7b72a659530020e96ab2e25a477ec3f0a40faf5328c6c5a853c64a8cd5c2e08c",
+    "tests/d5-save.test.js": "02354278693e9f6a12897308912a5b19839d6c0bc021101da69ade20f7c666b7",
+    "tests/d6-ui.test.js": "82918419032104d17141a6bd67f38e53d57eaac9683a7a456b48825b09953e29",
+    "tests/d7-integration.test.js": "40bd8bded27e2d02942ee58bb59320dcd6fbc3e1ec63e17f09fb69c8db44e322",
+    "tests/d8-governance.test.js": "1c7d0c71da9f7e471f2db7bf619d8cd4bfa12099f6aa2dc8c96b96af8b9e4e2e",
+    "tests/supplemental.test.js": "58961fd67b762f81738d319ff2ac1114a75f4ab129db8534aea7f2bab64a6072",
+    "src/app/controller.js": "4c22619239564291aec615b1b4a1162371ee6a1f03fc3d504182d69b117e838a",
+    "src/app/state-machine.js": "a32900ecbfa7c03cb31c7516f54beaa5ca2367c8fcb9bbb94cdec4ecd220c23f",
+    "src/app.js": "cd0f7500409c7eeb53a75dc98fdbc49e62290a36e9f76c86a846a346653d4d13",
+    "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+    "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+    "src/data/stage-definitions.js": "70a0dda5b3efda54e945a28057d64b88621236da46775d09e7c498a710531239",
+    "src/domain/design-editor.js": "f089ca44259dd2ede96f6e7e541850217b08d7b4488fb327c4428d6a048cd149",
+    "src/domain/geometry.js": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db",
+    "src/domain/placement-validator.js": "7ebebefdbe5eb7a2bd4576780ab4666afc6442b6f2f36ccf6ae99f330fbb07cd",
+    "src/domain/result-evaluator.js": "6611e45dbeca810fe8594ce95bd954d26c0a54e5f9de6c45162a1ede3723d75c",
+    "src/domain/score-service.js": "ff1c0443306ea514a9cce107f8370158fb5e524159c245257b1211c0715dff2b",
+    "src/domain/tutorial-evaluator.js": "b0a88e3804fce9ba0caa7eed1c281d39a3c6705faa4168cd66c2f35a540920c5",
+    "src/domain/undo-manager.js": "c5de8ef64a45d4338cd35226bc08816174960096f61a66b571ca4eef77d70a36",
+    "src/physics/adapter.js": "09bae4e98cbd08811131d045110b4f947eac88d9e927ae789e6d8eac3090ca9f",
+    "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+    "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+    "src/physics/simulation-controller.js": "62e291a08c6ae4d6c9fee40a84b21e3b34619e06786e795946d7603b5a5c554d",
+    "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+    "src/physics/trajectory-recorder.js": "bc81b406fcaf0a10b7b91e7fc79f0e17cabafdbe32b399074a34741beb3b0ed0",
+    "src/presentation/audio-controller.js": "464f334b7a96ec527aa3fb2c84deab97037554144c597b4a10460ac731930f55",
+    "src/presentation/character-controller.js": "5616ef73dc1bec1eee6ee782f78a788a2c418a432e218a38a8fa9d79f3f82561",
+    "src/presentation/sound-definitions.js": "1ee009657df18d07ad52c6d8bb8abf5055a7c4b301ea4d24b02c1064a8028046",
+    "src/storage/lock-manager.js": "a3d21dab38054735c159410c0c336b2fb3829ed9a0dc449f9d49f215246d24bd",
+    "src/storage/save-repository.js": "0a2efcec98365a68533cfda8dc0df63d80edec7732a888104646f35693ec6114",
+    "src/storage/save-validator.js": "35858a86b9294e97074e563ffe51faf5a28549a0856336b209d8b18c228f1620",
+    "src/ui/canvas-renderer.js": "dddd5f185767e984d147e9cf6168e3f861c0f446fa3c9bd7ad4afd72632ba37f",
+    "src/ui/input-controller.js": "9d6715f953316a2a2d81a552dc40f4e122746af8765680a4ac6c78f668058939",
+    "src/ui/ui-controller.js": "41c5097c961e9bc9083d84dfa782743fa132a1c108599e08ff4c49e3413d2c6d",
+    "vendor/planck/LICENSE": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+    "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+    "assets/asset-manifest.json": "fc2150fd425eaf0819a40cf5f7a864c214e779651a2d785fafc6a3f6088346d6",
+    "assets/characters/gear-normal.svg": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e",
+    "assets/characters/gear-praise.svg": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4",
+    "assets/characters/gear-thinking.svg": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259",
+    "assets/characters/luke-happy.svg": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8",
+    "assets/characters/luke-normal.svg": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694",
+    "assets/characters/luke-surprised.svg": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271",
+    "assets/decoration/workshop-emblem.svg": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af",
+    "assets/decoration/workshop-pattern.svg": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977",
+    "qa/harness/adjustment-governance.js": "d0fc46ae512779c3d18261f884ef0be66e1cd4132d63a2666c6cf664d1afc640",
+    "qa/harness/budget.js": "713fd788191a2345188d57fd796e2585e1418f383438acfb520922c2d4a16afb",
+    "qa/harness/checkpoint.js": "e6fe3d18be90813938b1f7f3217b209d9c4af5e63abd91e4d07a2162d196e4cb",
+    "qa/harness/evidence.js": "f54a572a126712d16ab62205348bded017fcd5798b1c209c78e0319561578c5c",
+    "qa/harness/gate.js": "b02beeb13079f0e51a86d9cff2d3c4b49c7d6ba4bde59e9f5d847f17202bf17c",
+    "qa/harness/impact.js": "32baf1748d0de90a9642ed02e449ec245f96806bd81a2bca34ebf9516caaee6d",
+    "qa/harness/integrity.js": "855a5672a06a8467849d179070d9fc45f47c6400ae15d1044b95990dd6703c8e",
+    "qa/harness/policy.js": "60dd5934cec181375075c12873b524080ec175db06bc6081bc756a9b0cf9f7a1",
+    "qa/harness/preflight.js": "7581f2190512a54c9d4715684145be6a55a02e4254859cec94c62c165b24b1a6",
+    "qa/harness/scope.js": "aedf8cabf72b1613bbae6ca1245c4f2312810cdf9fbbd7bc0398924e68816dde",
+    "qa/harness/stage-evaluator.js": "d0a863a219e154212aba0894b065dcd4e04ea4a24286e42db48f8f96f438b79b",
+    "qa/harness/stage-search.js": "b037a40a6e51f2ffe665da93cbfa268e31ef78d6786749703d772d5a19167321",
+    "qa/harness/test-runner.js": "a01afff232a1e4f826d99e698a46a06795f642c6dcf593b691beb3539fff9fc1",
+    "qa/fixtures/solutions.json": "17c9dd7fd20694a8bafefeab8516daa6ce1fa32d842e0773d074647ec7eee138",
+    "qa/fixtures/stages.json": "2246606e3195d6aca3ed0a71532f290f2c0bc21065299ffbebaa96a023f92c9f"
+  },
+  "oldAffectedE7HistoryStillExcluded": {
+    "CR007-E7-SMOKE": {
+      "INTERIM": 1
+    },
+    "CR007-E7-NODE-EXPANDED": {
+      "INTERIM": 14,
+      "FOUNDATION_UPPER": 45
+    },
+    "CR007-E7-NODE-FINAL": {
+      "INTERIM": 14,
+      "FOUNDATION_UPPER": 45
+    },
+    "CR007-E7-NODE-CASES": {
+      "INTERIM": 14,
+      "FOUNDATION_UPPER": 45
+    },
+    "CR007-E7-NODE-EXACT": {
+      "INTERIM": 14
+    }
+  },
+  "mutationCertificates": {
+    "MUT-01": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT01-06-07-08-09",
+        "sha256": "3e46eebfb2873676568cd5e895e971c070d6e9c74d2b53d97f53897e646f0e28",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-01 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-02": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT02-03-05",
+        "sha256": "5b407c8696e49a5b1fbcff00a66566812507c7f150046f6638ca0e6ac7d4fd6c",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-02 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-03": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT02-03-05",
+        "sha256": "5b407c8696e49a5b1fbcff00a66566812507c7f150046f6638ca0e6ac7d4fd6c",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-03 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-04": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT04",
+        "sha256": "b1723fcdfbc1f64a20e750026147f5958f7b5701ad8c05b92d66c957239ff40f",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-04 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-05": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT02-03-05",
+        "sha256": "5b407c8696e49a5b1fbcff00a66566812507c7f150046f6638ca0e6ac7d4fd6c",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-05 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-06": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT01-06-07-08-09",
+        "sha256": "3e46eebfb2873676568cd5e895e971c070d6e9c74d2b53d97f53897e646f0e28",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-06 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-07": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT01-06-07-08-09",
+        "sha256": "3e46eebfb2873676568cd5e895e971c070d6e9c74d2b53d97f53897e646f0e28",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-07 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-08": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT01-06-07-08-09",
+        "sha256": "3e46eebfb2873676568cd5e895e971c070d6e9c74d2b53d97f53897e646f0e28",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-08 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-09": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT01-06-07-08-09",
+        "sha256": "3e46eebfb2873676568cd5e895e971c070d6e9c74d2b53d97f53897e646f0e28",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-09 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-10": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT10-EXACT",
+        "sha256": "cc9164b5b9237a6147979f92cbdd30b5c4c2de34a1aa661e05a9193ad2120b70",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-10 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-11": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT11",
+        "sha256": "0e20eef3d97908e8e0b3f222d0f8d35cf8319ce604e808b7026a5ab54c28180b",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-11 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    },
+    "MUT-12": {
+      "status": "KILLED",
+      "proof": {
+        "kind": "EXECUTION",
+        "runId": "CR008-E8-ISOLATED-MUT12-EXACT",
+        "sha256": "e1401679645366bde259d3c693c327334f1fe989b0a488cfc9030369e04a6f82",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "assertion": "MUT-12 normal control, intended assertion under isolated mutant, original bytes protected"
+      }
+    }
+  },
+  "newExpectedValueModifications": 0,
+  "evidenceOnlyDiffRequiresFinalRemoteReadback": true,
+  "state": "HOLD"
+}

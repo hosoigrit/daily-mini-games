@@ -1548,5 +1548,879 @@
       "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
       "rawLogSha256": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0"
     }
+  },
+  "CR008-E8": {
+    "engine": "Planck 1.5.1",
+    "profile": {
+      "authority": "EXEC-GAME-0010-CR007-CONTACT-EVALUATION",
+      "profile": "PP03",
+      "substeps": 2,
+      "velocityIterations": 8,
+      "positionIterations": 3,
+      "gravity": {
+        "x": 0,
+        "y": -9.8
+      },
+      "ball": {
+        "radius": 0.2,
+        "mass": 0.2,
+        "linearDamping": 0.04,
+        "angularDamping": 0.05
+      },
+      "springVelocity": 9.5,
+      "seesawMassRatio": 2.5,
+      "seesawAngularDamping": 1.2,
+      "sourceSha256": {
+        "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+        "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+        "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+        "src/physics/adapter.js": "09bae4e98cbd08811131d045110b4f947eac88d9e927ae789e6d8eac3090ca9f",
+        "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+        "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+        "src/domain/tutorial-evaluator.js": "b0a88e3804fce9ba0caa7eed1c281d39a3c6705faa4168cd66c2f35a540920c5",
+        "src/domain/result-evaluator.js": "6611e45dbeca810fe8594ce95bd954d26c0a54e5f9de6c45162a1ede3723d75c"
+      },
+      "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4"
+    },
+    "formalStageEvidence": "stage_validation_results.json#/CR008-E8",
+    "state": "HOLD",
+    "nativeReceipts": [
+      {
+        "runId": "CR008-E8-FORMAL-STAGES",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:11:09.480Z",
+        "finished": "2026-11-25T13:11:18.074Z",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 1146,
+          "formalTicks": 259075
+        },
+        "outputSHA": "578ebb56b2e595972aa0d667378bd95e552442d294b2df70348462424ed3d694",
+        "errorSHA": "6eb7b53fbbdc79210a7760172cb6b081cca35d5a91eecad08644d009782fa135",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-ENDURANCE-PILOT",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:14:27.421Z",
+        "finished": "2026-11-25T13:14:29.930Z",
+        "charged": {
+          "automatedSeconds": 3,
+          "formalSimulations": 5,
+          "formalTicks": 6000
+        },
+        "outputSHA": "d2b791724a6516216589785ae2ba44ccaba5a91dba9a9c91c3609ac62ececfb5",
+        "errorSHA": "4d3439a15dbe50740f9bf1b8eece51db65a42c2a154e3ec458f7a82aa02f541c",
+        "exit": 1,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-NORMAL",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:14:29.943Z",
+        "finished": "2026-11-25T13:14:51.591Z",
+        "charged": {
+          "automatedSeconds": 22,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "outputSHA": "91bf0567e679cb1515f50e8226b3eba62e28a32c0a6740e95b810f504da96a80",
+        "errorSHA": "6f98a2d4a9f5c66e377cc0d477a3c64c76f3677601fab631decdd30fd88ea687",
+        "exit": 1,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-MUTE",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:14:51.602Z",
+        "finished": "2026-11-25T13:15:13.037Z",
+        "charged": {
+          "automatedSeconds": 22,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "outputSHA": "6dad15be76480278d4ea6738368abf5df06938b0104f483b453c3fd0b55bc6ba",
+        "errorSHA": "6f98a2d4a9f5c66e377cc0d477a3c64c76f3677601fab631decdd30fd88ea687",
+        "exit": 1,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-UNAVAILABLE",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:15:13.049Z",
+        "finished": "2026-11-25T13:15:34.321Z",
+        "charged": {
+          "automatedSeconds": 22,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "outputSHA": "7b20d9c9f19787de6eb2e749aa5e2d9d5d28372cf613cf7c9403c9a7bfef87a0",
+        "errorSHA": "6f98a2d4a9f5c66e377cc0d477a3c64c76f3677601fab631decdd30fd88ea687",
+        "exit": 1,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-ENDURANCE-PILOT-EXACT",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:19:26.421Z",
+        "finished": "2026-11-25T13:19:33.151Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 5,
+          "formalTicks": 6000
+        },
+        "outputSHA": "d2b791724a6516216589785ae2ba44ccaba5a91dba9a9c91c3609ac62ececfb5",
+        "errorSHA": "c8b4653147c46a36657ee7bbcc16a78ece3c8f878898512f53959234186b7ff8",
+        "exit": 1,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-NORMAL-EXACT",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:20:05.670Z",
+        "finished": "2026-11-25T13:20:51.475Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "outputSHA": "c86667233e1a317be9634121bfe3ae6f34bfdb99eb8a35ff5fee5754f90fa588",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-MUTE-EXACT",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:20:51.497Z",
+        "finished": "2026-11-25T13:21:37.389Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "outputSHA": "2a5cad1be43e8c50134b398421b764ece33e2afe42f840f456dcea18605e81aa",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RELEASE-UNAVAILABLE-EXACT",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:21:37.401Z",
+        "finished": "2026-11-25T13:22:22.845Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "outputSHA": "b0024d358b4b7af61325ade12165c1da449bcb393f8915fe5d3ab0f49954542e",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-ENDURANCE-PILOT-ATTRIBUTED",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:23:20.851Z",
+        "finished": "2026-11-25T13:23:33.310Z",
+        "charged": {
+          "automatedSeconds": 13,
+          "formalSimulations": 5,
+          "formalTicks": 433
+        },
+        "outputSHA": "fabcb5dae1d0485a295903ac21f6170fed4f37d76131c8559b26d978a7e8dfbd",
+        "errorSHA": "7fade98c492fa33670e989abbf02ae57e92649e1897e27f69b374a0089661efd",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-ENDURANCE-NODE-100",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:23:33.321Z",
+        "finished": "2026-11-25T13:23:33.503Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "formalSimulations": 100,
+          "formalTicks": 1000
+        },
+        "outputSHA": "4da7a1b6b7740193f651df6f7e1d6cc1bfa571d34ad65936ca08419f78ed024f",
+        "errorSHA": "e4bbcb1ce95a81d11d7d65e65b2ba14eccc20eb292603644535965ba883d59cc",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-ENDURANCE-1800",
+        "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+        "started": "2026-11-25T13:24:22.510Z",
+        "finished": "2026-11-25T13:54:38.731Z",
+        "charged": {
+          "automatedSeconds": 1817,
+          "formalSimulations": 400,
+          "formalTicks": 61450
+        },
+        "outputSHA": "526aee54bfd1a0c03ce804719a4e1c050b917343fcf2abd7d1dc512b479ed8a3",
+        "errorSHA": "8833d7897b6e5128227fbb9d8b6d5e6d14dd508d10750c1c629cc447bf704e3b",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-FOUNDATION-NODE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:56:26.454Z",
+        "finished": "2026-11-25T13:56:26.820Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 45,
+          "physicsValidationTicks": 2291
+        },
+        "outputSHA": "8e23f5bb4aa2f0a5177a98ad36d54006b262db59947345f4f029c9ebdc68e216",
+        "errorSHA": "a272ac04f659980b7e63dfbff368aab26645523555bc4ab7bba657aafa577e8f",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-STAGE-NODE-AUDIO-FIX",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:56:27.246Z",
+        "finished": "2026-11-25T13:56:28.496Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 21,
+          "formalTicks": 7200
+        },
+        "outputSHA": "ee3f9e6678f971b2b6572d93fdced5db6fd30fa913ead9f33ea9e9b2fc37381c",
+        "errorSHA": "ebdcaf2b54fb350bcc3e4a0f438fc37a6df19539de3740b959f1f1a6072ce746",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-STAGE-SUPPLEMENT",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:56:29.878Z",
+        "finished": "2026-11-25T13:56:30.039Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "formalSimulations": 2,
+          "formalTicks": 466
+        },
+        "outputSHA": "6afcec61693f80218754c4dbc863864df5824370dffe1bf11f3ef661d2dfc4be",
+        "errorSHA": "0cfe3f052eeb64803874a409f6ff27ed1fdd440d2efa9d2a406c3e01dc6107a5",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-MATRIX",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:55.069Z",
+        "finished": "2026-11-25T13:57:55.362Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 72,
+          "physicsValidationTicks": 864
+        },
+        "outputSHA": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "errorSHA": "6c4755835aa6b96ee76fd6755025df0fb60087be549267a0bd8c40c889ccf191",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-FORMAL",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:55.376Z",
+        "finished": "2026-11-25T13:57:56.072Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 289,
+          "physicsValidationTicks": 24319
+        },
+        "outputSHA": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "errorSHA": "9efaf9d34aa46aab741a702c12fd8632f117fd10ebda4684888d730d7bce1a98",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-EDGE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:56.085Z",
+        "finished": "2026-11-25T13:57:56.247Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 19,
+          "physicsValidationTicks": 3136
+        },
+        "outputSHA": "cbc5e85227d32865dbf031853696f11a1b765a2eb33a930b7dfbba83a057ac8c",
+        "errorSHA": "8293a7f2eab132809537c966d0baed2aaf14469cd298a270331331f890479cad",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-BROWSER",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:56.264Z",
+        "finished": "2026-11-25T13:57:57.534Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "physicsValidationSimulations": 16,
+          "physicsValidationTicks": 1500
+        },
+        "outputSHA": "47c21d4202496817986bcb6d4475c0c17cc940ad8faaa769a544961370467514",
+        "errorSHA": "9f98df7af8e70d4d4fc4c29682f9ef61c7d660e313de7a65726e06aeaad1fb73",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-CONTACTS",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:57.546Z",
+        "finished": "2026-11-25T13:57:57.645Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 23,
+          "physicsValidationTicks": 294
+        },
+        "outputSHA": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9",
+        "errorSHA": "d0f67fa4e3ab24ee01c3177ec0f734051584673effc09551962edb8c7c4376c6",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-SELECTED",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:57.656Z",
+        "finished": "2026-11-25T13:57:57.743Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 56,
+          "physicsValidationTicks": 360
+        },
+        "outputSHA": "351eaf0bb397a9a00e5832babd8c9f2e32c7d72f4990fddfbe1995a8b23c4a5b",
+        "errorSHA": "97a4bed9facf585b52243541b3815fe698e09436b9ecc16520bd6049fdf00c09",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E1-VISIBILITY",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:57:57.754Z",
+        "finished": "2026-11-25T13:58:00.903Z",
+        "charged": {
+          "automatedSeconds": 4,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 1300
+        },
+        "outputSHA": "2055532f6a122fdd189584c9d2379270ee1c7f513e3adb3158746d4d420c6c4d",
+        "errorSHA": "7d6d7eae855bdf315d9ba26281243f70f3defcb4ad64c87b94b3dc823580dfb6",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-INDEPENDENT",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:42.332Z",
+        "finished": "2026-11-25T13:59:42.650Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 123,
+          "physicsValidationTicks": 1644
+        },
+        "outputSHA": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+        "errorSHA": "bda56346ffc238b5c458617447ca9569883641b8aaf185cc0bd8b9bce182db51",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-FAMILIES",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:42.673Z",
+        "finished": "2026-11-25T13:59:43.816Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "physicsValidationSimulations": 279,
+          "physicsValidationTicks": 8802
+        },
+        "outputSHA": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+        "errorSHA": "81ff88339deae95e6b776f99118aeaba1c35b9e19b4eff639144188ad1e4e610",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-BOUNDARY",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:43.834Z",
+        "finished": "2026-11-25T13:59:43.907Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 484
+        },
+        "outputSHA": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+        "errorSHA": "c46d85a97d40dff6ddff275d2500bfa590f8791fec30e431e10e84fbeafd2007",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-FIXED",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:43.921Z",
+        "finished": "2026-11-25T13:59:44.004Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 8,
+          "physicsValidationTicks": 0
+        },
+        "outputSHA": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+        "errorSHA": "e8e54456f445e002aa49d5a3d357641a3f83345a1586bc181a74ae723b31b7c2",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-ROOF",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:44.019Z",
+        "finished": "2026-11-25T13:59:44.077Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 8
+        },
+        "outputSHA": "80c3207c41ea893e3d91d22bd20f9e4c26963ccfa01eb3745c1dd5d8ae1e8712",
+        "errorSHA": "ad0b7dae585178d9eab2ba127ad449021d66f00879e4f8d2adeeeed49e5d17c2",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-DUAL",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:44.092Z",
+        "finished": "2026-11-25T13:59:44.166Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 3
+        },
+        "outputSHA": "57a1ab611eaf8bf6fb95d68470364ffcb7ebcb942a715d3f545929a7c5e49884",
+        "errorSHA": "cd838b7431befbf1bb529067641db58523433423c6dcef6baa7daae5b36080a6",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-RELEASE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T13:59:44.178Z",
+        "finished": "2026-11-25T13:59:44.274Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 3,
+          "physicsValidationTicks": 144
+        },
+        "outputSHA": "8a672cd6effa19b3c5568708c6306df8fb88e31f86e0ce98142c17c863ea06a6",
+        "errorSHA": "a69c2de258b5ff2a6f725a3508aac9fdf51a2fd230b7feac9039a662762a3d8d",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-ISOLATED-MUT04",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:01:13.495Z",
+        "finished": "2026-11-25T14:01:13.891Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 8
+        },
+        "outputSHA": "b1723fcdfbc1f64a20e750026147f5958f7b5701ad8c05b92d66c957239ff40f",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-GOAL",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:03.422Z",
+        "finished": "2026-11-25T14:03:03.618Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 307
+        },
+        "outputSHA": "d445eb3192da3649ea367c0c8cf9ccd073c9a57dcdb7cfcdcb329ec6d9807c72",
+        "errorSHA": "7c55019c896694488fa477327c8e709a81d5eb8c63a9c949e490bb1fcfe83859",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-RAMP",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:03.636Z",
+        "finished": "2026-11-25T14:03:03.790Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 480
+        },
+        "outputSHA": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0",
+        "errorSHA": "cba5efa032fde87d67b9905cc731b7eb01a441c83f11f0bc9ad2927164900af6",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-PLATFORM",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:03.805Z",
+        "finished": "2026-11-25T14:03:03.945Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 360
+        },
+        "outputSHA": "d74c1a91a429a91fffa7937488ef7d8658ac8ec2ec8724ebcfc7ddfeb4863b5e",
+        "errorSHA": "36444b2a96b146875ee21649712b0d7835f7ad606f62a4bf63d1e16890987c20",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-LOW-PLATFORM",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:03.958Z",
+        "finished": "2026-11-25T14:03:04.054Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 60
+        },
+        "outputSHA": "61def06baa58a6df93eb194b5932d1eb864e140ad616bb78d80c8e757ef76614",
+        "errorSHA": "2fdc84de3548f678c91a352bea7fdff9ccb04604f435bd48bc1f399a801ed4ab",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-SPRING",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:04.071Z",
+        "finished": "2026-11-25T14:03:04.173Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 5,
+          "physicsValidationTicks": 182
+        },
+        "outputSHA": "f21de81227674580ada6d4bc97be6381630cbf69be78ab865a697d0c77d7f04d",
+        "errorSHA": "3d1c9fd7e8a5ce74523c51a5e016b8a03ec48257832ae0154e01e5194a6e6dda",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-BOARD",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:04.185Z",
+        "finished": "2026-11-25T14:03:04.381Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 630
+        },
+        "outputSHA": "50fbf47e7f6b640410d1194de76093706dccbb7aa8b69570622db99fafb64c1e",
+        "errorSHA": "c9f143967d16087a6368e36034413dce199a15dba5b26dcf1828ab382d0d78da",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E5-CR007-C",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:03:04.393Z",
+        "finished": "2026-11-25T14:03:04.512Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 180
+        },
+        "outputSHA": "449ee35a4e3a94953e026466be29426370ba90903abdb171539d27d20bbfe395",
+        "errorSHA": "599c0ab273880c3ad383f4a5c2dddd38748a9c84c05c0fd797b291f74772a416",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-E3-NATIVE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:05:01.748Z",
+        "finished": "2026-11-25T14:05:02.112Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 4
+        },
+        "outputSHA": "6736ce768e9c074e45cefbc70349009f673bb03649143eb3be7a26a5d4c54e15",
+        "errorSHA": "ef52328f35dfc8497266fbdc27c626f210c67c6061dea6b130963fe12e5c3869",
+        "exit": 0,
+        "purpose": "FOUNDATION",
+        "pool": null
+      },
+      {
+        "runId": "CR008-E8-RETEST-ALL-SCREENS",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:05:58.861Z",
+        "finished": "2026-11-25T14:06:08.825Z",
+        "charged": {
+          "automatedSeconds": 10,
+          "formalSimulations": 2,
+          "formalTicks": 324
+        },
+        "outputSHA": "adcfa33917d2279740e1067896c2f5b15f6b44d67b9afcbd034bdce21ea7391a",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-BACKGROUND-DRAG",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:06:08.838Z",
+        "finished": "2026-11-25T14:06:15.676Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "outputSHA": "afa28f35d62dd0eb67f42f6fbfa2fc80350acbe5bc4b28dc31c2c410331553b8",
+        "errorSHA": "990d0569db0808a602ad7a7c1876ec56c057aa7781fae6d9cf2d0b64b81f50cc",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-BFCACHE-LEASE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:06:15.693Z",
+        "finished": "2026-11-25T14:06:31.055Z",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 1,
+          "formalTicks": 175
+        },
+        "outputSHA": "b2fd2f3d264371934044c74cb05b7a080470e39c560847dc88eb6e8481c1cdc2",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-EDITOR-EXACT",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:06:34.935Z",
+        "finished": "2026-11-25T14:06:49.685Z",
+        "charged": {
+          "automatedSeconds": 15,
+          "formalSimulations": 2,
+          "formalTicks": 175
+        },
+        "outputSHA": "83e893dbb04ff6f40fb01a8175e1483f2c433b814cc4fb2b706c3efdb918e526",
+        "errorSHA": "627a6f698330679ba4509b514c5ce4a8b95eabd9dc1fa2f4138977a4ac19a02b",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-PERSISTENCE-LIFECYCLE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:08:02.269Z",
+        "finished": "2026-11-25T14:08:09.244Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 2,
+          "formalTicks": 185
+        },
+        "outputSHA": "32259d7c6aa45a5bf1dc8a3baa9097965756a26eaf5a24703a40e7f7969d4a97",
+        "errorSHA": "71a5400d77f586e0cc614a7b916b6f6f299847e7cf3a7d39da897939ab4e9f47",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-REAL-AUDIO-FAULT",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:08:09.255Z",
+        "finished": "2026-11-25T14:08:17.547Z",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "outputSHA": "382d1632ea779878002002104a5aa0e5a274efa2ec052a505933782496f47648",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-SELECT-ACHIEVE",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:08:17.558Z",
+        "finished": "2026-11-25T14:08:27.548Z",
+        "charged": {
+          "automatedSeconds": 10,
+          "formalSimulations": 2,
+          "formalTicks": 368
+        },
+        "outputSHA": "967fb7ac687180c10552b29002d28bda346b813eedd6e07f9e4fa66330d4eff8",
+        "errorSHA": "559e999801dccd2c1e8d58e10d7373036e79a60adefd49b29aeee2241be1616a",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-VISUAL",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:08:36.725Z",
+        "finished": "2026-11-25T14:08:52.113Z",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "outputSHA": "9775f48ee150e68dc290112a940708fd57b3bef2fb4bd0f8d11ff412e82d9a2e",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-NATIVE-SOUND-STOP",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:09:47.387Z",
+        "finished": "2026-11-25T14:09:49.244Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "outputSHA": "b07ad2847a5cb30855429d992893a9ca5dc17c13d6525ed614b4cb9bf81c57e6",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E7-LEGACY-BROWSER-CONTROLS-VERIFIED",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:09:52.029Z",
+        "finished": "2026-11-25T14:10:19.454Z",
+        "charged": {
+          "automatedSeconds": 28,
+          "formalSimulations": 2,
+          "formalTicks": 177
+        },
+        "outputSHA": "1748b193b529b9a08b6d8520ed67304f6505d234494330333da0f03cbb38a38d",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E7-LEGACY-BROWSER-LAYOUTS-EXACT",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:11:40.180Z",
+        "finished": "2026-11-25T14:11:58.881Z",
+        "charged": {
+          "automatedSeconds": 19,
+          "formalSimulations": 7,
+          "formalTicks": 572
+        },
+        "outputSHA": "7fc51e5d498a7432749c04e33afee254e7b8198bd3e770dde93cb9fac48bea08",
+        "errorSHA": "d9ad1fde394166e702ec347f7b7bed103a04d047be0d11508b8cb7510aae8023",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E7-LEGACY-NATIVE-BEACON-KEYS",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:12:13.505Z",
+        "finished": "2026-11-25T14:12:18.710Z",
+        "charged": {
+          "automatedSeconds": 6,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "outputSHA": "c5925898b15b53f8bbf9cb86aac1ae7c193d5682143fe20d45319eaf372f94ac",
+        "errorSHA": "6b6fd93f332f1006a1ca7f248bbab694f56a99797044ea6957517a53b231ebc5",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E7-LEGACY-SAVE-BROWSER",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:12:18.723Z",
+        "finished": "2026-11-25T14:12:39.292Z",
+        "charged": {
+          "automatedSeconds": 21,
+          "formalSimulations": 1,
+          "formalTicks": 175
+        },
+        "outputSHA": "3658df13f3ea7d99403410ea46e176d35b4d97f7a8c9ceb86e5b13dd41ea2958",
+        "errorSHA": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      },
+      {
+        "runId": "CR008-E8-RETEST-E7-LEGACY-WORKSHOP-BROWSER",
+        "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "started": "2026-11-25T14:12:46.394Z",
+        "finished": "2026-11-25T14:12:48.929Z",
+        "charged": {
+          "automatedSeconds": 3,
+          "formalSimulations": 1,
+          "formalTicks": 8
+        },
+        "outputSHA": "10ce30a53e57788c6eca908208b8470428b12561c38e92a128dfbe75f5d67966",
+        "errorSHA": "6a617457e25438759311d10bf210d0c9b3cc9a945c4bccc0deb546d87285bb42",
+        "exit": 0,
+        "purpose": "FORMAL",
+        "pool": "E8"
+      }
+    ],
+    "oldCR007OriginalPhysicalQualification": "BLOCKED",
+    "effectiveCase": "CR007-C",
+    "exceptionsNotAppliedElsewhere": true
   }
 }

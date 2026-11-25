@@ -941,5 +941,90 @@
       "Pending old star notes are stopped on screen departure"
     ],
     "pending": []
+  },
+  "CR008-E8": {
+    "independenceConfirmedForCitedCases": true,
+    "reviewerContexts": [
+      "/root/e0_review",
+      "/root/e1_test_plan",
+      "/root/e8_coverage"
+    ],
+    "engineeringOwner": "GAME0010-CODEX-PRIMARY-01",
+    "openMandatoryFindings": [
+      {
+        "id": "CR008-E8-NFR-027-BOUNDARY",
+        "severity": "HIGH",
+        "must": true,
+        "state": "OPEN_EXTERNAL_APPROVAL",
+        "caseId": "TC-D7-028-C002",
+        "requirementId": "NFR-027",
+        "stopCode": "LS-08",
+        "testCandidate": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "authorityFinding": "CR007 published E5 freeze record includes all three exact sources. Frozen protocol requires separate authorization for post-E5 common-physics changes.",
+        "scope": "Runtime repair has not started. Existing candidate is kept on dedicated development branch in HOLD.",
+        "authorityRequestedPaths": [
+          "src/domain/tutorial-evaluator.js",
+          "src/domain/result-evaluator.js",
+          "src/physics/adapter.js"
+        ],
+        "nativeConfigurationMustRemain": "PP03, all approved settings and thresholds",
+        "observations": [
+          {
+            "file": "src/domain/tutorial-evaluator.js",
+            "lines": [
+              1,
+              124,
+              145,
+              180,
+              181,
+              189,
+              199,
+              254,
+              261
+            ],
+            "fact": "Direct Planck Manifold/Body/Contact work and a wrapper on the live solveVelocityConstraint function in a domain module.",
+            "sha256": "b0a88e3804fce9ba0caa7eed1c281d39a3c6705faa4168cd66c2f35a540920c5"
+          },
+          {
+            "file": "src/domain/result-evaluator.js",
+            "lines": [
+              70,
+              76,
+              79,
+              80,
+              82
+            ],
+            "fact": "Rule simulation calls Planck Body/Fixture accessors for position, velocity and radius alongside game decisions.",
+            "sha256": "6611e45dbeca810fe8594ce95bd954d26c0a54e5f9de6c45162a1ede3723d75c"
+          }
+        ],
+        "independentReviewer": "/root/e8_coverage",
+        "requirementReference": {
+          "file": "handoffs/game-0010/02_requirements.md",
+          "line": 328,
+          "sha256": "68e0769af45fbf5f617457b2c1029d3c3ee2028cd04d5b5ac8352a97ae14ae74"
+        },
+        "nextEvidence": "After explicit approval, supply normalized value observations via the adapter. The default common-physics impact contract covers E1–E8; revalidate the affected native and browser contracts.",
+        "revalidationBudget": {
+          "currentE8ConsumedWorlds": 1774,
+          "currentE8AvailableWorlds": 1226,
+          "sameProcedureSelectedChecks": {
+            "formalStages": 1146,
+            "browserEndurance": 400,
+            "independentNodeEndurance": 100
+          },
+          "sameProcedureWorldsForThoseThree": 1646,
+          "shortfallForThoseThree": 420,
+          "requestedAdditionalScope": "Separate approval of restart and a separately authorized E8 validation budget with existing spend preserved.",
+          "scopeApprovalApplied": false
+        }
+      }
+    ],
+    "outcome": "HOLD",
+    "scopeMaintained": "No runtime file modifications or application of reopen right without user approval.",
+    "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+    "engineeringGate": "HOLD",
+    "reviewMode": "SEPARATE_CONTEXT_READ_ONLY",
+    "acceptedEvidenceDigest": "76b1289081a575979e6df97c7f0d731a23216457479156cd65d736a16aefa286"
   }
 }

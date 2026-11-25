@@ -1331,5 +1331,638 @@
       "worlds": 0,
       "ticks": 0
     }
+  },
+  "CR008-E8": {
+    "testedSHA": "f067de5c9647b3e1f7ea656add0ebec50256a298",
+    "rawReceipt": {
+      "runId": "CR008-E8-FORMAL-STAGES",
+      "actual": {
+        "automatedSeconds": 9,
+        "formalSimulations": 1146,
+        "formalTicks": 259075
+      },
+      "exit": 0,
+      "signal": null,
+      "stdoutSHA256": "578ebb56b2e595972aa0d667378bd95e552442d294b2df70348462424ed3d694",
+      "stderrSHA256": "6eb7b53fbbdc79210a7760172cb6b081cca35d5a91eecad08644d009782fa135"
+    },
+    "nativeAggregate": [
+      {
+        "role": "aggregate",
+        "stage": "01",
+        "identity": {
+          "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "stageFingerprint": "7f7af2c2c6d0f3af857d020f36802df02e00a9c792cdd61f51302b174cccaaa4",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 175,
+        "neighborResult": {
+          "pass": true,
+          "legal": 6,
+          "successes": 6,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 175,
+          "endTick": 175
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "坂道の切れ目をつないでみよう。",
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道の先へ、球が右下に進む角度の坂道を置こう。",
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 12,
+                "gridY": 10,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "02",
+        "identity": {
+          "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "stageFingerprint": "fa7b7524c1201d5a4fc345207fe8fa6b06338043b2cc2330bf9979766f0de694",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 170,
+        "neighborResult": {
+          "pass": true,
+          "legal": 6,
+          "successes": 5,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 170,
+          "endTick": 170
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "傾きで球の向きを変えよう。",
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道から来た球を、左下へ傾く坂道でゴール側へ導こう。",
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 27,
+                "gridY": 10,
+                "angleDeg": -45
+              }
+            ],
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "03",
+        "identity": {
+          "geometryId": "6e70fbee753402021dc48db343fe7359420e4f05f4380858794aa486791f3fee",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "stageFingerprint": "d290b46c12e85a10e01c6a09eb328f8d76a205950527e6be8ca6dbdb696ac5c9",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 209,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 209,
+          "endTick": 209
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "落下する球はいったん受け止められる。",
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "P",
+                "gridX": 12,
+                "gridY": 9,
+                "angleDeg": 0
+              }
+            ],
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "04",
+        "identity": {
+          "geometryId": "fda74284d1efb8cabe193401feed97dd4261a7a901abafbf2531f3538a647ba6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "stageFingerprint": "33cb93caeabb1ae4bd54552138df4eeb7221095df9d27371a2d5f17e4510c82d",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 233,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 6,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:1:25:30;R:7:21:-30",
+            "reason": "BOARD_BOUNDS"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 233,
+          "endTick": 233
+        },
+        "checks": [
+          {
+            "removed": "B:6:25:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "高さの差は跳躍で越えられる。",
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          },
+          {
+            "level": 2,
+            "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 2,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "05",
+        "identity": {
+          "geometryId": "17eed7954b45a1589b1d36818fce15427e15c3c818f53072e5e6283f4ba901e6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "stageFingerprint": "ac0fa4dbdb819add06b56cd314a40e955bd70fec0096459576526a5e316dfec5",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 240,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 5,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:7:25:30;R:26:12:15",
+            "reason": "GOAL_PROTECTION"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 240,
+          "endTick": 240
+        },
+        "checks": [
+          {
+            "removed": "B:14:25:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "R:9:23:15",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "高さと飛距離の両方を見よう。",
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          },
+          {
+            "level": 2,
+            "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 7,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "06",
+        "identity": {
+          "geometryId": "0369170da97a4b114a1552c82236f780183904c56ec2a60a9966cee8ea11d916",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "stageFingerprint": "f3c007ab22086f7d5e8713ce9aabc4745f57804473049584e45560636edea986",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 177,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 177,
+          "endTick": 177
+        },
+        "checks": [
+          {
+            "removed": "P:17:15:0",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "S:12:9:0",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "支点から離れた場所に球を落とそう。",
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          },
+          {
+            "level": 2,
+            "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 18,
+                "gridY": 15,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "07",
+        "identity": {
+          "geometryId": "513ba3c349993575700983457e74a1df598fa872474f83a08b29c9bc9ccebcf8",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "stageFingerprint": "8cc095f00a71f2d95300fd4d5f4348109ed3a78d3e080e77c7e6cf8ffe450cec",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 393,
+        "neighborResult": {
+          "pass": true,
+          "legal": 22,
+          "successes": 19,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 393,
+          "endTick": 393
+        },
+        "checks": [
+          {
+            "removed": "B:5:26:45",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "障害物を避ける道は複数ある。",
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          },
+          {
+            "level": 2,
+            "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "P",
+                "gridX": 28,
+                "gridY": 17,
+                "angleDeg": 0
+              }
+            ],
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "08",
+        "identity": {
+          "geometryId": "9004e3c62bf4a4fbdad14b4c3a7f4a0f1c9f4d1f18861159e02ee8eeb938ea6d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "stageFingerprint": "b787a739ffbdb9cacbf70dd1e7050515e6e51ee82e3bc0ffef2953d75a8e2eef",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 263,
+        "neighborResult": {
+          "pass": true,
+          "legal": 12,
+          "successes": 8,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 263,
+          "endTick": 263
+        },
+        "checks": [
+          {
+            "removed": "B:5:24:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "一度目の跳躍の着地点を見よう。",
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          },
+          {
+            "level": 2,
+            "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 4,
+                "gridY": 27,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "09",
+        "identity": {
+          "geometryId": "190caa51027ee872783219eb12a04c32391d5a31964566c6c7a338b0de25e82e",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "stageFingerprint": "f49bfbe838e25dc5157d0be743baf6dfa1159757d0f1b9e3edef8f8bf20a3b36",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 219,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 7,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 219,
+          "endTick": 219
+        },
+        "checks": [
+          {
+            "removed": "B:13:24:30",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          },
+          {
+            "level": 2,
+            "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 17,
+                "gridY": 20,
+                "angleDeg": 15
+              }
+            ],
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "10",
+        "identity": {
+          "geometryId": "e310b77001484036b2c40212f4aed0a320d03e3f55b4570188ebb0ca510a7a9d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "stageFingerprint": "48db34494aa31e5a4a0666b475f25611471386c07bf3baeaaef0032f2869ad44",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 184,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 7,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:6:25:30;R:24:12:0",
+            "reason": "GOAL_PROTECTION"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 184,
+          "endTick": 184
+        },
+        "checks": [
+          {
+            "removed": "B:18:19:0",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "R:8:8:30",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "飛び越えた後の着地まで考えよう。",
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          },
+          {
+            "level": 2,
+            "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 6,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          }
+        ]
+      }
+    ],
+    "actualTotals": {
+      "worlds": 1146,
+      "ticks": 259075
+    },
+    "allStagesRollup": {
+      "sourceRun": "CR008-E8-FORMAL-STAGES",
+      "stageCount": 10,
+      "emptyUncleared": 10,
+      "threeStarBaselines": 10,
+      "distinctAlternates": 7,
+      "repeatedStableRuns": 1000,
+      "certifiedHints": 30,
+      "neighborhoodAllSatisfied": true
+    }
   }
 }
