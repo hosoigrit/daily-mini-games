@@ -76,7 +76,11 @@ export function createUI(getGame) {
     el('place-coordinate').disabled=!part;
   }
   function dialog(s){
-    if(previousDialog===s.dialog)return;
+    if(previousDialog===s.dialog){
+      const status=modal.querySelector('[data-settings-save-status]');
+      if(status)status.textContent=saveText[s.save.status]??'一時プレイ';
+      return;
+    }
     if(!s.dialog){
       if(modal.open)modal.close();
       opener?.focus();
@@ -111,7 +115,10 @@ export function createUI(getGame) {
         mute.type='checkbox';mute.checked=s.progress.settings.muted;
         const muteLabel=element('label','ミュート');muteLabel.prepend(mute);
         mute.addEventListener('change',()=>act({type:'setting',key:'muted',value:mute.checked}));
-        content=[volumeLabel,muteLabel,text(saveText[s.save.status]??'一時プレイ')];
+        const status=text(saveText[s.save.status]??'一時プレイ');
+        status.dataset.settingsSaveStatus='';
+        status.setAttribute('role','status');
+        content=[volumeLabel,muteLabel,status];
         actions.unshift(button('保存データを初期化',()=>act({type:'reset-request'})));
         if(s.save.mode==='RECOVERY_REQUIRED'&&s.save.recoveryReason!=='VERSION'){
           actions.unshift(button('保存データを復旧',()=>act({type:'recover-request'})));
