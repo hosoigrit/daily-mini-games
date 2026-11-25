@@ -28,7 +28,7 @@ export function qualifiesPlatformUse({upper, approachSpeed, impulseY, ballMass})
 }
 
 export function seesawLoadDirection({upper, offset, point, pivot, impulse, omegaBefore, omegaAfter}) {
-  if (!upper || Math.abs(offset) + ROUNDING < .12 || Math.hypot(impulse.x, impulse.y) <= 1e-6) return 0;
+  if (!upper || !impulse || Math.abs(offset) + ROUNDING < .12 || Math.hypot(impulse.x, impulse.y) <= 1e-6) return 0;
   const r = {x: point.x - pivot.x, y: point.y - pivot.y};
   const direction = Math.sign(r.x * impulse.y - r.y * impulse.x);
   return direction * (omegaAfter - omegaBefore) > 1e-6 ? direction : 0;
