@@ -1,0 +1,2 @@
+acceptance_id,design_ids,interface_id,test_ids,source,finding
+AT-104,BD-11;DD-10;DD-13,IF-16,TC-D3-006;TC-D3-007;TC-D4-016,handoffs/game-0011/v1.0/approved_v08/requirements_traceability.csv,A1a-R03

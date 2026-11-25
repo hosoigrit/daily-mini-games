@@ -1,0 +1,50 @@
+{
+  "classification": "Stage A-1 の基盤適用範囲。全体判定は正式統合前。",
+  "poc": [
+    {
+      "id": "POC-13",
+      "stageA1": "PASS",
+      "overall": "NOT RUN",
+      "evidence": [
+        "game-store.test.ts",
+        "foundation-screen.test.tsx",
+        "composition.test.ts",
+        "check:architecture"
+      ],
+      "deferred": "実判定と React 負荷の独立性"
+    },
+    {
+      "id": "POC-14",
+      "stageA1": "PASS",
+      "overall": "NOT RUN",
+      "evidence": [
+        "foundation-screen.test.tsx",
+        "audio-events.test.ts"
+      ],
+      "deferred": "実 AudioContext、入力判定、保存の統合で重複防止"
+    },
+    {
+      "id": "POC-16",
+      "stageA1": "PASS",
+      "overall": "NOT RUN",
+      "evidence": [
+        "subpath.spec.ts",
+        "build-verification.md"
+      ],
+      "deferred": "正式ゲームの操作・保存・成績比較"
+    },
+    {
+      "id": "POC-18",
+      "stageA1": "PASS",
+      "overall": "NOT RUN",
+      "evidence": [
+        "dependency-versions.json",
+        "public-types.test.ts",
+        "contract-test-results.json",
+        "check:architecture"
+      ],
+      "deferred": "正式エンジンの契約動作、未実施の全条件"
+    }
+  ],
+  "qualityGates": "QG-01〜11 NOT RUN"
+}

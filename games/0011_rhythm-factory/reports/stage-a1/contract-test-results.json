@@ -1,0 +1,151 @@
+{
+  "originalDefinition": "handoffs/game-0011/v1.0/approved_v08/interface_contracts.d.ts",
+  "copyByteMatch": true,
+  "typecheck": {
+    "ifIds": [
+      "IF-01",
+      "IF-02",
+      "IF-03",
+      "IF-04",
+      "IF-05",
+      "IF-06",
+      "IF-07",
+      "IF-08",
+      "IF-09",
+      "IF-10",
+      "IF-11",
+      "IF-12",
+      "IF-13",
+      "IF-14",
+      "IF-15",
+      "IF-16",
+      "IF-17",
+      "IF-18",
+      "IF-19",
+      "IF-20"
+    ],
+    "internalPorts": [
+      "AudioControlPort",
+      "LockControlPort"
+    ],
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "typeNegativeExamples": "Ms/Us/Sec、素の数値と Tick、StatisticalUs/Us"
+  },
+  "runtime": [
+    {
+      "ifId": "IF-09",
+      "test": "TC-D4-009",
+      "subcases": [
+        "009-A",
+        "009-B",
+        "009-C",
+        "009-D",
+        "009-E",
+        "009-F",
+        "009-G"
+      ],
+      "status": "PASS（テストダブルと描画投影）",
+      "realEngine": "NOT RUN"
+    },
+    {
+      "ifId": "IF-16",
+      "tests": [
+        "TC-D3-006",
+        "TC-D3-007",
+        "TC-D4-016"
+      ],
+      "acceptance": "AT-104",
+      "status": "PASS（ストアとテストダブル）",
+      "realEngine": "NOT RUN"
+    },
+    {
+      "ifId": "IF-20",
+      "tests": [
+        "TC-D4-020 解除冪等性補足"
+      ],
+      "status": "PASS（通知テストダブル）",
+      "realEngine": "NOT RUN"
+    }
+  ],
+  "otherIfs": "型・責務・接続境界を確認。その他 IF の本編動作は NOT RUN。",
+  "tests": [
+    {
+      "file": "tests/contract/audio-events.test.ts",
+      "category": "contract",
+      "name": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
+      "status": "passed",
+      "durationMs": 3.0
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
+      "status": "passed",
+      "durationMs": 2.0
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "the layer ports project the entire public surface and retain the internal lifecycle contracts",
+      "status": "passed",
+      "durationMs": 0.3
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
+      "status": "passed",
+      "durationMs": 0.2
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
+      "status": "passed",
+      "durationMs": 2.5
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-C projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.3
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
+      "status": "passed",
+      "durationMs": 1.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-E keeps a valid sealed frame until disposal and drops the old note and lanes afterwards",
+      "status": "passed",
+      "durationMs": 1.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-F rejects mutations of nested data and isolates each rendering view",
+      "status": "passed",
+      "durationMs": 0.4
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
+      "status": "passed",
+      "durationMs": 0.6
+    }
+  ]
+}

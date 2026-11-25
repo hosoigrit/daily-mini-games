@@ -1,0 +1,302 @@
+{
+  "recordedAt": "2026-11-25T22:09:16+09:00",
+  "fixedBase": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
+  "actor": "Codex AG-01/AG-09/AG-13",
+  "commands": [
+    {
+      "check": "typecheck",
+      "exitCode": 0,
+      "command": "npm run typecheck"
+    },
+    {
+      "check": "lint",
+      "exitCode": 0,
+      "command": "npm run lint"
+    },
+    {
+      "check": "architecture",
+      "exitCode": 0,
+      "command": "npm run check:architecture"
+    },
+    {
+      "check": "vitest",
+      "exitCode": 0,
+      "command": "npm test -- --reporter=default --reporter=json --outputFile.json=<task>/evidence-a1/vitest.json"
+    },
+    {
+      "check": "build",
+      "exitCode": 0,
+      "command": "npm run build"
+    },
+    {
+      "check": "build-repeat",
+      "exitCode": 0,
+      "command": "npm run build"
+    },
+    {
+      "check": "build-bytes",
+      "exitCode": 0,
+      "command": "cmp <task>/evidence-a1/dist-first.sha256 <task>/evidence-a1/dist.sha256"
+    },
+    {
+      "check": "playwright",
+      "exitCode": 0,
+      "command": "npm run test:e2e -- --reporter=list,json"
+    }
+  ],
+  "vitestCounts": {
+    "component": 2,
+    "contract": 11,
+    "integration": 1,
+    "unit": 4
+  },
+  "vitest": [
+    {
+      "file": "tests/component/foundation-screen.test.tsx",
+      "category": "component",
+      "name": "POC-13: React displays the store projection without writing state during render",
+      "status": "passed",
+      "durationMs": 68.5
+    },
+    {
+      "file": "tests/component/foundation-screen.test.tsx",
+      "category": "component",
+      "name": "POC-14: Strict Mode remount keeps exactly one subscription, listener, frame and test resource",
+      "status": "passed",
+      "durationMs": 7.0
+    },
+    {
+      "file": "tests/contract/audio-events.test.ts",
+      "category": "contract",
+      "name": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
+      "status": "passed",
+      "durationMs": 3.0
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
+      "status": "passed",
+      "durationMs": 2.0
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "the layer ports project the entire public surface and retain the internal lifecycle contracts",
+      "status": "passed",
+      "durationMs": 0.3
+    },
+    {
+      "file": "tests/contract/public-types.test.ts",
+      "category": "contract",
+      "name": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
+      "status": "passed",
+      "durationMs": 0.2
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
+      "status": "passed",
+      "durationMs": 2.5
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-C projects every empty field using current settings",
+      "status": "passed",
+      "durationMs": 0.3
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
+      "status": "passed",
+      "durationMs": 1.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-E keeps a valid sealed frame until disposal and drops the old note and lanes afterwards",
+      "status": "passed",
+      "durationMs": 1.7
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-F rejects mutations of nested data and isolates each rendering view",
+      "status": "passed",
+      "durationMs": 0.4
+    },
+    {
+      "file": "tests/contract/render-snapshot.test.ts",
+      "category": "contract",
+      "name": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
+      "status": "passed",
+      "durationMs": 0.6
+    },
+    {
+      "file": "tests/integration/composition.test.ts",
+      "category": "integration",
+      "name": "connects one synthetic state owner to the UI projection and tears down the connection",
+      "status": "passed",
+      "durationMs": 2.8
+    },
+    {
+      "file": "tests/unit/game-store.test.ts",
+      "category": "unit",
+      "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 keeps the same reference and emits no notification for an equal projection",
+      "status": "passed",
+      "durationMs": 2.5
+    },
+    {
+      "file": "tests/unit/game-store.test.ts",
+      "category": "unit",
+      "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 updates the public reference and emits a single notification for one state change",
+      "status": "passed",
+      "durationMs": 1.7
+    },
+    {
+      "file": "tests/unit/game-store.test.ts",
+      "category": "unit",
+      "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 protects nested arrays and error values and keeps a defensive copy of the source",
+      "status": "passed",
+      "durationMs": 0.5
+    },
+    {
+      "file": "tests/unit/game-store.test.ts",
+      "category": "unit",
+      "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 unsubscribes idempotently and removes only the matching registration",
+      "status": "passed",
+      "durationMs": 0.2
+    }
+  ],
+  "playwright": [
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "browser": "chromium",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 424,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "159.0.8154.6"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "browser": "firefox",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 1844,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "159.0"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+      "browser": "webkit",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 571,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "27.2"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "browser": "chromium",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 224,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "159.0.8154.6"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "browser": "firefox",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 515,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "159.0"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "subpath.spec.ts",
+      "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+      "browser": "webkit",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration": 514,
+          "annotations": [
+            {
+              "type": "browser version",
+              "description": "27.2"
+            }
+          ],
+          "retry": 0
+        }
+      ]
+    }
+  ],
+  "originalTests": {
+    "total": 310,
+    "status": "NOT RUN"
+  },
+  "notes": "Vitest と Playwright は A-1 の適用部分。全310件の親TCの実行結果とは別。"
+}
