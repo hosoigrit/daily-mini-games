@@ -155,3 +155,63 @@ test('TC-D4-030-C001 real geometry identity matches the frozen vector and order 
   assert.notEqual(original.compatibilityId,revised.compatibilityId);
   assert.equal(original.physicsRulesVersion,revised.physicsRulesVersion);
 });
+
+test('TC-D3-046-C001 available hints retain arbitrary access order and confirm first ghost', async () => {
+  const stage=stages.getStages()[0];
+  const identity=await stages.getStageIdentity(stage);
+  const hints=[1,2,3].map(level=>({level,compatibilityId:identity.compatibilityId,text:`指示${level}`}));
+  assert.equal(stages.resolveStageHint(identity,hints,3),null);
+  const sequence=[3,1,2,3,1];
+  assert.deepEqual(sequence.map(level=>stages.resolveStageHint(identity,hints,level,true)?.level),sequence);
+});
+
+test('TC-D3-047-C001 hint resolution leaves draft geometry and inventory unchanged', async () => {
+  const stage=stages.getStages()[0];
+  const identity=await stages.getStageIdentity(stage);
+  const draft=stages.buildStageDesign(stage,search.fromSeed(seeds['01'].A));
+  assert(draft.ok);
+  const before=JSON.stringify({stage,draft});
+  const supplied=[1,2,3].map(level=>({level,compatibilityId:identity.compatibilityId,parts:draft.placements}));
+  const original=JSON.stringify(supplied);
+  for(const level of [1,2,3]){
+    const resolved=stages.resolveStageHint(identity,supplied,level,true);
+    assert(resolved);
+    resolved.parts.length=0;
+  }
+  assert.equal(JSON.stringify({stage,draft}),before);
+  assert.equal(JSON.stringify(supplied),original);
+});
+
+for(const id of ['TC-D3-048-C001','TC-D3-048-C002','TC-D4-024-C001']) test(`${id} obsolete compatibility rejects otherwise legal hint ghost`, async () => {
+  const prior=stages.getInitialStages()[7], updated=stages.getStages()[7];
+  const old=await stages.getStageIdentity(prior), identity=await stages.getStageIdentity(updated);
+  assert.notEqual(old.compatibilityId,identity.compatibilityId);
+  const shape={level:3,compatibilityId:old.compatibilityId,parts:search.fromSeed(seeds['08'].A).slice(0,1)};
+  assert.equal(stages.resolveStageHint(identity,[shape],3,true),null);
+  assert.deepEqual(stages.resolveStageHint(old,[shape],3,true),shape);
+});
+
+test('TC-D4-008-C001 form all 17 formal stage layouts through ordinary edit commands', () => {
+  const {layouts}=require('../qa/fixtures/stages.json');
+  let total=0;
+  for(const stage of stages.getStages()){
+    for(const coordinates of [layouts[stage.id].baseline,layouts[stage.id].alternate].filter(Boolean)){
+      const expected=coordinates.map(([type,gridX,gridY,angleDeg])=>({type,gridX,gridY,angleDeg}));
+      const built=stages.buildStageDesign(stage,expected);
+      assert(built.ok,stage.id);
+      assert.equal(search.placementKey(built.placements),search.placementKey(expected));
+      assert.equal(built.placements.length,expected.length);
+      total++;
+    }
+  }
+  assert.equal(total,17);
+});
+
+test('TC-D4-015-C001 unused added part does not constitute a distinct solution', async () => {
+  const {isDistinctSolution}=await import('../qa/harness/stage-evaluator.js');
+  const common={end:'CLEARED',required:true,minimumGoalDistanceUm:210000,lastPosition:{x:4.8,y:2.61},
+    stageFingerprint:'same-test-state',actions:[{event:'spring',part:'B:12:8:15'}]};
+  const base={...common,placed:[{type:'B',gridX:12,gridY:8,angleDeg:15}]};
+  const extra={...common,placed:[...base.placed,{type:'R',gridX:2,gridY:20,angleDeg:0}]};
+  assert.equal(isDistinctSolution(base,extra),false);
+});
