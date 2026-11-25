@@ -4650,5 +4650,2431 @@
       "testedSha": "8a18c458523ad9a67ca6d53183754e3f3cc381df",
       "rawLogSha256": "f1f2867b287ff0334eaec7197161ce27f00538e9a18542cac8ca993d4830ef7e"
     }
+  },
+  "E5": {
+    "stage": "E5",
+    "status": "HOLD",
+    "source": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+    "nativeSourceSameProductBytes": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+    "mandatory": 121,
+    "pass": 120,
+    "blocked": 1,
+    "caseResults": [
+      {
+        "caseId": "TC-D3-001-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 3
+        },
+        "assertion": "goal rectangle dimensions",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "FX08生成",
+        "expected": "U字、内幅1.20内高0.72、壁底0.16"
+      },
+      {
+        "caseId": "TC-D3-001-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 3
+        },
+        "assertion": "physical goal fixture material and transforms",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "FX08生成",
+        "expected": "U字、内幅1.20内高0.72、壁底0.16"
+      },
+      {
+        "caseId": "TC-D3-002-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 10
+        },
+        "assertion": "empty goal volume and open entrance remain protected",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "ゴール内部・入口保護範囲への配置",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D3-003-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 17
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心ローカル(0,0.30)",
+        "expected": "収容成立"
+      },
+      {
+        "caseId": "TC-D3-004-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 24
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(0,0.60)",
+        "expected": "収容未成立"
+      },
+      {
+        "caseId": "TC-D3-005-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 31
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0.41,0.3)、r=.20",
+        "expected": "収容"
+      },
+      {
+        "caseId": "TC-D3-005-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 38
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0.410002,0.3)、r=.20",
+        "expected": "非収容"
+      },
+      {
+        "caseId": "TC-D3-005-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 45
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(-0.41,0.3)、r=.20",
+        "expected": "収容"
+      },
+      {
+        "caseId": "TC-D3-005-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 52
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(-0.410002,0.3)、r=.20",
+        "expected": "非収容"
+      },
+      {
+        "caseId": "TC-D3-005-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 59
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0,0.19)、r=.20",
+        "expected": "収容"
+      },
+      {
+        "caseId": "TC-D3-005-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 66
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0,0.189998)、r=.20",
+        "expected": "非収容"
+      },
+      {
+        "caseId": "TC-D3-005-C007",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 73
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0,0.52)、r=.20",
+        "expected": "収容"
+      },
+      {
+        "caseId": "TC-D3-005-C008",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 80
+        },
+        "assertion": "goal boundary",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "局所中心(0,0.520002)、r=.20",
+        "expected": "非収容"
+      },
+      {
+        "caseId": "TC-D3-006-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 87
+        },
+        "assertion": "parallel speed bound",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "並進速度0m/s、他条件成立",
+        "expected": "安定速度成立"
+      },
+      {
+        "caseId": "TC-D3-006-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 94
+        },
+        "assertion": "parallel speed bound",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "並進速度0.1m/s、他条件成立",
+        "expected": "安定速度成立"
+      },
+      {
+        "caseId": "TC-D3-006-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 101
+        },
+        "assertion": "parallel speed bound",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "並進速度0.15m/s、他条件成立",
+        "expected": "安定速度成立"
+      },
+      {
+        "caseId": "TC-D3-007-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 108
+        },
+        "assertion": "parallel speed bound",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "並進速度0.1501m/s、他条件成立",
+        "expected": "安定速度未成立"
+      },
+      {
+        "caseId": "TC-D3-007-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 115
+        },
+        "assertion": "parallel speed bound",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "並進速度0.25m/s、他条件成立",
+        "expected": "安定速度未成立"
+      },
+      {
+        "caseId": "TC-D3-008-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 122
+        },
+        "assertion": "rounded stability intervals",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "初回安定100→129",
+        "expected": "29区間、未クリア"
+      },
+      {
+        "caseId": "TC-D3-009-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 129
+        },
+        "assertion": "rounded stability intervals",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "初回安定100→130、必須達成",
+        "expected": "30区間、CLEARED"
+      },
+      {
+        "caseId": "TC-D3-010-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 136
+        },
+        "assertion": "one complete interval invalid resets before next anchor",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "安定途中1tick速度超過／領域外",
+        "expected": "カウンターリセット"
+      },
+      {
+        "caseId": "TC-D3-010-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 10
+        },
+        "assertion": "one complete interval invalid resets before next anchor",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "安定途中1tick速度超過／領域外",
+        "expected": "カウンターリセット"
+      },
+      {
+        "caseId": "TC-D3-011-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 17
+        },
+        "assertion": "stable ends do not conceal inside-tick violation",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "PP03内部観測で安定逸脱",
+        "expected": "リセット"
+      },
+      {
+        "caseId": "TC-D3-011-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-GOAL-DUT-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "788eb5d7d42d43e3e2217317669ef44839420e061ee6eb6264888ee3c65b86f4"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "intervals": 0,
+          "achieved": false
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "PP03内部観測で安定逸脱",
+        "expected": "リセット"
+      },
+      {
+        "caseId": "TC-D3-012-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-GOAL-DUT-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "788eb5d7d42d43e3e2217317669ef44839420e061ee6eb6264888ee3c65b86f4"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": [
+          {
+            "run": "NATURAL-CENTER-FORMAL",
+            "clearTick": 53,
+            "continuousIntervals": 30,
+            "maxStablePenetrationM": 0
+          },
+          {
+            "run": "NATURAL-SIDE-FORMAL",
+            "clearTick": 223,
+            "continuousIntervals": 30,
+            "maxStablePenetrationM": 0
+          }
+        ],
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "U字へ真上・斜め入射",
+        "expected": "指定基準ケースで自然安定"
+      },
+      {
+        "caseId": "TC-D3-013-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 143
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "X=−0.10/9.70、Y=−0.10/7.30",
+        "expected": "他条件なしなら継続"
+      },
+      {
+        "caseId": "TC-D3-013-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 150
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(-0.1,3)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-013-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 157
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(9.7,3)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-013-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 164
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(4,-0.1)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-013-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 171
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(4,7.3)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-014-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 178
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(-0.21,3)、r=.20",
+        "expected": "FAILED FL-001"
+      },
+      {
+        "caseId": "TC-D3-014-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 185
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(9.81,3)、r=.20",
+        "expected": "FAILED FL-002"
+      },
+      {
+        "caseId": "TC-D3-014-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 192
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(4,-0.21)、r=.20",
+        "expected": "FAILED FL-003"
+      },
+      {
+        "caseId": "TC-D3-014-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 199
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(4,7.41)、r=.20",
+        "expected": "FAILED FL-004"
+      },
+      {
+        "caseId": "TC-D3-014-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 206
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(-0.21,-0.21)",
+        "expected": "FAILED FL-003、両方向診断記録"
+      },
+      {
+        "caseId": "TC-D3-014-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 213
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(9.81,7.41)",
+        "expected": "FAILED FL-004、両方向診断記録"
+      },
+      {
+        "caseId": "TC-D3-015-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 220
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "X=−0.20/9.80、Y=−0.20/7.40",
+        "expected": "境界接触は継続"
+      },
+      {
+        "caseId": "TC-D3-015-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 227
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(-0.19,-0.19)、他条件なし",
+        "expected": "一辺条件で判定、RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 234
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(9.79,7.39)、他条件なし",
+        "expected": "一辺条件で判定、RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 241
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(-0.2,-0.2)、他条件なし",
+        "expected": "一辺条件で判定、RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 248
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "中心(9.8,7.4)、他条件なし",
+        "expected": "一辺条件で判定、RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 255
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(-0.2,3)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C007",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 262
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(9.8,3)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C008",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 269
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(4,-0.2)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-015-C009",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 276
+        },
+        "assertion": "outer escape boundaries",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "球中心(4,7.4)、半径.20、他終端なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-016-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 283
+        },
+        "assertion": "terminal evaluation",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "1199tick、他条件なし",
+        "expected": "RUNNING"
+      },
+      {
+        "caseId": "TC-D3-017-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 290
+        },
+        "assertion": "terminal evaluation",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "1200tick、他条件なし",
+        "expected": "FL-005"
+      },
+      {
+        "caseId": "TC-D3-018-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 297
+        },
+        "assertion": "terminal evaluation",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "1200tickで安定30区間、必須達成",
+        "expected": "CLEARED優先"
+      },
+      {
+        "caseId": "TC-D3-018-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 24
+        },
+        "assertion": "terminal precedence inside result session",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "1200tickで安定30区間、必須達成",
+        "expected": "CLEARED優先"
+      },
+      {
+        "caseId": "TC-D3-019-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 304
+        },
+        "assertion": "terminal evaluation",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "数値異常とクリア同時",
+        "expected": "ERROR優先"
+      },
+      {
+        "caseId": "TC-D3-019-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 31
+        },
+        "assertion": "terminal precedence inside result session",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "数値異常とクリア同時",
+        "expected": "ERROR優先"
+      },
+      {
+        "caseId": "TC-D3-020-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 311
+        },
+        "assertion": "terminal evaluation",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "安定30区間、必須false",
+        "expected": "FL-006"
+      },
+      {
+        "caseId": "TC-D3-021-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 38
+        },
+        "assertion": "stale abandoned run cannot update active run",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "中止後の旧実験イベント",
+        "expected": "進捗・評価・軌跡不変"
+      },
+      {
+        "caseId": "TC-D3-022-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 45
+        },
+        "assertion": "ten duplicate terminal notifications each",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "同一終端通知10回",
+        "expected": "結果・進捗更新1回のみ"
+      },
+      {
+        "caseId": "TC-D3-023-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 318
+        },
+        "assertion": "three signed ramp intervals at .24",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "自由坂道上面3tick、正味0.24m下方",
+        "expected": "達成"
+      },
+      {
+        "caseId": "TC-D3-023-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-RAMP-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "20ef756cec19dda16ddc3e1fe73eea7d93dddf29b64a46c74df140db6eb5dd56"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "run": "RAMP-FIXED-30--0.5-2",
+          "angleDeg": 30,
+          "tick": 8,
+          "completeIntervals": 7,
+          "displacementM": 0.25052790493193533,
+          "requiredUse": true
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "自由坂道上面3tick、正味0.24m下方",
+        "expected": "達成"
+      },
+      {
+        "caseId": "TC-D3-024-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 325
+        },
+        "assertion": "one millimeter below minimum",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "上面接触、正味0.239m",
+        "expected": "未達"
+      },
+      {
+        "caseId": "TC-D3-025-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 332
+        },
+        "assertion": "three oppositely signed pairs",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "±0.10m往復",
+        "expected": "不正加算なし"
+      },
+      {
+        "caseId": "TC-D3-026-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 339
+        },
+        "assertion": "horizontal ramp is insufficient when slope is required",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "ST02で0／+15／−15°有効使用",
+        "expected": "水平のみ未達"
+      },
+      {
+        "caseId": "TC-D3-026-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-RAMP-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "20ef756cec19dda16ddc3e1fe73eea7d93dddf29b64a46c74df140db6eb5dd56"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": [
+          {
+            "run": "RAMP-FIXED-0--0.5-2",
+            "angleDeg": 0,
+            "tick": 10,
+            "completeIntervals": 9,
+            "displacementM": 0.25089582940165833,
+            "requiredUse": false
+          },
+          {
+            "run": "RAMP-FIXED-15--0.5-2",
+            "angleDeg": 15,
+            "tick": 9,
+            "completeIntervals": 8,
+            "displacementM": 0.2574024651793902,
+            "requiredUse": true
+          },
+          {
+            "run": "RAMP-FIXED--15--0.5-2",
+            "angleDeg": -15,
+            "tick": 9,
+            "completeIntervals": 8,
+            "displacementM": 0.2574024651793902,
+            "requiredUse": true
+          }
+        ],
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "ST02で0／+15／−15°有効使用",
+        "expected": "水平のみ未達"
+      },
+      {
+        "caseId": "TC-D3-027-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 346
+        },
+        "assertion": "upper platform impulse per given mass",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "足場上面、接近0.20m/s、質量0.15kg、上向き力積0.015Ns",
+        "expected": "使用達成"
+      },
+      {
+        "caseId": "TC-D3-027-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 353
+        },
+        "assertion": "upper platform impulse per given mass",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "足場上面、接近0.20m/s、質量0.2kg、上向き力積0.020Ns",
+        "expected": "使用達成"
+      },
+      {
+        "caseId": "TC-D3-027-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 360
+        },
+        "assertion": "upper platform impulse per given mass",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "足場上面、接近0.20m/s、質量0.25kg、上向き力積0.025Ns",
+        "expected": "使用達成"
+      },
+      {
+        "caseId": "TC-D3-027-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 367
+        },
+        "assertion": "upper platform impulse per given mass",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "足場上面、接近0.20m/s、質量0.3kg、上向き力積0.030Ns",
+        "expected": "使用達成"
+      },
+      {
+        "caseId": "TC-D3-027-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 7,
+          "substep": 1,
+          "massKg": 0.15,
+          "jUpPerKg": 0.3981379917154426,
+          "approach": 0.3982707043793477,
+          "upper": true,
+          "J": 0.05972069875731639
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "質量0.15kg、P(4.8,2.4)、球(4.8,2.73)、g=0、ω=0、v=(0,-s)、s=.2,.4,1順、各60tick",
+        "expected": "実上面・接近≥.20・同一衝突Jup/m≥.10を満たす最初の候補で使用true。無資格BLOCKED、資格あり未達FAIL。"
+      },
+      {
+        "caseId": "TC-D3-027-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 7,
+          "substep": 1,
+          "massKg": 0.2,
+          "jUpPerKg": 0.3981379917154425,
+          "approach": 0.3982707043793477,
+          "upper": true,
+          "J": 0.07962759834308851
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "質量0.20kg、P(4.8,2.4)、球(4.8,2.73)、g=0、ω=0、v=(0,-s)、s=.2,.4,1順、各60tick",
+        "expected": "実上面・接近≥.20・同一衝突Jup/m≥.10を満たす最初の候補で使用true。無資格BLOCKED、資格あり未達FAIL。"
+      },
+      {
+        "caseId": "TC-D3-027-C007",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 7,
+          "substep": 1,
+          "massKg": 0.25,
+          "jUpPerKg": 0.39813799171544256,
+          "approach": 0.3982707043793477,
+          "upper": true,
+          "J": 0.09953449792886064
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "質量0.25kg、P(4.8,2.4)、球(4.8,2.73)、g=0、ω=0、v=(0,-s)、s=.2,.4,1順、各60tick",
+        "expected": "実上面・接近≥.20・同一衝突Jup/m≥.10を満たす最初の候補で使用true。無資格BLOCKED、資格あり未達FAIL。"
+      },
+      {
+        "caseId": "TC-D3-027-C008",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 7,
+          "substep": 1,
+          "massKg": 0.3,
+          "jUpPerKg": 0.3981379917154426,
+          "approach": 0.3982707043793477,
+          "upper": true,
+          "J": 0.11944139751463279
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "質量0.30kg、P(4.8,2.4)、球(4.8,2.73)、g=0、ω=0、v=(0,-s)、s=.2,.4,1順、各60tick",
+        "expected": "実上面・接近≥.20・同一衝突Jup/m≥.10を満たす最初の候補で使用true。無資格BLOCKED、資格あり未達FAIL。"
+      },
+      {
+        "caseId": "TC-D3-028-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 374
+        },
+        "assertion": "isolated unqualified platform event",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "側面・他条件成立",
+        "expected": "未達"
+      },
+      {
+        "caseId": "TC-D3-028-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 381
+        },
+        "assertion": "isolated unqualified platform event",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "上面、接近0.19、J/m=.10",
+        "expected": "未達"
+      },
+      {
+        "caseId": "TC-D3-028-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 388
+        },
+        "assertion": "isolated unqualified platform event",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "上面、接近.20、J/m=.099",
+        "expected": "未達"
+      },
+      {
+        "caseId": "TC-D3-028-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 4,
+          "substep": 1,
+          "massKg": 0.2,
+          "jUpPerKg": 0.0,
+          "approach": 0.3990679098677029,
+          "upper": false,
+          "J": 0.07978698631143677
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "rc8PhysicsProtocols.platformNegative C004:球(3.97,2.4)、v=(.4,0)、g=0、60tick",
+        "expected": "対象足場の実側面接触を独立観測して使用false。他閾値の厳密分離はU。観測なしBLOCKED。"
+      },
+      {
+        "caseId": "TC-D3-028-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-FIXED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "fd75573de1e4650b3859a4c175ba2180d3f4333d2d209e56819fb7534e2ef0a8"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 14,
+          "substep": 0,
+          "massKg": 0.2,
+          "jUpPerKg": 0.1882979543508173,
+          "approach": 0.18836072033560092,
+          "upper": true,
+          "J": 0.03765959087016346
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "同C005:球(4.8,2.73)、v=(0,-.19)、g=0、60tick",
+        "expected": "実上面・接近<.20で使用false。他閾値の厳密分離はU。観測なしBLOCKED。"
+      },
+      {
+        "caseId": "TC-D3-028-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-PLATFORM-LOW-FORMAL-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "78a45dd06476b2f45cac174f3df845d469d08abc9b842daeb130f26346e0d200"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "tick": 11,
+          "substep": 0,
+          "massKg": 0.2,
+          "jUpPerKg": 3.237655050987441e-05,
+          "approach": 0.24833915243469398,
+          "upper": true,
+          "J": 6.475310101974882e-06
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "同C006:固定支持足場を併置、delta=-.02,-.01,0,.01,.02 × 速度.20,.25,.40,1、最大20run",
+        "expected": "対象足場で実上面・接近≥.20・Jup/m<.10が成立した最初の候補で使用false。無資格BLOCKED。"
+      },
+      {
+        "caseId": "TC-D3-029-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 52
+        },
+        "assertion": "only the selected live current spring event counts",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "正常SPRING_ACTIVATED",
+        "expected": "達成"
+      },
+      {
+        "caseId": "TC-D3-029-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-SPRING-DUT-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "f661c4e8b4558029bf2360fac23a9b4d691068608b3a0cea70d883aa004e084d"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "run": "SPRING-ST04",
+          "launches": [
+            [
+              3,
+              {
+                "type": "SPRING_ACTIVATED",
+                "springId": "B",
+                "tick": 3,
+                "velocity": {
+                  "x": 0,
+                  "y": 9.5
+                },
+                "angularVelocity": 0
+              }
+            ]
+          ],
+          "requiredUse": {
+            "usedIds": [
+              "B"
+            ],
+            "achieved": true
+          },
+          "rawPairs": [
+            "B"
+          ]
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "正常SPRING_ACTIVATED",
+        "expected": "達成"
+      },
+      {
+        "caseId": "TC-D3-030-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 59
+        },
+        "assertion": "side, underside, and losing candidates remain unused",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "不作動／非選択",
+        "expected": "未達"
+      },
+      {
+        "caseId": "TC-D3-030-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-SPRING-DUT-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "f661c4e8b4558029bf2360fac23a9b4d691068608b3a0cea70d883aa004e084d"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": [
+          {
+            "run": "SPRING-SIDE",
+            "launches": [],
+            "requiredUse": {
+              "usedIds": [],
+              "achieved": false
+            },
+            "rawPairs": [
+              "B"
+            ]
+          },
+          {
+            "run": "SPRING-UNDERSIDE",
+            "launches": [],
+            "requiredUse": {
+              "usedIds": [],
+              "achieved": false
+            },
+            "rawPairs": [
+              "B"
+            ]
+          },
+          {
+            "run": "SPRING-DUAL-ALL-FREE",
+            "launches": [
+              [
+                1,
+                {
+                  "type": "SPRING_ACTIVATED",
+                  "springId": "A",
+                  "tick": 1,
+                  "velocity": {
+                    "x": 6.717514421272201,
+                    "y": 6.7175144212722016
+                  },
+                  "angularVelocity": -5.607623415186486
+                }
+              ]
+            ],
+            "requiredUse": {
+              "usedIds": [
+                "A"
+              ],
+              "achieved": true
+            },
+            "rawPairs": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "run": "SPRING-DUAL-WINNER-FIXED",
+            "launches": [
+              [
+                1,
+                {
+                  "type": "SPRING_ACTIVATED",
+                  "springId": "A",
+                  "tick": 1,
+                  "velocity": {
+                    "x": 6.717514421272201,
+                    "y": 6.7175144212722016
+                  },
+                  "angularVelocity": -5.607623415186486
+                }
+              ]
+            ],
+            "requiredUse": {
+              "usedIds": [],
+              "achieved": false
+            },
+            "rawPairs": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "frozenD2023ExactFixture": {
+          "proof": {
+            "runId": "CR006-E5-SPRING-FROZEN-FAMILY",
+            "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+            "rawLogSha256": "7482701293602e70c089955c736e2952de838c04ad15714eaf300786d38abc99"
+          },
+          "inputs": [
+            {
+              "id": "D2-023-BOTH-FREE",
+              "kind": "spring-dual",
+              "parts": [
+                {
+                  "x": 5.026981276760882,
+                  "y": 3.3730187232391184,
+                  "id": "first",
+                  "angleDeg": -45,
+                  "type": "B",
+                  "fixed": false
+                },
+                {
+                  "x": 4.573018723239118,
+                  "y": 3.3730187232391184,
+                  "id": "second",
+                  "angleDeg": 45,
+                  "type": "B",
+                  "fixed": false
+                }
+              ],
+              "speed": {
+                "x": -0.5,
+                "y": -2
+              },
+              "ball": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "window": 1,
+              "requirement": "B",
+              "gravity": {
+                "x": 0,
+                "y": -9.8
+              }
+            },
+            {
+              "id": "D2-023-WINNER-FIXED",
+              "kind": "spring-dual",
+              "parts": [
+                {
+                  "x": 5.026981276760882,
+                  "y": 3.3730187232391184,
+                  "id": "first",
+                  "angleDeg": -45,
+                  "type": "B",
+                  "fixed": false
+                },
+                {
+                  "x": 4.573018723239118,
+                  "y": 3.3730187232391184,
+                  "id": "second",
+                  "angleDeg": 45,
+                  "type": "B",
+                  "fixed": true
+                }
+              ],
+              "speed": {
+                "x": -0.5,
+                "y": -2
+              },
+              "ball": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "window": 1,
+              "requirement": "B",
+              "gravity": {
+                "x": 0,
+                "y": -9.8
+              }
+            }
+          ],
+          "measured": [
+            {
+              "usedIds": [
+                "second"
+              ],
+              "achieved": true
+            },
+            {
+              "usedIds": [],
+              "achieved": false
+            }
+          ]
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "RC7同時候補物理fixtureで独立raw観測から選択されるspringを事前固定対象とし、非選択側だけを自由必須対象にする隔離評価。選択側を固定とする対照は同じ配置のQA fixture。D2-016側面/裏面も実接触で確認。",
+        "expected": "対象の非選択・不作動springの使用記録なし。選択側が固定の場合は必須false。両方自由で1つ作動する対照では必須true。"
+      },
+      {
+        "caseId": "TC-D3-031-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 395
+        },
+        "assertion": "causal seesaw threshold table",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "固定合成正例3変種＋境界負例（rc9Protocols.seesaw）",
+        "expected": "3正例true、offset/力積/角速度差/角変化/episode等の各負例false。run/part単位の状態を記録。"
+      },
+      {
+        "caseId": "TC-D3-031-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-SEESAW-VERIFIED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "267c34dcb0fa1a3dc6a4c6fb27800b7da7a9d1f42f8982395b946247f3c5585a"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": [
+          {
+            "run": "SEESAW-False--0.6",
+            "load": {
+              "tick": 20,
+              "substep": 0,
+              "upper": true,
+              "point": {
+                "x": 4.2,
+                "y": 3.6825
+              },
+              "outward": {
+                "x": -0.004093777642732212,
+                "y": 0.9999916204571976
+              },
+              "offset": -0.5996572356187928,
+              "anchor": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "angle": 0.004093789077432199,
+              "before": 0,
+              "after": 1.3802847604983346,
+              "impulse": 0.35649316586340224,
+              "moment": 0.2137737063586396
+            },
+            "firstFiveDegrees": [
+              23,
+              0,
+              0.09589332981842338
+            ],
+            "requiredUse": true
+          },
+          {
+            "run": "SEESAW-False-0.6",
+            "load": {
+              "tick": 20,
+              "substep": 0,
+              "upper": true,
+              "point": {
+                "x": 5.3999999999999995,
+                "y": 3.6825
+              },
+              "outward": {
+                "x": 0.004093777642732212,
+                "y": 0.9999916204571976
+              },
+              "offset": 0.5996572356187928,
+              "anchor": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "angle": -0.004093789077432199,
+              "before": 0,
+              "after": -1.3802847604983346,
+              "impulse": 0.35649316586340224,
+              "moment": -0.2137737063586396
+            },
+            "firstFiveDegrees": [
+              23,
+              0,
+              -0.09589332981842354
+            ],
+            "requiredUse": true
+          }
+        ],
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "FX07: pivot(4.8,3.6)m、水平板1.92×.16、球r=.20、採用質量/重力/減衰/摩擦、支点左右±.60m、球中心Y=4.4、初速・角速0、120tick、各新規world。両側で独立rawの適格荷重と同episodeの5°を要求。初期静止の正例と鏡像。",
+        "expected": "左右の独立適格観測各1回以上、同episode中に有効使用true。未観測BLOCKED、資格あり未達FAIL。"
+      },
+      {
+        "caseId": "TC-D3-032-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 66
+        },
+        "assertion": "isolated fixed, stale, central, airborne and wrong loads",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "rc9Protocols.seesawの全unitNegativeVariantsを各独立入力、正例対照も実行",
+        "expected": "全負例false、正例true。固定・旧run・中央・無接触・既回転無加速・逆向き・離脱後の不正達成なし。"
+      },
+      {
+        "caseId": "TC-D3-032-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-SEESAW-VERIFIED-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "267c34dcb0fa1a3dc6a4c6fb27800b7da7a9d1f42f8982395b946247f3c5585a"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": [
+          {
+            "run": "SEESAW-True--0.6",
+            "load": {
+              "tick": 20,
+              "substep": 0,
+              "upper": true,
+              "point": {
+                "x": 4.2,
+                "y": 3.6825
+              },
+              "outward": {
+                "x": -0.004093777642732212,
+                "y": 0.9999916204571976
+              },
+              "offset": -0.5996572356187928,
+              "anchor": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "angle": 0.004093789077432199,
+              "before": 0,
+              "after": 1.3802847604983346,
+              "impulse": 0.35649316586340224,
+              "moment": 0.2137737063586396
+            },
+            "firstFiveDegrees": [
+              23,
+              0,
+              0.09589332981842338
+            ],
+            "requiredUse": false
+          },
+          {
+            "run": "SEESAW-True-0.6",
+            "load": {
+              "tick": 20,
+              "substep": 0,
+              "upper": true,
+              "point": {
+                "x": 5.3999999999999995,
+                "y": 3.6825
+              },
+              "outward": {
+                "x": 0.004093777642732212,
+                "y": 0.9999916204571976
+              },
+              "offset": 0.5996572356187928,
+              "anchor": {
+                "x": 4.8,
+                "y": 3.6
+              },
+              "angle": -0.004093789077432199,
+              "before": 0,
+              "after": -1.3802847604983346,
+              "impulse": 0.35649316586340224,
+              "moment": -0.2137737063586396
+            },
+            "firstFiveDegrees": [
+              23,
+              0,
+              -0.09589332981842354
+            ],
+            "requiredUse": false
+          },
+          {
+            "run": "SEESAW-CENTER",
+            "nativeLoads": 34,
+            "maxAngleRad": 0,
+            "used": false
+          },
+          {
+            "run": "SEESAW-AIR",
+            "nativeLoads": 0,
+            "maxAngleRad": 0.37462532005186655,
+            "used": false
+          }
+        ],
+        "isolatedRetaggingProof": {
+          "runId": "CR006-E5-BOARD-STALE",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "9118e6d5e3961d5465384c9a6ca6623a4dd2a6a6c3424d5aaecfcb41160639bb"
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "FX07と同じ寸法・採用設定、(a) QAでFIXED扱いの動的板に左右±.60m荷重、実接触と荷重・角変化を観測するがplayer使用はfalse、(b) 中央荷重 (4.8,4.4)・120tick、TC-D2-028の接触/偏差≤2°と未達、(c) 球(1.0,6.5)初速0、板の初期角0・初期角速+1rad/s、30tick、球接触なしで回転しても未達。旧runIDは(a)の実raw取得後にQAで前runタグへ置換し受信側に再供給するI検証として明記、実物理で旧runが自然発生したと主張しない。既回転/弱荷重の厳密な負例はC001合成証跡で独立確認。各試行で適格観測不可はBLOCKED。",
+        "expected": "物理負例各false、実rawと旧run再供給Iの証跡を区別。無資格BLOCKED、誤達成FAIL。"
+      },
+      {
+        "caseId": "TC-D3-033-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 402
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=2/3、正常クリア",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D3-033-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 409
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=0、正常CLEARED",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D3-033-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 416
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=2、正常CLEARED",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D3-033-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 423
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=3、正常CLEARED",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D3-034-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 430
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=4、正常クリア",
+        "expected": "星2"
+      },
+      {
+        "caseId": "TC-D3-034-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 437
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=4、正常CLEARED",
+        "expected": "星2"
+      },
+      {
+        "caseId": "TC-D3-035-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 444
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=5/6、正常クリア",
+        "expected": "星1"
+      },
+      {
+        "caseId": "TC-D3-035-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 451
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=5、正常CLEARED",
+        "expected": "星1"
+      },
+      {
+        "caseId": "TC-D3-035-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 458
+        },
+        "assertion": "star count uses run starting placements",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=6、正常CLEARED",
+        "expected": "星1"
+      },
+      {
+        "caseId": "TC-D3-036-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 73
+        },
+        "assertion": "failure, hints and undo do not contribute to stars",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "同じ攻略、失敗・ヒント・Undo回数変更",
+        "expected": "星不変"
+      },
+      {
+        "caseId": "TC-D3-036-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 465
+        },
+        "assertion": "nonclear does not alter saved best",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=2、終端=FAILED、過去ベストあり",
+        "expected": "今回星0、歴代星とベスト不変"
+      },
+      {
+        "caseId": "TC-D3-036-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 472
+        },
+        "assertion": "nonclear does not alter saved best",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=2、終端=ABORTED、過去ベストあり",
+        "expected": "今回星0、歴代星とベスト不変"
+      },
+      {
+        "caseId": "TC-D3-036-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 479
+        },
+        "assertion": "nonclear does not alter saved best",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "T=3、N=2、終端=ERROR、過去ベストあり",
+        "expected": "今回星0、歴代星とベスト不変"
+      },
+      {
+        "caseId": "TC-D3-037-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 80
+        },
+        "assertion": "only a strictly smaller legal design replaces the best",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "ベストなし→5→4→4→6",
+        "expected": "登録・改善・維持・維持"
+      },
+      {
+        "caseId": "TC-D3-037-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 87
+        },
+        "assertion": "start captures part objects and the array",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "実験開始時配置をコピー後、元の入力配列と要素を変更（QA）",
+        "expected": "実験配置・使用数・ベストの参照が独立"
+      },
+      {
+        "caseId": "TC-D3-038-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 94
+        },
+        "assertion": "new version is compared to no current best",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "旧互換ベスト3、現行初クリア4",
+        "expected": "現行新規登録"
+      },
+      {
+        "caseId": "TC-D3-039-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 101
+        },
+        "assertion": "unlock survives a later failure",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "初期→ST01クリア→再失敗",
+        "expected": "ST02解放維持"
+      },
+      {
+        "caseId": "TC-D3-040-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 108
+        },
+        "assertion": "achievement transitions issue one notification each across a reload",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "9/10→10/10→30星",
+        "expected": "達成表示対応、通知一意"
+      },
+      {
+        "caseId": "TC-D3-041-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 486
+        },
+        "assertion": "sample every sixth tick",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "tick0〜60",
+        "expected": "0,6,…60の11点"
+      },
+      {
+        "caseId": "TC-D3-042-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 493
+        },
+        "assertion": "add non-grid terminal tick once",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "tick15終端",
+        "expected": "0,6,12,15の4点"
+      },
+      {
+        "caseId": "TC-D3-043-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 500
+        },
+        "assertion": "both long termination trajectories",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "tick1197／1200終端",
+        "expected": "201点以内、終点重複なし"
+      },
+      {
+        "caseId": "TC-D3-043-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 507
+        },
+        "assertion": "1197 tick endpoint",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "tick0から1197で正常終端",
+        "expected": "201点、末尾tick=1197、tick一意・昇順"
+      },
+      {
+        "caseId": "TC-D3-043-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 514
+        },
+        "assertion": "1200 tick endpoint",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "tick0から1200で正常終端",
+        "expected": "201点、末尾tick=1200、tick一意・昇順"
+      },
+      {
+        "caseId": "TC-D3-044-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 115
+        },
+        "assertion": "clear and normal failed results alone replace trajectory",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "正常クリア／通常失敗／中止／ERROR",
+        "expected": "正常終了のみ軌跡置換"
+      },
+      {
+        "caseId": "TC-D3-045-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 129
+        },
+        "assertion": "previous trajectory survives design and display controls only",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "編集／Undo／ベスト／リセット／ステージ移動",
+        "expected": "前3維持、後2消去"
+      },
+      {
+        "caseId": "TC-D7-004-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 521
+        },
+        "assertion": "gap preserves but contributes no distance or contact duration",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "坂道微小切れ／完全離脱／別坂道",
+        "expected": "1tick≤.005mのみ保持、非接触加算なし"
+      },
+      {
+        "caseId": "TC-D7-004-C002",
+        "status": "BLOCKED",
+        "reason": "No native qualifying same-ramp one-complete-tick interruption and return, with nominal gap <= .005m.",
+        "candidateWorldsByRound": [
+          54,
+          64
+        ],
+        "controls": 2,
+        "qualificationCount": 0,
+        "frozenIssue": "FX-RAMP-GAP has unit inputs only. Native refreshed polygon-circle manifold persists within pinned .010m skin even when nominal separation is .005m.",
+        "disposition": "LS-11 finite native reproduction exhausted for the 2 permitted rounds; LS-01 if adjudication changes which contact or distance proves a break.",
+        "rawRuns": [
+          "cr006-e5-ramp-gap-r1",
+          "cr006-e5-ramp-gap-r2"
+        ],
+        "proof": [
+          {
+            "runId": "CR006-E5-RAMP-GAP-R1",
+            "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+            "rawLogSha256": "d01be61e5dfdc73e0fe4ce6d28f4512628c361bb012a638c03d3a501e21de2da"
+          },
+          {
+            "runId": "CR006-E5-RAMP-GAP-R2",
+            "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+            "rawLogSha256": "0127cf356edba3322566b3df737198742d0472eb7003840a3fbfb798ecd7a49d"
+          }
+        ],
+        "latestProductUnchanged": true,
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "坂道微小切れ／完全離脱／別坂道",
+        "expected": "1tick≤.005mのみ保持、非接触加算なし"
+      },
+      {
+        "caseId": "TC-D7-004-C003",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 528
+        },
+        "assertion": "exact .005 bridge",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "有効接触delta .10、gap .005・delta .08、接触 .10,.04",
+        "expected": "有効区間3、正味.24mで達成"
+      },
+      {
+        "caseId": "TC-D7-004-C004",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 535
+        },
+        "assertion": "excess distance breaks interval",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "有効接触delta .10、gap .005001、接触 .10,.04",
+        "expected": "区間分断、未達"
+      },
+      {
+        "caseId": "TC-D7-004-C005",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 542
+        },
+        "assertion": "two short gaps break interval",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "有効接触delta .10、gap .004を2更新、接触 .14",
+        "expected": "区間分断、未達"
+      },
+      {
+        "caseId": "TC-D7-004-C006",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 549
+        },
+        "assertion": "signed backtracking",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "接触 .10,.10,-.10,.10",
+        "expected": "正味.20、未達"
+      },
+      {
+        "caseId": "TC-D7-004-C007",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-03-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "48c0f1fcbcd16fc044536eb68e071066449e318359628f6f0ad6c513cd3dea84",
+          "line": 556
+        },
+        "assertion": "different ramps never merge",
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "異なる坂道A .12、B .12",
+        "expected": "合算禁止、未達"
+      },
+      {
+        "caseId": "TC-D7-005-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-GOAL-DUT-AT-TIP",
+          "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+          "rawLogSha256": "788eb5d7d42d43e3e2217317669ef44839420e061ee6eb6264888ee3c65b86f4"
+        },
+        "independentAssessment": {
+          "runId": "CR006-E5-ASSESSMENT",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+        },
+        "measured": {
+          "natural": [
+            {
+              "run": "NATURAL-CENTER-FORMAL",
+              "clearTick": 53,
+              "continuousIntervals": 30,
+              "maxStablePenetrationM": 0
+            },
+            {
+              "run": "NATURAL-SIDE-FORMAL",
+              "clearTick": 223,
+              "continuousIntervals": 30,
+              "maxStablePenetrationM": 0
+            }
+          ],
+          "speedRun": {
+            "run": "NATURAL-HIGH-EXIT",
+            "endY": 5.7697090127173265,
+            "stableTicks": 0
+          },
+          "isolatedPenetration": {
+            "mode": "isolated snapshot only",
+            "penetrationInput": {
+              "position": {
+                "x": 4.8,
+                "y": 2.5
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "penetration": 0.1
+            },
+            "independentExpected": false,
+            "actual": false
+          }
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "ゴール支持接触／貫通／高速通過",
+        "expected": "正常収容安定だけ成立"
+      },
+      {
+        "caseId": "TC-D7-006-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-CMD-04-FINAL-FIXTURES-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "7dfa9f5a0dfa069e1e751b8d468ee5eae8471989ce160bc3ab0c1f26b842448e",
+          "line": 122
+        },
+        "assertion": "stop, abort and resumed terminal delivery have one winner",
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "更新境界の中止／停止／クリア競合",
+        "expected": "二重更新・確定結果取消なし"
+      },
+      {
+        "caseId": "TC-D7-023-C013",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-MUTATIONS-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "40fe2597d9f9cc1a5d0d453fe3c68563e5c3d69b41857bd11bc6e9344ab39d51"
+        },
+        "mutation": "MUT-01",
+        "assertedIn": [
+          "TC-D3-034-C001",
+          "TC-D3-035-C001"
+        ],
+        "method": "I",
+        "commandId": "CMD-09",
+        "input": "MUT-01 星常時3を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D3-034/035の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C018",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-MUTATIONS-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "40fe2597d9f9cc1a5d0d453fe3c68563e5c3d69b41857bd11bc6e9344ab39d51"
+        },
+        "mutation": "MUT-06",
+        "assertedIn": [
+          "TC-D3-008-C001"
+        ],
+        "method": "I",
+        "commandId": "CMD-09",
+        "input": "MUT-06 ゴール接触即クリアを隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D3-004/008の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C019",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-MUTATIONS-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "40fe2597d9f9cc1a5d0d453fe3c68563e5c3d69b41857bd11bc6e9344ab39d51"
+        },
+        "mutation": "MUT-07",
+        "assertedIn": [
+          "TC-D3-032-C001"
+        ],
+        "method": "I",
+        "commandId": "CMD-09",
+        "input": "MUT-07 固定物で必須達成を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D3-032の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C020",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-MUTATIONS-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "40fe2597d9f9cc1a5d0d453fe3c68563e5c3d69b41857bd11bc6e9344ab39d51"
+        },
+        "mutation": "MUT-08",
+        "assertedIn": [
+          "TC-D3-018-C001",
+          "TC-D3-018-C002"
+        ],
+        "method": "I",
+        "commandId": "CMD-09",
+        "input": "MUT-08 時間切れ優先を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D3-018の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C021",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E5-MUTATIONS-FINAL",
+          "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+          "rawLogSha256": "40fe2597d9f9cc1a5d0d453fe3c68563e5c3d69b41857bd11bc6e9344ab39d51"
+        },
+        "mutation": "MUT-09",
+        "assertedIn": [
+          "TC-D3-021-C001"
+        ],
+        "method": "I",
+        "commandId": "CMD-09",
+        "input": "MUT-09 中止後進捗更新を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D3-021の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      }
+    ],
+    "projectRegression": {
+      "runId": "CR006-E5-REGRESSION-FINAL",
+      "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+      "rawLogSha256": "2cf26816356abd5daa37d385f1f1e15730b91ee47622c00f4a9cad0390d41b84"
+    },
+    "legacyRegression": {
+      "runId": "CR006-E5-LEGACY-REGRESSION",
+      "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+      "rawLogSha256": "80e7796d902eb09a078bd4a36c8b54998437b721c758caee89c3c65c07300a09"
+    },
+    "testDriverFailuresRetained": [
+      {
+        "runId": "CR006-E5-CMD-03",
+        "testedSha": "bfc0be4396607a2882a47e581586475a526784a1",
+        "rawLogSha256": "43523d99a54947bbde58c61c56988481cbdbfc554252f99758cfc4f984800419"
+      },
+      {
+        "runId": "CR006-E5-CMD-04",
+        "testedSha": "bfc0be4396607a2882a47e581586475a526784a1",
+        "rawLogSha256": "4123e8b4ee50e7ada89b1e74d8e7872097d6e05484065fc82d9caba7c4f3822c"
+      }
+    ]
   }
 }

@@ -199,5 +199,45 @@
       "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
       "rawLogSha256": "e8eb65e81614beebebf228ad8a752564311a77fc3a3e65a72057127bf65ed2ef"
     }
+  },
+  "CR006-E5": {
+    "independence": "Read-only e0_review (independent product/raw audit) and e1_test_plan (independent manifest, candidate history and native contact audit). GAME0010-CODEX-PRIMARY-01 only writer.",
+    "closed": [
+      {
+        "item": "Native spring run ID, native goal checkpoints, trajectory lifecycle and recovered unlock wiring",
+        "state": "verified in source and fixed tests"
+      },
+      {
+        "item": "Exact same-tick seesaw arm from pivot",
+        "state": "corrected ea78195 and qualified independent native positive and negative cases"
+      },
+      {
+        "item": "Signed .24m and no gap displacement assertion",
+        "state": "corrected d409f2c and exact 80+19 rerun"
+      },
+      {
+        "item": "Raw fixed seesaw replay into old run and exact D2-023 referenced spring fixture",
+        "state": "verified on isolated refeed and separate native rerun",
+        "proof": [
+          {
+            "runId": "CR006-E5-BOARD-STALE",
+            "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+            "rawLogSha256": "9118e6d5e3961d5465384c9a6ca6623a4dd2a6a6c3424d5aaecfcb41160639bb"
+          },
+          {
+            "runId": "CR006-E5-SPRING-FROZEN-FAMILY",
+            "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+            "rawLogSha256": "7482701293602e70c089955c736e2952de838c04ad15714eaf300786d38abc99"
+          }
+        ]
+      }
+    ],
+    "open": [
+      {
+        "severity": "High",
+        "caseId": "TC-D7-004-C002",
+        "finding": "No native micro-gap recovery qualifies in the two authorized rounds. No contract change or synthetic P substitution."
+      }
+    ]
   }
 }

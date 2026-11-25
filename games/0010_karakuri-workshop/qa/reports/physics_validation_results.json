@@ -1376,5 +1376,79 @@
     },
     "maxHighSpeedPivotM": 0.019901736280925113,
     "maxHighSpeedAngleDegrees": 30.141373316637008
+  },
+  "CR006-E5": {
+    "status": "HOLD",
+    "profile": "PP03",
+    "pass": 16,
+    "requiredPhysicalCases": 17,
+    "blockedCase": {
+      "caseId": "TC-D7-004-C002",
+      "status": "BLOCKED",
+      "reason": "No native qualifying same-ramp one-complete-tick interruption and return, with nominal gap <= .005m.",
+      "candidateWorldsByRound": [
+        54,
+        64
+      ],
+      "controls": 2,
+      "qualificationCount": 0,
+      "frozenIssue": "FX-RAMP-GAP has unit inputs only. Native refreshed polygon-circle manifold persists within pinned .010m skin even when nominal separation is .005m.",
+      "disposition": "LS-11 finite native reproduction exhausted for the 2 permitted rounds; LS-01 if adjudication changes which contact or distance proves a break.",
+      "rawRuns": [
+        "cr006-e5-ramp-gap-r1",
+        "cr006-e5-ramp-gap-r2"
+      ],
+      "proof": [
+        {
+          "runId": "CR006-E5-RAMP-GAP-R1",
+          "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+          "rawLogSha256": "d01be61e5dfdc73e0fe4ce6d28f4512628c361bb012a638c03d3a501e21de2da"
+        },
+        {
+          "runId": "CR006-E5-RAMP-GAP-R2",
+          "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+          "rawLogSha256": "0127cf356edba3322566b3df737198742d0472eb7003840a3fbfb798ecd7a49d"
+        }
+      ],
+      "latestProductUnchanged": true,
+      "method": "P",
+      "commandId": "CMD-05",
+      "input": "坂道微小切れ／完全離脱／別坂道",
+      "expected": "1tick≤.005mのみ保持、非接触加算なし"
+    },
+    "confirmation": {
+      "runId": "CR006-E5-ASSESSMENT",
+      "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+      "rawLogSha256": "ed9197fba4902aa2532ded9f4cdfdbc2bbfcaa05b3b34c31430d9c44fb7849d4"
+    },
+    "historicalFixedGoal": {
+      "runId": "CR006-E5-GOAL-FIXED",
+      "testedSha": "a239426962c00e359e01c4d6dbb108404237a06d",
+      "rawLogSha256": "45872bf18aa153e1990b06374df3ffac32ffdd153e6dcbb71e0554af64e28969"
+    },
+    "goalFixtureR1": {
+      "runId": "CR006-E5-GOAL-SUBSTEP-R1-RETRY",
+      "testedSha": "a239426962c00e359e01c4d6dbb108404237a06d",
+      "rawLogSha256": "adafc8660bce1c6ec51b513966ec0e8dbd0706d3e61c0e7114bb52aa21100a5b"
+    },
+    "fixedPlatformProbe": {
+      "runId": "CR006-E5-PLATFORM-FIXED",
+      "testedSha": "e89dba7ca8dbf62bc19f4850b742532d5ec25e7b",
+      "rawLogSha256": "1ee902dece1afb80809de3f9b1497e1b4f08e0cdbbb0dc85188af6ff502d32be"
+    },
+    "redesignedPlatformFirstCandidate": "PLATFORM-LOW-R1-00",
+    "initialSeesawFailureRetained": {
+      "runId": "CR006-E5-SEESAW-FIXED",
+      "testedSha": "e89dba7ca8dbf62bc19f4850b742532d5ec25e7b",
+      "rawLogSha256": "30418a015533aa8e622c44d444a90d52bdad87d276eadca63dbf3b8efe4aa337"
+    },
+    "nearMiss": {
+      "candidate": [
+        "RAMP-GAP-R1-43",
+        "RAMP-GAP-R1-44"
+      ],
+      "description": "Loss of upper contact qualification across tick 4/5, native contact remained. Full affected tick 5 exceeded .005m."
+    },
+    "projectPhysicsDidNotChangeDuringFixtureRedesign": true
   }
 }

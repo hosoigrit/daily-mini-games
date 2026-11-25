@@ -686,5 +686,44 @@
         "rawLogFile": "cr004-e1-baseline-regression-0009_three-move-hero.tap"
       }
     }
+  },
+  "CR006-E5": {
+    "project": {
+      "proof": {
+        "runId": "CR006-E5-REGRESSION-FINAL",
+        "testedSha": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+        "rawLogSha256": "2cf26816356abd5daa37d385f1f1e15730b91ee47622c00f4a9cad0390d41b84"
+      },
+      "pass": 267,
+      "fail": 0,
+      "skip": 0
+    },
+    "existingGames": {
+      "proof": {
+        "runId": "CR006-E5-LEGACY-REGRESSION",
+        "testedSha": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
+        "rawLogSha256": "80e7796d902eb09a078bd4a36c8b54998437b721c758caee89c3c65c07300a09"
+      },
+      "execution": {
+        "runId": "CR006-E5-LEGACY-REGRESSION",
+        "testedSha": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+        "node": "26.13.0",
+        "failures": 0,
+        "skipped": 0,
+        "passedPerGame": {
+          "0001_target-tap": 30,
+          "0002_light-panels": 36,
+          "0003_30sec-survival": 45,
+          "0004_wobbly-tower": 76,
+          "0005_hitofude-delivery": 52,
+          "0006_traffic-panic": 138,
+          "0007_weather-bakery": 1342,
+          "0008_three-minute-detective": 131,
+          "0009_three-move-hero": 169
+        },
+        "casesPassed": 2019
+      }
+    },
+    "fixedGameTreesUnchanged": true
   }
 }

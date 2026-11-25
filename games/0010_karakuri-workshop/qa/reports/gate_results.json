@@ -145,5 +145,22 @@
     "profile": "PP03",
     "proof": "qa/reports/automated_test_results.json",
     "next": "E5"
+  },
+  "EG-05": {
+    "status": "HOLD",
+    "sourceSHA": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+    "requiredCases": 121,
+    "casePasses": 120,
+    "blockers": [
+      "TC-D7-004-C002"
+    ],
+    "formalPhysicsFreeze": false,
+    "candidateTrialsUsed": 118,
+    "roundsUsed": 2,
+    "protectedAssets": "IDENTICAL",
+    "next": "Resolve the native contact-and-gap oracle/fixture before E6.",
+    "legacyCases": 2019,
+    "relatedRegressionCases": 267,
+    "qa": "NOT_STARTED"
   }
 }
