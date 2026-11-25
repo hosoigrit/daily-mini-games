@@ -1,0 +1,16 @@
+﻿id,priority,finding,action,status,close_condition
+FIN-01,HIGH,25 TCの直接要求欄が空欄,直接リンク補完・全行逆引き再計算,DESIGN_CORRECTED,参照検査で空欄と不整合ゼロ
+FIN-02,HIGH,μs境界の一部がtick JSONで表現不能,論理fixtureとJSON境界を分離,DESIGN_CORRECTED,TC-D2-025/035〜038改訂
+FIN-03,HIGH,停止後watermarkが処理済み境界より小さくなる,曲時刻Bとjudge軸b・再開時境界保持,DESIGN_CORRECTED,v0.6承認済み・operation_and_boundary_rules.md、TC-D4-029。実機Stage A。
+FIN-04,HIGH,最終受付CとFの時刻軸が曖昧,補正前song軸に統一しF同値保留,DESIGN_CORRECTED,TC-D4-021〜024具体化
+FIN-05,HIGH,契約の不足構成型,補完型追加・tsc検査・契約TCの一部具体化,DESIGN_CORRECTED,実装時の全契約テストはStage A
+FIN-06,HIGH,保存世代・証跡の関係と失敗fixture,単一pending・baseRevision・SD-V15負例定義,DESIGN_CORRECTED,実API競合・障害注入はStage A/D
+FIN-07,MEDIUM,補正最終拍・再割当・丸め・承認適用,具体値と負例を追加,DESIGN_CORRECTED,TC-D3-028〜035/D4-067〜068
+FIN-08,HIGH,状態遷移の許可・禁止が図だけ,状態遷移CSV作成,DESIGN_REVIEW_READY,到達性/モード/初期化・練習終了・再開失敗・中断優先・閲覧復帰を63遷移/19操作/2850組合せへ反映。新しい解釈の承認待ち。実際の全組合せ動作はStage A/D。
+FIN-09,HIGH,310件の全テストの再現可能性,55件具体化・共通fixture追加,DESK_REVIEW_COMPLETE_EXECUTION_NOT_RUN,旧保留80件を個別に再点検し、改訂または具体済み維持を記録。全310は仕様初稿統合済み、独立再現性検証・実行は未実施。
+FIN-10,HIGH,581行の意味的網羅性,要約補完と参照往復検査,STRUCTURAL_PASS_SEMANTIC_REVIEW_CANDIDATE,581行に期待値併記、リンク追加/再構成。全要求の各条件が網羅されているとの独立証明は未実施。
+FIN-11,HIGH,D1〜D4承認済み本文との完全同一性,統合候補作成・D5原文同梱,CONSOLIDATED_REVIEW_CANDIDATE,承認11区分と11設計領域を照合・曲別制作意図を追記。全過去本文の逐語複製ではない。
+FIN-12,HIGH,依存版・Codex環境・Pages現行構造,公式候補確認・依存固定手順,DEFERRED_PHASE4_A1,読取調査と許可後npm ci/ビルド実証
+FIN-13,HIGH,音声同期・入力配送・排他・性能の実現性,POCと性能閾値・合否規則,DEFERRED_STAGE_A,全POC・実機証跡
+FIN-14,HIGH,5曲15譜面5工場の品質,制作・採点・最低評価・人間受入仕様,DEFERRED_STAGE_B_D,全品質ゲートPASS
+FIN-15,MEDIUM,音声再生ID等の補完型,型追加・型検査,DESIGN_CORRECTED_APPROVAL_SUPPLEMENT,補正統計値の分数型のみ追加補正、時計整数Usは維持。型宣言チェックを再実施。

@@ -1,0 +1,4 @@
+v22.16.0
+Version 5.8.3
+tsc --noEmit --strict --skipLibCheck false --target ES2022 interface_contracts.d.ts
+exit=0

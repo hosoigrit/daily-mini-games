@@ -1,0 +1,21 @@
+{
+  "source_zip_sha256": "59ee581851f1f8d41ba2322b684c13bc138aa66855174d708ee6f18e51b5f581",
+  "source_files": 21,
+  "source_manifest_matches": 20,
+  "tc": 310,
+  "at": 125,
+  "trace_rows": 581,
+  "commands": 19,
+  "command_state_rows": 2850,
+  "state_transitions": 63,
+  "device_mandatory": 81,
+  "missing_refs": 0,
+  "reverse_mismatches": 0,
+  "typecheck_exit": 0,
+  "node": "v22.16.0",
+  "tsc": "Version 5.8.3",
+  "game_tests_executed": 0,
+  "phase3": "CLOSED by explicit user approval",
+  "phase4": "OPEN; local freeze candidate, registration not authorized",
+  "semantic_validation": "independent full semantic verification deferred as approved"
+}

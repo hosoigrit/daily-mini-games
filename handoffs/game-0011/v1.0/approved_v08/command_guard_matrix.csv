@@ -1,0 +1,20 @@
+﻿command,allowed_screen,allowed_session_state,additional_guard,effect,rejection
+SELECT_TRACK,MUSIC_SELECT,NONE;TERMINAL,解放済みmusicId。音源準備中も可,旧試聴停止・生成世代更新・選曲変更,ERR-001/008
+SELECT_DIFFICULTY,MUSIC_SELECT,NONE;TERMINAL,選択曲解放済み・E/N/H,選択難易度更新・音源不変,ERR-008
+START_PREVIEW,MUSIC_SELECT,NONE;TERMINAL,解放済みmusicId・音声利用操作・準備可能,旧試聴停止・最新要求の12秒試聴,ERR-003/004/008
+STOP_PREVIEW,MUSIC_SELECT,NONE;TERMINAL,試聴準備中または試聴中,音源停止・要求無効化,ERR-008
+START_GAME,MUSIC_SELECT;GAME,NONE;TERMINAL;READY;INITIALIZING,有効lease・未解決保存なし・解放曲・音源譜面素材準備済み。選曲画面からは新session、GAME READYは現sessionIdの開始/初期化再試行。 INITIALIZINGは再操作待ちフラグが有効な時だけ、旧予約なし。,試聴停止・新sessionまたはREADY→INITIALIZING,ERR-008/009/010/011/013
+PAUSE_GAME,GAME,COUNTDOWN;PREROLL;PLAYING;FINALIZING,現sessionId・正式または練習,PAUSING、旧境界確定,ERR-008
+RESUME_GAME,PAUSE,PAUSED,現sessionId・有効な時刻復旧条件・正式ならlease。正式/練習とも現在のlease確認。COUNTDOWNからの復帰は初回カウントをやり直す。,REHOLD_WAITまたはRESUMING,ERR-006/008/011
+RETRY_GAME,PAUSE;RESULT,PAUSED;TERMINAL,現sessionId・未解決保存なし・正式ならlease・対象準備。練習の結果では同教材のみ、正式結果を保存しない。,旧session解放、別IDでREADY,ERR-008/011/013
+ABORT_GAME,GAME;PAUSE,READY;INITIALIZING;COUNTDOWN;PREROLL;PLAYING;PAUSING;PAUSED;REHOLD_WAIT;RESUMING;FINALIZING,現sessionId・未封印。PAUSING中は既成立FAILEDを優先。PAUSINGは停止境界処理完了まで要求保留、成立済みFAILED優先。,ABORTED・正式記録なし,ERR-008
+APPLY_SETTINGS,SETTINGS,NONE;TERMINAL,有効lease・未解決保存なし・全設定検証済み,単一JSON設定更新。成功後に適用,ERR-008/011/013/018
+RETRY_SAVE,RESULT,TERMINAL,CLEAR/FAILED・SAVE_ERROR・現pending・lease/epoch整合。結果画面から閲覧へ移動した場合は既存未解決結果に戻れる。,再照合し保存または重複なし成功,ERR-011/013/016
+DISCARD_RESULT,RESULT,TERMINAL,CLEAR/FAILED・SAVE_ERROR・明示確認・最新保存状態確認可能,未保存のみ破棄、既保存は維持,ERR-008/011/016
+RESET_SETTINGS,SETTINGS,NONE;TERMINAL,lease・未解決保存なし,設定だけ既定値へ・revision+1,ERR-008/011/013
+RESET_PROGRESS,SETTINGS,NONE;TERMINAL,lease・未解決保存なし・confirmed=true,設定維持・新epoch・revision0,ERR-008/011/013
+START_CALIBRATION,SETTINGS,NONE;TERMINAL,計測なし・音声利用操作・時計有効。閲覧専用タブでは計測不可、lease必須。,SCR-09-Aで16拍計測（保存なし）,ERR-004/005/008
+STOP_CALIBRATION,CALIBRATION,NONE;TERMINAL,計測中または提案表示中,計測/提案破棄、設定維持,ERR-008
+APPLY_CALIBRATION,CALIBRATION,NONE;TERMINAL,現有効提案とoffset一致・confirmed=true・lease・未解決保存なし,補正だけ保存、成功後適用,ERR-008/011/013
+START_TUTORIAL,TUTORIAL,NONE;TERMINAL,有効lease・定義済みTUT-ID・準備済み・練習中でない。未解決保存がある場合の練習完了永続化は禁止。。練習中の保存は完了進捗のみ。,PracticeSession新ID、ライフ0終了なし,ERR-002/004/008
+SKIP_TUTORIAL,TUTORIAL;GAME;PAUSE;RESULT,NONE;READY;INITIALIZING;COUNTDOWN;PREROLL;PLAYING;PAUSING;PAUSED;REHOLD_WAIT;RESUMING;FINALIZING;TERMINAL,練習の選択画面または現PracticeSessionのみ。正式セッションでは拒否。練習完了済みの場合は完了記録を巻き戻さずメニューへ。,練習終了/メニュー、未完了は完了登録なし,ERR-008

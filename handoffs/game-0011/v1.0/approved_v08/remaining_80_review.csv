@@ -1,0 +1,81 @@
+﻿tc_id,decision,basis,procedure,expected,execution_status
+TC-D1-002,REVISED,個別の入力・期待値を補正,"TIME: BPM128/PPQ480、tick=0,120,240,360,480を共通変換へ渡す。各絶対tickを独立算出。","0,117188,234375,351563,468750μs。丸めた120tick値の反復加算をしない。",NOT RUN
+TC-D1-003,REVISED,個別の入力・期待値を補正,TIME: BPM144/PPQ480、48小節×1920=92160tickを変換。tick480と960も独立変換。,80000000μs、416667μs、833333μs。曲終端は80秒。,NOT RUN
+TC-D1-004,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"Tick変換単体: BPMを0,-1,NaN、tickを-1,0.5,NaN,Infinity,MAX_SAFE_INTEGER+1へ各々置換。",各不正値を変換前に拒否し、結果値を返さない。正常BPM100/tick0は0μs。,NOT RUN
+TC-D1-011,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,正解1000ms、補正0、±150001μsのDOWNを独立セッションで送信。遅い側は先行MISS処理後も演奏中のfixture。Wを全期限より進める。,各ケース空打ち1、当該ノーツMISS1、成功0。,NOT RUN
+TC-D1-016,REVISED,個別の入力・期待値を補正,合成A lane1 1000ms/B lane1 1100msに1050ms DOWN、1100ms UP。W=1050msと1050.001ms、さらに1250ms超へ進める。,AをP(+50ms)として選択、Bは未判定、同値Wでは入力未処理。Bは別入力がない限り期限後MISS。,NOT RUN
+TC-D1-023,REVISED,個別の入力・期待値を補正,NOTE target1000ms、offset0、DOWN発生1150ms・受取1200ms、UP発生1200ms。1200msでtimer→入力と入力→timerの順を別試行。1200.001ms以降にadvance。,W=1150msでは期限未処理。W>1150msでGOOD1、MISS0、空打ち0、両試行同じ結果。,NOT RUN
+TC-D1-029,REVISED,個別の入力・期待値を補正,NOTE: HOLD lane1 1000→2000ms、主体A、offset0、初期life100 EASY。1000ms DOWN、2000ms UP。各イベント前後のWを進め、終了期限2150ms超まで処理。,開始PERFECT1、終了PERFECT1。終了側は正解時刻順に一度だけ集計、空打ち0、入力解放済み、N=2。,NOT RUN
+TC-D1-030,REVISED,個別の入力・期待値を補正,NOTE: HOLD lane1 1000→2000ms、主体A、offset0、初期life100 EASY。1000ms DOWN、1850ms UP。各イベント前後のWを進め、終了期限2150ms超まで処理。,開始PERFECT1、終了GOOD1。終了側は正解時刻順に一度だけ集計、空打ち0、入力解放済み、N=2。,NOT RUN
+TC-D1-031,REVISED,個別の入力・期待値を補正,NOTE: HOLD lane1 1000→2000ms、主体A、offset0、初期life100 EASY。1000ms DOWN、1849ms UP。各イベント前後のWを進め、終了期限2150ms超まで処理。,開始PERFECT1、終了MISS1。終了側は正解時刻順に一度だけ集計、空打ち0、入力解放済み、N=2。,NOT RUN
+TC-D1-032,REVISED,個別の入力・期待値を補正,NOTE: HOLD lane1 1000→2000ms、主体A、offset0、初期life100 EASY。1000ms DOWN、2150ms UP。各イベント前後のWを進め、終了期限2150ms超まで処理。,開始PERFECT1、終了GOOD1。終了側は正解時刻順に一度だけ集計、空打ち0、入力解放済み、N=2。,NOT RUN
+TC-D1-033,REVISED,個別の入力・期待値を補正,NOTE: HOLD lane1 1000→2000ms、主体A、offset0、初期life100 EASY。1000ms DOWN、2151ms UP。各イベント前後のWを進め、終了期限2150ms超まで処理。,開始PERFECT1、終了MISS1。終了側は正解時刻順に一度だけ集計、空打ち0、入力解放済み、N=2。終了期限後UPで結果を復活させない。,NOT RUN
+TC-D1-037,REVISED,個別の入力・期待値を補正,HOLD lane1 1000→2000msを開始P。開始確定後にNORMALのlife=8となるテスト用状態を用意。別レーン3の1500msノーツをMISSにしW>1650ms、後で2000ms UP。,FAILED、開始Pは保持、終了判定は未プレイ。後続UPによる判定・回復・空打ちなし。内訳合計N。,NOT RUN
+TC-D1-038,REVISED,個別の入力・期待値を補正,"SCORE: NORMALの内部lifeUnits=14、同一正解時刻・左右各1の確定グループ[P,MISS]を投入。結果配列を逆順にした別試行も実施。",両試行内部lifeUnits=2、表示1、継続、0〜200範囲。,NOT RUN
+TC-D1-039,REVISED,個別の入力・期待値を補正,"SCORE: NORMALの内部lifeUnits=12、同一正解時刻・左右各1の確定グループ[P,MISS]を投入。結果配列を逆順にした別試行も実施。",両試行内部lifeUnits=0、表示0、FAILED封印、以後回復なし。,NOT RUN
+TC-D1-040,REVISED,個別の入力・期待値を補正,"SCORE: HARDの内部lifeUnits=20、同一正解時刻・左右各1の確定グループ[G,MISS]を投入。結果配列を逆順にした別試行も実施。",両試行内部lifeUnits=1、表示0.5、継続、0〜200範囲。,NOT RUN
+TC-D1-041,REVISED,個別の入力・期待値を補正,"SCORE: EASYの内部lifeUnits=196、同一正解時刻・左右各1の確定グループ[P,G]を投入。結果配列を逆順にした別試行も実施。",両試行内部lifeUnits=200、表示100、継続、0〜200範囲。,NOT RUN
+TC-D1-042,REVISED,個別の入力・期待値を補正,SCORE: 確定履歴で現在・最大コンボ50の状態を作る。同一正解時刻の左右[P/MISS]を集計。空打ちなし。結果配列を逆順にした試行も行う。,現在0、最大50。判定数は両側とも加算、空打ち0。順序で変化なし。,NOT RUN
+TC-D1-043,REVISED,個別の入力・期待値を補正,SCORE: 確定履歴で現在・最大コンボ50の状態を作る。同一正解時刻の左右[P/P]を集計。空打ちなし。結果配列を逆順にした試行も行う。,現在52、最大52。判定数は両側とも加算、空打ち0。順序で変化なし。,NOT RUN
+TC-D1-044,REVISED,個別の入力・期待値を補正,SCORE: 確定履歴で現在・最大コンボ50の状態を作る。同一正解時刻の左右[P/P]を集計。同じ論理時刻の空打ち1回を群の後に集計。結果配列を逆順にした試行も行う。,現在0、最大52。判定数は両側とも加算、空打ち1。順序で変化なし。,NOT RUN
+TC-D1-045,REVISED,個別の入力・期待値を補正,"SCORE: N=200、P=180,G=17,GOOD=3,MISS=0,未プレイ0、空打ち0の確定済み履歴を得点計算へ投入。",964000点、判定精度96.4%（空打ち減点前）、内訳200。,NOT RUN
+TC-D1-046,REVISED,個別の入力・期待値を補正,"SCORE: N=200、P=180,G=17,GOOD=3,MISS=0,未プレイ0、空打ち3の確定済み履歴を得点計算へ投入。",961000点、判定精度96.4%（空打ち減点前）、内訳200。,NOT RUN
+TC-D1-047,REVISED,個別の入力・期待値を補正,"SCORE: N=200、P=200,G=0,GOOD=0,MISS=0,未プレイ0、空打ち0の確定済み履歴を得点計算へ投入。",1000000点、判定精度100%（空打ち減点前）、内訳200。ALL PERFECT・FULL COMBO条件成立。,NOT RUN
+TC-D1-050,REVISED,個別の入力・期待値を補正,SESSION: 準備済み音源からSTART_GAME、AudioContext.resumeを拒否するfixture。再ユーザー操作で成功、再失敗を別試行。,音声初期化エラー案内、INITIALIZINGで開始待ち、時刻/判定/正式保存なし。成功時のみCOUNTDOWN。復旧不能ERROR。,NOT RUN
+TC-D1-062,REVISED,個別の入力・期待値を補正,DEV: タッチ3環境の試験譜面で正常HOLD中に画面ロック→10秒後解除。別試行で復帰時時計不正を注入する統合fixture。,安全停止、正常保持の再保持案内、復帰だけで自動再開しない。復元不能はリトライ/ERROR、正常復帰時のみ続行。物理端末記録を添付。,NOT RUN
+TC-D2-002,REVISED,個別の入力・期待値を補正,5曲のmasterについてmusicId、BPM、PPQ、拍子、totalBars、section表を統合§6の値と比較。別試行BPM=101/PPQ=479/beatsPerBar=3/totalBars=27をmusic-01へ各注入。,BPM100/120/128/144/160、PPQ480、4拍子、28/32/36/48/56。変更例はMUS-V02不適合、生成不可。,NOT RUN
+TC-D2-015,REVISED,個別の入力・期待値を補正,全5×E/N/Hの15チャートを取得しIDとnotesの一意性、同曲の難易度別音源定義・BPM・曲長・キャッシュキーを照合。欠落1譜面、重複chartId、難易度参照不一致を別試行。,15固有非空譜面、全3難易度、同曲音源不変。欠落/重複/不一致は正式コンテンツ検証FAIL、開始対象不正なら拒否。,NOT RUN
+TC-D2-025,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,コンパイル後の操作間隔検証器へ399999μsと400000μsのHOLDを独立投入。JSON統合検証ではBPM100/startTick480/endTick799と800を比較。,399999μsと799tick終了側はCHART-E07。400000μsおよび800tick終了側は他条件適合時許可。,NOT RUN
+TC-D2-035,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"BPM100の同一親指のTAPをtick480,600に配置。50ms保持、100ms解放間隔の操作列を生成。",150ms間隔を許可。,NOT RUN
+TC-D2-036,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"コンパイル後の操作検証器に149999μs間隔を注入。JSONではBPM100/tick480,599を独立検証。",CHART-E10で拒否。,NOT RUN
+TC-D2-037,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,BPM100 HOLD tick0→480、次の同親指TAP tick600。,解放後150msのため許可。,NOT RUN
+TC-D2-038,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,コンパイル後の操作検証器に解放後149999μsを注入。JSONではBPM100 HOLD0→480、次TAP599。,CHART-E10で拒否。,NOT RUN
+TC-D2-053,REVISED,個別の入力・期待値を補正,"QUALITY: 全5曲を全区間試聴しMQ各0〜5と配点・採点根拠を記録。計算fixtureで[80,85,85,85,90]、[79,95,95,95,95]、[80,80,80,80,80]を独立投入。",実評価は各>=80かつ平均>=85。例は順に合格(85)、個別未達、平均未達。低評価採用・必須欠落/権利/重大音質は別途HOLD。,NOT RUN
+TC-D2-054,REVISED,個別の入力・期待値を補正,QUALITY: 全15譜面でCQ各0〜5の採点と全区間の評価証跡を確認。集計fixtureで全15が80、1譜面79かつ他100を独立投入。,前者点数条件適合、後者HOLD。未評価区間・操作不能・重大リズム問題は点数に関わらずHOLD。,NOT RUN
+TC-D2-057,REVISED,個別の入力・期待値を補正,DEV: §10のタッチ端末分担15件すべてで両手親指1/2・3/4を用いて操作。通常/HOLD/CHORD/RAPIDの体験と評価区間を記録。完走不能時は他プレイ/評価者で未到達区間を補完。,15譜面全区間に評価証跡、重大操作不能・入力欠落・意図しないスクロールなし。未到達区間が残ればHOLD。全譜面APを人間には強制しない。,NOT RUN
+TC-D2-060,REVISED,個別の入力・期待値を補正,QUALITY: 5工場ごと全4機械・4ノーツ種・進行・停止・6品質を目視、VQ6項目とVIS8項目の評価根拠を記録。全80と1工場79の点数fixtureも比較。,各>=80かつVIS全適合、欠落・重大視認性問題なし。1工場79はHOLD。Stage B換算のみで全5工場合格にしない。,NOT RUN
+TC-D3-004,REVISED,個別の入力・期待値を補正,SESSION S2でlane1 HOLDING、成績・life・入力状態を記録。S1のDOWN/UPを同eventId/新eventIdで送りWを進める。,旧sessionの入力は無視、S2の成績・life・保持・空打ち・バッファ状態は不変。,NOT RUN
+TC-D3-013,REVISED,個別の入力・期待値を補正,固定論理入力履歴（TAP/HOLD/CHORD/RAPID、全P）を通常HUDとReactレンダー遅延fixtureで再生。同じ曲時刻と配送条件で比較。,確定履歴・判定精度・life・得点・終了結果一致。遅延で配送境界を超えた場合は別途安全停止仕様。,NOT RUN
+TC-D3-028,REVISED,個別の入力・期待値を補正,CAL: 16拍600ms間隔、warmup 4拍にも誤差-150msの入力を送信。評価拍のうち10/11/12回を+45msで別試行。最後の受付+配送待ち終了後に提案。,warmupを集計せず有効10/11/12、中央値45ms・MAD0・提案+45ms、承認前は設定・revision不変。,NOT RUN
+TC-D3-029,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"12有効入力の誤差を-50ms×6,+50ms×6とする。",中央値0・MAD50ms・提案可能。,NOT RUN
+TC-D3-030,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"12有効入力の誤差を-50.001ms×6,+50.001ms×6とする。",中央値0・MAD50.001ms・再計測。,NOT RUN
+TC-D3-031,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,12有効入力全て+200.001ms、別試行-200.001ms。,丸め前の中央値が範囲外なので再計測。,NOT RUN
+TC-D3-032,REVISED,個別の入力・期待値を補正,12有効入力全て+2.5ms、別試行-2.5ms。 10有効入力を+2499μs×5、+2500μs×5にし、別試行で符号反転。中央値を丸めず計算。,提案+5ms/-5ms。 中央値±2499.5μs、MAD0.5μs、5ms提案は両方0ms（負のゼロは0）。,NOT RUN
+TC-D3-033,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,評価拍に+20msと+30msの押下を送信、間にUP。既使用拍を最寄りとする2回目を隣拍へ振り替えない。,同じ拍には+20msの1件のみ、隣拍件数は増加しない。,NOT RUN
+TC-D3-035,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,既存補正-20ms、計測提案+45ms。拒否→値保持、別試行で承認→保存・再読込。,拒否時-20ms、承認時のみ+45msが有効かつ保存される。,NOT RUN
+TC-D3-040,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,全設定を初期値以外へ変更し、成績・解放・称号・練習進捗を配置。設定初期化を実行。,8設定が初期値、補正0、進捗・正式/参考記録・称号不変、epoch維持・revision+1。,NOT RUN
+TC-D3-046,REVISED,個別の入力・期待値を補正,SAVE: 過去に正式DでCLEARした譜面に、正式bestScoreを上回る整合したFAILED結果を別セッションとして保存。正式/参考・製品・称号・解放を前後比較し再読込。,正式bestScore/ランク/回数・製品・解放・称号は不変。参考最高点・最長到達率・最大コンボ・失敗回数・最新内訳/位置のみ更新。,NOT RUN
+TC-D3-059,REVISED,個別の入力・期待値を補正,ACH-01〜08について各達成直前の保存fixtureと達成結果、負例(FAILED/各称号に必要な条件1件不足/FC・APの空打ち等)を独立実行。初回ALL PERFECTの複数称号も確認。,各条件を満たした場合のみ1件登録。初回APは01/02/03同時更新。重複なし。 ACH-07は15譜面の正式最高ランクのみを使用し、参考FAILEDは不可。,NOT RUN
+TC-D4-003,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,準備済みsession S・世代G・再生ID Pのanchorを取得し、未準備・旧世代の通知を別試行。,S/G/P・再生位置一致。未成立ERR-005、古い世代は利用禁止。,NOT RUN
+TC-D4-004,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"固定anchor a0=10s,p0=1000ms,as=10s,s=0、補正+200ms、p=2200ms。未知世代・NaNを別試行。",song=1200000μs、judge=1000000μs。無効基準ERR-005/006、成績変化なし。,NOT RUN
+TC-D4-007,REVISED,個別の入力・期待値を補正,SCORE N=200、初期stateに左右2P groupを純粋reducerで適用し、同時刻GHOSTを適用。groupの一部ID重複、ghost ID重複、N=0、負countを独立注入。,P2・ghost1・combo0/max2・9000点、元state不変。各重複/不正ERR-018、部分更新なし。,NOT RUN
+TC-D4-008,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,各難易度の新規session lifeUnits=200を確認。内部lifeUnits=100（表示50）でP/G/GOOD/MISS/空打ちを個別集計。上限・下限・同時グループ・不正値を別試行。,E差分+6/+4/+2/-12、N+4/+2/0/-16、H+2/+1/0/-20、空打ち0。0〜200へclamp、異常ERR-018。,NOT RUN
+TC-D4-011,REVISED,個別の入力・期待値を補正,演奏中、正式CLEAR/FAILED封印後、ABORTED、ERROR、練習完了の各mode/stateでgetFinalResultを呼ぶ。外部から結果の変更を試行。,正式CLEAR/FAILEDだけ変更不能FinalResult、未封印・練習・ABORT/ERRORはnull。正式結果の変更なし。,NOT RUN
+TC-D4-016,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,購読し同値snapshot2回、正式更新1回、解除2回、再更新。,同値同参照、更新で新参照と通知、解除後通知0。,NOT RUN
+TC-D4-018,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,W=1150000μsに発生1149999/1150000の入力を投入、次W=1150001。逆行・処理済み境界より古い新入力を別試行。,最初は前者のみ、次は同値入力。逆行ERR-006、遅延超過ERR-007。再開直後のW未追いつき時は呼出保留。,NOT RUN
+TC-D4-021,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,D=2000ms、Tmax=2000ms、補正+200ms: C=2350ms（曲時刻）。C発生DOWNを有効ノーツへ割当。,GOOD(+150ms)、配送待ち後に1判定。,NOT RUN
+TC-D4-022,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,同fixtureでC+1μsの新規DOWN、最終判定を待つ。,判定・空打ち0件、物理入力状態は終了時に解放。,NOT RUN
+TC-D4-023,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,同fixture F=2400ms、入力がなくても現在曲時刻Fでadvance。,W=最終判定期限と同値、CLEAR未確定。,NOT RUN
+TC-D4-024,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,同fixture F+1μs、最後まで全判定を処理。残ライフ>0/最後のグループで0を別試行。,前者CLEAR・未プレイ0、後者FAILED一意。,NOT RUN
+TC-D4-027,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,Aレーン1正解1000ms未入力、Bレーン3正解1100msへ1000ms早期成功。W=1100msまで進め、W>1150msでA期限処理。,Aより先にBを集計しない。B正解時刻前の集計なし。AがFAILEDならB未プレイ。,NOT RUN
+TC-D4-034,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,"スコア0,1000000、および700000/800000/900000/950000/980000の-1,一致,+1を各投入。",D/C/B/A/S/SS閾値通り。,NOT RUN
+TC-D4-035,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,同じ正規化入力履歴・sequence・設定・譜面を固定時計で再生し、フレーム刻み16ms/33ms/不規則へ変更。描画座標を同じ時刻で比較。,終端結果・確定履歴一致、同一曲時刻の描画位置一致。,NOT RUN
+TC-D4-048,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,レーン1をpointerdown→レーン2へ移動→pointerup。保持中に他主体DOWNする場合も確認。,レーン2へ新規DOWNなし、元レーンのUP、元保持主体を奪わない。,NOT RUN
+TC-D4-063,REVISED,個別の入力・期待値を補正,正常SAVEを生成しfixture_catalog.mdのSD-V01〜15の各変更を独立に注入。正常例と、設定更新後の古いreceipt、未対応version、破損原文も確認。,各異常の該当code/pathを検出、原文維持・無断初期化なし。正常例・正当な過去receiptは許容。,NOT RUN
+TC-D4-067,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,16拍目の+300msに有効DOWNを送信。+300.001msを別試行。配送待ち境界同値と超過で確認。,境界内の1件のみ採用、同値時は確定保留、範囲外は不採用。,NOT RUN
+TC-D4-068,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,評価拍kとk+1の中間+300msに入力。早い拍未使用/使用済みの両ケース。,早い拍を選択。使用済みなら破棄し次拍に振替しない。,NOT RUN
+TC-D4-079,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,Track01 NORMAL/Track05 HARDを5環境で各3回、最初3秒除外、各試行の1000/中央値フレーム間隔、nearest-rank P95、最大を算出。,各試行55FPS以上・P95<=33.4ms・最大<=100ms。,NOT RUN
+TC-D4-080,REVISED,個別の入力・期待値を補正,5環境の試験曲およびDの指定正式譜面を各3試行し、開始/中盤/終盤・100ms監視・停止再開前後のanchor差を記録。配送時間の中央値/P95/P99/最大/50ms超数を記録。異常差20ms/20.001msと処理済み境界遅着を別の論理fixtureに注入。人間の聴覚操作感も記録。,正常区間の内部差<=20ms、異常時安全停止・復元不能ERROR。過去確定不変、物理音の遅延数値は測定機器なしで保証しない。実機の聴覚評価は別証跡。,NOT RUN
+TC-D4-087,REVISED,個別の入力・期待値を補正,全5曲・5工場・30品質・SFX・フォント・依存パッケージの来歴/ライセンスを配布物と照合。ブラウザネットワーク記録を初期起動→選曲→演奏→保存→全画面で採取。公開buildを秘密情報・個人情報取得・未許可外部URL・実行SVGについて検査。,来歴/権利/表示義務を確認、不要外部通信と個人情報取得・秘密情報混入なし。不明な素材/依存・未検証通信はHOLD、無根拠PASSなし。,NOT RUN
+TC-D4-088,REVISED,個別の入力・期待値を補正,Phase4で読み取り確認した既存#0001〜0010の承認済み必須テスト一覧・対象SHA・実行コマンドを固定。Stage Dで各ゲームの既存自動テストを実行し、公開リンク起動と代表プレイを比較。変更影響のある追加項目も実行。,既存10ゲームの適用必須全PASS、未実行・不明の基準はBLOCKED/HOLD、許可なく既存テストや期待値を変更しない。,NOT RUN
+TC-D4-089,REVISED,個別の入力・期待値を補正,device_acceptance_matrix.csvの適用必須セルを5物理環境で各独立実行し、実機チェック手順の操作・期待結果・環境を記録。キーボード/タッチ、ロック、画面回転、フォーカス、音声中断、保存、排他をそれぞれ確認。,全適用必須セルPASS、N/Aには理由、未実施/RUN/BLOCKEDはPASSに含めない。エミュレーションは実機代替不可。,NOT RUN
+TC-D5-003,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,全5曲を48kHz/2chで生成し、長さをround(曲長秒×48000)と比較。難易度を変更して準備ID/定義を比較。,3225600/3072000/3240000/3840000/4032000 frames、各2ch、難易度で同一音源。,NOT RUN
+TC-D5-006,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,8設定を有効な非初期値へ変更・保存・再起動。FAST/SLOWのON/OFFで早遅判定、設定キーで入力、0への個別補正リセットを確認。,全設定保持、補助表示の切替は判定不変、補正0だけの変更で他設定・進捗不変。,NOT RUN
+TC-D5-007,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,同一譜面でCLEAR複数回とFAILED複数回を異なる得点・到達率・コンボで保存し再読込。,正式/参考の最高値・回数・最新失敗内訳/位置・製品・解放・称号が独立して一致。,NOT RUN
+TC-D5-011,REVISED,個別の入力・期待値を補正,同一originでv1対応タブと未知schemaVersionを含むテストタブを用意し、固定ロック名の競合を再現。旧タブの権限喪失と未知版の保存要求を試す。,ロック名は版によらず同じ、更新者1、旧lease拒否、未知版原文不変。未実装の将来移行を実施済み扱いしない。,NOT RUN
+TC-D5-014,REVISED,個別の入力・期待値を補正,UI: 320×568/768×1024/1280×720 CSS pxと物理タッチ3端末。全画面のフォーカス順・操作ラベル・4ボタン各44×44以上・safe areaを測定。演奏領域でタッチしスクロール抑制、メニューで通常スクロール/拡大を確認。,操作可能・4レーン各44×44以上・識別可、演奏操作で意図しないスクロールなし、演奏外の通常操作を不必要に制限しない。,NOT RUN
+TC-D5-016,REVISED,個別の入力・期待値を補正,5曲のmaster・音色ID・調性・コード進行・セクション・ドラム/旋律・試聴区間を統合§6と制作記録に照合し、全区間を試聴。差異があれば変更承認記録を確認。,5曲固有の旋律/伴奏/音色/展開、承認基準または承認済み変更と一致、来歴確認。意図的な休符を除く異常無音なし。,NOT RUN
+TC-D5-017,REVISED,個別の入力・期待値を補正,全15譜面で整合したCLEAR/FAILED結果のfixtureを用意し、リザルトのP/G/GOOD/MISS/未プレイ/空打ち・得点/判定精度・rank・最大コンボ・life・到達率・製品品質・保存状態を比較。,表示が正式結果の計算と一致。N=内訳合計（空打ち除外）、CLEARは未プレイ0。FAILEDは未完成品・参考記録のみ。未保存表示を成功としない。,NOT RUN
+TC-D5-019,RETAINED_DESK_CHECK,具体値・対象・期待値を確認し既存仕様を維持。実装時にfixture化。,各速度・補正±200msについて同一の補正後論理入力を実現するよう補正前発生時刻を変えて再生。,速度・補正前時刻の違いで同一論理入力の判定、スコア、楽曲BPMが変わらない。,NOT RUN
+TC-D5-020,REVISED,個別の入力・期待値を補正,PREROLL(song=-200ms)、PLAYING(song=1500ms)、FINALIZING(song=D+100ms)で停止・再開。音声停止位置と再開アンカー、再生ID、新旧通知を記録。再開許可失敗を別試行で注入。,負位置は音源offset0・予約200ms後、PLAYINGは1500msから、FINALIZINGはBGMなし。旧通知無効、許可失敗時は安全停止/再試行、復元不能ERROR。,NOT RUN
+TC-D5-030,REVISED,個別の入力・期待値を補正,正式CLEAR/FAILED、練習完了、ABORT/ERRORの結果経路を比較。正式リザルトから選曲/メニュー/リトライ、未保存・確認不能では閲覧遷移と再試行/破棄の復帰、ページ離脱警告を確認。,正式結果のみ保存対象。未保存結果を持つ間は閲覧可・次の正式開始/設定/初期化/練習進捗更新不可。RESULTへ復帰可能、既保存を巻き戻さない。練習結果は正式記録なし。,NOT RUN
