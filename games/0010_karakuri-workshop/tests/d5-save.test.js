@@ -320,15 +320,15 @@ for(const [i,mutation,changed] of [
   });
 }
 
-async function instantiate(id,data=fixture()){
+async function instantiate(id,data=fixture(),{makeExperiment,effects=[]}={}){
     const {createGameController}=await import('../src/app/controller.js');
     const f=setup(data);
     await f.repository.start();
     const identities=Object.fromEntries(Object.entries(designs).map(([k,v])=>[k,v.identity]));
     const calls=[];
     const scene=createGameController({stages:stageSource.getStages(),identities,hints:{},
-      storage:f.repository,change(){},schedule:fn=>{calls.push(fn);return calls.length;},cancelFrame(){},
-      sound:{play(){},end(){},observe(){},begin(){},stop(){},resume(){},configure(){}}});
+      storage:f.repository,change(){},schedule:fn=>{calls.push(fn);return calls.length;},cancelFrame(){},makeExperiment,
+      sound:{play(name){effects.push(name);},end(){},observe(){},begin(){},stop(){},resume(){},configure(){}}});
     assert(scene.dispatch({type:'enter'}));assert(scene.dispatch({type:'stage',id}));
     return {...f,scene,calls};
 }
@@ -503,4 +503,84 @@ child('TC-D7-009-C001',()=>{
   assert.deepEqual(second.stages['01'].previousBest,saved);
   assert.equal(second.stages['01'].currentBest,null);
   assert.deepEqual(second.stages['01'].progress,{cleared:true,historicalBestStars:3});
+});
+
+function run(f,expected){
+  assert(f.scene.dispatch({type:'start'}));
+  for(let index=0;index<=1210&&f.scene.state().screen==='RUNNING';index++)f.calls.at(-1)(index*1000/60);
+  assert.equal(f.scene.state().screen,expected);
+  return f.scene.state().result;
+}
+const addNormal=f=>f.scene.dispatch({type:'add',id:'r1',partType:'R',gridX:12,gridY:10,angleDeg:30});
+child('TC-D5-008-C001',async()=>{
+  const f=await instantiate('01');
+  assert(addNormal(f));
+  const clear=run(f,'CLEARED');
+  const s=expectRevision(f,2);
+  assert.equal(f.writes.length,2);
+  assert.deepEqual(s.stages['01'].progress,{cleared:true,historicalBestStars:3});
+  assert.deepEqual(s.stages['01'].currentBest,activeBest('01',[ramp]));
+  return {actual:clear,terminalWriteCount:f.writes.length-1};
+});
+child('TC-D5-009-C001',async()=>{
+  const f=await instantiate('01');
+  const before=f.bytes.get(save.SAVE_KEY);
+  const fail=run(f,'FAILED');assert.equal(fail.code,'FL-003');
+  f.scene.dispatch({type:'redesign'});assert(f.scene.dispatch({type:'start'}));assert(f.scene.dispatch({type:'abort'}));
+  assert.equal(f.bytes.get(save.SAVE_KEY),before);assert.equal(f.writes.length,0);
+  const isolate=await instantiate('01',fixture(),{makeExperiment(stage,design,options){
+    return {runId:options.runId,step:()=>({tick:1,position:stage.ball,error:true}),dispose(){}};
+  }});
+  const initial=isolate.bytes.get(save.SAVE_KEY);
+  const error=run(isolate,'ERROR');
+  assert.equal(error.code,'PHYSICS_ERROR');
+  assert.equal(isolate.bytes.get(save.SAVE_KEY),initial);assert.equal(isolate.writes.length,0);
+  return {fail,error,errorMode:'isolated application error delivery, no physical fault claimed'};
+});
+child('TC-D5-040-C001',async()=>{
+  const existing=fixture();
+  for(const id of ['01','02','03','04'])existing.stages[id].progress={cleared:true,historicalBestStars:3};
+  existing.stages['04'].previousBest={...activeBest('04',[{id:'spring-old',type:'spring',gridX:6,gridY:25,angleDeg:15}]),
+    compatibilityId:'historic-id'};
+  const f=await instantiate('04',existing);
+  for(const p of [
+    {id:'right',partType:'P',gridX:35,gridY:10,angleDeg:0},
+    {id:'ramp',partType:'R',gridX:5,gridY:7,angleDeg:0},
+    {id:'spring',partType:'B',gridX:6,gridY:25,angleDeg:15},
+  ])assert(f.scene.dispatch({type:'add',...p}));
+  const terminal=run(f,'CLEARED');
+  const row=expectRevision(f,4).stages['04'];
+  assert.equal(row.currentBest.usedParts,3);
+  assert.equal(row.currentBest.stars,2);
+  assert.deepEqual(row.previousBest,existing.stages['04'].previousBest);
+  assert.equal(row.progress.historicalBestStars,3);
+  return {terminal,best:row.currentBest};
+});
+child('TC-D5-042-C001',async()=>{
+  const f=await instantiate('01');
+  assert(addNormal(f));run(f,'CLEARED');
+  assert(f.scene.dispatch({type:'redesign'}));assert(f.scene.state().previousTrajectory);
+  assert(f.scene.dispatch({type:'request-reset'}));assert(f.scene.dispatch({type:'confirm'}));
+  const saved=expectRevision(f,3).stages['01'];
+  assert.deepEqual(saved.draft.placements,[]);
+  assert.equal(f.scene.state().editor.history.length,0);
+  assert.equal(f.scene.state().previousTrajectory,null);
+  assert.deepEqual(saved.progress,{cleared:true,historicalBestStars:3});
+});
+child('TC-D6-036-C001',async()=>{
+  const effects=[];
+  const f=await instantiate('01',fixture(),{effects});
+  assert(addNormal(f));
+  assert(f.scene.dispatch({type:'rotate',id:'r1',angleDeg:45}));
+  assert.equal(f.scene.dispatch({type:'rotate',id:'r1',angleDeg:19}),false);
+  assert.equal(f.scene.dispatch({type:'add',id:'r2',partType:'R',gridX:12,gridY:10,angleDeg:30}),false);
+  assert.deepEqual(effects,['place','rotate']);
+  return {effects};
+});
+child('TC-D6-033-C001',async()=>{
+  const plain=await instantiate('01');
+  const themed=await instantiate('01',fixture(),{effects:[]});
+  assert(addNormal(plain));assert(addNormal(themed));
+  assert.equal(run(plain,'CLEARED').tick,run(themed,'CLEARED').tick);
+  assert.deepEqual(plain.scene.state().previousTrajectory,themed.scene.state().previousTrajectory);
 });

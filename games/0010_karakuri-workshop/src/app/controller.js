@@ -14,7 +14,7 @@ const failMessages = {
 };
 
 export function createGameController({stages, identities, hints, storage, change, sound,
-  schedule = requestAnimationFrame, cancelFrame = cancelAnimationFrame}) {
+  schedule = requestAnimationFrame, cancelFrame = cancelAnimationFrame, makeExperiment = createStageExperiment}) {
   let screen='TITLE', stage=null, editor=null, experiment=null, session=null, designId=0, frame=null, runSerial=0;
   let snapshot=null, current=null, dialog=null, ghost=null, hintConfirmed=false, showTrail=true, pauseReason='';
   let notice='';
@@ -117,7 +117,7 @@ export function createGameController({stages, identities, hints, storage, change
     editor=settled.state;
     ghost=null;dialog=null;snapshot=null;current=null;
     bestUpdated=false;newStars=0;runGeneration=storage.read().generation;
-    experiment=createStageExperiment(stage,editor.placements,{
+    experiment=makeExperiment(stage,editor.placements,{
       runId:id,observe:obs=>{snapshot=obs;},observePresentation:true,
     });
     session.start({id,initialPosition:stage.ball,placements:editor.placements,stageId:stage.id,
