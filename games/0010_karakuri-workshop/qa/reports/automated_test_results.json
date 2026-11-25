@@ -1761,5 +1761,1060 @@
     }
   ],
   "otherFormalStatus": "Explicit E1 only. Legacy E0 cases and E2–E8 require separate execution. No Phase 6 transfer.",
-  "reuseBasis": "Candidate tests used explicit PP03. The selection commit changed only the default; explicit/implicit baseline states and all contact records are byte-identical in run 74, selected default regression run 75."
+  "reuseBasis": "Candidate tests used explicit PP03. The selection commit changed only the default; explicit/implicit baseline states and all contact records are byte-identical in run 74, selected default regression run 75.",
+  "E2": {
+    "stage": "E2",
+    "source": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+    "mandatory": 69,
+    "pass": 69,
+    "caseResults": [
+      {
+        "caseId": "TC-D2-001-C001",
+        "status": "PASS",
+        "assertion": "approved part properties",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 3
+        },
+        "method": "U",
+        "input": "4種類定義",
+        "expected": "承認寸法・属性一致"
+      },
+      {
+        "caseId": "TC-D2-002-C001",
+        "status": "PASS",
+        "assertion": "allowed set only",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 9
+        },
+        "method": "U",
+        "input": "坂道−60〜60を15°刻み、範囲外",
+        "expected": "9角度のみ受理"
+      },
+      {
+        "caseId": "TC-D2-002-C002",
+        "status": "PASS",
+        "assertion": "R -75°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 15
+        },
+        "method": "U",
+        "input": "坂道角度 -75°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C003",
+        "status": "PASS",
+        "assertion": "R -61°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 21
+        },
+        "method": "U",
+        "input": "坂道角度 -61°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C004",
+        "status": "PASS",
+        "assertion": "R -59°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 27
+        },
+        "method": "U",
+        "input": "坂道角度 -59°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C005",
+        "status": "PASS",
+        "assertion": "R -1°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 33
+        },
+        "method": "U",
+        "input": "坂道角度 -1°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C006",
+        "status": "PASS",
+        "assertion": "R 1°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 39
+        },
+        "method": "U",
+        "input": "坂道角度 1°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C007",
+        "status": "PASS",
+        "assertion": "R 59°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 45
+        },
+        "method": "U",
+        "input": "坂道角度 59°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C008",
+        "status": "PASS",
+        "assertion": "R 61°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 51
+        },
+        "method": "U",
+        "input": "坂道角度 61°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C009",
+        "status": "PASS",
+        "assertion": "R 75°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 57
+        },
+        "method": "U",
+        "input": "坂道角度 75°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-002-C010",
+        "status": "PASS",
+        "assertion": "R -60°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 63
+        },
+        "method": "U",
+        "input": "坂道角度 -60°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C011",
+        "status": "PASS",
+        "assertion": "R -45°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 69
+        },
+        "method": "U",
+        "input": "坂道角度 -45°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C012",
+        "status": "PASS",
+        "assertion": "R -30°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 75
+        },
+        "method": "U",
+        "input": "坂道角度 -30°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C013",
+        "status": "PASS",
+        "assertion": "R -15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 81
+        },
+        "method": "U",
+        "input": "坂道角度 -15°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C014",
+        "status": "PASS",
+        "assertion": "R 0°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 87
+        },
+        "method": "U",
+        "input": "坂道角度 0°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C015",
+        "status": "PASS",
+        "assertion": "R 15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 93
+        },
+        "method": "U",
+        "input": "坂道角度 15°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C016",
+        "status": "PASS",
+        "assertion": "R 30°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 99
+        },
+        "method": "U",
+        "input": "坂道角度 30°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C017",
+        "status": "PASS",
+        "assertion": "R 45°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 105
+        },
+        "method": "U",
+        "input": "坂道角度 45°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-002-C018",
+        "status": "PASS",
+        "assertion": "R 60°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 111
+        },
+        "method": "U",
+        "input": "坂道角度 60°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-003-C001",
+        "status": "PASS",
+        "assertion": "allowed set only",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 117
+        },
+        "method": "U",
+        "input": "足場0,±15°",
+        "expected": "0のみ受理"
+      },
+      {
+        "caseId": "TC-D2-003-C002",
+        "status": "PASS",
+        "assertion": "P -15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 123
+        },
+        "method": "U",
+        "input": "角度 -15°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-003-C003",
+        "status": "PASS",
+        "assertion": "P 0°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 129
+        },
+        "method": "U",
+        "input": "角度 0°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-003-C004",
+        "status": "PASS",
+        "assertion": "P 15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 135
+        },
+        "method": "U",
+        "input": "角度 15°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C001",
+        "status": "PASS",
+        "assertion": "allowed set only",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 141
+        },
+        "method": "U",
+        "input": "バネ−45〜45を15°刻み、範囲外",
+        "expected": "7角度のみ受理"
+      },
+      {
+        "caseId": "TC-D2-004-C002",
+        "status": "PASS",
+        "assertion": "B -60°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 147
+        },
+        "method": "U",
+        "input": "バネ角度 -60°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C003",
+        "status": "PASS",
+        "assertion": "B -46°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 153
+        },
+        "method": "U",
+        "input": "バネ角度 -46°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C004",
+        "status": "PASS",
+        "assertion": "B -44°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 159
+        },
+        "method": "U",
+        "input": "バネ角度 -44°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C005",
+        "status": "PASS",
+        "assertion": "B -1°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 165
+        },
+        "method": "U",
+        "input": "バネ角度 -1°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C006",
+        "status": "PASS",
+        "assertion": "B 1°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 171
+        },
+        "method": "U",
+        "input": "バネ角度 1°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C007",
+        "status": "PASS",
+        "assertion": "B 44°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 177
+        },
+        "method": "U",
+        "input": "バネ角度 44°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C008",
+        "status": "PASS",
+        "assertion": "B 46°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 183
+        },
+        "method": "U",
+        "input": "バネ角度 46°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C009",
+        "status": "PASS",
+        "assertion": "B 60°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 189
+        },
+        "method": "U",
+        "input": "バネ角度 60°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-004-C010",
+        "status": "PASS",
+        "assertion": "B -45°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 195
+        },
+        "method": "U",
+        "input": "バネ角度 -45°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C011",
+        "status": "PASS",
+        "assertion": "B -30°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 201
+        },
+        "method": "U",
+        "input": "バネ角度 -30°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C012",
+        "status": "PASS",
+        "assertion": "B -15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 207
+        },
+        "method": "U",
+        "input": "バネ角度 -15°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C013",
+        "status": "PASS",
+        "assertion": "B 0°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 213
+        },
+        "method": "U",
+        "input": "バネ角度 0°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C014",
+        "status": "PASS",
+        "assertion": "B 15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 219
+        },
+        "method": "U",
+        "input": "バネ角度 15°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C015",
+        "status": "PASS",
+        "assertion": "B 30°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 225
+        },
+        "method": "U",
+        "input": "バネ角度 30°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-004-C016",
+        "status": "PASS",
+        "assertion": "B 45°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 231
+        },
+        "method": "U",
+        "input": "バネ角度 45°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-005-C001",
+        "status": "PASS",
+        "assertion": "allowed set only",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 237
+        },
+        "method": "U",
+        "input": "板0,±15°",
+        "expected": "0のみ受理"
+      },
+      {
+        "caseId": "TC-D2-005-C002",
+        "status": "PASS",
+        "assertion": "S -15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 243
+        },
+        "method": "U",
+        "input": "角度 -15°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-005-C003",
+        "status": "PASS",
+        "assertion": "S 0°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 249
+        },
+        "method": "U",
+        "input": "角度 0°",
+        "expected": "受理"
+      },
+      {
+        "caseId": "TC-D2-005-C004",
+        "status": "PASS",
+        "assertion": "S 15°",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 255
+        },
+        "method": "U",
+        "input": "角度 15°",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-006-C001",
+        "status": "PASS",
+        "assertion": "coordinate snapping",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 261
+        },
+        "method": "U",
+        "input": "論理座標11,12,13,36",
+        "expected": "吸着0,24,24,48"
+      },
+      {
+        "caseId": "TC-D2-006-C002",
+        "status": "PASS",
+        "assertion": "snap 11",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 267
+        },
+        "method": "U",
+        "input": "論理座標 11",
+        "expected": "吸着値 0"
+      },
+      {
+        "caseId": "TC-D2-006-C003",
+        "status": "PASS",
+        "assertion": "snap 12",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 273
+        },
+        "method": "U",
+        "input": "論理座標 12",
+        "expected": "吸着値 24"
+      },
+      {
+        "caseId": "TC-D2-006-C004",
+        "status": "PASS",
+        "assertion": "snap 13",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 279
+        },
+        "method": "U",
+        "input": "論理座標 13",
+        "expected": "吸着値 24"
+      },
+      {
+        "caseId": "TC-D2-006-C005",
+        "status": "PASS",
+        "assertion": "snap 36",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 285
+        },
+        "method": "U",
+        "input": "論理座標 36",
+        "expected": "吸着値 48"
+      },
+      {
+        "caseId": "TC-D2-007-C001",
+        "status": "PASS",
+        "assertion": "outer silhouette within board",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 291
+        },
+        "method": "U",
+        "input": "中心が盤面端／内部",
+        "expected": "全形状収容時のみ許可"
+      },
+      {
+        "caseId": "TC-D2-008-C001",
+        "status": "PASS",
+        "assertion": "second geometrically legal ramp rejected for inventory",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 297
+        },
+        "method": "I",
+        "input": "在庫1で2個目追加",
+        "expected": "拒否、配置・在庫・Undo不変"
+      },
+      {
+        "caseId": "TC-D2-009-C001",
+        "status": "PASS",
+        "assertion": "fixed ramp unavailable to edit, move, rotate, delete",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 303
+        },
+        "method": "I",
+        "input": "固定物を移動／削除／回転",
+        "expected": "拒否、状態不変"
+      },
+      {
+        "caseId": "TC-D2-010-C001",
+        "status": "PASS",
+        "assertion": "rectangle boundaries may touch",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 309
+        },
+        "method": "U",
+        "input": "水平足場同士の中心距離1.20m",
+        "expected": "接触許可"
+      },
+      {
+        "caseId": "TC-D2-011-C001",
+        "status": "PASS",
+        "assertion": "one centimetre rectangle overlap rejected",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 315
+        },
+        "method": "U",
+        "input": "水平足場同士の中心距離1.19m",
+        "expected": "内部重複拒否"
+      },
+      {
+        "caseId": "TC-D2-012-C001",
+        "status": "PASS",
+        "assertion": "overlapping AABB and disjoint oriented rectangles",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 321
+        },
+        "method": "U",
+        "input": "A=(3,3), B=(3+.30/√2,3-.30/√2), 物理+45°平行、1.68×.16",
+        "expected": "AABB重複、法線中心距離.30>.16のため内部非重複"
+      },
+      {
+        "caseId": "TC-D2-013-C001",
+        "status": "PASS",
+        "assertion": "circle tangent and one centimetre overlap",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 327
+        },
+        "method": "U",
+        "input": "初期球外周接触／0.01m侵入",
+        "expected": "許可／拒否"
+      },
+      {
+        "caseId": "TC-D2-014-C001",
+        "status": "PASS",
+        "assertion": "goal protection interior versus boundary",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 333
+        },
+        "method": "U",
+        "input": "ゴール保護領域内部／境界接触",
+        "expected": "拒否／許可"
+      },
+      {
+        "caseId": "TC-D2-031-C001",
+        "status": "PASS",
+        "assertion": "reservation outside the initial plate",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 339
+        },
+        "method": "U",
+        "input": "板支点(4.8,3.6)、障害物中心(5.52,4.08) .16×.16",
+        "expected": "初期板は非重複、予約領域内部重複で拒否"
+      },
+      {
+        "caseId": "TC-D2-032-C001",
+        "status": "PASS",
+        "assertion": "reservation between sampled angles",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 345
+        },
+        "method": "U",
+        "input": "板支点(4.8,3.6)、p=支点+回転12.5°(0.96,0.08)、.002×.002の幾何fixture",
+        "expected": "pは連続可動領域内、包含矩形の内部重複で拒否"
+      },
+      {
+        "caseId": "TC-D2-033-C001",
+        "status": "PASS",
+        "assertion": "two swept reserve envelopes may conflict",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 351
+        },
+        "method": "U",
+        "input": "2板の予約領域内部重複",
+        "expected": "拒否"
+      },
+      {
+        "caseId": "TC-D2-034-C001",
+        "status": "PASS",
+        "assertion": "legal placement independent of order",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 357
+        },
+        "method": "U",
+        "input": "同じ完成配置を逆順追加",
+        "expected": "合法性一致"
+      },
+      {
+        "caseId": "TC-D2-034-C002",
+        "status": "PASS",
+        "assertion": "editor yields same canonical layout and inventory in either order",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 363
+        },
+        "method": "I",
+        "input": "同じ完成配置を逆順追加",
+        "expected": "合法性一致"
+      },
+      {
+        "caseId": "TC-D2-036-C001",
+        "status": "PASS",
+        "assertion": "draft rotations commit one placement",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 369
+        },
+        "method": "I",
+        "input": "仮坂道+30°を合法位置へ配置",
+        "expected": "指定角度で1回確定"
+      },
+      {
+        "caseId": "TC-D2-037-C001",
+        "status": "PASS",
+        "assertion": "invalid move and drag interruption preserve committed state",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 375
+        },
+        "method": "I",
+        "input": "無効移動／pointercancel／回転中断",
+        "expected": "確定状態不変"
+      },
+      {
+        "caseId": "TC-D2-038-C001",
+        "status": "PASS",
+        "assertion": "move rotate delete and four undo snapshots",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 381
+        },
+        "method": "I",
+        "input": "配置→移動→回転→削除→順次Undo",
+        "expected": "各直前状態と在庫復元"
+      },
+      {
+        "caseId": "TC-D2-039-C001",
+        "status": "PASS",
+        "assertion": "history retains the last fifty confirmed commands",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 387
+        },
+        "method": "I",
+        "input": "有効操作51回→Undo51回",
+        "expected": "50回のみ復元"
+      },
+      {
+        "caseId": "TC-D2-040-C001",
+        "status": "PASS",
+        "assertion": "confirmation reset and best load retain the required state",
+        "proof": {
+          "runId": "CR005-E2-PLACEMENT-85",
+          "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+          "raw": "cr005-e2-placement-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 393
+        },
+        "additionalProof": {
+          "runId": "CR005-E2-PAIRED-88",
+          "sha256": "0e53456979b3268f2ca21c90547e5effd959c5f9042bd4ecdbbccf2c1938c729",
+          "raw": "cr005-e2-paired.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498"
+        },
+        "method": "I",
+        "input": "リセット／確認済みベスト読込",
+        "expected": "履歴消去／1操作としてUndo可"
+      },
+      {
+        "caseId": "TC-D7-023-C014",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR005-E2-MUTATIONS-86",
+          "sha256": "17f2403f2e959f6a09a8dcba87e218ef512f30f77065507f7c667a6b14a01858",
+          "raw": "cr005-e2-mutations-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 1
+        },
+        "assertion": "MUT-02 interior overlap .01m",
+        "method": "I",
+        "input": "MUT-02 内部重複許容を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D2-011の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C015",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR005-E2-MUTATIONS-86",
+          "sha256": "17f2403f2e959f6a09a8dcba87e218ef512f30f77065507f7c667a6b14a01858",
+          "raw": "cr005-e2-mutations-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 2
+        },
+        "assertion": "MUT-03 fixed edit was applied",
+        "method": "I",
+        "input": "MUT-03 固定物編集可を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D2-009の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      },
+      {
+        "caseId": "TC-D7-023-C017",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR005-E2-MUTATIONS-86",
+          "sha256": "17f2403f2e959f6a09a8dcba87e218ef512f30f77065507f7c667a6b14a01858",
+          "raw": "cr005-e2-mutations-closed.log",
+          "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+          "line": 3
+        },
+        "assertion": "MUT-05 overlap in swept envelope",
+        "method": "I",
+        "input": "MUT-05 板初期形状のみ判定を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+        "expected": "正常PASS、異常はTC-D2-031/032の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+      }
+    ],
+    "regression": {
+      "runId": "CR005-E2-REGRESSION-87",
+      "sha256": "7150094726843758fa62459fe462f7b36a1e2ef7209b2d7961bae373788e424c",
+      "raw": "cr005-e2-regression-closed.log",
+      "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498"
+    }
+  }
 }

@@ -79,5 +79,21 @@
       "fail": 0,
       "skipped": 0
     }
+  },
+  "EG-02": {
+    "status": "PASS",
+    "requiredCases": 69,
+    "casePasses": 69,
+    "testedSHA": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+    "predecessor": "EG-01 PASS",
+    "mutations": [
+      "MUT-02",
+      "MUT-03",
+      "MUT-05"
+    ],
+    "regressionPassed": 132,
+    "exactProtectedRegressionReused": 2019,
+    "review": "qa/reports/review_findings.json",
+    "automatedProof": "qa/reports/automated_test_results.json"
   }
 }

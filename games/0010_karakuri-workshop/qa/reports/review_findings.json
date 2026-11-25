@@ -85,5 +85,30 @@
         }
       }
     }
+  },
+  "CR005-E2": {
+    "mode": "Separate read-only e0_review, first review, remediation and independent rereview",
+    "comparison": "2a9642d→6c6b39d, final 4633e6a changes only legal test data with exact paired check",
+    "closed": [
+      "RC7/RC8 board and goal vectors",
+      "best design canonical grid and identifier validity",
+      "S envelope on production validatePlacement",
+      "rotation step and orientation cancellation",
+      "direct invalid move",
+      "legal paired reset and best-load fixtures"
+    ],
+    "criticalOrHighOpen": 0,
+    "testProof": {
+      "runId": "CR005-E2-PLACEMENT-85",
+      "sha256": "1b9df9cbf9f5a33112d6004c62b06e19cca9d2c0f0049733c02794a105338b0d",
+      "raw": "cr005-e2-placement-closed.log",
+      "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498"
+    },
+    "afterRereviewPairedProof": {
+      "runId": "CR005-E2-PAIRED-88",
+      "sha256": "0e53456979b3268f2ca21c90547e5effd959c5f9042bd4ecdbbccf2c1938c729",
+      "raw": "cr005-e2-paired.log",
+      "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498"
+    }
   }
 }
