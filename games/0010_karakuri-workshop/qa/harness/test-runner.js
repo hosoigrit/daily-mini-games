@@ -2,6 +2,7 @@
 
 const {isDeepStrictEqual} = require('node:util');
 const {stop} = require('./policy.js');
+const {reserveBudget} = require('./budget.js');
 
 const statuses = new Set(['PASS', 'FAIL', 'BLOCKED', 'HOLD', 'NOT_RUN', 'STALE']);
 const earlyMutationIds = new Set([
@@ -75,4 +76,48 @@ function verifyReportedResults(reconciled, reported) {
   return true;
 }
 
-module.exports = {indexManifest, effectiveDependencies, verifyManifest, reconcileCaseResults, verifyReportedResults};
+const purposeMetrics = Object.freeze({
+  AUTOMATED: [],
+  FOUNDATION: ['physicsValidationSimulations', 'physicsValidationTicks'],
+  FORMAL: ['formalSimulations', 'formalTicks'],
+  SEARCH: ['generated', 'searchSimulations', 'searchTicks', 'searchSeconds'],
+});
+
+function reserveDispatchedBatch(current, declarations, requested, policy) {
+  // Declarations come from the reviewed execution plan through a separate input.
+  // A mixed suite has multiple reservations before any child process may start.
+  const plan = new Map(declarations.map(job => [job.runId, job]));
+  if (plan.size === 0 || plan.size !== declarations.length || plan.size !== requested.length) {
+    stop('LS-13', 'The execution plan and reservation batch do not match.');
+  }
+  const seen = new Set();
+  let next = current;
+  for (const proposal of requested) {
+    const declared = plan.get(proposal.runId);
+    if (!declared || seen.has(proposal.runId)
+      || !/^[a-f0-9]{64}$/u.test(declared.fingerprint)
+      || declared.fingerprint !== proposal.fingerprint
+      || declared.engineeringStage !== proposal.engineeringStage
+      || declared.targetStage !== proposal.targetStage
+      || declared.pool !== proposal.pool
+      || !Object.hasOwn(purposeMetrics, declared.purpose)) {
+      stop('LS-13', 'A reservation lacks the exact reviewed command and purpose.');
+    }
+    seen.add(proposal.runId);
+    const required = ['automatedSeconds', ...purposeMetrics[declared.purpose]];
+    const lower = declared.lowerBounds ?? {};
+    if (Object.keys(proposal.reserve).length !== required.length
+      || required.some(name => !Object.hasOwn(lower, name)
+        || !Object.hasOwn(proposal.reserve, name)
+        || !Number.isSafeInteger(lower[name]) || lower[name] < 0
+        || !Number.isSafeInteger(proposal.reserve[name]) || proposal.reserve[name] < lower[name])
+      || (declared.purpose !== 'AUTOMATED' && lower[required[1]] < 1)) {
+      stop('LS-13', 'A required resource bound is missing, unverified or too small.');
+    }
+    next = reserveBudget(next, proposal, policy);
+  }
+  return next;
+}
+
+module.exports = {indexManifest, effectiveDependencies, verifyManifest, reconcileCaseResults,
+  verifyReportedResults, reserveDispatchedBatch};

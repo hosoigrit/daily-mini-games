@@ -20,13 +20,32 @@ const convergenceGrant = Object.freeze({
   legacyAllowedRunId: 'E0-CONVERGENCE-BUDGET-35',
 });
 
+const finalAutonomyGrant = Object.freeze({
+  approvalId: 'EXEC-GAME-0010-CR008-FINAL-AUTONOMY',
+  precedingGrant: 'EXEC-GAME-0010-CR003-HARNESS-LITE',
+  baseCommitSha: convergenceGrant.baseCommitSha,
+  handoffCommitSha: convergenceGrant.handoffCommitSha,
+  branch: convergenceGrant.branch,
+  writerId: convergenceGrant.writerId,
+  remediationLimit: 70,
+});
+
 const effectivePolicies = new WeakMap();
 
-function deriveEffectiveBudget(frozenPolicyBytes, externalGrant) {
+function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant) {
   if (!isDeepStrictEqual(externalGrant, convergenceGrant)) {
     fail('LS-08', 'The convergence budget needs the matching external approval.');
   }
+  if (autonomyGrant !== undefined && !isDeepStrictEqual(autonomyGrant, finalAutonomyGrant)) {
+    fail('LS-08', 'The final budget needs the matching CR008 external approval.');
+  }
   const {budgets} = loadExecutionPolicy(frozenPolicyBytes, convergenceGrant.policyDigest);
+  if (autonomyGrant) {
+    // CR003 retains five as a review threshold and CR008 raises the cumulative cap.
+    budgets.remediationReviewThreshold = budgets.remediationPerStage;
+    budgets.remediationTotal = autonomyGrant.remediationLimit;
+    budgets.remediationPerStage = autonomyGrant.remediationLimit;
+  }
   Object.freeze(budgets.physicsCandidateStages);
   for (const pool of Object.values(budgets.formalStagePools)) Object.freeze(pool);
   Object.freeze(budgets.formalStagePools);

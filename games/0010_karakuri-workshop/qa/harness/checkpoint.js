@@ -247,6 +247,15 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses, effectiveB
     budget[field].properties = override;
     changes.push({op: 'add', path: `/properties/budgetUsage/properties/${field}/properties`, value: override});
   }
+  if (effective?.total === 70) {
+    for (const [path, target, value] of [
+      ['remediationTotal/maximum', budget.remediationTotal, effective.total],
+      ['remediationByStage/additionalProperties/maximum', budget.remediationByStage.additionalProperties, effective.ordinaryStage],
+    ]) {
+      target.maximum = value;
+      changes.push({op: 'replace', path: `/properties/budgetUsage/properties/${path}`, value});
+    }
+  }
   // Canonical JSON matches the separately verified derivation, independent of input key order.
   const canonical = (_, value) => {
     if (value === null || typeof value !== 'object' || Array.isArray(value)) return value;
