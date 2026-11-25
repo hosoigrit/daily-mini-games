@@ -147,20 +147,22 @@
     "next": "E5"
   },
   "EG-05": {
-    "status": "HOLD",
-    "sourceSHA": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+    "status": "PASS",
+    "sourceSHA": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
     "requiredCases": 121,
-    "casePasses": 120,
-    "blockers": [
-      "TC-D7-004-C002"
-    ],
-    "formalPhysicsFreeze": false,
+    "casePasses": 121,
+    "blockers": [],
+    "formalPhysicsFreeze": true,
     "candidateTrialsUsed": 118,
     "roundsUsed": 2,
     "protectedAssets": "IDENTICAL",
-    "next": "Resolve the native contact-and-gap oracle/fixture before E6.",
+    "next": "E6",
     "legacyCases": 2019,
     "relatedRegressionCases": 267,
-    "qa": "NOT_STARTED"
+    "qa": "NOT_STARTED",
+    "contract": "CR007-C",
+    "oldGate": "HOLD",
+    "oldPhysicalCase": "BLOCKED",
+    "cr007RegressionCases": 268
   }
 }

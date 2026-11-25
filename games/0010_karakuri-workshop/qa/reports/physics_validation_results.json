@@ -1450,5 +1450,103 @@
       "description": "Loss of upper contact qualification across tick 4/5, native contact remained. Full affected tick 5 exceeded .005m."
     },
     "projectPhysicsDidNotChangeDuringFixtureRedesign": true
+  },
+  "CR007-E5": {
+    "case": {
+      "caseId": "TC-D7-004-C002",
+      "status": "PASS",
+      "contract": "CR007-C composite; does not supersede native BLOCKED history",
+      "originalPhysicalStatus": "BLOCKED",
+      "originalCandidates": 118,
+      "originalControls": 2,
+      "additionalNativeCandidates": 64,
+      "additionalNativeControls": 4,
+      "additionalNativeEligible": 0,
+      "observations": {
+        "freshContactSamples": 294,
+        "nativeSideSamples": 16,
+        "meetingMicroGapWithContact": 26
+      },
+      "controlDetails": {
+        "departure": {
+          "preLossTick": 3,
+          "intervals": 2,
+          "distanceM": 0.07591448126225675,
+          "resetAtTick": 4
+        },
+        "switch": {
+          "firstOwnTick": 8,
+          "newIntervals": 1,
+          "distanceM": 0.031581265009696935,
+          "firstUsedTick": 16
+        }
+      },
+      "pinnedEngineSkinM": 0.01,
+      "proofs": {
+        "cr007-native-r1": {
+          "runId": "CR007-NATIVE-R1",
+          "testedSha": "eaf3e33a5d4242c8867d879316f16a4bb22979e1",
+          "rawLogSha256": "6fb1106ed43aeea11b05e02f842ebba34649e3321933d2a6478af0087efdcbc3"
+        },
+        "cr007-native-r2": {
+          "runId": "CR007-NATIVE-R2",
+          "testedSha": "eaf3e33a5d4242c8867d879316f16a4bb22979e1",
+          "rawLogSha256": "8f093c3a81e7e71ecb10feca5b78a714053669a21448536206eeeea1238c0aa5"
+        },
+        "cr007-native-composite": {
+          "runId": "CR007-NATIVE-COMPOSITE",
+          "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+          "rawLogSha256": "449ee35a4e3a94953e026466be29426370ba90903abdb171539d27d20bbfe395"
+        },
+        "cr007-assess": {
+          "runId": "CR007-ASSESS",
+          "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+          "rawLogSha256": "f3d8ccf7a0d4419152adc6c45bac33a8093b0695c03172daaad8483b29592db6"
+        },
+        "cr007-tests": {
+          "runId": "CR007-TESTS",
+          "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+          "rawLogSha256": "6cbef11b2c38090084215e4d1f93d25180d0616319b8598d9e7797386db4d13b"
+        }
+      },
+      "risk": "Native one-tick recovery with <=.005m gap remains unreproduced. Composite bounds shown by native observations and separate fixed integration."
+    },
+    "freeze": {
+      "authority": "EXEC-GAME-0010-CR007-CONTACT-EVALUATION",
+      "profile": "PP03",
+      "substeps": 2,
+      "velocityIterations": 8,
+      "positionIterations": 3,
+      "gravity": {
+        "x": 0,
+        "y": -9.8
+      },
+      "ball": {
+        "radius": 0.2,
+        "mass": 0.2,
+        "linearDamping": 0.04,
+        "angularDamping": 0.05
+      },
+      "springVelocity": 9.5,
+      "seesawMassRatio": 2.5,
+      "seesawAngularDamping": 1.2,
+      "sourceSha256": {
+        "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+        "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+        "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+        "src/physics/adapter.js": "09bae4e98cbd08811131d045110b4f947eac88d9e927ae789e6d8eac3090ca9f",
+        "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+        "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+        "src/domain/tutorial-evaluator.js": "b0a88e3804fce9ba0caa7eed1c281d39a3c6705faa4168cd66c2f35a540920c5",
+        "src/domain/result-evaluator.js": "6611e45dbeca810fe8594ce95bd954d26c0a54e5f9de6c45162a1ede3723d75c"
+      },
+      "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4"
+    },
+    "rampsRevalidated": {
+      "runId": "CR007-RAMP",
+      "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+      "rawLogSha256": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0"
+    }
   }
 }

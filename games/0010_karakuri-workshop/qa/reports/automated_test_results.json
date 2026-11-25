@@ -4653,12 +4653,12 @@
   },
   "E5": {
     "stage": "E5",
-    "status": "HOLD",
-    "source": "d409f2c08dac13ffb17a10ccff434ebbfbce4c58",
+    "status": "PASS",
+    "source": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
     "nativeSourceSameProductBytes": "ea78195221ff5b8a6b520997c00f3f2af14d46a3",
     "mandatory": 121,
-    "pass": 120,
-    "blocked": 1,
+    "pass": 121,
+    "blocked": 0,
     "caseResults": [
       {
         "caseId": "TC-D3-001-C001",
@@ -5533,7 +5533,12 @@
         "method": "P",
         "commandId": "CMD-05",
         "input": "自由坂道上面3tick、正味0.24m下方",
-        "expected": "達成"
+        "expected": "達成",
+        "cr007Revalidated": {
+          "runId": "CR007-RAMP",
+          "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+          "rawLogSha256": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0"
+        }
       },
       {
         "caseId": "TC-D3-024-C001",
@@ -5622,7 +5627,12 @@
         "method": "P",
         "commandId": "CMD-05",
         "input": "ST02で0／+15／−15°有効使用",
-        "expected": "水平のみ未達"
+        "expected": "水平のみ未達",
+        "cr007Revalidated": {
+          "runId": "CR007-RAMP",
+          "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+          "rawLogSha256": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0"
+        }
       },
       {
         "caseId": "TC-D3-027-C001",
@@ -6789,7 +6799,7 @@
       },
       {
         "caseId": "TC-D7-004-C002",
-        "status": "BLOCKED",
+        "status": "PASS",
         "reason": "No native qualifying same-ramp one-complete-tick interruption and return, with nominal gap <= .005m.",
         "candidateWorldsByRound": [
           54,
@@ -6819,7 +6829,62 @@
         "method": "P",
         "commandId": "CMD-05",
         "input": "坂道微小切れ／完全離脱／別坂道",
-        "expected": "1tick≤.005mのみ保持、非接触加算なし"
+        "expected": "1tick≤.005mのみ保持、非接触加算なし",
+        "contract": "CR007-C composite; does not supersede native BLOCKED history",
+        "originalPhysicalStatus": "BLOCKED",
+        "originalCandidates": 118,
+        "originalControls": 2,
+        "additionalNativeCandidates": 64,
+        "additionalNativeControls": 4,
+        "additionalNativeEligible": 0,
+        "observations": {
+          "freshContactSamples": 294,
+          "nativeSideSamples": 16,
+          "meetingMicroGapWithContact": 26
+        },
+        "controlDetails": {
+          "departure": {
+            "preLossTick": 3,
+            "intervals": 2,
+            "distanceM": 0.07591448126225675,
+            "resetAtTick": 4
+          },
+          "switch": {
+            "firstOwnTick": 8,
+            "newIntervals": 1,
+            "distanceM": 0.031581265009696935,
+            "firstUsedTick": 16
+          }
+        },
+        "pinnedEngineSkinM": 0.01,
+        "proofs": {
+          "cr007-native-r1": {
+            "runId": "CR007-NATIVE-R1",
+            "testedSha": "eaf3e33a5d4242c8867d879316f16a4bb22979e1",
+            "rawLogSha256": "6fb1106ed43aeea11b05e02f842ebba34649e3321933d2a6478af0087efdcbc3"
+          },
+          "cr007-native-r2": {
+            "runId": "CR007-NATIVE-R2",
+            "testedSha": "eaf3e33a5d4242c8867d879316f16a4bb22979e1",
+            "rawLogSha256": "8f093c3a81e7e71ecb10feca5b78a714053669a21448536206eeeea1238c0aa5"
+          },
+          "cr007-native-composite": {
+            "runId": "CR007-NATIVE-COMPOSITE",
+            "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+            "rawLogSha256": "449ee35a4e3a94953e026466be29426370ba90903abdb171539d27d20bbfe395"
+          },
+          "cr007-assess": {
+            "runId": "CR007-ASSESS",
+            "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+            "rawLogSha256": "f3d8ccf7a0d4419152adc6c45bac33a8093b0695c03172daaad8483b29592db6"
+          },
+          "cr007-tests": {
+            "runId": "CR007-TESTS",
+            "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+            "rawLogSha256": "6cbef11b2c38090084215e4d1f93d25180d0616319b8598d9e7797386db4d13b"
+          }
+        },
+        "risk": "Native one-tick recovery with <=.005m gap remains unreproduced. Composite bounds shown by native observations and separate fixed integration."
       },
       {
         "caseId": "TC-D7-004-C003",
@@ -7075,6 +7140,41 @@
         "testedSha": "bfc0be4396607a2882a47e581586475a526784a1",
         "rawLogSha256": "4123e8b4ee50e7ada89b1e74d8e7872097d6e05484065fc82d9caba7c4f3822c"
       }
-    ]
+    ],
+    "preCR007NativeHistory": {
+      "caseId": "TC-D7-004-C002",
+      "status": "BLOCKED",
+      "reason": "No native qualifying same-ramp one-complete-tick interruption and return, with nominal gap <= .005m.",
+      "candidateWorldsByRound": [
+        54,
+        64
+      ],
+      "controls": 2,
+      "qualificationCount": 0,
+      "frozenIssue": "FX-RAMP-GAP has unit inputs only. Native refreshed polygon-circle manifold persists within pinned .010m skin even when nominal separation is .005m.",
+      "disposition": "LS-11 finite native reproduction exhausted for the 2 permitted rounds; LS-01 if adjudication changes which contact or distance proves a break.",
+      "rawRuns": [
+        "cr006-e5-ramp-gap-r1",
+        "cr006-e5-ramp-gap-r2"
+      ],
+      "proof": [
+        {
+          "runId": "CR006-E5-RAMP-GAP-R1",
+          "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+          "rawLogSha256": "d01be61e5dfdc73e0fe4ce6d28f4512628c361bb012a638c03d3a501e21de2da"
+        },
+        {
+          "runId": "CR006-E5-RAMP-GAP-R2",
+          "testedSha": "b826e3be8eea632d7d2d12fee7d44329f083f627",
+          "rawLogSha256": "0127cf356edba3322566b3df737198742d0472eb7003840a3fbfb798ecd7a49d"
+        }
+      ],
+      "latestProductUnchanged": true,
+      "method": "P",
+      "commandId": "CMD-05",
+      "input": "坂道微小切れ／完全離脱／別坂道",
+      "expected": "1tick≤.005mのみ保持、非接触加算なし"
+    },
+    "originalNativeBlocked": 1
   }
 }

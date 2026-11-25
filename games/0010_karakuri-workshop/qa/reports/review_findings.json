@@ -239,5 +239,16 @@
         "finding": "No native micro-gap recovery qualifies in the two authorized rounds. No contract change or synthetic P substitution."
       }
     ]
+  },
+  "CR007-E5": {
+    "mode": "Read-only independent product/raw review, with separate read-only contract/E6 test preparation.",
+    "decision": "CR007-C PASS; original native P BLOCKED",
+    "findings": [
+      "Shared live contact classification and tutorial process verified",
+      "Confirmed exact observed departure and independent switch",
+      "Confirmed fully bracketed candidate did not meet .005 even with broad transient allowance",
+      "Tracing now records independent native side status and immutable ramp snapshots"
+    ],
+    "openMandatory": 0
   }
 }
