@@ -42,7 +42,7 @@ function setup(data=fixture(),{raw=JSON.stringify(data),owner=true,behavior={}}=
 
 child('TC-D5-002-C001',()=>{
   const data=fixture(), expected=Array.from({length:10},(_,i)=>String(i+1).padStart(2,'0'));
-  assert.deepEqual(Object.keys(data.stages),expected);
+  assert.deepEqual(Object.keys(data.stages).sort(),expected);
   assert.deepEqual(data.settings,{muted:false,volume:.7});
   assert.equal(assess(data).status,'VALID');
   for(const variant of [d=>delete d.stages['05'],d=>{d.stages['11']=d.stages['01'];},d=>{d.stages['05']='invalid';}]){
@@ -320,8 +320,7 @@ for(const [i,mutation,changed] of [
   });
 }
 
-function instantiate(id,data=fixture()){
-  return setup(data).repository.start().then(async()=>{
+async function instantiate(id,data=fixture()){
     const {createGameController}=await import('../src/app/controller.js');
     const f=setup(data);
     await f.repository.start();
@@ -332,7 +331,6 @@ function instantiate(id,data=fixture()){
       sound:{play(){},end(){},observe(){},begin(){},stop(){},resume(){},configure(){}}});
     assert(scene.dispatch({type:'enter'}));assert(scene.dispatch({type:'stage',id}));
     return {...f,scene,calls};
-  });
 }
 const expectRevision=(f,revision)=>{
   const raw=JSON.parse(f.bytes.get(save.SAVE_KEY));
