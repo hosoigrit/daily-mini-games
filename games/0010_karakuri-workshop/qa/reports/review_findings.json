@@ -268,5 +268,99 @@
       "Supplementary read-only production assertions cover all inventory deltas, symmetric axis/dimension limits, overlap and duplicate exclusion."
     ],
     "unresolvedMandatory": 0
+  },
+  "CR007-E7-WIP": {
+    "mode": "SEPARATE_READ_ONLY_AGENT_CONTEXTS",
+    "reviewTasks": [
+      "/root/e0_review",
+      "/root/e1_test_plan"
+    ],
+    "approverState": "E7 has no final review clearance",
+    "blocking": [
+      {
+        "severity": "HIGH",
+        "related": [
+          "GOV-013",
+          "TC-D7-024",
+          "TC-D8-009",
+          "TC-D8-013"
+        ],
+        "finding": "Required distinction between pre-reserved foundation, INTERIM and automation omitted for actual worlds; E7 runtime execution held under LS-13/LS-16.",
+        "confirmedRuns": {
+          "cr007-e7-smoke": [
+            "Real ST01 native clear, one INTERIM world. Pre-run INTERIM reservation absent. Stdout totals row incorrectly reported 0/0."
+          ],
+          "cr007-e7-node-expanded": [
+            "Base-physics worlds executed with no prior foundational-world or tick reservation."
+          ],
+          "cr007-e7-node-cases": [
+            "Base-physics pre-reservation absent. Stage INTERIM 7/8400 was separately named and its settlement was omitted from the receipt."
+          ],
+          "cr007-e7-node-final": [
+            "Full multi-file test run includes base-physics suite with no foundational-world or tick reservation. Stage INTERIM was separately named and omitted from receipt."
+          ]
+        }
+      },
+      {
+        "severity": "HIGH",
+        "related": [
+          "TC-D3-040-C002",
+          "TC-D6-021-C001",
+          "TC-D5-034-C001",
+          "TC-D5-035-C001"
+        ],
+        "finding": "Subassertions still need their own exact evidence, including reload/no-refire, original ST03 selection fixture, drag during actual background transition, and old-generation protection after BFCache."
+      }
+    ],
+    "verifiedObservations": [
+      "Actual native background tab switching caused pause and no automatic resumption (D6-006), with trusted OS/browser transition and explicit resume.",
+      "Native 8/2/9-piece ST10 runs showed stars 2/3/1 and expected banner transitions; initial/reload/duplicate assertion remains open.",
+      "Four-voice native start/stop tracking measured peak 4 after preempted audible tails were removed.",
+      "Assets and roles CH01 through CH06 checked for authorship, local references and character consistency; this is separate from human QA."
+    ],
+    "wipChoices": {
+      "FR073": "Optional idle motion omitted to avoid extra motion",
+      "FR075": "Background music omitted to keep effects intelligible and support quiet play",
+      "NFR019": "Static decoration; supplied reduced-motion scroll style"
+    },
+    "independentReservationQuantification": {
+      "type": "CR007_E7_WIP_INDEPENDENT_RESERVATION_QUANTIFICATION",
+      "reviewAgent": "/root/e0_review",
+      "stopCodes": [
+        "LS-13",
+        "LS-16"
+      ],
+      "sourceProof": {
+        "controller": "createStageExperiment is called before requestAnimationFrame scheduling",
+        "controls": "14 distinct D6-005-C002 through C015 create real worlds while deliberately advancing zero ticks",
+        "foundationalProof": "D1 per-profile free fall/rest and transient trials prove at least 8 worlds / 960 ticks in each affected full test job"
+      },
+      "interimUnreservedMinimumByRun": {
+        "CR007-E7-SMOKE": 1,
+        "CR007-E7-NODE-EXPANDED": 14,
+        "CR007-E7-NODE-FINAL": 7,
+        "CR007-E7-NODE-CASES": 7,
+        "CR007-E7-NODE-EXACT": 7
+      },
+      "interimUnreservedWorldsMinimum": 36,
+      "foundationalUnreservedMinimumByRun": {
+        "CR007-E7-NODE-EXPANDED": {
+          "worlds": 8,
+          "ticks": 960
+        },
+        "CR007-E7-NODE-FINAL": {
+          "worlds": 8,
+          "ticks": 960
+        },
+        "CR007-E7-NODE-CASES": {
+          "worlds": 8,
+          "ticks": 960
+        }
+      },
+      "foundationalUnreservedWorldsMinimum": 24,
+      "foundationalUnreservedTicksMinimum": 2880,
+      "absoluteCapExceeded": "NOT_ESTABLISHED",
+      "historicalTiming": "No attempt to backdate an approval or remove an executed job"
+    }
   }
 }

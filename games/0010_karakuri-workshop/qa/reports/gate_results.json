@@ -182,5 +182,23 @@
       "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
       "rawLogSha256": "0b4ab0c7a79049865f88f24612e258d413826c34b6c175dde3127294aadc5be5"
     }
+  },
+  "EG-07": {
+    "status": "HOLD",
+    "reasonCodes": [
+      "LS-13",
+      "LS-16"
+    ],
+    "candidateSHA": "5f5e8baba5ac1044bf7fa7d6032bb092d3fdd9f4",
+    "mandatoryCases": 177,
+    "rawObservationCaseCount": 153,
+    "formalFinalization": "NOT_PERFORMED",
+    "e8": "NOT_STARTED",
+    "reserveIntegrity": "Unreserved native runs confirmed; full physics and INTERIM counters unreconciled.",
+    "unreservedLowerBounds": {
+      "interimWorlds": 36,
+      "foundationalWorlds": 24,
+      "foundationalTicks": 2880
+    }
   }
 }
