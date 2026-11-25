@@ -2,12 +2,12 @@
 
 const assert = require('node:assert/strict');
 const {before, test} = require('node:test');
-let rules, scores, tutorial, trajectory, engine, placement;
+let rules, scores, tutorial, trajectory, engine, placement, geometry;
 before(async () => {
-  [rules, scores, tutorial, trajectory, engine, placement] = await Promise.all([
+  [rules, scores, tutorial, trajectory, engine, placement, geometry] = await Promise.all([
     import('../src/domain/result-evaluator.js'), import('../src/domain/score-service.js'),
     import('../src/domain/tutorial-evaluator.js'), import('../src/physics/trajectory-recorder.js'),
-    import('../src/physics/adapter.js'), import('../src/domain/placement-validator.js'),
+    import('../src/physics/adapter.js'), import('../src/domain/placement-validator.js'), import('../src/domain/geometry.js'),
   ]);
 });
 
@@ -61,11 +61,21 @@ child('TC-D3-001', 2, 'physical goal fixture material and transforms', () => {
 });
 child('TC-D3-002', 1, 'empty goal volume and open entrance remain protected', () => {
   const stage = {ball: {x: 2, y: 6}, goal: origin, fixed: [], inventory: {P: 5}};
-  const input = [[20, 18], [20, 17], [20, 16], [23, 17]].map(([gridX, gridY]) => ({type: 'P', gridX, gridY, angleDeg: 0}));
+  const input = [[20, 18], [20, 17], [23, 17]].map(([gridX, gridY]) => ({type: 'P', gridX, gridY, angleDeg: 0}));
   const actual = input.map(part => placement.validatePlacement(stage, [], part));
   const expected = input.map(() => ({ok: false, reason: 'GOAL_PROTECTION'}));
   assert.deepEqual(actual, expected);
-  return {input, expected, actual};
+  const entrance = geometry.getOrientedRectangle({x: 4.8, y: 2.4 + .79, width: 1.20, height: .16, angle: 0});
+  const protection = geometry.getGoalProtection(origin);
+  const realFixtures = shapeRows.map(box => geometry.getOrientedRectangle({
+    ...box, x: origin.x + box.x, y: origin.y + box.y, angle: 0,
+  }));
+  const geometryResult = {
+    protected: geometry.intersectRectangles(entrance, protection),
+    placedAgainstFixture: realFixtures.some(fixture => geometry.intersectRectangles(entrance, fixture)),
+  };
+  assert.deepEqual(geometryResult, {protected: true, placedAgainstFixture: false});
+  return {input, expected, actual, entranceY: .79, geometryResult};
 });
 
 function inside(parent, index, x, y, expected) {
@@ -115,7 +125,8 @@ for (const index of [1, 2]) {
       const initial = stabilityThrough(129, 100, tracker);
       const bad = tracker.observe(130, [violator]);
       const next = tracker.observe(131, [sample()]);
-      const final = stabilityThrough(161, 132, tracker);
+      for (let tick = 132; tick < 161; tick++) assert.equal(tracker.observe(tick, [sample()]).achieved, false);
+      const final = tracker.observe(161, [sample()]);
       return [initial.intervals, bad.intervals, next.intervals, final.intervals];
     });
     const expected = [[29, 0, 0, 30], [29, 0, 0, 30]];
@@ -528,7 +539,7 @@ test('TC-D3-045-C001 previous trajectory survives design and display controls on
   function edit(command) {
     const transition = applyEditCommand(editor, stage, command);
     assert.equal(transition.ok, true, JSON.stringify(transition));
-    editor = transition.editor;
+    editor = transition.state;
     return editor.trajectory;
   }
   const session = rules.createResultSession({previousTrajectory: previous, stageId: '01'});
