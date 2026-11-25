@@ -362,5 +362,584 @@
       "absoluteCapExceeded": "NOT_ESTABLISHED",
       "historicalTiming": "No attempt to backdate an approval or remove an executed job"
     }
+  },
+  "CR008-E7": {
+    "mode": "SEPARATE_READ_ONLY_AGENT_CONTEXTS",
+    "agents": [
+      "/root/e0_review",
+      "/root/e1_test_plan"
+    ],
+    "independentRestoration": {
+      "agents": [
+        "/root/e0_review",
+        "/root/e1_test_plan"
+      ],
+      "readOnly": true,
+      "foundations": "Both source and receipts reconciled. Same four source blobs in affected commands; 45/2291 ceiling each for unreserved basis. NODE-EXACT original full charge retained.",
+      "interim": "Both agents independently confirmed 21 worlds per final/CASES/EXACT, 14 each unreserved there, 57 unreserved across incident. Follow-up author used original max for three tick-unlogged deterministic replays and two pre-abort sampling logs.",
+      "cause": "CR007 shell launcher bypassed existing budget/checkpoint operations and dispatched mixed Node files before validating demands. Historical frozen budget semantics, one-purpose world accounting, and six old cause uses retained."
+    },
+    "formalGate": "PASS",
+    "recordedExecutionEvidence": [
+      {
+        "id": "CR008-E7-BATCH-GUARD-VERIFY",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-guard-verify.cjs"
+        ],
+        "logSha": "936699648c35ace4ab67791dabb79b8f9fca4fc5fc0e0cdf4397ae1b46b9b8ec"
+      },
+      {
+        "id": "CR008-E7-FOUNDATION-NODE",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 45,
+          "physicsValidationTicks": 2291
+        },
+        "purpose": "FOUNDATION",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d1-physics.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d2-seesaw.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d2-spring.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d3-rules.test.js"
+        ],
+        "logSha": "eeba097c9ac890dc7643b1e2a9edc5d0d9cd946c2e69572390d99af506308ecd"
+      },
+      {
+        "id": "CR008-E7-STAGE-NODE",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 21,
+          "formalTicks": 7200
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d5-save.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d6-ui.test.js"
+        ],
+        "logSha": "df1982a3295814c7f131e482d4b4359cf473cfea93827f01876cc3f61d1a7db7"
+      },
+      {
+        "id": "CR008-E7-NONPHYSICAL-NODE",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d2-placement.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d4-stages.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d7-integration.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d8-governance.test.js",
+          "../development/games/0010_karakuri-workshop/tests/supplemental.test.js"
+        ],
+        "logSha": "5b0e0ec6d37759900936460581c5da0012e3e037da6c1e60e0b152857d50bb90"
+      },
+      {
+        "id": "CR008-E7-SELECT-ACHIEVE",
+        "charged": {
+          "automatedSeconds": 11,
+          "formalSimulations": 2,
+          "formalTicks": 368
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-select-and-achieve.cjs"
+        ],
+        "logSha": "e967b899bdf0c5641c3052fb8f86b6f2382d654062b4df06cf372b7ec87d8439"
+      },
+      {
+        "id": "CR008-E7-VISUAL",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-visual-browser.cjs"
+        ],
+        "logSha": "9775f48ee150e68dc290112a940708fd57b3bef2fb4bd0f8d11ff412e82d9a2e"
+      },
+      {
+        "id": "CR008-E7-ALL-SCREENS",
+        "charged": {
+          "automatedSeconds": 10,
+          "formalSimulations": 2,
+          "formalTicks": 324
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-all-screens.cjs"
+        ],
+        "logSha": "adcfa33917d2279740e1067896c2f5b15f6b44d67b9afcbd034bdce21ea7391a"
+      },
+      {
+        "id": "CR008-E7-BACKGROUND-DRAG",
+        "charged": {
+          "automatedSeconds": 8,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-background-drag.sh"
+        ],
+        "logSha": "7de1b27b2b31af83ade45721c9ae3839cec9055cd95c82bfefe3f9882204367e"
+      },
+      {
+        "id": "CR008-E7-BFCACHE-ACTIVE",
+        "charged": {
+          "automatedSeconds": 41,
+          "formalSimulations": 1,
+          "formalTicks": 1200
+        },
+        "purpose": "FORMAL",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-bfcache-active.cjs"
+        ],
+        "logSha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "CR008-E7-STORAGE-EXACT",
+        "charged": {
+          "automatedSeconds": 5
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-storage-exact.cjs"
+        ],
+        "logSha": "9a31e2bdc71782c5e62d1e7c2f68b17990bef1e5a14becbb7b794fe8787189e6"
+      },
+      {
+        "id": "CR008-E7-DRAW-GESTURE",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-draw-and-gesture.cjs"
+        ],
+        "logSha": "4c4184425e247e495ceb27ed92740bab3cfeb33dbbb226ff9f63e2397be61e93"
+      },
+      {
+        "id": "CR008-E7-BFCACHE-FOREGROUND",
+        "charged": {
+          "automatedSeconds": 40,
+          "formalSimulations": 1,
+          "formalTicks": 1200
+        },
+        "purpose": "FORMAL",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-bfcache-foreground.cjs"
+        ],
+        "logSha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "CR008-E7-STORAGE-COMPLETE",
+        "charged": {
+          "automatedSeconds": 6
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-storage-complete.cjs"
+        ],
+        "logSha": "e35d0d73896478604bc9cceb856d7261daa3783eb1c03eb9d7d88c09de1ceadc"
+      },
+      {
+        "id": "CR008-E7-DRAW-COMPLETE",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-draw-complete.cjs"
+        ],
+        "logSha": "6dec8a3f356861454eb7156e0b456ffacc425183edca2f33b7bffc9381846279"
+      },
+      {
+        "id": "CR008-E7-EDITOR-EXACT",
+        "charged": {
+          "automatedSeconds": 15,
+          "formalSimulations": 2,
+          "formalTicks": 175
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-editor-exact.cjs"
+        ],
+        "logSha": "6a7453fafe5e49d90709dcc74df6be1612f508dc053c36c82dd92204981a6839"
+      },
+      {
+        "id": "CR008-E7-SOUND-EXACT",
+        "charged": {
+          "automatedSeconds": 6
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-sound-exact.cjs"
+        ],
+        "logSha": "75ecc1d15601267ffd8b9270de7ca0f8e1d9a66ae85e37e67cc66918317c3d75"
+      },
+      {
+        "id": "CR008-E7-BFCACHE-LEASE",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 1,
+          "formalTicks": 175
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-bfcache-lease.cjs"
+        ],
+        "logSha": "b2fd2f3d264371934044c74cb05b7a080470e39c560847dc88eb6e8481c1cdc2"
+      },
+      {
+        "id": "CR008-E7-STORAGE-CANONICAL",
+        "charged": {
+          "automatedSeconds": 7
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-storage-canonical.cjs"
+        ],
+        "logSha": "f13e3408ce91f25ad3d337a6324d2fa2537de21f080705f147dbf7787c08c119"
+      },
+      {
+        "id": "CR008-E7-DRAW-PRECISE",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-draw-precise.cjs"
+        ],
+        "logSha": "e3512055cc7d5d6d28b545eff1ff0b1244d55334ed7ec9cde4840356b970bac1"
+      },
+      {
+        "id": "CR008-E7-SOUND-COMPLETE",
+        "charged": {
+          "automatedSeconds": 6
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "af95c2fc9af9c7b6b82c05550e977a657416bf88",
+        "command": [
+          "cr008-e7-sound-complete.cjs"
+        ],
+        "logSha": "1b34a7693091a266b0451179d529541822fcb95095ad2ce8ad107422b5065a7d"
+      },
+      {
+        "id": "CR008-E7-SOUND-FIXED",
+        "charged": {
+          "automatedSeconds": 37
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "79f23431e9437f2519f43db53537ff33cbc93547",
+        "command": [
+          "cr008-e7-sound-fixed.cjs"
+        ],
+        "logSha": "984514e698ec35976aa4d353274166220279739c293093099129a82014551d3c"
+      },
+      {
+        "id": "CR008-E7-NATIVE-SOUND",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "79f23431e9437f2519f43db53537ff33cbc93547",
+        "command": [
+          "cr008-e7-native-sound.sh"
+        ],
+        "logSha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "CR008-E7-NATIVE-SOUND-STOP",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "79f23431e9437f2519f43db53537ff33cbc93547",
+        "command": [
+          "cr008-e7-native-sound-stop.cjs"
+        ],
+        "logSha": "5ba5080a1c47f43007930a08dfcd8fc98c5b197062e15c11c4b316fe914eb239"
+      },
+      {
+        "id": "CR008-E7-STORAGE-NODE-DETAIL",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "79f23431e9437f2519f43db53537ff33cbc93547",
+        "command": [
+          "cr008-e7-storage-node-detail.mjs"
+        ],
+        "logSha": "598b9b433304d59cc0b4755d03c97fcd6b1c002058130b9aaf2aeff67a1a69a3"
+      },
+      {
+        "id": "CR008-E7-STAGE-NODE-AUDIO-FIX",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 21,
+          "formalTicks": 7200
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "79f23431e9437f2519f43db53537ff33cbc93547",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d5-save.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d6-ui.test.js"
+        ],
+        "logSha": "bce54bf89db630237454bda41c81d17230b31566a5139c38b316fb08ff063a3f"
+      },
+      {
+        "id": "CR008-E7-SOUND-EXIT-AND-FAULT",
+        "charged": {
+          "automatedSeconds": 37
+        },
+        "purpose": "AUTOMATED",
+        "exit": 1,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr008-e7-sound-fixed.cjs"
+        ],
+        "logSha": "d2d50f559a35fb4a0a8bf8c294d7187cfaa076e68e2ec970887845bc0c2fd5ec"
+      },
+      {
+        "id": "CR008-E7-NATIVE-SOUND-VERIFIED",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr008-e7-native-sound.sh"
+        ],
+        "logSha": "df5d3c9fb772141bf8adc831c28294b87db2befeb5881430fadb9039ddc259cd"
+      },
+      {
+        "id": "CR008-E7-UI-CONTRACTS",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr008-e7-ui-contracts.cjs"
+        ],
+        "logSha": "69ff7ff91ca3a5c90e258f0140201b9786d05f12273326cc8485a7bb6b30e40f"
+      },
+      {
+        "id": "CR008-E7-AUDIO-LAYOUT-DIAGNOSIS",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr008-e7-audio-layout-diagnosis.cjs"
+        ],
+        "logSha": "0961276039c8f60346fbb5c3b4aadc9ba80f11fc4ef95dedd3c515538553b629"
+      },
+      {
+        "id": "CR008-E7-TILT-EXACT",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr008-e7-tilt-exact.cjs"
+        ],
+        "logSha": "7cd0e41356c366c80dba06129edfcded5b66768c9caf630b63db502bfb8798eb"
+      },
+      {
+        "id": "CR008-E7-ISOLATED-MUTATIONS",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "8b24090239e9fb7f7d845d16cc9c96c8aff6818c",
+        "command": [
+          "cr007-e7-mutations.cjs"
+        ],
+        "logSha": "04cd6327a18a3f6a3ae3556b4f2a54ce4f34d77ad4fae01e33f738623e194c95"
+      },
+      {
+        "id": "CR008-E7-REAL-AUDIO-FAULT",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-real-audio-fault.cjs"
+        ],
+        "logSha": "319d3258ca56d932f3114c84eb848bb6301b3fdd7803dd7329a6d1db737d24e1"
+      },
+      {
+        "id": "CR008-E7-PERSISTENCE-LIFECYCLE",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 2,
+          "formalTicks": 185
+        },
+        "purpose": "FORMAL",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-persistence-lifecycle.cjs"
+        ],
+        "logSha": "04f07d549fdc49f0786279fc0242d8d8bf912f626799923b6b6492b44aa3b160"
+      },
+      {
+        "id": "CR008-E7-NODE-SAVE-EXACT",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-save-exact-node.mjs"
+        ],
+        "logSha": "599d53067ee48aca1cc64860cf7b77b914393059a2c4c33269ae0fbac3c1a05c"
+      },
+      {
+        "id": "CR008-E7-TILT-FROZEN",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-tilt-frozen.cjs"
+        ],
+        "logSha": "1d5e02ace785136865a3e809a127055c9506bbb58c13aabe36832d38684bf86b"
+      },
+      {
+        "id": "CR008-E7-AUDIO-LAYOUT-FIXED",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-audio-layout-fixed.cjs"
+        ],
+        "logSha": "f179887368309024a8a1f8237eb860d5dc2fcb9ac7737d46683f925a08e6d869"
+      },
+      {
+        "id": "CR008-E7-DRAW-ALL-EXACT",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-draw-all-exact.cjs"
+        ],
+        "logSha": "bb1b3374c0b1582d66b702ddcbb4dea82ee87f3fb25582f33c615cae09f90717"
+      },
+      {
+        "id": "CR008-E7-BROWSER-SAVE-LITERAL",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "purpose": "AUTOMATED",
+        "exit": 0,
+        "testedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "command": [
+          "cr008-e7-browser-save-literal.cjs"
+        ],
+        "logSha": "2bf34c4f5103bb8f96942f93beb993150524de1565de1845cd4d9f04a2ec191e"
+      }
+    ],
+    "finalReview": {
+      "agents": [
+        "/root/e0_review",
+        "/root/e1_test_plan"
+      ],
+      "scope": "Independent readonly exact candidate plus evidence packets, sorted frozen 177 and typed journal replay.",
+      "basis": "Audited unreserved exclusions and 177-case census; remaining compound clauses are independently identified and connected to their specific raw observations.",
+      "humanVerification": "No listening or device visual recognition represented as PASS.",
+      "typoConflicts": "No specification or expected output changed."
+    },
+    "closures": [
+      "31 historical E7 run IDs reconciled and original 163 files preserved",
+      "Two repeated rejection path corrections remove control re-render and flow movement",
+      "Pending old star notes are stopped on screen departure"
+    ],
+    "pending": []
   }
 }

@@ -184,6 +184,15 @@
     }
   },
   "EG-07": {
+    "status": "PASS",
+    "candidateSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+    "mandatoryCases": 177,
+    "externalApproval": "EXEC-GAME-0010-CR008-FINAL-AUTONOMY",
+    "budgetReconciliation": "COMPLETE",
+    "oldGatePreserved": true,
+    "nextStage": "E8"
+  },
+  "EG-07-CR007-HOLD-HISTORY": {
     "status": "HOLD",
     "reasonCodes": [
       "LS-13",
