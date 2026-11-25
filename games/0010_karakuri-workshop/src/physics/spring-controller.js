@@ -96,7 +96,8 @@ export function createSpringController(definitions, speed = 9.5) {
   return {
     state: id => ({...states.get(id)}),
     completeTick(frame) {
-      const touched = new Set(frame.raw.map(event => event.id));
+      const touched = new Set([...frame.raw.map(event => event.id),
+        ...frame.touchingAtEnd.map(contact => contact.id), ...(frame.touchingAtBoundaries ?? [])]);
       const candidates = [];
       for (const event of frame.raw) {
         const spring = springs.get(event.id);
@@ -119,8 +120,9 @@ export function createSpringController(definitions, speed = 9.5) {
         if (state.phase === 'READY' && touched.has(id)) {
           states.set(id, {phase: 'WAIT_RELEASE', quietTicks: 0});
         } else {
-          const {distance} = springSeparation(spring, frame.ballPosition, frame.radius);
-          states.set(id, updateSpringRelease(state, touched.has(id), distance));
+          const distances = (frame.boundaryPositions ?? [frame.ballPosition]).map(position =>
+            springSeparation(spring, position, frame.radius).distance);
+          states.set(id, updateSpringRelease(state, touched.has(id), Math.min(...distances)));
         }
       }
       const winner = selectSpringActivation(eligible);
@@ -136,7 +138,7 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
   let otherCount = 0;
   const world = runtime.world;
   const radius = ball.getFixtureList().getShape().getRadius();
-  let raw = [];
+  let raw, boundaryPositions, touchingAtBoundaries;
   let tracing = false;
   let toiPhase = false;
   const solver = world.m_solver;
@@ -167,6 +169,21 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
       ...(impulse ? {normalImpulse: impulse.normalImpulses[i]} : {}),
     }));
   }
+  function sampleBoundary() {
+    boundaryPositions.push(vector(ball.getPosition()));
+    for (let contact = world.getContactList(); contact; contact = contact.getNext()) {
+      if (!contact.isTouching()) continue;
+      const info = pair(contact);
+      if (info && ids.has(info.other)) touchingAtBoundaries.add(info.id);
+    }
+  }
+  const step = world.step;
+  world.step = function(...args) {
+    if (tracing) sampleBoundary();
+    const result = step.apply(this, args);
+    if (tracing) sampleBoundary();
+    return result;
+  };
   for (const event of ['begin-contact', 'pre-solve', 'post-solve', 'end-contact']) {
     const observe = (contact, extra) => {
       if (!tracing) return;
@@ -183,6 +200,8 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
     state: controller.state,
     advanceTick() {
       raw = [];
+      boundaryPositions = [];
+      touchingAtBoundaries = new Set();
       tracing = true;
       let advanced;
       try {
@@ -198,7 +217,8 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
         if (!info) continue;
         for (const {normal} of pointsFor(contact, info)) touchingAtEnd.push({id: info.id, normal});
       }
-      const frame = {raw, touchingAtEnd, ballPosition: vector(ball.getPosition()), radius};
+      const frame = {raw, touchingAtEnd, touchingAtBoundaries: [...touchingAtBoundaries], boundaryPositions,
+        ballPosition: vector(ball.getPosition()), radius};
       const {winner, candidates, eligible, unresolved} = controller.completeTick(frame);
       const activation = winner ? applySpringLaunch(runtime, ball, winner, speed) : null;
       return {advanced: true, activation, candidates, eligible, unresolved, frame};

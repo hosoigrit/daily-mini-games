@@ -98,6 +98,10 @@ unit(22,1,'short clearance or interrupted absence remains in WAIT_RELEASE',()=>{
   assert.equal(control.state(specimen.id).quietTicks,0);
   control.completeTick(frame({ballPosition:positionFrom(normal,.36)}));
   assert.equal(control.state(specimen.id).quietTicks,1);
+  const incomplete = {...frame({ballPosition:positionFrom(normal,.37)}),
+    boundaryPositions:[positionFrom(normal,.359),positionFrom(normal,.37)]};
+  control.completeTick(incomplete);
+  assert.equal(control.state(specimen.id).quietTicks,0);
   assert.equal(control.completeTick(frame({raw:[event(specimen.id, 'pre-solve',[point()],time(1))]})).winner,null);
   assert.equal(control.state(specimen.id).quietTicks,0);
 });
