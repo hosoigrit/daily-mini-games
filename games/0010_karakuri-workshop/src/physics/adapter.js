@@ -62,6 +62,21 @@ function limitBall(runtime) {
   }
 }
 
+export function normalizeContactPoint(ballIsA, rawNormal, ballVelocity, otherVelocity) {
+  const sign = ballIsA ? -1 : 1;
+  const normal = {x: sign * rawNormal.x, y: sign * rawNormal.y};
+  const approachSpeed = -((ballVelocity.x - otherVelocity.x) * normal.x
+    + (ballVelocity.y - otherVelocity.y) * normal.y);
+  return {normal, approachSpeed};
+}
+
+export function recordContactOccurrence(runtime, occurrence) {
+  const identity = JSON.stringify([occurrence.runId, occurrence.tick, occurrence.substep, occurrence.callbackIndex]);
+  if (runtime.contactOccurrences.has(identity)) return;
+  runtime.contactOccurrences.add(identity);
+  runtime.contacts.push(occurrence);
+}
+
 function watchContacts(runtime) {
   for (const event of ['begin-contact', 'end-contact', 'pre-solve', 'post-solve']) {
     const record = (contact, extra) => {
@@ -74,23 +89,20 @@ function watchContacts(runtime) {
       const manifold = contact.getManifold().pointCount > 0 ? contact.getWorldManifold() : null;
       const points = [];
       if (manifold?.normal) {
-        const sign = ballIsA ? -1 : 1;
-        const normal = {x: sign * manifold.normal.x, y: sign * manifold.normal.y};
         for (let i = 0; i < manifold.pointCount; i++) {
           const point = manifold.points[i];
           const velocity = ball.getLinearVelocityFromWorldPoint(point);
           const otherVelocity = other.getLinearVelocityFromWorldPoint(point);
           points.push({
-            position: copy(point), normal,
+            position: copy(point),
+            ...normalizeContactPoint(ballIsA, manifold.normal, velocity, otherVelocity),
             separation: manifold.separations[i],
-            approachSpeed: -((velocity.x - otherVelocity.x) * normal.x
-              + (velocity.y - otherVelocity.y) * normal.y),
             ...(event === 'post-solve' ? {normalImpulse: extra.normalImpulses[i]} : {}),
           });
         }
       }
       // Callback order is evidence about the observer, not a certified continuous collision timeline.
-      runtime.contacts.push({
+      recordContactOccurrence(runtime, {
         event, runId: runtime.runId, tick: runtime.ticks + 1, substep: runtime.substep,
         callbackIndex: runtime.contacts.length, other: {...other.getUserData()}, points,
       });
@@ -109,7 +121,8 @@ export function createWorld({profile = 'PP01', gravity = DEFAULT_GRAVITY, observ
   }
   const world = new World({gravity: Vec2(gravity.x, gravity.y), allowSleep: false, continuousPhysics: true});
   const runtime = {
-    world, profile, observe, runId, ticks: 0, substep: 0, contacts: [], subscriptions: [], diagnostic: null,
+    world, profile, observe, runId, ticks: 0, substep: 0, contacts: [], contactOccurrences: new Set(),
+    subscriptions: [], diagnostic: null,
   };
   watchContacts(runtime);
   return runtime;
@@ -126,6 +139,7 @@ export function getDiagnostics(runtime) {
 export function advancePhysicsTick(runtime) {
   if (!runtime.world || runtime.diagnostic) return false;
   runtime.contacts = [];
+  runtime.contactOccurrences.clear();
   const {substeps, velocityIterations, positionIterations} = PHYSICS_PROFILES[runtime.profile];
   try {
     validatePhysicsState(runtime);
@@ -155,6 +169,7 @@ export function disposeWorld(runtime) {
   runtime.world = null;
   runtime.observe = null;
   runtime.contacts = [];
+  runtime.contactOccurrences.clear();
   runtime.subscriptions = [];
   for (const [name, handler] of subscriptions) world.off(name, handler);
   // A Planck exception can leave the world locked. It is detached and must never be stepped again.

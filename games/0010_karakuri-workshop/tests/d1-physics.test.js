@@ -192,3 +192,36 @@ test('TC-D1-029: failed locked world detaches and another run can advance', () =
     physics.disposeWorld(following);
   }
 });
+
+test('TC-D1-026-C001: both fixture orders normalize to a normal toward the ball', () => {
+  const ballVelocity = {x: 0, y: -2};
+  const obstacleVelocity = {x: 0, y: 0};
+  for (const [ballIsA, rawNormal] of [[false, {x: 0, y: 1}], [true, {x: 0, y: -1}]]) {
+    const actual = physics.normalizeContactPoint(ballIsA, rawNormal, ballVelocity, obstacleVelocity);
+    near(actual.normal.x, 0);
+    near(actual.normal.y, 1);
+    near(actual.approachSpeed, 2);
+  }
+});
+
+test('TC-D1-025-C001: event replay retains occurrence identity and order', () => {
+  const runtime = physics.createWorld({runId: 'D1-025-C001'});
+  try {
+    const occurrence = (event, tick, callbackIndex) => ({
+      event, runId: runtime.runId, tick, substep: 1, callbackIndex,
+      other: {kind: 'P'},
+      points: [],
+    });
+    const begin = occurrence('begin-contact', 10, 1);
+    const first = occurrence('pre-solve', 10, 2);
+    const second = occurrence('pre-solve', 10, 3);
+    const end = occurrence('end-contact', 10, 4);
+    const next = occurrence('begin-contact', 11, 1);
+    for (const event of [begin, begin, first, second, end, end, next]) {
+      physics.recordContactOccurrence(runtime, structuredClone(event));
+    }
+    assert.deepEqual(physics.collectContactEvidence(runtime), [begin, first, second, end, next]);
+  } finally {
+    physics.disposeWorld(runtime);
+  }
+});
