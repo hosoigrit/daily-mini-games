@@ -1,0 +1,29 @@
+{
+  "saveSchemaVersion": 2,
+  "gameId": "0009_three-move-hero",
+  "revision": 4,
+  "rulesets": {
+    "f2dcadaca004693a4c186c30f55513f6300437953885486aa343a4492dff11c6": {
+      "label": "design-v0.7.0 historical",
+      "progress": {
+        "main-01": {
+          "maxStars": 3,
+          "bestNoHintStars": 2
+        },
+        "extra-01": {
+          "maxStars": 3,
+          "bestNoHintStars": 1
+        }
+      }
+    },
+    "56a8502f8ac2b90597bedf90b940ff5536b6cf231f541a5b1e6c87ff21bfc620": {
+      "label": "design-v0.9.0 candidate (not production)",
+      "progress": {
+        "main-01": {
+          "maxStars": 2,
+          "bestNoHintStars": 1
+        }
+      }
+    }
+  }
+}

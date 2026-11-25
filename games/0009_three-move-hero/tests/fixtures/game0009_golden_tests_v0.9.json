@@ -1,0 +1,1757 @@
+{
+  "schemaVersion": "0.9.0",
+  "rulesFingerprint": "56a8502f8ac2b90597bedf90b940ff5536b6cf231f541a5b1e6c87ff21bfc620",
+  "namedVectors": [
+    {
+      "id": "GOLD-main-01-S1",
+      "stageId": "main-01",
+      "plan": [
+        "focus",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-01-S2",
+      "stageId": "main-01",
+      "plan": [
+        "guard",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "guard",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-01-S3",
+      "stageId": "main-01",
+      "plan": [
+        "focus",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 7,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "focus",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-main-01-LOSS",
+      "stageId": "main-01",
+      "plan": [
+        "slash",
+        "guard",
+        "focus"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 7,
+        "enemyHp": 2,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "guard",
+          "focus"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-02-S1",
+      "stageId": "main-02",
+      "plan": [
+        "focus",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-02-S2",
+      "stageId": "main-02",
+      "plan": [
+        "focus",
+        "heal",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "focus",
+          "heal",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-02-S3",
+      "stageId": "main-02",
+      "plan": [
+        "focus",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "focus",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-main-02-LOSS",
+      "stageId": "main-02",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 3,
+        "enemyHp": 1,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-03-S1",
+      "stageId": "main-03",
+      "plan": [
+        "focus",
+        "guard",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "guard",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-03-S2",
+      "stageId": "main-03",
+      "plan": [
+        "focus",
+        "heal",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "focus",
+          "heal",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-03-S3",
+      "stageId": "main-03",
+      "plan": [
+        "guard",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 7,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "guard",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-03-LOSS",
+      "stageId": "main-03",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 2,
+        "enemyHp": 1,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-04-S1",
+      "stageId": "main-04",
+      "plan": [
+        "focus",
+        "slash",
+        "counter"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash",
+          "counter"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-04-S2",
+      "stageId": "main-04",
+      "plan": [
+        "focus",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 8,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-04-S3",
+      "stageId": "main-04",
+      "plan": [
+        "magic",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 8,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "magic",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-04-LOSS",
+      "stageId": "main-04",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 5,
+        "enemyHp": 5,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-05-S1",
+      "stageId": "main-05",
+      "plan": [
+        "counter",
+        "heal",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "counter",
+          "heal",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-05-S2",
+      "stageId": "main-05",
+      "plan": [
+        "counter",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "magic"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-main-05-S3",
+      "stageId": "main-05",
+      "plan": [
+        "guard",
+        "counter",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "guard",
+          "counter",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-05-LOSS",
+      "stageId": "main-05",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 1,
+        "stars": 0,
+        "executed": [
+          "slash"
+        ],
+        "turns": 1
+      }
+    },
+    {
+      "id": "GOLD-main-06-S1",
+      "stageId": "main-06",
+      "plan": [
+        "heal",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "heal",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-06-S2",
+      "stageId": "main-06",
+      "plan": [
+        "magic",
+        "slash",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "magic",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-main-06-S3",
+      "stageId": "main-06",
+      "plan": [
+        "magic",
+        "heal",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "magic",
+          "heal",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-06-LOSS",
+      "stageId": "main-06",
+      "plan": [
+        "slash",
+        "guard",
+        "heal"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 2,
+        "enemyHp": 3,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "guard",
+          "heal"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-07-S1",
+      "stageId": "main-07",
+      "plan": [
+        "focus",
+        "slash",
+        "counter"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash",
+          "counter"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-07-S2",
+      "stageId": "main-07",
+      "plan": [
+        "counter",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 7,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-07-S3",
+      "stageId": "main-07",
+      "plan": [
+        "counter",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 7,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-07-LOSS",
+      "stageId": "main-07",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 4,
+        "enemyHp": 4,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-08-S1",
+      "stageId": "main-08",
+      "plan": [
+        "focus",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-08-S2",
+      "stageId": "main-08",
+      "plan": [
+        "magic",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-08-S3",
+      "stageId": "main-08",
+      "plan": [
+        "counter",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-main-08-LOSS",
+      "stageId": "main-08",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 2,
+        "enemyHp": 5,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-01-S1",
+      "stageId": "extra-01",
+      "plan": [
+        "focus",
+        "slash",
+        "counter"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash",
+          "counter"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-01-S2",
+      "stageId": "extra-01",
+      "plan": [
+        "focus",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 7,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-01-S3",
+      "stageId": "extra-01",
+      "plan": [
+        "focus",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "focus",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-01-LOSS",
+      "stageId": "extra-01",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 4,
+        "enemyHp": 6,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-02-S1",
+      "stageId": "extra-02",
+      "plan": [
+        "focus",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 1,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-extra-02-S2",
+      "stageId": "extra-02",
+      "plan": [
+        "counter",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-extra-02-S3",
+      "stageId": "extra-02",
+      "plan": [
+        "counter",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "magic"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-extra-02-LOSS",
+      "stageId": "extra-02",
+      "plan": [
+        "slash",
+        "magic",
+        "focus"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 1,
+        "stars": 0,
+        "executed": [
+          "slash"
+        ],
+        "turns": 1
+      }
+    },
+    {
+      "id": "GOLD-extra-03-S1",
+      "stageId": "extra-03",
+      "plan": [
+        "heal",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 1,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "heal",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-03-S2",
+      "stageId": "extra-03",
+      "plan": [
+        "counter",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-03-S3",
+      "stageId": "extra-03",
+      "plan": [
+        "guard",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "guard",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-03-LOSS",
+      "stageId": "extra-03",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 3,
+        "stars": 0,
+        "executed": [
+          "slash"
+        ],
+        "turns": 1
+      }
+    },
+    {
+      "id": "GOLD-extra-04-S1",
+      "stageId": "extra-04",
+      "plan": [
+        "counter",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "counter",
+          "slash"
+        ],
+        "turns": 2
+      }
+    },
+    {
+      "id": "GOLD-extra-04-S2",
+      "stageId": "extra-04",
+      "plan": [
+        "guard",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "guard",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-04-S3",
+      "stageId": "extra-04",
+      "plan": [
+        "counter",
+        "heal",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "heal",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-04-LOSS",
+      "stageId": "extra-04",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 2,
+        "stars": 0,
+        "executed": [
+          "slash"
+        ],
+        "turns": 1
+      }
+    },
+    {
+      "id": "GOLD-extra-05-S1",
+      "stageId": "extra-05",
+      "plan": [
+        "focus",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-05-S2",
+      "stageId": "extra-05",
+      "plan": [
+        "counter",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-05-S3",
+      "stageId": "extra-05",
+      "plan": [
+        "counter",
+        "slash",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "slash",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-05-LOSS",
+      "stageId": "extra-05",
+      "plan": [
+        "slash",
+        "magic",
+        "focus"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 4,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "focus"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-06-S1",
+      "stageId": "extra-06",
+      "plan": [
+        "focus",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 2,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-06-S2",
+      "stageId": "extra-06",
+      "plan": [
+        "counter",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-06-S3",
+      "stageId": "extra-06",
+      "plan": [
+        "counter",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "counter",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-06-LOSS",
+      "stageId": "extra-06",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 2,
+        "enemyHp": 1,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-07-S1",
+      "stageId": "extra-07",
+      "plan": [
+        "focus",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 1,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-07-S2",
+      "stageId": "extra-07",
+      "plan": [
+        "counter",
+        "focus",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-07-S3",
+      "stageId": "extra-07",
+      "plan": [
+        "focus",
+        "heal",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 4,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "focus",
+          "heal",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-07-LOSS",
+      "stageId": "extra-07",
+      "plan": [
+        "slash",
+        "guard",
+        "focus"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_dead",
+        "heroHp": 0,
+        "enemyHp": 4,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "guard",
+          "focus"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-08-S1",
+      "stageId": "extra-08",
+      "plan": [
+        "focus",
+        "magic",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 3,
+        "enemyHp": 0,
+        "stars": 1,
+        "executed": [
+          "focus",
+          "magic",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-08-S2",
+      "stageId": "extra-08",
+      "plan": [
+        "slash",
+        "counter",
+        "magic"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 5,
+        "enemyHp": 0,
+        "stars": 2,
+        "executed": [
+          "slash",
+          "counter",
+          "magic"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-08-S3",
+      "stageId": "extra-08",
+      "plan": [
+        "focus",
+        "counter",
+        "slash"
+      ],
+      "expected": {
+        "outcome": "win",
+        "reason": null,
+        "heroHp": 6,
+        "enemyHp": 0,
+        "stars": 3,
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "turns": 3
+      }
+    },
+    {
+      "id": "GOLD-extra-08-LOSS",
+      "stageId": "extra-08",
+      "plan": [
+        "slash",
+        "magic",
+        "guard"
+      ],
+      "expected": {
+        "outcome": "loss",
+        "reason": "lose_timeout",
+        "heroHp": 2,
+        "enemyHp": 2,
+        "stars": 0,
+        "executed": [
+          "slash",
+          "magic",
+          "guard"
+        ],
+        "turns": 3
+      }
+    }
+  ],
+  "perStageCounts": {
+    "main-01": {
+      "uniqueWins": 10,
+      "star1": 4,
+      "star2": 3,
+      "star3": 3,
+      "oneStar3Path": {
+        "executed": [
+          "slash",
+          "magic"
+        ],
+        "heroHp": 7
+      },
+      "oneStar1Path": {
+        "executed": [
+          "slash",
+          "focus",
+          "magic"
+        ],
+        "heroHp": 4
+      }
+    },
+    "main-02": {
+      "uniqueWins": 7,
+      "star1": 3,
+      "star2": 2,
+      "star3": 2,
+      "oneStar3Path": {
+        "executed": [
+          "focus",
+          "slash"
+        ],
+        "heroHp": 6
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 3
+      }
+    },
+    "main-03": {
+      "uniqueWins": 7,
+      "star1": 5,
+      "star2": 1,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "guard",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 7
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 2
+      }
+    },
+    "main-04": {
+      "uniqueWins": 7,
+      "star1": 2,
+      "star2": 4,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "magic",
+          "counter",
+          "slash"
+        ],
+        "heroHp": 8
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "slash",
+          "counter"
+        ],
+        "heroHp": 4
+      }
+    },
+    "main-05": {
+      "uniqueWins": 11,
+      "star1": 5,
+      "star2": 5,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "guard",
+          "counter",
+          "magic"
+        ],
+        "heroHp": 5
+      },
+      "oneStar1Path": {
+        "executed": [
+          "guard",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 1
+      }
+    },
+    "main-06": {
+      "uniqueWins": 14,
+      "star1": 2,
+      "star2": 10,
+      "star3": 2,
+      "oneStar3Path": {
+        "executed": [
+          "slash",
+          "heal",
+          "magic"
+        ],
+        "heroHp": 5
+      },
+      "oneStar1Path": {
+        "executed": [
+          "heal",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 2
+      }
+    },
+    "main-07": {
+      "uniqueWins": 7,
+      "star1": 2,
+      "star2": 4,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 7
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "slash",
+          "counter"
+        ],
+        "heroHp": 3
+      }
+    },
+    "main-08": {
+      "uniqueWins": 3,
+      "star1": 1,
+      "star2": 1,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 6
+      },
+      "oneStar1Path": {
+        "executed": [
+          "focus",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 2
+      }
+    },
+    "extra-01": {
+      "uniqueWins": 5,
+      "star1": 1,
+      "star2": 1,
+      "star3": 3,
+      "oneStar3Path": {
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 4
+      },
+      "oneStar1Path": {
+        "executed": [
+          "focus",
+          "slash",
+          "counter"
+        ],
+        "heroHp": 2
+      }
+    },
+    "extra-02": {
+      "uniqueWins": 6,
+      "star1": 2,
+      "star2": 3,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "magic"
+        ],
+        "heroHp": 4
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "slash"
+        ],
+        "heroHp": 1
+      }
+    },
+    "extra-03": {
+      "uniqueWins": 6,
+      "star1": 3,
+      "star2": 2,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "guard",
+          "magic",
+          "slash"
+        ],
+        "heroHp": 6
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "guard",
+          "slash"
+        ],
+        "heroHp": 1
+      }
+    },
+    "extra-04": {
+      "uniqueWins": 6,
+      "star1": 4,
+      "star2": 1,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "heal",
+          "slash"
+        ],
+        "heroHp": 6
+      },
+      "oneStar1Path": {
+        "executed": [
+          "guard",
+          "slash",
+          "counter"
+        ],
+        "heroHp": 3
+      }
+    },
+    "extra-05": {
+      "uniqueWins": 5,
+      "star1": 1,
+      "star2": 3,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 5
+      },
+      "oneStar1Path": {
+        "executed": [
+          "focus",
+          "slash",
+          "magic"
+        ],
+        "heroHp": 2
+      }
+    },
+    "extra-06": {
+      "uniqueWins": 7,
+      "star1": 4,
+      "star2": 2,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "counter",
+          "magic",
+          "slash"
+        ],
+        "heroHp": 5
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 2
+      }
+    },
+    "extra-07": {
+      "uniqueWins": 6,
+      "star1": 3,
+      "star2": 2,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "focus",
+          "heal",
+          "slash"
+        ],
+        "heroHp": 4
+      },
+      "oneStar1Path": {
+        "executed": [
+          "focus",
+          "guard",
+          "slash"
+        ],
+        "heroHp": 1
+      }
+    },
+    "extra-08": {
+      "uniqueWins": 5,
+      "star1": 3,
+      "star2": 1,
+      "star3": 1,
+      "oneStar3Path": {
+        "executed": [
+          "focus",
+          "counter",
+          "slash"
+        ],
+        "heroHp": 6
+      },
+      "oneStar1Path": {
+        "executed": [
+          "magic",
+          "focus",
+          "slash"
+        ],
+        "heroHp": 3
+      }
+    }
+  },
+  "totals": {
+    "plannedCases": 960,
+    "uniqueWins": 112,
+    "star1": 45,
+    "star2": 45,
+    "star3": 22,
+    "star3DistinctExecutedSequences": 20,
+    "plansWithStarDifferentFromV07": 4
+  }
+}

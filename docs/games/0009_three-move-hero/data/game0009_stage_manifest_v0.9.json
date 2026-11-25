@@ -1,0 +1,902 @@
+{
+  "schemaVersion": "0.9.0",
+  "gameId": "0009_three-move-hero",
+  "displayName": "3手の勇者",
+  "locale": "ja-JP",
+  "manifestStatus": "PROPOSED_NOT_APPROVED",
+  "cardCatalog": {
+    "slash": {
+      "name": "斬撃",
+      "kind": "attack",
+      "damageType": "physical",
+      "baseDamage": 4,
+      "consumesFocus": true,
+      "description": "敵に物理4ダメージ。気合がある場合は+4。"
+    },
+    "magic": {
+      "name": "魔法弾",
+      "kind": "attack",
+      "damageType": "magic",
+      "baseDamage": 3,
+      "consumesFocus": false,
+      "description": "敵に魔法3ダメージ。物理防御では軽減されない。"
+    },
+    "guard": {
+      "name": "ガード",
+      "kind": "defense",
+      "attackReduction": 5,
+      "durationTurns": 1,
+      "description": "このターンの敵攻撃ダメージを5軽減。"
+    },
+    "focus": {
+      "name": "気合",
+      "kind": "buff",
+      "nextSlashBonus": 4,
+      "description": "次に実行する斬撃の物理ダメージを+4。魔法弾では消費しない。"
+    },
+    "heal": {
+      "name": "回復",
+      "kind": "heal",
+      "healAmount": 3,
+      "clampToMaxHp": true,
+      "description": "勇者HPを最大HPまでの範囲で3回復。"
+    },
+    "counter": {
+      "name": "カウンター",
+      "kind": "counter",
+      "attackReduction": 3,
+      "retaliationDamage": 2,
+      "retaliationType": "direct",
+      "description": "敵の攻撃を3軽減。攻撃を受けて生存したら、ダメージが0でも反撃2。防御行動には反撃しない。"
+    }
+  },
+  "enemyActionCatalog": {
+    "attack": {
+      "description": "設定したpowerで勇者を攻撃する。勇者カードによる攻撃軽減を適用。",
+      "requiresPower": true
+    },
+    "physicalGuard": {
+      "description": "このターンの勇者の物理ダメージを3軽減。敵は攻撃しない。",
+      "physicalReduction": 3,
+      "attacks": false
+    },
+    "magicWard": {
+      "description": "このターンの勇者の魔法ダメージを2軽減。敵は攻撃しない。",
+      "magicReduction": 2,
+      "attacks": false
+    }
+  },
+  "passiveCatalog": {
+    "thornArmor": {
+      "description": "斬撃が1以上のダメージを与えて敵が生存した場合、勇者に1ダメージ。斬撃で撃破した場合は反動なし。反撃と魔法弾では不発。",
+      "damage": 1
+    }
+  },
+  "combatRules": {
+    "handSize": 5,
+    "planSize": 3,
+    "maxTurns": 3,
+    "duplicateCardsInPlan": false,
+    "inputOrder": "selectedCardOrder",
+    "heroActsFirst": true,
+    "enemyActForecastFullyVisible": true,
+    "noRandomness": true,
+    "victory": "enemyHpReachesZeroBeforeHeroDeath",
+    "defeat": [
+      "heroHpReachesZero",
+      "enemySurvivesAfterTurn3"
+    ],
+    "healingCap": "heroMaxHp",
+    "damageFloor": 0,
+    "focusPersistence": "untilNextExecutedSlashOrCombatEnds",
+    "thornTrigger": "onExecutedSlashWithPositiveFinalDamageIfEnemyStillAlive",
+    "counterTrigger": "enemyAttackActionOccurredAndHeroAliveEvenIfAttackDamageZero",
+    "counterDamageType": "direct_ignores_defense_and_thorn",
+    "turnOrder": [
+      "setEnemyStance",
+      "executeHeroCard",
+      "checkEnemyDefeat",
+      "resolveThornIfApplicable",
+      "checkHeroDefeat",
+      "resolveEnemyAttackIfApplicable",
+      "checkHeroDefeat",
+      "resolveCounterIfApplicable",
+      "checkEnemyDefeat",
+      "checkTurn3Timeout"
+    ],
+    "starScope": "onlyExecutedCardsCount",
+    "earlyVictory": "stopImmediately;unusedPlannedCardsAreNotExecuted"
+  },
+  "progression": {
+    "initialUnlocked": "main-01",
+    "unlockBy": "firstClearAtLeastOneStar",
+    "highestStarsNeverDecrease": true,
+    "hintUsageScope": "individualAttempt",
+    "noHintClear": "aWonAttemptWithNoHintsViewed"
+  },
+  "stages": [
+    {
+      "stageId": "main-01",
+      "group": "main",
+      "order": 1,
+      "title": "素早い一撃",
+      "heroMaxHp": 9,
+      "enemyMaxHp": 6,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "heal"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 2
+        },
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "physicalGuard"
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 6,
+        "star3": {
+          "minHp": 7,
+          "objective": {
+            "type": "finishWithinTurns",
+            "maxTurns": 2
+          }
+        }
+      },
+      "hints": {
+        "level1": "攻撃カード2枚だけで倒せないか確認しよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "slash"
+        }
+      },
+      "tutorial": "カードの順番と2手以内の勝利を覚えよう。",
+      "unlockAfter": null
+    },
+    {
+      "stageId": "main-02",
+      "group": "main",
+      "order": 2,
+      "title": "気合の使い方",
+      "heroMaxHp": 8,
+      "enemyMaxHp": 8,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "heal"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 2
+        },
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "attack",
+          "power": 3
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 5,
+        "star3": {
+          "minHp": 6,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "focus"
+          }
+        }
+      },
+      "hints": {
+        "level1": "気合は斬撃を使うまで消えません。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "focus"
+        }
+      },
+      "tutorial": "気合の強化は次の斬撃まで残る。",
+      "unlockAfter": "main-01"
+    },
+    {
+      "stageId": "main-03",
+      "group": "main",
+      "order": 3,
+      "title": "強撃を凌ぐ",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 8,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "heal"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 5
+        },
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "attack",
+          "power": 2
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 5,
+        "star3": {
+          "minHp": 7,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "guard"
+          }
+        }
+      },
+      "hints": {
+        "level1": "最初の5ダメージを受けずに済むカードが鍵です。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "guard"
+        }
+      },
+      "tutorial": "致命的な攻撃には防御を合わせよう。",
+      "unlockAfter": "main-02"
+    },
+    {
+      "stageId": "main-04",
+      "group": "main",
+      "order": 4,
+      "title": "物理防御の突破",
+      "heroMaxHp": 8,
+      "enemyMaxHp": 9,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "attack",
+          "power": 4
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 5,
+        "star3": {
+          "minHp": 8,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "物理防御のターンは魔法が有利です。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "magic"
+        }
+      },
+      "tutorial": "敵の物理防御には魔法を試そう。",
+      "unlockAfter": "main-03"
+    },
+    {
+      "stageId": "main-05",
+      "group": "main",
+      "order": 5,
+      "title": "棘の回避",
+      "heroMaxHp": 5,
+      "enemyMaxHp": 5,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 5
+        },
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "attack",
+          "power": 4
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 3,
+        "star3": {
+          "minHp": 5,
+          "objective": {
+            "type": "cardNotExecuted",
+            "cardId": "slash"
+          }
+        }
+      },
+      "hints": {
+        "level1": "棘を持つ敵には、斬撃以外でもダメージを与えられます。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "guard"
+        }
+      },
+      "tutorial": "棘の反動を避ける戦い方を探そう。",
+      "unlockAfter": "main-04"
+    },
+    {
+      "stageId": "main-06",
+      "group": "main",
+      "order": 6,
+      "title": "回復の判断",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 7,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "attack",
+          "power": 2
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 5,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "heal"
+          }
+        }
+      },
+      "hints": {
+        "level1": "敵を早く倒すより、回復してから倒す方が残りHPが増えることがあります。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "slash"
+        }
+      },
+      "tutorial": "早期撃破と回復してからの撃破を比較しよう。",
+      "unlockAfter": "main-05"
+    },
+    {
+      "stageId": "main-07",
+      "group": "main",
+      "order": 7,
+      "title": "魔法結界の隙",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 9,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 3
+        },
+        {
+          "type": "magicWard"
+        },
+        {
+          "type": "attack",
+          "power": 4
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 7,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "結界中には魔法を使わない方が有利です。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "魔法結界のターンを見極めよう。",
+      "unlockAfter": "main-06"
+    },
+    {
+      "stageId": "main-08",
+      "group": "main",
+      "order": 8,
+      "title": "棘の魔導騎士",
+      "heroMaxHp": 8,
+      "enemyMaxHp": 10,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 5
+        },
+        {
+          "type": "magicWard"
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 3,
+        "star3": {
+          "minHp": 6,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "counter"
+          }
+        }
+      },
+      "hints": {
+        "level1": "最初の攻撃への反撃を攻撃力として数えよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "棘と結界を読み、最後の一撃を組み立てよう。",
+      "unlockAfter": "main-07"
+    },
+    {
+      "stageId": "extra-01",
+      "group": "extra",
+      "order": 1,
+      "title": "守りの裏をかく",
+      "heroMaxHp": 8,
+      "enemyMaxHp": 10,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "attack",
+          "power": 4
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 4,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "敵の物理防御は魔法弾を軽減しません。魔法を使うターンを考えましょう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "magic"
+        }
+      },
+      "tutorial": "初手の物理防御に魔法弾を合わせ、気合と斬撃で押し切ろう。",
+      "unlockAfter": "main-08"
+    },
+    {
+      "stageId": "extra-02",
+      "group": "extra",
+      "order": 2,
+      "title": "魔法の早撃ち",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 5,
+      "hand": [
+        "slash",
+        "magic",
+        "focus",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 6
+        },
+        {
+          "type": "attack",
+          "power": 4
+        },
+        {
+          "type": "attack",
+          "power": 3
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 3,
+        "star3": {
+          "minHp": 4,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "被ダメージを抑えつつ2回の行動で倒せるか考えよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "2手で終える別解を見つけよう。",
+      "unlockAfter": "extra-01"
+    },
+    {
+      "stageId": "extra-03",
+      "group": "extra",
+      "order": 3,
+      "title": "棘と物理防御",
+      "heroMaxHp": 6,
+      "enemyMaxHp": 7,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 5
+        },
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "attack",
+          "power": 4
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 6,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "guard"
+          }
+        }
+      },
+      "hints": {
+        "level1": "最初の強攻撃を受けないようにしよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "guard"
+        }
+      },
+      "tutorial": "棘と物理防御を一緒に考えよう。",
+      "unlockAfter": "extra-02"
+    },
+    {
+      "stageId": "extra-04",
+      "group": "extra",
+      "order": 4,
+      "title": "結界中の立て直し",
+      "heroMaxHp": 6,
+      "enemyMaxHp": 6,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 6
+        },
+        {
+          "type": "magicWard"
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 6,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "heal"
+          }
+        }
+      },
+      "hints": {
+        "level1": "敵が魔法結界を張るターンは攻撃してきません。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "攻撃されないターンを回復に使おう。",
+      "unlockAfter": "extra-03"
+    },
+    {
+      "stageId": "extra-05",
+      "group": "extra",
+      "order": 5,
+      "title": "棘と結界",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 9,
+      "hand": [
+        "slash",
+        "magic",
+        "focus",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 4
+        },
+        {
+          "type": "magicWard"
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 3,
+        "star3": {
+          "minHp": 5,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "直接攻撃以外のダメージ源も数えよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "ガードなしで棘と結界に立ち向かおう。",
+      "unlockAfter": "extra-04"
+    },
+    {
+      "stageId": "extra-06",
+      "group": "extra",
+      "order": 6,
+      "title": "二つの防御姿勢",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 8,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 5
+        },
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "magicWard"
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 5,
+        "star3": {
+          "minHp": 5,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "magic"
+          }
+        }
+      },
+      "hints": {
+        "level1": "物理防御と魔法結界は違う種類のダメージを軽減します。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "counter"
+        }
+      },
+      "tutorial": "異なる2種類の防御姿勢を見分けよう。",
+      "unlockAfter": "extra-05"
+    },
+    {
+      "stageId": "extra-07",
+      "group": "extra",
+      "order": 7,
+      "title": "魔法不使用戦",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 8,
+      "hand": [
+        "slash",
+        "guard",
+        "focus",
+        "heal",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "attack",
+          "power": 6
+        },
+        {
+          "type": "physicalGuard"
+        },
+        {
+          "type": "attack",
+          "power": 6
+        }
+      ],
+      "passives": [],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 4,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "heal"
+          }
+        }
+      },
+      "hints": {
+        "level1": "2ターン目は敵が攻撃してきません。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "focus"
+        }
+      },
+      "tutorial": "魔法を使わずに生存と火力を両立しよう。",
+      "unlockAfter": "extra-06"
+    },
+    {
+      "stageId": "extra-08",
+      "group": "extra",
+      "order": 8,
+      "title": "逆転の最終試練",
+      "heroMaxHp": 7,
+      "enemyMaxHp": 9,
+      "hand": [
+        "slash",
+        "magic",
+        "guard",
+        "focus",
+        "counter"
+      ],
+      "enemyActions": [
+        {
+          "type": "magicWard"
+        },
+        {
+          "type": "attack",
+          "power": 4
+        },
+        {
+          "type": "attack",
+          "power": 5
+        }
+      ],
+      "passives": [
+        "thornArmor"
+      ],
+      "rating": {
+        "star2MinHp": 4,
+        "star3": {
+          "minHp": 6,
+          "objective": {
+            "type": "cardExecuted",
+            "cardId": "counter"
+          }
+        }
+      },
+      "hints": {
+        "level1": "気合を使うタイミングと反撃を使うタイミングを比較しよう。",
+        "level2": {
+          "type": "firstCard",
+          "cardId": "focus"
+        }
+      },
+      "tutorial": "結界の後に敵が攻撃する順番を利用しよう。",
+      "unlockAfter": "extra-07"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game0009:v0.9:settings-store",
+  "title": "Game 0009 display settings v1 (draft)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "settingsSchemaVersion",
+    "gameId",
+    "reducedMotion",
+    "battleSpeed"
+  ],
+  "properties": {
+    "settingsSchemaVersion": {
+      "const": 1
+    },
+    "gameId": {
+      "const": "0009_three-move-hero"
+    },
+    "reducedMotion": {
+      "type": "boolean"
+    },
+    "battleSpeed": {
+      "enum": [
+        "normal",
+        "fast",
+        "instant"
+      ]
+    }
+  }
+}

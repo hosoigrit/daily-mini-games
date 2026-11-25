@@ -1,0 +1,21 @@
+{
+  "saveSchemaVersion": 1,
+  "gameId": "0009_three-move-hero",
+  "rulesetVersion": "0.7.0",
+  "progress": {
+    "main-01": {
+      "maxStars": 3,
+      "bestNoHintStars": 2,
+      "clearCount": 3
+    },
+    "main-02": {
+      "maxStars": 1,
+      "bestNoHintStars": 0,
+      "clearCount": 1
+    }
+  },
+  "settings": {
+    "reducedMotion": false,
+    "battleSpeed": "normal"
+  }
+}

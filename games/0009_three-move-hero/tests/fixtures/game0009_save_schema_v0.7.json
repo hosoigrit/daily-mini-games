@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game0009:v0.7:save",
+  "title": "Game 0009 Progress Save v1 (design v0.7)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "saveSchemaVersion",
+    "gameId",
+    "rulesetVersion",
+    "progress",
+    "settings"
+  ],
+  "properties": {
+    "saveSchemaVersion": {
+      "const": 1
+    },
+    "gameId": {
+      "const": "0009_three-move-hero"
+    },
+    "rulesetVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "progress": {
+      "type": "object",
+      "maxProperties": 16,
+      "patternProperties": {
+        "^(main|extra)-0[1-8]$": {
+          "$ref": "#/$defs/record"
+        }
+      },
+      "additionalProperties": false
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reducedMotion",
+        "battleSpeed"
+      ],
+      "properties": {
+        "reducedMotion": {
+          "type": "boolean"
+        },
+        "battleSpeed": {
+          "enum": [
+            "normal",
+            "fast",
+            "instant"
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxStars",
+        "bestNoHintStars",
+        "clearCount"
+      ],
+      "properties": {
+        "maxStars": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "bestNoHintStars": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "clearCount": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

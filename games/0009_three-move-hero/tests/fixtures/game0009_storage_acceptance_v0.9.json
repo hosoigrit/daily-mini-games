@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "0.9.0",
+  "cases": [
+    {
+      "id": "SAVE-01",
+      "title": "初回起動",
+      "given": "progressキーなし",
+      "expected": "空のrulesetsで開始。main-01のみ解放。保存不能警告なし"
+    },
+    {
+      "id": "SAVE-02",
+      "title": "同一ルール再戦",
+      "given": "現在星3＋新たな星1勝利",
+      "expected": "現在星3のまま維持。ノーヒント最高星を低下させない"
+    },
+    {
+      "id": "SAVE-03",
+      "title": "旧ルールから新ルールへ",
+      "given": "旧fpの星3、新fpに記録なし",
+      "expected": "旧fpは保持。新fpの星は0。旧クリアにより解放状態は維持"
+    },
+    {
+      "id": "SAVE-04",
+      "title": "見た目/ヒント文言のみ変更",
+      "given": "ゲームプレイ数値と評価条件が不変",
+      "expected": "fingerprint不変。星の再獲得不要"
+    },
+    {
+      "id": "SAVE-05",
+      "title": "星条件変更",
+      "given": "extra-01星3評価のみ変更",
+      "expected": "fingerprint変化。旧fpの星評価を新fpへコピーしない"
+    },
+    {
+      "id": "SAVE-06",
+      "title": "旧v1データ移行",
+      "given": "v0.7旧key存在・妥当",
+      "expected": "明示的な移行操作後、旧fp領域へ有効recordのみ取り込み。旧keyは変更・削除しない"
+    },
+    {
+      "id": "SAVE-07",
+      "title": "未知のsaveSchemaVersion",
+      "given": "saveSchemaVersion=3",
+      "expected": "旧データへ上書き禁止。読み取り専用＋警告"
+    },
+    {
+      "id": "SAVE-08",
+      "title": "大小関係の不一致",
+      "given": "bestNoHintStars=3,maxStars=2",
+      "expected": "無効レコード。自動補正せずユーザーに回復プレビュー"
+    },
+    {
+      "id": "SAVE-09",
+      "title": "不正JSON",
+      "given": "progressキーが構文エラー",
+      "expected": "元データへ上書きせず、バックアップのコピー案内。ユーザー確認前の初期化禁止"
+    },
+    {
+      "id": "SAVE-10",
+      "title": "部分破損",
+      "given": "2ステージ有効・1ステージ不正",
+      "expected": "有効2レコードだけを復旧案に提示し、確定操作の前にバックアップ保存の成立を確認"
+    },
+    {
+      "id": "SAVE-11",
+      "title": "バックアップ確保不可",
+      "given": "容量不足で復旧バックアップ失敗",
+      "expected": "元キーを変更せず復旧を停止。手動エクスポート可にする"
+    },
+    {
+      "id": "SAVE-12",
+      "title": "複数タブ同一ステージ",
+      "given": "タブAで星3、タブBで星2",
+      "expected": "排他中に最新読み込み→maxMerge。星3保持"
+    },
+    {
+      "id": "SAVE-13",
+      "title": "複数タブ別ステージ",
+      "given": "Aでmain-02、Bでmain-03",
+      "expected": "ロック取得後再読み込みで両方保持"
+    },
+    {
+      "id": "SAVE-14",
+      "title": "リトライ",
+      "given": "保存成功後同じ結果を再試行",
+      "expected": "最高星・ヒントなし星は冪等。clearCountは持たない"
+    },
+    {
+      "id": "SAVE-15",
+      "title": "Web Locks APIなし",
+      "given": "Locksを取得できない",
+      "expected": "永続化はしない。メモリ内で遊べることと保存不可警告を表示"
+    },
+    {
+      "id": "SAVE-16",
+      "title": "lock待ちで画面離脱",
+      "given": "ロック取得前にページ遷移",
+      "expected": "まだ保存成功と表示しない。未反映結果を再表示できる範囲では保持"
+    },
+    {
+      "id": "SAVE-17",
+      "title": "localStorage setItem例外",
+      "given": "容量/権限の例外",
+      "expected": "保存済みと表示しない。既存レコードを破棄しない"
+    },
+    {
+      "id": "SAVE-18",
+      "title": "セッションリロード",
+      "given": "戦闘途中で更新",
+      "expected": "未完了戦闘は破棄。保存済み星は残りS01へ"
+    },
+    {
+      "id": "SAVE-19",
+      "title": "複数ルールの解放",
+      "given": "旧ルールでmain-08をクリア",
+      "expected": "現行extra-01は解放可能。現行星はゼロから開始"
+    },
+    {
+      "id": "SAVE-20",
+      "title": "規定外ステージID",
+      "given": "extra-09が入っている",
+      "expected": "不正レコード扱い。追加の解放判定には用いない"
+    },
+    {
+      "id": "SAVE-21",
+      "title": "同じルールfp衝突",
+      "given": "同一fpに異なるルール本体",
+      "expected": "重大整合性エラー。プレイ記録を上書きしない"
+    },
+    {
+      "id": "SAVE-22",
+      "title": "未対応ブラウザ",
+      "given": "Safari/Android/PCで鍵機能未検証",
+      "expected": "リリース判定前に対応実機でロック機能を確認。未対応なら保存不可モードを確認"
+    },
+    {
+      "id": "SAVE-23",
+      "title": "設定値の競合",
+      "given": "別タブで戦闘速度を変更",
+      "expected": "表示設定はlast-write-winsを許容。戦闘評価データには影響しない"
+    },
+    {
+      "id": "SAVE-24",
+      "title": "凍結前旧ドラフト",
+      "given": "v0.7のサンプル保存が存在",
+      "expected": "テスト用移行のみ。実ユーザーデータが存在したと偽らない"
+    },
+    {
+      "id": "SAVE-25",
+      "title": "説明文・ヒントだけを変更",
+      "given": "カード・戦闘・ステージ数値は変更せず、displayName/title/hintsを変更",
+      "expected": "規範的ルール指紋は一切変わらない"
+    },
+    {
+      "id": "SAVE-26",
+      "title": "戦闘数値の変更",
+      "given": "一つの敵HPを+1",
+      "expected": "規範的ルール指紋が変化し旧実績に上書きしない"
+    },
+    {
+      "id": "SAVE-27",
+      "title": "指紋再計算テスト",
+      "given": "同梱canonical payloadを末尾改行除外でSHA-256計算",
+      "expected": "指紋が56a8502f8ac2b90597bedf90b940ff5536b6cf231f541a5b1e6c87ff21bfc620と一致し、全期待値ファイルで同一"
+    }
+  ]
+}
