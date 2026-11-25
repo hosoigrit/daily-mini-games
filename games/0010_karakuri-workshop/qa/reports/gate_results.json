@@ -164,5 +164,18 @@
     "oldGate": "HOLD",
     "oldPhysicalCase": "BLOCKED",
     "cr007RegressionCases": 268
+  },
+  "EG-06": {
+    "status": "PASS",
+    "testedSHA": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+    "casePasses": 125,
+    "initialUncleared": 10,
+    "baselineStars3": 10,
+    "alternates": 7,
+    "repeatsCleared": 1000,
+    "hints": 30,
+    "next": "E7",
+    "protectedAssets": "IDENTICAL",
+    "commonPhysicsProfile": "PP03"
   }
 }

@@ -7176,5 +7176,2450 @@
       "expected": "1tick≤.005mのみ保持、非接触加算なし"
     },
     "originalNativeBlocked": 1
+  },
+  "E6": {
+    "status": "PASS",
+    "sourceSHA": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+    "mandatory": 125,
+    "pass": 125,
+    "cases": [
+      {
+        "caseId": "TC-D3-046-C001",
+        "status": "PASS",
+        "measured": "available hints retain arbitrary access order and confirm first ghost",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1538
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "LEVEL1〜3任意順",
+        "expected": "指定ヒント、回数制限なし"
+      },
+      {
+        "caseId": "TC-D3-047-C001",
+        "status": "PASS",
+        "measured": "hint resolution leaves draft geometry and inventory unchanged",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1544
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "ヒント表示前後の配置・在庫",
+        "expected": "不変、物理形状なし"
+      },
+      {
+        "caseId": "TC-D3-048-C001",
+        "status": "PASS",
+        "measured": "obsolete compatibility rejects otherwise legal hint ghost",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1550
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "旧互換性ヒント",
+        "expected": "現行攻略として適用しない"
+      },
+      {
+        "caseId": "TC-D3-048-C002",
+        "status": "PASS",
+        "measured": "obsolete compatibility rejects otherwise legal hint ghost",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1556
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "旧互換性ヒント",
+        "expected": "現行攻略として適用しない"
+      },
+      {
+        "caseId": "TC-D4-001-C001",
+        "status": "PASS",
+        "measured": "only the ten stage IDs are legal",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1490
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "10定義、欠落・重複注入",
+        "expected": "01〜10各1件のみ"
+      },
+      {
+        "caseId": "TC-D4-002-C001",
+        "status": "PASS",
+        "measured": "translate the frozen lower-left coordinates",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1415
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "補助座標(10,20)/(3,28.5)",
+        "expected": "左上(10,10)/(3,1.5)、物理(2.4,4.8)/(.72,6.84)"
+      },
+      {
+        "caseId": "TC-D4-003-C001",
+        "status": "PASS",
+        "measured": "fixed structures and goal protection fit the board",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1496
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "全固定構造・ゴール",
+        "expected": "盤面収容"
+      },
+      {
+        "caseId": "TC-D4-004-C001",
+        "status": "PASS",
+        "measured": "all frozen initial ball, goal and fixed geometry are compatible",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1421
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "全初期球・固定構造",
+        "expected": "内部重複なし"
+      },
+      {
+        "caseId": "TC-D4-005-C001",
+        "status": "PASS",
+        "measured": "approved inventory and star boundaries",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1502
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "在庫・星3目標・調整差分",
+        "expected": "承認基準一致"
+      },
+      {
+        "caseId": "TC-D4-005-C002",
+        "status": "PASS",
+        "measured": "Ten literals and all seven stock/target constraints in frozen design; approved stage geometry changes only",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "在庫・星3目標・調整差分",
+        "expected": "承認基準一致"
+      },
+      {
+        "caseId": "TC-D4-006-C001",
+        "status": "PASS",
+        "measured": "the 17 initial layouts are legal through normal commands",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1428
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "初期17候補と初期定義",
+        "expected": "共通配置判定で合法（物理未認定）"
+      },
+      {
+        "caseId": "TC-D4-006-C002",
+        "status": "PASS",
+        "measured": "the 17 initial layouts are legal through normal commands",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1435
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "初期17候補と初期定義",
+        "expected": "共通配置判定で合法（物理未認定）"
+      },
+      {
+        "caseId": "TC-D4-007-C001",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1,
+          "childRunId": "CR007-E6-FORMAL-FINAL:01:0001"
+        },
+        "stage": "01",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C002",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 110,
+          "childRunId": "CR007-E6-FORMAL-FINAL:02:0109"
+        },
+        "stage": "02",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST02 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C003",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 219,
+          "childRunId": "CR007-E6-FORMAL-FINAL:03:0217"
+        },
+        "stage": "03",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST03 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C004",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 332,
+          "childRunId": "CR007-E6-FORMAL-FINAL:04:0329"
+        },
+        "stage": "04",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C005",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 448,
+          "childRunId": "CR007-E6-FORMAL-FINAL:05:0444"
+        },
+        "stage": "05",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C006",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 565,
+          "childRunId": "CR007-E6-FORMAL-FINAL:06:0560"
+        },
+        "stage": "06",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C007",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 681,
+          "childRunId": "CR007-E6-FORMAL-FINAL:07:0675"
+        },
+        "stage": "07",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C008",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 808,
+          "childRunId": "CR007-E6-FORMAL-FINAL:08:0801"
+        },
+        "stage": "08",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C009",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 925,
+          "childRunId": "CR007-E6-FORMAL-FINAL:09:0917"
+        },
+        "stage": "09",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-007-C010",
+        "status": "PASS",
+        "measured": "FAILED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1040,
+          "childRunId": "CR007-E6-FORMAL-FINAL:10:1031"
+        },
+        "stage": "10",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 自由配置0個",
+        "expected": "通常FAILED、ERROR不可"
+      },
+      {
+        "caseId": "TC-D4-008-C001",
+        "status": "PASS",
+        "measured": "form all 17 formal stage layouts through ordinary edit commands",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1568
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "認定基準・別解を通常操作系列で構築",
+        "expected": "全件再現可"
+      },
+      {
+        "caseId": "TC-D4-009-C001",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 2,
+          "childRunId": "CR007-E6-FORMAL-FINAL:01:0002"
+        },
+        "stage": "01",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C002",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 111,
+          "childRunId": "CR007-E6-FORMAL-FINAL:02:0110"
+        },
+        "stage": "02",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST02 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C003",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 220,
+          "childRunId": "CR007-E6-FORMAL-FINAL:03:0218"
+        },
+        "stage": "03",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST03 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C004",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 333,
+          "childRunId": "CR007-E6-FORMAL-FINAL:04:0330"
+        },
+        "stage": "04",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C005",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 449,
+          "childRunId": "CR007-E6-FORMAL-FINAL:05:0445"
+        },
+        "stage": "05",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C006",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 566,
+          "childRunId": "CR007-E6-FORMAL-FINAL:06:0561"
+        },
+        "stage": "06",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C007",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 682,
+          "childRunId": "CR007-E6-FORMAL-FINAL:07:0676"
+        },
+        "stage": "07",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C008",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 809,
+          "childRunId": "CR007-E6-FORMAL-FINAL:08:0802"
+        },
+        "stage": "08",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C009",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 926,
+          "childRunId": "CR007-E6-FORMAL-FINAL:09:0918"
+        },
+        "stage": "09",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-009-C010",
+        "status": "PASS",
+        "measured": "CLEARED",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1041,
+          "childRunId": "CR007-E6-FORMAL-FINAL:10:1032"
+        },
+        "stage": "10",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 基準攻略",
+        "expected": "CLEARED"
+      },
+      {
+        "caseId": "TC-D4-010-C001",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 2,
+          "childRunId": "CR007-E6-FORMAL-FINAL:01:0002"
+        },
+        "stage": "01",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C002",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 111,
+          "childRunId": "CR007-E6-FORMAL-FINAL:02:0110"
+        },
+        "stage": "02",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST02 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C003",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 220,
+          "childRunId": "CR007-E6-FORMAL-FINAL:03:0218"
+        },
+        "stage": "03",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST03 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C004",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 333,
+          "childRunId": "CR007-E6-FORMAL-FINAL:04:0330"
+        },
+        "stage": "04",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C005",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 449,
+          "childRunId": "CR007-E6-FORMAL-FINAL:05:0445"
+        },
+        "stage": "05",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C006",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 566,
+          "childRunId": "CR007-E6-FORMAL-FINAL:06:0561"
+        },
+        "stage": "06",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C007",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 682,
+          "childRunId": "CR007-E6-FORMAL-FINAL:07:0676"
+        },
+        "stage": "07",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C008",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 809,
+          "childRunId": "CR007-E6-FORMAL-FINAL:08:0802"
+        },
+        "stage": "08",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C009",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 926,
+          "childRunId": "CR007-E6-FORMAL-FINAL:09:0918"
+        },
+        "stage": "09",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-010-C010",
+        "status": "PASS",
+        "measured": 3,
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1041,
+          "childRunId": "CR007-E6-FORMAL-FINAL:10:1032"
+        },
+        "stage": "10",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 基準攻略",
+        "expected": "星3"
+      },
+      {
+        "caseId": "TC-D4-011-C001",
+        "status": "PASS",
+        "measured": {
+          "nativeRuns": 500,
+          "requiredUse": true
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01/02/03/04/06",
+        "expected": "必須使用全達成"
+      },
+      {
+        "caseId": "TC-D4-012-C001",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 175,
+          "endTick": 175
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 109,
+          "childRunId": null
+        },
+        "stage": "01",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C002",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 170,
+          "endTick": 170
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 218,
+          "childRunId": null
+        },
+        "stage": "02",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST02 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C003",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 209,
+          "endTick": 209
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 331,
+          "childRunId": null
+        },
+        "stage": "03",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST03 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C004",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 233,
+          "endTick": 233
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 447,
+          "childRunId": null
+        },
+        "stage": "04",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C005",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 240,
+          "endTick": 240
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 564,
+          "childRunId": null
+        },
+        "stage": "05",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C006",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 177,
+          "endTick": 177
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 680,
+          "childRunId": null
+        },
+        "stage": "06",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C007",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 393,
+          "endTick": 393
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 807,
+          "childRunId": null
+        },
+        "stage": "07",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C008",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 263,
+          "endTick": 263
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 924,
+          "childRunId": null
+        },
+        "stage": "08",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C009",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 219,
+          "endTick": 219
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1039,
+          "childRunId": null
+        },
+        "stage": "09",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-012-C010",
+        "status": "PASS",
+        "measured": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 184,
+          "endTick": 184
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1156,
+          "childRunId": null
+        },
+        "stage": "10",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 認定候補を毎回新規世界で100回実験",
+        "expected": "100/100 CLEARED、星3・必須一致"
+      },
+      {
+        "caseId": "TC-D4-013-C001",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:6:25:15",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 345,
+          "childRunId": "CR007-E6-FORMAL-FINAL:04:0342"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C002",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:14:25:15",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            },
+            {
+              "removed": "R:9:23:15",
+              "result": "FAILED",
+              "sameResidualSequence": false
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 461,
+          "childRunId": "CR007-E6-FORMAL-FINAL:05:0457"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C003",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "P:17:15:0",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            },
+            {
+              "removed": "S:12:9:0",
+              "result": "FAILED",
+              "sameResidualSequence": false
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 577,
+          "childRunId": "CR007-E6-FORMAL-FINAL:06:0572"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C004",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:5:26:45",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 705,
+          "childRunId": "CR007-E6-FORMAL-FINAL:07:0699"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C005",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:5:24:15",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 822,
+          "childRunId": "CR007-E6-FORMAL-FINAL:08:0815"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C006",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:13:24:30",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 937,
+          "childRunId": "CR007-E6-FORMAL-FINAL:09:0929"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-013-C007",
+        "status": "PASS",
+        "measured": {
+          "end": "CLEARED",
+          "checks": [
+            {
+              "removed": "B:18:19:0",
+              "result": "FAILED",
+              "sameResidualSequence": true
+            },
+            {
+              "removed": "R:8:8:30",
+              "result": "FAILED",
+              "sameResidualSequence": false
+            }
+          ]
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1053,
+          "childRunId": "CR007-E6-FORMAL-FINAL:10:1044"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 追加攻略候補1件以上",
+        "expected": "合法正常クリア、別解認定に接続"
+      },
+      {
+        "caseId": "TC-D4-014-C001",
+        "status": "PASS",
+        "measured": "Seven live distinct action sequences and ten independent removals",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "基準と別解の使用・軌跡・除去比較",
+        "expected": "意味ある差"
+      },
+      {
+        "caseId": "TC-D4-014-C002",
+        "status": "PASS",
+        "measured": "Read-only comparison verifies real action order and all ten removal failures",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "基準と別解の使用・軌跡・除去比較",
+        "expected": "意味ある差"
+      },
+      {
+        "caseId": "TC-D4-015-C001",
+        "status": "PASS",
+        "measured": "unused added part does not constitute a distinct solution",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1574
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "同一正常clear、同一作用列/経路、追加part接触/作動/使用0の固定合成証跡",
+        "expected": "別解認定false。"
+      },
+      {
+        "caseId": "TC-D4-015-C002",
+        "status": "PASS",
+        "measured": {
+          "legalCandidatesRun": 1,
+          "unusedPlacement": {
+            "type": "P",
+            "gridX": 3,
+            "gridY": 1,
+            "angleDeg": 0
+          },
+          "recordedRun": "CR007-E6-SUPPLEMENT:04:2"
+        },
+        "proof": {
+          "runId": "CR007-E6-SUPPLEMENT",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "308aed59643751e9916b91be6321d51e52b0ce201107a926eb5f3f9c0c65adde",
+          "line": 1
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "rc8PhysicsProtocols.unusedPartをRC9採用。ST04..10の固定基準へ最大24合法候補を追加",
+        "expected": "最初の独立適格候補を別解認定しない。全候補無資格BLOCKED、資格あり誤認定FAIL。正式検証枠を消費。"
+      },
+      {
+        "caseId": "TC-D4-016-C001",
+        "status": "PASS",
+        "measured": [
+          {
+            "mode": "normal physical control",
+            "expected": true,
+            "actual": true,
+            "reference": "CR007-E6-SUPPLEMENT:04:1"
+          },
+          {
+            "mode": "isolated nonfinite position",
+            "expected": false,
+            "actual": false,
+            "reference": "CR007-E6-SUPPLEMENT:04:1"
+          },
+          {
+            "mode": "isolated tunneling marker",
+            "expected": false,
+            "actual": false,
+            "reference": "CR007-E6-SUPPLEMENT:04:1"
+          }
+        ],
+        "proof": {
+          "runId": "CR007-E6-SUPPLEMENT",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "308aed59643751e9916b91be6321d51e52b0ce201107a926eb5f3f9c0c65adde",
+          "line": 2
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "数値異常・すり抜け注入",
+        "expected": "攻略認定拒否"
+      },
+      {
+        "caseId": "TC-D4-017-C001",
+        "status": "PASS",
+        "measured": "All 1000 terminate at 170–393 game ticks",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "10基準攻略終端tick",
+        "expected": "≤1200、1080超は追加レビュー"
+      },
+      {
+        "caseId": "TC-D4-019-C001",
+        "status": "PASS",
+        "measured": "generate every independently enumerated one-step legal layout",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1508
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "各パーツ上下左右・角度±1段階",
+        "expected": "全合法近傍生成、重複なし"
+      },
+      {
+        "caseId": "TC-D4-020-C001",
+        "status": "PASS",
+        "measured": "illegal moves do not enter the legal denominator",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1514
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "範囲外／重複／在庫違反",
+        "expected": "分母から除外"
+      },
+      {
+        "caseId": "TC-D4-021-C001",
+        "status": "PASS",
+        "measured": "frozen robustness boundary",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1442
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "序盤6中3",
+        "expected": "配置許容度判定=true。この値と一致すればテストPASS。"
+      },
+      {
+        "caseId": "TC-D4-021-C002",
+        "status": "PASS",
+        "measured": "frozen robustness boundary",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1448
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "以降10中2",
+        "expected": "配置許容度判定=true。この値と一致すればテストPASS。"
+      },
+      {
+        "caseId": "TC-D4-021-C003",
+        "status": "PASS",
+        "measured": "frozen robustness boundary",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1454
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "以降11中2",
+        "expected": "配置許容度判定=false。この値と一致すればテストPASS。"
+      },
+      {
+        "caseId": "TC-D4-021-C004",
+        "status": "PASS",
+        "measured": "frozen robustness boundary",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1460
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "序盤4中1",
+        "expected": "配置許容度判定=false。この値と一致すればテストPASS。"
+      },
+      {
+        "caseId": "TC-D4-021-C005",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 6,
+          "successes": 6,
+          "percent": 50
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 109,
+          "childRunId": null
+        },
+        "stage": "01",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST01 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥4、S≥2、100S≥50L"
+      },
+      {
+        "caseId": "TC-D4-021-C006",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 6,
+          "successes": 5,
+          "percent": 50
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 218,
+          "childRunId": null
+        },
+        "stage": "02",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST02 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥4、S≥2、100S≥50L"
+      },
+      {
+        "caseId": "TC-D4-021-C007",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 50
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 331,
+          "childRunId": null
+        },
+        "stage": "03",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST03 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥4、S≥2、100S≥50L"
+      },
+      {
+        "caseId": "TC-D4-021-C008",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 11,
+          "successes": 6,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 447,
+          "childRunId": null
+        },
+        "stage": "04",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST04 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C009",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 11,
+          "successes": 5,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 564,
+          "childRunId": null
+        },
+        "stage": "05",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST05 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C010",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 680,
+          "childRunId": null
+        },
+        "stage": "06",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST06 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C011",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 22,
+          "successes": 19,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 807,
+          "childRunId": null
+        },
+        "stage": "07",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST07 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C012",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 12,
+          "successes": 8,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 924,
+          "childRunId": null
+        },
+        "stage": "08",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST08 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C013",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 10,
+          "successes": 7,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1039,
+          "childRunId": null
+        },
+        "stage": "09",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST09 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-021-C014",
+        "status": "PASS",
+        "measured": {
+          "pass": true,
+          "legal": 11,
+          "successes": 7,
+          "percent": 20
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1156,
+          "childRunId": null
+        },
+        "stage": "10",
+        "method": "P",
+        "commandId": "CMD-07",
+        "input": "ST10 全合法近傍を実験し成功数Sと合法数Lを集計",
+        "expected": "L≥10、S≥2、100S≥20L"
+      },
+      {
+        "caseId": "TC-D4-022-C001",
+        "status": "PASS",
+        "measured": "reject empty and insubstantial legal neighborhoods",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1466
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "合法0／序盤3／以降9",
+        "expected": "不合格"
+      },
+      {
+        "caseId": "TC-D4-023-C001",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "坂道の切れ目をつないでみよう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 109,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-01-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C002",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "固定の坂道の先へ、球が右下に進む角度の坂道を置こう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 109,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-01-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C003",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 12,
+              "gridY": 10,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 109,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-01-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C004",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "傾きで球の向きを変えよう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 218,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-02-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C005",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "固定の坂道から来た球を、左下へ傾く坂道でゴール側へ導こう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 218,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-02-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C006",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 27,
+              "gridY": 10,
+              "angleDeg": -45
+            }
+          ],
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 218,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-02-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C007",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "落下する球はいったん受け止められる。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 331,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-03-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C008",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 331,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-03-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C009",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 12,
+              "gridY": 9,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 331,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-03-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C010",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "高さの差は跳躍で越えられる。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 447,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-04-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C011",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 447,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-04-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C012",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 2,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 447,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-04-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C013",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "高さと飛距離の両方を見よう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 564,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-05-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C014",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 564,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-05-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C015",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 7,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 564,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-05-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C016",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "支点から離れた場所に球を落とそう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 680,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-06-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C017",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 680,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-06-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C018",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 18,
+              "gridY": 15,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 680,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-06-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C019",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "障害物を避ける道は複数ある。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 807,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-07-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C020",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 807,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-07-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C021",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 28,
+              "gridY": 17,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 807,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-07-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C022",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "一度目の跳躍の着地点を見よう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 924,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-08-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C023",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 924,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-08-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C024",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 4,
+              "gridY": 27,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 924,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-08-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C025",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1039,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-09-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C026",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1039,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-09-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C027",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 17,
+              "gridY": 20,
+              "angleDeg": 15
+            }
+          ],
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1039,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-09-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C028",
+        "status": "PASS",
+        "measured": {
+          "level": 1,
+          "text": "飛び越えた後の着地まで考えよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1156,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-10-1を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C029",
+        "status": "PASS",
+        "measured": {
+          "level": 2,
+          "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1156,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-10-2を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-023-C030",
+        "status": "PASS",
+        "measured": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 6,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb",
+          "line": 1156,
+          "childRunId": null
+        },
+        "review": "Independent source and actual action audit",
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "H-10-3を現行認定攻略・定義と照合",
+        "expected": "文章・座標・角度・互換性整合、表示部分のみ、編集非干渉"
+      },
+      {
+        "caseId": "TC-D4-024-C001",
+        "status": "PASS",
+        "measured": "obsolete compatibility rejects otherwise legal hint ghost",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1562
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "定義変更後旧ヒント",
+        "expected": "再検証まで不適用"
+      },
+      {
+        "caseId": "TC-D4-025-C001",
+        "status": "PASS",
+        "measured": "authorized cumulative geometry and size ranges",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1520
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "初期固定座標・ゴール各軸±2",
+        "expected": "他条件適合時受理"
+      },
+      {
+        "caseId": "TC-D4-026-C001",
+        "status": "PASS",
+        "measured": "adjustments remain relative to frozen initial baseline",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1472
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "初期から+2後さらに+1",
+        "expected": "累積+3拒否"
+      },
+      {
+        "caseId": "TC-D4-027-C001",
+        "status": "PASS",
+        "measured": "immutable gameplay and common physics stay fixed",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1478
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "星目標／必須／共通物理を無断変更",
+        "expected": "拒否・停止"
+      },
+      {
+        "caseId": "TC-D4-027-C002",
+        "status": "PASS",
+        "measured": "Product common physics hashes and frozen source locations remain exact",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "星目標／必須／共通物理を無断変更",
+        "expected": "拒否・停止"
+      },
+      {
+        "caseId": "TC-D4-028-C001",
+        "status": "PASS",
+        "measured": "reserve at the last legal unit and reject at either search ceiling",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1526
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "各2000／累計20000回到達",
+        "expected": "追加探索不可、未達HOLD"
+      },
+      {
+        "caseId": "TC-D4-029-C001",
+        "status": "PASS",
+        "measured": "order and operation IDs do not affect the canonical key",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1484
+        },
+        "method": "U",
+        "commandId": "CMD-03",
+        "input": "同一配置を異なる順で生成",
+        "expected": "同一キー・重複排除"
+      },
+      {
+        "caseId": "TC-D4-030-C001",
+        "status": "PASS",
+        "measured": "real geometry identity matches the frozen vector and order is canonical",
+        "proof": {
+          "runId": "CR007-E6-TESTS",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37",
+          "line": 1532
+        },
+        "method": "I",
+        "commandId": "CMD-04",
+        "input": "候補固定後の設定・証跡",
+        "expected": "同一設定・SHA・参照一致"
+      },
+      {
+        "caseId": "TC-D4-030-C002",
+        "status": "PASS",
+        "measured": "Independently reproduced ten geometry, physics and compatibility identity triples",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "候補固定後の設定・証跡",
+        "expected": "同一設定・SHA・参照一致"
+      },
+      {
+        "caseId": "TC-D7-007-C001",
+        "status": "PASS",
+        "measured": "Measured complete baseline neighborhoods; one unneeded part cannot qualify",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "P",
+        "commandId": "CMD-05",
+        "input": "1パーツ／多段／偽別解",
+        "expected": "水増し認定なし"
+      },
+      {
+        "caseId": "TC-D7-007-C002",
+        "status": "PASS",
+        "measured": "Read-only casewise report rules out unused bumps and positively qualifies new mechanisms",
+        "proof": {
+          "runId": "CR007-E6-FORMAL-FINAL",
+          "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+          "rawLogSha256": "a7f996ae7afe8008f05834a16b17ca1b66b19228351adb4c284305a778a11afb"
+        },
+        "method": "R",
+        "commandId": "MANUAL-REVIEW",
+        "input": "1パーツ／多段／偽別解",
+        "expected": "水増し認定なし"
+      }
+    ],
+    "regression": {
+      "runId": "CR007-E6-TESTS",
+      "testedSha": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+      "rawLogSha256": "d0f57fb661d66570504ddd59909b156faf31299f6b5a043b56c1d38b7d8d0e37"
+    }
   }
 }

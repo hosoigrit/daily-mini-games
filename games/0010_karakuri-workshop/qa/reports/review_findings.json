@@ -250,5 +250,19 @@
       "Tracing now records independent native side status and immutable ramp snapshots"
     ],
     "openMandatory": 0
+  },
+  "CR007-E6": {
+    "form": "Independent read-only source audit plus separate raw/native/geometry oracle",
+    "reviewed": [
+      "All ten stages and seventeen original seeds agree with frozen definitions",
+      "Independent exact 109 legal neighbors; all ten stage robustness thresholds pass",
+      "Native alternate sequence and ten removals; actual two-sided conditions and repeat projection",
+      "Independent three fixed hashes and ten real compatibility triples",
+      "Thirty textual hints map to the same actual stage and formal used part"
+    ],
+    "resolved": [
+      "Malformed optional trace fingerprint corrected and exact 1000-run suite rerun"
+    ],
+    "unresolvedMandatory": 0
   }
 }

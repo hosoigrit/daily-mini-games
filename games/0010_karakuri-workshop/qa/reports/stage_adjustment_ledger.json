@@ -1,0 +1,251 @@
+{
+  "testedSHA": "605aaf2f88b129cf59fb5e5a9baf8ac2c3312376",
+  "proposalsByStage": {
+    "10": {
+      "[[-2, -2], -1]": {
+        "goalDeltaGrid": [
+          -2,
+          -2
+        ],
+        "firstRun": "CR007-E6-TARGETED",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[-1, -1], -1]": {
+        "goalDeltaGrid": [
+          -1,
+          -1
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[-1, -2], -1]": {
+        "goalDeltaGrid": [
+          -1,
+          -2
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[0, -1], -1]": {
+        "goalDeltaGrid": [
+          0,
+          -1
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[0, -2], -1]": {
+        "goalDeltaGrid": [
+          0,
+          -2
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[-2, -1], -1]": {
+        "goalDeltaGrid": [
+          -2,
+          -1
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[-2, 0], -1]": {
+        "goalDeltaGrid": [
+          -2,
+          0
+        ],
+        "firstRun": "CR007-E6-REMAINING",
+        "firstObstacleGridXDelta": -1
+      },
+      "[[0, -1], -2]": {
+        "goalDeltaGrid": [
+          0,
+          -1
+        ],
+        "firstRun": "CR007-E6-LATE",
+        "firstObstacleGridXDelta": -2
+      },
+      "[[0, -2], -2]": {
+        "goalDeltaGrid": [
+          0,
+          -2
+        ],
+        "firstRun": "CR007-E6-LATE",
+        "firstObstacleGridXDelta": -2
+      },
+      "[[-1, -1], -2]": {
+        "goalDeltaGrid": [
+          -1,
+          -1
+        ],
+        "firstRun": "CR007-E6-LATE",
+        "firstObstacleGridXDelta": -2
+      },
+      "[[-1, -2], -2]": {
+        "goalDeltaGrid": [
+          -1,
+          -2
+        ],
+        "firstRun": "CR007-E6-LATE",
+        "firstObstacleGridXDelta": -2
+      },
+      "[[-2, -2], -2]": {
+        "goalDeltaGrid": [
+          -2,
+          -2
+        ],
+        "firstRun": "CR007-E6-LATE",
+        "firstObstacleGridXDelta": -2
+      }
+    },
+    "05": {
+      "[[-1, 0], 0]": {
+        "goalDeltaGrid": [
+          -1,
+          0
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[-2, 0], 0]": {
+        "goalDeltaGrid": [
+          -2,
+          0
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[1, 0], 0]": {
+        "goalDeltaGrid": [
+          1,
+          0
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[0, -1], 0]": {
+        "goalDeltaGrid": [
+          0,
+          -1
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[0, -2], 0]": {
+        "goalDeltaGrid": [
+          0,
+          -2
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[-1, -1], 0]": {
+        "goalDeltaGrid": [
+          -1,
+          -1
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      }
+    },
+    "08": {
+      "[[1, 0], 0]": {
+        "goalDeltaGrid": [
+          1,
+          0
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[2, 0], 0]": {
+        "goalDeltaGrid": [
+          2,
+          0
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[1, -1], 0]": {
+        "goalDeltaGrid": [
+          1,
+          -1
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[2, -1], 0]": {
+        "goalDeltaGrid": [
+          2,
+          -1
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[1, -2], 0]": {
+        "goalDeltaGrid": [
+          1,
+          -2
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      },
+      "[[2, -2], 0]": {
+        "goalDeltaGrid": [
+          2,
+          -2
+        ],
+        "firstRun": "CR007-E6-REBALANCE",
+        "firstObstacleGridXDelta": 0
+      }
+    }
+  },
+  "selected": {
+    "08": {
+      "goalDeltaGrid": [
+        1,
+        0
+      ]
+    },
+    "10": {
+      "goalDeltaGrid": [
+        -2,
+        -2
+      ],
+      "firstObstacleGridXDelta": -1
+    }
+  },
+  "physicsWrites": 0,
+  "reference": {
+    "authority": "EXEC-GAME-0010-CR007-CONTACT-EVALUATION",
+    "profile": "PP03",
+    "substeps": 2,
+    "velocityIterations": 8,
+    "positionIterations": 3,
+    "gravity": {
+      "x": 0,
+      "y": -9.8
+    },
+    "ball": {
+      "radius": 0.2,
+      "mass": 0.2,
+      "linearDamping": 0.04,
+      "angularDamping": 0.05
+    },
+    "springVelocity": 9.5,
+    "seesawMassRatio": 2.5,
+    "seesawAngularDamping": 1.2,
+    "sourceSha256": {
+      "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+      "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+      "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+      "src/physics/adapter.js": "09bae4e98cbd08811131d045110b4f947eac88d9e927ae789e6d8eac3090ca9f",
+      "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+      "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+      "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+      "src/domain/tutorial-evaluator.js": "b0a88e3804fce9ba0caa7eed1c281d39a3c6705faa4168cd66c2f35a540920c5",
+      "src/domain/result-evaluator.js": "6611e45dbeca810fe8594ce95bd954d26c0a54e5f9de6c45162a1ede3723d75c"
+    },
+    "testedSha": "63eec132197d03f1ad3927cb039c6bdf89361bb4"
+  }
+}
