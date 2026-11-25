@@ -2,9 +2,11 @@ import {getPartDefinition} from '../data/part-definitions.js';
 import {BALL} from '../data/physics-config.js';
 import {createDynamicBody, createRevoluteJoint} from './body-factory.js';
 
+const SELECTED_MASS_RATIO = 2.5;
+
 export function createSeesawAssembly(world, {id, x, y, ballMass = BALL.mass}) {
   const {width, height, joint: configuration} = getPartDefinition('S');
-  const density = configuration.massRatio * ballMass / (width * height);
+  const density = SELECTED_MASS_RATIO * ballMass / (width * height);
   const board = createDynamicBody(world, {
     id, kind: 'S', x, y, width, height, density, angularDamping: configuration.angularDamping,
   });

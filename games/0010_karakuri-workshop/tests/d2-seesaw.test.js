@@ -26,7 +26,7 @@ function pinChecked(assembly){
   const lower=joint.getLowerLimit(),upper=joint.getUpperLimit();
   near(lower,-Math.PI/6);near(upper,Math.PI/6);
   assert.equal(joint.isMotorEnabled(),false);
-  near(board.getMass(),.3);
+  near(board.getMass(),.5);
   near(board.getAngularDamping(),1.2);
   assert.equal(joint.getBodyA().getFixtureList(),null);
 }
@@ -100,9 +100,10 @@ test('TC-D2-029-C001 left/right static and high-speed loads',t=>{
 });
 
 function releasedBeforeNew({runtime,board,ball}){
-  const state=seesaw.evaluateSeesawState(board);
+  const {angle,...state}=seesaw.evaluateSeesawState(board);
+  assert(angle===0);
   assert.deepEqual(snapshot(ball),{position:{x:4.2,y:4.4},velocity:{x:0,y:0},angularVelocity:0});
-  assert.deepEqual(state,{angle:0,angularVelocity:0,pivot:center,pivotError:0,motorEnabled:false});
+  assert.deepEqual(state,{angularVelocity:0,pivot:center,pivotError:0,motorEnabled:false});
   assert.equal(runtime.ticks,0);
   assert.deepEqual(physics.collectContactEvidence(runtime),[]);
   assert.equal(physics.getDiagnostics(runtime),null);
