@@ -3255,7 +3255,14 @@
         "assertion": "two and three candidates invoke a single winner",
         "method": "I",
         "input": "2／3個同時有効接触",
-        "expected": "最大1回/tick"
+        "expected": "最大1回/tick",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D2-023-C002",
@@ -3291,6 +3298,13 @@
           "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
           "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
           "raw": "cr005-e3-boundary-verified.log"
+        },
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
         }
       },
       {
@@ -3417,7 +3431,14 @@
         "assertion": "blocking direction -0.501",
         "method": "I",
         "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.501、Jnormal=.01N·s、前面内、離隔 .10m",
-        "expected": "候補抑止"
+        "expected": "候補抑止",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D7-001-C003",
@@ -3432,7 +3453,14 @@
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
         "method": "I",
         "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.5、Jnormal=.01N·s、前面内、離隔 .10m",
-        "expected": "候補抑止"
+        "expected": "候補抑止",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D7-001-C004",
@@ -3447,7 +3475,14 @@
         "assertion": "blocking direction -0.499",
         "method": "I",
         "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.499、Jnormal=.01N·s、前面内、離隔 .10m",
-        "expected": "他条件成立なら作動候補"
+        "expected": "他条件成立なら作動候補",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D7-001-C005",
@@ -3462,7 +3497,14 @@
         "assertion": "outer separation 0.25",
         "method": "I",
         "input": "有効バネ証跡、同tick終了、外周距離=0.25、他阻害なし",
-        "expected": "候補許可"
+        "expected": "候補許可",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D7-001-C006",
@@ -3477,7 +3519,14 @@
         "assertion": "outer separation 0.250001",
         "method": "I",
         "input": "有効バネ証跡、同tick終了、外周距離=0.250001、他阻害なし",
-        "expected": "候補拒否"
+        "expected": "候補拒否",
+        "fixedInputProof": {
+          "runId": "CR005-E3-FIXED-INPUTS-106",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+          "raw": "cr005-e3-fixed-inputs.log",
+          "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+        }
       },
       {
         "caseId": "TC-D7-002-C001",

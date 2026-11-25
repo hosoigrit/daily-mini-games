@@ -143,6 +143,25 @@
       "TC-D2-022-C001",
       "TC-D2-024-C001",
       "TC-D7-003-C001"
-    ]
+    ],
+    "StandardsFollowup": {
+      "reviewInput": "Exact I-case frozen vectors for approaches, roof event timing and impulse.",
+      "caseIds": [
+        "TC-D2-023-C001",
+        "TC-D2-024-C001",
+        "TC-D7-001-C002",
+        "TC-D7-001-C003",
+        "TC-D7-001-C004",
+        "TC-D7-001-C005",
+        "TC-D7-001-C006"
+      ],
+      "rawProof": {
+        "runId": "CR005-E3-FIXED-INPUTS-106",
+        "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+        "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+        "raw": "cr005-e3-fixed-inputs.log",
+        "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+      }
+    }
   }
 }
