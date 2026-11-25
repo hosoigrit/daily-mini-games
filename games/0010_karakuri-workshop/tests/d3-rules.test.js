@@ -484,25 +484,40 @@ child('TC-D3-044', 1, 'clear and normal failed results alone replace trajectory'
   return {input: ['CLEARED', 'FAILED', 'ABORTED', 'ERROR'], expected, actual};
 });
 
-function gapRows(input, count, used) {
+function gapRows(input, count, used, signedDistance, firstGap = null) {
   const actual = runRamp(input);
   assert.equal(actual.at(-1)?.intervals, count);
   assert.equal(actual.at(-1)?.achieved, used);
-  return {input, expected: {count, used}, actual};
+  assert(Math.abs(actual.at(-1).displacement - signedDistance) <= 1e-12);
+  if (firstGap) {
+    assert.equal(actual[1]?.intervals, firstGap.intervals);
+    assert(Math.abs(actual[1].displacement - firstGap.signedDistance) <= 1e-12);
+    assert.equal(actual[1].gap, 1);
+  }
+  return {input, expected: {count, used, signedDistance, firstGap}, actual};
 }
 const gap = (distance, displacement = .08) => rampInput(displacement, {continuous: false, distance});
 const oneGap = [.004, .005].map(distance => [rampInput(.10), gap(distance), rampInput(.10), rampInput(.04)]);
 const largeGap = [rampInput(.10), gap(.005001), rampInput(.10), rampInput(.04)];
 const twinGap = [rampInput(.10), gap(.004), gap(.004), rampInput(.14)];
 const changeRamp = [rampInput(.12), rampInput(.12, {id: 'another ramp'})];
+const gapHold = {intervals: 1, signedDistance: .10};
 child('TC-D7-004', 1, 'gap preserves but contributes no distance or contact duration', () =>
-  [...oneGap.map(input => gapRows(input, 3, true)), gapRows(largeGap, 2, false), gapRows(twinGap, 1, false),
-    gapRows(changeRamp, 1, false)]);
-child('TC-D7-004', 3, 'exact .005 bridge', () => gapRows(oneGap[1], 3, true));
-child('TC-D7-004', 4, 'excess distance breaks interval', () => gapRows(largeGap, 2, false));
-child('TC-D7-004', 5, 'two short gaps break interval', () => gapRows(twinGap, 1, false));
-child('TC-D7-004', 6, 'signed backtracking', () => gapRows([.10, .10, -.10, .10].map(delta => rampInput(delta)), 4, false));
-child('TC-D7-004', 7, 'different ramps never merge', () => gapRows(changeRamp, 1, false));
+  [...oneGap.map(input => gapRows(input, 3, true, .24, gapHold)), gapRows(largeGap, 2, false, .14),
+    gapRows(twinGap, 1, false, .14, gapHold), gapRows(changeRamp, 1, false, .12)]);
+child('TC-D7-004', 3, 'exact .005 bridge', () => gapRows(oneGap[1], 3, true, .24, gapHold));
+child('TC-D7-004', 4, 'excess distance breaks interval', () => {
+  const report = gapRows(largeGap, 2, false, .14);
+  assert.equal(report.actual[1], null);
+  return report;
+});
+child('TC-D7-004', 5, 'two short gaps break interval', () => {
+  const report = gapRows(twinGap, 1, false, .14, gapHold);
+  assert.equal(report.actual[2], null);
+  return report;
+});
+child('TC-D7-004', 6, 'signed backtracking', () => gapRows([.10, .10, -.10, .10].map(delta => rampInput(delta)), 4, false, .20));
+child('TC-D7-004', 7, 'different ramps never merge', () => gapRows(changeRamp, 1, false, .12));
 
 child('TC-D7-006', 1, 'stop, abort and resumed terminal delivery have one winner', () => {
   const notifications = [];
