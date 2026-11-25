@@ -116,10 +116,10 @@ function legal(stage, others, item) {
   return polygon.every(([x,y])=>x>=-1e-6&&x<=9.6+1e-6&&y>=-1e-6&&y<=7.2+1e-6)
     && !circleIntersects(polygon,stage.ball) && !blockers.some(blocker=>intersect(polygon,corners(blocker)));
 }
-function neighbor(stage, item) {
+function neighbor(stage, item, others = []) {
   const {gridX:x,gridY:y}=item;
   const candidates=[[x-1,y],[x,y-1],[x,y+1],[x+1,y]].map(([gridX,gridY])=>({...item,gridX,gridY}));
-  return candidates.find(part=>legal(stage,[],part));
+  return candidates.find(part=>legal(stage,others,part));
 }
 
 caseTest(8,1,'second geometrically legal ramp rejected for inventory',()=>{
@@ -232,7 +232,7 @@ caseTest(37,1,'invalid move and drag interruption preserve committed state',()=>
   const bad=editor.applyEditCommand(d,stage,{type:'commit-draft',gridX:platform.gridX,gridY:platform.gridY});
   assert.equal(bad.reason,'PLACEMENT_OVERLAP');
   assert.deepEqual(facts(stage,bad.state),facts(stage,base));
-  const target=neighbor(stage,ramp);
+  const target=neighbor(stage,ramp,[platform]);
   assert(target&&legal(stage,[platform],target));
   for(const type of ['cancel','orientation-change']){
     d=check(stage,base,{type:'drag',id:ramp.id});
