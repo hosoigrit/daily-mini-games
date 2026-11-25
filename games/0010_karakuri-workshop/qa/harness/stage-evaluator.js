@@ -4,8 +4,8 @@ import {createStageExperiment} from '../../src/data/stage-definitions.js';
 
 const sha256 = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
-export function runStageSimulation(stage, design, {trace = false} = {}) {
-  const experiment = createStageExperiment(stage, design);
+export function runStageSimulation(stage, design, {trace = false, runId} = {}) {
+  const experiment = createStageExperiment(stage, design, {runId});
   const trajectory = [];
   const records = [];
   const actions = [];
@@ -84,9 +84,10 @@ export function runStageSimulation(stage, design, {trace = false} = {}) {
     const placed = canonicalDesign(design);
     const usedIds = row.usage?.state.usedIds ?? [];
     const practice = {
-      stageId: stage.id, end: row.status, code: row.code, ticks: row.tick,
+      runId: experiment.runId, stageId: stage.id, end: row.status, code: row.code, ticks: row.tick,
       required: Boolean(row.requiredUse), stars: row.stars, placed, usedIds,
       minimumGoalDistanceUm: Number.isFinite(minimumDistance) ? Math.round(minimumDistance * 1e6) : null,
+      stageFingerprint: sha256(stage),
       actions, paths, contactParts: [...contactKeys], lastPosition: row.position,
       fingerprint: sha256({trajectory, actions, paths, end: row.status, usedIds}),
     };
