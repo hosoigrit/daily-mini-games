@@ -90,6 +90,32 @@ export function isUpperSurface({localPoint, halfWidth, halfHeight, normalAlignme
     && Math.abs(localPoint.y - halfHeight) <= .025 + ROUNDING && normalAlignment + ROUNDING >= TOP_ALIGNMENT;
 }
 
+export function createRampContactTracker(runId, ramps, evaluator) {
+  let previous = null;
+  return {
+    completeTick(frames, events) {
+      const upperEvents = events.filter(event => event.event === 'pre-solve'
+        && event.localPoint && isUpperSurface(event));
+      function staysOnRamp({id}) {
+        return frames.every(frame => frame.contacts.some(contact => contact.id === id && isUpperSurface(contact)))
+          && !events.some(event => event.id === id && (event.event === 'end-contact'
+            || event.event === 'pre-solve' && (!event.localPoint || !isUpperSurface(event))));
+      }
+      const continuousRamps = ramps.filter(staysOnRamp);
+      const continuous = continuousRamps.find(ramp => ramp.id === previous?.id) ?? continuousRamps[0];
+      const selected = continuous ?? ramps.find(ramp => ramp.id === previous?.id);
+      if (!selected) return null;
+      const {id, angleDeg} = selected;
+      const switched = !continuous && (upperEvents.some(event => event.id !== id)
+        || frames.some(frame => frame.contacts.some(contact => contact.id !== id && isUpperSurface(contact))));
+      const distance = switched ? Infinity
+        : Math.max(...frames.map(frame => frame.rampDistances.find(ramp => ramp.id === id).gap));
+      previous = evaluator.observeRamp({id, angleDeg, runId, continuous: Boolean(continuous), distance,
+        from: frames[0].position, to: frames.at(-1).position});
+      return previous;
+    },
+  };
+}
 
 const vector = ({x, y}) => ({x, y});
 const difference = (a, b) => ({x: a.x - b.x, y: a.y - b.y});
@@ -106,15 +132,14 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
   const evaluator = createTutorialEvaluator(runtime.runId, parts, requirement);
   const definitions = new Map(parts.map(part => [part.body, part]));
   const ramps = parts.filter(part => part.type === 'R' && !part.fixed);
+  const rampTracker = createRampContactTracker(runtime.runId, ramps, evaluator);
   const latest = new WeakMap();
   const wrapped = new WeakSet();
   const episode = new Map();
-  const supports = new Map();
   const refreshed = new Manifold();
   let sequence = 0;
   let frames = [];
   let raw = [];
-  let previousRamp = null;
   const {world, runId} = runtime;
   const radius = ball.getFixtureList().getShape().getRadius();
 
@@ -188,7 +213,6 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
     raw.push({event: kind, tick: runtime.ticks + 1, substep: runtime.substep, id: part.id,
       ...geometry, nativeTouching: contact.isTouching()});
     if (kind === 'end-contact' || (kind === 'pre-solve' && !geometry?.upper)) {
-      supports.set(part.id, false);
       finishEpisode(part);
       latest.delete(contact);
       return;
@@ -221,12 +245,11 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
     beginTick() {
       frames = [];
       raw = [];
-      supports.clear();
-      for (const part of ramps) supports.set(part.id, true);
     },
     observeBoundary(phase, substep) {
       const position = vector(ball.getPosition());
       const qualified = new Map();
+      const contacts = [];
       for (let contact = world.getContactList(); contact; contact = contact.getNext()) {
         const pair = contactPair(contact);
         if (!pair) continue;
@@ -238,10 +261,8 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
         if (!refreshed.pointCount) continue;
         const geometry = contactGeometry(pair, refreshed.getWorldManifold(
           undefined, transformA, a.getShape().getRadius(), transformB, b.getShape().getRadius()));
+        if (geometry) contacts.push(geometry);
         if (geometry?.upper) qualified.set(part.id, geometry);
-      }
-      for (const part of ramps) {
-        if (!qualified.has(part.id)) supports.set(part.id, false);
       }
       for (const part of parts) {
         if (part.type !== 'S') continue;
@@ -249,23 +270,13 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
           evaluator.observeSeesaw({id: part.id, runId, upper: true, episode: episode.get(part.id), angle: part.body.getAngle()});
         } else if (!qualified.has(part.id)) finishEpisode(part);
       }
-      frames.push({position, phase, substep, qualified: [...qualified.values()],
+      frames.push({position, phase, substep, contacts, qualified: [...qualified.values()],
         rampDistances: ramps.map(({id, body}) => ({id, gap: circleRectangleGap(body, position, radius)}))});
     },
     completeTick(activation) {
       if (activation) evaluator.observeSpring({...activation, runId});
-      const viable = ramps.filter(part => supports.get(part.id));
-      const part = viable.find(part => part.id === previousRamp) ?? viable[0];
-      const retained = part ?? ramps.find(part => part.id === previousRamp);
-      if (retained) {
-        const id = retained.id;
-        const qualifyingOther = frames.some(frame => frame.qualified.some(point => point.id !== id));
-        const distance = Math.max(...frames.map(frame => frame.rampDistances.find(ramp => ramp.id === id).gap));
-        const ramp = evaluator.observeRamp({id, runId, angleDeg: retained.angleDeg, continuous: Boolean(part),
-          from: frames[0].position, to: frames.at(-1).position, distance: qualifyingOther && !part ? Infinity : distance});
-        previousRamp = ramp?.id ?? null;
-      }
-      return {state: evaluator.snapshot(), frames, raw, activation};
+      const ramp = rampTracker.completeTick(frames, raw);
+      return {state: evaluator.snapshot(), ramp, frames, raw, activation};
     },
   };
 }
