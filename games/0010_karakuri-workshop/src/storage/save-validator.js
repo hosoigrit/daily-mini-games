@@ -95,14 +95,20 @@ export function assessSave(raw, designs) {
     && keysAre(source.stages,STAGE_IDS) && validSettings(source.settings);
   const issues=[];
   const data={gameId:'game-0010',schemaVersion:1,revision:source.revision,saveEpoch:source.saveEpoch,
-    stages:{},settings:validSettings(source.settings)?source.settings:{muted:false,volume:.7}};
+    stages:{},settings:{
+      muted:typeof source.settings?.muted==='boolean'?source.settings.muted:false,
+      volume:Number.isFinite(source.settings?.volume)&&source.settings.volume>=0&&source.settings.volume<=1?source.settings.volume:.7,
+    }};
   for(const id of STAGE_IDS){
     const row=source.stages?.[id];
     const {stage,identity}=designs[id];
     const complete=keysAre(row,['progress','draft','currentBest','previousBest']);
     const cleaned=emptyRecord();
     if(validProgress(row?.progress))cleaned.progress=row.progress;
-    else issues.push(id+':progress');
+    else {
+      if(row?.progress?.cleared===true)cleaned.progress={cleared:true,historicalBestStars:null};
+      issues.push(id+':progress');
+    }
     if(validDraft(row?.draft)){
       if(row.draft && legal(stage,row.draft.placements))cleaned.draft={...row.draft,geometryId:identity.geometryId};
       else if(row.draft)issues.push(id+':draft-geometry');

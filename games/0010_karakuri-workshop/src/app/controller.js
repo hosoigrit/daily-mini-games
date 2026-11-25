@@ -133,6 +133,7 @@ export function createGameController({stages, identities, hints, storage, change
   function dispatch(command){
     notice='';
     let accepted=true;
+    if(['RUNNING','PAUSED'].includes(screen)&&['enter','title','stage','redesign'].includes(command.type))return false;
     if(isEditCommand(command)){
       accepted=edit(command);
     }else switch(command.type){
@@ -159,8 +160,15 @@ export function createGameController({stages, identities, hints, storage, change
       case 'abort':
         if(!['PAUSED','RUNNING'].includes(screen)){accepted=false;break;}
         session.abort();dispose();sound.stop();screen='DESIGN';current=null;snapshot=null;break;
-      case 'redesign': screen='DESIGN';dialog=null;snapshot=null;current=null;break;
+      case 'redesign':
+        if(!['CLEARED','FAILED','ERROR'].includes(screen)){accepted=false;break;}
+        screen='DESIGN';dialog=null;snapshot=null;current=null;break;
       case 'edit-preparation': edit({type:'cancel'});break;
+      case 'clear-selection':
+        if(screen==='DESIGN'&&!dialog){
+          editor={...editor,selection:{state:'IDLE'}};
+        }else accepted=false;
+        break;
       case 'toggle-trail': showTrail=!showTrail;break;
       case 'settings':
         if(screen==='RUNNING')pause('設定');
@@ -174,6 +182,32 @@ export function createGameController({stages, identities, hints, storage, change
         sound.configure(saveData().settings);
         break;
       case 'reset-request': dialog={type:'SAVE_RESET'};break;
+      case 'recover-request': dialog={type:'RECOVER_SAVE'};break;
+      case 'recover-confirm':
+        if(dialog?.type!=='RECOVER_SAVE'){accepted=false;break;}
+        accepted=storage.reset(true,true);
+        if(accepted&&stage&&screen==='DESIGN')loadDesign(stage);
+        dialog=null;break;
+      case 'reacquire': {
+        if(storage.read().dirty){
+          dialog={type:'REACQUIRE',confirmation:storage.captureReacquire()};
+        }else storage.start().then(() => {
+          if(stage&&screen==='DESIGN')loadDesign(stage);
+          update();
+        });
+        break;
+      }
+      case 'reacquire-confirm': {
+        const confirmation=dialog?.confirmation;
+        if(dialog?.type!=='REACQUIRE'||!confirmation){accepted=false;break;}
+        dialog=null;
+        storage.start({confirmation}).then((loaded) => {
+          if(loaded&&stage&&screen==='DESIGN')loadDesign(stage);
+          if(!loaded)notice='保存状況が変わりました。確認して再取得してください。';
+          update();
+        });
+        break;
+      }
       case 'reset-confirm':
         if(dialog?.type!=='SAVE_RESET'){accepted=false;break;}
         accepted=storage.reset(true);
@@ -201,8 +235,14 @@ export function createGameController({stages, identities, hints, storage, change
   }
   return {
     state,dispatch,
-    hidden(){pause('バックグラウンド');update();},
-    rotated(){if(screen==='DESIGN')edit({type:'orientation-change'});pause('画面回転');update();},
+    hidden(){
+      if(screen==='DESIGN')editor=applyEditCommand(editor,stage,{type:'orientation-change'}).state;
+      pause('バックグラウンド');update();
+    },
+    rotated(){
+      if(screen==='DESIGN')editor=applyEditCommand(editor,stage,{type:'orientation-change'}).state;
+      pause('画面回転');update();
+    },
     restoreView(){if(stage&&screen==='DESIGN')loadDesign(stage);update();},
     detached(){pause('ページを離れました');sound.stop();update();},
   };

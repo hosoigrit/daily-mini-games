@@ -58,7 +58,10 @@ export function bindBoardInput(canvas, game) {
     if(selection.draft){
       dispatch({type:'commit-draft',id:selection.id??`k-${crypto.randomUUID().slice(0,16)}`,
         ...gridAt(event,canvas.getBoundingClientRect())});
-    }else if(part&&!drag)dispatch({type:'select',id:part.id});
+    }else if(!drag){
+      if(part)dispatch({type:'select',id:part.id});
+      else dispatch({type:'clear-selection'});
+    }
   });
   canvas.addEventListener('pointercancel',cancel);
   canvas.addEventListener('lostpointercapture',cancel);

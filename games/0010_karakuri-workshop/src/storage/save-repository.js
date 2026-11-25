@@ -9,7 +9,8 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
   let editing = 0;
   let saved = 0;
   let unknown = null;
-  const read=()=>({mode,status,data,generation:token,editing,saved,dirty:editing!==saved});
+  let externalChange=false;
+  const read=()=>({mode,status,data,generation:token,editing,saved,dirty:editing!==saved,externalChange});
   const changed=()=>editing++;
   function persist(next, recovery=false){
     if (!lock.isOwner(token) || !recovery && (mode !== 'OWNER' || unknown || status==='CONFLICT')) return false;
@@ -38,19 +39,31 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
     if(recovery)mode='OWNER';
     return true;
   }
-  async function start({discard=false}={}){
-    if(editing!==saved&&!discard&&mode!=='INITIALIZING')return false;
+  function captureReacquire(){
+    try{return {raw:storage.getItem(SAVE_KEY),editing,generation:token};}catch{return null;}
+  }
+  async function start({confirmation=null}={}){
+    if(editing!==saved&&mode!=='INITIALIZING'
+      &&(!confirmation||confirmation.editing!==editing||confirmation.generation!==token))return false;
+    const before=editing;
     const acquired=await lock.acquire();
     if(acquired.generation!==lock.current())return false;
-    token=acquired.generation;mode=acquired.mode;
-    try { raw=storage.getItem(SAVE_KEY); } catch {
+    let observed;
+    try { observed=storage.getItem(SAVE_KEY); } catch {
       mode='DEGRADED';status='TEMPORARY';
       if(!data)data=createDefaultSave(epoch());
       return false;
     }
+    if(editing!==before||confirmation&&confirmation.raw!==observed){
+      lock.release();token=lock.current();mode='READ_ONLY';status='UNSAVED';externalChange=true;
+      return false;
+    }
+    if(data&&acquired.mode!=='OWNER'&&editing!==saved)return false;
+    token=acquired.generation;mode=acquired.mode;raw=observed;
     const loaded=assessSave(raw,designs);
     data=loaded.data??createDefaultSave(epoch());
     unknown=null;
+    externalChange=false;
     editing=saved=0;
     if(loaded.status==='RECOVERY_REQUIRED'){
       if(lock.isOwner(token))mode='RECOVERY_REQUIRED';
@@ -62,7 +75,7 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
     return true;
   }
   return {
-    read,start,
+    read,start,captureReacquire,
     commit(next, expectedGeneration=token){
       if(expectedGeneration!==token)return false;
       changed();
@@ -94,6 +107,7 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
     },
     notify(newRaw){
       if(newRaw===raw)return false;
+      externalChange=true;
       if(mode==='OWNER')status='CONFLICT';
       return true;
     },

@@ -100,8 +100,22 @@ export function createUI(getGame) {
         mute.addEventListener('change',()=>act({type:'setting',key:'muted',value:mute.checked}));
         content=[volumeLabel,muteLabel,text(saveText[s.save.status]??'一時プレイ')];
         actions.unshift(button('保存データを初期化',()=>act({type:'reset-request'})));
+        if(s.save.mode==='RECOVERY_REQUIRED')actions.unshift(button('保存データを復旧',()=>act({type:'recover-request'})));
+        if(s.save.mode!=='OWNER'&&s.save.mode!=='RECOVERY_REQUIRED'||s.save.externalChange){
+          actions.unshift(button('保存権限を再取得',()=>act({type:'reacquire'})));
+        }
         break;
       }
+      case 'RECOVER_SAVE':
+        title='保存データの復旧';
+        content=[text('正常な実績と設定を引き継ぎ、復旧可能なデータだけを保存し直します。')];
+        actions=[button('確認して復旧',()=>act({type:'recover-confirm'})),button('取り消す',()=>act({type:'settings'}))];
+        break;
+      case 'REACQUIRE':
+        title='保存権限を再取得';
+        content=[text('このタブの未保存の変更を破棄して、最新の保存データを読み込みます。')];
+        actions=[button('破棄して再取得',()=>act({type:'reacquire-confirm'})),button('取り消す',()=>act({type:'settings'}))];
+        break;
       case 'SAVE_RESET':
         title='保存データの初期化';
         content=[text('この工房の配置、星、解放状況、設定を消去します。')];
@@ -177,7 +191,8 @@ export function createUI(getGame) {
     if(s.screen==='STAGES')outcomes(s);
     if(work){
       el('stage-title').textContent=`${s.stage.id}　${s.stage.name}`;
-      el('save-state').textContent=saveText[s.save.status]??'一時プレイ';
+      el('save-state').textContent=(saveText[s.save.status]??'一時プレイ')
+        +(s.save.externalChange&&s.save.mode!=='OWNER'?'・他のタブで更新されました':'');
       el('edit-panel').hidden=s.screen!=='DESIGN';
       el('run-panel').hidden=!['RUNNING','PAUSED'].includes(s.screen);
       el('result-panel').hidden=!['CLEARED','FAILED','ERROR'].includes(s.screen);
@@ -188,6 +203,7 @@ export function createUI(getGame) {
       el('run-time').value=`${((s.current?.tick??0)/60).toFixed(2)} 秒`;
       el('required').textContent=s.stage.required?`${labels[s.stage.required]} ${s.current?.requiredUse?'達成':'必須'}`:'必須パーツなし';
       el('board-notice').textContent=s.notice;
+      el('trail-guide').hidden=!s.previousTrajectory||!s.showTrail||['RUNNING','PAUSED'].includes(s.screen);
       el('trail-button').setAttribute('aria-pressed',String(s.showTrail));
       el('result-heading').textContent=s.screen==='CLEARED'?'クリア！':s.screen==='ERROR'?'実験エラー':'実験失敗';
       el('result-details').textContent=s.screen==='CLEARED'?`星 ${s.result?.stars} / 3　使用 ${s.editor.placements.length} 個`:s.failure??'';

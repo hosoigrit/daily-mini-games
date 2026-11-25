@@ -101,6 +101,7 @@ p { margin: .5rem 0; line-height: 1.55; }
 #board { display: block; width: 100%; aspect-ratio: 4/3; background: var(--paper); touch-action: none; }
 .board-status { margin: 0; padding: .5rem .65rem; border-top: 1px solid #c3a57c; font-weight: 650; }
 #board-notice { padding-inline: .65rem; color: var(--warning); }
+#trail-guide { padding-inline: .65rem; font-size: .85rem; color: var(--select); }
 #board-notice:empty { display: none; }
 .workbench-tools { padding: .75rem; }
 #edit-panel, #run-panel, #result-panel { display: grid; gap: .65rem; }
