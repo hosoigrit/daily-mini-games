@@ -1026,5 +1026,367 @@
     "engineeringGate": "HOLD",
     "reviewMode": "SEPARATE_CONTEXT_READ_ONLY",
     "acceptedEvidenceDigest": "76b1289081a575979e6df97c7f0d731a23216457479156cd65d736a16aefa286"
+  },
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "openMandatoryFindings": [],
+    "roles": [
+      "/root/e0_review",
+      "/root/e1_test_plan",
+      "/root/e8_coverage",
+      "/root/e7_revalidation_review"
+    ],
+    "reviewMode": "SEPARATE_CONTEXT_READ_ONLY",
+    "crossStageHistory": [
+      {
+        "stage": "E0-L",
+        "priorTestedSHA": "d50fb5074d4af7a206bf1c07ffee7e5afe6e15b2",
+        "priorReviewKeys": [
+          "E0-L",
+          "EG-00"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e0_review",
+        "scopeAndOutcome": "Reconciled old68 labels, exact selectors, controls and current mutation; original EG00 HOLD kept.",
+        "currentRunIds": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS",
+          "CR009-E8-LEGACY-TWO-ASSERTIONS",
+          "CR009-E8-ISOLATED-MUT12-EXACT"
+        ]
+      },
+      {
+        "stage": "E1",
+        "priorTestedSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+        "priorReviewKeys": [
+          "CR005"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "CR004 finite matrix and real background, CR005 same raw A/B order accepted with equal response. PP01/02 rejection retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E1-MATRIX",
+          "CR009-E8-RETEST-E1-FORMAL",
+          "CR009-E8-RETEST-E1-CONTACTS",
+          "CR009-E8-RETEST-E1-VISIBILITY",
+          "CR009-E1-CR004-B-PP03-EXACT"
+        ]
+      },
+      {
+        "stage": "E2",
+        "priorTestedSHA": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+        "priorReviewKeys": [
+          "CR005-E2"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Placement and Undo assertions, legal versus invalid coordinates and fixed controls.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-NONPHYSICAL-NODE",
+          "CR009-E8-ISOLATED-MUT02-03-05"
+        ]
+      },
+      {
+        "stage": "E3",
+        "priorTestedSHA": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+        "priorReviewKeys": [
+          "CR005-E3",
+          "CR006-E3"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Independent fixture and equilibrium tests, chronology, tie, post-contact blocker and release, with old BLOCKED retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E3-INDEPENDENT",
+          "CR009-E8-RETEST-E3-NATIVE",
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-ISOLATED-MUT04"
+        ]
+      },
+      {
+        "stage": "E4",
+        "priorTestedSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+        "priorReviewKeys": [
+          "CR006-E4"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Native pivot, angle and load, plus new world resets with fixed settings.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-FOUNDATION-NODE",
+          "CR009-E8-NATIVE-VERDICTS"
+        ]
+      },
+      {
+        "stage": "E5",
+        "priorTestedSHA": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+        "priorReviewKeys": [
+          "CR006-E5",
+          "CR007-E5"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Real solver/goal required-use controls, joint CR007-C evidence with original physical microgap still BLOCKED.",
+        "currentRunIds": [
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-RETEST-E5-CR007-C",
+          "CR009-E8-ISOLATED-MUT01-06-07-08-09"
+        ]
+      },
+      {
+        "stage": "E6",
+        "priorTestedSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+        "priorReviewKeys": [
+          "CR007-E6"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "Complete stage oracles, canonical legal near placements, causal ablation and fixed identities.",
+        "currentRunIds": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-EXACT-HINTS",
+          "CR009-E8-DISTINCT-ALTERNATIVES"
+        ]
+      },
+      {
+        "stage": "E7",
+        "priorTestedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "priorReviewKeys": [
+          "CR007-E7-WIP",
+          "CR008-E7"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e7_revalidation_review",
+        "scopeAndOutcome": "E7 25 browser jobs plus exact chosen controls and native/synthetic separation with legacy failed driver excluded.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-BACKGROUND-DRAG",
+          "CR009-E8-RETEST-BFCACHE-LEASE",
+          "CR009-E8-RETEST-SELECT-ACHIEVE",
+          "CR009-E8-ISOLATED-MUT10-EXACT",
+          "CR009-E8-ISOLATED-MUT11",
+          "CR009-E7-AUDIO-EXACT"
+        ]
+      },
+      {
+        "stage": "E8",
+        "priorTestedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "priorReviewKeys": [
+          "CR008-E8"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "NFR-027 corrected; Planck ownership and pooled solver isolated, inspected 53-module QA/runtime graph and fresh candidate outcomes.",
+        "currentRunIds": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-CHROMIUM-MODE-CROSSCHECK",
+          "CR009-E8-EXISTING-REGRESSION",
+          "CR009-E8-EXISTING-BROWSER"
+        ],
+        "additionalReadOnlyReviewer": "/root/e0_review"
+      }
+    ],
+    "individualGovernanceCases": {
+      "TC-D7-027-C001": {
+        "reviewer": "/root/e0_review",
+        "scope": "Current execution fingerprints and isolated rejected candidate changes; final evidence commit is verified by exact Git diff and independent readback.",
+        "references": [
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-LEGACY-FORMAL-CONTROLS"
+        ]
+      },
+      "TC-D7-028-C001": {
+        "reviewer": "/root/e0_review",
+        "scope": "Frozen 190 requirements, 31 basic-design IDs, 132 detailed design units, 296 parents and 982 children. Supplemental 14 exact existing detailed-unit trace joins are separate from the 118 frozen-direct links.",
+        "references": [
+          "CR009-E8-PROTECTION-PROVENANCE-EXACT",
+          "CR009-E8-ARCHITECTURE-EXACT"
+        ]
+      },
+      "TC-D7-028-C002": {
+        "reviewer": "/root/e8_coverage",
+        "scope": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity.",
+        "references": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-PROTECTION-PROVENANCE-EXACT",
+          "CR009-DIFFERENTIAL-NATIVE",
+          "CR009-DIFFERENTIAL-ST09"
+        ],
+        "independentQAGraph": {
+          "reviewer": "/root/e0_review",
+          "sourceAndGraphFingerprint": "20b9fc1de8a3b65287e9857a84e12138601b0f02ae3ac70bc6455ac5af29ee31",
+          "moduleCount": 53,
+          "resolvedRelativeEdges": 147
+        }
+      },
+      "TC-D7-028-C006": {
+        "reviewer": "/root/e0_review",
+        "scope": "22 official Git byte digests and internal integrity list, fixed policy, approval, threshold and relevant safety files.",
+        "references": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-PROTECTION-PROVENANCE-EXACT"
+        ]
+      },
+      "TC-D7-028-C008": {
+        "reviewer": "/root/e0_review",
+        "scope": "Validated all 71 per-stage commit scopes, real path operations, five exact active modifications and original frozen six after E5.",
+        "references": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-PROTECTION-PROVENANCE-EXACT"
+        ]
+      },
+      "TC-D7-028-C011": {
+        "reviewer": "/root/e0_review",
+        "scope": "Separate read-only contexts, fixed SHA and original evidence with CR009 current case and reviewer joins.",
+        "references": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS",
+          "CR009-E8-ARCHITECTURE-EXACT"
+        ]
+      },
+      "TC-D7-028-C012": {
+        "reviewer": "/root/e0_review",
+        "scope": "Compared canonical case keys, evidence statuses and failures separately from no run and superseded observations. Human outcomes and old physical hold remain, all current tests require settled raw receipts.",
+        "references": [
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-LEGACY-FORMAL-CONTROLS"
+        ]
+      },
+      "TC-D7-028-C015": {
+        "reviewer": "/root/e0_review",
+        "scope": "LS-08 physical separation stop preserved, approved CR009 reopens only authorized changes, current budget/manifest/writer stop paths were exercised. CR008 actual missing reservations and original incident proof retained.",
+        "references": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-LEGACY-TWO-ASSERTIONS",
+          "CR009-E8-LEGACY-FORMAL-CONTROLS"
+        ]
+      },
+      "TC-D7-028-C018": {
+        "reviewer": "/root/e0_review",
+        "scope": "Approval and geometry identity, zero new stage search, PP03 and all numeric physical settings fixed, no adjustment-budget reuse.",
+        "references": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-DISTINCT-ALTERNATIVES"
+        ]
+      },
+      "TC-D7-028-C019": {
+        "reviewer": "/root/e0_review",
+        "scope": "All 173 hardware/human items marked NOT_RUN and no final acceptance or migration performed; hardware own evidence handoff tied to fixed SHA.",
+        "references": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS"
+        ]
+      },
+      "TC-D7-028-C020": {
+        "reviewer": "/root/e0_review",
+        "scope": "Retained all 61 search records, reconciled original approved stage adjustment counts and current exact configuration. E8 candidates were revalidated in the authorized E8 pool.",
+        "references": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-PROTECTION-PROVENANCE-EXACT",
+          "CR009-E8-ARCHITECTURE-EXACT"
+        ]
+      },
+      "TC-D8-022-C002": {
+        "reviewer": "/root/e0_review",
+        "scope": "Stage-by-stage independent historical histories and current implementations or raw evidence, selected root corrections and current status case mapping.",
+        "references": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-DISTINCT-ALTERNATIVES",
+          "CR009-E7-AUDIO-EXACT"
+        ]
+      },
+      "TC-D8-023-C002": {
+        "reviewer": "/root/e0_review",
+        "scope": "Fixed current handoff with all hardware and human IDs still NOT_RUN, final acceptance HOLD, actual future migration handled as Phase 6 plus.",
+        "references": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS"
+        ]
+      }
+    },
+    "firstIndependentImpactReview": "approved before product changes",
+    "closed": [
+      {
+        "id": "CR008-E8-NFR-027-BOUNDARY",
+        "priorState": "OPEN_EXTERNAL_APPROVAL",
+        "currentState": "CLOSED",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "proof": {
+          "status": "PASS",
+          "admissionBasis": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity.",
+          "proofs": [
+            {
+              "kind": "EXECUTION",
+              "runId": "CR009-E8-ARCHITECTURE-EXACT",
+              "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+              "stdoutSHA256": "db024ef6c86237589949bb837b947f1b925a8239a6d24fd8d431646cdd7a8f15",
+              "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "reservationFingerprint": "f5d38fd107624198a5147f1dcdde372d7bb63c7829618141376eca94a6a24c7a",
+              "assertion": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity."
+            },
+            {
+              "kind": "EXECUTION",
+              "runId": "CR009-E8-PROTECTION-PROVENANCE-EXACT",
+              "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+              "stdoutSHA256": "ea0d6eef3ea05ddc42cf8741785edd3bb5fcdabe692ad9a4d5163fabe2f35ca4",
+              "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "reservationFingerprint": "60a56bab6988ff8bd1194cf4dc4068b87e5d75f4e57766fc25389609e600a912",
+              "assertion": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity."
+            },
+            {
+              "kind": "EXECUTION",
+              "runId": "CR009-DIFFERENTIAL-NATIVE",
+              "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+              "stdoutSHA256": "933dd2c3ef7c4b39c71954838faa3692c5f84c9c32748d9fc9d716f15d136556",
+              "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "reservationFingerprint": "012b4904f896a000e933e8aa326189d139098bee1a3ed64d5ade92397e42ccd0",
+              "assertion": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity."
+            },
+            {
+              "kind": "EXECUTION",
+              "runId": "CR009-DIFFERENTIAL-ST09",
+              "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+              "stdoutSHA256": "30ea2212576a860309d90fff9e13a0bf1d2d42db408c6bc34bb6e9b6b0456319",
+              "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "reservationFingerprint": "84cc830561d1c8e616a9ad8ec02385ae45959c2bb02c21dfbc2682ba18982e5c",
+              "assertion": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity."
+            },
+            {
+              "kind": "REVIEW",
+              "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+              "record": "cr009-governance-readonly-index.json",
+              "sha256": "6c4f163878faaf39f90f864ea6c6743a6f366d0b4d5a1cabd4fbbc026f4776a0",
+              "assertion": "Independent full product/QA dependency graph confirms no cycles or product→QA, no Planck access outside physics in rules/render, no native solver handles reaching rule code, previous violation found by negative scan, current native before/after parity.",
+              "reviewer": "/root/e8_coverage",
+              "mode": "SEPARATE_CONTEXT_READ_ONLY"
+            }
+          ],
+          "reviewer": "/root/e8_coverage"
+        }
+      }
+    ],
+    "backlog": [],
+    "separatePreliminaryVerificationDriverFailures": [
+      "CR009-E8-ARCHITECTURE-CHECK",
+      "CR009-E1-CR004-B-PP03"
+    ],
+    "E7VerbatimIndependentCertificateDigest": "4795c09ee330625647e8bec62311d09eefa7a48c974ec0b6a057e5dcee0db6f1",
+    "manualHumanQualities": "NOT_RUN"
   }
 }

@@ -1346,5 +1346,2655 @@
     "automatedSeconds": 17833,
     "remediationTotal": 18
   },
-  "openReservations": []
+  "openReservations": [],
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "approvalId": "EXEC-GAME-0010-CR009-FINAL-ARCHITECTURE",
+    "budget": {
+      "currentLedgerTailSHA256": "94e081fc58f976489ad07eefb5f81a6d7fcb6c42a9bf31d6f2fc5822861efe30",
+      "verifiedPreviousCR008Digest": "24a2ed79f9dd635b560ebc8f4dda5fda0cee2f6df06be9bd1865aa54e8f15d9c",
+      "automationSecondsSettled": 6079,
+      "automationLimit": 21600,
+      "remainingSecondsBeforeRemoteReservation": 15521,
+      "remediationUsed": 53,
+      "remediationRemaining": 17,
+      "remediationLimit": 70,
+      "foundation": {
+        "usedWorlds": 13343,
+        "usedTicks": 724511,
+        "remainingWorlds": 1657,
+        "remainingTicks": 13675489
+      },
+      "formalStageTotal": {
+        "usedWorlds": 6005,
+        "usedTicks": 1326458,
+        "remainingWorlds": 8995,
+        "remainingTicks": 16673542
+      },
+      "formalPools": {
+        "E6": {
+          "usedWorlds": 2294,
+          "usedTicks": 518616,
+          "remainingWorlds": 706,
+          "remainingTicks": 3081384
+        },
+        "INTERIM": {
+          "usedWorlds": 206,
+          "usedTicks": 66910,
+          "remainingWorlds": 2794,
+          "remainingTicks": 3533090
+        },
+        "E8": {
+          "usedWorlds": 3505,
+          "usedTicks": 740932,
+          "remainingWorlds": 2495,
+          "remainingTicks": 6459068
+        },
+        "POST_HUMAN": {
+          "usedWorlds": 0,
+          "usedTicks": 0,
+          "remainingWorlds": 3000,
+          "remainingTicks": 3600000
+        }
+      },
+      "allCurrentCounters": {
+        "automatedSeconds": 6079,
+        "physicsValidationSimulations": 13343,
+        "physicsValidationTicks": 724511,
+        "formalSimulationsByPool": {
+          "E6": 2294,
+          "INTERIM": 206,
+          "E8": 3505,
+          "POST_HUMAN": 0
+        },
+        "formalTicksByPool": {
+          "E6": 518616,
+          "INTERIM": 66910,
+          "E8": 740932,
+          "POST_HUMAN": 0
+        },
+        "generatedByStage": {
+          "10": 2651,
+          "01": 979,
+          "02": 951,
+          "03": 693,
+          "04": 751,
+          "05": 2861,
+          "06": 730,
+          "07": 845,
+          "08": 869,
+          "09": 602
+        },
+        "searchSimulationsByStage": {
+          "10": 1913,
+          "01": 302,
+          "02": 302,
+          "03": 302,
+          "04": 303,
+          "05": 1796,
+          "06": 307,
+          "07": 303,
+          "08": 567,
+          "09": 324
+        },
+        "searchTicksByStage": {
+          "10": 498718,
+          "01": 83296,
+          "02": 69466,
+          "03": 91085,
+          "04": 66276,
+          "05": 627473,
+          "06": 127840,
+          "07": 117751,
+          "08": 125514,
+          "09": 67717
+        },
+        "stageAdjustmentsByStage": {
+          "10": 12,
+          "05": 6,
+          "08": 6
+        },
+        "remediationTotal": 53,
+        "remediationByRootCause": {
+          "e0-budget-reservation-and-accounting": 6,
+          "e7-batch-launch-bypassed-budget-reservation": 1,
+          "e7-navigation-and-background-state-boundary": 2,
+          "e7-audio-availability-render-invalidates-pointer-target": 2,
+          "e8-audio-comparison-used-other-engine-oracle": 1,
+          "e8-remediation-stop-reason-propagation": 1,
+          "e8-mutation-readonly-fixture-missing-design-identities": 1,
+          "e8-mutation-budget-oracle-compared-error-count": 1,
+          "e8-rule-layer-native-physics-dependency": 1
+        },
+        "githubSettledRunIds": [
+          "CR008-E7-GITHUB",
+          "CR008-E8-GITHUB"
+        ]
+      },
+      "openCurrentTestReservations": [],
+      "carriedHistoricalStageSearch": {
+        "stageDefinitionSHA256": "70a0dda5b3efda54e945a28057d64b88621236da46775d09e7c498a710531239",
+        "frozenSourceSHA256": {
+          "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+          "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+          "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+          "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+          "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+          "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+        },
+        "priorSearchArchiveSHA256": "20bef0f4ccd3d0c478468ee5c5ff3c4dce0929fd78d4d10d0b43e3c69c897522",
+        "priorSearchRecordCount": 61,
+        "previousGenerated": 11932,
+        "previousSearchWorlds": 6419,
+        "previousSearchTicks": 1875136,
+        "previousSearchAutomationSeconds": 79,
+        "previousPhysicsCandidateTrials": 12,
+        "previousDefinitionAdjustmentCounts": {
+          "ST05": 6,
+          "ST08": 6,
+          "ST10": 12
+        },
+        "currentSearchExecutions": 0,
+        "currentDefinitionAdjustments": 0,
+        "currentPhysicsCandidateTrials": 0
+      },
+      "rootCauseHistoricalLimitReached": {
+        "e0-budget-reservation-and-accounting": 6
+      },
+      "stepRemediationOwnership": {
+        "E1": "adapter observation and disposal",
+        "E5": "tutorial and goal rules",
+        "E8": "one combined correction and effective assurance"
+      },
+      "stepRemediationIncrements": {
+        "E1": 1,
+        "E5": 1,
+        "E8": 1
+      },
+      "globalCR009RemediationIncrement": 1,
+      "historicalE0BudgetAnchors": {
+        "trackedReceiptBootstrapSeconds": 348,
+        "closeoutSeconds": 367,
+        "postE0LitePrecheckSeconds": 368
+      },
+      "archivalFidelity": "CR008 append-only reconstruction and receipt history retained. One CR009 correction applied."
+    },
+    "timeline": [
+      {
+        "runId": "CR009-DIFFERENTIAL-NATIVE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d27b0df1bb3128cf7d068acc491f8b800eec4f34a7b78fad88e71d0af7e5901a",
+        "command": [
+          "cr009-differential.cjs",
+          "cr009-focused-old.mjs",
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr009-differential-fixtures.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 90,
+          "physicsValidationSimulations": 10,
+          "physicsValidationTicks": 544
+        },
+        "reservedAt": "2026-11-25T22:20:42.954Z",
+        "startedAt": "2026-11-25T22:20:42.965Z",
+        "settledAt": "2026-11-25T22:20:43.357Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 10,
+          "physicsValidationTicks": 544
+        },
+        "stdoutFile": "cr009-differential-native.log",
+        "stderrFile": "cr009-differential-native-stderr.log",
+        "stdoutSHA256": "933dd2c3ef7c4b39c71954838faa3692c5f84c9c32748d9fc9d716f15d136556",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-DIFFERENTIAL-ST09",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d27b0df1bb3128cf7d068acc491f8b800eec4f34a7b78fad88e71d0af7e5901a",
+        "command": [
+          "cr009-differential.cjs",
+          "cr009-stage-trace-old.mjs",
+          "cr009-stage-trace-new.mjs",
+          "cr009-differential-st09.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 90,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:20:42.954Z",
+        "startedAt": "2026-11-25T22:20:43.368Z",
+        "settledAt": "2026-11-25T22:20:43.734Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "formalSimulations": 2,
+          "formalTicks": 438
+        },
+        "stdoutFile": "cr009-differential-st09.log",
+        "stderrFile": "cr009-differential-st09-stderr.log",
+        "stdoutSHA256": "30ea2212576a860309d90fff9e13a0bf1d2d42db408c6bc34bb6e9b6b0456319",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ARCHITECTURE-CHECK",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "2579706e9d1cc67b671007a5ca58002667bf20410afa4f425a045b7c1c0a5863",
+        "command": [
+          "cr009-architecture-check.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 70
+        },
+        "reservedAt": "2026-11-25T22:22:07.498Z",
+        "startedAt": "2026-11-25T22:22:07.510Z",
+        "settledAt": "2026-11-25T22:22:07.610Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-architecture-check.log",
+        "stderrFile": "cr009-e8-architecture-check-stderr.log",
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "291a1cf0967241b896313938581eba4c9574da1ac2f0ffff50a58e026299a2c8",
+        "exit": 1,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ARCHITECTURE-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "6a7d8d41432297080618f67cdb875cdab637f18446136c8a2b73805c01772edf",
+        "command": [
+          "cr009-architecture-check.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 70
+        },
+        "reservedAt": "2026-11-25T22:22:33.709Z",
+        "startedAt": "2026-11-25T22:22:33.719Z",
+        "settledAt": "2026-11-25T22:22:33.852Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-architecture-exact.log",
+        "stderrFile": "cr009-e8-architecture-exact-stderr.log",
+        "stdoutSHA256": "db024ef6c86237589949bb837b947f1b925a8239a6d24fd8d431646cdd7a8f15",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-MATRIX",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr004-e1-a.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 120,
+          "physicsValidationSimulations": 72,
+          "physicsValidationTicks": 864
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:57.533Z",
+        "settledAt": "2026-11-25T22:22:57.745Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 72,
+          "physicsValidationTicks": 864
+        },
+        "stdoutFile": "cr009-e8-retest-e1-matrix.log",
+        "stderrFile": "cr009-e8-retest-e1-matrix-stderr.log",
+        "stdoutSHA256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "stderrSHA256": "8e6c15c336263be8fe11e0623bc3361e822888f7e9fdd6f56878e4091b4c31fc",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-FORMAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e1-formal-final.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 160,
+          "physicsValidationSimulations": 310,
+          "physicsValidationTicks": 26000
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:57.755Z",
+        "settledAt": "2026-11-25T22:22:58.325Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 289,
+          "physicsValidationTicks": 24319
+        },
+        "stdoutFile": "cr009-e8-retest-e1-formal.log",
+        "stderrFile": "cr009-e8-retest-e1-formal-stderr.log",
+        "stdoutSHA256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "stderrSHA256": "6edb97261dacb8270361e1835c225b5388fd2d1e80a83c1c467af52a0fd545da",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-EDGE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr004-e1-independent.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 105,
+          "physicsValidationSimulations": 24,
+          "physicsValidationTicks": 4000
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:58.336Z",
+        "settledAt": "2026-11-25T22:22:58.486Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 19,
+          "physicsValidationTicks": 3136
+        },
+        "stdoutFile": "cr009-e8-retest-e1-edge.log",
+        "stderrFile": "cr009-e8-retest-e1-edge-stderr.log",
+        "stdoutSHA256": "cbc5e85227d32865dbf031853696f11a1b765a2eb33a930b7dfbba83a057ac8c",
+        "stderrSHA256": "00062d6ab9f3ce9d4af36ea18098dfd8986c9ccbed2a0e928512817f7e4a65cc",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-BROWSER",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e1-browser-final.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 110,
+          "physicsValidationSimulations": 16,
+          "physicsValidationTicks": 1500
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:58.497Z",
+        "settledAt": "2026-11-25T22:22:59.454Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 16,
+          "physicsValidationTicks": 1500
+        },
+        "stdoutFile": "cr009-e8-retest-e1-browser.log",
+        "stderrFile": "cr009-e8-retest-e1-browser-stderr.log",
+        "stdoutSHA256": "f8b8227c0c970d79d6fe53072e5cea36a3f60f2460ef81ea7c013d5b48212e29",
+        "stderrSHA256": "21cbc2ec8981a01b1d74f6d8787ae6159e561256afeb90783d511adc8b2a4192",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-CONTACTS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e1-contacts-recheck.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 105,
+          "physicsValidationSimulations": 25,
+          "physicsValidationTicks": 400
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:59.465Z",
+        "settledAt": "2026-11-25T22:22:59.557Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 23,
+          "physicsValidationTicks": 294
+        },
+        "stdoutFile": "cr009-e8-retest-e1-contacts.log",
+        "stderrFile": "cr009-e8-retest-e1-contacts-stderr.log",
+        "stdoutSHA256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9",
+        "stderrSHA256": "9f5d46dfbea7929936642c2088e7e6d35ddeec0c65d711ff03f2514290546ac0",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-SELECTED",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e1-selected.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 105,
+          "physicsValidationSimulations": 60,
+          "physicsValidationTicks": 500
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:59.568Z",
+        "settledAt": "2026-11-25T22:22:59.654Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 56,
+          "physicsValidationTicks": 360
+        },
+        "stdoutFile": "cr009-e8-retest-e1-selected.log",
+        "stderrFile": "cr009-e8-retest-e1-selected-stderr.log",
+        "stdoutSHA256": "351eaf0bb397a9a00e5832babd8c9f2e32c7d72f4990fddfbe1995a8b23c4a5b",
+        "stderrSHA256": "e9a3851c8f24f3ef235085ea95025abe9f8ce152dc661320fa011e5dd676fcb1",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E1-VISIBILITY",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E1",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-run-headed-native.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 100,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 1300
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:22:59.665Z",
+        "settledAt": "2026-11-25T22:23:02.892Z",
+        "charged": {
+          "automatedSeconds": 4,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 1300
+        },
+        "stdoutFile": "cr009-e8-retest-e1-visibility.log",
+        "stderrFile": "cr009-e8-retest-e1-visibility-stderr.log",
+        "stdoutSHA256": "f1b0ecf86da659e0831d4f76b52a4f12bd91372cf7c6ea2c869b9a7e5312a2df",
+        "stderrSHA256": "ea5de35a73f6b8a2ef5f2308fc93db3da4f6a797d87c5114060649f3e81b8dd3",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-PROTECTION-PROVENANCE-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e8-provenance.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 75
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:02.910Z",
+        "settledAt": "2026-11-25T22:23:03.568Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-protection-provenance-exact.log",
+        "stderrFile": "cr009-e8-protection-provenance-exact-stderr.log",
+        "stdoutSHA256": "ea0d6eef3ea05ddc42cf8741785edd3bb5fcdabe692ad9a4d5163fabe2f35ca4",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-INDEPENDENT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e3-final-independent.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 120,
+          "physicsValidationSimulations": 130,
+          "physicsValidationTicks": 2000
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:03.582Z",
+        "settledAt": "2026-11-25T22:23:03.757Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 123,
+          "physicsValidationTicks": 1644
+        },
+        "stdoutFile": "cr009-e8-retest-e3-independent.log",
+        "stderrFile": "cr009-e8-retest-e3-independent-stderr.log",
+        "stdoutSHA256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+        "stderrSHA256": "a490316413672e9b13b6b5d6d16109fc706a51d2524e9f22d5337d1307f4b3d3",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-FAMILIES",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e3-final-families.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 140,
+          "physicsValidationSimulations": 300,
+          "physicsValidationTicks": 10000
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:03.769Z",
+        "settledAt": "2026-11-25T22:23:04.471Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 279,
+          "physicsValidationTicks": 8802
+        },
+        "stdoutFile": "cr009-e8-retest-e3-families.log",
+        "stderrFile": "cr009-e8-retest-e3-families-stderr.log",
+        "stdoutSHA256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+        "stderrSHA256": "8008f3c0a4b5c4a40e10ecdc35993789b748a40bcf7d8828b23e58d145c3cda5",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-BOUNDARY",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e3-boundary-verified.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 100,
+          "physicsValidationSimulations": 8,
+          "physicsValidationTicks": 600
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.484Z",
+        "settledAt": "2026-11-25T22:23:04.559Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 484
+        },
+        "stdoutFile": "cr009-e8-retest-e3-boundary.log",
+        "stderrFile": "cr009-e8-retest-e3-boundary-stderr.log",
+        "stdoutSHA256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+        "stderrSHA256": "1cd582d1e4b20da313a84edc3ed1b9c738e7431daa40206ab8243531c5ac6b1e",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-FIXED",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr005-e3-fixed-inputs.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 75,
+          "physicsValidationSimulations": 15,
+          "physicsValidationTicks": 0
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.568Z",
+        "settledAt": "2026-11-25T22:23:04.627Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 8,
+          "physicsValidationTicks": 0
+        },
+        "stdoutFile": "cr009-e8-retest-e3-fixed.log",
+        "stderrFile": "cr009-e8-retest-e3-fixed-stderr.log",
+        "stdoutSHA256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+        "stderrSHA256": "a0da45f72aabf676dd937b760ea13232967b49645c2b879e65e91d8b5bb4058d",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-ROOF",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e8-spring-roof.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 75,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 8
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.636Z",
+        "settledAt": "2026-11-25T22:23:04.696Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 8
+        },
+        "stdoutFile": "cr009-e8-retest-e3-roof.log",
+        "stderrFile": "cr009-e8-retest-e3-roof-stderr.log",
+        "stdoutSHA256": "80c3207c41ea893e3d91d22bd20f9e4c26963ccfa01eb3745c1dd5d8ae1e8712",
+        "stderrSHA256": "243d63c49253c52c682ef433c2f404809ef5bc036adc6d4095209bb9accb766c",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-DUAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e8-spring-dual.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 75,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 3
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.705Z",
+        "settledAt": "2026-11-25T22:23:04.756Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 3
+        },
+        "stdoutFile": "cr009-e8-retest-e3-dual.log",
+        "stderrFile": "cr009-e8-retest-e3-dual-stderr.log",
+        "stdoutSHA256": "57a1ab611eaf8bf6fb95d68470364ffcb7ebcb942a715d3f545929a7c5e49884",
+        "stderrSHA256": "ef742cf9bf1d22f65a75373fa3436e01142d179939dfc6aafca0b1a3767c14bd",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-RELEASE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-release-formal.mjs",
+          "cr006-release-verified.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 85,
+          "physicsValidationSimulations": 3,
+          "physicsValidationTicks": 144
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.766Z",
+        "settledAt": "2026-11-25T22:23:04.852Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 3,
+          "physicsValidationTicks": 144
+        },
+        "stdoutFile": "cr009-e8-retest-e3-release.log",
+        "stderrFile": "cr009-e8-retest-e3-release-stderr.log",
+        "stdoutSHA256": "8a672cd6effa19b3c5568708c6306df8fb88e31f86e0ce98142c17c863ea06a6",
+        "stderrSHA256": "c03f2a87fe3fd8e3428cb40e5b7b7e6252b15e8333d494c3d875b398ae8e7020",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-LEGACY-TWO-ASSERTIONS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e8-legacy-two-assertions.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 30
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.863Z",
+        "settledAt": "2026-11-25T22:23:04.899Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-legacy-two-assertions.log",
+        "stderrFile": "cr009-e8-legacy-two-assertions-stderr.log",
+        "stdoutSHA256": "c6d6f12051ce5ecbb74997db2dbbde47ae891014a818f34d38e718945d9a5424",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-GOAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-goal-dut.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 2431
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:04.909Z",
+        "settledAt": "2026-11-25T22:23:05.017Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 307
+        },
+        "stdoutFile": "cr009-e8-retest-e5-goal.log",
+        "stderrFile": "cr009-e8-retest-e5-goal-stderr.log",
+        "stdoutSHA256": "d445eb3192da3649ea367c0c8cf9ccd073c9a57dcdb7cfcdcb329ec6d9807c72",
+        "stderrSHA256": "acf66904071d0cdbb15e421ddbefb36bc94dce2fc4d78d85cce7cee51a8087c8",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-RAMP",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-ramp-fixed-at-tip.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 480
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.026Z",
+        "settledAt": "2026-11-25T22:23:05.144Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 480
+        },
+        "stdoutFile": "cr009-e8-retest-e5-ramp.log",
+        "stderrFile": "cr009-e8-retest-e5-ramp-stderr.log",
+        "stdoutSHA256": "abb7819082501347a78422c4bcdb59723efe1f4e37a861263eae9baae8951dc0",
+        "stderrSHA256": "95c43850e59a0492492fe431021733326356be3f16807460d0dfe8df680eec4e",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-PLATFORM",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-platform-fixed-at-tip.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 360
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.154Z",
+        "settledAt": "2026-11-25T22:23:05.302Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 360
+        },
+        "stdoutFile": "cr009-e8-retest-e5-platform.log",
+        "stderrFile": "cr009-e8-retest-e5-platform-stderr.log",
+        "stdoutSHA256": "d74c1a91a429a91fffa7937488ef7d8658ac8ec2ec8724ebcfc7ddfeb4863b5e",
+        "stderrSHA256": "3244485291a4c380cee7bc7a41b7c9f35c81ac67e9bb16bcfa91387a27a42bd6",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-LOW-PLATFORM",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-platform-low-formal.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 60
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.312Z",
+        "settledAt": "2026-11-25T22:23:05.422Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 1,
+          "physicsValidationTicks": 60
+        },
+        "stdoutFile": "cr009-e8-retest-e5-low-platform.log",
+        "stderrFile": "cr009-e8-retest-e5-low-platform-stderr.log",
+        "stdoutSHA256": "61def06baa58a6df93eb194b5932d1eb864e140ad616bb78d80c8e757ef76614",
+        "stderrSHA256": "a8b8027c4fafc0d595783f3d0a22bee7bc393b6f3ab7411366f249fbdf33731f",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-SPRING",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-spring-dut.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 5,
+          "physicsValidationTicks": 182
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.436Z",
+        "settledAt": "2026-11-25T22:23:05.545Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 5,
+          "physicsValidationTicks": 182
+        },
+        "stdoutFile": "cr009-e8-retest-e5-spring.log",
+        "stderrFile": "cr009-e8-retest-e5-spring-stderr.log",
+        "stdoutSHA256": "f21de81227674580ada6d4bc97be6381630cbf69be78ab865a697d0c77d7f04d",
+        "stderrSHA256": "4c122cac29261b4f20dedf21a0c1713fd5480c379a7d2a1e803346120aca2f86",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-BOARD",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr006-e5-seesaw-verified.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 630
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.555Z",
+        "settledAt": "2026-11-25T22:23:05.734Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 6,
+          "physicsValidationTicks": 630
+        },
+        "stdoutFile": "cr009-e8-retest-e5-board.log",
+        "stderrFile": "cr009-e8-retest-e5-board-stderr.log",
+        "stdoutSHA256": "50fbf47e7f6b640410d1194de76093706dccbb7aa8b69570622db99fafb64c1e",
+        "stderrSHA256": "89dbe1f36b0d0369ff0e6d1bcf44e33a0dfc0ce38fd07684d13523bcec62799b",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E5-CR007-C",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr006-e5-platform-goal-ramp.mjs",
+          "cr007-native-composite.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 180
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.744Z",
+        "settledAt": "2026-11-25T22:23:05.837Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 180
+        },
+        "stdoutFile": "cr009-e8-retest-e5-cr007-c.log",
+        "stderrFile": "cr009-e8-retest-e5-cr007-c-stderr.log",
+        "stdoutSHA256": "449ee35a4e3a94953e026466be29426370ba90903abdb171539d27d20bbfe395",
+        "stderrSHA256": "7c0949927b9fac3c5c9152d9c9dabc9068fd251cba0f775939fc47eb36b92520",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-FOUNDATION-NODE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d1-physics.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d2-seesaw.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d2-spring.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d3-rules.test.js"
+        ],
+        "reserved": {
+          "automatedSeconds": 45,
+          "physicsValidationSimulations": 45,
+          "physicsValidationTicks": 2291
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:05.847Z",
+        "settledAt": "2026-11-25T22:23:06.131Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 45,
+          "physicsValidationTicks": 2291
+        },
+        "stdoutFile": "cr009-e8-retest-foundation-node.log",
+        "stderrFile": "cr009-e8-retest-foundation-node-stderr.log",
+        "stdoutSHA256": "94436a0a8a98e5fd341987d44b928fd9e719fe517842748882765e29324eef81",
+        "stderrSHA256": "b8858e2a4424143f1e3221261cac6599431deac42052448c009945750edc614c",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-NONPHYSICAL-NODE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d2-placement.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d4-stages.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d7-integration.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d8-governance.test.js",
+          "../development/games/0010_karakuri-workshop/tests/supplemental.test.js"
+        ],
+        "reserved": {
+          "automatedSeconds": 45
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:06.148Z",
+        "settledAt": "2026-11-25T22:23:06.383Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-nonphysical-node.log",
+        "stderrFile": "cr009-e8-retest-nonphysical-node-stderr.log",
+        "stdoutSHA256": "2e63a747d99920f8f60a8a74d5b56f756e3af5eb7a568ea988ecaec29479ce44",
+        "stderrSHA256": "a2ed5f028e5bd633b1eda48f83bdb8e658512a21736a2b98ee629ca5e0999c7b",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-STAGE-NODE-AUDIO-FIX",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "--test",
+          "--test-isolation=none",
+          "--test-reporter=tap",
+          "../development/games/0010_karakuri-workshop/tests/d5-save.test.js",
+          "../development/games/0010_karakuri-workshop/tests/d6-ui.test.js"
+        ],
+        "reserved": {
+          "automatedSeconds": 45,
+          "formalSimulations": 21,
+          "formalTicks": 7200
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:06.395Z",
+        "settledAt": "2026-11-25T22:23:07.619Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 21,
+          "formalTicks": 7200
+        },
+        "stdoutFile": "cr009-e8-retest-stage-node-audio-fix.log",
+        "stderrFile": "cr009-e8-retest-stage-node-audio-fix-stderr.log",
+        "stdoutSHA256": "e165163fef3496c1b5e4174b77b00fe2cb816bbeb246bda380de769e35e0ed7b",
+        "stderrSHA256": "3e7359222083a44cd6e4cae21f8b1bf9a02b979772c990e7d39a113524c8bc74",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-STORAGE-NODE-DETAIL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e7-storage-node-detail.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:07.629Z",
+        "settledAt": "2026-11-25T22:23:07.691Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-storage-node-detail.log",
+        "stderrFile": "cr009-e8-retest-storage-node-detail-stderr.log",
+        "stdoutSHA256": "598b9b433304d59cc0b4755d03c97fcd6b1c002058130b9aaf2aeff67a1a69a3",
+        "stderrSHA256": "58b0de9fc00ca665f6e477a217a5d30e5c9325910eeb97ff89a25996e0122544",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-NODE-SAVE-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e7-save-exact-node.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:07.701Z",
+        "settledAt": "2026-11-25T22:23:07.756Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-node-save-exact.log",
+        "stderrFile": "cr009-e8-retest-node-save-exact-stderr.log",
+        "stdoutSHA256": "599d53067ee48aca1cc64860cf7b77b914393059a2c4c33269ae0fbac3c1a05c",
+        "stderrSHA256": "cce38fb59fcaf2d0a1b0a76cfc211f034c25d8f85bb77c1918e529c376991948",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-LEGACY-FORMAL-CONTROLS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr008-e8-legacy-controls.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 80
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:07.765Z",
+        "settledAt": "2026-11-25T22:23:07.975Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-legacy-formal-controls.log",
+        "stderrFile": "cr009-e8-legacy-formal-controls-stderr.log",
+        "stdoutSHA256": "434a0bb5fd89fdb83b44c35f95e96bb634e5b0ba2de39fb80ff3bde494e34cad",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-STAGE-SUPPLEMENT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ded598259e7402381c63302d533903d09e339bf020145dfa0cb86aef0867a4d6",
+        "command": [
+          "cr009-e8-stage-supplement.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:22:57.524Z",
+        "startedAt": "2026-11-25T22:23:07.984Z",
+        "settledAt": "2026-11-25T22:23:08.114Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "formalSimulations": 2,
+          "formalTicks": 466
+        },
+        "stdoutFile": "cr009-e8-stage-supplement.log",
+        "stderrFile": "cr009-e8-stage-supplement-stderr.log",
+        "stdoutSHA256": "68284e1919df9345cc53aa931460aff487bfbcdc15850a27323a7d29a7967112",
+        "stderrSHA256": "5f863381a27c646b20c75610533201bce75116a3fc0482939477298f432fe9de",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E1-CR004-B-PP03",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E1",
+        "preparedPlanSHA256": "17956864dffb5db7aba3ed25a26e2705431ce5420deee1abe5807e5157187ee3",
+        "command": [
+          "cr009-cr004-b.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 180,
+          "physicsValidationSimulations": 864,
+          "physicsValidationTicks": 10368
+        },
+        "reservedAt": "2026-11-25T22:23:49.556Z",
+        "startedAt": "2026-11-25T22:23:49.567Z",
+        "settledAt": "2026-11-25T22:24:35.590Z",
+        "charged": {
+          "automatedSeconds": 47,
+          "physicsValidationSimulations": 864,
+          "physicsValidationTicks": 10368
+        },
+        "stdoutFile": "cr009-e1-cr004-b-pp03.log",
+        "stderrFile": "cr009-e1-cr004-b-pp03-stderr.log",
+        "stdoutSHA256": "74d7235b9bac382a5f8e39252af779b4e0bb2e1c95ed253d929d67aa8df9fea5",
+        "stderrSHA256": "ecad924650a777324634fc666f527d631cd14d965fe463f8080137fbc1e4a918",
+        "exit": null,
+        "signal": "SIGTERM"
+      },
+      {
+        "runId": "CR009-E1-CR004-B-PP03-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E1",
+        "preparedPlanSHA256": "25f816d483171cfec6cdc4b08368bd6917738ae87983820d9293022c6b72329e",
+        "command": [
+          "cr009-cr004-b-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 180,
+          "physicsValidationSimulations": 864,
+          "physicsValidationTicks": 10368
+        },
+        "reservedAt": "2026-11-25T22:24:45.736Z",
+        "startedAt": "2026-11-25T22:24:45.753Z",
+        "settledAt": "2026-11-25T22:24:46.950Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "physicsValidationSimulations": 864,
+          "physicsValidationTicks": 10368
+        },
+        "stdoutFile": "cr009-e1-cr004-b-pp03-exact.log",
+        "stderrFile": "cr009-e1-cr004-b-pp03-exact-stderr.log",
+        "stdoutSHA256": "5278e5197f92f30a4a079947eb540585f48acde5f09fa07a419a9833854e0c98",
+        "stderrSHA256": "4636365f0d62a33e8952f97649909d9bf445b7329abe2c9c845899a6927ac02a",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-FORMAL-STAGES",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "261d206dd37f838424220c8e40cfc7932ad55fd5d55a15c4ef3506668e6e731a",
+        "command": [
+          "cr008-e8-formal-native.mjs",
+          "cr009-e8-formal-input.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 180,
+          "formalSimulations": 1146,
+          "formalTicks": 1375200
+        },
+        "reservedAt": "2026-11-25T22:24:47.263Z",
+        "startedAt": "2026-11-25T22:24:47.277Z",
+        "settledAt": "2026-11-25T22:24:54.288Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 1146,
+          "formalTicks": 259075
+        },
+        "stdoutFile": "cr009-e8-formal-stages.log",
+        "stderrFile": "cr009-e8-formal-stages-stderr.log",
+        "stdoutSHA256": "07ac55df4cd7d6207b5fcb99f8f35614ba87aea46778f9339d67105a6c04c57e",
+        "stderrSHA256": "ce7cf5e5afd599b00131046034c2ad08ec859889b50f8cd33886996cf728d108",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-EXISTING-REGRESSION",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "261d206dd37f838424220c8e40cfc7932ad55fd5d55a15c4ef3506668e6e731a",
+        "command": [
+          "cr009-e8-existing-regression.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:24:47.263Z",
+        "startedAt": "2026-11-25T22:24:54.300Z",
+        "settledAt": "2026-11-25T22:24:58.224Z",
+        "charged": {
+          "automatedSeconds": 4
+        },
+        "stdoutFile": "cr009-e8-existing-regression.log",
+        "stderrFile": "cr009-e8-existing-regression-stderr.log",
+        "stdoutSHA256": "7854b1dd9209af408971433acff74aba9817e071ac8eb6dd14c8ad95361c0272",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ENDURANCE-NODE-100",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "b2fe8e12d2d488f0c649e8425d114711869913dbbb3390994ab969ea8155576e",
+        "command": [
+          "cr008-e8-endurance-node.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 110,
+          "formalSimulations": 100,
+          "formalTicks": 1000
+        },
+        "reservedAt": "2026-11-25T22:24:58.480Z",
+        "startedAt": "2026-11-25T22:24:58.489Z",
+        "settledAt": "2026-11-25T22:24:58.658Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "formalSimulations": 100,
+          "formalTicks": 1000
+        },
+        "stdoutFile": "cr009-e8-endurance-node-100.log",
+        "stderrFile": "cr009-e8-endurance-node-100-stderr.log",
+        "stdoutSHA256": "4da7a1b6b7740193f651df6f7e1d6cc1bfa571d34ad65936ca08419f78ed024f",
+        "stderrSHA256": "3442db3be95ae5bbc21082dec80505b42c48a675ce218b6a9cfdc83ef43e449f",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-ALL-SCREENS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-all-screens.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:24:59.174Z",
+        "settledAt": "2026-11-25T22:25:08.679Z",
+        "charged": {
+          "automatedSeconds": 10,
+          "formalSimulations": 2,
+          "formalTicks": 324
+        },
+        "stdoutFile": "cr009-e8-retest-all-screens.log",
+        "stderrFile": "cr009-e8-retest-all-screens-stderr.log",
+        "stdoutSHA256": "adcfa33917d2279740e1067896c2f5b15f6b44d67b9afcbd034bdce21ea7391a",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-BACKGROUND-DRAG",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-background-drag.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:08.691Z",
+        "settledAt": "2026-11-25T22:25:15.444Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "stdoutFile": "cr009-e8-retest-background-drag.log",
+        "stderrFile": "cr009-e8-retest-background-drag-stderr.log",
+        "stdoutSHA256": "b7e672d322bf7264f3544e5ef8aa0fc87893b95a3ecdedd07a44787c44de1209",
+        "stderrSHA256": "08d432b3a6f527f2af998261b2f232f6f64fb9912abee3ae671f7643eb8eac1c",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-BFCACHE-LEASE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-bfcache-lease.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 1,
+          "formalTicks": 1200
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:15.457Z",
+        "settledAt": "2026-11-25T22:25:31.234Z",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 1,
+          "formalTicks": 175
+        },
+        "stdoutFile": "cr009-e8-retest-bfcache-lease.log",
+        "stderrFile": "cr009-e8-retest-bfcache-lease-stderr.log",
+        "stdoutSHA256": "75536c6e25e34413a923c5cb3b30e33bc0ce7f434712650a77a32124daac459d",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-BROWSER-SAVE-LITERAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-browser-save-literal.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:31.245Z",
+        "settledAt": "2026-11-25T22:25:32.949Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-retest-browser-save-literal.log",
+        "stderrFile": "cr009-e8-retest-browser-save-literal-stderr.log",
+        "stdoutSHA256": "f0a5ec95e50047745cb22feb344c15bba7542cb036a315933604be1698ad3911",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-DRAW-ALL-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-draw-all-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:32.960Z",
+        "settledAt": "2026-11-25T22:25:34.614Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-retest-draw-all-exact.log",
+        "stderrFile": "cr009-e8-retest-draw-all-exact-stderr.log",
+        "stdoutSHA256": "bb1b3374c0b1582d66b702ddcbb4dea82ee87f3fb25582f33c615cae09f90717",
+        "stderrSHA256": "cd811e737401edef24092236d497ff2ead7d42cdd3ebc46779ef1ff8d4210084",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-EDITOR-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-editor-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:34.626Z",
+        "settledAt": "2026-11-25T22:25:49.301Z",
+        "charged": {
+          "automatedSeconds": 15,
+          "formalSimulations": 2,
+          "formalTicks": 175
+        },
+        "stdoutFile": "cr009-e8-retest-editor-exact.log",
+        "stderrFile": "cr009-e8-retest-editor-exact-stderr.log",
+        "stdoutSHA256": "12c0429ca8da32c10ecda9655200ca7d2ccdabcd85a53e49a73b96c628b8fedf",
+        "stderrSHA256": "27a9e9ea1fc5cac1dcbbb8659d87b7942bb5fc8d539bb9bf797320951bddc18e",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-PERSISTENCE-LIFECYCLE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-persistence-lifecycle.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:49.341Z",
+        "settledAt": "2026-11-25T22:25:55.419Z",
+        "charged": {
+          "automatedSeconds": 7,
+          "formalSimulations": 2,
+          "formalTicks": 185
+        },
+        "stdoutFile": "cr009-e8-retest-persistence-lifecycle.log",
+        "stderrFile": "cr009-e8-retest-persistence-lifecycle-stderr.log",
+        "stdoutSHA256": "b5fb20b2fd618b59cb0b1f29804c56bd8fa170caad4a86e008f35d515e16362f",
+        "stderrSHA256": "1b7ec85af0a1b75226da49c458ff73f5a04590c11c8f9946c9f180be67d86d88",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-REAL-AUDIO-FAULT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-real-audio-fault.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:25:55.430Z",
+        "settledAt": "2026-11-25T22:26:03.674Z",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "stdoutFile": "cr009-e8-retest-real-audio-fault.log",
+        "stderrFile": "cr009-e8-retest-real-audio-fault-stderr.log",
+        "stdoutSHA256": "8ef393c90a0dfd4e53126c49f5d38120223fe1bb0b7f888226006ed7281f6e38",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-SELECT-ACHIEVE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-select-and-achieve.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:03.685Z",
+        "settledAt": "2026-11-25T22:26:13.312Z",
+        "charged": {
+          "automatedSeconds": 10,
+          "formalSimulations": 2,
+          "formalTicks": 368
+        },
+        "stdoutFile": "cr009-e8-retest-select-achieve.log",
+        "stderrFile": "cr009-e8-retest-select-achieve-stderr.log",
+        "stdoutSHA256": "6d59526d593d8fd37cf7e0145035e0c166d4e85a942fbad3579b9c022ee2ce7e",
+        "stderrSHA256": "67458eb564d37506b4460e4bcca130ac5e5b8e5a171bd90be5d05d068730990a",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-STORAGE-CANONICAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-storage-canonical.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:13.323Z",
+        "settledAt": "2026-11-25T22:26:19.374Z",
+        "charged": {
+          "automatedSeconds": 7
+        },
+        "stdoutFile": "cr009-e8-retest-storage-canonical.log",
+        "stderrFile": "cr009-e8-retest-storage-canonical-stderr.log",
+        "stdoutSHA256": "f13e3408ce91f25ad3d337a6324d2fa2537de21f080705f147dbf7787c08c119",
+        "stderrSHA256": "979f0fe30f771b1c912c48a887419b3ad4cc133920f0cffc32deaf3e96cbd03e",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-TILT-FROZEN",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-tilt-frozen.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:19.384Z",
+        "settledAt": "2026-11-25T22:26:20.047Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-tilt-frozen.log",
+        "stderrFile": "cr009-e8-retest-tilt-frozen-stderr.log",
+        "stdoutSHA256": "1d5e02ace785136865a3e809a127055c9506bbb58c13aabe36832d38684bf86b",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-VISUAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-visual-browser.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:20.057Z",
+        "settledAt": "2026-11-25T22:26:35.216Z",
+        "charged": {
+          "automatedSeconds": 16,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "stdoutFile": "cr009-e8-retest-visual.log",
+        "stderrFile": "cr009-e8-retest-visual-stderr.log",
+        "stdoutSHA256": "9775f48ee150e68dc290112a940708fd57b3bef2fb4bd0f8d11ff412e82d9a2e",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-NATIVE-SOUND-VERIFIED",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-native-sound.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:35.227Z",
+        "settledAt": "2026-11-25T22:26:38.216Z",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "stdoutFile": "cr009-e8-retest-native-sound-verified.log",
+        "stderrFile": "cr009-e8-retest-native-sound-verified-stderr.log",
+        "stdoutSHA256": "2c2319cc88bc11a5a3a7db3198e7b6b0c77d3320e3fa2792578bbe4223d528d7",
+        "stderrSHA256": "e825f7cb8b04ae82155f93701f06fa3a0f8289d06f8bf751cd5e021cffa34487",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-AUDIO-LAYOUT-FIXED",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-audio-layout-fixed.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:38.225Z",
+        "settledAt": "2026-11-25T22:26:38.983Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-audio-layout-fixed.log",
+        "stderrFile": "cr009-e8-retest-audio-layout-fixed-stderr.log",
+        "stdoutSHA256": "f179887368309024a8a1f8237eb860d5dc2fcb9ac7737d46683f925a08e6d869",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-NATIVE-SOUND-STOP",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e7-native-sound-stop.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:38.993Z",
+        "settledAt": "2026-11-25T22:26:40.764Z",
+        "charged": {
+          "automatedSeconds": 2,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "stdoutFile": "cr009-e8-retest-native-sound-stop.log",
+        "stderrFile": "cr009-e8-retest-native-sound-stop-stderr.log",
+        "stdoutSHA256": "a5e8f6504d6375b3d26dc86c809f8fb26f07a79f8e90b11bf9d2f4947701f0f5",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-SOUND-TERMINAL-EXIT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e8-e7-terminal-audio.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:40.774Z",
+        "settledAt": "2026-11-25T22:26:41.730Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-retest-sound-terminal-exit.log",
+        "stderrFile": "cr009-e8-retest-sound-terminal-exit-stderr.log",
+        "stdoutSHA256": "5a28e583ca8b33fc2e187d75b18aaf221286abf9d91e016bf064e4c9202a7487",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-AUDIO-BROWSER-FINAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-audio-browser-final.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:41.740Z",
+        "settledAt": "2026-11-25T22:26:43.260Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-audio-browser-final.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-audio-browser-final-stderr.log",
+        "stdoutSHA256": "315bdeb878614a7d5ad57f1008ded3210d988b61f21d0f848b6f781780369b6e",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-BROWSER-CONTROLS-VERIFIED",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e8-e7-browser-control-metrics.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 75,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:26:43.270Z",
+        "settledAt": "2026-11-25T22:27:03.827Z",
+        "charged": {
+          "automatedSeconds": 21,
+          "formalSimulations": 2,
+          "formalTicks": 175
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-browser-controls-verified.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-browser-controls-verified-stderr.log",
+        "stdoutSHA256": "ce650181ad4000dc107c01f52b97c2d7b3a67be0c2ecf1cff3ac75d7fa38ac46",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-BROWSER-LAYOUTS-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-browser-layouts-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 7,
+          "formalTicks": 8400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:03.839Z",
+        "settledAt": "2026-11-25T22:27:21.499Z",
+        "charged": {
+          "automatedSeconds": 18,
+          "formalSimulations": 7,
+          "formalTicks": 570
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-browser-layouts-exact.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-browser-layouts-exact-stderr.log",
+        "stdoutSHA256": "afb254797be05c401f5eab4082b2e03747690feb7b4f27d1d78abf27a3ccd7c9",
+        "stderrSHA256": "37ab40d383356b6a3e70af1d9a3c4a4fa4bad22695ced2729ecdcc574046de46",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-BROWSER-LAYOUTS-FINAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-browser-layouts-final.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 120
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:21.511Z",
+        "settledAt": "2026-11-25T22:27:31.443Z",
+        "charged": {
+          "automatedSeconds": 10
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-browser-layouts-final.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-browser-layouts-final-stderr.log",
+        "stdoutSHA256": "a198955c45ffa8cd9a82a7550dcf37a7e76c8eafdb3f27514bc93f470f923359",
+        "stderrSHA256": "767f977a34bb800c0afd219785724bf4ef03dde97ab4883296ef153abee273fe",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-GESTURES",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-gestures.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:31.453Z",
+        "settledAt": "2026-11-25T22:27:33.338Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-gestures.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-gestures-stderr.log",
+        "stdoutSHA256": "8b0496ce973bfffb95a543301b17744b8ee446836384ae3c873f5bb947fc5852",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-NATIVE-BEACON-KEYS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-native-beacon-keys.sh"
+        ],
+        "reserved": {
+          "automatedSeconds": 100,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:33.349Z",
+        "settledAt": "2026-11-25T22:27:38.353Z",
+        "charged": {
+          "automatedSeconds": 6,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-native-beacon-keys.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-native-beacon-keys-stderr.log",
+        "stdoutSHA256": "aec1382bb66c6d5a56dca8e911897c3df13bc5b21fc0abcaaadf2b74f924d09c",
+        "stderrSHA256": "37a06e65373a1ef8ab21c6d93e3969935a6215535daee4889e3260b81884fb57",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-SAVE-BROWSER",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e8-e7-save-browser.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 1,
+          "formalTicks": 1200
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:38.368Z",
+        "settledAt": "2026-11-25T22:27:56.736Z",
+        "charged": {
+          "automatedSeconds": 19,
+          "formalSimulations": 1,
+          "formalTicks": 175
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-save-browser.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-save-browser-stderr.log",
+        "stdoutSHA256": "3658df13f3ea7d99403410ea46e176d35b4d97f7a8c9ceb86e5b13dd41ea2958",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-SAVE-CONTRACTS-FINAL",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr007-e7-save-contracts-final.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:27:56.746Z",
+        "settledAt": "2026-11-25T22:28:03.373Z",
+        "charged": {
+          "automatedSeconds": 7
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-save-contracts-final.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-save-contracts-final-stderr.log",
+        "stdoutSHA256": "7072534f64621a452c537f51e5045f202f494e03b27bd06d1f8f9a07df91ec10",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E7-LEGACY-WORKSHOP-BROWSER",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d582d52caeff8e4ba46bc13212b61e748ab5f7e9132a88da0b812ce9e0c5ad6b",
+        "command": [
+          "cr008-e8-e7-workshop-controls.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 3,
+          "formalTicks": 3600
+        },
+        "reservedAt": "2026-11-25T22:24:59.163Z",
+        "startedAt": "2026-11-25T22:28:03.384Z",
+        "settledAt": "2026-11-25T22:28:05.525Z",
+        "charged": {
+          "automatedSeconds": 3,
+          "formalSimulations": 1,
+          "formalTicks": 7
+        },
+        "stdoutFile": "cr009-e8-retest-e7-legacy-workshop-browser.log",
+        "stderrFile": "cr009-e8-retest-e7-legacy-workshop-browser-stderr.log",
+        "stdoutSHA256": "df453623f3320854503bc2d45b8ffc6a4bba5912dcd1cf3cc7ee099cd68d84e9",
+        "stderrSHA256": "06bd44ae60d7b2f7e93e07430bb3f7610d388f473c96bbd1ece030dd8c31ec4c",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-STARTUP-NETWORK",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr008-e8-startup-network.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:28:05.952Z",
+        "settledAt": "2026-11-25T22:28:16.311Z",
+        "charged": {
+          "automatedSeconds": 11
+        },
+        "stdoutFile": "cr009-e8-startup-network.log",
+        "stderrFile": "cr009-e8-startup-network-stderr.log",
+        "stdoutSHA256": "0a0946eb83f80bc331a2c6ab0b57b31b8d2b62b9377fdba75624bfd44a3c65db",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-EDIT-PERFORMANCE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr008-e8-edit-performance.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:28:16.323Z",
+        "settledAt": "2026-11-25T22:28:32.193Z",
+        "charged": {
+          "automatedSeconds": 16
+        },
+        "stdoutFile": "cr009-e8-edit-performance.log",
+        "stderrFile": "cr009-e8-edit-performance-stderr.log",
+        "stdoutSHA256": "6c67f87dd46857847635340f389e788d0fb9f6f0a6e7347204f1d8a6492639a0",
+        "stderrSHA256": "b2b922897dbb006d20ade5ed77e466ab25e005ee1a04f4ec343e7ceddfe23390",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-EXISTING-BROWSER",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr009-e8-existing-browser.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:28:32.215Z",
+        "settledAt": "2026-11-25T22:28:36.552Z",
+        "charged": {
+          "automatedSeconds": 5
+        },
+        "stdoutFile": "cr009-e8-existing-browser.log",
+        "stderrFile": "cr009-e8-existing-browser-stderr.log",
+        "stdoutSHA256": "ec21125454d353c40ebbbf4d11f338558628c860c052808dfa04d9d0fe3abbbc",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RELEASE-NORMAL-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr008-e8-browser-release.cjs",
+          "cr008-e8-mode-normal.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:28:36.563Z",
+        "settledAt": "2026-11-25T22:29:22.234Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "stdoutFile": "cr009-e8-release-normal-exact.log",
+        "stderrFile": "cr009-e8-release-normal-exact-stderr.log",
+        "stdoutSHA256": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RELEASE-MUTE-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr008-e8-browser-release.cjs",
+          "cr008-e8-mode-mute.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:29:22.249Z",
+        "settledAt": "2026-11-25T22:30:07.997Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "stdoutFile": "cr009-e8-release-mute-exact.log",
+        "stderrFile": "cr009-e8-release-mute-exact-stderr.log",
+        "stdoutSHA256": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr008-e8-browser-release.cjs",
+          "cr008-e8-mode-unavailable.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 115,
+          "formalSimulations": 10,
+          "formalTicks": 12000
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:30:08.009Z",
+        "settledAt": "2026-11-25T22:30:53.531Z",
+        "charged": {
+          "automatedSeconds": 46,
+          "formalSimulations": 10,
+          "formalTicks": 2261
+        },
+        "stdoutFile": "cr009-e8-release-unavailable-exact.log",
+        "stderrFile": "cr009-e8-release-unavailable-exact-stderr.log",
+        "stdoutSHA256": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT02-03-05",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr005-e2-mutations.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:53.886Z",
+        "settledAt": "2026-11-25T22:30:54.341Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-isolated-mut02-03-05.log",
+        "stderrFile": "cr009-e8-isolated-mut02-03-05-stderr.log",
+        "stdoutSHA256": "fc794832292b9f7762cf953e1fb5f2b0bf353308ea57cff933a19681909d7d3a",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT04",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr008-e8-mutation04.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 100,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 8
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:54.358Z",
+        "settledAt": "2026-11-25T22:30:54.660Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 8
+        },
+        "stdoutFile": "cr009-e8-isolated-mut04.log",
+        "stderrFile": "cr009-e8-isolated-mut04-stderr.log",
+        "stdoutSHA256": "91548e891c18b3df29b331541633360ff2a36c6316e6f1dad4adb41bc3210034",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr008-e8-mutations-rules.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:54.673Z",
+        "settledAt": "2026-11-25T22:30:55.471Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+        "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+        "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT11",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr008-e8-mutation11.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 75
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:55.482Z",
+        "settledAt": "2026-11-25T22:30:57.218Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-isolated-mut11.log",
+        "stderrFile": "cr009-e8-isolated-mut11-stderr.log",
+        "stdoutSHA256": "0e20eef3d97908e8e0b3f222d0f8d35cf8319ce604e808b7026a5ab54c28180b",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT10-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr008-e8-mutation-storage-exact.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 70
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:57.230Z",
+        "settledAt": "2026-11-25T22:30:57.518Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-isolated-mut10-exact.log",
+        "stderrFile": "cr009-e8-isolated-mut10-exact-stderr.log",
+        "stdoutSHA256": "d6612050c955bd91b17b56b121b21b3a6e4dcf190e3f24dd743afa4afea5ecbd",
+        "stderrSHA256": "bdf193e7889606e163ab6717f53c6fe2cfe7e968562d7293566ce1109ef83c54",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ISOLATED-MUT12-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+        "command": [
+          "cr008-e8-mutation12-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 75
+        },
+        "reservedAt": "2026-11-25T22:30:53.876Z",
+        "startedAt": "2026-11-25T22:30:57.530Z",
+        "settledAt": "2026-11-25T22:30:57.949Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-isolated-mut12-exact.log",
+        "stderrFile": "cr009-e8-isolated-mut12-exact-stderr.log",
+        "stdoutSHA256": "370797b75ef0301008a8886c118c7b8c428226dda9ab56ac319106d6affcb27f",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-RETEST-E3-NATIVE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FOUNDATION",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e8-spring-native.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 95,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 4
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:30:58.519Z",
+        "settledAt": "2026-11-25T22:30:58.720Z",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 4,
+          "physicsValidationTicks": 4
+        },
+        "stdoutFile": "cr009-e8-retest-e3-native.log",
+        "stderrFile": "cr009-e8-retest-e3-native-stderr.log",
+        "stdoutSHA256": "0694cdae86aa8ca5e4d6a80d8dcb59911cff183d89742e63efad0604e17ae13d",
+        "stderrSHA256": "b400f0b8e9c5987afff120aef9bd1e9ebf338b75f558c74e633c894637f51edd",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-NATIVE-VERDICTS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e8-native-closure.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 60
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:30:58.780Z",
+        "settledAt": "2026-11-25T22:30:59.955Z",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "stdoutFile": "cr009-e8-native-verdicts.log",
+        "stderrFile": "cr009-e8-native-verdicts-stderr.log",
+        "stdoutSHA256": "560181bf7d55f6577c0a7de278d51061c9d0dc9054e59238f592bf1de36e4926",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-CHROMIUM-MODE-CROSSCHECK",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e8-audio-crosscheck.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 30
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:30:59.973Z",
+        "settledAt": "2026-11-25T22:31:00.033Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-chromium-mode-crosscheck.log",
+        "stderrFile": "cr009-e8-chromium-mode-crosscheck-stderr.log",
+        "stdoutSHA256": "5ff266e937c354022b2d343832ee7374f921350e267f6255e42f8f12705c5991",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-EXACT-HINTS",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e8-hints.mjs",
+          "cr009-e8-formal-stages.log",
+          "cr009-e8-formal-input.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 30
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:31:00.056Z",
+        "settledAt": "2026-11-25T22:31:00.228Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-exact-hints.log",
+        "stderrFile": "cr009-e8-exact-hints-stderr.log",
+        "stdoutSHA256": "fd8ab60bf9fa3875585b9ba334dd6defb7045f80b0f37a30e36de5038551b76b",
+        "stderrSHA256": "0d9f11758fd46690b7bafb1a2e40f975bd453e4c58356b3dacf8914aa6c8d9de",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-DISTINCT-ALTERNATIVES",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-alternatives.mjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 40
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:31:00.253Z",
+        "settledAt": "2026-11-25T22:31:00.453Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-distinct-alternatives.log",
+        "stderrFile": "cr009-e8-distinct-alternatives-stderr.log",
+        "stdoutSHA256": "d89dd09193e53d1b0cc5beb4e616d2f70fef97e9aac954a22d4405a1ca431fb1",
+        "stderrSHA256": "c13f52d13df33dd08201a9d878211a1eb50b2a3e66baeb1e91bdbd51bfa2360a",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-D8-020-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e8-fingerprint.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 35
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:31:00.465Z",
+        "settledAt": "2026-11-25T22:31:00.829Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-d8-020-exact.log",
+        "stderrFile": "cr009-e8-d8-020-exact-stderr.log",
+        "stdoutSHA256": "573ddf4be7bc1299afb5de9f3dd02f6609d3ab690f4e23f2a59b269a820d38b3",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E7-AUDIO-EXACT",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E7",
+        "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+        "command": [
+          "cr009-e7-audio-exact.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:30:58.490Z",
+        "startedAt": "2026-11-25T22:31:00.840Z",
+        "settledAt": "2026-11-25T22:31:05.657Z",
+        "charged": {
+          "automatedSeconds": 5
+        },
+        "stdoutFile": "cr009-e7-audio-exact.log",
+        "stderrFile": "cr009-e7-audio-exact-stderr.log",
+        "stdoutSHA256": "1911bd2b9f6619042239484c527fe34d32d09b6d08e88fb4e0ab3097ac0ed2db",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-ENDURANCE-1800",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "FORMAL",
+        "pool": "E8",
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "578e8d1ec95da5be90619b0620ea0482aa78dacb3d71b6bc5b5b762958da37e3",
+        "command": [
+          "cr009-e8-endurance.cjs",
+          "cr009-e8-endurance-formal.json"
+        ],
+        "reserved": {
+          "automatedSeconds": 2100,
+          "formalSimulations": 400,
+          "formalTicks": 480000
+        },
+        "reservedAt": "2026-11-25T22:31:05.957Z",
+        "startedAt": "2026-11-25T22:31:05.967Z",
+        "settledAt": "2026-11-25T23:01:22.936Z",
+        "charged": {
+          "automatedSeconds": 1817,
+          "formalSimulations": 400,
+          "formalTicks": 61450
+        },
+        "stdoutFile": "cr009-e8-endurance-1800.log",
+        "stderrFile": "cr009-e8-endurance-1800-stderr.log",
+        "stdoutSHA256": "5e1af46f8ff16a328acb13c4c9d67c05aa179fee6a91e57f42293be6538f2b5e",
+        "stderrSHA256": "135848e2ca5cdf49102f44decd7f80f9e1792ca61d3174c75969879b864c9951",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-FINAL-GATE",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "ec3d28a74aa4e41708fcae7d5e35ebf7d11bb631bdd7e48c72883dc0d3489865",
+        "command": [
+          "cr009-final-engineering-gate.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 60
+        },
+        "reservedAt": "2026-11-25T23:02:45.341Z",
+        "startedAt": "2026-11-25T23:02:45.357Z",
+        "settledAt": "2026-11-25T23:02:45.529Z",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "stdoutFile": "cr009-e8-final-gate.log",
+        "stderrFile": "cr009-e8-final-gate-stderr.log",
+        "stdoutSHA256": "6c7ce10b50f9fbf8e1db72ceab81f8849144211f3c8f1d3f75c59ee0f58c410b",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      }
+    ],
+    "oldSeedArchiveSHA256": "cd0bde55bf57f414845fb0aa3e6c99b9e66a5cd6d79c937b49a608258e17ae4c",
+    "finalGateProof": {
+      "runId": "CR009-E8-FINAL-GATE",
+      "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "purpose": "AUTOMATED",
+      "pool": null,
+      "engineeringStage": "E8",
+      "preparedPlanSHA256": "ec3d28a74aa4e41708fcae7d5e35ebf7d11bb631bdd7e48c72883dc0d3489865",
+      "command": [
+        "cr009-final-engineering-gate.cjs"
+      ],
+      "reserved": {
+        "automatedSeconds": 60
+      },
+      "reservedAt": "2026-11-25T23:02:45.341Z",
+      "startedAt": "2026-11-25T23:02:45.357Z",
+      "settledAt": "2026-11-25T23:02:45.529Z",
+      "charged": {
+        "automatedSeconds": 1
+      },
+      "stdoutFile": "cr009-e8-final-gate.log",
+      "stderrFile": "cr009-e8-final-gate-stderr.log",
+      "stdoutSHA256": "6c7ce10b50f9fbf8e1db72ceab81f8849144211f3c8f1d3f75c59ee0f58c410b",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0,
+      "signal": null
+    }
+  }
 }

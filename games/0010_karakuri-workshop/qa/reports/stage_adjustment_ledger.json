@@ -257,5 +257,35 @@
       "05": 6,
       "08": 6
     }
+  },
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "newAdjustments": 0,
+    "oldLedgerPreserved": {
+      "stageDefinitionSHA256": "70a0dda5b3efda54e945a28057d64b88621236da46775d09e7c498a710531239",
+      "frozenSourceSHA256": {
+        "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+        "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+        "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+        "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+        "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+      },
+      "priorSearchArchiveSHA256": "20bef0f4ccd3d0c478468ee5c5ff3c4dce0929fd78d4d10d0b43e3c69c897522",
+      "priorSearchRecordCount": 61,
+      "previousGenerated": 11932,
+      "previousSearchWorlds": 6419,
+      "previousSearchTicks": 1875136,
+      "previousSearchAutomationSeconds": 79,
+      "previousPhysicsCandidateTrials": 12,
+      "previousDefinitionAdjustmentCounts": {
+        "ST05": 6,
+        "ST08": 6,
+        "ST10": 12
+      },
+      "currentSearchExecutions": 0,
+      "currentDefinitionAdjustments": 0,
+      "currentPhysicsCandidateTrials": 0
+    }
   }
 }

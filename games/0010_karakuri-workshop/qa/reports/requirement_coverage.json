@@ -1,5 +1,5 @@
 {
-  "testedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+  "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
   "requirements": {
     "BR-001": {
       "description": "装置を設計・実験する",
@@ -29,7 +29,8 @@
         "TC-D4-009-C009",
         "TC-D4-009-C010"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-036-C001",
         "TC-D2-036-C002",
         "TC-D4-009-C001",
@@ -43,23 +44,8 @@
         "TC-D4-009-C009",
         "TC-D4-009-C010"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-036-C001",
-        "TC-D2-036-C002",
-        "TC-D4-009-C001",
-        "TC-D4-009-C002",
-        "TC-D4-009-C003",
-        "TC-D4-009-C004",
-        "TC-D4-009-C005",
-        "TC-D4-009-C006",
-        "TC-D4-009-C007",
-        "TC-D4-009-C008",
-        "TC-D4-009-C009",
-        "TC-D4-009-C010"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "BR-002": {
       "description": "失敗から改善する",
@@ -81,22 +67,16 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "assessedCases": [
-        "TC-D3-044-C001",
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "phase6Cases": [
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-044-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D7-030-C001",
+        "TC-D7-030-C002",
+        "TC-D7-030-C003"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "BR-003": {
       "description": "段階的に仕掛けを学ぶ",
@@ -116,15 +96,12 @@
       "mappedCaseIds": [
         "TC-D4-011-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-011-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-011-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "BR-004": {
       "description": "意味のある複数攻略",
@@ -152,7 +129,8 @@
         "TC-D4-015-C001",
         "TC-D4-015-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-013-C001",
         "TC-D4-013-C002",
         "TC-D4-013-C003",
@@ -165,22 +143,8 @@
         "TC-D4-015-C001",
         "TC-D4-015-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-013-C001",
-        "TC-D4-013-C002",
-        "TC-D4-013-C003",
-        "TC-D4-013-C004",
-        "TC-D4-013-C005",
-        "TC-D4-013-C006",
-        "TC-D4-013-C007",
-        "TC-D4-014-C001",
-        "TC-D4-014-C002",
-        "TC-D4-015-C001",
-        "TC-D4-015-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "BR-005": {
       "description": "失敗・ヒントに減点なし",
@@ -202,23 +166,16 @@
         "TC-D3-036-C004",
         "TC-D3-047-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-036-C001",
         "TC-D3-036-C002",
         "TC-D3-036-C003",
         "TC-D3-036-C004",
         "TC-D3-047-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-036-C001",
-        "TC-D3-036-C002",
-        "TC-D3-036-C003",
-        "TC-D3-036-C004",
-        "TC-D3-047-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "BR-006": {
       "description": "少ないパーツで再挑戦",
@@ -241,24 +198,17 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "assessedCases": [
-        "TC-D3-037-C001",
-        "TC-D3-037-C002",
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "phase6Cases": [
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D7-030-C001",
+        "TC-D7-030-C002",
+        "TC-D7-030-C003"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "BR-007": {
       "description": "小型スマホで操作可能",
@@ -284,26 +234,18 @@
         "TC-D6-026-C001",
         "TC-D6-026-C002"
       ],
-      "assessedCases": [
-        "TC-D6-013-C001",
-        "TC-D6-013-C002",
-        "TC-D6-014-C001",
-        "TC-D6-014-C002",
-        "TC-D6-026-C001",
-        "TC-D6-026-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-013-C002",
-        "TC-D6-014-C002",
-        "TC-D6-026-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-013-C001",
         "TC-D6-014-C001",
         "TC-D6-026-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-013-C002",
+        "TC-D6-014-C002",
+        "TC-D6-026-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "BR-008": {
       "description": "無料・ログイン不要",
@@ -321,17 +263,13 @@
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-017-C001",
-        "TC-D7-017-C002"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "BR-009": {
       "description": "世界観の統一",
@@ -365,32 +303,21 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "assessedCases": [
-        "TC-D6-027-C001",
-        "TC-D6-027-C002",
-        "TC-D6-031-C001",
-        "TC-D6-031-C002",
-        "TC-D6-035-C001",
-        "TC-D6-035-C002",
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "phase6Cases": [
-        "TC-D6-027-C002",
-        "TC-D6-031-C002",
-        "TC-D6-035-C002",
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-027-C001",
         "TC-D6-031-C001",
         "TC-D6-035-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-027-C002",
+        "TC-D6-031-C002",
+        "TC-D6-035-C002",
+        "TC-D7-030-C001",
+        "TC-D7-030-C002",
+        "TC-D7-030-C003"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "BR-010": {
       "description": "AI駆動開発学習成果",
@@ -421,7 +348,8 @@
         "TC-D8-022-C001",
         "TC-D8-022-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C001",
         "TC-D7-028-C002",
         "TC-D8-015-C001",
@@ -429,18 +357,8 @@
         "TC-D8-022-C001",
         "TC-D8-022-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D8-015-C001",
-        "TC-D8-020-C001",
-        "TC-D8-022-C001"
-      ],
-      "e8Open": [
-        "TC-D7-028-C001",
-        "TC-D7-028-C002",
-        "TC-D8-022-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-001": {
       "description": "タイトル・開始・遊び方・設定",
@@ -459,17 +377,13 @@
         "TC-D6-001-C001",
         "TC-D6-012-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-001-C001",
         "TC-D6-012-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-001-C001",
-        "TC-D6-012-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-002": {
       "description": "ステージ選択・星・解放表示",
@@ -489,17 +403,13 @@
         "TC-D6-002-C001",
         "TC-D6-003-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-002-C001",
         "TC-D6-003-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-002-C001",
-        "TC-D6-003-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-003": {
       "description": "初回ST01のみ解放",
@@ -518,17 +428,13 @@
         "TC-D5-001-C001",
         "TC-D6-003-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-001-C001",
         "TC-D6-003-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-001-C001",
-        "TC-D6-003-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-004": {
       "description": "次ステージ順次解放",
@@ -546,15 +452,12 @@
       "mappedCaseIds": [
         "TC-D3-039-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-039-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-039-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-005": {
       "description": "再挑戦",
@@ -575,19 +478,14 @@
         "TC-D1-032-C002",
         "TC-D3-039-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-032-C001",
         "TC-D1-032-C002",
         "TC-D3-039-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-032-C001",
-        "TC-D1-032-C002",
-        "TC-D3-039-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-006": {
       "description": "全ステージ達成",
@@ -607,19 +505,14 @@
         "TC-D3-040-C002",
         "TC-D6-009-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-040-C001",
         "TC-D3-040-C002",
         "TC-D6-009-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-040-C001",
-        "TC-D3-040-C002",
-        "TC-D6-009-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-007": {
       "description": "ステージ定義",
@@ -647,7 +540,8 @@
         "TC-D4-003-C001",
         "TC-D4-004-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-001-C001",
         "TC-D3-001-C002",
         "TC-D4-001-C001",
@@ -655,17 +549,8 @@
         "TC-D4-003-C001",
         "TC-D4-004-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-001-C001",
-        "TC-D3-001-C002",
-        "TC-D4-001-C001",
-        "TC-D4-002-C001",
-        "TC-D4-003-C001",
-        "TC-D4-004-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-008": {
       "description": "パーツ在庫",
@@ -686,19 +571,14 @@
         "TC-D4-005-C001",
         "TC-D4-005-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-008-C001",
         "TC-D4-005-C001",
         "TC-D4-005-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-008-C001",
-        "TC-D4-005-C001",
-        "TC-D4-005-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-009": {
       "description": "固定パーツ編集不可",
@@ -716,15 +596,12 @@
       "mappedCaseIds": [
         "TC-D2-009-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-009-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-009-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-010": {
       "description": "坂道",
@@ -761,7 +638,8 @@
         "TC-D2-002-C017",
         "TC-D2-002-C018"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-011-C001",
         "TC-D2-002-C001",
         "TC-D2-002-C002",
@@ -782,30 +660,8 @@
         "TC-D2-002-C017",
         "TC-D2-002-C018"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-011-C001",
-        "TC-D2-002-C001",
-        "TC-D2-002-C002",
-        "TC-D2-002-C003",
-        "TC-D2-002-C004",
-        "TC-D2-002-C005",
-        "TC-D2-002-C006",
-        "TC-D2-002-C007",
-        "TC-D2-002-C008",
-        "TC-D2-002-C009",
-        "TC-D2-002-C010",
-        "TC-D2-002-C011",
-        "TC-D2-002-C012",
-        "TC-D2-002-C013",
-        "TC-D2-002-C014",
-        "TC-D2-002-C015",
-        "TC-D2-002-C016",
-        "TC-D2-002-C017",
-        "TC-D2-002-C018"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-011": {
       "description": "足場",
@@ -828,23 +684,16 @@
         "TC-D2-003-C003",
         "TC-D2-003-C004"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-010-C001",
         "TC-D2-003-C001",
         "TC-D2-003-C002",
         "TC-D2-003-C003",
         "TC-D2-003-C004"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-010-C001",
-        "TC-D2-003-C001",
-        "TC-D2-003-C002",
-        "TC-D2-003-C003",
-        "TC-D2-003-C004"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-012": {
       "description": "バネ",
@@ -905,7 +754,8 @@
         "TC-D2-025-C002",
         "TC-D2-026-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-015-C001",
         "TC-D2-015-C002",
         "TC-D2-016-C001",
@@ -939,43 +789,8 @@
         "TC-D2-025-C002",
         "TC-D2-026-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-015-C001",
-        "TC-D2-015-C002",
-        "TC-D2-016-C001",
-        "TC-D2-016-C002",
-        "TC-D2-017-C001",
-        "TC-D2-017-C002",
-        "TC-D2-017-C003",
-        "TC-D2-018-C001",
-        "TC-D2-018-C002",
-        "TC-D2-018-C003",
-        "TC-D2-018-C004",
-        "TC-D2-018-C005",
-        "TC-D2-018-C006",
-        "TC-D2-018-C007",
-        "TC-D2-018-C008",
-        "TC-D2-019-C001",
-        "TC-D2-019-C002",
-        "TC-D2-019-C003",
-        "TC-D2-019-C004",
-        "TC-D2-020-C001",
-        "TC-D2-020-C002",
-        "TC-D2-021-C001",
-        "TC-D2-021-C002",
-        "TC-D2-022-C001",
-        "TC-D2-022-C002",
-        "TC-D2-023-C001",
-        "TC-D2-023-C002",
-        "TC-D2-024-C001",
-        "TC-D2-024-C002",
-        "TC-D2-025-C001",
-        "TC-D2-025-C002",
-        "TC-D2-026-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-013": {
       "description": "シーソー",
@@ -1000,23 +815,16 @@
         "TC-D2-030-C001",
         "TC-D2-035-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-027-C001",
         "TC-D2-028-C001",
         "TC-D2-029-C001",
         "TC-D2-030-C001",
         "TC-D2-035-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-027-C001",
-        "TC-D2-028-C001",
-        "TC-D2-029-C001",
-        "TC-D2-030-C001",
-        "TC-D2-035-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-014": {
       "description": "固定・自由配置の識別",
@@ -1038,22 +846,16 @@
         "TC-D6-047-C001",
         "TC-D6-047-C002"
       ],
-      "assessedCases": [
-        "TC-D6-045-C001",
-        "TC-D6-045-C002",
-        "TC-D6-047-C001",
-        "TC-D6-047-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-045-C002",
-        "TC-D6-047-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-045-C001",
         "TC-D6-047-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-045-C002",
+        "TC-D6-047-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-015": {
       "description": "新規配置",
@@ -1075,22 +877,16 @@
         "TC-D6-015-C002",
         "TC-D6-016-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-004-C001",
         "TC-D6-015-C001",
-        "TC-D6-015-C002",
         "TC-D6-016-C001"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-015-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-004-C001",
-        "TC-D6-015-C001",
-        "TC-D6-016-C001"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-016": {
       "description": "パーツ選択",
@@ -1111,17 +907,13 @@
         "TC-D6-020-C001",
         "TC-D6-021-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-020-C001",
         "TC-D6-021-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-020-C001",
-        "TC-D6-021-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-017": {
       "description": "ドラッグ・微調整",
@@ -1145,21 +937,15 @@
         "TC-D6-018-C001",
         "TC-D6-019-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-004-C001",
         "TC-D6-017-C001",
         "TC-D6-018-C001",
         "TC-D6-019-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-004-C001",
-        "TC-D6-017-C001",
-        "TC-D6-018-C001",
-        "TC-D6-019-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-018": {
       "description": "グリッド吸着",
@@ -1185,7 +971,8 @@
         "TC-D2-006-C004",
         "TC-D2-006-C005"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-005-C001",
         "TC-D1-005-C002",
         "TC-D1-005-C003",
@@ -1197,21 +984,8 @@
         "TC-D2-006-C004",
         "TC-D2-006-C005"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-005-C001",
-        "TC-D1-005-C002",
-        "TC-D1-005-C003",
-        "TC-D1-005-C004",
-        "TC-D1-005-C005",
-        "TC-D2-006-C001",
-        "TC-D2-006-C002",
-        "TC-D2-006-C003",
-        "TC-D2-006-C004",
-        "TC-D2-006-C005"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-019": {
       "description": "回転制限",
@@ -1285,7 +1059,8 @@
         "TC-D2-005-C004",
         "TC-D6-004-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-006-C001",
         "TC-D1-006-C002",
         "TC-D1-006-C003",
@@ -1340,64 +1115,8 @@
         "TC-D2-005-C004",
         "TC-D6-004-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-006-C001",
-        "TC-D1-006-C002",
-        "TC-D1-006-C003",
-        "TC-D1-006-C004",
-        "TC-D1-006-C005",
-        "TC-D1-006-C006",
-        "TC-D1-006-C007",
-        "TC-D1-006-C008",
-        "TC-D1-006-C009",
-        "TC-D1-006-C010",
-        "TC-D2-002-C001",
-        "TC-D2-002-C002",
-        "TC-D2-002-C003",
-        "TC-D2-002-C004",
-        "TC-D2-002-C005",
-        "TC-D2-002-C006",
-        "TC-D2-002-C007",
-        "TC-D2-002-C008",
-        "TC-D2-002-C009",
-        "TC-D2-002-C010",
-        "TC-D2-002-C011",
-        "TC-D2-002-C012",
-        "TC-D2-002-C013",
-        "TC-D2-002-C014",
-        "TC-D2-002-C015",
-        "TC-D2-002-C016",
-        "TC-D2-002-C017",
-        "TC-D2-002-C018",
-        "TC-D2-003-C001",
-        "TC-D2-003-C002",
-        "TC-D2-003-C003",
-        "TC-D2-003-C004",
-        "TC-D2-004-C001",
-        "TC-D2-004-C002",
-        "TC-D2-004-C003",
-        "TC-D2-004-C004",
-        "TC-D2-004-C005",
-        "TC-D2-004-C006",
-        "TC-D2-004-C007",
-        "TC-D2-004-C008",
-        "TC-D2-004-C009",
-        "TC-D2-004-C010",
-        "TC-D2-004-C011",
-        "TC-D2-004-C012",
-        "TC-D2-004-C013",
-        "TC-D2-004-C014",
-        "TC-D2-004-C015",
-        "TC-D2-004-C016",
-        "TC-D2-005-C001",
-        "TC-D2-005-C002",
-        "TC-D2-005-C003",
-        "TC-D2-005-C004",
-        "TC-D6-004-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-020": {
       "description": "削除・在庫復元",
@@ -1416,17 +1135,13 @@
         "TC-D2-038-C001",
         "TC-D6-004-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-038-C001",
         "TC-D6-004-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-038-C001",
-        "TC-D6-004-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-021": {
       "description": "共通配置合法性",
@@ -1473,7 +1188,8 @@
         "TC-D2-034-C002",
         "TC-D3-002-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-007-C001",
         "TC-D2-008-C001",
         "TC-D2-009-C001",
@@ -1489,25 +1205,8 @@
         "TC-D2-034-C002",
         "TC-D3-002-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-007-C001",
-        "TC-D2-008-C001",
-        "TC-D2-009-C001",
-        "TC-D2-010-C001",
-        "TC-D2-011-C001",
-        "TC-D2-012-C001",
-        "TC-D2-013-C001",
-        "TC-D2-014-C001",
-        "TC-D2-031-C001",
-        "TC-D2-032-C001",
-        "TC-D2-033-C001",
-        "TC-D2-034-C001",
-        "TC-D2-034-C002",
-        "TC-D3-002-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-022": {
       "description": "無効配置理由",
@@ -1528,20 +1227,15 @@
         "TC-D6-047-C001",
         "TC-D6-047-C002"
       ],
-      "assessedCases": [
-        "TC-D6-017-C001",
-        "TC-D6-047-C001",
-        "TC-D6-047-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-047-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-017-C001",
         "TC-D6-047-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-047-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-023": {
       "description": "Undo",
@@ -1562,19 +1256,14 @@
         "TC-D2-039-C001",
         "TC-D6-004-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-038-C001",
         "TC-D2-039-C001",
         "TC-D6-004-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-038-C001",
-        "TC-D2-039-C001",
-        "TC-D6-004-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-024": {
       "description": "確認付き配置リセット",
@@ -1597,21 +1286,15 @@
         "TC-D5-042-C001",
         "TC-D5-042-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-040-C001",
         "TC-D2-040-C002",
         "TC-D5-042-C001",
         "TC-D5-042-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-040-C001",
-        "TC-D2-040-C002",
-        "TC-D5-042-C001",
-        "TC-D5-042-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-025": {
       "description": "操作中断のロールバック",
@@ -1633,21 +1316,15 @@
         "TC-D6-012-C001",
         "TC-D6-022-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-037-C001",
         "TC-D2-037-C002",
         "TC-D6-012-C001",
         "TC-D6-022-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-037-C001",
-        "TC-D2-037-C002",
-        "TC-D6-012-C001",
-        "TC-D6-022-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-026": {
       "description": "実験開始",
@@ -1678,7 +1355,8 @@
         "TC-D6-005-C014",
         "TC-D6-005-C015"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-005-C001",
         "TC-D6-005-C002",
         "TC-D6-005-C003",
@@ -1695,26 +1373,8 @@
         "TC-D6-005-C014",
         "TC-D6-005-C015"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-005-C001",
-        "TC-D6-005-C002",
-        "TC-D6-005-C003",
-        "TC-D6-005-C004",
-        "TC-D6-005-C005",
-        "TC-D6-005-C006",
-        "TC-D6-005-C007",
-        "TC-D6-005-C008",
-        "TC-D6-005-C009",
-        "TC-D6-005-C010",
-        "TC-D6-005-C011",
-        "TC-D6-005-C012",
-        "TC-D6-005-C013",
-        "TC-D6-005-C014",
-        "TC-D6-005-C015"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-027": {
       "description": "毎回物理初期化",
@@ -1738,21 +1398,15 @@
         "TC-D1-032-C002",
         "TC-D2-035-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-007-C001",
         "TC-D1-032-C001",
         "TC-D1-032-C002",
         "TC-D2-035-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-007-C001",
-        "TC-D1-032-C001",
-        "TC-D1-032-C002",
-        "TC-D2-035-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-028": {
       "description": "物理演算",
@@ -1862,7 +1516,8 @@
         "TC-D1-018-C001",
         "TC-D1-019-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-009-C001",
         "TC-D1-010-C001",
         "TC-D1-011-C001",
@@ -1944,91 +1599,8 @@
         "TC-D1-018-C001",
         "TC-D1-019-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-009-C001",
-        "TC-D1-010-C001",
-        "TC-D1-011-C001",
-        "TC-D1-012-C001",
-        "TC-D1-013-C001",
-        "TC-D1-014-C001",
-        "TC-D1-014-C002",
-        "TC-D1-014-C003",
-        "TC-D1-014-C004",
-        "TC-D1-014-C005",
-        "TC-D1-014-C006",
-        "TC-D1-014-C007",
-        "TC-D1-014-C008",
-        "TC-D1-014-C009",
-        "TC-D1-014-C010",
-        "TC-D1-014-C011",
-        "TC-D1-014-C012",
-        "TC-D1-015-C001",
-        "TC-D1-015-C002",
-        "TC-D1-015-C003",
-        "TC-D1-015-C004",
-        "TC-D1-015-C005",
-        "TC-D1-015-C006",
-        "TC-D1-015-C007",
-        "TC-D1-015-C008",
-        "TC-D1-015-C009",
-        "TC-D1-015-C010",
-        "TC-D1-015-C011",
-        "TC-D1-015-C012",
-        "TC-D1-015-C013",
-        "TC-D1-015-C014",
-        "TC-D1-015-C015",
-        "TC-D1-015-C016",
-        "TC-D1-015-C017",
-        "TC-D1-015-C018",
-        "TC-D1-015-C019",
-        "TC-D1-015-C020",
-        "TC-D1-015-C021",
-        "TC-D1-015-C022",
-        "TC-D1-015-C023",
-        "TC-D1-015-C024",
-        "TC-D1-016-C001",
-        "TC-D1-017-C001",
-        "TC-D1-017-C002",
-        "TC-D1-017-C003",
-        "TC-D1-017-C004",
-        "TC-D1-017-C005",
-        "TC-D1-017-C006",
-        "TC-D1-017-C007",
-        "TC-D1-017-C008",
-        "TC-D1-017-C009",
-        "TC-D1-017-C010",
-        "TC-D1-017-C011",
-        "TC-D1-017-C012",
-        "TC-D1-017-C013",
-        "TC-D1-017-C014",
-        "TC-D1-017-C015",
-        "TC-D1-017-C016",
-        "TC-D1-017-C017",
-        "TC-D1-017-C018",
-        "TC-D1-017-C019",
-        "TC-D1-017-C020",
-        "TC-D1-017-C021",
-        "TC-D1-017-C022",
-        "TC-D1-017-C023",
-        "TC-D1-017-C024",
-        "TC-D1-017-C025",
-        "TC-D1-017-C026",
-        "TC-D1-017-C027",
-        "TC-D1-017-C028",
-        "TC-D1-017-C029",
-        "TC-D1-017-C030",
-        "TC-D1-017-C031",
-        "TC-D1-017-C032",
-        "TC-D1-017-C033",
-        "TC-D1-017-C034",
-        "TC-D1-017-C035",
-        "TC-D1-017-C036",
-        "TC-D1-018-C001",
-        "TC-D1-019-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-029": {
       "description": "実験中・停止中編集禁止",
@@ -2062,7 +1634,8 @@
         "TC-D6-005-C015",
         "TC-D6-006-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-005-C001",
         "TC-D6-005-C002",
         "TC-D6-005-C003",
@@ -2080,27 +1653,8 @@
         "TC-D6-005-C015",
         "TC-D6-006-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-005-C001",
-        "TC-D6-005-C002",
-        "TC-D6-005-C003",
-        "TC-D6-005-C004",
-        "TC-D6-005-C005",
-        "TC-D6-005-C006",
-        "TC-D6-005-C007",
-        "TC-D6-005-C008",
-        "TC-D6-005-C009",
-        "TC-D6-005-C010",
-        "TC-D6-005-C011",
-        "TC-D6-005-C012",
-        "TC-D6-005-C013",
-        "TC-D6-005-C014",
-        "TC-D6-005-C015",
-        "TC-D6-006-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-030": {
       "description": "実験時間管理",
@@ -2118,17 +1672,13 @@
         "TC-D1-020-C001",
         "TC-D1-020-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-020-C001",
         "TC-D1-020-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-020-C001",
-        "TC-D1-020-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-031": {
       "description": "一時停止",
@@ -2145,15 +1695,12 @@
       "mappedCaseIds": [
         "TC-D6-006-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-006-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-006-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-032": {
       "description": "明示再開",
@@ -2173,19 +1720,14 @@
         "TC-D1-023-C002",
         "TC-D6-006-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-023-C001",
         "TC-D1-023-C002",
         "TC-D6-006-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-023-C001",
-        "TC-D1-023-C002",
-        "TC-D6-006-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-033": {
       "description": "実験中止",
@@ -2204,17 +1746,13 @@
         "TC-D3-021-C001",
         "TC-D7-006-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-021-C001",
         "TC-D7-006-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-021-C001",
-        "TC-D7-006-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-034": {
       "description": "背景自動停止",
@@ -2236,22 +1774,16 @@
         "TC-D5-034-C001",
         "TC-D5-034-C002"
       ],
-      "assessedCases": [
-        "TC-D1-023-C001",
-        "TC-D1-023-C002",
-        "TC-D5-034-C001",
-        "TC-D5-034-C002"
-      ],
-      "phase6Cases": [
-        "TC-D5-034-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-023-C001",
         "TC-D1-023-C002",
         "TC-D5-034-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D5-034-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-035": {
       "description": "異常検出・安全停止",
@@ -2271,19 +1803,14 @@
         "TC-D1-028-C002",
         "TC-D1-029-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-028-C001",
         "TC-D1-028-C002",
         "TC-D1-029-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-028-C001",
-        "TC-D1-028-C002",
-        "TC-D1-029-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-036": {
       "description": "終端判定",
@@ -2311,7 +1838,8 @@
         "TC-D3-021-C001",
         "TC-D3-022-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-018-C001",
         "TC-D3-018-C002",
         "TC-D3-019-C001",
@@ -2320,18 +1848,8 @@
         "TC-D3-021-C001",
         "TC-D3-022-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-018-C001",
-        "TC-D3-018-C002",
-        "TC-D3-019-C001",
-        "TC-D3-019-C002",
-        "TC-D3-020-C001",
-        "TC-D3-021-C001",
-        "TC-D3-022-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-037": {
       "description": "円全体のゴール収容",
@@ -2363,7 +1881,8 @@
         "TC-D3-005-C008",
         "TC-D7-005-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-001-C001",
         "TC-D3-001-C002",
         "TC-D3-003-C001",
@@ -2378,24 +1897,8 @@
         "TC-D3-005-C008",
         "TC-D7-005-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-001-C001",
-        "TC-D3-001-C002",
-        "TC-D3-003-C001",
-        "TC-D3-004-C001",
-        "TC-D3-005-C001",
-        "TC-D3-005-C002",
-        "TC-D3-005-C003",
-        "TC-D3-005-C004",
-        "TC-D3-005-C005",
-        "TC-D3-005-C006",
-        "TC-D3-005-C007",
-        "TC-D3-005-C008",
-        "TC-D7-005-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-038": {
       "description": "速度・安定時間",
@@ -2425,7 +1928,8 @@
         "TC-D3-012-C001",
         "TC-D7-005-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-006-C001",
         "TC-D3-006-C002",
         "TC-D3-006-C003",
@@ -2436,20 +1940,8 @@
         "TC-D3-012-C001",
         "TC-D7-005-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-006-C001",
-        "TC-D3-006-C002",
-        "TC-D3-006-C003",
-        "TC-D3-007-C001",
-        "TC-D3-007-C002",
-        "TC-D3-008-C001",
-        "TC-D3-009-C001",
-        "TC-D3-012-C001",
-        "TC-D7-005-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-039": {
       "description": "安定逸脱でリセット",
@@ -2469,21 +1961,15 @@
         "TC-D3-011-C001",
         "TC-D3-011-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-010-C001",
         "TC-D3-010-C002",
         "TC-D3-011-C001",
         "TC-D3-011-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-010-C001",
-        "TC-D3-010-C002",
-        "TC-D3-011-C001",
-        "TC-D3-011-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-040": {
       "description": "必須使用判定",
@@ -2546,7 +2032,8 @@
         "TC-D7-004-C006",
         "TC-D7-004-C007"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-023-C001",
         "TC-D3-023-C002",
         "TC-D3-024-C001",
@@ -2583,46 +2070,8 @@
         "TC-D7-004-C006",
         "TC-D7-004-C007"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-023-C001",
-        "TC-D3-023-C002",
-        "TC-D3-024-C001",
-        "TC-D3-025-C001",
-        "TC-D3-026-C001",
-        "TC-D3-026-C002",
-        "TC-D3-027-C001",
-        "TC-D3-027-C002",
-        "TC-D3-027-C003",
-        "TC-D3-027-C004",
-        "TC-D3-027-C005",
-        "TC-D3-027-C006",
-        "TC-D3-027-C007",
-        "TC-D3-027-C008",
-        "TC-D3-028-C001",
-        "TC-D3-028-C002",
-        "TC-D3-028-C003",
-        "TC-D3-028-C004",
-        "TC-D3-028-C005",
-        "TC-D3-028-C006",
-        "TC-D3-029-C001",
-        "TC-D3-029-C002",
-        "TC-D3-030-C001",
-        "TC-D3-030-C002",
-        "TC-D3-031-C001",
-        "TC-D3-031-C002",
-        "TC-D3-032-C001",
-        "TC-D3-032-C002",
-        "TC-D7-004-C001",
-        "TC-D7-004-C002",
-        "TC-D7-004-C003",
-        "TC-D7-004-C004",
-        "TC-D7-004-C005",
-        "TC-D7-004-C006",
-        "TC-D7-004-C007"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-041": {
       "description": "応用自由攻略",
@@ -2656,7 +2105,8 @@
         "TC-D4-013-C006",
         "TC-D4-013-C007"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-009-C001",
         "TC-D4-009-C002",
         "TC-D4-009-C003",
@@ -2675,28 +2125,8 @@
         "TC-D4-013-C006",
         "TC-D4-013-C007"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-009-C001",
-        "TC-D4-009-C002",
-        "TC-D4-009-C003",
-        "TC-D4-009-C004",
-        "TC-D4-009-C005",
-        "TC-D4-009-C006",
-        "TC-D4-009-C007",
-        "TC-D4-009-C008",
-        "TC-D4-009-C009",
-        "TC-D4-009-C010",
-        "TC-D4-013-C001",
-        "TC-D4-013-C002",
-        "TC-D4-013-C003",
-        "TC-D4-013-C004",
-        "TC-D4-013-C005",
-        "TC-D4-013-C006",
-        "TC-D4-013-C007"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-042": {
       "description": "場外失敗",
@@ -2733,7 +2163,8 @@
         "TC-D3-015-C008",
         "TC-D3-015-C009"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-013-C001",
         "TC-D3-013-C002",
         "TC-D3-013-C003",
@@ -2755,31 +2186,8 @@
         "TC-D3-015-C008",
         "TC-D3-015-C009"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-013-C001",
-        "TC-D3-013-C002",
-        "TC-D3-013-C003",
-        "TC-D3-013-C004",
-        "TC-D3-013-C005",
-        "TC-D3-014-C001",
-        "TC-D3-014-C002",
-        "TC-D3-014-C003",
-        "TC-D3-014-C004",
-        "TC-D3-014-C005",
-        "TC-D3-014-C006",
-        "TC-D3-015-C001",
-        "TC-D3-015-C002",
-        "TC-D3-015-C003",
-        "TC-D3-015-C004",
-        "TC-D3-015-C005",
-        "TC-D3-015-C006",
-        "TC-D3-015-C007",
-        "TC-D3-015-C008",
-        "TC-D3-015-C009"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-043": {
       "description": "実験上限",
@@ -2803,23 +2211,16 @@
         "TC-D3-018-C002",
         "TC-D4-017-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-016-C001",
         "TC-D3-017-C001",
         "TC-D3-018-C001",
         "TC-D3-018-C002",
         "TC-D4-017-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-016-C001",
-        "TC-D3-017-C001",
-        "TC-D3-018-C001",
-        "TC-D3-018-C002",
-        "TC-D4-017-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-044": {
       "description": "終了理由表示",
@@ -2836,15 +2237,12 @@
       "mappedCaseIds": [
         "TC-D6-007-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-007-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-007-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-045": {
       "description": "軌跡記録",
@@ -2860,15 +2258,12 @@
       "mappedCaseIds": [
         "TC-D3-041-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-041-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-041-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-046": {
       "description": "正常終了軌跡確定",
@@ -2884,15 +2279,12 @@
       "mappedCaseIds": [
         "TC-D3-044-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-044-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-044-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-047": {
       "description": "結果・設計で軌跡表示",
@@ -2911,20 +2303,15 @@
         "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-046-C001",
-        "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-046-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-046-C001",
-        "TC-D6-046-C003"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-048": {
       "description": "軌跡切替",
@@ -2943,20 +2330,15 @@
         "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-046-C001",
-        "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-046-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-046-C001",
-        "TC-D6-046-C003"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-049": {
       "description": "過去軌跡の識別",
@@ -2975,20 +2357,15 @@
         "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-046-C001",
-        "TC-D6-046-C002",
         "TC-D6-046-C003"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-046-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-046-C001",
-        "TC-D6-046-C003"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-050": {
       "description": "軌跡消去条件",
@@ -3004,15 +2381,12 @@
       "mappedCaseIds": [
         "TC-D3-045-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-045-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-045-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-051": {
       "description": "ヒント1発想",
@@ -3063,7 +2437,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-046-C001",
         "TC-D3-046-C002",
         "TC-D4-023-C001",
@@ -3098,44 +2473,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-046-C001",
-        "TC-D3-046-C002",
-        "TC-D4-023-C001",
-        "TC-D4-023-C002",
-        "TC-D4-023-C003",
-        "TC-D4-023-C004",
-        "TC-D4-023-C005",
-        "TC-D4-023-C006",
-        "TC-D4-023-C007",
-        "TC-D4-023-C008",
-        "TC-D4-023-C009",
-        "TC-D4-023-C010",
-        "TC-D4-023-C011",
-        "TC-D4-023-C012",
-        "TC-D4-023-C013",
-        "TC-D4-023-C014",
-        "TC-D4-023-C015",
-        "TC-D4-023-C016",
-        "TC-D4-023-C017",
-        "TC-D4-023-C018",
-        "TC-D4-023-C019",
-        "TC-D4-023-C020",
-        "TC-D4-023-C021",
-        "TC-D4-023-C022",
-        "TC-D4-023-C023",
-        "TC-D4-023-C024",
-        "TC-D4-023-C025",
-        "TC-D4-023-C026",
-        "TC-D4-023-C027",
-        "TC-D4-023-C028",
-        "TC-D4-023-C029",
-        "TC-D4-023-C030",
-        "TC-D6-011-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-052": {
       "description": "ヒント2組合せ",
@@ -3186,7 +2525,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-046-C001",
         "TC-D3-046-C002",
         "TC-D4-023-C001",
@@ -3221,44 +2561,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-046-C001",
-        "TC-D3-046-C002",
-        "TC-D4-023-C001",
-        "TC-D4-023-C002",
-        "TC-D4-023-C003",
-        "TC-D4-023-C004",
-        "TC-D4-023-C005",
-        "TC-D4-023-C006",
-        "TC-D4-023-C007",
-        "TC-D4-023-C008",
-        "TC-D4-023-C009",
-        "TC-D4-023-C010",
-        "TC-D4-023-C011",
-        "TC-D4-023-C012",
-        "TC-D4-023-C013",
-        "TC-D4-023-C014",
-        "TC-D4-023-C015",
-        "TC-D4-023-C016",
-        "TC-D4-023-C017",
-        "TC-D4-023-C018",
-        "TC-D4-023-C019",
-        "TC-D4-023-C020",
-        "TC-D4-023-C021",
-        "TC-D4-023-C022",
-        "TC-D4-023-C023",
-        "TC-D4-023-C024",
-        "TC-D4-023-C025",
-        "TC-D4-023-C026",
-        "TC-D4-023-C027",
-        "TC-D4-023-C028",
-        "TC-D4-023-C029",
-        "TC-D4-023-C030",
-        "TC-D6-011-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-053": {
       "description": "ヒント3配置例",
@@ -3313,7 +2617,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-047-C001",
         "TC-D3-048-C001",
         "TC-D3-048-C002",
@@ -3349,45 +2654,8 @@
         "TC-D4-023-C030",
         "TC-D6-011-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-047-C001",
-        "TC-D3-048-C001",
-        "TC-D3-048-C002",
-        "TC-D4-023-C001",
-        "TC-D4-023-C002",
-        "TC-D4-023-C003",
-        "TC-D4-023-C004",
-        "TC-D4-023-C005",
-        "TC-D4-023-C006",
-        "TC-D4-023-C007",
-        "TC-D4-023-C008",
-        "TC-D4-023-C009",
-        "TC-D4-023-C010",
-        "TC-D4-023-C011",
-        "TC-D4-023-C012",
-        "TC-D4-023-C013",
-        "TC-D4-023-C014",
-        "TC-D4-023-C015",
-        "TC-D4-023-C016",
-        "TC-D4-023-C017",
-        "TC-D4-023-C018",
-        "TC-D4-023-C019",
-        "TC-D4-023-C020",
-        "TC-D4-023-C021",
-        "TC-D4-023-C022",
-        "TC-D4-023-C023",
-        "TC-D4-023-C024",
-        "TC-D4-023-C025",
-        "TC-D4-023-C026",
-        "TC-D4-023-C027",
-        "TC-D4-023-C028",
-        "TC-D4-023-C029",
-        "TC-D4-023-C030",
-        "TC-D6-011-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-054": {
       "description": "ヒント任意利用",
@@ -3406,19 +2674,14 @@
         "TC-D3-046-C002",
         "TC-D6-011-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-046-C001",
         "TC-D3-046-C002",
         "TC-D6-011-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-046-C001",
-        "TC-D3-046-C002",
-        "TC-D6-011-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-055": {
       "description": "ヒント減点なし",
@@ -3437,21 +2700,15 @@
         "TC-D3-036-C003",
         "TC-D3-036-C004"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-036-C001",
         "TC-D3-036-C002",
         "TC-D3-036-C003",
         "TC-D3-036-C004"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-036-C001",
-        "TC-D3-036-C002",
-        "TC-D3-036-C003",
-        "TC-D3-036-C004"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-056": {
       "description": "ヒントが編集を変更しない",
@@ -3469,15 +2726,12 @@
       "mappedCaseIds": [
         "TC-D3-047-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-047-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-047-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-057": {
       "description": "星評価",
@@ -3508,7 +2762,8 @@
         "TC-D4-005-C002",
         "TC-D6-008-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-033-C001",
         "TC-D3-033-C002",
         "TC-D3-033-C003",
@@ -3522,23 +2777,8 @@
         "TC-D4-005-C002",
         "TC-D6-008-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-033-C001",
-        "TC-D3-033-C002",
-        "TC-D3-033-C003",
-        "TC-D3-033-C004",
-        "TC-D3-034-C001",
-        "TC-D3-034-C002",
-        "TC-D3-035-C001",
-        "TC-D3-035-C002",
-        "TC-D3-035-C003",
-        "TC-D4-005-C001",
-        "TC-D4-005-C002",
-        "TC-D6-008-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-058": {
       "description": "実験開始時使用数",
@@ -3573,7 +2813,8 @@
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-033-C001",
         "TC-D3-033-C002",
         "TC-D3-033-C003",
@@ -3590,26 +2831,8 @@
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-033-C001",
-        "TC-D3-033-C002",
-        "TC-D3-033-C003",
-        "TC-D3-033-C004",
-        "TC-D3-034-C001",
-        "TC-D3-034-C002",
-        "TC-D3-035-C001",
-        "TC-D3-035-C002",
-        "TC-D3-035-C003",
-        "TC-D3-036-C001",
-        "TC-D3-036-C002",
-        "TC-D3-036-C003",
-        "TC-D3-036-C004",
-        "TC-D3-037-C001",
-        "TC-D3-037-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-059": {
       "description": "自己ベスト保持",
@@ -3644,7 +2867,8 @@
         "TC-D5-037-C010",
         "TC-D6-008-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-037-C001",
         "TC-D3-037-C002",
         "TC-D3-038-C001",
@@ -3660,25 +2884,8 @@
         "TC-D5-037-C010",
         "TC-D6-008-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-037-C001",
-        "TC-D3-037-C002",
-        "TC-D3-038-C001",
-        "TC-D5-037-C001",
-        "TC-D5-037-C002",
-        "TC-D5-037-C003",
-        "TC-D5-037-C004",
-        "TC-D5-037-C005",
-        "TC-D5-037-C006",
-        "TC-D5-037-C007",
-        "TC-D5-037-C008",
-        "TC-D5-037-C009",
-        "TC-D5-037-C010",
-        "TC-D6-008-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-060": {
       "description": "少数使用でベスト更新",
@@ -3695,17 +2902,13 @@
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-037-C001",
-        "TC-D3-037-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-061": {
       "description": "確認付きベスト呼出",
@@ -3729,21 +2932,15 @@
         "TC-D5-005-C001",
         "TC-D5-005-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-040-C001",
         "TC-D2-040-C002",
         "TC-D5-005-C001",
         "TC-D5-005-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-040-C001",
-        "TC-D2-040-C002",
-        "TC-D5-005-C001",
-        "TC-D5-005-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-062": {
       "description": "総獲得スター",
@@ -3765,21 +2962,15 @@
         "TC-D5-041-C001",
         "TC-D6-009-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-040-C001",
         "TC-D3-040-C002",
         "TC-D5-041-C001",
         "TC-D6-009-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-040-C001",
-        "TC-D3-040-C002",
-        "TC-D5-041-C001",
-        "TC-D6-009-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-063": {
       "description": "確定編集自動保存",
@@ -3806,7 +2997,8 @@
         "TC-D5-006-C001",
         "TC-D5-007-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-003-C001",
         "TC-D5-003-C002",
         "TC-D5-004-C001",
@@ -3816,19 +3008,8 @@
         "TC-D5-006-C001",
         "TC-D5-007-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-003-C001",
-        "TC-D5-003-C002",
-        "TC-D5-004-C001",
-        "TC-D5-004-C002",
-        "TC-D5-005-C001",
-        "TC-D5-005-C002",
-        "TC-D5-006-C001",
-        "TC-D5-007-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-064": {
       "description": "編集配置復元",
@@ -3846,15 +3027,12 @@
       "mappedCaseIds": [
         "TC-D5-010-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-010-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-010-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-065": {
       "description": "進捗保存",
@@ -3872,15 +3050,12 @@
       "mappedCaseIds": [
         "TC-D5-008-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-008-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-008-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-066": {
       "description": "ベスト独立保存",
@@ -3904,23 +3079,16 @@
         "TC-D5-042-C001",
         "TC-D5-042-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-005-C001",
         "TC-D5-005-C002",
         "TC-D5-008-C001",
         "TC-D5-042-C001",
         "TC-D5-042-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-005-C001",
-        "TC-D5-005-C002",
-        "TC-D5-008-C001",
-        "TC-D5-042-C001",
-        "TC-D5-042-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-067": {
       "description": "保存異常対応",
@@ -3965,7 +3133,8 @@
         "TC-D7-008-C006",
         "TC-D7-008-C007"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-022-C001",
         "TC-D5-022-C002",
         "TC-D5-023-C001",
@@ -3991,35 +3160,8 @@
         "TC-D7-008-C006",
         "TC-D7-008-C007"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-022-C001",
-        "TC-D5-022-C002",
-        "TC-D5-023-C001",
-        "TC-D5-023-C002",
-        "TC-D5-044-C001",
-        "TC-D5-044-C002",
-        "TC-D5-044-C003",
-        "TC-D5-044-C004",
-        "TC-D5-044-C005",
-        "TC-D5-044-C006",
-        "TC-D5-044-C007",
-        "TC-D5-044-C008",
-        "TC-D5-044-C009",
-        "TC-D5-044-C010",
-        "TC-D5-044-C011",
-        "TC-D5-044-C012",
-        "TC-D6-008-C001",
-        "TC-D7-008-C001",
-        "TC-D7-008-C002",
-        "TC-D7-008-C003",
-        "TC-D7-008-C004",
-        "TC-D7-008-C005",
-        "TC-D7-008-C006",
-        "TC-D7-008-C007"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-068": {
       "description": "保存データ妥当性・個別復旧",
@@ -4080,7 +3222,8 @@
         "TC-D5-023-C002",
         "TC-D5-024-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-012-C001",
         "TC-D5-012-C002",
         "TC-D5-013-C001",
@@ -4110,39 +3253,8 @@
         "TC-D5-023-C002",
         "TC-D5-024-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-012-C001",
-        "TC-D5-012-C002",
-        "TC-D5-013-C001",
-        "TC-D5-013-C002",
-        "TC-D5-013-C003",
-        "TC-D5-013-C004",
-        "TC-D5-013-C005",
-        "TC-D5-014-C001",
-        "TC-D5-015-C001",
-        "TC-D5-015-C002",
-        "TC-D5-016-C001",
-        "TC-D5-016-C002",
-        "TC-D5-016-C003",
-        "TC-D5-016-C004",
-        "TC-D5-016-C005",
-        "TC-D5-016-C006",
-        "TC-D5-016-C007",
-        "TC-D5-016-C008",
-        "TC-D5-017-C001",
-        "TC-D5-018-C001",
-        "TC-D5-019-C001",
-        "TC-D5-020-C001",
-        "TC-D5-021-C001",
-        "TC-D5-022-C001",
-        "TC-D5-022-C002",
-        "TC-D5-023-C001",
-        "TC-D5-023-C002",
-        "TC-D5-024-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-069": {
       "description": "確認付き専用データ初期化",
@@ -4160,17 +3272,13 @@
         "TC-D5-043-C001",
         "TC-D6-010-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-043-C001",
         "TC-D6-010-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-043-C001",
-        "TC-D6-010-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-070": {
       "description": "音声設定保存",
@@ -4190,17 +3298,13 @@
         "TC-D5-011-C001",
         "TC-D6-010-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-011-C001",
         "TC-D6-010-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-011-C001",
-        "TC-D6-010-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-071": {
       "description": "オリジナル2キャラ",
@@ -4217,18 +3321,14 @@
         "TC-D6-027-C001",
         "TC-D6-027-C002"
       ],
-      "assessedCases": [
-        "TC-D6-027-C001",
-        "TC-D6-027-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-027-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-027-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-027-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-072": {
       "description": "6表情",
@@ -4252,26 +3352,18 @@
         "TC-D6-031-C001",
         "TC-D6-031-C002"
       ],
-      "assessedCases": [
-        "TC-D6-028-C001",
-        "TC-D6-028-C002",
-        "TC-D6-029-C001",
-        "TC-D6-030-C001",
-        "TC-D6-031-C001",
-        "TC-D6-031-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-028-C002",
-        "TC-D6-031-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-028-C001",
         "TC-D6-029-C001",
         "TC-D6-030-C001",
         "TC-D6-031-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-028-C002",
+        "TC-D6-031-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-073": {
       "description": "待機演出",
@@ -4288,17 +3380,13 @@
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-034-C001",
-        "TC-D6-034-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-074": {
       "description": "8効果音",
@@ -4330,9 +3418,9 @@
         "TC-D6-040-C001",
         "TC-D6-040-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-035-C001",
-        "TC-D6-035-C002",
         "TC-D6-036-C001",
         "TC-D6-036-C002",
         "TC-D6-037-C001",
@@ -4344,24 +3432,10 @@
         "TC-D6-040-C001",
         "TC-D6-040-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-035-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-035-C001",
-        "TC-D6-036-C001",
-        "TC-D6-036-C002",
-        "TC-D6-037-C001",
-        "TC-D6-037-C002",
-        "TC-D6-038-C001",
-        "TC-D6-038-C002",
-        "TC-D6-039-C001",
-        "TC-D6-039-C002",
-        "TC-D6-040-C001",
-        "TC-D6-040-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-075": {
       "description": "BGM",
@@ -4379,17 +3453,13 @@
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-034-C001",
-        "TC-D6-034-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-076": {
       "description": "ミュート",
@@ -4408,20 +3478,15 @@
         "TC-D6-042-C001",
         "TC-D6-042-C002"
       ],
-      "assessedCases": [
-        "TC-D6-010-C001",
-        "TC-D6-042-C001",
-        "TC-D6-042-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-042-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-010-C001",
         "TC-D6-042-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-042-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-077": {
       "description": "物理形状に沿う描画",
@@ -4453,27 +3518,8 @@
         "TC-D6-045-C001",
         "TC-D6-045-C002"
       ],
-      "assessedCases": [
-        "TC-D1-003-C001",
-        "TC-D1-004-C001",
-        "TC-D1-006-C001",
-        "TC-D1-006-C002",
-        "TC-D1-006-C003",
-        "TC-D1-006-C004",
-        "TC-D1-006-C005",
-        "TC-D1-006-C006",
-        "TC-D1-006-C007",
-        "TC-D1-006-C008",
-        "TC-D1-006-C009",
-        "TC-D1-006-C010",
-        "TC-D6-045-C001",
-        "TC-D6-045-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-045-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-003-C001",
         "TC-D1-004-C001",
         "TC-D1-006-C001",
@@ -4488,7 +3534,10 @@
         "TC-D1-006-C010",
         "TC-D6-045-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-045-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-078": {
       "description": "演出と物理非干渉",
@@ -4534,7 +3583,8 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-032-C001",
         "TC-D6-033-C001",
         "TC-D6-033-C002",
@@ -4561,37 +3611,8 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D6-044-C003",
-        "TC-D6-044-C004",
-        "TC-D6-044-C005",
-        "TC-D6-044-C006",
-        "TC-D6-044-C007",
-        "TC-D6-044-C008",
-        "TC-D6-044-C009",
-        "TC-D6-044-C010",
-        "TC-D6-044-C011",
-        "TC-D6-044-C012",
-        "TC-D6-044-C013",
-        "TC-D6-044-C014",
-        "TC-D6-044-C015",
-        "TC-D6-044-C016",
-        "TC-D6-044-C017",
-        "TC-D6-044-C018",
-        "TC-D6-044-C019",
-        "TC-D6-044-C020",
-        "TC-D6-044-C021",
-        "TC-D6-044-C022"
-      ],
-      "e8Open": [
-        "TC-D6-032-C001",
-        "TC-D6-033-C001",
-        "TC-D6-033-C002",
-        "TC-D6-044-C001",
-        "TC-D6-044-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-079": {
       "description": "ST02回転済み坂道の使用",
@@ -4608,17 +3629,13 @@
         "TC-D3-026-C001",
         "TC-D3-026-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-026-C001",
         "TC-D3-026-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-026-C001",
-        "TC-D3-026-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-080": {
       "description": "バネ再接触・同時作動",
@@ -4673,7 +3690,8 @@
         "TC-D7-002-C001",
         "TC-D7-002-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-025-C001",
         "TC-D1-025-C002",
         "TC-D1-026-C001",
@@ -4701,37 +3719,8 @@
         "TC-D7-002-C001",
         "TC-D7-002-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-025-C001",
-        "TC-D1-025-C002",
-        "TC-D1-026-C001",
-        "TC-D1-026-C002",
-        "TC-D1-027-C001",
-        "TC-D2-020-C001",
-        "TC-D2-020-C002",
-        "TC-D2-021-C001",
-        "TC-D2-021-C002",
-        "TC-D2-022-C001",
-        "TC-D2-022-C002",
-        "TC-D2-023-C001",
-        "TC-D2-023-C002",
-        "TC-D2-024-C001",
-        "TC-D2-024-C002",
-        "TC-D2-025-C001",
-        "TC-D2-025-C002",
-        "TC-D2-026-C001",
-        "TC-D7-001-C001",
-        "TC-D7-001-C002",
-        "TC-D7-001-C003",
-        "TC-D7-001-C004",
-        "TC-D7-001-C005",
-        "TC-D7-001-C006",
-        "TC-D7-002-C001",
-        "TC-D7-002-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-081": {
       "description": "シーソー全可動領域",
@@ -4757,23 +3746,16 @@
         "TC-D2-034-C001",
         "TC-D2-034-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-031-C001",
         "TC-D2-032-C001",
         "TC-D2-033-C001",
         "TC-D2-034-C001",
         "TC-D2-034-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-031-C001",
-        "TC-D2-032-C001",
-        "TC-D2-033-C001",
-        "TC-D2-034-C001",
-        "TC-D2-034-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-082": {
       "description": "画面回転後明示再開",
@@ -4791,18 +3773,14 @@
         "TC-D6-024-C001",
         "TC-D6-024-C002"
       ],
-      "assessedCases": [
-        "TC-D6-024-C001",
-        "TC-D6-024-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-024-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-024-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-024-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-083": {
       "description": "ベスト読込確認・Undo",
@@ -4821,17 +3799,13 @@
         "TC-D2-040-C001",
         "TC-D2-040-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-040-C001",
         "TC-D2-040-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-040-C001",
-        "TC-D2-040-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-084": {
       "description": "軌跡始点・終点",
@@ -4853,23 +3827,16 @@
         "TC-D3-043-C002",
         "TC-D3-043-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-041-C001",
         "TC-D3-042-C001",
         "TC-D3-043-C001",
         "TC-D3-043-C002",
         "TC-D3-043-C003"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-041-C001",
-        "TC-D3-042-C001",
-        "TC-D3-043-C001",
-        "TC-D3-043-C002",
-        "TC-D3-043-C003"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-085": {
       "description": "必須条件状態通知",
@@ -4904,7 +3871,8 @@
         "TC-D6-005-C015",
         "TC-D6-007-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-005-C001",
         "TC-D6-005-C002",
         "TC-D6-005-C003",
@@ -4922,27 +3890,8 @@
         "TC-D6-005-C015",
         "TC-D6-007-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-005-C001",
-        "TC-D6-005-C002",
-        "TC-D6-005-C003",
-        "TC-D6-005-C004",
-        "TC-D6-005-C005",
-        "TC-D6-005-C006",
-        "TC-D6-005-C007",
-        "TC-D6-005-C008",
-        "TC-D6-005-C009",
-        "TC-D6-005-C010",
-        "TC-D6-005-C011",
-        "TC-D6-005-C012",
-        "TC-D6-005-C013",
-        "TC-D6-005-C014",
-        "TC-D6-005-C015",
-        "TC-D6-007-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-086": {
       "description": "保存競合防止",
@@ -4994,9 +3943,9 @@
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-025-C001",
-        "TC-D5-025-C002",
         "TC-D5-026-C001",
         "TC-D5-027-C001",
         "TC-D5-028-C001",
@@ -5009,37 +3958,16 @@
         "TC-D5-032-C003",
         "TC-D5-033-C001",
         "TC-D5-034-C001",
-        "TC-D5-034-C002",
         "TC-D5-035-C001",
-        "TC-D5-035-C002",
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D5-025-C002",
         "TC-D5-034-C002",
         "TC-D5-035-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-025-C001",
-        "TC-D5-026-C001",
-        "TC-D5-027-C001",
-        "TC-D5-028-C001",
-        "TC-D5-029-C001",
-        "TC-D5-030-C001",
-        "TC-D5-030-C002",
-        "TC-D5-031-C001",
-        "TC-D5-032-C001",
-        "TC-D5-032-C002",
-        "TC-D5-032-C003",
-        "TC-D5-033-C001",
-        "TC-D5-034-C001",
-        "TC-D5-035-C001",
-        "TC-D5-036-C001",
-        "TC-D5-036-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "FR-087": {
       "description": "終端重複更新禁止",
@@ -5056,15 +3984,12 @@
       "mappedCaseIds": [
         "TC-D3-022-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-022-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-022-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "FR-088": {
       "description": "非互換配置の無条件復元禁止",
@@ -5082,17 +4007,13 @@
         "TC-D3-038-C001",
         "TC-D5-039-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-038-C001",
         "TC-D5-039-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-038-C001",
-        "TC-D5-039-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-001": {
       "description": "固定タイムステップ",
@@ -5110,17 +4031,13 @@
         "TC-D1-020-C001",
         "TC-D1-020-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-020-C001",
         "TC-D1-020-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-020-C001",
-        "TC-D1-020-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-002": {
       "description": "描画と物理分離",
@@ -5141,19 +4058,14 @@
         "TC-D1-021-C002",
         "TC-D1-022-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-021-C001",
         "TC-D1-021-C002",
         "TC-D1-022-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-021-C001",
-        "TC-D1-021-C002",
-        "TC-D1-022-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-003": {
       "description": "再現性",
@@ -5239,7 +4151,8 @@
         "TC-D7-002-C001",
         "TC-D7-002-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-008-C001",
         "TC-D1-008-C002",
         "TC-D1-030-C001",
@@ -5253,60 +4166,10 @@
         "TC-D4-012-C008",
         "TC-D4-012-C009",
         "TC-D4-012-C010",
-        "TC-D4-018-C001",
-        "TC-D4-018-C002",
-        "TC-D4-018-C003",
-        "TC-D4-018-C004",
-        "TC-D4-018-C005",
-        "TC-D4-018-C006",
-        "TC-D4-018-C007",
-        "TC-D4-018-C008",
-        "TC-D4-018-C009",
-        "TC-D4-018-C010",
-        "TC-D4-018-C011",
-        "TC-D4-018-C012",
-        "TC-D4-018-C013",
-        "TC-D4-018-C014",
-        "TC-D4-018-C015",
-        "TC-D4-018-C016",
-        "TC-D4-018-C017",
-        "TC-D4-018-C018",
-        "TC-D4-018-C019",
-        "TC-D4-018-C020",
-        "TC-D4-018-C021",
-        "TC-D4-018-C022",
-        "TC-D4-018-C023",
-        "TC-D4-018-C024",
-        "TC-D4-018-C025",
-        "TC-D4-018-C026",
-        "TC-D4-018-C027",
-        "TC-D4-018-C028",
-        "TC-D4-018-C029",
-        "TC-D4-018-C030",
-        "TC-D4-018-C031",
-        "TC-D4-018-C032",
-        "TC-D4-018-C033",
-        "TC-D4-018-C034",
-        "TC-D4-018-C035",
-        "TC-D4-018-C036",
-        "TC-D4-018-C037",
-        "TC-D4-018-C038",
-        "TC-D4-018-C039",
-        "TC-D4-018-C040",
-        "TC-D4-018-C041",
-        "TC-D4-018-C042",
-        "TC-D4-018-C043",
-        "TC-D4-018-C044",
-        "TC-D4-018-C045",
-        "TC-D4-018-C046",
-        "TC-D4-018-C047",
-        "TC-D4-018-C048",
-        "TC-D4-018-C049",
-        "TC-D4-018-C050",
         "TC-D7-002-C001",
         "TC-D7-002-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D4-018-C001",
         "TC-D4-018-C002",
         "TC-D4-018-C003",
@@ -5358,25 +4221,7 @@
         "TC-D4-018-C049",
         "TC-D4-018-C050"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-008-C001",
-        "TC-D1-008-C002",
-        "TC-D1-030-C001",
-        "TC-D4-012-C001",
-        "TC-D4-012-C002",
-        "TC-D4-012-C003",
-        "TC-D4-012-C004",
-        "TC-D4-012-C005",
-        "TC-D4-012-C006",
-        "TC-D4-012-C007",
-        "TC-D4-012-C008",
-        "TC-D4-012-C009",
-        "TC-D4-012-C010",
-        "TC-D7-002-C001",
-        "TC-D7-002-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-004": {
       "description": "非有限数検出",
@@ -5396,19 +4241,14 @@
         "TC-D1-028-C001",
         "TC-D1-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-024-C001",
         "TC-D1-028-C001",
         "TC-D1-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-024-C001",
-        "TC-D1-028-C001",
-        "TC-D1-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-005": {
       "description": "すり抜け・異常貫通防止",
@@ -5503,7 +4343,8 @@
         "TC-D1-017-C036",
         "TC-D1-018-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-014-C001",
         "TC-D1-014-C002",
         "TC-D1-014-C003",
@@ -5579,85 +4420,8 @@
         "TC-D1-017-C036",
         "TC-D1-018-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-014-C001",
-        "TC-D1-014-C002",
-        "TC-D1-014-C003",
-        "TC-D1-014-C004",
-        "TC-D1-014-C005",
-        "TC-D1-014-C006",
-        "TC-D1-014-C007",
-        "TC-D1-014-C008",
-        "TC-D1-014-C009",
-        "TC-D1-014-C010",
-        "TC-D1-014-C011",
-        "TC-D1-014-C012",
-        "TC-D1-015-C001",
-        "TC-D1-015-C002",
-        "TC-D1-015-C003",
-        "TC-D1-015-C004",
-        "TC-D1-015-C005",
-        "TC-D1-015-C006",
-        "TC-D1-015-C007",
-        "TC-D1-015-C008",
-        "TC-D1-015-C009",
-        "TC-D1-015-C010",
-        "TC-D1-015-C011",
-        "TC-D1-015-C012",
-        "TC-D1-015-C013",
-        "TC-D1-015-C014",
-        "TC-D1-015-C015",
-        "TC-D1-015-C016",
-        "TC-D1-015-C017",
-        "TC-D1-015-C018",
-        "TC-D1-015-C019",
-        "TC-D1-015-C020",
-        "TC-D1-015-C021",
-        "TC-D1-015-C022",
-        "TC-D1-015-C023",
-        "TC-D1-015-C024",
-        "TC-D1-016-C001",
-        "TC-D1-017-C001",
-        "TC-D1-017-C002",
-        "TC-D1-017-C003",
-        "TC-D1-017-C004",
-        "TC-D1-017-C005",
-        "TC-D1-017-C006",
-        "TC-D1-017-C007",
-        "TC-D1-017-C008",
-        "TC-D1-017-C009",
-        "TC-D1-017-C010",
-        "TC-D1-017-C011",
-        "TC-D1-017-C012",
-        "TC-D1-017-C013",
-        "TC-D1-017-C014",
-        "TC-D1-017-C015",
-        "TC-D1-017-C016",
-        "TC-D1-017-C017",
-        "TC-D1-017-C018",
-        "TC-D1-017-C019",
-        "TC-D1-017-C020",
-        "TC-D1-017-C021",
-        "TC-D1-017-C022",
-        "TC-D1-017-C023",
-        "TC-D1-017-C024",
-        "TC-D1-017-C025",
-        "TC-D1-017-C026",
-        "TC-D1-017-C027",
-        "TC-D1-017-C028",
-        "TC-D1-017-C029",
-        "TC-D1-017-C030",
-        "TC-D1-017-C031",
-        "TC-D1-017-C032",
-        "TC-D1-017-C033",
-        "TC-D1-017-C034",
-        "TC-D1-017-C035",
-        "TC-D1-017-C036",
-        "TC-D1-018-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-006": {
       "description": "シーソー安定性",
@@ -5680,21 +4444,15 @@
         "TC-D2-029-C001",
         "TC-D2-030-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-027-C001",
         "TC-D2-028-C001",
         "TC-D2-029-C001",
         "TC-D2-030-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-027-C001",
-        "TC-D2-028-C001",
-        "TC-D2-029-C001",
-        "TC-D2-030-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-007": {
       "description": "バネ異常加速防止",
@@ -5750,7 +4508,8 @@
         "TC-D7-001-C006",
         "TC-D7-003-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-024-C001",
         "TC-D1-025-C001",
         "TC-D1-025-C002",
@@ -5778,37 +4537,8 @@
         "TC-D7-001-C006",
         "TC-D7-003-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-024-C001",
-        "TC-D1-025-C001",
-        "TC-D1-025-C002",
-        "TC-D1-026-C001",
-        "TC-D1-026-C002",
-        "TC-D1-027-C001",
-        "TC-D2-020-C001",
-        "TC-D2-020-C002",
-        "TC-D2-021-C001",
-        "TC-D2-021-C002",
-        "TC-D2-022-C001",
-        "TC-D2-022-C002",
-        "TC-D2-023-C001",
-        "TC-D2-023-C002",
-        "TC-D2-024-C001",
-        "TC-D2-024-C002",
-        "TC-D2-025-C001",
-        "TC-D2-025-C002",
-        "TC-D2-026-C001",
-        "TC-D7-001-C001",
-        "TC-D7-001-C002",
-        "TC-D7-001-C003",
-        "TC-D7-001-C004",
-        "TC-D7-001-C005",
-        "TC-D7-001-C006",
-        "TC-D7-003-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-008": {
       "description": "対応端末性能",
@@ -5842,44 +4572,27 @@
         "TC-D7-014-C001",
         "TC-D7-014-C002"
       ],
-      "assessedCases": [
-        "TC-D7-012-C001",
-        "TC-D7-012-C002",
-        "TC-D7-012-C003",
-        "TC-D7-012-C004",
-        "TC-D7-012-C005",
-        "TC-D7-012-C006",
-        "TC-D7-013-C001",
-        "TC-D7-013-C002",
-        "TC-D7-013-C003",
-        "TC-D7-013-C004",
-        "TC-D7-013-C005",
-        "TC-D7-013-C006",
-        "TC-D7-013-C007",
-        "TC-D7-014-C001",
-        "TC-D7-014-C002"
-      ],
-      "phase6Cases": [
-        "TC-D7-012-C001",
-        "TC-D7-012-C002",
-        "TC-D7-012-C003",
-        "TC-D7-012-C004",
-        "TC-D7-012-C005",
-        "TC-D7-012-C006",
-        "TC-D7-013-C002",
-        "TC-D7-013-C003",
-        "TC-D7-013-C004",
-        "TC-D7-013-C005",
-        "TC-D7-013-C006",
-        "TC-D7-013-C007",
-        "TC-D7-014-C002"
-      ],
-      "e8Verified": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-013-C001",
         "TC-D7-014-C001"
       ],
-      "e8Open": [],
-      "status": "PENDING_PHASE6"
+      "openHumanWitnesses": [
+        "TC-D7-012-C001",
+        "TC-D7-012-C002",
+        "TC-D7-012-C003",
+        "TC-D7-012-C004",
+        "TC-D7-012-C005",
+        "TC-D7-012-C006",
+        "TC-D7-013-C002",
+        "TC-D7-013-C003",
+        "TC-D7-013-C004",
+        "TC-D7-013-C005",
+        "TC-D7-013-C006",
+        "TC-D7-013-C007",
+        "TC-D7-014-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-009": {
       "description": "資源の異常蓄積防止",
@@ -5908,35 +4621,22 @@
         "TC-D7-015-C007",
         "TC-D7-015-C008"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-031-C001",
         "TC-D1-031-C002",
         "TC-D7-015-C001",
-        "TC-D7-015-C002",
-        "TC-D7-015-C003",
-        "TC-D7-015-C004",
-        "TC-D7-015-C005",
-        "TC-D7-015-C006",
-        "TC-D7-015-C007",
-        "TC-D7-015-C008"
-      ],
-      "phase6Cases": [
-        "TC-D7-015-C003",
-        "TC-D7-015-C004",
-        "TC-D7-015-C005",
-        "TC-D7-015-C006",
-        "TC-D7-015-C007",
-        "TC-D7-015-C008"
-      ],
-      "e8Verified": [
-        "TC-D7-015-C001",
         "TC-D7-015-C002"
       ],
-      "e8Open": [
-        "TC-D1-031-C001",
-        "TC-D1-031-C002"
+      "openHumanWitnesses": [
+        "TC-D7-015-C003",
+        "TC-D7-015-C004",
+        "TC-D7-015-C005",
+        "TC-D7-015-C006",
+        "TC-D7-015-C007",
+        "TC-D7-015-C008"
       ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-010": {
       "description": "休止後一括更新禁止",
@@ -5953,17 +4653,13 @@
         "TC-D1-023-C001",
         "TC-D1-023-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-023-C001",
         "TC-D1-023-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-023-C001",
-        "TC-D1-023-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-011": {
       "description": "タッチ・マウス",
@@ -5984,22 +4680,16 @@
         "TC-D6-016-C001",
         "TC-D6-018-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-015-C001",
-        "TC-D6-015-C002",
         "TC-D6-016-C001",
         "TC-D6-018-C001"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-015-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-015-C001",
-        "TC-D6-016-C001",
-        "TC-D6-018-C001"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-012": {
       "description": "ドラッグ不要の代替操作",
@@ -6017,18 +4707,14 @@
         "TC-D6-026-C001",
         "TC-D6-026-C002"
       ],
-      "assessedCases": [
-        "TC-D6-026-C001",
-        "TC-D6-026-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-026-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-026-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-026-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-013": {
       "description": "1本指操作",
@@ -6048,22 +4734,16 @@
         "TC-D6-026-C001",
         "TC-D6-026-C002"
       ],
-      "assessedCases": [
-        "TC-D6-023-C001",
-        "TC-D6-023-C002",
-        "TC-D6-026-C001",
-        "TC-D6-026-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-023-C002",
-        "TC-D6-026-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-023-C001",
         "TC-D6-026-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-023-C002",
+        "TC-D6-026-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-014": {
       "description": "縦横切替時状態維持",
@@ -6086,22 +4766,16 @@
         "TC-D6-024-C001",
         "TC-D6-024-C002"
       ],
-      "assessedCases": [
-        "TC-D6-014-C001",
-        "TC-D6-014-C002",
-        "TC-D6-024-C001",
-        "TC-D6-024-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-014-C002",
-        "TC-D6-024-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-014-C001",
         "TC-D6-024-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-014-C002",
+        "TC-D6-024-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-015": {
       "description": "スクロール干渉防止",
@@ -6118,15 +4792,12 @@
       "mappedCaseIds": [
         "TC-D6-025-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-025-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-025-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-016": {
       "description": "色だけに依存しない",
@@ -6145,18 +4816,14 @@
         "TC-D6-047-C001",
         "TC-D6-047-C002"
       ],
-      "assessedCases": [
-        "TC-D6-047-C001",
-        "TC-D6-047-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-047-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-047-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-047-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-017": {
       "description": "無音で全攻略可能",
@@ -6197,9 +4864,9 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-042-C001",
-        "TC-D6-042-C002",
         "TC-D6-044-C001",
         "TC-D6-044-C002",
         "TC-D6-044-C003",
@@ -6223,37 +4890,10 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-042-C002"
       ],
-      "e8Verified": [
-        "TC-D6-044-C003",
-        "TC-D6-044-C004",
-        "TC-D6-044-C005",
-        "TC-D6-044-C006",
-        "TC-D6-044-C007",
-        "TC-D6-044-C008",
-        "TC-D6-044-C009",
-        "TC-D6-044-C010",
-        "TC-D6-044-C011",
-        "TC-D6-044-C012",
-        "TC-D6-044-C013",
-        "TC-D6-044-C014",
-        "TC-D6-044-C015",
-        "TC-D6-044-C016",
-        "TC-D6-044-C017",
-        "TC-D6-044-C018",
-        "TC-D6-044-C019",
-        "TC-D6-044-C020",
-        "TC-D6-044-C021",
-        "TC-D6-044-C022"
-      ],
-      "e8Open": [
-        "TC-D6-042-C001",
-        "TC-D6-044-C001",
-        "TC-D6-044-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-018": {
       "description": "44px操作領域目標",
@@ -6274,22 +4914,16 @@
         "TC-D6-047-C001",
         "TC-D6-047-C002"
       ],
-      "assessedCases": [
-        "TC-D6-013-C001",
-        "TC-D6-013-C002",
-        "TC-D6-047-C001",
-        "TC-D6-047-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-013-C002",
-        "TC-D6-047-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-013-C001",
         "TC-D6-047-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-013-C002",
+        "TC-D6-047-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-019": {
       "description": "動き軽減",
@@ -6307,17 +4941,13 @@
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-034-C001",
         "TC-D6-034-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-034-C001",
-        "TC-D6-034-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-020": {
       "description": "キーボード操作",
@@ -6337,20 +4967,15 @@
         "TC-D7-011-C001",
         "TC-D7-011-C002"
       ],
-      "assessedCases": [
-        "TC-D6-025-C001",
-        "TC-D7-011-C001",
-        "TC-D7-011-C002"
-      ],
-      "phase6Cases": [
-        "TC-D7-011-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-025-C001",
         "TC-D7-011-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D7-011-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-021": {
       "description": "保存キー分離",
@@ -6370,20 +4995,14 @@
         "TC-D7-020-C001",
         "TC-D7-020-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-043-C001",
         "TC-D7-020-C001",
         "TC-D7-020-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-020-C001",
-        "TC-D7-020-C002"
-      ],
-      "e8Open": [
-        "TC-D5-043-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-022": {
       "description": "不正保存適用禁止",
@@ -6429,7 +5048,8 @@
         "TC-D5-018-C001",
         "TC-D5-019-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-012-C001",
         "TC-D5-012-C002",
         "TC-D5-013-C001",
@@ -6452,32 +5072,8 @@
         "TC-D5-018-C001",
         "TC-D5-019-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-012-C001",
-        "TC-D5-012-C002",
-        "TC-D5-013-C001",
-        "TC-D5-013-C002",
-        "TC-D5-013-C003",
-        "TC-D5-013-C004",
-        "TC-D5-013-C005",
-        "TC-D5-014-C001",
-        "TC-D5-015-C001",
-        "TC-D5-015-C002",
-        "TC-D5-016-C001",
-        "TC-D5-016-C002",
-        "TC-D5-016-C003",
-        "TC-D5-016-C004",
-        "TC-D5-016-C005",
-        "TC-D5-016-C006",
-        "TC-D5-016-C007",
-        "TC-D5-016-C008",
-        "TC-D5-017-C001",
-        "TC-D5-018-C001",
-        "TC-D5-019-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-023": {
       "description": "個人情報外部送信禁止",
@@ -6495,17 +5091,13 @@
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-017-C001",
-        "TC-D7-017-C002"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-024": {
       "description": "外部API実行時依存なし",
@@ -6523,17 +5115,13 @@
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-017-C001",
         "TC-D7-017-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-017-C001",
-        "TC-D7-017-C002"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-025": {
       "description": "依存版固定",
@@ -6558,7 +5146,8 @@
         "TC-D7-018-C002",
         "TC-D7-018-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-001-C001",
         "TC-D1-001-C002",
         "TC-D1-002-C001",
@@ -6567,19 +5156,8 @@
         "TC-D7-018-C002",
         "TC-D7-018-C003"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-018-C003"
-      ],
-      "e8Open": [
-        "TC-D1-001-C001",
-        "TC-D1-001-C002",
-        "TC-D1-002-C001",
-        "TC-D1-002-C002",
-        "TC-D7-018-C001",
-        "TC-D7-018-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-026": {
       "description": "ライブラリ・素材利用条件",
@@ -6600,24 +5178,16 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-018-C001",
         "TC-D7-018-C002",
         "TC-D7-018-C003",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-018-C003"
-      ],
-      "e8Open": [
-        "TC-D7-018-C001",
-        "TC-D7-018-C002",
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-027": {
       "description": "ゲームルール・物理分離",
@@ -6651,19 +5221,14 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-022-C001",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-022-C001",
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-028": {
       "description": "ステージデータ・ロジック分離",
@@ -6682,19 +5247,14 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-001-C001",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-001-C001",
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-029": {
       "description": "トレーサビリティ",
@@ -6711,17 +5271,13 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-030": {
       "description": "QA診断",
@@ -6743,21 +5299,15 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-028-C001",
         "TC-D1-028-C002",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-028-C001",
-        "TC-D1-028-C002",
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-031": {
       "description": "公開版デバッグ非露出",
@@ -6774,17 +5324,13 @@
         "TC-D7-019-C001",
         "TC-D7-019-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-019-C001",
         "TC-D7-019-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-019-C001",
-        "TC-D7-019-C002"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-032": {
       "description": "Pagesサブパス配信",
@@ -6803,20 +5349,14 @@
         "TC-D1-002-C002",
         "TC-D7-016-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-002-C001",
         "TC-D1-002-C002",
         "TC-D7-016-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-016-C001"
-      ],
-      "e8Open": [
-        "TC-D1-002-C001",
-        "TC-D1-002-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "NFR-033": {
       "description": "複数タブデータ保護",
@@ -6862,29 +5402,8 @@
         "TC-D5-035-C001",
         "TC-D5-035-C002"
       ],
-      "assessedCases": [
-        "TC-D5-026-C001",
-        "TC-D5-027-C001",
-        "TC-D5-028-C001",
-        "TC-D5-029-C001",
-        "TC-D5-030-C001",
-        "TC-D5-030-C002",
-        "TC-D5-031-C001",
-        "TC-D5-032-C001",
-        "TC-D5-032-C002",
-        "TC-D5-032-C003",
-        "TC-D5-033-C001",
-        "TC-D5-034-C001",
-        "TC-D5-034-C002",
-        "TC-D5-035-C001",
-        "TC-D5-035-C002"
-      ],
-      "phase6Cases": [
-        "TC-D5-034-C002",
-        "TC-D5-035-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-026-C001",
         "TC-D5-027-C001",
         "TC-D5-028-C001",
@@ -6899,7 +5418,11 @@
         "TC-D5-034-C001",
         "TC-D5-035-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D5-034-C002",
+        "TC-D5-035-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-034": {
       "description": "resizeと物理分離",
@@ -6928,22 +5451,8 @@
         "TC-D6-024-C001",
         "TC-D6-024-C002"
       ],
-      "assessedCases": [
-        "TC-D1-003-C001",
-        "TC-D1-004-C001",
-        "TC-D1-005-C001",
-        "TC-D1-005-C002",
-        "TC-D1-005-C003",
-        "TC-D1-005-C004",
-        "TC-D1-005-C005",
-        "TC-D6-024-C001",
-        "TC-D6-024-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-024-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-003-C001",
         "TC-D1-004-C001",
         "TC-D1-005-C001",
@@ -6953,7 +5462,10 @@
         "TC-D1-005-C005",
         "TC-D6-024-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-024-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-035": {
       "description": "音声初期化・再生失敗対応",
@@ -6993,9 +5505,9 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-041-C001",
-        "TC-D6-041-C002",
         "TC-D6-044-C001",
         "TC-D6-044-C002",
         "TC-D6-044-C003",
@@ -7019,37 +5531,10 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-041-C002"
       ],
-      "e8Verified": [
-        "TC-D6-044-C003",
-        "TC-D6-044-C004",
-        "TC-D6-044-C005",
-        "TC-D6-044-C006",
-        "TC-D6-044-C007",
-        "TC-D6-044-C008",
-        "TC-D6-044-C009",
-        "TC-D6-044-C010",
-        "TC-D6-044-C011",
-        "TC-D6-044-C012",
-        "TC-D6-044-C013",
-        "TC-D6-044-C014",
-        "TC-D6-044-C015",
-        "TC-D6-044-C016",
-        "TC-D6-044-C017",
-        "TC-D6-044-C018",
-        "TC-D6-044-C019",
-        "TC-D6-044-C020",
-        "TC-D6-044-C021",
-        "TC-D6-044-C022"
-      ],
-      "e8Open": [
-        "TC-D6-041-C001",
-        "TC-D6-044-C001",
-        "TC-D6-044-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-036": {
       "description": "音声過剰再生・非干渉",
@@ -7088,7 +5573,8 @@
         "TC-D7-010-C001",
         "TC-D7-010-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-037-C001",
         "TC-D6-037-C002",
         "TC-D6-038-C001",
@@ -7098,36 +5584,17 @@
         "TC-D6-040-C001",
         "TC-D6-040-C002",
         "TC-D6-041-C001",
-        "TC-D6-041-C002",
         "TC-D6-042-C001",
-        "TC-D6-042-C002",
         "TC-D6-043-C001",
         "TC-D6-043-C002",
         "TC-D7-010-C001",
         "TC-D7-010-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-041-C002",
         "TC-D6-042-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D6-037-C001",
-        "TC-D6-037-C002",
-        "TC-D6-038-C001",
-        "TC-D6-038-C002",
-        "TC-D6-039-C001",
-        "TC-D6-039-C002",
-        "TC-D6-040-C001",
-        "TC-D6-040-C002",
-        "TC-D6-041-C001",
-        "TC-D6-042-C001",
-        "TC-D6-043-C001",
-        "TC-D6-043-C002",
-        "TC-D7-010-C001",
-        "TC-D7-010-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "NFR-037": {
       "description": "排他・安全な引継",
@@ -7165,36 +5632,23 @@
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-031-C001",
         "TC-D5-032-C001",
         "TC-D5-032-C002",
         "TC-D5-032-C003",
         "TC-D5-033-C001",
         "TC-D5-034-C001",
-        "TC-D5-034-C002",
         "TC-D5-035-C001",
-        "TC-D5-035-C002",
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D5-034-C002",
         "TC-D5-035-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-031-C001",
-        "TC-D5-032-C001",
-        "TC-D5-032-C002",
-        "TC-D5-032-C003",
-        "TC-D5-033-C001",
-        "TC-D5-034-C001",
-        "TC-D5-035-C001",
-        "TC-D5-036-C001",
-        "TC-D5-036-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "DR-001": {
       "description": "一意ステージID",
@@ -7210,15 +5664,12 @@
       "mappedCaseIds": [
         "TC-D4-001-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-001-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-001-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-002": {
       "description": "パーツ定義",
@@ -7235,15 +5686,12 @@
       "mappedCaseIds": [
         "TC-D2-001-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-001-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-001-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-003": {
       "description": "配置ID",
@@ -7262,17 +5710,13 @@
         "TC-D2-038-C001",
         "TC-D5-017-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-038-C001",
         "TC-D5-017-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-038-C001",
-        "TC-D5-017-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-004": {
       "description": "在庫整合",
@@ -7291,17 +5735,13 @@
         "TC-D2-008-C001",
         "TC-D2-038-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D2-008-C001",
         "TC-D2-038-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D2-008-C001",
-        "TC-D2-038-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-005": {
       "description": "実験開始スナップショット",
@@ -7322,21 +5762,15 @@
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-032-C001",
         "TC-D1-032-C002",
         "TC-D3-037-C001",
         "TC-D3-037-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-032-C001",
-        "TC-D1-032-C002",
-        "TC-D3-037-C001",
-        "TC-D3-037-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-006": {
       "description": "独立した実験状態",
@@ -7357,19 +5791,14 @@
         "TC-D1-032-C002",
         "TC-D5-010-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D1-032-C001",
         "TC-D1-032-C002",
         "TC-D5-010-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D1-032-C001",
-        "TC-D1-032-C002",
-        "TC-D5-010-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-007": {
       "description": "軌跡時間・中心座標",
@@ -7391,23 +5820,16 @@
         "TC-D3-043-C002",
         "TC-D3-043-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-041-C001",
         "TC-D3-042-C001",
         "TC-D3-043-C001",
         "TC-D3-043-C002",
         "TC-D3-043-C003"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-041-C001",
-        "TC-D3-042-C001",
-        "TC-D3-043-C001",
-        "TC-D3-043-C002",
-        "TC-D3-043-C003"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-008": {
       "description": "ステージ進捗",
@@ -7427,17 +5849,13 @@
         "TC-D5-002-C001",
         "TC-D5-008-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-002-C001",
         "TC-D5-008-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-002-C001",
-        "TC-D5-008-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-009": {
       "description": "編集配置",
@@ -7471,7 +5889,8 @@
         "TC-D5-009-C001",
         "TC-D5-010-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-003-C001",
         "TC-D5-003-C002",
         "TC-D5-004-C001",
@@ -7484,22 +5903,8 @@
         "TC-D5-009-C001",
         "TC-D5-010-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-003-C001",
-        "TC-D5-003-C002",
-        "TC-D5-004-C001",
-        "TC-D5-004-C002",
-        "TC-D5-005-C001",
-        "TC-D5-005-C002",
-        "TC-D5-006-C001",
-        "TC-D5-007-C001",
-        "TC-D5-008-C001",
-        "TC-D5-009-C001",
-        "TC-D5-010-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-010": {
       "description": "ベスト整合",
@@ -7527,7 +5932,8 @@
         "TC-D5-037-C009",
         "TC-D5-037-C010"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-019-C001",
         "TC-D5-037-C001",
         "TC-D5-037-C002",
@@ -7540,22 +5946,8 @@
         "TC-D5-037-C009",
         "TC-D5-037-C010"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-019-C001",
-        "TC-D5-037-C001",
-        "TC-D5-037-C002",
-        "TC-D5-037-C003",
-        "TC-D5-037-C004",
-        "TC-D5-037-C005",
-        "TC-D5-037-C006",
-        "TC-D5-037-C007",
-        "TC-D5-037-C008",
-        "TC-D5-037-C009",
-        "TC-D5-037-C010"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-011": {
       "description": "スキーマ版",
@@ -7572,17 +5964,13 @@
         "TC-D5-015-C001",
         "TC-D5-015-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-015-C001",
         "TC-D5-015-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-015-C001",
-        "TC-D5-015-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-012": {
       "description": "破損復旧",
@@ -7602,19 +5990,14 @@
         "TC-D5-020-C001",
         "TC-D5-024-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-018-C001",
         "TC-D5-020-C001",
         "TC-D5-024-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-018-C001",
-        "TC-D5-020-C001",
-        "TC-D5-024-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-013": {
       "description": "攻略フィクスチャ",
@@ -7647,7 +6030,8 @@
         "TC-D4-030-C001",
         "TC-D4-030-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-006-C001",
         "TC-D4-006-C002",
         "TC-D4-009-C001",
@@ -7663,25 +6047,8 @@
         "TC-D4-030-C001",
         "TC-D4-030-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-006-C001",
-        "TC-D4-006-C002",
-        "TC-D4-009-C001",
-        "TC-D4-009-C002",
-        "TC-D4-009-C003",
-        "TC-D4-009-C004",
-        "TC-D4-009-C005",
-        "TC-D4-009-C006",
-        "TC-D4-009-C007",
-        "TC-D4-009-C008",
-        "TC-D4-009-C009",
-        "TC-D4-009-C010",
-        "TC-D4-030-C001",
-        "TC-D4-030-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-014": {
       "description": "検証証跡",
@@ -7700,20 +6067,14 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-027-C001",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-027-C001"
-      ],
-      "e8Open": [
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-015": {
       "description": "素材来歴",
@@ -7734,24 +6095,16 @@
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-018-C001",
         "TC-D7-018-C002",
         "TC-D7-018-C003",
         "TC-D7-028-C001",
         "TC-D7-028-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-018-C003"
-      ],
-      "e8Open": [
-        "TC-D7-018-C001",
-        "TC-D7-018-C002",
-        "TC-D7-028-C001",
-        "TC-D7-028-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-016": {
       "description": "保存revision",
@@ -7790,7 +6143,8 @@
         "TC-D7-008-C006",
         "TC-D7-008-C007"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-030-C001",
         "TC-D5-030-C002",
         "TC-D5-044-C001",
@@ -7813,32 +6167,8 @@
         "TC-D7-008-C006",
         "TC-D7-008-C007"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-030-C001",
-        "TC-D5-030-C002",
-        "TC-D5-044-C001",
-        "TC-D5-044-C002",
-        "TC-D5-044-C003",
-        "TC-D5-044-C004",
-        "TC-D5-044-C005",
-        "TC-D5-044-C006",
-        "TC-D5-044-C007",
-        "TC-D5-044-C008",
-        "TC-D5-044-C009",
-        "TC-D5-044-C010",
-        "TC-D5-044-C011",
-        "TC-D5-044-C012",
-        "TC-D7-008-C001",
-        "TC-D7-008-C002",
-        "TC-D7-008-C003",
-        "TC-D7-008-C004",
-        "TC-D7-008-C005",
-        "TC-D7-008-C006",
-        "TC-D7-008-C007"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-017": {
       "description": "軌跡と実験結果対応",
@@ -7856,17 +6186,13 @@
         "TC-D3-044-C001",
         "TC-D3-045-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-044-C001",
         "TC-D3-045-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-044-C001",
-        "TC-D3-045-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "DR-018": {
       "description": "素材ID・用途・権利",
@@ -7893,29 +6219,19 @@
         "TC-D6-048-C002",
         "TC-D6-048-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-028-C001",
-        "TC-D6-028-C002",
         "TC-D6-035-C001",
-        "TC-D6-035-C002",
-        "TC-D6-048-C001",
-        "TC-D6-048-C002",
-        "TC-D6-048-C003"
-      ],
-      "phase6Cases": [
-        "TC-D6-028-C002",
-        "TC-D6-035-C002",
-        "TC-D6-048-C003"
-      ],
-      "e8Verified": [
         "TC-D6-048-C001",
         "TC-D6-048-C002"
       ],
-      "e8Open": [
-        "TC-D6-028-C001",
-        "TC-D6-035-C001"
+      "openHumanWitnesses": [
+        "TC-D6-028-C002",
+        "TC-D6-035-C002",
+        "TC-D6-048-C003"
       ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "DR-019": {
       "description": "ステージ互換性",
@@ -7949,7 +6265,8 @@
         "TC-D5-040-C001",
         "TC-D7-009-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-037-C001",
         "TC-D5-037-C002",
         "TC-D5-037-C003",
@@ -7965,25 +6282,8 @@
         "TC-D5-040-C001",
         "TC-D7-009-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-037-C001",
-        "TC-D5-037-C002",
-        "TC-D5-037-C003",
-        "TC-D5-037-C004",
-        "TC-D5-037-C005",
-        "TC-D5-037-C006",
-        "TC-D5-037-C007",
-        "TC-D5-037-C008",
-        "TC-D5-037-C009",
-        "TC-D5-037-C010",
-        "TC-D5-038-C001",
-        "TC-D5-039-C001",
-        "TC-D5-040-C001",
-        "TC-D7-009-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-001": {
       "description": "全10合法攻略",
@@ -8012,7 +6312,8 @@
         "TC-D4-009-C010",
         "TC-D4-017-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-009-C001",
         "TC-D4-009-C002",
         "TC-D4-009-C003",
@@ -8025,22 +6326,8 @@
         "TC-D4-009-C010",
         "TC-D4-017-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-009-C001",
-        "TC-D4-009-C002",
-        "TC-D4-009-C003",
-        "TC-D4-009-C004",
-        "TC-D4-009-C005",
-        "TC-D4-009-C006",
-        "TC-D4-009-C007",
-        "TC-D4-009-C008",
-        "TC-D4-009-C009",
-        "TC-D4-009-C010",
-        "TC-D4-017-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-002": {
       "description": "全10星3",
@@ -8066,7 +6353,8 @@
         "TC-D4-010-C009",
         "TC-D4-010-C010"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-010-C001",
         "TC-D4-010-C002",
         "TC-D4-010-C003",
@@ -8078,21 +6366,8 @@
         "TC-D4-010-C009",
         "TC-D4-010-C010"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-010-C001",
-        "TC-D4-010-C002",
-        "TC-D4-010-C003",
-        "TC-D4-010-C004",
-        "TC-D4-010-C005",
-        "TC-D4-010-C006",
-        "TC-D4-010-C007",
-        "TC-D4-010-C008",
-        "TC-D4-010-C009",
-        "TC-D4-010-C010"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-003": {
       "description": "ST04〜10の意味ある別解",
@@ -8123,7 +6398,8 @@
         "TC-D7-007-C001",
         "TC-D7-007-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-013-C001",
         "TC-D4-013-C002",
         "TC-D4-013-C003",
@@ -8138,24 +6414,8 @@
         "TC-D7-007-C001",
         "TC-D7-007-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-013-C001",
-        "TC-D4-013-C002",
-        "TC-D4-013-C003",
-        "TC-D4-013-C004",
-        "TC-D4-013-C005",
-        "TC-D4-013-C006",
-        "TC-D4-013-C007",
-        "TC-D4-014-C001",
-        "TC-D4-014-C002",
-        "TC-D4-015-C001",
-        "TC-D4-015-C002",
-        "TC-D7-007-C001",
-        "TC-D7-007-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-004": {
       "description": "初期状態クリア不可",
@@ -8180,7 +6440,8 @@
         "TC-D4-007-C009",
         "TC-D4-007-C010"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-007-C001",
         "TC-D4-007-C002",
         "TC-D4-007-C003",
@@ -8192,21 +6453,8 @@
         "TC-D4-007-C009",
         "TC-D4-007-C010"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-007-C001",
-        "TC-D4-007-C002",
-        "TC-D4-007-C003",
-        "TC-D4-007-C004",
-        "TC-D4-007-C005",
-        "TC-D4-007-C006",
-        "TC-D4-007-C007",
-        "TC-D4-007-C008",
-        "TC-D4-007-C009",
-        "TC-D4-007-C010"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-005": {
       "description": "必須使用",
@@ -8234,7 +6482,8 @@
         "TC-D7-004-C006",
         "TC-D7-004-C007"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-011-C001",
         "TC-D7-004-C001",
         "TC-D7-004-C002",
@@ -8244,19 +6493,8 @@
         "TC-D7-004-C006",
         "TC-D7-004-C007"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-011-C001",
-        "TC-D7-004-C001",
-        "TC-D7-004-C002",
-        "TC-D7-004-C003",
-        "TC-D7-004-C004",
-        "TC-D7-004-C005",
-        "TC-D7-004-C006",
-        "TC-D7-004-C007"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-006": {
       "description": "通常操作で再現",
@@ -8279,22 +6517,16 @@
         "TC-D6-026-C001",
         "TC-D6-026-C002"
       ],
-      "assessedCases": [
-        "TC-D4-008-C001",
-        "TC-D4-008-C002",
-        "TC-D6-026-C001",
-        "TC-D6-026-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-026-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-008-C001",
         "TC-D4-008-C002",
         "TC-D6-026-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-026-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "QR-007": {
       "description": "30ヒント整合",
@@ -8342,7 +6574,8 @@
         "TC-D4-023-C030",
         "TC-D4-024-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-023-C001",
         "TC-D4-023-C002",
         "TC-D4-023-C003",
@@ -8375,42 +6608,8 @@
         "TC-D4-023-C030",
         "TC-D4-024-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-023-C001",
-        "TC-D4-023-C002",
-        "TC-D4-023-C003",
-        "TC-D4-023-C004",
-        "TC-D4-023-C005",
-        "TC-D4-023-C006",
-        "TC-D4-023-C007",
-        "TC-D4-023-C008",
-        "TC-D4-023-C009",
-        "TC-D4-023-C010",
-        "TC-D4-023-C011",
-        "TC-D4-023-C012",
-        "TC-D4-023-C013",
-        "TC-D4-023-C014",
-        "TC-D4-023-C015",
-        "TC-D4-023-C016",
-        "TC-D4-023-C017",
-        "TC-D4-023-C018",
-        "TC-D4-023-C019",
-        "TC-D4-023-C020",
-        "TC-D4-023-C021",
-        "TC-D4-023-C022",
-        "TC-D4-023-C023",
-        "TC-D4-023-C024",
-        "TC-D4-023-C025",
-        "TC-D4-023-C026",
-        "TC-D4-023-C027",
-        "TC-D4-023-C028",
-        "TC-D4-023-C029",
-        "TC-D4-023-C030",
-        "TC-D4-024-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-008": {
       "description": "配置許容度",
@@ -8446,7 +6645,8 @@
         "TC-D4-021-C014",
         "TC-D4-022-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-019-C001",
         "TC-D4-020-C001",
         "TC-D4-021-C001",
@@ -8465,28 +6665,8 @@
         "TC-D4-021-C014",
         "TC-D4-022-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-019-C001",
-        "TC-D4-020-C001",
-        "TC-D4-021-C001",
-        "TC-D4-021-C002",
-        "TC-D4-021-C003",
-        "TC-D4-021-C004",
-        "TC-D4-021-C005",
-        "TC-D4-021-C006",
-        "TC-D4-021-C007",
-        "TC-D4-021-C008",
-        "TC-D4-021-C009",
-        "TC-D4-021-C010",
-        "TC-D4-021-C011",
-        "TC-D4-021-C012",
-        "TC-D4-021-C013",
-        "TC-D4-021-C014",
-        "TC-D4-022-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-009": {
       "description": "異常攻略禁止",
@@ -8506,17 +6686,13 @@
         "TC-D4-016-C001",
         "TC-D7-005-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-016-C001",
         "TC-D7-005-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-016-C001",
-        "TC-D7-005-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-010": {
       "description": "キャラクター品質",
@@ -8545,30 +6721,20 @@
         "TC-D6-031-C001",
         "TC-D6-031-C002"
       ],
-      "assessedCases": [
-        "TC-D6-027-C001",
-        "TC-D6-027-C002",
-        "TC-D6-028-C001",
-        "TC-D6-028-C002",
-        "TC-D6-029-C001",
-        "TC-D6-030-C001",
-        "TC-D6-031-C001",
-        "TC-D6-031-C002"
-      ],
-      "phase6Cases": [
-        "TC-D6-027-C002",
-        "TC-D6-028-C002",
-        "TC-D6-031-C002"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-027-C001",
         "TC-D6-028-C001",
         "TC-D6-029-C001",
         "TC-D6-030-C001",
         "TC-D6-031-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-027-C002",
+        "TC-D6-028-C002",
+        "TC-D6-031-C002"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "QR-011": {
       "description": "音声品質",
@@ -8634,9 +6800,9 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-035-C001",
-        "TC-D6-035-C002",
         "TC-D6-036-C001",
         "TC-D6-036-C002",
         "TC-D6-037-C001",
@@ -8648,9 +6814,7 @@
         "TC-D6-040-C001",
         "TC-D6-040-C002",
         "TC-D6-041-C001",
-        "TC-D6-041-C002",
         "TC-D6-042-C001",
-        "TC-D6-042-C002",
         "TC-D6-043-C001",
         "TC-D6-043-C002",
         "TC-D6-044-C001",
@@ -8676,53 +6840,12 @@
         "TC-D6-044-C021",
         "TC-D6-044-C022"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D6-035-C002",
         "TC-D6-041-C002",
         "TC-D6-042-C002"
       ],
-      "e8Verified": [
-        "TC-D6-044-C003",
-        "TC-D6-044-C004",
-        "TC-D6-044-C005",
-        "TC-D6-044-C006",
-        "TC-D6-044-C007",
-        "TC-D6-044-C008",
-        "TC-D6-044-C009",
-        "TC-D6-044-C010",
-        "TC-D6-044-C011",
-        "TC-D6-044-C012",
-        "TC-D6-044-C013",
-        "TC-D6-044-C014",
-        "TC-D6-044-C015",
-        "TC-D6-044-C016",
-        "TC-D6-044-C017",
-        "TC-D6-044-C018",
-        "TC-D6-044-C019",
-        "TC-D6-044-C020",
-        "TC-D6-044-C021",
-        "TC-D6-044-C022"
-      ],
-      "e8Open": [
-        "TC-D6-035-C001",
-        "TC-D6-036-C001",
-        "TC-D6-036-C002",
-        "TC-D6-037-C001",
-        "TC-D6-037-C002",
-        "TC-D6-038-C001",
-        "TC-D6-038-C002",
-        "TC-D6-039-C001",
-        "TC-D6-039-C002",
-        "TC-D6-040-C001",
-        "TC-D6-040-C002",
-        "TC-D6-041-C001",
-        "TC-D6-042-C001",
-        "TC-D6-043-C001",
-        "TC-D6-043-C002",
-        "TC-D6-044-C001",
-        "TC-D6-044-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "QR-012": {
       "description": "保存競合防止",
@@ -8774,9 +6897,9 @@
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D5-025-C001",
-        "TC-D5-025-C002",
         "TC-D5-026-C001",
         "TC-D5-027-C001",
         "TC-D5-028-C001",
@@ -8789,37 +6912,16 @@
         "TC-D5-032-C003",
         "TC-D5-033-C001",
         "TC-D5-034-C001",
-        "TC-D5-034-C002",
         "TC-D5-035-C001",
-        "TC-D5-035-C002",
         "TC-D5-036-C001",
         "TC-D5-036-C002"
       ],
-      "phase6Cases": [
+      "openHumanWitnesses": [
         "TC-D5-025-C002",
         "TC-D5-034-C002",
         "TC-D5-035-C002"
       ],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D5-025-C001",
-        "TC-D5-026-C001",
-        "TC-D5-027-C001",
-        "TC-D5-028-C001",
-        "TC-D5-029-C001",
-        "TC-D5-030-C001",
-        "TC-D5-030-C002",
-        "TC-D5-031-C001",
-        "TC-D5-032-C001",
-        "TC-D5-032-C002",
-        "TC-D5-032-C003",
-        "TC-D5-033-C001",
-        "TC-D5-034-C001",
-        "TC-D5-035-C001",
-        "TC-D5-036-C001",
-        "TC-D5-036-C002"
-      ],
-      "status": "PENDING_E8"
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "QR-013": {
       "description": "回転停止再開",
@@ -8920,180 +7022,95 @@
         "TC-D7-029-C080",
         "TC-D7-029-C081"
       ],
-      "assessedCases": [
-        "TC-D6-024-C001",
-        "TC-D6-024-C002",
-        "TC-D7-029-C001",
-        "TC-D7-029-C002",
-        "TC-D7-029-C003",
-        "TC-D7-029-C004",
-        "TC-D7-029-C005",
-        "TC-D7-029-C006",
-        "TC-D7-029-C007",
-        "TC-D7-029-C008",
-        "TC-D7-029-C009",
-        "TC-D7-029-C010",
-        "TC-D7-029-C011",
-        "TC-D7-029-C012",
-        "TC-D7-029-C013",
-        "TC-D7-029-C014",
-        "TC-D7-029-C015",
-        "TC-D7-029-C016",
-        "TC-D7-029-C017",
-        "TC-D7-029-C018",
-        "TC-D7-029-C019",
-        "TC-D7-029-C020",
-        "TC-D7-029-C021",
-        "TC-D7-029-C022",
-        "TC-D7-029-C023",
-        "TC-D7-029-C024",
-        "TC-D7-029-C025",
-        "TC-D7-029-C026",
-        "TC-D7-029-C027",
-        "TC-D7-029-C028",
-        "TC-D7-029-C029",
-        "TC-D7-029-C030",
-        "TC-D7-029-C031",
-        "TC-D7-029-C032",
-        "TC-D7-029-C033",
-        "TC-D7-029-C034",
-        "TC-D7-029-C035",
-        "TC-D7-029-C036",
-        "TC-D7-029-C037",
-        "TC-D7-029-C038",
-        "TC-D7-029-C039",
-        "TC-D7-029-C040",
-        "TC-D7-029-C041",
-        "TC-D7-029-C042",
-        "TC-D7-029-C043",
-        "TC-D7-029-C044",
-        "TC-D7-029-C045",
-        "TC-D7-029-C046",
-        "TC-D7-029-C047",
-        "TC-D7-029-C048",
-        "TC-D7-029-C049",
-        "TC-D7-029-C050",
-        "TC-D7-029-C051",
-        "TC-D7-029-C052",
-        "TC-D7-029-C053",
-        "TC-D7-029-C054",
-        "TC-D7-029-C055",
-        "TC-D7-029-C056",
-        "TC-D7-029-C057",
-        "TC-D7-029-C058",
-        "TC-D7-029-C059",
-        "TC-D7-029-C060",
-        "TC-D7-029-C061",
-        "TC-D7-029-C062",
-        "TC-D7-029-C063",
-        "TC-D7-029-C064",
-        "TC-D7-029-C065",
-        "TC-D7-029-C066",
-        "TC-D7-029-C067",
-        "TC-D7-029-C068",
-        "TC-D7-029-C069",
-        "TC-D7-029-C070",
-        "TC-D7-029-C071",
-        "TC-D7-029-C072",
-        "TC-D7-029-C073",
-        "TC-D7-029-C074",
-        "TC-D7-029-C075",
-        "TC-D7-029-C076",
-        "TC-D7-029-C077",
-        "TC-D7-029-C078",
-        "TC-D7-029-C079",
-        "TC-D7-029-C080",
-        "TC-D7-029-C081"
-      ],
-      "phase6Cases": [
-        "TC-D6-024-C002",
-        "TC-D7-029-C001",
-        "TC-D7-029-C002",
-        "TC-D7-029-C003",
-        "TC-D7-029-C004",
-        "TC-D7-029-C005",
-        "TC-D7-029-C006",
-        "TC-D7-029-C007",
-        "TC-D7-029-C008",
-        "TC-D7-029-C009",
-        "TC-D7-029-C010",
-        "TC-D7-029-C011",
-        "TC-D7-029-C012",
-        "TC-D7-029-C013",
-        "TC-D7-029-C014",
-        "TC-D7-029-C015",
-        "TC-D7-029-C016",
-        "TC-D7-029-C017",
-        "TC-D7-029-C018",
-        "TC-D7-029-C019",
-        "TC-D7-029-C020",
-        "TC-D7-029-C021",
-        "TC-D7-029-C022",
-        "TC-D7-029-C023",
-        "TC-D7-029-C024",
-        "TC-D7-029-C025",
-        "TC-D7-029-C026",
-        "TC-D7-029-C027",
-        "TC-D7-029-C028",
-        "TC-D7-029-C029",
-        "TC-D7-029-C030",
-        "TC-D7-029-C031",
-        "TC-D7-029-C032",
-        "TC-D7-029-C033",
-        "TC-D7-029-C034",
-        "TC-D7-029-C035",
-        "TC-D7-029-C036",
-        "TC-D7-029-C037",
-        "TC-D7-029-C038",
-        "TC-D7-029-C039",
-        "TC-D7-029-C040",
-        "TC-D7-029-C041",
-        "TC-D7-029-C042",
-        "TC-D7-029-C043",
-        "TC-D7-029-C044",
-        "TC-D7-029-C045",
-        "TC-D7-029-C046",
-        "TC-D7-029-C047",
-        "TC-D7-029-C048",
-        "TC-D7-029-C049",
-        "TC-D7-029-C050",
-        "TC-D7-029-C051",
-        "TC-D7-029-C052",
-        "TC-D7-029-C053",
-        "TC-D7-029-C054",
-        "TC-D7-029-C055",
-        "TC-D7-029-C056",
-        "TC-D7-029-C057",
-        "TC-D7-029-C058",
-        "TC-D7-029-C059",
-        "TC-D7-029-C060",
-        "TC-D7-029-C061",
-        "TC-D7-029-C062",
-        "TC-D7-029-C063",
-        "TC-D7-029-C064",
-        "TC-D7-029-C065",
-        "TC-D7-029-C066",
-        "TC-D7-029-C067",
-        "TC-D7-029-C068",
-        "TC-D7-029-C069",
-        "TC-D7-029-C070",
-        "TC-D7-029-C071",
-        "TC-D7-029-C072",
-        "TC-D7-029-C073",
-        "TC-D7-029-C074",
-        "TC-D7-029-C075",
-        "TC-D7-029-C076",
-        "TC-D7-029-C077",
-        "TC-D7-029-C078",
-        "TC-D7-029-C079",
-        "TC-D7-029-C080",
-        "TC-D7-029-C081"
-      ],
-      "e8Verified": [],
-      "e8Open": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D6-024-C001"
       ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [
+        "TC-D6-024-C002",
+        "TC-D7-029-C001",
+        "TC-D7-029-C002",
+        "TC-D7-029-C003",
+        "TC-D7-029-C004",
+        "TC-D7-029-C005",
+        "TC-D7-029-C006",
+        "TC-D7-029-C007",
+        "TC-D7-029-C008",
+        "TC-D7-029-C009",
+        "TC-D7-029-C010",
+        "TC-D7-029-C011",
+        "TC-D7-029-C012",
+        "TC-D7-029-C013",
+        "TC-D7-029-C014",
+        "TC-D7-029-C015",
+        "TC-D7-029-C016",
+        "TC-D7-029-C017",
+        "TC-D7-029-C018",
+        "TC-D7-029-C019",
+        "TC-D7-029-C020",
+        "TC-D7-029-C021",
+        "TC-D7-029-C022",
+        "TC-D7-029-C023",
+        "TC-D7-029-C024",
+        "TC-D7-029-C025",
+        "TC-D7-029-C026",
+        "TC-D7-029-C027",
+        "TC-D7-029-C028",
+        "TC-D7-029-C029",
+        "TC-D7-029-C030",
+        "TC-D7-029-C031",
+        "TC-D7-029-C032",
+        "TC-D7-029-C033",
+        "TC-D7-029-C034",
+        "TC-D7-029-C035",
+        "TC-D7-029-C036",
+        "TC-D7-029-C037",
+        "TC-D7-029-C038",
+        "TC-D7-029-C039",
+        "TC-D7-029-C040",
+        "TC-D7-029-C041",
+        "TC-D7-029-C042",
+        "TC-D7-029-C043",
+        "TC-D7-029-C044",
+        "TC-D7-029-C045",
+        "TC-D7-029-C046",
+        "TC-D7-029-C047",
+        "TC-D7-029-C048",
+        "TC-D7-029-C049",
+        "TC-D7-029-C050",
+        "TC-D7-029-C051",
+        "TC-D7-029-C052",
+        "TC-D7-029-C053",
+        "TC-D7-029-C054",
+        "TC-D7-029-C055",
+        "TC-D7-029-C056",
+        "TC-D7-029-C057",
+        "TC-D7-029-C058",
+        "TC-D7-029-C059",
+        "TC-D7-029-C060",
+        "TC-D7-029-C061",
+        "TC-D7-029-C062",
+        "TC-D7-029-C063",
+        "TC-D7-029-C064",
+        "TC-D7-029-C065",
+        "TC-D7-029-C066",
+        "TC-D7-029-C067",
+        "TC-D7-029-C068",
+        "TC-D7-029-C069",
+        "TC-D7-029-C070",
+        "TC-D7-029-C071",
+        "TC-D7-029-C072",
+        "TC-D7-029-C073",
+        "TC-D7-029-C074",
+        "TC-D7-029-C075",
+        "TC-D7-029-C076",
+        "TC-D7-029-C077",
+        "TC-D7-029-C078",
+        "TC-D7-029-C079",
+        "TC-D7-029-C080",
+        "TC-D7-029-C081"
+      ],
+      "currentFormalStatus": "AUTOMATED_PASS_PHASE6_PENDING"
     },
     "QR-014": {
       "description": "軌跡品質",
@@ -9121,7 +7138,8 @@
         "TC-D3-044-C001",
         "TC-D3-045-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D3-041-C001",
         "TC-D3-042-C001",
         "TC-D3-043-C001",
@@ -9130,18 +7148,8 @@
         "TC-D3-044-C001",
         "TC-D3-045-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D3-041-C001",
-        "TC-D3-042-C001",
-        "TC-D3-043-C001",
-        "TC-D3-043-C002",
-        "TC-D3-043-C003",
-        "TC-D3-044-C001",
-        "TC-D3-045-C001"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "QR-015": {
       "description": "人間による体験評価",
@@ -9241,7 +7249,9 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [],
+      "openHumanWitnesses": [
         "TC-D7-029-C001",
         "TC-D7-029-C002",
         "TC-D7-029-C003",
@@ -9327,95 +7337,7 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "phase6Cases": [
-        "TC-D7-029-C001",
-        "TC-D7-029-C002",
-        "TC-D7-029-C003",
-        "TC-D7-029-C004",
-        "TC-D7-029-C005",
-        "TC-D7-029-C006",
-        "TC-D7-029-C007",
-        "TC-D7-029-C008",
-        "TC-D7-029-C009",
-        "TC-D7-029-C010",
-        "TC-D7-029-C011",
-        "TC-D7-029-C012",
-        "TC-D7-029-C013",
-        "TC-D7-029-C014",
-        "TC-D7-029-C015",
-        "TC-D7-029-C016",
-        "TC-D7-029-C017",
-        "TC-D7-029-C018",
-        "TC-D7-029-C019",
-        "TC-D7-029-C020",
-        "TC-D7-029-C021",
-        "TC-D7-029-C022",
-        "TC-D7-029-C023",
-        "TC-D7-029-C024",
-        "TC-D7-029-C025",
-        "TC-D7-029-C026",
-        "TC-D7-029-C027",
-        "TC-D7-029-C028",
-        "TC-D7-029-C029",
-        "TC-D7-029-C030",
-        "TC-D7-029-C031",
-        "TC-D7-029-C032",
-        "TC-D7-029-C033",
-        "TC-D7-029-C034",
-        "TC-D7-029-C035",
-        "TC-D7-029-C036",
-        "TC-D7-029-C037",
-        "TC-D7-029-C038",
-        "TC-D7-029-C039",
-        "TC-D7-029-C040",
-        "TC-D7-029-C041",
-        "TC-D7-029-C042",
-        "TC-D7-029-C043",
-        "TC-D7-029-C044",
-        "TC-D7-029-C045",
-        "TC-D7-029-C046",
-        "TC-D7-029-C047",
-        "TC-D7-029-C048",
-        "TC-D7-029-C049",
-        "TC-D7-029-C050",
-        "TC-D7-029-C051",
-        "TC-D7-029-C052",
-        "TC-D7-029-C053",
-        "TC-D7-029-C054",
-        "TC-D7-029-C055",
-        "TC-D7-029-C056",
-        "TC-D7-029-C057",
-        "TC-D7-029-C058",
-        "TC-D7-029-C059",
-        "TC-D7-029-C060",
-        "TC-D7-029-C061",
-        "TC-D7-029-C062",
-        "TC-D7-029-C063",
-        "TC-D7-029-C064",
-        "TC-D7-029-C065",
-        "TC-D7-029-C066",
-        "TC-D7-029-C067",
-        "TC-D7-029-C068",
-        "TC-D7-029-C069",
-        "TC-D7-029-C070",
-        "TC-D7-029-C071",
-        "TC-D7-029-C072",
-        "TC-D7-029-C073",
-        "TC-D7-029-C074",
-        "TC-D7-029-C075",
-        "TC-D7-029-C076",
-        "TC-D7-029-C077",
-        "TC-D7-029-C078",
-        "TC-D7-029-C079",
-        "TC-D7-029-C080",
-        "TC-D7-029-C081",
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "e8Verified": [],
-      "e8Open": [],
-      "status": "PENDING_PHASE6"
+      "currentFormalStatus": "HUMAN_NOT_RUN"
     },
     "QR-016": {
       "description": "人間評価条件・証跡",
@@ -9435,19 +7357,14 @@
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [],
+      "openHumanWitnesses": [
         "TC-D7-030-C001",
         "TC-D7-030-C002",
         "TC-D7-030-C003"
       ],
-      "phase6Cases": [
-        "TC-D7-030-C001",
-        "TC-D7-030-C002",
-        "TC-D7-030-C003"
-      ],
-      "e8Verified": [],
-      "e8Open": [],
-      "status": "PENDING_PHASE6"
+      "currentFormalStatus": "HUMAN_NOT_RUN"
     },
     "QR-017": {
       "description": "近傍最低件数・成功率",
@@ -9481,7 +7398,8 @@
         "TC-D7-007-C001",
         "TC-D7-007-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-021-C001",
         "TC-D4-021-C002",
         "TC-D4-021-C003",
@@ -9500,28 +7418,8 @@
         "TC-D7-007-C001",
         "TC-D7-007-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [],
-      "e8Open": [
-        "TC-D4-021-C001",
-        "TC-D4-021-C002",
-        "TC-D4-021-C003",
-        "TC-D4-021-C004",
-        "TC-D4-021-C005",
-        "TC-D4-021-C006",
-        "TC-D4-021-C007",
-        "TC-D4-021-C008",
-        "TC-D4-021-C009",
-        "TC-D4-021-C010",
-        "TC-D4-021-C011",
-        "TC-D4-021-C012",
-        "TC-D4-021-C013",
-        "TC-D4-021-C014",
-        "TC-D4-022-C001",
-        "TC-D7-007-C001",
-        "TC-D7-007-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-001": {
       "description": "設計承認後の実装",
@@ -9543,21 +7441,15 @@
         "TC-D8-008-C001",
         "TC-D8-017-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C003",
         "TC-D8-001-C001",
         "TC-D8-008-C001",
         "TC-D8-017-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C003",
-        "TC-D8-001-C001",
-        "TC-D8-008-C001",
-        "TC-D8-017-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-002": {
       "description": "GitHub書込承認",
@@ -9586,7 +7478,8 @@
         "TC-D8-005-C007",
         "TC-D8-005-C008"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C004",
         "TC-D8-003-C001",
         "TC-D8-003-C002",
@@ -9599,22 +7492,8 @@
         "TC-D8-005-C007",
         "TC-D8-005-C008"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C004",
-        "TC-D8-003-C001",
-        "TC-D8-003-C002",
-        "TC-D8-005-C001",
-        "TC-D8-005-C002",
-        "TC-D8-005-C003",
-        "TC-D8-005-C004",
-        "TC-D8-005-C005",
-        "TC-D8-005-C006",
-        "TC-D8-005-C007",
-        "TC-D8-005-C008"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-003": {
       "description": "固定基点SHA",
@@ -9638,7 +7517,8 @@
         "TC-D8-002-C002",
         "TC-D8-002-C003"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-021-C001",
         "TC-D7-021-C002",
         "TC-D7-028-C005",
@@ -9646,17 +7526,8 @@
         "TC-D8-002-C002",
         "TC-D8-002-C003"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-021-C001",
-        "TC-D7-021-C002",
-        "TC-D7-028-C005",
-        "TC-D8-002-C001",
-        "TC-D8-002-C002",
-        "TC-D8-002-C003"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-004": {
       "description": "成果物ハッシュ",
@@ -9678,24 +7549,16 @@
         "TC-D8-006-C001",
         "TC-D8-006-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-021-C001",
         "TC-D7-021-C002",
         "TC-D7-028-C006",
         "TC-D8-006-C001",
         "TC-D8-006-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-021-C001",
-        "TC-D7-021-C002",
-        "TC-D8-006-C001",
-        "TC-D8-006-C002"
-      ],
-      "e8Open": [
-        "TC-D7-028-C006"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-005": {
       "description": "GitHub登録後読み戻し",
@@ -9718,23 +7581,16 @@
         "TC-D8-002-C003",
         "TC-D8-020-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C007",
         "TC-D8-002-C001",
         "TC-D8-002-C002",
         "TC-D8-002-C003",
         "TC-D8-020-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C007",
-        "TC-D8-002-C001",
-        "TC-D8-002-C002",
-        "TC-D8-002-C003",
-        "TC-D8-020-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-006": {
       "description": "変更許可範囲",
@@ -9763,7 +7619,8 @@
         "TC-D8-004-C008",
         "TC-D8-004-C009"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-021-C001",
         "TC-D7-021-C002",
         "TC-D7-028-C008",
@@ -9777,24 +7634,8 @@
         "TC-D8-004-C008",
         "TC-D8-004-C009"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-021-C001",
-        "TC-D7-021-C002",
-        "TC-D8-004-C001",
-        "TC-D8-004-C002",
-        "TC-D8-004-C003",
-        "TC-D8-004-C004",
-        "TC-D8-004-C005",
-        "TC-D8-004-C006",
-        "TC-D8-004-C007",
-        "TC-D8-004-C008",
-        "TC-D8-004-C009"
-      ],
-      "e8Open": [
-        "TC-D7-028-C008"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-007": {
       "description": "段階ゲート・自律ループ",
@@ -9816,21 +7657,15 @@
         "TC-D8-017-C001",
         "TC-D8-018-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-026-C001",
         "TC-D7-028-C009",
         "TC-D8-017-C001",
         "TC-D8-018-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-026-C001",
-        "TC-D7-028-C009",
-        "TC-D8-017-C001",
-        "TC-D8-018-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-008": {
       "description": "未承認仕様変更禁止",
@@ -9863,7 +7698,8 @@
         "TC-D8-007-C002",
         "TC-D8-008-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C010",
         "TC-D8-004-C001",
         "TC-D8-004-C002",
@@ -9878,24 +7714,8 @@
         "TC-D8-007-C002",
         "TC-D8-008-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C010",
-        "TC-D8-004-C001",
-        "TC-D8-004-C002",
-        "TC-D8-004-C003",
-        "TC-D8-004-C004",
-        "TC-D8-004-C005",
-        "TC-D8-004-C006",
-        "TC-D8-004-C007",
-        "TC-D8-004-C008",
-        "TC-D8-004-C009",
-        "TC-D8-007-C001",
-        "TC-D8-007-C002",
-        "TC-D8-008-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-009": {
       "description": "可能な限り独立レビュー",
@@ -9915,20 +7735,14 @@
         "TC-D8-022-C001",
         "TC-D8-022-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C011",
         "TC-D8-022-C001",
         "TC-D8-022-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D8-022-C001"
-      ],
-      "e8Open": [
-        "TC-D7-028-C011",
-        "TC-D8-022-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-010": {
       "description": "正確なステータス",
@@ -9947,18 +7761,13 @@
         "TC-D7-028-C012",
         "TC-D8-021-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C012",
         "TC-D8-021-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D8-021-C001"
-      ],
-      "e8Open": [
-        "TC-D7-028-C012"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-011": {
       "description": "PR・マージ・公開個別承認",
@@ -9985,7 +7794,8 @@
         "TC-D8-005-C008",
         "TC-D8-024-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C013",
         "TC-D8-005-C001",
         "TC-D8-005-C002",
@@ -9997,21 +7807,8 @@
         "TC-D8-005-C008",
         "TC-D8-024-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C013",
-        "TC-D8-005-C001",
-        "TC-D8-005-C002",
-        "TC-D8-005-C003",
-        "TC-D8-005-C004",
-        "TC-D8-005-C005",
-        "TC-D8-005-C006",
-        "TC-D8-005-C007",
-        "TC-D8-005-C008",
-        "TC-D8-024-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-012": {
       "description": "force push・共有設定変更禁止",
@@ -10047,7 +7844,8 @@
         "TC-D8-005-C007",
         "TC-D8-005-C008"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C014",
         "TC-D8-004-C001",
         "TC-D8-004-C002",
@@ -10067,29 +7865,8 @@
         "TC-D8-005-C007",
         "TC-D8-005-C008"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C014",
-        "TC-D8-004-C001",
-        "TC-D8-004-C002",
-        "TC-D8-004-C003",
-        "TC-D8-004-C004",
-        "TC-D8-004-C005",
-        "TC-D8-004-C006",
-        "TC-D8-004-C007",
-        "TC-D8-004-C008",
-        "TC-D8-004-C009",
-        "TC-D8-005-C001",
-        "TC-D8-005-C002",
-        "TC-D8-005-C003",
-        "TC-D8-005-C004",
-        "TC-D8-005-C005",
-        "TC-D8-005-C006",
-        "TC-D8-005-C007",
-        "TC-D8-005-C008"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-013": {
       "description": "停止条件",
@@ -10144,7 +7921,8 @@
         "TC-D8-013-C010",
         "TC-D8-013-C011"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-024-C001",
         "TC-D7-025-C001",
         "TC-D7-026-C001",
@@ -10176,42 +7954,8 @@
         "TC-D8-013-C010",
         "TC-D8-013-C011"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-024-C001",
-        "TC-D7-025-C001",
-        "TC-D7-026-C001",
-        "TC-D8-008-C001",
-        "TC-D8-009-C001",
-        "TC-D8-009-C002",
-        "TC-D8-009-C003",
-        "TC-D8-009-C004",
-        "TC-D8-009-C005",
-        "TC-D8-010-C001",
-        "TC-D8-011-C001",
-        "TC-D8-012-C001",
-        "TC-D8-012-C002",
-        "TC-D8-012-C003",
-        "TC-D8-012-C004",
-        "TC-D8-012-C005",
-        "TC-D8-012-C006",
-        "TC-D8-012-C007",
-        "TC-D8-013-C001",
-        "TC-D8-013-C002",
-        "TC-D8-013-C003",
-        "TC-D8-013-C004",
-        "TC-D8-013-C005",
-        "TC-D8-013-C006",
-        "TC-D8-013-C007",
-        "TC-D8-013-C008",
-        "TC-D8-013-C009",
-        "TC-D8-013-C010",
-        "TC-D8-013-C011"
-      ],
-      "e8Open": [
-        "TC-D7-028-C015"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-014": {
       "description": "変更管理",
@@ -10234,19 +7978,14 @@
         "TC-D8-010-C001",
         "TC-D8-019-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C016",
         "TC-D8-010-C001",
         "TC-D8-019-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-028-C016",
-        "TC-D8-010-C001",
-        "TC-D8-019-C001"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-015": {
       "description": "既存ゲーム保護",
@@ -10276,7 +8015,8 @@
         "TC-D8-004-C008",
         "TC-D8-004-C009"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-020-C001",
         "TC-D7-020-C002",
         "TC-D7-028-C017",
@@ -10290,23 +8030,8 @@
         "TC-D8-004-C008",
         "TC-D8-004-C009"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-020-C001",
-        "TC-D7-020-C002",
-        "TC-D7-028-C017",
-        "TC-D8-004-C001",
-        "TC-D8-004-C002",
-        "TC-D8-004-C003",
-        "TC-D8-004-C004",
-        "TC-D8-004-C005",
-        "TC-D8-004-C006",
-        "TC-D8-004-C007",
-        "TC-D8-004-C008",
-        "TC-D8-004-C009"
-      ],
-      "e8Open": [],
-      "status": "COVERED_BY_E8_EVIDENCE"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-016": {
       "description": "制約付き自律調整",
@@ -10359,7 +8084,8 @@
         "TC-D8-013-C010",
         "TC-D8-013-C011"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-005-C001",
         "TC-D4-005-C002",
         "TC-D4-025-C001",
@@ -10389,40 +8115,8 @@
         "TC-D8-013-C010",
         "TC-D8-013-C011"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D8-011-C001",
-        "TC-D8-012-C001",
-        "TC-D8-012-C002",
-        "TC-D8-012-C003",
-        "TC-D8-012-C004",
-        "TC-D8-012-C005",
-        "TC-D8-012-C006",
-        "TC-D8-012-C007",
-        "TC-D8-013-C001",
-        "TC-D8-013-C002",
-        "TC-D8-013-C003",
-        "TC-D8-013-C004",
-        "TC-D8-013-C005",
-        "TC-D8-013-C006",
-        "TC-D8-013-C007",
-        "TC-D8-013-C008",
-        "TC-D8-013-C009",
-        "TC-D8-013-C010",
-        "TC-D8-013-C011"
-      ],
-      "e8Open": [
-        "TC-D4-005-C001",
-        "TC-D4-005-C002",
-        "TC-D4-025-C001",
-        "TC-D4-026-C001",
-        "TC-D4-027-C001",
-        "TC-D4-027-C002",
-        "TC-D4-028-C001",
-        "TC-D4-029-C001",
-        "TC-D7-028-C018"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-017": {
       "description": "自動・実機・人間分離",
@@ -10445,22 +8139,15 @@
         "TC-D8-023-C002",
         "TC-D8-024-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-028-C019",
         "TC-D8-023-C001",
         "TC-D8-023-C002",
         "TC-D8-024-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D8-023-C001",
-        "TC-D8-024-C001"
-      ],
-      "e8Open": [
-        "TC-D7-028-C019",
-        "TC-D8-023-C002"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-018": {
       "description": "調整台帳・累積差分",
@@ -10495,7 +8182,8 @@
         "TC-D8-016-C001",
         "TC-D8-016-C002"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D4-026-C001",
         "TC-D4-030-C001",
         "TC-D4-030-C002",
@@ -10507,22 +8195,8 @@
         "TC-D8-016-C001",
         "TC-D8-016-C002"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-025-C001",
-        "TC-D8-011-C001",
-        "TC-D8-014-C001",
-        "TC-D8-015-C001",
-        "TC-D8-016-C001",
-        "TC-D8-016-C002"
-      ],
-      "e8Open": [
-        "TC-D4-026-C001",
-        "TC-D4-030-C001",
-        "TC-D4-030-C002",
-        "TC-D7-028-C020"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     },
     "GOV-019": {
       "description": "合格基準・テスト保護",
@@ -10574,7 +8248,8 @@
         "TC-D8-007-C002",
         "TC-D8-021-C001"
       ],
-      "assessedCases": [
+      "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "currentAutomatedOrPhase4Witnesses": [
         "TC-D7-022-C001",
         "TC-D7-022-C002",
         "TC-D7-023-C001",
@@ -10608,51 +8283,205 @@
         "TC-D8-007-C002",
         "TC-D8-021-C001"
       ],
-      "phase6Cases": [],
-      "e8Verified": [
-        "TC-D7-022-C001",
-        "TC-D7-022-C002",
-        "TC-D7-023-C001",
-        "TC-D7-023-C002",
-        "TC-D7-023-C003",
-        "TC-D7-023-C004",
-        "TC-D7-023-C005",
-        "TC-D7-023-C006",
-        "TC-D7-023-C007",
-        "TC-D7-023-C008",
-        "TC-D7-023-C009",
-        "TC-D7-023-C010",
-        "TC-D7-023-C011",
-        "TC-D7-023-C012",
-        "TC-D7-023-C024",
-        "TC-D7-028-C021",
-        "TC-D8-006-C001",
-        "TC-D8-006-C002",
-        "TC-D8-007-C001",
-        "TC-D8-007-C002",
-        "TC-D8-021-C001"
-      ],
-      "e8Open": [
-        "TC-D7-023-C013",
-        "TC-D7-023-C014",
-        "TC-D7-023-C015",
-        "TC-D7-023-C016",
-        "TC-D7-023-C017",
-        "TC-D7-023-C018",
-        "TC-D7-023-C019",
-        "TC-D7-023-C020",
-        "TC-D7-023-C021",
-        "TC-D7-023-C022",
-        "TC-D7-023-C023"
-      ],
-      "status": "PENDING_E8"
+      "openHumanWitnesses": [],
+      "currentFormalStatus": "PASS"
     }
   },
   "total": 190,
-  "caseAndParentLinksAreEvidenceIndex": true,
+  "basicDesignIdsCovered": 31,
+  "detailedDesignUnitsDefined": 132,
+  "detailedDesignEvidence": {
+    "frozenDirect": [
+      "DD-D1-001",
+      "DD-D1-002",
+      "DD-D1-003",
+      "DD-D1-004",
+      "DD-D1-005",
+      "DD-D1-006",
+      "DD-D1-007",
+      "DD-D1-008",
+      "DD-D1-009",
+      "DD-D1-010",
+      "DD-D1-011",
+      "DD-D1-012",
+      "DD-D1-013",
+      "DD-D1-014",
+      "DD-D2-001",
+      "DD-D2-002",
+      "DD-D2-003",
+      "DD-D2-004",
+      "DD-D2-005",
+      "DD-D2-006",
+      "DD-D2-007",
+      "DD-D2-008",
+      "DD-D2-009",
+      "DD-D2-010",
+      "DD-D2-011",
+      "DD-D2-012",
+      "DD-D2-013",
+      "DD-D2-014",
+      "DD-D2-015",
+      "DD-D2-016",
+      "DD-D2-017",
+      "DD-D2-018",
+      "DD-D2-020",
+      "DD-D3-003",
+      "DD-D3-004",
+      "DD-D3-005",
+      "DD-D3-006",
+      "DD-D3-007",
+      "DD-D3-008",
+      "DD-D3-009",
+      "DD-D3-010",
+      "DD-D3-011",
+      "DD-D3-012",
+      "DD-D3-013",
+      "DD-D3-014",
+      "DD-D3-015",
+      "DD-D3-016",
+      "DD-D3-017",
+      "DD-D3-018",
+      "DD-D4-001",
+      "DD-D4-002",
+      "DD-D4-003",
+      "DD-D4-004",
+      "DD-D4-005",
+      "DD-D4-006",
+      "DD-D4-007",
+      "DD-D4-008",
+      "DD-D4-009",
+      "DD-D4-013",
+      "DD-D5-002",
+      "DD-D5-003",
+      "DD-D5-004",
+      "DD-D5-005",
+      "DD-D5-006",
+      "DD-D5-007",
+      "DD-D5-008",
+      "DD-D5-009",
+      "DD-D5-010",
+      "DD-D5-011",
+      "DD-D5-012",
+      "DD-D5-013",
+      "DD-D5-014",
+      "DD-D5-015",
+      "DD-D5-016",
+      "DD-D5-017",
+      "DD-D5-018",
+      "DD-D6-001",
+      "DD-D6-002",
+      "DD-D6-003",
+      "DD-D6-004",
+      "DD-D6-005",
+      "DD-D6-006",
+      "DD-D6-007",
+      "DD-D6-008",
+      "DD-D6-009",
+      "DD-D6-010",
+      "DD-D6-011",
+      "DD-D6-013",
+      "DD-D6-014",
+      "DD-D6-016",
+      "DD-D6-017",
+      "DD-D6-018",
+      "DD-D6-019",
+      "DD-D6-020",
+      "DD-D7-002",
+      "DD-D7-003",
+      "DD-D7-006",
+      "DD-D7-007",
+      "DD-D7-008",
+      "DD-D7-009",
+      "DD-D7-010",
+      "DD-D8-002",
+      "DD-D8-003",
+      "DD-D8-004",
+      "DD-D8-005",
+      "DD-D8-006",
+      "DD-D8-007",
+      "DD-D8-008",
+      "DD-D8-009",
+      "DD-D8-010",
+      "DD-D8-011",
+      "DD-D8-012",
+      "DD-D8-013",
+      "DD-D8-014",
+      "DD-D8-015",
+      "DD-D8-016",
+      "DD-D8-017",
+      "DD-D8-018"
+    ],
+    "supplementalEvidenceByDesignId": {
+      "DD-D2-019": [
+        "TC-D7-004-C002",
+        "TC-D3-023-C002",
+        "TC-D3-026-C002"
+      ],
+      "DD-D3-001": [
+        "TC-D3-001-C001",
+        "TC-D3-001-C002",
+        "TC-D3-003-C001"
+      ],
+      "DD-D3-002": [
+        "TC-D3-002-C001",
+        "TC-D3-005-C001",
+        "TC-D7-005-C001"
+      ],
+      "DD-D4-010": [
+        "TC-D4-005-C001",
+        "TC-D4-005-C002",
+        "TC-D4-028-C001"
+      ],
+      "DD-D4-011": [
+        "TC-D4-025-C001",
+        "TC-D4-026-C001",
+        "TC-D4-027-C001"
+      ],
+      "DD-D4-012": [
+        "TC-D4-028-C001",
+        "TC-D8-013-C002"
+      ],
+      "DD-D4-014": [
+        "TC-D4-030-C001",
+        "TC-D4-030-C002"
+      ],
+      "DD-D5-001": [
+        "TC-D5-001-C001",
+        "TC-D5-002-C001"
+      ],
+      "DD-D6-012": [
+        "TC-D6-008-C001",
+        "TC-D6-046-C001"
+      ],
+      "DD-D6-015": [
+        "TC-D6-010-C001",
+        "TC-D6-046-C001"
+      ],
+      "DD-D7-001": [
+        "TC-D7-021-C001",
+        "TC-D7-022-C001",
+        "TC-D8-021-C001"
+      ],
+      "DD-D7-004": [
+        "TC-D7-026-C001",
+        "TC-D8-017-C001",
+        "TC-D8-018-C001"
+      ],
+      "DD-D7-005": [
+        "TC-D4-011-C001",
+        "TC-D4-012-C001",
+        "TC-D7-005-C001"
+      ],
+      "DD-D8-001": [
+        "TC-D8-008-C001"
+      ]
+    }
+  },
+  "parentCases": 296,
+  "childCases": 982,
   "statusCounts": {
-    "PENDING_E8": 173,
-    "COVERED_BY_E8_EVIDENCE": 14,
-    "PENDING_PHASE6": 3
+    "PASS": 148,
+    "AUTOMATED_PASS_PHASE6_PENDING": 40,
+    "HUMAN_NOT_RUN": 2
   }
 }

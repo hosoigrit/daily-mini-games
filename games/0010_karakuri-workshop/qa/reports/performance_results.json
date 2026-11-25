@@ -4729,5 +4729,5255 @@
       "runId": "CR008-E8-CHROMIUM-MODE-CROSSCHECK",
       "fixedAll20": true
     }
+  },
+  "CR009": {
+    "CR004-B": [
+      {
+        "environment": "Node.js",
+        "version": "v26.13.0",
+        "profile": "PP03",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 101.85348499999418,
+          "ticksPerSecond": 42413.86536749574,
+          "p95Milliseconds": 0.05682400000000598,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        },
+        "formalRounds": 5,
+        "warmups": 1
+      },
+      {
+        "environment": "Chromium",
+        "version": "158.0.8127.18",
+        "profile": "PP03",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 96.89999999990687,
+          "ticksPerSecond": 44582.0433436961,
+          "p95Milliseconds": 0.10000000009313226,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        },
+        "formalRounds": 5,
+        "warmups": 1
+      }
+    ],
+    "network": {
+      "caseId": "TC-D7-014-C001",
+      "status": "PASS",
+      "details": {
+        "before": {
+          "phase": "before",
+          "samples": [
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=before0",
+              "app": 0.0619,
+              "startedAt": 869.6999999999534,
+              "completedAt": 923.1999999999534,
+              "rttMs": 53.4381,
+              "connectionMs": 0,
+              "responseStart": 920.3999999999069,
+              "responseEnd": 922.5,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=before1",
+              "app": 0.0724,
+              "startedAt": 923.3000000000466,
+              "completedAt": 977.3000000000466,
+              "rttMs": 53.9276,
+              "connectionMs": 0,
+              "responseStart": 974.0999999998603,
+              "responseEnd": 976.8999999999069,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=before2",
+              "app": 0.0796,
+              "startedAt": 977.3999999999069,
+              "completedAt": 1031.6999999999534,
+              "rttMs": 54.22040000004657,
+              "connectionMs": 0,
+              "responseStart": 1027.8999999999069,
+              "responseEnd": 1030.8999999999069,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=before3",
+              "app": 0.0621,
+              "startedAt": 1031.6999999999534,
+              "completedAt": 1085,
+              "rttMs": 53.237900000046565,
+              "connectionMs": 0,
+              "responseStart": 1082.3999999999069,
+              "responseEnd": 1084.3000000000466,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=before4",
+              "app": 0.0468,
+              "startedAt": 1085.0999999998603,
+              "completedAt": 1138.8000000000466,
+              "rttMs": 53.65320000018627,
+              "connectionMs": 0,
+              "responseStart": 1135.8999999999069,
+              "responseEnd": 1137.8000000000466,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            }
+          ],
+          "download": {
+            "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=2MiB&probe=beforebandwidth",
+            "app": 0.0998,
+            "startedAt": 1138.8999999999069,
+            "completedAt": 2881.5999999998603,
+            "rttMs": 1742.6001999999535,
+            "connectionMs": 0,
+            "responseStart": 1189.5999999998603,
+            "responseEnd": 2874.5,
+            "bytes": 2097152,
+            "contentEncoding": null,
+            "cache": "no-store"
+          },
+          "RTT": 53.65320000018627,
+          "Mbps": 9.957395691138116,
+          "profile": {
+            "offline": false,
+            "latency": 50,
+            "downloadThroughput": 1250000,
+            "uploadThroughput": 1250000,
+            "connectionType": "ethernet"
+          }
+        },
+        "after": {
+          "phase": "after",
+          "samples": [
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=after0",
+              "app": 0.0727,
+              "startedAt": 105.9000000001397,
+              "completedAt": 159.30000000004657,
+              "rttMs": 53.32729999990687,
+              "connectionMs": 0,
+              "responseStart": 156.60000000009313,
+              "responseEnd": 158.5,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=after1",
+              "app": 0.0751,
+              "startedAt": 159.4000000001397,
+              "completedAt": 212.80000000004657,
+              "rttMs": 53.32489999990687,
+              "connectionMs": 0,
+              "responseStart": 210.10000000009313,
+              "responseEnd": 212,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=after2",
+              "app": 0.0655,
+              "startedAt": 212.9000000001397,
+              "completedAt": 266.30000000004657,
+              "rttMs": 53.33449999990687,
+              "connectionMs": 0,
+              "responseStart": 263.4000000001397,
+              "responseEnd": 265.30000000004657,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=after3",
+              "app": 0.0971,
+              "startedAt": 266.4000000001397,
+              "completedAt": 319.9000000001397,
+              "rttMs": 53.4029,
+              "connectionMs": 0,
+              "responseStart": 317.19999999995343,
+              "responseEnd": 319.19999999995343,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            },
+            {
+              "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=rtt&probe=after4",
+              "app": 0.0498,
+              "startedAt": 319.9000000001397,
+              "completedAt": 374,
+              "rttMs": 54.050199999860304,
+              "connectionMs": 0,
+              "responseStart": 370.4000000001397,
+              "responseEnd": 373.69999999995343,
+              "bytes": 3,
+              "contentEncoding": null,
+              "cache": "no-store"
+            }
+          ],
+          "download": {
+            "href": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/qa/away?calibration=2MiB&probe=afterbandwidth",
+            "app": 0.4328,
+            "startedAt": 374.10000000009313,
+            "completedAt": 2119.100000000093,
+            "rttMs": 1744.5672,
+            "connectionMs": 0,
+            "responseStart": 424.60000000009313,
+            "responseEnd": 2110.6999999999534,
+            "bytes": 2097152,
+            "contentEncoding": null,
+            "cache": "no-store"
+          },
+          "RTT": 53.33449999990687,
+          "Mbps": 9.950308997094709,
+          "profile": {
+            "offline": false,
+            "latency": 50,
+            "downloadThroughput": 1250000,
+            "uploadThroughput": 1250000,
+            "connectionType": "ethernet"
+          }
+        },
+        "cold": [
+          {
+            "condition": "cold",
+            "i": 1,
+            "reading": {
+              "milliseconds": 795,
+              "timestamp": 1795645689484.5,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": false,
+                "id": "15605.2",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": false,
+                "id": "15605.3",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": false,
+                "id": "15605.4",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": false,
+                "id": "15605.5",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": false,
+                "id": "15605.6",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": false,
+                "id": "15605.14",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": false,
+                "id": "15605.15",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": false,
+                "id": "15605.16",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": false,
+                "id": "15605.12",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": false,
+                "id": "15605.13",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": false,
+                "id": "15605.17",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": false,
+                "id": "15605.18",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": false,
+                "id": "15605.19",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": false,
+                "id": "15605.20",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": false,
+                "id": "15605.21",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": false,
+                "id": "15605.22",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": false,
+                "id": "15605.23",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15605.24",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": false,
+                "id": "15605.27",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": false,
+                "id": "15605.26",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": false,
+                "id": "15605.28",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": false,
+                "id": "15605.29",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": false,
+                "id": "15605.25",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": false,
+                "id": "15605.30",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": false,
+                "id": "15605.31",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": false,
+                "id": "15605.32",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": false,
+                "id": "15605.33",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": false,
+                "id": "15605.35",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": false,
+                "id": "15605.34",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15605.36",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": false,
+                "id": "15605.37",
+                "status": 200,
+                "fromCache": false
+              }
+            ]
+          },
+          {
+            "condition": "cold",
+            "i": 2,
+            "reading": {
+              "milliseconds": 794,
+              "timestamp": 1795645690368.9,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": false,
+                "id": "15651.2",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": false,
+                "id": "15651.3",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": false,
+                "id": "15651.4",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": false,
+                "id": "15651.5",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": false,
+                "id": "15651.6",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": false,
+                "id": "15651.14",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": false,
+                "id": "15651.15",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": false,
+                "id": "15651.16",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": false,
+                "id": "15651.12",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": false,
+                "id": "15651.13",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": false,
+                "id": "15651.17",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": false,
+                "id": "15651.18",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": false,
+                "id": "15651.19",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": false,
+                "id": "15651.20",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": false,
+                "id": "15651.21",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": false,
+                "id": "15651.22",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": false,
+                "id": "15651.23",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15651.24",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": false,
+                "id": "15651.26",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": false,
+                "id": "15651.27",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": false,
+                "id": "15651.28",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": false,
+                "id": "15651.29",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": false,
+                "id": "15651.25",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": false,
+                "id": "15651.30",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": false,
+                "id": "15651.31",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": false,
+                "id": "15651.32",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": false,
+                "id": "15651.33",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": false,
+                "id": "15651.35",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": false,
+                "id": "15651.34",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15651.36",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": false,
+                "id": "15651.37",
+                "status": 200,
+                "fromCache": false
+              }
+            ]
+          },
+          {
+            "condition": "cold",
+            "i": 3,
+            "reading": {
+              "milliseconds": 792,
+              "timestamp": 1795645691254.2,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": false,
+                "id": "15689.2",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": false,
+                "id": "15689.3",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": false,
+                "id": "15689.4",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": false,
+                "id": "15689.5",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": false,
+                "id": "15689.10",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": false,
+                "id": "15689.13",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": false,
+                "id": "15689.14",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": false,
+                "id": "15689.15",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": false,
+                "id": "15689.11",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": false,
+                "id": "15689.12",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": false,
+                "id": "15689.16",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": false,
+                "id": "15689.17",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": false,
+                "id": "15689.18",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": false,
+                "id": "15689.19",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": false,
+                "id": "15689.20",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": false,
+                "id": "15689.21",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": false,
+                "id": "15689.22",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15689.23",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": false,
+                "id": "15689.25",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": false,
+                "id": "15689.26",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": false,
+                "id": "15689.27",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": false,
+                "id": "15689.28",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": false,
+                "id": "15689.24",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": false,
+                "id": "15689.29",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": false,
+                "id": "15689.30",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": false,
+                "id": "15689.31",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": false,
+                "id": "15689.32",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": false,
+                "id": "15689.34",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": false,
+                "id": "15689.33",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15689.35",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": false,
+                "id": "15689.36",
+                "status": 200,
+                "fromCache": false
+              }
+            ]
+          },
+          {
+            "condition": "cold",
+            "i": 4,
+            "reading": {
+              "milliseconds": 793.6000000000931,
+              "timestamp": 1795645692139.6,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": false,
+                "id": "15729.2",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": false,
+                "id": "15729.3",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": false,
+                "id": "15729.4",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": false,
+                "id": "15729.5",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": false,
+                "id": "15729.6",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": false,
+                "id": "15729.14",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": false,
+                "id": "15729.15",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": false,
+                "id": "15729.16",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": false,
+                "id": "15729.12",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": false,
+                "id": "15729.13",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": false,
+                "id": "15729.17",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": false,
+                "id": "15729.18",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": false,
+                "id": "15729.19",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": false,
+                "id": "15729.20",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": false,
+                "id": "15729.21",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": false,
+                "id": "15729.22",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": false,
+                "id": "15729.23",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15729.24",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": false,
+                "id": "15729.27",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": false,
+                "id": "15729.26",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": false,
+                "id": "15729.28",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": false,
+                "id": "15729.29",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": false,
+                "id": "15729.25",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": false,
+                "id": "15729.30",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": false,
+                "id": "15729.31",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": false,
+                "id": "15729.32",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": false,
+                "id": "15729.33",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": false,
+                "id": "15729.35",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": false,
+                "id": "15729.34",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15729.36",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": false,
+                "id": "15729.37",
+                "status": 200,
+                "fromCache": false
+              }
+            ]
+          },
+          {
+            "condition": "cold",
+            "i": 5,
+            "reading": {
+              "milliseconds": 786.6000000000931,
+              "timestamp": 1795645693028.6,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": false,
+                "id": "15769.2",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": false,
+                "id": "15769.3",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": false,
+                "id": "15769.4",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": false,
+                "id": "15769.5",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": false,
+                "id": "15769.6",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": false,
+                "id": "15769.14",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": false,
+                "id": "15769.15",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": false,
+                "id": "15769.16",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": false,
+                "id": "15769.12",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": false,
+                "id": "15769.13",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": false,
+                "id": "15769.17",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": false,
+                "id": "15769.18",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": false,
+                "id": "15769.19",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": false,
+                "id": "15769.20",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": false,
+                "id": "15769.21",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": false,
+                "id": "15769.22",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": false,
+                "id": "15769.23",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15769.24",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": false,
+                "id": "15769.27",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": false,
+                "id": "15769.26",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": false,
+                "id": "15769.28",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": false,
+                "id": "15769.29",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": false,
+                "id": "15769.25",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": false,
+                "id": "15769.30",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": false,
+                "id": "15769.31",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": false,
+                "id": "15769.32",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": false,
+                "id": "15769.33",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": false,
+                "id": "15769.35",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": false,
+                "id": "15769.34",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": false,
+                "id": "15769.36",
+                "status": 200,
+                "fromCache": false
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": false,
+                "id": "15769.37",
+                "status": 200,
+                "fromCache": false
+              }
+            ]
+          }
+        ],
+        "warm": [
+          {
+            "condition": "warm",
+            "i": 1,
+            "reading": {
+              "milliseconds": 36.0999999998603,
+              "timestamp": 1795645693926.2,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": true,
+                "id": "15552.85",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": true,
+                "id": "15552.86",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.87",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.88",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": true,
+                "id": "15552.89",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.95",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": true,
+                "id": "15552.96",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.97",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": true,
+                "id": "15552.98",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.99",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.100",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.101",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.102",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": true,
+                "id": "15552.103",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": true,
+                "id": "15552.104",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.105",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": true,
+                "id": "15552.106",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": true,
+                "id": "15552.107",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": true,
+                "id": "15552.108",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": true,
+                "id": "15552.109",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.110",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.111",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": true,
+                "id": "15552.112",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.113",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.114",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": true,
+                "id": "15552.115",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.116",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.117",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": true,
+                "id": "15552.118",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.119",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": true,
+                "id": "15552.120",
+                "status": 200,
+                "fromCache": true
+              }
+            ]
+          },
+          {
+            "condition": "warm",
+            "i": 2,
+            "reading": {
+              "milliseconds": 29.899999999906868,
+              "timestamp": 1795645693968.8,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": true,
+                "id": "15552.123",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": true,
+                "id": "15552.124",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.125",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.126",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": true,
+                "id": "15552.127",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.133",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": true,
+                "id": "15552.134",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.135",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": true,
+                "id": "15552.136",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.137",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.138",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.139",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.140",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": true,
+                "id": "15552.141",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": true,
+                "id": "15552.142",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.143",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": true,
+                "id": "15552.144",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": true,
+                "id": "15552.145",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": true,
+                "id": "15552.146",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": true,
+                "id": "15552.147",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.148",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.149",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": true,
+                "id": "15552.150",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.151",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.152",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": true,
+                "id": "15552.153",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.154",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.155",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": true,
+                "id": "15552.156",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.157",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": true,
+                "id": "15552.158",
+                "status": 200,
+                "fromCache": true
+              }
+            ]
+          },
+          {
+            "condition": "warm",
+            "i": 3,
+            "reading": {
+              "milliseconds": 38.10000000009313,
+              "timestamp": 1795645694007.6,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": true,
+                "id": "15552.161",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": true,
+                "id": "15552.162",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.163",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.164",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": true,
+                "id": "15552.165",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.171",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": true,
+                "id": "15552.172",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.173",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": true,
+                "id": "15552.174",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.175",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.176",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.177",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.178",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": true,
+                "id": "15552.179",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": true,
+                "id": "15552.180",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.181",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": true,
+                "id": "15552.182",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": true,
+                "id": "15552.183",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": true,
+                "id": "15552.184",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": true,
+                "id": "15552.185",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.186",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.187",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": true,
+                "id": "15552.188",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.189",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.190",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": true,
+                "id": "15552.191",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.192",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.193",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": true,
+                "id": "15552.194",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.195",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": true,
+                "id": "15552.196",
+                "status": 200,
+                "fromCache": true
+              }
+            ]
+          },
+          {
+            "condition": "warm",
+            "i": 4,
+            "reading": {
+              "milliseconds": 46,
+              "timestamp": 1795645694049.7,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": true,
+                "id": "15552.199",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": true,
+                "id": "15552.200",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.201",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.202",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": true,
+                "id": "15552.203",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.209",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": true,
+                "id": "15552.210",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.211",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": true,
+                "id": "15552.212",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.213",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.214",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.215",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.216",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": true,
+                "id": "15552.217",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": true,
+                "id": "15552.218",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.219",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": true,
+                "id": "15552.220",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": true,
+                "id": "15552.221",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": true,
+                "id": "15552.222",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": true,
+                "id": "15552.223",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.224",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.225",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": true,
+                "id": "15552.226",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.227",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.228",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": true,
+                "id": "15552.229",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.230",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.231",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": true,
+                "id": "15552.232",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.233",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": true,
+                "id": "15552.234",
+                "status": 200,
+                "fromCache": true
+              }
+            ]
+          },
+          {
+            "condition": "warm",
+            "i": 5,
+            "reading": {
+              "milliseconds": 45.9000000001397,
+              "timestamp": 1795645694099.9,
+              "title": "からくり工房",
+              "imageUrls": [
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg"
+              ]
+            },
+            "observedCache": [
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/styles.css",
+                "fromDiskCache": true,
+                "id": "15552.237",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+                "fromDiskCache": true,
+                "id": "15552.238",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.239",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+                "fromDiskCache": true,
+                "id": "15552.240",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app.js",
+                "fromDiskCache": true,
+                "id": "15552.241",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/stage-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.247",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/controller.js",
+                "fromDiskCache": true,
+                "id": "15552.248",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/lock-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.249",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-repository.js",
+                "fromDiskCache": true,
+                "id": "15552.250",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/storage/save-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.251",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/ui-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.252",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.253",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/part-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.254",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/data/physics-config.js",
+                "fromDiskCache": true,
+                "id": "15552.255",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/design-editor.js",
+                "fromDiskCache": true,
+                "id": "15552.256",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.257",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/score-service.js",
+                "fromDiskCache": true,
+                "id": "15552.258",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/adapter.js",
+                "fromDiskCache": true,
+                "id": "15552.259",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/body-factory.js",
+                "fromDiskCache": true,
+                "id": "15552.260",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/app/state-machine.js",
+                "fromDiskCache": true,
+                "id": "15552.261",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/placement-validator.js",
+                "fromDiskCache": true,
+                "id": "15552.262",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/input-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.263",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+                "fromDiskCache": true,
+                "id": "15552.264",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/character-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.265",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+                "fromDiskCache": true,
+                "id": "15552.266",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/geometry.js",
+                "fromDiskCache": true,
+                "id": "15552.267",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/undo-manager.js",
+                "fromDiskCache": true,
+                "id": "15552.268",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/spring-controller.js",
+                "fromDiskCache": true,
+                "id": "15552.269",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+                "fromDiskCache": true,
+                "id": "15552.270",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+                "fromDiskCache": true,
+                "id": "15552.271",
+                "status": 200,
+                "fromCache": true
+              },
+              {
+                "url": "http://127.0.0.1:39031/daily-mini-games/games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+                "fromDiskCache": true,
+                "id": "15552.272",
+                "status": 200,
+                "fromCache": true
+              }
+            ]
+          }
+        ],
+        "coldMs": 793.6000000000931,
+        "warmMs": 38.10000000009313,
+        "timingOrigin": "native navigation timeOrigin and first ready rAF"
+      },
+      "totals": {
+        "worlds": 0,
+        "ticks": 0
+      }
+    },
+    "edit": {
+      "caseId": "TC-D7-013-C001",
+      "status": "PASS",
+      "testedStages": [
+        "02"
+      ],
+      "rt": "accepted real click to first draw-backed rAF",
+      "stats": {
+        "place": {
+          "p95": 14.100000000093132,
+          "measured": [
+            {
+              "nativeInput": true,
+              "received": 442.0999999998603,
+              "frameTimestamp": 454.1,
+              "ms": 16.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 726.0999999998603,
+              "frameTimestamp": 737.4,
+              "ms": 11.699999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 974.5,
+              "frameTimestamp": 987.4,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 1208.1999999999534,
+              "frameTimestamp": 1220.7,
+              "ms": 12.899999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 1441.7999999998137,
+              "frameTimestamp": 1454.066,
+              "ms": 12.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 1663.8999999999069,
+              "frameTimestamp": 1670.7,
+              "ms": 7.100000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 1925.5,
+              "frameTimestamp": 1920.766,
+              "ms": 7.699999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 2174.2999999998137,
+              "frameTimestamp": 2187.4,
+              "ms": 13.400000000139698,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 2408.0999999998603,
+              "frameTimestamp": 2420.766,
+              "ms": 12.900000000139698,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 2624.1999999999534,
+              "frameTimestamp": 2637.366,
+              "ms": 13.599999999860302,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 2843.0999999998603,
+              "frameTimestamp": 2854.066,
+              "ms": 11.199999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 3073.7999999998137,
+              "frameTimestamp": 3087.366,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 3290.2999999998137,
+              "frameTimestamp": 3304,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 3506.7999999998137,
+              "frameTimestamp": 3520.666,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 3740.7999999998137,
+              "frameTimestamp": 3753.966,
+              "ms": 13.400000000139698,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 3977.1999999999534,
+              "frameTimestamp": 3987.366,
+              "ms": 10.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 4209.899999999907,
+              "frameTimestamp": 4220.6,
+              "ms": 11.100000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 4442.59999999986,
+              "frameTimestamp": 4453.966,
+              "ms": 11.699999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 4675,
+              "frameTimestamp": 4687.3,
+              "ms": 12.699999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 4908.699999999953,
+              "frameTimestamp": 4920.6,
+              "ms": 12.199999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 5141.299999999814,
+              "frameTimestamp": 5153.966,
+              "ms": 12.900000000139698,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 5357.399999999907,
+              "frameTimestamp": 5370.6,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 5573.5,
+              "frameTimestamp": 5587.3,
+              "ms": 14.099999999860302,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 5790.699999999953,
+              "frameTimestamp": 5803.866,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 6023.799999999814,
+              "frameTimestamp": 6037.2,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 6258.299999999814,
+              "frameTimestamp": 6270.566,
+              "ms": 12.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 6491.09999999986,
+              "frameTimestamp": 6503.8,
+              "ms": 13,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 6725.399999999907,
+              "frameTimestamp": 6737.2,
+              "ms": 12.199999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 6940.699999999953,
+              "frameTimestamp": 6953.866,
+              "ms": 13.399999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7174,
+              "frameTimestamp": 7187.2,
+              "ms": 13.399999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            }
+          ]
+        },
+        "direction": {
+          "p95": 14.699999999953434,
+          "measured": [
+            {
+              "nativeInput": true,
+              "received": 7423.299999999814,
+              "frameTimestamp": 7437.166,
+              "ms": 14.200000000186265,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7506.699999999953,
+              "frameTimestamp": 7520.5,
+              "ms": 14.099999999860302,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7607.199999999953,
+              "frameTimestamp": 7620.566,
+              "ms": 13.599999999860302,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7690.399999999907,
+              "frameTimestamp": 7703.866,
+              "ms": 13.699999999953434,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7773.09999999986,
+              "frameTimestamp": 7787.166,
+              "ms": 14.400000000139698,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7857.5,
+              "frameTimestamp": 7870.5,
+              "ms": 13.399999999906868,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 7940.59999999986,
+              "frameTimestamp": 7953.8,
+              "ms": 13.600000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8073.399999999907,
+              "frameTimestamp": 8087.1,
+              "ms": 14,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8157.199999999953,
+              "frameTimestamp": 8170.466,
+              "ms": 13.899999999906868,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8256.59999999986,
+              "frameTimestamp": 8270.466,
+              "ms": 14.100000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8340.59999999986,
+              "frameTimestamp": 8353.8,
+              "ms": 13.5,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8423.899999999907,
+              "frameTimestamp": 8437.166,
+              "ms": 13.600000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8523.799999999814,
+              "frameTimestamp": 8537.1,
+              "ms": 13.700000000186265,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8624,
+              "frameTimestamp": 8637.1,
+              "ms": 13.399999999906868,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8707.899999999907,
+              "frameTimestamp": 8720.466,
+              "ms": 12.800000000046566,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8807.899999999907,
+              "frameTimestamp": 8820.4,
+              "ms": 12.800000000046566,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8907.09999999986,
+              "frameTimestamp": 8920.4,
+              "ms": 13.699999999953434,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 8990.299999999814,
+              "frameTimestamp": 9003.8,
+              "ms": 13.800000000046566,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9090.59999999986,
+              "frameTimestamp": 9103.766,
+              "ms": 13.600000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9173.299999999814,
+              "frameTimestamp": 9187.066,
+              "ms": 14.200000000186265,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9256.59999999986,
+              "frameTimestamp": 9270.4,
+              "ms": 14.100000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9340.699999999953,
+              "frameTimestamp": 9353.7,
+              "ms": 13.399999999906868,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9423.299999999814,
+              "frameTimestamp": 9437.066,
+              "ms": 14.100000000093132,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9506.299999999814,
+              "frameTimestamp": 9520.4,
+              "ms": 14.400000000139698,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9590.299999999814,
+              "frameTimestamp": 9603.8,
+              "ms": 13.700000000186265,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9672.699999999953,
+              "frameTimestamp": 9687.1,
+              "ms": 14.699999999953434,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9759.699999999953,
+              "frameTimestamp": 9770.4,
+              "ms": 11.099999999860302,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9856.5,
+              "frameTimestamp": 9870.4,
+              "ms": 14.199999999953434,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 9940.199999999953,
+              "frameTimestamp": 9953.7,
+              "ms": 13.899999999906868,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10023.299999999814,
+              "frameTimestamp": 10037.1,
+              "ms": 16.4000000001397,
+              "actual": [
+                26,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 624.0000192742599,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            }
+          ]
+        },
+        "rotation": {
+          "p95": 14.5,
+          "measured": [
+            {
+              "nativeInput": true,
+              "received": 10106.59999999986,
+              "frameTimestamp": 10120.4,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10190.299999999814,
+              "frameTimestamp": 10203.7,
+              "ms": 13.900000000139698,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10273.5,
+              "frameTimestamp": 10287.1,
+              "ms": 13.799999999813735,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10356.899999999907,
+              "frameTimestamp": 10370.366,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10440.399999999907,
+              "frameTimestamp": 10453.766,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10523.299999999814,
+              "frameTimestamp": 10537.066,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10606.899999999907,
+              "frameTimestamp": 10620.366,
+              "ms": 13.899999999906868,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10689.699999999953,
+              "frameTimestamp": 10703.7,
+              "ms": 14.300000000046566,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10772.899999999907,
+              "frameTimestamp": 10787,
+              "ms": 14.5,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10857.699999999953,
+              "frameTimestamp": 10870.3,
+              "ms": 13,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 10956.399999999907,
+              "frameTimestamp": 10970.3,
+              "ms": 14.300000000046566,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11040.399999999907,
+              "frameTimestamp": 11053.7,
+              "ms": 13.600000000093132,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11123.59999999986,
+              "frameTimestamp": 11137.066,
+              "ms": 13.699999999953434,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11206.699999999953,
+              "frameTimestamp": 11220.4,
+              "ms": 13.899999999906868,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11290.59999999986,
+              "frameTimestamp": 11303.7,
+              "ms": 13.400000000139698,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11373.299999999814,
+              "frameTimestamp": 11387,
+              "ms": 13.900000000139698,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11456.899999999907,
+              "frameTimestamp": 11470.3,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11540,
+              "frameTimestamp": 11553.7,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11624.5,
+              "frameTimestamp": 11637.066,
+              "ms": 12.799999999813735,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11706.5,
+              "frameTimestamp": 11720.4,
+              "ms": 14.099999999860302,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11790.299999999814,
+              "frameTimestamp": 11803.7,
+              "ms": 13.600000000093132,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11873.299999999814,
+              "frameTimestamp": 11887,
+              "ms": 14.200000000186265,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 11956.199999999953,
+              "frameTimestamp": 11970.3,
+              "ms": 14.5,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12057.5,
+              "frameTimestamp": 12070.366,
+              "ms": 13.199999999953434,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12159.299999999814,
+              "frameTimestamp": 12170.3,
+              "ms": 11.300000000046566,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12240.199999999953,
+              "frameTimestamp": 12253.7,
+              "ms": 13.899999999906868,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12323.299999999814,
+              "frameTimestamp": 12337,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12406.59999999986,
+              "frameTimestamp": 12420.366,
+              "ms": 14.199999999953434,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12489.899999999907,
+              "frameTimestamp": 12503.666,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12574.199999999953,
+              "frameTimestamp": 12587,
+              "ms": 13.399999999906868,
+              "actual": [
+                27,
+                10,
+                -60
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -59.999999191114206
+              },
+              "rendered": true
+            }
+          ]
+        },
+        "undo": {
+          "p95": 16.800000000046566,
+          "measured": [
+            {
+              "nativeInput": true,
+              "received": 12690.5,
+              "frameTimestamp": 12703.6,
+              "ms": 13.599999999860302,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12774.09999999986,
+              "frameTimestamp": 12786.9,
+              "ms": 13.199999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12861.09999999986,
+              "frameTimestamp": 12870.3,
+              "ms": 9.400000000139698,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 12940.09999999986,
+              "frameTimestamp": 12953.6,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13025.09999999986,
+              "frameTimestamp": 13036.966,
+              "ms": 12.300000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13106.399999999907,
+              "frameTimestamp": 13120.3,
+              "ms": 14.399999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13189.799999999814,
+              "frameTimestamp": 13203.6,
+              "ms": 14.300000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13273.199999999953,
+              "frameTimestamp": 13287,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13356.299999999814,
+              "frameTimestamp": 13370.3,
+              "ms": 14.300000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13439.899999999907,
+              "frameTimestamp": 13453.6,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13522.899999999907,
+              "frameTimestamp": 13536.9,
+              "ms": 14.399999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13606.399999999907,
+              "frameTimestamp": 13620.3,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13691,
+              "frameTimestamp": 13703.566,
+              "ms": 13.399999999906868,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13775.899999999907,
+              "frameTimestamp": 13786.9,
+              "ms": 11.300000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13857,
+              "frameTimestamp": 13870.266,
+              "ms": 14.099999999860302,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 13943.899999999907,
+              "frameTimestamp": 13953.6,
+              "ms": 10,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14023.09999999986,
+              "frameTimestamp": 14036.866,
+              "ms": 14.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14124.199999999953,
+              "frameTimestamp": 14136.9,
+              "ms": 16.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14224.399999999907,
+              "frameTimestamp": 14236.866,
+              "ms": 12.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14312,
+              "frameTimestamp": 14320.2,
+              "ms": 8.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14390.799999999814,
+              "frameTimestamp": 14403.6,
+              "ms": 13.600000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14472.799999999814,
+              "frameTimestamp": 14486.866,
+              "ms": 20.4000000001397,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14590.199999999953,
+              "frameTimestamp": 14603.566,
+              "ms": 13.699999999953434,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14673.899999999907,
+              "frameTimestamp": 14686.9,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14756.5,
+              "frameTimestamp": 14770.2,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14840.399999999907,
+              "frameTimestamp": 14853.5,
+              "ms": 13.5,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 14923.199999999953,
+              "frameTimestamp": 14936.8,
+              "ms": 14,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 15007.199999999953,
+              "frameTimestamp": 15020.2,
+              "ms": 13.300000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 15106.699999999953,
+              "frameTimestamp": 15120.2,
+              "ms": 13.800000000046566,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            },
+            {
+              "nativeInput": true,
+              "received": 15189.899999999907,
+              "frameTimestamp": 15203.5,
+              "ms": 14.100000000093132,
+              "actual": [
+                27,
+                10,
+                -45
+              ],
+              "canvas": {
+                "x": 648.0000200155775,
+                "y": 239.999999588342,
+                "rotation": -44.99999906597915
+              },
+              "rendered": true
+            }
+          ]
+        }
+      },
+      "totals": {
+        "worlds": 0,
+        "ticks": 0
+      }
+    },
+    "Node100": {
+      "caseId": "TC-D7-015-C001",
+      "status": "PASS",
+      "isolatedNode": true,
+      "actualPlanck": true,
+      "peakLoops": 1,
+      "obsoleteSteps": 0,
+      "totals": {
+        "worlds": 100,
+        "ticks": 1000
+      }
+    },
+    "Chromium30Minutes": {
+      "caseId": "TC-D7-015-C002",
+      "status": "PASS",
+      "details": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.0043160999999,
+        "cycles": 300,
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "totals": {
+        "worlds": 400,
+        "ticks": 61450
+      }
+    },
+    "sameBrowserAudioModeComparisons": [
+      {
+        "caseId": "TC-D6-044-C003",
+        "status": "PASS",
+        "stage": "01",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 350,
+          "physicsDigest": "23375afa895bc7f4ce1f956c0ff51f228cd3b73cf76ec0a6e6f0f1d57170dd6d",
+          "actualChromiumTicks": 175,
+          "separateNodeReferenceTicks": 175,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "坂道 達成",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C004",
+        "status": "PASS",
+        "stage": "01",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 350,
+          "physicsDigest": "23375afa895bc7f4ce1f956c0ff51f228cd3b73cf76ec0a6e6f0f1d57170dd6d",
+          "actualChromiumTicks": 175,
+          "separateNodeReferenceTicks": 175,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "坂道 達成",
+          "nativeAudio": {
+            "init": 7,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C005",
+        "status": "PASS",
+        "stage": "02",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 340,
+          "physicsDigest": "22819f6a3a508c352e49c25db96b01deb5e6ed94d3da43b00265e16ef8afad2d",
+          "actualChromiumTicks": 170,
+          "separateNodeReferenceTicks": 170,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "傾斜坂道 達成",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C006",
+        "status": "PASS",
+        "stage": "02",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 340,
+          "physicsDigest": "22819f6a3a508c352e49c25db96b01deb5e6ed94d3da43b00265e16ef8afad2d",
+          "actualChromiumTicks": 170,
+          "separateNodeReferenceTicks": 170,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "傾斜坂道 達成",
+          "nativeAudio": {
+            "init": 14,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C007",
+        "status": "PASS",
+        "stage": "03",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 418,
+          "physicsDigest": "d2780a1c9ee2ec7e69737227aa7e54be751963f50e1d5cfa852a1383dd3be859",
+          "actualChromiumTicks": 209,
+          "separateNodeReferenceTicks": 209,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "足場 達成",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C008",
+        "status": "PASS",
+        "stage": "03",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 418,
+          "physicsDigest": "d2780a1c9ee2ec7e69737227aa7e54be751963f50e1d5cfa852a1383dd3be859",
+          "actualChromiumTicks": 209,
+          "separateNodeReferenceTicks": 209,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "足場 達成",
+          "nativeAudio": {
+            "init": 22,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C009",
+        "status": "PASS",
+        "stage": "04",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 466,
+          "physicsDigest": "93b38fc1f7db47ecf4a297f5b35db6256a7eafb7e5c31b6ba6daa8528f699ac5",
+          "actualChromiumTicks": 233,
+          "separateNodeReferenceTicks": 233,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "バネ 達成",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C010",
+        "status": "PASS",
+        "stage": "04",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 466,
+          "physicsDigest": "93b38fc1f7db47ecf4a297f5b35db6256a7eafb7e5c31b6ba6daa8528f699ac5",
+          "actualChromiumTicks": 233,
+          "separateNodeReferenceTicks": 233,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "バネ 達成",
+          "nativeAudio": {
+            "init": 32,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C011",
+        "status": "PASS",
+        "stage": "05",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 476,
+          "physicsDigest": "3918140fab14642fe71c9ea5f9280d60db79ddc1215b1f162dca6e03abcb2046",
+          "actualChromiumTicks": 238,
+          "separateNodeReferenceTicks": 240,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C012",
+        "status": "PASS",
+        "stage": "05",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 476,
+          "physicsDigest": "3918140fab14642fe71c9ea5f9280d60db79ddc1215b1f162dca6e03abcb2046",
+          "actualChromiumTicks": 238,
+          "separateNodeReferenceTicks": 240,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 41,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C013",
+        "status": "PASS",
+        "stage": "06",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 354,
+          "physicsDigest": "5466ffbe528bec903c81ecc4afa6404c7ad87ff31f1f830c5e3d472e111f2b88",
+          "actualChromiumTicks": 177,
+          "separateNodeReferenceTicks": 177,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "シーソー 達成",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C014",
+        "status": "PASS",
+        "stage": "06",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 354,
+          "physicsDigest": "5466ffbe528bec903c81ecc4afa6404c7ad87ff31f1f830c5e3d472e111f2b88",
+          "actualChromiumTicks": 177,
+          "separateNodeReferenceTicks": 177,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "シーソー 達成",
+          "nativeAudio": {
+            "init": 49,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C015",
+        "status": "PASS",
+        "stage": "07",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 786,
+          "physicsDigest": "088b437fd522e9a862b4be33896bfbb0c9548b706b2e516d07751d3e4ba20f3c",
+          "actualChromiumTicks": 393,
+          "separateNodeReferenceTicks": 393,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C016",
+        "status": "PASS",
+        "stage": "07",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 786,
+          "physicsDigest": "088b437fd522e9a862b4be33896bfbb0c9548b706b2e516d07751d3e4ba20f3c",
+          "actualChromiumTicks": 393,
+          "separateNodeReferenceTicks": 393,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 62,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C017",
+        "status": "PASS",
+        "stage": "08",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 526,
+          "physicsDigest": "b8eba3d7489658388c2a0735d57fde88a890e9dc97823c0603cdf7e4e959e18a",
+          "actualChromiumTicks": 263,
+          "separateNodeReferenceTicks": 263,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C018",
+        "status": "PASS",
+        "stage": "08",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 526,
+          "physicsDigest": "b8eba3d7489658388c2a0735d57fde88a890e9dc97823c0603cdf7e4e959e18a",
+          "actualChromiumTicks": 263,
+          "separateNodeReferenceTicks": 263,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 71,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C019",
+        "status": "PASS",
+        "stage": "09",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 438,
+          "physicsDigest": "59546396f3048be514a52518b1c96bdb8cb5ba4e6bdf83d40e33f71f694bfaed",
+          "actualChromiumTicks": 219,
+          "separateNodeReferenceTicks": 219,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C020",
+        "status": "PASS",
+        "stage": "09",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 438,
+          "physicsDigest": "59546396f3048be514a52518b1c96bdb8cb5ba4e6bdf83d40e33f71f694bfaed",
+          "actualChromiumTicks": 219,
+          "separateNodeReferenceTicks": 219,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 78,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C021",
+        "status": "PASS",
+        "stage": "10",
+        "mode": "mute",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-MUTE-EXACT",
+          "modeRawSHA": "409a83ed4bf002ec984886107e850c97dc7458aff24e4632aea295daa72d350a",
+          "identicalFrames": 368,
+          "physicsDigest": "f565b9200fcd6df417ac01020bdde0b2c69c1ba1a88afc83de33a97509157ec3",
+          "actualChromiumTicks": 184,
+          "separateNodeReferenceTicks": 184,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 1,
+            "oscillator": 0
+          }
+        }
+      },
+      {
+        "caseId": "TC-D6-044-C022",
+        "status": "PASS",
+        "stage": "10",
+        "mode": "unavailable",
+        "candidate": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "independentInputs": [
+          "exact certified baseline through trusted UI",
+          "same fixed Chromium and Planck"
+        ],
+        "expected": "identical to the normal Chromium run with no audio output for the tested mode",
+        "actual": {
+          "normalRunReference": "CR009-E8-RELEASE-NORMAL-EXACT",
+          "normalRawSHA": "c220b5ec7f797fabda01d6bdc191b8a29b37cdf60c538b1b2d6626413b8f30d4",
+          "modeRunReference": "CR009-E8-RELEASE-UNAVAILABLE-EXACT",
+          "modeRawSHA": "099ebf71626bde305874029b51ca5e233bf863010d1d12989c088380c34676d5",
+          "identicalFrames": 368,
+          "physicsDigest": "f565b9200fcd6df417ac01020bdde0b2c69c1ba1a88afc83de33a97509157ec3",
+          "actualChromiumTicks": 184,
+          "separateNodeReferenceTicks": 184,
+          "status": "CLEARED",
+          "stars": 3,
+          "requiredEvidence": "必須パーツなし",
+          "nativeAudio": {
+            "init": 86,
+            "oscillator": 0
+          }
+        }
+      }
+    ],
+    "humanDevicePerformance": "NOT_RUN"
   }
 }

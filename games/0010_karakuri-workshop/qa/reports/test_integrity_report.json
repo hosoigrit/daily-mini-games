@@ -218,5 +218,1085 @@
   },
   "newExpectedValueModifications": 0,
   "evidenceOnlyDiffRequiresFinalRemoteReadback": true,
-  "state": "HOLD"
+  "state": "HOLD",
+  "CR009": {
+    "handoffSHA": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+    "frozenTreeEqual": true,
+    "expectedThresholdChanges": 0,
+    "frozenManifestBytes": 3998874,
+    "approvedCandidates": 108,
+    "commitsScopedBeforeEvidence": 71,
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "currentFileDigests": {
+      "tests/d4-stages.test.js": "7b72a659530020e96ab2e25a477ec3f0a40faf5328c6c5a853c64a8cd5c2e08c",
+      "tests/d2-spring.test.js": "184ba79780cf738ee7db24d4a68293e874579044f9fd39615274e4198467bcb3",
+      "tests/d7-integration.test.js": "40bd8bded27e2d02942ee58bb59320dcd6fbc3e1ec63e17f09fb69c8db44e322",
+      "tests/d2-placement.test.js": "e1f9d0328a79cf6a92dbbaae1952cc7567595fc05673d9ee84b390cf6a11d479",
+      "tests/d1-physics.test.js": "b451b30230cb9dfa09d54f64f01fbc1799fede090ff9794259f55a40403ed7d3",
+      "tests/d5-save.test.js": "02354278693e9f6a12897308912a5b19839d6c0bc021101da69ade20f7c666b7",
+      "tests/d2-seesaw.test.js": "1ae10ba8881f37deed5f8eccb58f8f9e060368d63b52dbea928edb5495c6a0f3",
+      "tests/d8-governance.test.js": "1c7d0c71da9f7e471f2db7bf619d8cd4bfa12099f6aa2dc8c96b96af8b9e4e2e",
+      "tests/d6-ui.test.js": "82918419032104d17141a6bd67f38e53d57eaac9683a7a456b48825b09953e29",
+      "tests/supplemental.test.js": "58961fd67b762f81738d319ff2ac1114a75f4ab129db8534aea7f2bab64a6072",
+      "tests/d3-rules.test.js": "f1b4ee5999cde1b8b6c1fdfb559333368cb9219aba79a1e95341eb72aec81e36",
+      "src/app.js": "cd0f7500409c7eeb53a75dc98fdbc49e62290a36e9f76c86a846a346653d4d13",
+      "src/storage/save-validator.js": "35858a86b9294e97074e563ffe51faf5a28549a0856336b209d8b18c228f1620",
+      "src/storage/lock-manager.js": "a3d21dab38054735c159410c0c336b2fb3829ed9a0dc449f9d49f215246d24bd",
+      "src/storage/save-repository.js": "0a2efcec98365a68533cfda8dc0df63d80edec7732a888104646f35693ec6114",
+      "src/physics/adapter.js": "0dd6de7de8a8d42e858f745a0525462a56ef838bb3b70ca852bc1b8fd0595a19",
+      "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+      "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+      "src/physics/trajectory-recorder.js": "bc81b406fcaf0a10b7b91e7fc79f0e17cabafdbe32b399074a34741beb3b0ed0",
+      "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+      "src/physics/simulation-controller.js": "62e291a08c6ae4d6c9fee40a84b21e3b34619e06786e795946d7603b5a5c554d",
+      "src/app/controller.js": "4c22619239564291aec615b1b4a1162371ee6a1f03fc3d504182d69b117e838a",
+      "src/app/state-machine.js": "a32900ecbfa7c03cb31c7516f54beaa5ca2367c8fcb9bbb94cdec4ecd220c23f",
+      "src/domain/tutorial-evaluator.js": "7337e79279c1f473bc3c45958e47750dcff9c49d2e9d56e65abf08a49e18b2c0",
+      "src/domain/geometry.js": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db",
+      "src/domain/result-evaluator.js": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b",
+      "src/domain/score-service.js": "ff1c0443306ea514a9cce107f8370158fb5e524159c245257b1211c0715dff2b",
+      "src/domain/undo-manager.js": "c5de8ef64a45d4338cd35226bc08816174960096f61a66b571ca4eef77d70a36",
+      "src/domain/design-editor.js": "f089ca44259dd2ede96f6e7e541850217b08d7b4488fb327c4428d6a048cd149",
+      "src/domain/placement-validator.js": "7ebebefdbe5eb7a2bd4576780ab4666afc6442b6f2f36ccf6ae99f330fbb07cd",
+      "src/ui/ui-controller.js": "41c5097c961e9bc9083d84dfa782743fa132a1c108599e08ff4c49e3413d2c6d",
+      "src/ui/input-controller.js": "9d6715f953316a2a2d81a552dc40f4e122746af8765680a4ac6c78f668058939",
+      "src/ui/canvas-renderer.js": "dddd5f185767e984d147e9cf6168e3f861c0f446fa3c9bd7ad4afd72632ba37f",
+      "src/presentation/character-controller.js": "5616ef73dc1bec1eee6ee782f78a788a2c418a432e218a38a8fa9d79f3f82561",
+      "src/presentation/audio-controller.js": "464f334b7a96ec527aa3fb2c84deab97037554144c597b4a10460ac731930f55",
+      "src/presentation/sound-definitions.js": "1ee009657df18d07ad52c6d8bb8abf5055a7c4b301ea4d24b02c1064a8028046",
+      "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+      "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+      "src/data/stage-definitions.js": "70a0dda5b3efda54e945a28057d64b88621236da46775d09e7c498a710531239",
+      "assets/asset-manifest.json": "fc2150fd425eaf0819a40cf5f7a864c214e779651a2d785fafc6a3f6088346d6",
+      "assets/characters/luke-normal.svg": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694",
+      "assets/characters/gear-thinking.svg": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259",
+      "assets/characters/gear-praise.svg": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4",
+      "assets/characters/luke-surprised.svg": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271",
+      "assets/characters/luke-happy.svg": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8",
+      "assets/characters/gear-normal.svg": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e",
+      "assets/decoration/workshop-pattern.svg": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977",
+      "assets/decoration/workshop-emblem.svg": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af",
+      "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+      "vendor/planck/LICENSE": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+      "qa/harness/adjustment-governance.js": "d0fc46ae512779c3d18261f884ef0be66e1cd4132d63a2666c6cf664d1afc640",
+      "qa/harness/gate.js": "b02beeb13079f0e51a86d9cff2d3c4b49c7d6ba4bde59e9f5d847f17202bf17c",
+      "qa/harness/test-runner.js": "a01afff232a1e4f826d99e698a46a06795f642c6dcf593b691beb3539fff9fc1",
+      "qa/harness/impact.js": "32baf1748d0de90a9642ed02e449ec245f96806bd81a2bca34ebf9516caaee6d",
+      "qa/harness/integrity.js": "855a5672a06a8467849d179070d9fc45f47c6400ae15d1044b95990dd6703c8e",
+      "qa/harness/stage-search.js": "b037a40a6e51f2ffe665da93cbfa268e31ef78d6786749703d772d5a19167321",
+      "qa/harness/stage-evaluator.js": "d0a863a219e154212aba0894b065dcd4e04ea4a24286e42db48f8f96f438b79b",
+      "qa/harness/evidence.js": "f54a572a126712d16ab62205348bded017fcd5798b1c209c78e0319561578c5c",
+      "qa/harness/policy.js": "60dd5934cec181375075c12873b524080ec175db06bc6081bc756a9b0cf9f7a1",
+      "qa/harness/checkpoint.js": "69faac5e9829431fdcadbdd1d3a15f2ef2e191757161297e8302c3eee355d0a1",
+      "qa/harness/preflight.js": "7581f2190512a54c9d4715684145be6a55a02e4254859cec94c62c165b24b1a6",
+      "qa/harness/scope.js": "aedf8cabf72b1613bbae6ca1245c4f2312810cdf9fbbd7bc0398924e68816dde",
+      "qa/harness/budget.js": "644cc965403258ccc6f78f0504fe832aea980420b1fbdca4da69f44cff30f552",
+      "qa/fixtures/stages.json": "2246606e3195d6aca3ed0a71532f290f2c0bc21065299ffbebaa96a023f92c9f",
+      "qa/fixtures/solutions.json": "17c9dd7fd20694a8bafefeab8516daa6ce1fa32d842e0773d074647ec7eee138"
+    },
+    "fixedSixAfterE5": {
+      "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+      "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+      "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+      "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+      "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+      "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+    },
+    "exactChangedFiles": [
+      "games/0010_karakuri-workshop/qa/harness/budget.js",
+      "games/0010_karakuri-workshop/qa/harness/checkpoint.js",
+      "games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+      "games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+      "games/0010_karakuri-workshop/src/physics/adapter.js"
+    ],
+    "oldUnreservedProofExcluded": {
+      "CR007-E7-SMOKE": {
+        "INTERIM": 1
+      },
+      "CR007-E7-NODE-EXPANDED": {
+        "INTERIM": 14,
+        "FOUNDATION_UPPER": 45
+      },
+      "CR007-E7-NODE-FINAL": {
+        "INTERIM": 14,
+        "FOUNDATION_UPPER": 45
+      },
+      "CR007-E7-NODE-CASES": {
+        "INTERIM": 14,
+        "FOUNDATION_UPPER": 45
+      },
+      "CR007-E7-NODE-EXACT": {
+        "INTERIM": 14
+      }
+    },
+    "mutationCertificates": {
+      "MUT-01": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutations-rules.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.673Z",
+          "settledAt": "2026-11-25T22:30:55.471Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+          "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+          "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "id": "MUT-01",
+          "caseId": "TC-D7-023-C013",
+          "cases": [
+            "TC-D3-034-C001",
+            "TC-D3-035-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "ff1c0443306ea514a9cce107f8370158fb5e524159c245257b1211c0715dff2b",
+          "isolatedMutatedSha256": "8a121bb73acc57c246b9bfbaff084db0ff278f42a8457aacce58519e4cd086d5",
+          "assertion": "deep-equal",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-034-C001|TC-D3-035-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-034-C001 star count uses run starting placements\nok 1 - TC-D3-034-C001 star count uses run starting placements\n  ---\n  duration_ms: 2.167439\n  type: 'test'\n  ...\n# {\"input\":{\"status\":\"CLEARED\",\"counts\":[4],\"target\":3},\"expected\":2,\"actual\":[2]}\n# Subtest: TC-D3-035-C001 star count uses run starting placements\nok 2 - TC-D3-035-C001 star count uses run starting placements\n  ---\n  duration_ms: 0.115842\n  type: 'test'\n  ...\n# {\"input\":{\"status\":\"CLEARED\",\"counts\":[5,6],\"target\":3},\"expected\":1,\"actual\":[1,1]}\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 40.948231\n",
+            "stderr": "(node:17448) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-eE7UlX/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-eE7UlX/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "bb6921645839ec31b05d3032ac4c1cf3735529066dd0edb68b0270d4bb40731a"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-034-C001|TC-D3-035-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-034-C001 star count uses run starting placements\nnot ok 1 - TC-D3-034-C001 star count uses run starting placements\n  ---\n  duration_ms: 2.95812\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      [\n    +   3\n    -   2\n      ]\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    0: 2\n  actual:\n    0: 3\n  operator: 'deepStrictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:365:10\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D3-035-C001 star count uses run starting placements\nnot ok 2 - TC-D3-035-C001 star count uses run starting placements\n  ---\n  duration_ms: 0.287246\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      [\n    +   3,\n    +   3\n    -   1,\n    -   1\n      ]\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    0: 1\n    1: 1\n  actual:\n    0: 3\n    1: 3\n  operator: 'deepStrictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:365:10\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-eE7UlX/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 0\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 36.176931\n",
+            "stderr": "(node:17455) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-eE7UlX/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-eE7UlX/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "b22ffb45ab8d8ddcc94f460abb369b8c3e589a1c92c064cfdc4babebaa44a699"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-02": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT02-03-05",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr005-e2-mutations.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:53.886Z",
+          "settledAt": "2026-11-25T22:30:54.341Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut02-03-05.log",
+          "stderrFile": "cr009-e8-isolated-mut02-03-05-stderr.log",
+          "stdoutSHA256": "fc794832292b9f7762cf953e1fb5f2b0bf353308ea57cff933a19681909d7d3a",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "id": "MUT-02",
+          "caseId": "TC-D7-023-C014",
+          "cases": [
+            "TC-D2-011-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db",
+          "isolatedMutatedSha256": "c83aa1fee4f94abf73288da8a315f44131b9d261a83302dbd7f1fb344d697d45",
+          "assertion": "interior overlap .01m",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-011-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-011-C001 one centimetre rectangle overlap rejected\nok 1 - TC-D2-011-C001 one centimetre rectangle overlap rejected\n  ---\n  duration_ms: 1.201088\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 32.190659\n",
+            "stderr": "(node:17353) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-bihUCJ/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-bihUCJ/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "3aa0f2e5049ebbf8380bba8a47fa49d5e4c266657fc6f9ced5bdb03eb0abde73"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-011-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-011-C001 one centimetre rectangle overlap rejected\nnot ok 1 - TC-D2-011-C001 one centimetre rectangle overlap rejected\n  ---\n  duration_ms: 1.905652\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-bihUCJ/tests/d2-placement.test.js:15:53'\n  failureType: 'testCodeFailure'\n  error: |-\n    interior overlap .01m\n    \n    false !== true\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-bihUCJ/tests/d2-placement.test.js:171:10)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 32.429783\n",
+            "stderr": "(node:17360) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-bihUCJ/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-bihUCJ/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "2c90d330219a169be09c594bbf4565b664f45d8583cdf24ed9457a3645e0fe13"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-03": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT02-03-05",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr005-e2-mutations.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:53.886Z",
+          "settledAt": "2026-11-25T22:30:54.341Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut02-03-05.log",
+          "stderrFile": "cr009-e8-isolated-mut02-03-05-stderr.log",
+          "stdoutSHA256": "fc794832292b9f7762cf953e1fb5f2b0bf353308ea57cff933a19681909d7d3a",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 2,
+        "caseEvidence": {
+          "id": "MUT-03",
+          "caseId": "TC-D7-023-C015",
+          "cases": [
+            "TC-D2-009-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "f089ca44259dd2ede96f6e7e541850217b08d7b4488fb327c4428d6a048cd149",
+          "isolatedMutatedSha256": "57e7416f63f3f27f04325b0cc64c74ca4b4936fc4d4f8ae7fc2896647050eba5",
+          "assertion": "fixed edit was applied",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-009-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-009-C001 fixed ramp unavailable to edit, move, rotate, delete\nok 1 - TC-D2-009-C001 fixed ramp unavailable to edit, move, rotate, delete\n  ---\n  duration_ms: 2.255239\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 32.855142\n",
+            "stderr": "(node:17368) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-VJ8Q8p/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-VJ8Q8p/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "0579a8b4e443021a05dc1ef43814fe2678e676181b18044d36e50de1e39c6c42"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-009-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-009-C001 fixed ramp unavailable to edit, move, rotate, delete\nnot ok 1 - TC-D2-009-C001 fixed ramp unavailable to edit, move, rotate, delete\n  ---\n  duration_ms: 1.915727\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-VJ8Q8p/tests/d2-placement.test.js:15:53'\n  failureType: 'testCodeFailure'\n  error: |-\n    fixed edit was applied\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-VJ8Q8p/tests/d2-placement.test.js:156:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 33.276876\n",
+            "stderr": "(node:17375) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-VJ8Q8p/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-VJ8Q8p/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "9e79902f4a11ebe00bfa9cd4a3e8eac7703cf728c70bc049bf60c1f01d55a272"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-04": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT04",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "FOUNDATION",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutation04.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 100,
+            "physicsValidationSimulations": 4,
+            "physicsValidationTicks": 8
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.358Z",
+          "settledAt": "2026-11-25T22:30:54.660Z",
+          "charged": {
+            "automatedSeconds": 1,
+            "physicsValidationSimulations": 4,
+            "physicsValidationTicks": 8
+          },
+          "stdoutFile": "cr009-e8-isolated-mut04.log",
+          "stderrFile": "cr009-e8-isolated-mut04-stderr.log",
+          "stdoutSHA256": "91548e891c18b3df29b331541633360ff2a36c6316e6f1dad4adb41bc3210034",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "mutationId": "MUT-04",
+          "caseId": "TC-D7-023-C004",
+          "status": "KILLED",
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "sourcePath": "src/physics/spring-controller.js",
+          "sourceSha": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+          "mutatedSha": "cf46b11be162b678b4e45febb79d5d9eee3d82e37d4979e13d3bb37dba39ad00",
+          "sameFixedDualFixture": "d59b328551c9c43e0f8d4bb0447e3a9de7bcb675e0dbbc132bd849eabaad5125",
+          "controls": [
+            {
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D2-023-C002",
+                "tests/d2-spring.test.js"
+              ],
+              "exit": 0,
+              "stdout": "TAP version 13\n# Subtest: TC-D2-023-C002 two actual eligible springs produce only one physical launch\nok 1 - TC-D2-023-C002 two actual eligible springs produce only one physical launch\n  ---\n  duration_ms: 10.7327\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 38.572028\n",
+              "stderr": "(node:17408) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-mut04-e8-1T3Dzf/src/physics/spring-controller.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-mut04-e8-1T3Dzf/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+              "stdoutSha256": "4e4243b366a7fe674df2c94fe514014c902f5797b18b4253d3e0b7d20093470d"
+            },
+            {
+              "args": [
+                "/tmp/game0010-mut04-e8-1T3Dzf/reviewed-dual.mjs",
+                "/tmp/game0010-phase4/e0-baseline/cr006-dual-formal.json",
+                "--verify"
+              ],
+              "exit": 0,
+              "stdout": "{\"id\":\"DUAL-R1-008\",\"initialClearance\":[0.014152186130070021,0.06718519471906059],\"c\":{\"id\":\"DUAL-R1-008\",\"p\":{\"x\":4.8,\"y\":3.6},\"v\":{\"x\":0.8,\"y\":-7},\"window\":3,\"springs\":[{\"x\":4.377428824506884,\"y\":3.550008621971352,\"id\":\"A\",\"angleDeg\":45,\"width\":0.72,\"height\":0.24},{\"x\":5.262471175493115,\"y\":3.514908621971352,\"id\":\"B\",\"angleDeg\":-45,\"width\":0.72,\"height\":0.24}],\"params\":{\"lead\":0.003,\"delay\":0.012,\"u\":0.28,\"gap\":0.001}},\"eligibility\":{\"tick\":1,\"substeps\":[0,1],\"ranking\":[{\"id\":\"A\",\"x\":4.377428824506884,\"y\":3.550008621971352,\"angleDeg\":45,\"v\":4440,\"n\":1000},{\"id\":\"B\",\"x\":5.262471175493115,\"y\":3.514908621971352,\"angleDeg\":-45,\"v\":4117,\"n\":1000}],\"qualifiedIDs\":[\"A\",\"B\"]},\"trace\":[{\"tick\":1,\"before\":{\"A\":true,\"B\":true},\"q\":[{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":1,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":6,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}}],\"events\":[{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"begin-contact\",\"id\":\"A\",\"ordinal\":0,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":1,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":2,\"points\":[{\"position\":{\"x\":4.682373487445917,\"y\":3.425617130980334},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.3035865058524899,\"y\":0.12767037224918187},\"approach\":-0.22201644937454568,\"impulse\":0.932469087373109}],\"ball\":{\"x\":4.822147548102983,\"y\":3.5653911916374}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":3,\"points\":[{\"position\":{\"x\":4.682373487445917,\"y\":3.425617130980334},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.3035865058524899,\"y\":0.12767037224918187},\"approach\":-0.22201644937454568,\"impulse\":null}],\"ball\":{\"x\":4.822147548102983,\"y\":3.5653911916374}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":4,\"points\":[{\"position\":{\"x\":4.707116522692783,\"y\":3.4018417398817054},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.33789421413388976,\"y\":0.12835459998817647},\"approach\":-0.1642146573585248,\"impulse\":0}],\"ball\":{\"x\":4.847374405423968,\"y\":3.5420996226128896}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"begin-contact\",\"id\":\"B\",\"ordinal\":5,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":6,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":7,\"points\":[{\"position\":{\"x\":4.705489966507518,\"y\":3.4034046851332787},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.33563889603929664,\"y\":0.12830962026560494},\"approach\":-0.16421465735851543,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":8,\"points\":[{\"position\":{\"x\":4.978907996931296,\"y\":3.4112954684097825},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27377500995938264,\"y\":0.12724388295236497},\"approach\":-0.20584624968839446,\"impulse\":0.8645542486912658}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":9,\"points\":[{\"position\":{\"x\":4.698995267690874,\"y\":3.4103277135357253},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.32615113013456654,\"y\":0.12861249502030903},\"approach\":-1.105753242182082,\"impulse\":0}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}}],\"bounds\":[{\"tick\":1,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.8,\"y\":3.6},\"v\":{\"x\":0.8,\"y\":-7},\"omega\":0,\"touch\":[],\"currentTouch\":[],\"clearance\":{\"A\":0.014152186130070021,\"B\":0.06718519471906059}},{\"tick\":1,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.822147548102983,\"y\":3.5653911916374},\"v\":{\"x\":3.0282319528109705,\"y\":-2.7142532790355682},\"omega\":-14.896809818847718,\"touch\":[\"A\"],\"currentTouch\":[\"A\"],\"clearance\":{\"A\":0.005340744498364414,\"B\":0.027052390186805997}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.822147548102983,\"y\":3.5653911916374},\"v\":{\"x\":3.0282319528109705,\"y\":-2.7142532790355682},\"omega\":-14.896809818847718,\"touch\":[\"A\"],\"currentTouch\":[\"A\"],\"clearance\":{\"A\":0.005340744498364414,\"B\":0.027052390186805997}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.839435509748114,\"y\":3.550767955592965},\"v\":{\"x\":0.6363303368294791,\"y\":0.9274408949024426},\"omega\":-5.607623415186486,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"A\",\"B\"],\"clearance\":{\"A\":0.007224990040618107,\"B\":0.004487765904729379}}],\"final\":{\"p\":{\"x\":4.839435509748114,\"y\":3.550767955592965},\"v\":{\"x\":6.717514421272201,\"y\":6.7175144212722016},\"omega\":-5.607623415186486,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"A\",\"B\"],\"clearance\":{\"A\":0.007224990040618107,\"B\":0.004487765904729379}},\"rawState\":{\"A\":{\"ready\":false,\"quiet\":0},\"B\":{\"ready\":false,\"quiet\":0}},\"actual\":{\"type\":\"SPRING_ACTIVATED\",\"springId\":\"A\",\"tick\":1,\"velocity\":{\"x\":6.717514421272201,\"y\":6.7175144212722016},\"angularVelocity\":-5.607623415186486},\"actualStates\":{\"A\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0},\"B\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0}},\"productCandidates\":[{\"id\":\"A\",\"alignment\":1,\"approach\":4.440328987491,\"substep\":0},{\"id\":\"B\",\"alignment\":1,\"approach\":4.116924993767932,\"substep\":1}],\"productEndContacts\":[\"A\",\"B\"],\"unresolved\":[]},{\"tick\":2,\"before\":{\"A\":false,\"B\":false},\"q\":[],\"events\":[{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":10,\"points\":[{\"position\":{\"x\":4.698995267690874,\"y\":3.4103277135357253},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.32615113013456654,\"y\":0.12861249502030903},\"approach\":-9.5,\"impulse\":null}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}},{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":11,\"points\":[{\"position\":{\"x\":4.978907996931296,\"y\":3.4112954684097825},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27377500995938264,\"y\":0.12724388295236497},\"approach\":-2.6645352591003757e-15,\"impulse\":null}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}},{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":12,\"points\":[{\"position\":{\"x\":4.726677948375234,\"y\":3.4381552759010128},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.326048683315513,\"y\":0.16786416430602819},\"approach\":-9.420400628572505,\"impulse\":0}],\"ball\":{\"x\":4.894873311957297,\"y\":3.606350639483076}},{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":13,\"points\":[{\"position\":{\"x\":5.034382019560711,\"y\":3.4668419318796615},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.195271671387945,\"y\":0.12729510636189192},\"approach\":-8.881784197001252e-16,\"impulse\":0.011545562238633521}],\"ball\":{\"x\":4.894873311957297,\"y\":3.606350639483076}},{\"tick\":2,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"end-contact\",\"id\":\"A\",\"ordinal\":14,\"points\":[],\"ball\":{\"x\":4.894873311957297,\"y\":3.606350639483076}},{\"tick\":2,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":15,\"points\":[{\"position\":{\"x\":5.034382019560711,\"y\":3.4668419318796615},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.195271671387945,\"y\":0.12729510636189192},\"approach\":-8.881784197001252e-16,\"impulse\":null}],\"ball\":{\"x\":4.894873311957297,\"y\":3.606350639483076}},{\"tick\":2,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":16,\"points\":[{\"position\":{\"x\":5.089394398775717,\"y\":3.521912263767039},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.11743143987605033,\"y\":0.1273360850895138},\"approach\":0,\"impulse\":0.011545562238634054}],\"ball\":{\"x\":4.949856714836117,\"y\":3.661449947706639}}],\"bounds\":[{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.839435509748114,\"y\":3.550767955592965},\"v\":{\"x\":6.717514421272201,\"y\":6.7175144212722016},\"omega\":-5.607623415186486,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"A\",\"B\"],\"clearance\":{\"A\":0.007224990040618107,\"B\":0.004487765904729379}},{\"tick\":2,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.894873311957297,\"y\":3.606350639483076},\"v\":{\"x\":6.661229165957635,\"y\":6.661229165957632},\"omega\":-5.789769577070135,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.08572832861205576,\"B\":0.0045902127237831825}},{\"tick\":2,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.894873311957297,\"y\":3.606350639483076},\"v\":{\"x\":6.661229165957635,\"y\":6.661229165957632},\"omega\":-5.789769577070135,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.08572832861205576,\"B\":0.0045902127237831825}},{\"tick\":2,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.949856714836117,\"y\":3.661449947706639},\"v\":{\"x\":6.604962666143004,\"y\":6.604962666143001},\"omega\":-5.971887785452828,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.16356856012395038,\"B\":0.004672170179026658}}],\"final\":{\"p\":{\"x\":4.949856714836117,\"y\":3.661449947706639},\"v\":{\"x\":6.604962666143004,\"y\":6.604962666143001},\"omega\":-5.971887785452828,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.16356856012395038,\"B\":0.004672170179026658}},\"rawState\":{\"A\":{\"ready\":false,\"quiet\":0},\"B\":{\"ready\":false,\"quiet\":0}},\"actual\":null,\"actualStates\":{\"A\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0},\"B\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0}},\"productCandidates\":[],\"productEndContacts\":[\"B\"],\"unresolved\":[]},{\"tick\":3,\"before\":{\"A\":false,\"B\":false},\"q\":[],\"events\":[{\"tick\":3,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":17,\"points\":[{\"position\":{\"x\":5.089394398775717,\"y\":3.521912263767039},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.11743143987605033,\"y\":0.1273360850895138},\"approach\":0,\"impulse\":null}],\"ball\":{\"x\":4.949856714836117,\"y\":3.661449947706639}},{\"tick\":3,\"substep\":0,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":18,\"points\":[{\"position\":{\"x\":5.143943842003257,\"y\":3.5765080691324753},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.04025409446166534,\"y\":0.1273688680716109},\"approach\":8.881784197001252e-16,\"impulse\":0.011545562238633875}],\"ball\":{\"x\":5.004382976994708,\"y\":3.7160689341410245}},{\"tick\":3,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":19,\"points\":[{\"position\":{\"x\":5.143943842003257,\"y\":3.5765080691324753},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.04025409446166534,\"y\":0.1273688680716109},\"approach\":8.881784197001252e-16,\"impulse\":null}],\"ball\":{\"x\":5.004382976994708,\"y\":3.7160689341410245}},{\"tick\":3,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":20,\"points\":[{\"position\":{\"x\":5.1980293463815705,\"y\":3.6306306632211065},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.03626058574361321,\"y\":0.12739509445728847},\"approach\":2.220446049250313e-15,\"impulse\":0.011545562238634231}],\"ball\":{\"x\":5.058449936517863,\"y\":3.7702100730848143}}],\"bounds\":[{\"tick\":3,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.949856714836117,\"y\":3.661449947706639},\"v\":{\"x\":6.604962666143004,\"y\":6.604962666143001},\"omega\":-5.971887785452828,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.16356856012395038,\"B\":0.004672170179026658}},{\"tick\":3,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":5.004382976994708,\"y\":3.7160689341410245},\"v\":{\"x\":6.548714915578563,\"y\":6.548714915578558},\"omega\":-6.15396847015225,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.24074590553833536,\"B\":0.004737736143221538}},{\"tick\":3,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":5.004382976994708,\"y\":3.7160689341410245},\"v\":{\"x\":6.548714915578563,\"y\":6.548714915578558},\"omega\":-6.15396847015225,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.24074590553833536,\"B\":0.004737736143221538}},{\"tick\":3,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":5.058449936517863,\"y\":3.7702100730848143},\"v\":{\"x\":6.492485908016641,\"y\":6.492485908016636},\"omega\":-6.336003981336967,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.31726058574361365,\"B\":0.004790188914576943}}],\"final\":{\"p\":{\"x\":5.058449936517863,\"y\":3.7702100730848143},\"v\":{\"x\":6.492485908016641,\"y\":6.492485908016636},\"omega\":-6.336003981336967,\"touch\":[\"B\"],\"currentTouch\":[\"B\"],\"clearance\":{\"A\":0.31726058574361365,\"B\":0.004790188914576943}},\"rawState\":{\"A\":{\"ready\":false,\"quiet\":1},\"B\":{\"ready\":false,\"quiet\":0}},\"actual\":null,\"actualStates\":{\"A\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":1},\"B\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0}},\"productCandidates\":[],\"productEndContacts\":[\"B\"],\"unresolved\":[]}]}\n{\"plan\":\"cr006-dual-formal\",\"totals\":{\"worlds\":1,\"ticks\":3},\"useDUT\":true}\n",
+              "stderr": "(node:17415) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-mut04-e8-1T3Dzf/src/physics/adapter.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-mut04-e8-1T3Dzf/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+              "stdoutSha256": "57a1ab611eaf8bf6fb95d68470364ffcb7ebcb942a715d3f545929a7c5e49884"
+            }
+          ],
+          "mutants": [
+            {
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D2-023-C002",
+                "tests/d2-spring.test.js"
+              ],
+              "exit": 1,
+              "stdout": "TAP version 13\n# Subtest: TC-D2-023-C002 two actual eligible springs produce only one physical launch\nnot ok 1 - TC-D2-023-C002 two actual eligible springs produce only one physical launch\n  ---\n  duration_ms: 10.220291\n  type: 'test'\n  location: '/tmp/game0010-mut04-e8-1T3Dzf/tests/d2-spring.test.js:18:40'\n  failureType: 'testCodeFailure'\n  error: |-\n    only one physical launch per tick\n    \n    2 !== 1\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 1\n  actual: 2\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-mut04-e8-1T3Dzf/tests/d2-spring.test.js:221:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 38.58691\n",
+              "stderr": "(node:17422) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-mut04-e8-1T3Dzf/src/physics/spring-controller.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-mut04-e8-1T3Dzf/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+              "stdoutSha256": "97f6a5cf0719ca75c5b53cc52dba0dd9011c2762aca52088e2d968e4d77efb22"
+            },
+            {
+              "args": [
+                "/tmp/game0010-mut04-e8-1T3Dzf/reviewed-dual.mjs",
+                "/tmp/game0010-phase4/e0-baseline/cr006-dual-formal.json",
+                "--verify"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "(node:17429) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-mut04-e8-1T3Dzf/src/physics/adapter.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-mut04-e8-1T3Dzf/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\nnode:internal/modules/run_main:111\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: {\"actual\":{\"type\":\"SPRING_ACTIVATED\",\"springId\":\"B\",\"tick\":1,\"velocity\":{\"x\":-6.717514421272201,\"y\":6.7175144212722016},\"angularVelocity\":-5.607623415186486},\"winner\":{\"id\":\"A\",\"x\":4.377428824506884,\"y\":3.550008621971352,\"angleDeg\":45,\"v\":4440,\"n\":1000},\"row\":{\"tick\":1,\"before\":{\"A\":true,\"B\":true},\"q\":[{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":1,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":6,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}}],\"events\":[{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"begin-contact\",\"id\":\"A\",\"ordinal\":0,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":1,\"points\":[{\"position\":{\"x\":4.66698406924082,\"y\":3.4341547345745975},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.28666754648456433,\"y\":0.12282540767442898},\"approach\":4.440328987491,\"impulse\":null}],\"ball\":{\"x\":4.803332222592469,\"y\":3.5705028879262466}},{\"tick\":1,\"substep\":0,\"phase\":1,\"alpha\":0.5,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":2,\"points\":[{\"position\":{\"x\":4.682373487445917,\"y\":3.425617130980334},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.3035865058524899,\"y\":0.12767037224918187},\"approach\":-0.22201644937454568,\"impulse\":0.932469087373109}],\"ball\":{\"x\":4.822147548102983,\"y\":3.5653911916374}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":3,\"points\":[{\"position\":{\"x\":4.682373487445917,\"y\":3.425617130980334},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.3035865058524899,\"y\":0.12767037224918187},\"approach\":-0.22201644937454568,\"impulse\":null}],\"ball\":{\"x\":4.822147548102983,\"y\":3.5653911916374}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":4,\"points\":[{\"position\":{\"x\":4.707116522692783,\"y\":3.4018417398817054},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.33789421413388976,\"y\":0.12835459998817647},\"approach\":-0.1642146573585248,\"impulse\":0}],\"ball\":{\"x\":4.847374405423968,\"y\":3.5420996226128896}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"begin-contact\",\"id\":\"B\",\"ordinal\":5,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"B\",\"ordinal\":6,\"points\":[{\"position\":{\"x\":4.981834099150265,\"y\":3.4075127070192064},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27438075946879176,\"y\":0.12250000000000011},\"approach\":4.116924993767932,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"pre-solve\",\"id\":\"A\",\"ordinal\":7,\"points\":[{\"position\":{\"x\":4.705489966507518,\"y\":3.4034046851332787},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.33563889603929664,\"y\":0.12830962026560494},\"approach\":-0.16421465735851543,\"impulse\":null}],\"ball\":{\"x\":4.845716043771855,\"y\":3.543630762397617}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"post-solve\",\"id\":\"B\",\"ordinal\":8,\"points\":[{\"position\":{\"x\":4.978907996931296,\"y\":3.4112954684097825},\"normal\":{\"x\":-0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":-0.27377500995938264,\"y\":0.12724388295236497},\"approach\":-0.20584624968839446,\"impulse\":0.8645542486912658}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}},{\"tick\":1,\"substep\":1,\"phase\":1,\"alpha\":0.9342620592405755,\"event\":\"post-solve\",\"id\":\"A\",\"ordinal\":9,\"points\":[{\"position\":{\"x\":4.698995267690874,\"y\":3.4103277135357253},\"normal\":{\"x\":0.7071067811865475,\"y\":0.7071067811865476},\"local\":{\"x\":0.32615113013456654,\"y\":0.12861249502030903},\"approach\":-1.105753242182082,\"impulse\":0}],\"ball\":{\"x\":4.839435509748114,\"y\":3.550767955592965}}],\"bounds\":[{\"tick\":1,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.8,\"y\":3.6},\"v\":{\"x\":0.8,\"y\":-7},\"omega\":0,\"touch\":[],\"currentTouch\":[],\"clearance\":{\"A\":0.014152186130070021,\"B\":0.06718519471906059}},{\"tick\":1,\"substep\":0,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.822147548102983,\"y\":3.5653911916374},\"v\":{\"x\":3.0282319528109705,\"y\":-2.7142532790355682},\"omega\":-14.896809818847718,\"touch\":[\"A\"],\"currentTouch\":[\"A\"],\"clearance\":{\"A\":0.005340744498364414,\"B\":0.027052390186805997}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"before-step\",\"p\":{\"x\":4.822147548102983,\"y\":3.5653911916374},\"v\":{\"x\":3.0282319528109705,\"y\":-2.7142532790355682},\"omega\":-14.896809818847718,\"touch\":[\"A\"],\"currentTouch\":[\"A\"],\"clearance\":{\"A\":0.005340744498364414,\"B\":0.027052390186805997}},{\"tick\":1,\"substep\":1,\"phase\":0,\"alpha\":0,\"when\":\"after-step\",\"p\":{\"x\":4.839435509748114,\"y\":3.550767955592965},\"v\":{\"x\":0.6363303368294791,\"y\":0.9274408949024426},\"omega\":-5.607623415186486,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"A\",\"B\"],\"clearance\":{\"A\":0.007224990040618107,\"B\":0.004487765904729379}}],\"final\":{\"p\":{\"x\":4.839435509748114,\"y\":3.550767955592965},\"v\":{\"x\":-6.717514421272201,\"y\":6.7175144212722016},\"omega\":-5.607623415186486,\"touch\":[\"A\",\"B\"],\"currentTouch\":[\"A\",\"B\"],\"clearance\":{\"A\":0.007224990040618107,\"B\":0.004487765904729379}},\"rawState\":{\"A\":{\"ready\":false,\"quiet\":0},\"B\":{\"ready\":false,\"quiet\":0}},\"actual\":{\"type\":\"SPRING_ACTIVATED\",\"springId\":\"B\",\"tick\":1,\"velocity\":{\"x\":-6.717514421272201,\"y\":6.7175144212722016},\"angularVelocity\":-5.607623415186486},\"actualStates\":{\"A\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0},\"B\":{\"phase\":\"WAIT_RELEASE\",\"quietTicks\":0}},\"productCandidates\":[{\"id\":\"A\",\"alignment\":1,\"approach\":4.440328987491,\"substep\":0},{\"id\":\"B\",\"alignment\":1,\"approach\":4.116924993767932,\"substep\":1}],\"productEndContacts\":[\"A\",\"B\"],\"unresolved\":[]}}\n    at analyzeDual (file:///tmp/game0010-mut04-e8-1T3Dzf/reviewed-dual.mjs:164:4)\n    at file:///tmp/game0010-mut04-e8-1T3Dzf/reviewed-dual.mjs:210:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async node:internal/modules/esm/loader:650:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v26.13.0\n",
+              "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "confirmedIntendedAssertions": [
+            "TC-D2-023-C002",
+            "TC-D2-026-C001"
+          ],
+          "conservativeBounds": {
+            "worlds": 4,
+            "ticks": 8
+          }
+        }
+      },
+      "MUT-05": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT02-03-05",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr005-e2-mutations.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:53.886Z",
+          "settledAt": "2026-11-25T22:30:54.341Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut02-03-05.log",
+          "stderrFile": "cr009-e8-isolated-mut02-03-05-stderr.log",
+          "stdoutSHA256": "fc794832292b9f7762cf953e1fb5f2b0bf353308ea57cff933a19681909d7d3a",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 3,
+        "caseEvidence": {
+          "id": "MUT-05",
+          "caseId": "TC-D7-023-C017",
+          "cases": [
+            "TC-D2-031-C001",
+            "TC-D2-032-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db",
+          "isolatedMutatedSha256": "9936e65983cdd38c1a96c5471b75ae5a947bb17e92a54d2db1dd9fa68ad5a7a4",
+          "assertion": "overlap in swept envelope",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-031-C001|TC-D2-032-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-031-C001 reservation outside the initial plate\nok 1 - TC-D2-031-C001 reservation outside the initial plate\n  ---\n  duration_ms: 2.055904\n  type: 'test'\n  ...\n# Subtest: TC-D2-032-C001 reservation between sampled angles\nok 2 - TC-D2-032-C001 reservation between sampled angles\n  ---\n  duration_ms: 0.424269\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 37.250947\n",
+            "stderr": "(node:17383) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-1UvLKm/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-1UvLKm/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "2b7b48fb33a35b4655a328e9563f123169bdaa9d4e9c0b14bef641b2a994810f"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D2-031-C001|TC-D2-032-C001",
+              "tests/d2-placement.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D2-031-C001 reservation outside the initial plate\nnot ok 1 - TC-D2-031-C001 reservation outside the initial plate\n  ---\n  duration_ms: 2.563305\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:15:53'\n  failureType: 'testCodeFailure'\n  error: |-\n    overlap in swept envelope\n    + actual - expected\n    \n    + undefined\n    - 'FIXED_OVERLAP'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 'FIXED_OVERLAP'\n  operator: 'strictEqual'\n  stack: |-\n    testSweep (/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:199:10)\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:203:3)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D2-032-C001 reservation between sampled angles\nnot ok 2 - TC-D2-032-C001 reservation between sampled angles\n  ---\n  duration_ms: 0.508663\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:15:53'\n  failureType: 'testCodeFailure'\n  error: |-\n    overlap in swept envelope\n    + actual - expected\n    \n    + undefined\n    - 'FIXED_OVERLAP'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 'FIXED_OVERLAP'\n  operator: 'strictEqual'\n  stack: |-\n    testSweep (/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:199:10)\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-1UvLKm/tests/d2-placement.test.js:211:3)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 0\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 37.610013\n",
+            "stderr": "(node:17390) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-1UvLKm/src/data/part-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-1UvLKm/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "5ba5dbb52db5138ed266d792f855cad8d9f88532aea850af6ca25ee45247c110"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-06": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutations-rules.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.673Z",
+          "settledAt": "2026-11-25T22:30:55.471Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+          "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+          "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 2,
+        "caseEvidence": {
+          "id": "MUT-06",
+          "caseId": "TC-D7-023-C018",
+          "cases": [
+            "TC-D3-004-C001",
+            "TC-D3-008-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b",
+          "isolatedMutatedSha256": "aec5686d9a0a80c702a5c006f7c01c61a1f6ce7a55efd4629ed06c4639cbd214",
+          "assertion": "strictly equal",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-004-C001|TC-D3-008-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-004-C001 goal boundary\nok 1 - TC-D3-004-C001 goal boundary\n  ---\n  duration_ms: 1.734468\n  type: 'test'\n  ...\n# {\"input\":{\"x\":4.8,\"y\":3},\"expected\":false,\"actual\":false}\n# Subtest: TC-D3-008-C001 rounded stability intervals\nok 2 - TC-D3-008-C001 rounded stability intervals\n  ---\n  duration_ms: 1.405932\n  type: 'test'\n  ...\n# {\"input\":{\"firstStableTick\":100,\"tick\":129,\"sample\":{\"position\":{\"x\":4.8,\"y\":2.6999999999999997},\"velocity\":{\"x\":0.1,\"y\":0},\"penetration\":0}},\"expected\":{\"status\":\"RUNNING\",\"intervals\":29},\"actual\":{\"status\":\"RUNNING\",\"intervals\":29}}\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 42.726858\n",
+            "stderr": "(node:17463) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-wgpojj/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-wgpojj/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "28c986a7c2ff502f2531d665b40cdd2888e03f8f8e996876d5d4386067e08ecc"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-004-C001|TC-D3-008-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-004-C001 goal boundary\nnot ok 1 - TC-D3-004-C001 goal boundary\n  ---\n  duration_ms: 2.195861\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:85:12\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D3-008-C001 rounded stability intervals\nnot ok 2 - TC-D3-008-C001 rounded stability intervals\n  ---\n  duration_ms: 0.418159\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    stabilityThrough (/tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:107:40)\n    /tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:113:20\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-wgpojj/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 0\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 38.697468\n",
+            "stderr": "(node:17470) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-wgpojj/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-wgpojj/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "2de0771dbf87cc3e9b8aaeb016d6ea505e2ab6fb268544161a757e077c8cf2d8"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-07": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutations-rules.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.673Z",
+          "settledAt": "2026-11-25T22:30:55.471Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+          "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+          "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 3,
+        "caseEvidence": {
+          "id": "MUT-07",
+          "caseId": "TC-D7-023-C019",
+          "cases": [
+            "TC-D3-032-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "7337e79279c1f473bc3c45958e47750dcff9c49d2e9d56e65abf08a49e18b2c0",
+          "isolatedMutatedSha256": "09830cde633fd71fbe774c3318ba01e3ff0b1e7b5154b714901b6097301193cf",
+          "assertion": "fixed",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-032-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-032-C001 isolated fixed, stale, central, airborne and wrong loads\nok 1 - TC-D3-032-C001 isolated fixed, stale, central, airborne and wrong loads\n  ---\n  duration_ms: 2.718956\n  type: 'test'\n  ...\n# [{\"name\":\"positive control\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":true,\"actual\":{\"usedIds\":[\"S\"],\"achieved\":true}},{\"name\":\"offsetBelow\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.119,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"zeroImpulse\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":0},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"impulseAtBoundary\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000001},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"zeroTorque\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":0,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"reverseDeltaOmega\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":-0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"deltaOmegaAtBoundary\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000001,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"angleBelow\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08709192967451704},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"angleWrongDirection\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":-0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"otherEpisode\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"B\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"alreadyMovingNoAcceleration\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":1,\"omegaAfter\":1,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"alreadyMovingReverseLoad\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":1,\"omegaAfter\":0.999998,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"fixed\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"stale\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-OLD\",\"episode\":\"A\",\"upper\":true,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"center\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":true,\"offset\":0,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"noContact\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":false,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":0,\"omegaAfter\":0.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}},{\"name\":\"afterRelease\",\"event\":{\"id\":\"S\",\"runId\":\"QA-LOAD-A\",\"episode\":\"A\",\"upper\":false,\"offset\":0.12,\"point\":{\"x\":-0.12,\"y\":0.08},\"pivot\":{\"x\":0,\"y\":0},\"impulse\":{\"x\":0,\"y\":-0.000002},\"omegaBefore\":1,\"omegaAfter\":1.000002,\"angleBefore\":0,\"angle\":0.08726646259971647},\"expected\":false,\"actual\":{\"usedIds\":[],\"achieved\":false}}]\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 40.404591\n",
+            "stderr": "(node:17478) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-mVbivx/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-mVbivx/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "c30618b275e66767a5d1832ab32ac150a22077a0ed6448733a11aaeec3f3c88b"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-032-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-032-C001 isolated fixed, stale, central, airborne and wrong loads\nnot ok 1 - TC-D3-032-C001 isolated fixed, stale, central, airborne and wrong loads\n  ---\n  duration_ms: 3.097356\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-mVbivx/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    fixed\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    loadVariant (/tmp/karakuri-isolated-mutation-mVbivx/tests/d3-rules.test.js:325:10)\n    /tmp/karakuri-isolated-mutation-mVbivx/tests/d3-rules.test.js:356:83\n    Array.map (<anonymous>)\n    /tmp/karakuri-isolated-mutation-mVbivx/tests/d3-rules.test.js:356:60\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-mVbivx/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 37.804405\n",
+            "stderr": "(node:17485) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-mVbivx/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-mVbivx/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "3423af048f6e93c4a8737512f840cc3ff6e90e6ed435b5e0540be89e64b57165"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-08": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutations-rules.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.673Z",
+          "settledAt": "2026-11-25T22:30:55.471Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+          "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+          "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 4,
+        "caseEvidence": {
+          "id": "MUT-08",
+          "caseId": "TC-D7-023-C020",
+          "cases": [
+            "TC-D3-018-C001",
+            "TC-D3-018-C002"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b",
+          "isolatedMutatedSha256": "8dfd8730d60b368a42a16b5a40c4437f5b1feb54c3ad708bb26dfd22ae063ab7",
+          "assertion": "FL-005",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-018-C001|TC-D3-018-C002",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-018-C001 terminal evaluation\nok 1 - TC-D3-018-C001 terminal evaluation\n  ---\n  duration_ms: 2.081542\n  type: 'test'\n  ...\n# {\"input\":{\"tick\":1200,\"stable\":true,\"requiredUse\":true},\"expected\":{\"status\":\"CLEARED\",\"code\":null},\"actual\":{\"status\":\"CLEARED\",\"code\":null}}\n# Subtest: TC-D3-018-C002 terminal precedence inside result session\nok 2 - TC-D3-018-C002 terminal precedence inside result session\n  ---\n  duration_ms: 0.910659\n  type: 'test'\n  ...\n# {\"input\":{\"tick\":1200,\"position\":{\"x\":4.8,\"y\":2.6999999999999997},\"stable\":true,\"requiredUse\":true,\"error\":false},\"expected\":\"CLEARED\",\"actual\":{\"runId\":\"A\",\"phase\":\"CLEARED\",\"result\":{\"runId\":\"A\",\"status\":\"CLEARED\",\"code\":null,\"tick\":1200,\"stars\":3,\"achievements\":[]},\"progress\":{\"stages\":{\"01\":{\"cleared\":true,\"historicalStars\":3,\"best\":{\"placedCount\":2,\"stars\":3,\"compatibility\":\"A\",\"placements\":[{\"id\":\"p0\",\"type\":\"R\",\"gridX\":0,\"gridY\":5,\"angleDeg\":0},{\"id\":\"p1\",\"type\":\"R\",\"gridX\":1,\"gridY\":5,\"angleDeg\":0}]},\"previousBest\":null}},\"achievements\":{\"allCleared\":false,\"allStars\":false}},\"previousTrajectory\":{\"runId\":\"A\",\"result\":\"CLEARED\",\"elapsedSeconds\":20,\"points\":[{\"tick\":0,\"position\":{\"x\":1,\"y\":2}},{\"tick\":1200,\"position\":{\"x\":4.8,\"y\":2.6999999999999997}}]},\"revision\":1},\"notifications\":[{\"runId\":\"A\",\"status\":\"CLEARED\",\"code\":null,\"tick\":1200,\"stars\":3,\"achievements\":[]}]}\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 41.033581\n",
+            "stderr": "(node:17493) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-qUEHO2/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-qUEHO2/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "ae9f2d1a8e096ef95b773fa36ab2b2a51c872f48da3a489facff309773456dbf"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-018-C001|TC-D3-018-C002",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-018-C001 terminal evaluation\nnot ok 1 - TC-D3-018-C001 terminal evaluation\n  ---\n  duration_ms: 3.165617\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   code: 'FL-005',\n    +   status: 'FAILED'\n    -   code: null,\n    -   status: 'CLEARED'\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    status: 'CLEARED'\n    code: ~\n  actual:\n    status: 'FAILED'\n    code: 'FL-005'\n  operator: 'deepStrictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:175:10\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D3-018-C002 terminal precedence inside result session\nnot ok 2 - TC-D3-018-C002 terminal precedence inside result session\n  ---\n  duration_ms: 1.092377\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    + actual - expected\n    \n    + 'FAILED'\n    - 'CLEARED'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 'CLEARED'\n  actual: 'FAILED'\n  operator: 'strictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:188:12\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-qUEHO2/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 0\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 42.661537\n",
+            "stderr": "(node:17500) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-qUEHO2/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-qUEHO2/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "504ba10b429f09a8a721d9b17148056615e87cdbd00c180e70618626a5e12a15"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-09": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT01-06-07-08-09",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutations-rules.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 90
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:54.673Z",
+          "settledAt": "2026-11-25T22:30:55.471Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut01-06-07-08-09.log",
+          "stderrFile": "cr009-e8-isolated-mut01-06-07-08-09-stderr.log",
+          "stdoutSHA256": "d3ca2d3bf86cf446d0486c12bd55ca9a0d4a1e89688d2ba171f59d69810a61a8",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 5,
+        "caseEvidence": {
+          "id": "MUT-09",
+          "caseId": "TC-D7-023-C021",
+          "cases": [
+            "TC-D3-021-C001"
+          ],
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "status": "PASS",
+          "sourceSha256": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b",
+          "isolatedMutatedSha256": "f2290e443b62ee20ba283d06c6ae676179471c0308e656ad51544ba688c28c9e",
+          "assertion": "deep-equal",
+          "control": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-021-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-021-C001 stale abandoned run cannot update active run\nok 1 - TC-D3-021-C001 stale abandoned run cannot update active run\n  ---\n  duration_ms: 2.545158\n  type: 'test'\n  ...\n# {\"input\":[\"CLEARED\",\"FAILED\",\"STAR\",\"TRAJECTORY\"],\"expected\":[false,false,false,false],\"actual\":[false,false,false,false],\"before\":\"{\\\\\"runId\\\\\":\\\\\"B\\\\\",\\\\\"phase\\\\\":\\\\\"RUNNING\\\\\",\\\\\"result\\\\\":null,\\\\\"progress\\\\\":{\\\\\"stages\\\\\":{},\\\\\"achievements\\\\\":{\\\\\"allCleared\\\\\":false,\\\\\"allStars\\\\\":false}},\\\\\"previousTrajectory\\\\\":null,\\\\\"revision\\\\\":0}\",\"after\":{\"runId\":\"B\",\"phase\":\"RUNNING\",\"result\":null,\"progress\":{\"stages\":{},\"achievements\":{\"allCleared\":false,\"allStars\":false}},\"previousTrajectory\":null,\"revision\":0},\"notifications\":[]}\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 34.975804\n",
+            "stderr": "(node:17508) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-iulQYw/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-iulQYw/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "649cf13e00f8682bb8ff93baa32716f5e0d0623ecc6505e6ba463aeccc23a9ac"
+          },
+          "failure": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern",
+              "TC-D3-021-C001",
+              "tests/d3-rules.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D3-021-C001 stale abandoned run cannot update active run\nnot ok 1 - TC-D3-021-C001 stale abandoned run cannot update active run\n  ---\n  duration_ms: 3.229932\n  type: 'test'\n  location: '/tmp/karakuri-isolated-mutation-iulQYw/tests/d3-rules.test.js:15:3'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      [\n    +   true,\n        false,\n        false,\n        false,\n    -   false\n      ]\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    0: false\n    1: false\n    2: false\n    3: false\n  actual:\n    0: true\n    1: false\n    2: false\n    3: false\n  operator: 'deepStrictEqual'\n  stack: |-\n    /tmp/karakuri-isolated-mutation-iulQYw/tests/d3-rules.test.js:204:10\n    TestContext.<anonymous> (/tmp/karakuri-isolated-mutation-iulQYw/tests/d3-rules.test.js:16:33)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 39.131055\n",
+            "stderr": "(node:17515) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/karakuri-isolated-mutation-iulQYw/src/domain/result-evaluator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/karakuri-isolated-mutation-iulQYw/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "stdoutSha256": "d5e43030961dc25cbdca678101b60bdf564ee3b1edb8b5d0eaf280ce15a17c9e"
+          },
+          "productUnchanged": true
+        }
+      },
+      "MUT-10": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT10-EXACT",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutation-storage-exact.mjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 70
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:57.230Z",
+          "settledAt": "2026-11-25T22:30:57.518Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut10-exact.log",
+          "stderrFile": "cr009-e8-isolated-mut10-exact-stderr.log",
+          "stdoutSHA256": "d6612050c955bd91b17b56b121b21b3a6e4dcf190e3f24dd743afa4afea5ecbd",
+          "stderrSHA256": "bdf193e7889606e163ab6717f53c6fe2cfe7e968562d7293566ce1109ef83c54",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "mutationId": "MUT-10",
+          "caseId": "TC-D7-023-C010",
+          "status": "KILLED",
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "normal": {
+            "generation": {
+              "exit": 0,
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D5-033-C001",
+                "tests/d5-save.test.js"
+              ],
+              "stdout": "TAP version 13\n# Subtest: TC-D5-033-C001\nok 1 - TC-D5-033-C001\n  ---\n  duration_ms: 16.380452\n  type: 'test'\n  ...\n# {\"verified\":true}\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.096512\n",
+              "stderr": "(node:17757) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-phase4/development/games/0010_karakuri-workshop/src/storage/save-validator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-phase4/development/games/0010_karakuri-workshop/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+            },
+            "nonOwner": {
+              "actual": {
+                "accepted": false,
+                "sameBytes": true,
+                "writeCount": 0,
+                "observedMode": "READ_ONLY",
+                "seed": "{\"gameId\":\"game-0010\",\"schemaVersion\":1,\"revision\":0,\"saveEpoch\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"stages\":{\"10\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"01\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"02\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"03\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"04\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"05\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"06\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"07\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"08\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"09\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null}},\"settings\":{\"muted\":false,\"volume\":0.7}}",
+                "after": "{\"gameId\":\"game-0010\",\"schemaVersion\":1,\"revision\":0,\"saveEpoch\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"stages\":{\"10\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"01\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"02\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"03\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"04\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"05\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"06\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"07\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"08\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"09\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null}},\"settings\":{\"muted\":false,\"volume\":0.7}}",
+                "storageEvents": []
+              },
+              "expected": {
+                "accepted": false,
+                "sameBytes": true,
+                "writeCount": 0
+              }
+            }
+          },
+          "mutant": {
+            "generation": {
+              "exit": 1,
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D5-033-C001",
+                "tests/d5-save.test.js"
+              ],
+              "stdout": "TAP version 13\n# Subtest: TC-D5-033-C001\nnot ok 1 - TC-D5-033-C001\n  ---\n  duration_ms: 16.824205\n  type: 'test'\n  location: '/tmp/game0010-mut10-e8-odOhFJ/tests/d5-save.test.js:21:23'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    /tmp/game0010-mut10-e8-odOhFJ/tests/d5-save.test.js:189:10\n    async TestContext.<anonymous> (/tmp/game0010-mut10-e8-odOhFJ/tests/d5-save.test.js:21:54)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 52.569407\n",
+              "stderr": "(node:17772) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-mut10-e8-odOhFJ/src/storage/save-validator.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-mut10-e8-odOhFJ/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+            },
+            "nonOwner": {
+              "actual": {
+                "accepted": true,
+                "sameBytes": false,
+                "writeCount": 1,
+                "observedMode": "READ_ONLY",
+                "seed": "{\"gameId\":\"game-0010\",\"schemaVersion\":1,\"revision\":0,\"saveEpoch\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"stages\":{\"10\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"01\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"02\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"03\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"04\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"05\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"06\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"07\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"08\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"09\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null}},\"settings\":{\"muted\":false,\"volume\":0.7}}",
+                "after": "{\"gameId\":\"game-0010\",\"schemaVersion\":1,\"revision\":1,\"saveEpoch\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"stages\":{\"10\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"01\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"02\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"03\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"04\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"05\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"06\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"07\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"08\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"09\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null}},\"settings\":{\"volume\":0.1,\"muted\":true}}",
+                "storageEvents": [
+                  {
+                    "key": "daily-mini-games.game-0010.save",
+                    "bytes": "{\"gameId\":\"game-0010\",\"schemaVersion\":1,\"revision\":1,\"saveEpoch\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"stages\":{\"10\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"01\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"02\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"03\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"04\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"05\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"06\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"07\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"08\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null},\"09\":{\"progress\":{\"cleared\":false,\"historicalBestStars\":0},\"draft\":null,\"currentBest\":null,\"previousBest\":null}},\"settings\":{\"volume\":0.1,\"muted\":true}}"
+                  }
+                ]
+              },
+              "expected": {
+                "accepted": false,
+                "sameBytes": true,
+                "writeCount": 0
+              }
+            }
+          },
+          "file": "src/storage/save-repository.js",
+          "sourceHash": "0a2efcec98365a68533cfda8dc0df63d80edec7732a888104646f35693ec6114",
+          "isolateHash": "293c009d1a5f2bff6eb19181154329e98c2952a226207840461cf8bc894b6cd0"
+        }
+      },
+      "MUT-11": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT11",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutation11.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 75
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:55.482Z",
+          "settledAt": "2026-11-25T22:30:57.218Z",
+          "charged": {
+            "automatedSeconds": 2
+          },
+          "stdoutFile": "cr009-e8-isolated-mut11.log",
+          "stderrFile": "cr009-e8-isolated-mut11-stderr.log",
+          "stdoutSHA256": "0e20eef3d97908e8e0b3f222d0f8d35cf8319ce604e808b7026a5ab54c28180b",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "mutationId": "MUT-11",
+          "baseline": {
+            "oldRevision": 0,
+            "newRevision": 1,
+            "unrelatedValue": "independent-sentinel"
+          },
+          "mutant": {
+            "oldRevision": 0,
+            "unrelatedValue": null
+          },
+          "mutation": {
+            "path": "src/app/controller.js",
+            "baselineHash": "4c22619239564291aec615b1b4a1162371ee6a1f03fc3d504182d69b117e838a",
+            "mutantHash": "9763e0aa016365b1a8ba19d87ea235f43aaf33cc0b7040b83d7d782053ef3f15"
+          },
+          "productHashAfter": "4c22619239564291aec615b1b4a1162371ee6a1f03fc3d504182d69b117e838a",
+          "status": "KILLED"
+        }
+      },
+      "MUT-12": {
+        "status": "KILLED",
+        "reference": {
+          "runId": "CR009-E8-ISOLATED-MUT12-EXACT",
+          "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "purpose": "AUTOMATED",
+          "pool": null,
+          "engineeringStage": "E8",
+          "preparedPlanSHA256": "a7ee4e95231f1f4e9fa70154f09ad99ccec46ab83c66b05d2719e85d1cf9fff3",
+          "command": [
+            "cr008-e8-mutation12-exact.cjs"
+          ],
+          "reserved": {
+            "automatedSeconds": 75
+          },
+          "reservedAt": "2026-11-25T22:30:53.876Z",
+          "startedAt": "2026-11-25T22:30:57.530Z",
+          "settledAt": "2026-11-25T22:30:57.949Z",
+          "charged": {
+            "automatedSeconds": 1
+          },
+          "stdoutFile": "cr009-e8-isolated-mut12-exact.log",
+          "stderrFile": "cr009-e8-isolated-mut12-exact-stderr.log",
+          "stdoutSHA256": "370797b75ef0301008a8886c118c7b8c428226dda9ab56ac319106d6affcb27f",
+          "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "signal": null
+        },
+        "rawLine": 1,
+        "caseEvidence": {
+          "mutationId": "MUT-12",
+          "testedSha": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+          "file": "games/0010_karakuri-workshop/qa/harness/budget.js",
+          "expected": [
+            "TC-D4-028-C001",
+            "TC-D7-024-C001",
+            "TC-D8-011-C001",
+            "TC-D8-013-C001"
+          ],
+          "normal": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern=TC-D4-028-C001|TC-D7-024-C001|TC-D8-011-C001|TC-D8-013-C001",
+              "games/0010_karakuri-workshop/tests/d7-integration.test.js",
+              "games/0010_karakuri-workshop/tests/d8-governance.test.js",
+              "games/0010_karakuri-workshop/tests/d4-stages.test.js"
+            ],
+            "exitCode": 0,
+            "stdout": "TAP version 13\n# Subtest: TC-D4-028-C001 reserve at the last legal unit and reject at either search ceiling\nok 1 - TC-D4-028-C001 reserve at the last legal unit and reject at either search ceiling\n  ---\n  duration_ms: 1.439752\n  type: 'test'\n  ...\n# Subtest: TC-D7-024-C001: stage, global and major root cause ceilings\nok 2 - TC-D7-024-C001: stage, global and major root cause ceilings\n  ---\n  duration_ms: 1.908496\n  type: 'test'\n  ...\n# Subtest: TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\nok 3 - TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\n  ---\n  duration_ms: 0.500331\n  type: 'test'\n  ...\n# Subtest: TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\nok 4 - TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\n  ---\n  duration_ms: 0.338901\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 50.875223\n",
+            "stderr": "(node:17793) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-phase4/development/games/0010_karakuri-workshop/src/data/stage-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-phase4/development/games/0010_karakuri-workshop/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+            "rawSHA": "afa152ea5bacc1e31b2b91ba49a51a1522344eddce5bfadef14c1c00cc0bf7e1"
+          },
+          "mutant": {
+            "args": [
+              "--test",
+              "--test-isolation=none",
+              "--test-reporter=tap",
+              "--test-name-pattern=TC-D4-028-C001|TC-D7-024-C001|TC-D8-011-C001|TC-D8-013-C001",
+              "games/0010_karakuri-workshop/tests/d7-integration.test.js",
+              "games/0010_karakuri-workshop/tests/d8-governance.test.js",
+              "games/0010_karakuri-workshop/tests/d4-stages.test.js"
+            ],
+            "exitCode": 1,
+            "stdout": "TAP version 13\n# Subtest: TC-D4-028-C001 reserve at the last legal unit and reject at either search ceiling\nnot ok 1 - TC-D4-028-C001 reserve at the last legal unit and reject at either search ceiling\n  ---\n  duration_ms: 2.557136\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d4-stages.test.js:164:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d4-stages.test.js:168:10)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D7-024-C001: stage, global and major root cause ceilings\nnot ok 2 - TC-D7-024-C001: stage, global and major root cause ceilings\n  ---\n  duration_ms: 1.68859\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d7-integration.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    code: 'BUDGET_EXCEEDED'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d7-integration.test.js:37:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\nnot ok 3 - TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\n  ---\n  duration_ms: 0.346342\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:19:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    {\"stageUsed\":2000,\"totalUsed\":19999,\"request\":1}\n    \n    true !== false\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: false\n  actual: true\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:27:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\nnot ok 4 - TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\n  ---\n  duration_ms: 0.242178\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:45:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    code: 'BUDGET_EXCEEDED'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:49:10)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 0\n# fail 4\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 44.704416\n",
+            "stderr": "",
+            "rawSHA": "951e9dfbeca84b086364f207547c953641a72badf838e7ec2061b947eada8af5"
+          },
+          "e0HistoricalContractRevalidation": {
+            "normal": {
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D7-024-C001|TC-D8-011-C001|TC-D8-013-C001",
+                "games/0010_karakuri-workshop/tests/d7-integration.test.js",
+                "games/0010_karakuri-workshop/tests/d8-governance.test.js",
+                "games/0010_karakuri-workshop/tests/d4-stages.test.js"
+              ],
+              "exitCode": 0,
+              "stdout": "TAP version 13\n# Subtest: TC-D7-024-C001: stage, global and major root cause ceilings\nok 1 - TC-D7-024-C001: stage, global and major root cause ceilings\n  ---\n  duration_ms: 2.718555\n  type: 'test'\n  ...\n# Subtest: TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\nok 2 - TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\n  ---\n  duration_ms: 0.495644\n  type: 'test'\n  ...\n# Subtest: TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\nok 3 - TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\n  ---\n  duration_ms: 0.356178\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 48.978324\n",
+              "stderr": "(node:17807) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/game0010-phase4/development/games/0010_karakuri-workshop/src/data/stage-definitions.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /tmp/game0010-phase4/development/games/0010_karakuri-workshop/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+              "rawSHA": "912b49ba8321063205ce5686a12f50d7e94d0587bcfb3fcb7d9dc0614e4dc96a"
+            },
+            "mutant": {
+              "args": [
+                "--test",
+                "--test-isolation=none",
+                "--test-reporter=tap",
+                "--test-name-pattern=TC-D7-024-C001|TC-D8-011-C001|TC-D8-013-C001",
+                "games/0010_karakuri-workshop/tests/d7-integration.test.js",
+                "games/0010_karakuri-workshop/tests/d8-governance.test.js",
+                "games/0010_karakuri-workshop/tests/d4-stages.test.js"
+              ],
+              "exitCode": 1,
+              "stdout": "TAP version 13\n# Subtest: TC-D7-024-C001: stage, global and major root cause ceilings\nnot ok 1 - TC-D7-024-C001: stage, global and major root cause ceilings\n  ---\n  duration_ms: 3.216632\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d7-integration.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    code: 'BUDGET_EXCEEDED'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d7-integration.test.js:37:12)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\nnot ok 2 - TC-D8-011-C001: simultaneous ST04 and global simulation ceilings\n  ---\n  duration_ms: 0.52667\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:19:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    code: 'BUDGET_EXCEEDED'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:34:10)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\nnot ok 3 - TC-D8-013-C001: correction cannot start without sufficient revalidation reserve\n  ---\n  duration_ms: 0.212785\n  type: 'test'\n  location: '/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:45:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    code: 'BUDGET_EXCEEDED'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (/tmp/game0010-cr008-mut12-Q3TtQH/games/0010_karakuri-workshop/tests/d8-governance.test.js:49:10)\n    Test.runInAsyncScope (node:async_hooks:226:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 0\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 46.236885\n",
+              "stderr": "",
+              "rawSHA": "b551112b39b596b8e419a8668110c4e4704afc47bf5e9b79100a0f4eddf30361"
+            },
+            "sourceHash": "2d73ed297e3c1cc518dadf0fd7d24023b28c8246f235378dd9f1e38ea37ce9e8"
+          },
+          "sourceHash": "644cc965403258ccc6f78f0504fe832aea980420b1fbdca4da69f44cff30f552",
+          "mutantHash": "099e9de60a3f156088d273146ec20133f53c761630639c01dc0e730d0306e67a",
+          "status": "KILLED",
+          "totals": {
+            "worlds": 0,
+            "ticks": 0
+          }
+        }
+      }
+    },
+    "currentFingerprintVerification": {
+      "runId": "CR009-E8-D8-020-EXACT",
+      "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "purpose": "AUTOMATED",
+      "pool": null,
+      "engineeringStage": "E8",
+      "preparedPlanSHA256": "d20f54fdbbe8a06dd7fe440257e38f1f506d94e21c9887326643bbcb3511acde",
+      "command": [
+        "cr009-e8-fingerprint.cjs"
+      ],
+      "reserved": {
+        "automatedSeconds": 35
+      },
+      "reservedAt": "2026-11-25T22:30:58.490Z",
+      "startedAt": "2026-11-25T22:31:00.465Z",
+      "settledAt": "2026-11-25T22:31:00.829Z",
+      "charged": {
+        "automatedSeconds": 1
+      },
+      "stdoutFile": "cr009-e8-d8-020-exact.log",
+      "stderrFile": "cr009-e8-d8-020-exact-stderr.log",
+      "stdoutSHA256": "573ddf4be7bc1299afb5de9f3dd02f6609d3ab690f4e23f2a59b269a820d38b3",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0,
+      "signal": null
+    },
+    "evidenceDeltaPolicy": "actual pre-push diff and remote exact bytes verification"
+  }
 }

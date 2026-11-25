@@ -949,5 +949,256 @@
         "pool": null
       }
     ]
+  },
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "oldKnownGames": 9,
+    "node": {
+      "summary": "PASS",
+      "games": [
+        {
+          "game": "0001_target-tap",
+          "count": 30
+        },
+        {
+          "game": "0002_light-panels",
+          "count": 36
+        },
+        {
+          "game": "0003_30sec-survival",
+          "count": 45
+        },
+        {
+          "game": "0004_wobbly-tower",
+          "count": 76
+        },
+        {
+          "game": "0005_hitofude-delivery",
+          "count": 52
+        },
+        {
+          "game": "0006_traffic-panic",
+          "count": 138
+        },
+        {
+          "game": "0007_weather-bakery",
+          "count": 1342
+        },
+        {
+          "game": "0008_three-minute-detective",
+          "count": 131
+        },
+        {
+          "game": "0009_three-move-hero",
+          "count": 169
+        }
+      ],
+      "total": 2019,
+      "base": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "totals": {
+        "worlds": 0,
+        "ticks": 0
+      }
+    },
+    "browser": {
+      "caseId": "TC-D7-020-C002",
+      "status": "PASS",
+      "details": {
+        "records": [
+          {
+            "game": "0001_target-tap",
+            "title": "ターゲットタップ | Daily Mini Games",
+            "earlierBootReads": [
+              "daily-mini-games:0001:best-score:v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0001:best-score:v1",
+              "qa-isolation-sentinel-0001_target-tap"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0002_light-panels",
+            "title": "ひかりのパネル | Daily Mini Games",
+            "earlierBootReads": [
+              "daily-mini-games:0002:progress:v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0002:progress:v1",
+              "qa-isolation-sentinel-0002_light-panels"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0003_30sec-survival",
+            "title": "30秒サバイバル | Game #0003",
+            "earlierBootReads": [
+              "daily-mini-games:0003:best-stars:v1",
+              "daily-mini-games:0003:best-survival-ms:v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0003:best-stars:v1",
+              "daily-mini-games:0003:best-survival-ms:v1",
+              "qa-isolation-sentinel-0003_30sec-survival"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0004_wobbly-tower",
+            "title": "ぐらぐらタワー | Game #0004",
+            "earlierBootReads": [
+              "dailyMiniGames.game0004.best.v1"
+            ],
+            "earlierKeysChecked": [
+              "dailyMiniGames.game0004.best.v1",
+              "qa-isolation-sentinel-0004_wobbly-tower"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0005_hitofude-delivery",
+            "title": "ひとふで配達 | Game #0005",
+            "earlierBootReads": [
+              "daily-mini-games.0005.progress.v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games.0005.progress.v1",
+              "qa-isolation-sentinel-0005_hitofude-delivery"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0006_traffic-panic",
+            "title": "交差点パニック",
+            "earlierBootReads": [
+              "daily-mini-games.0006.records.v1.HARD-A"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games.0006.records.v1.HARD-A",
+              "qa-isolation-sentinel-0006_traffic-panic"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0007_weather-bakery",
+            "title": "おてんきベーカリー",
+            "earlierBootReads": [
+              "daily-mini-games:0007:best-profit:rules-v3:W01",
+              "daily-mini-games:0007:best-profit:rules-v3:W02",
+              "daily-mini-games:0007:best-profit:rules-v3:W03",
+              "daily-mini-games:0007:best-profit:rules-v3:W04",
+              "daily-mini-games:0007:best-profit:rules-v3:W05",
+              "daily-mini-games:0007:best-profit:rules-v3:W06"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0007:best-profit:rules-v3:W01",
+              "daily-mini-games:0007:best-profit:rules-v3:W02",
+              "daily-mini-games:0007:best-profit:rules-v3:W03",
+              "daily-mini-games:0007:best-profit:rules-v3:W04",
+              "daily-mini-games:0007:best-profit:rules-v3:W05",
+              "daily-mini-games:0007:best-profit:rules-v3:W06",
+              "qa-isolation-sentinel-0007_weather-bakery"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0008_three-minute-detective",
+            "title": "3分探偵 | Game #0008",
+            "earlierBootReads": [
+              "daily-mini-games:0008:progress:v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0008:progress:v1",
+              "qa-isolation-sentinel-0008_three-minute-detective"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          },
+          {
+            "game": "0009_three-move-hero",
+            "title": "3手の勇者",
+            "earlierBootReads": [
+              "daily-mini-games:0009:progress:v2",
+              "daily-mini-games:0009:settings:v1"
+            ],
+            "earlierKeysChecked": [
+              "daily-mini-games:0009:progress:v2",
+              "daily-mini-games:0009:settings:v1",
+              "qa-isolation-sentinel-0009_three-move-hero"
+            ],
+            "candidateResetPreservedEarlierRaw": true,
+            "earlierRebootPreservedGame0010": true
+          }
+        ],
+        "expectedNodeReference": "CR009-E8-EXISTING-REGRESSION"
+      },
+      "totals": {
+        "worlds": 0,
+        "ticks": 0
+      }
+    },
+    "basis": "Read fixed main regression inventory and re-run exact commands with fixed Node; all nine checked in real Chromium.",
+    "verbatimRawReceipts": [
+      {
+        "runId": "CR009-E8-EXISTING-REGRESSION",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "261d206dd37f838424220c8e40cfc7932ad55fd5d55a15c4ef3506668e6e731a",
+        "command": [
+          "cr009-e8-existing-regression.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 90
+        },
+        "reservedAt": "2026-11-25T22:24:47.263Z",
+        "startedAt": "2026-11-25T22:24:54.300Z",
+        "settledAt": "2026-11-25T22:24:58.224Z",
+        "charged": {
+          "automatedSeconds": 4
+        },
+        "stdoutFile": "cr009-e8-existing-regression.log",
+        "stderrFile": "cr009-e8-existing-regression-stderr.log",
+        "stdoutSHA256": "7854b1dd9209af408971433acff74aba9817e071ac8eb6dd14c8ad95361c0272",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      },
+      {
+        "runId": "CR009-E8-EXISTING-BROWSER",
+        "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "purpose": "AUTOMATED",
+        "pool": null,
+        "engineeringStage": "E8",
+        "preparedPlanSHA256": "34986e524cafd5b66990d0c5d046368b5345ae04a93e8c62aba3a8aa7caba77a",
+        "command": [
+          "cr009-e8-existing-browser.cjs"
+        ],
+        "reserved": {
+          "automatedSeconds": 115
+        },
+        "reservedAt": "2026-11-25T22:28:05.940Z",
+        "startedAt": "2026-11-25T22:28:32.215Z",
+        "settledAt": "2026-11-25T22:28:36.552Z",
+        "charged": {
+          "automatedSeconds": 5
+        },
+        "stdoutFile": "cr009-e8-existing-browser.log",
+        "stderrFile": "cr009-e8-existing-browser-stderr.log",
+        "stdoutSHA256": "ec21125454d353c40ebbbf4d11f338558628c860c052808dfa04d9d0fe3abbbc",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit": 0,
+        "signal": null
+      }
+    ]
   }
 }

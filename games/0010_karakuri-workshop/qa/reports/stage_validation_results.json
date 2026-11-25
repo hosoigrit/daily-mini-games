@@ -1964,5 +1964,2416 @@
       "certifiedHints": 30,
       "neighborhoodAllSatisfied": true
     }
+  },
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "allStages": 10,
+    "normalInitialFailures": 10,
+    "star3Solutions": 10,
+    "meaningfulAlternatives": 7,
+    "allRepeatClears": 1000,
+    "hints": 30,
+    "legalNeighbors": 109,
+    "clearedNeighbors": 83,
+    "normalFailedNeighbors": 26,
+    "intentionalActivePartAblations": 10,
+    "worlds": 1146,
+    "ticks": 259075,
+    "aggregate": [
+      {
+        "role": "aggregate",
+        "stage": "01",
+        "identity": {
+          "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "stageFingerprint": "7f7af2c2c6d0f3af857d020f36802df02e00a9c792cdd61f51302b174cccaaa4",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 175,
+        "neighborResult": {
+          "pass": true,
+          "legal": 6,
+          "successes": 6,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 175,
+          "endTick": 175
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "坂道の切れ目をつないでみよう。",
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道の先へ、球が右下に進む角度の坂道を置こう。",
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 12,
+                "gridY": 10,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "02",
+        "identity": {
+          "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "stageFingerprint": "fa7b7524c1201d5a4fc345207fe8fa6b06338043b2cc2330bf9979766f0de694",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 170,
+        "neighborResult": {
+          "pass": true,
+          "legal": 6,
+          "successes": 5,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 170,
+          "endTick": 170
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "傾きで球の向きを変えよう。",
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道から来た球を、左下へ傾く坂道でゴール側へ導こう。",
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 27,
+                "gridY": 10,
+                "angleDeg": -45
+              }
+            ],
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "03",
+        "identity": {
+          "geometryId": "6e70fbee753402021dc48db343fe7359420e4f05f4380858794aa486791f3fee",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "stageFingerprint": "d290b46c12e85a10e01c6a09eb328f8d76a205950527e6be8ca6dbdb696ac5c9",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 209,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 50
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 209,
+          "endTick": 209
+        },
+        "checks": [],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "落下する球はいったん受け止められる。",
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          },
+          {
+            "level": 2,
+            "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "P",
+                "gridX": 12,
+                "gridY": 9,
+                "angleDeg": 0
+              }
+            ],
+            "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "04",
+        "identity": {
+          "geometryId": "fda74284d1efb8cabe193401feed97dd4261a7a901abafbf2531f3538a647ba6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "stageFingerprint": "33cb93caeabb1ae4bd54552138df4eeb7221095df9d27371a2d5f17e4510c82d",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 233,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 6,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:1:25:30;R:7:21:-30",
+            "reason": "BOARD_BOUNDS"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 233,
+          "endTick": 233
+        },
+        "checks": [
+          {
+            "removed": "B:6:25:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "高さの差は跳躍で越えられる。",
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          },
+          {
+            "level": 2,
+            "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 2,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "05",
+        "identity": {
+          "geometryId": "17eed7954b45a1589b1d36818fce15427e15c3c818f53072e5e6283f4ba901e6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "stageFingerprint": "ac0fa4dbdb819add06b56cd314a40e955bd70fec0096459576526a5e316dfec5",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 240,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 5,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:7:25:30;R:26:12:15",
+            "reason": "GOAL_PROTECTION"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 240,
+          "endTick": 240
+        },
+        "checks": [
+          {
+            "removed": "B:14:25:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "R:9:23:15",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "高さと飛距離の両方を見よう。",
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          },
+          {
+            "level": 2,
+            "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 7,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "06",
+        "identity": {
+          "geometryId": "0369170da97a4b114a1552c82236f780183904c56ec2a60a9966cee8ea11d916",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "stageFingerprint": "f3c007ab22086f7d5e8713ce9aabc4745f57804473049584e45560636edea986",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 177,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 10,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 177,
+          "endTick": 177
+        },
+        "checks": [
+          {
+            "removed": "P:17:15:0",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "S:12:9:0",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "支点から離れた場所に球を落とそう。",
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          },
+          {
+            "level": 2,
+            "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "R",
+                "gridX": 18,
+                "gridY": 15,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "07",
+        "identity": {
+          "geometryId": "513ba3c349993575700983457e74a1df598fa872474f83a08b29c9bc9ccebcf8",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "stageFingerprint": "8cc095f00a71f2d95300fd4d5f4348109ed3a78d3e080e77c7e6cf8ffe450cec",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 393,
+        "neighborResult": {
+          "pass": true,
+          "legal": 22,
+          "successes": 19,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 393,
+          "endTick": 393
+        },
+        "checks": [
+          {
+            "removed": "B:5:26:45",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "障害物を避ける道は複数ある。",
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          },
+          {
+            "level": 2,
+            "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "P",
+                "gridX": 28,
+                "gridY": 17,
+                "angleDeg": 0
+              }
+            ],
+            "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "08",
+        "identity": {
+          "geometryId": "9004e3c62bf4a4fbdad14b4c3a7f4a0f1c9f4d1f18861159e02ee8eeb938ea6d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "stageFingerprint": "b787a739ffbdb9cacbf70dd1e7050515e6e51ee82e3bc0ffef2953d75a8e2eef",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 263,
+        "neighborResult": {
+          "pass": true,
+          "legal": 12,
+          "successes": 8,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 263,
+          "endTick": 263
+        },
+        "checks": [
+          {
+            "removed": "B:5:24:15",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "一度目の跳躍の着地点を見よう。",
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          },
+          {
+            "level": 2,
+            "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 4,
+                "gridY": 27,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "09",
+        "identity": {
+          "geometryId": "190caa51027ee872783219eb12a04c32391d5a31964566c6c7a338b0de25e82e",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "stageFingerprint": "f49bfbe838e25dc5157d0be743baf6dfa1159757d0f1b9e3edef8f8bf20a3b36",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 219,
+        "neighborResult": {
+          "pass": true,
+          "legal": 10,
+          "successes": 7,
+          "percent": 20
+        },
+        "neighborExcluded": [],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 219,
+          "endTick": 219
+        },
+        "checks": [
+          {
+            "removed": "B:13:24:30",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          },
+          {
+            "level": 2,
+            "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 17,
+                "gridY": 20,
+                "angleDeg": 15
+              }
+            ],
+            "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+          }
+        ]
+      },
+      {
+        "role": "aggregate",
+        "stage": "10",
+        "identity": {
+          "geometryId": "e310b77001484036b2c40212f4aed0a320d03e3f55b4570188ebb0ca510a7a9d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "stageFingerprint": "48db34494aa31e5a4a0666b475f25611471386c07bf3baeaaef0032f2869ad44",
+        "score": 3,
+        "required": true,
+        "empty": "FAILED",
+        "baseline": "CLEARED",
+        "terminalTick": 184,
+        "neighborResult": {
+          "pass": true,
+          "legal": 11,
+          "successes": 7,
+          "percent": 20
+        },
+        "neighborExcluded": [
+          {
+            "key": "B:6:25:30;R:24:12:0",
+            "reason": "GOAL_PROTECTION"
+          }
+        ],
+        "repeat": {
+          "passed": 100,
+          "sameFingerprint": true,
+          "startTick": 184,
+          "endTick": 184
+        },
+        "checks": [
+          {
+            "removed": "B:18:19:0",
+            "result": "FAILED",
+            "sameResidualSequence": true
+          },
+          {
+            "removed": "R:8:8:30",
+            "result": "FAILED",
+            "sameResidualSequence": false
+          }
+        ],
+        "proposedHints": [
+          {
+            "level": 1,
+            "text": "飛び越えた後の着地まで考えよう。",
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          },
+          {
+            "level": 2,
+            "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          },
+          {
+            "level": 3,
+            "parts": [
+              {
+                "type": "B",
+                "gridX": 6,
+                "gridY": 25,
+                "angleDeg": 30
+              }
+            ],
+            "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+          }
+        ]
+      }
+    ],
+    "semanticAlternatives": [
+      {
+        "stageId": "04",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:04:0330",
+          "line": 333,
+          "sequence": [
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 53,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 0.5066166852922055,
+                  "y": 1.6955196277135258
+                },
+                {
+                  "x": 0.4902513073366678,
+                  "y": 1.6731835182549126
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 56,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 0.46933818899218843,
+                  "y": 1.6793545137141297
+                },
+                {
+                  "x": 0.5088951466252155,
+                  "y": 1.7465087432694835
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 90,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 3.090719882681152,
+                  "y": 4.6361625378732905
+                },
+                {
+                  "x": 3.12940333758386,
+                  "y": 4.6567494649658565
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:04:0342",
+          "line": 345,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 27,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 1.44,
+                  "y": 1.7077955841023185
+                },
+                {
+                  "x": 1.44,
+                  "y": 1.672048790061187
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 30,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 1.4705195975386092,
+                  "y": 1.6108036238534045
+                },
+                {
+                  "x": 1.490995785542091,
+                  "y": 1.6858613669698326
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 71,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 3.1071766426249914,
+                  "y": 5.425103760612988
+                },
+                {
+                  "x": 3.127107460070297,
+                  "y": 5.4437838628974395
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:6:25:15",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:04:0343",
+            "line": 346
+          }
+        ]
+      },
+      {
+        "stageId": "05",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:05:0445",
+          "line": 449,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ],
+            [
+              "upper",
+              "R"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 23,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 1.92,
+                  "y": 1.6992887370979395
+                },
+                {
+                  "x": 1.92,
+                  "y": 1.6682271058404372
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 29,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 2.050056359012677,
+                  "y": 1.6293278745358282
+                },
+                {
+                  "x": 2.0895869585204103,
+                  "y": 1.6950769261217116
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 61,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 4.553640969306703,
+                  "y": 4.431255800690516
+                },
+                {
+                  "x": 4.592337318694378,
+                  "y": 4.4525301456476685
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:05:0457",
+          "line": 461,
+          "sequence": [
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 78,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 3.183136229054264,
+                  "y": 1.6806435185327757
+                },
+                {
+                  "x": 3.1991887074129797,
+                  "y": 1.6702274657889873
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 84,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 3.4005205684364754,
+                  "y": 1.6126114589916651
+                },
+                {
+                  "x": 3.4209967564399575,
+                  "y": 1.6876692021080932
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 113,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 4.55683981030882,
+                  "y": 4.772026964302555
+                },
+                {
+                  "x": 4.576930687002115,
+                  "y": 4.807253179426543
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:14:25:15",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:05:0458",
+            "line": 462
+          },
+          {
+            "removed": "R:9:23:15",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:05:0459",
+            "line": 463
+          }
+        ]
+      },
+      {
+        "stageId": "06",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:06:0561",
+          "line": 566,
+          "sequence": [
+            [
+              "upper",
+              "S"
+            ],
+            [
+              "load-tilt",
+              "S"
+            ],
+            [
+              "upper",
+              "R"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "right",
+              "tick": 118,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 6.017705967654436,
+                  "y": 2.6752411455517424
+                },
+                {
+                  "x": 6.0465194376349745,
+                  "y": 2.638967911351353
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:06:0572",
+          "line": 577,
+          "sequence": [
+            [
+              "upper",
+              "S"
+            ],
+            [
+              "load-tilt",
+              "S"
+            ],
+            [
+              "upper",
+              "P"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "right",
+              "tick": 136,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 5.851020099035862,
+                  "y": 2.660900917950547
+                },
+                {
+                  "x": 5.8725308564564855,
+                  "y": 2.6299393721302198
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "P:17:15:0",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:06:0573",
+            "line": 578
+          },
+          {
+            "removed": "S:12:9:0",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:06:0574",
+            "line": 579
+          }
+        ]
+      },
+      {
+        "stageId": "07",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:07:0676",
+          "line": 682,
+          "sequence": [
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "P"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 127,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 4.786261839306731,
+                  "y": 4.736167968812774
+                },
+                {
+                  "x": 4.812227913851309,
+                  "y": 4.721061380395404
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:07:0699",
+          "line": 705,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 62,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 1.44,
+                  "y": 1.4434171475635456
+                },
+                {
+                  "x": 1.44,
+                  "y": 1.3614150092271364
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 66,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 1.7454201064834374,
+                  "y": 1.4250478212115283
+                },
+                {
+                  "x": 1.8012875652560023,
+                  "y": 1.4768367063082546
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 94,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 4.790647204464243,
+                  "y": 3.243593337291624
+                },
+                {
+                  "x": 4.845499925783298,
+                  "y": 3.2573581596816705
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:5:26:45",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:07:0700",
+            "line": 706
+          }
+        ]
+      },
+      {
+        "stageId": "08",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:08:0802",
+          "line": 809,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ],
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 23,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 1.2,
+                  "y": 1.2192887370979406
+                },
+                {
+                  "x": 1.2,
+                  "y": 1.1882271058404383
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": 1,
+              "side": "left",
+              "tick": 29,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 1.330056359012677,
+                  "y": 1.1493278745358293
+                },
+                {
+                  "x": 1.3695869585204101,
+                  "y": 1.2150769261217127
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 67,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 4.29714707052307,
+                  "y": 4.161228717196444
+                },
+                {
+                  "x": 4.335688969360523,
+                  "y": 4.174269149152428
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": -1,
+              "side": "above",
+              "tick": 195,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 4.3274249637988484,
+                  "y": 5.781214960484286
+                },
+                {
+                  "x": 4.3080508363942345,
+                  "y": 5.742347271274809
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:08:0815",
+          "line": 822,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 141,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 4.318700430014575,
+                  "y": 5.249931878476491
+                },
+                {
+                  "x": 4.326475091319466,
+                  "y": 5.249931878476491
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:5:24:15",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:08:0816",
+            "line": 823
+          }
+        ]
+      },
+      {
+        "stageId": "09",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:09:0918",
+          "line": 926,
+          "sequence": [
+            [
+              "upper",
+              "S"
+            ],
+            [
+              "load-tilt",
+              "S"
+            ],
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 114,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 5.276191834797237,
+                  "y": 5.6161366847559915
+                },
+                {
+                  "x": 5.296336349708351,
+                  "y": 5.656907746652035
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:09:0929",
+          "line": 937,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 87,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 5.25461025277267,
+                  "y": 4.471148277542737
+                },
+                {
+                  "x": 5.293474622119623,
+                  "y": 4.5013799342424745
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:13:24:30",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:09:0930",
+            "line": 938
+          }
+        ]
+      },
+      {
+        "stageId": "10",
+        "baseline": {
+          "runId": "CR009-E8-FORMAL-STAGES:10:1032",
+          "line": 1041,
+          "sequence": [
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ],
+            [
+              "upper",
+              "R"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 14,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 1.44,
+                  "y": 6.001866374266353
+                },
+                {
+                  "x": 1.44,
+                  "y": 5.983576848650136
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "below",
+              "tick": 90,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 3.8076022980461675,
+                  "y": 4.402186778138333
+                },
+                {
+                  "x": 3.846389029257408,
+                  "y": 4.428279468326709
+                }
+              ]
+            },
+            {
+              "id": "fixed-2",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 115,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 5.73269887099039,
+                  "y": 4.696196160188016
+                },
+                {
+                  "x": 5.770876865413464,
+                  "y": 4.68398509693066
+                }
+              ]
+            }
+          ]
+        },
+        "alternate": {
+          "runId": "CR009-E8-FORMAL-STAGES:10:1044",
+          "line": 1053,
+          "sequence": [
+            [
+              "upper",
+              "R"
+            ],
+            [
+              "upper",
+              "B"
+            ],
+            [
+              "spring",
+              "B"
+            ]
+          ],
+          "paths": [
+            {
+              "id": "fixed-1",
+              "axis": "y",
+              "direction": -1,
+              "side": "left",
+              "tick": 14,
+              "substep": 0,
+              "bracket": [
+                {
+                  "x": 1.44,
+                  "y": 6.001866374266353
+                },
+                {
+                  "x": 1.44,
+                  "y": 5.983576848650136
+                }
+              ]
+            },
+            {
+              "id": "fixed-1",
+              "axis": "x",
+              "direction": 1,
+              "side": "below",
+              "tick": 84,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 3.8239761393421707,
+                  "y": 3.8395086835313803
+                },
+                {
+                  "x": 3.8470421479084544,
+                  "y": 3.7958000876974736
+                }
+              ]
+            },
+            {
+              "id": "fixed-2",
+              "axis": "x",
+              "direction": 1,
+              "side": "above",
+              "tick": 144,
+              "substep": 1,
+              "bracket": [
+                {
+                  "x": 5.747563112934335,
+                  "y": 5.81302644313607
+                },
+                {
+                  "x": 5.766850216687756,
+                  "y": 5.801187211257464
+                }
+              ]
+            }
+          ]
+        },
+        "ablations": [
+          {
+            "removed": "B:18:19:0",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:10:1045",
+            "line": 1054
+          },
+          {
+            "removed": "R:8:8:30",
+            "result": "FAILED",
+            "runId": "CR009-E8-FORMAL-STAGES:10:1046",
+            "line": 1055
+          }
+        ]
+      }
+    ],
+    "certifiedHintResults": [
+      {
+        "stage": "01",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "坂道の切れ目をつないでみよう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "actual": {
+          "level": 1,
+          "text": "坂道の切れ目をつないでみよう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:01:0002",
+        "currentStage": {
+          "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        }
+      },
+      {
+        "stage": "01",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "固定の坂道の先へ、球が右下に進む角度の坂道を置こう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "actual": {
+          "level": 2,
+          "text": "固定の坂道の先へ、球が右下に進む角度の坂道を置こう。",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:01:0002",
+        "currentStage": {
+          "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        }
+      },
+      {
+        "stage": "01",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 12,
+              "gridY": 10,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 12,
+              "gridY": 10,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:01:0002",
+        "currentStage": {
+          "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+        }
+      },
+      {
+        "stage": "02",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "傾きで球の向きを変えよう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "actual": {
+          "level": 1,
+          "text": "傾きで球の向きを変えよう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:02:0110",
+        "currentStage": {
+          "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        }
+      },
+      {
+        "stage": "02",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "固定の坂道から来た球を、左下へ傾く坂道でゴール側へ導こう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "actual": {
+          "level": 2,
+          "text": "固定の坂道から来た球を、左下へ傾く坂道でゴール側へ導こう。",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:02:0110",
+        "currentStage": {
+          "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        }
+      },
+      {
+        "stage": "02",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 27,
+              "gridY": 10,
+              "angleDeg": -45
+            }
+          ],
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 27,
+              "gridY": 10,
+              "angleDeg": -45
+            }
+          ],
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:02:0110",
+        "currentStage": {
+          "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+        }
+      },
+      {
+        "stage": "03",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "落下する球はいったん受け止められる。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "actual": {
+          "level": 1,
+          "text": "落下する球はいったん受け止められる。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:03:0218",
+        "currentStage": {
+          "geometryId": "6e70fbee753402021dc48db343fe7359420e4f05f4380858794aa486791f3fee",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        }
+      },
+      {
+        "stage": "03",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "actual": {
+          "level": 2,
+          "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:03:0218",
+        "currentStage": {
+          "geometryId": "6e70fbee753402021dc48db343fe7359420e4f05f4380858794aa486791f3fee",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        }
+      },
+      {
+        "stage": "03",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 12,
+              "gridY": 9,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 12,
+              "gridY": 9,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:03:0218",
+        "currentStage": {
+          "geometryId": "6e70fbee753402021dc48db343fe7359420e4f05f4380858794aa486791f3fee",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+        }
+      },
+      {
+        "stage": "04",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "高さの差は跳躍で越えられる。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "actual": {
+          "level": 1,
+          "text": "高さの差は跳躍で越えられる。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:04:0330",
+        "currentStage": {
+          "geometryId": "fda74284d1efb8cabe193401feed97dd4261a7a901abafbf2531f3538a647ba6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        }
+      },
+      {
+        "stage": "04",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "actual": {
+          "level": 2,
+          "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:04:0330",
+        "currentStage": {
+          "geometryId": "fda74284d1efb8cabe193401feed97dd4261a7a901abafbf2531f3538a647ba6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        }
+      },
+      {
+        "stage": "04",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 2,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 2,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:04:0330",
+        "currentStage": {
+          "geometryId": "fda74284d1efb8cabe193401feed97dd4261a7a901abafbf2531f3538a647ba6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+        }
+      },
+      {
+        "stage": "05",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "高さと飛距離の両方を見よう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "actual": {
+          "level": 1,
+          "text": "高さと飛距離の両方を見よう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:05:0445",
+        "currentStage": {
+          "geometryId": "17eed7954b45a1589b1d36818fce15427e15c3c818f53072e5e6283f4ba901e6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        }
+      },
+      {
+        "stage": "05",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "actual": {
+          "level": 2,
+          "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:05:0445",
+        "currentStage": {
+          "geometryId": "17eed7954b45a1589b1d36818fce15427e15c3c818f53072e5e6283f4ba901e6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        }
+      },
+      {
+        "stage": "05",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 7,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 7,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:05:0445",
+        "currentStage": {
+          "geometryId": "17eed7954b45a1589b1d36818fce15427e15c3c818f53072e5e6283f4ba901e6",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+        }
+      },
+      {
+        "stage": "06",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "支点から離れた場所に球を落とそう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "actual": {
+          "level": 1,
+          "text": "支点から離れた場所に球を落とそう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:06:0561",
+        "currentStage": {
+          "geometryId": "0369170da97a4b114a1552c82236f780183904c56ec2a60a9966cee8ea11d916",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        }
+      },
+      {
+        "stage": "06",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "actual": {
+          "level": 2,
+          "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:06:0561",
+        "currentStage": {
+          "geometryId": "0369170da97a4b114a1552c82236f780183904c56ec2a60a9966cee8ea11d916",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        }
+      },
+      {
+        "stage": "06",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 18,
+              "gridY": 15,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "R",
+              "gridX": 18,
+              "gridY": 15,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:06:0561",
+        "currentStage": {
+          "geometryId": "0369170da97a4b114a1552c82236f780183904c56ec2a60a9966cee8ea11d916",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
+        }
+      },
+      {
+        "stage": "07",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "障害物を避ける道は複数ある。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "actual": {
+          "level": 1,
+          "text": "障害物を避ける道は複数ある。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:07:0676",
+        "currentStage": {
+          "geometryId": "513ba3c349993575700983457e74a1df598fa872474f83a08b29c9bc9ccebcf8",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        }
+      },
+      {
+        "stage": "07",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "actual": {
+          "level": 2,
+          "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:07:0676",
+        "currentStage": {
+          "geometryId": "513ba3c349993575700983457e74a1df598fa872474f83a08b29c9bc9ccebcf8",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        }
+      },
+      {
+        "stage": "07",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 28,
+              "gridY": 17,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "P",
+              "gridX": 28,
+              "gridY": 17,
+              "angleDeg": 0
+            }
+          ],
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:07:0676",
+        "currentStage": {
+          "geometryId": "513ba3c349993575700983457e74a1df598fa872474f83a08b29c9bc9ccebcf8",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+        }
+      },
+      {
+        "stage": "08",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "一度目の跳躍の着地点を見よう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "actual": {
+          "level": 1,
+          "text": "一度目の跳躍の着地点を見よう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:08:0802",
+        "currentStage": {
+          "geometryId": "9004e3c62bf4a4fbdad14b4c3a7f4a0f1c9f4d1f18861159e02ee8eeb938ea6d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        }
+      },
+      {
+        "stage": "08",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "actual": {
+          "level": 2,
+          "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:08:0802",
+        "currentStage": {
+          "geometryId": "9004e3c62bf4a4fbdad14b4c3a7f4a0f1c9f4d1f18861159e02ee8eeb938ea6d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        }
+      },
+      {
+        "stage": "08",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 4,
+              "gridY": 27,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 4,
+              "gridY": 27,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:08:0802",
+        "currentStage": {
+          "geometryId": "9004e3c62bf4a4fbdad14b4c3a7f4a0f1c9f4d1f18861159e02ee8eeb938ea6d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+        }
+      },
+      {
+        "stage": "09",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "actual": {
+          "level": 1,
+          "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:09:0918",
+        "currentStage": {
+          "geometryId": "190caa51027ee872783219eb12a04c32391d5a31964566c6c7a338b0de25e82e",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        }
+      },
+      {
+        "stage": "09",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "actual": {
+          "level": 2,
+          "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:09:0918",
+        "currentStage": {
+          "geometryId": "190caa51027ee872783219eb12a04c32391d5a31964566c6c7a338b0de25e82e",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        }
+      },
+      {
+        "stage": "09",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 17,
+              "gridY": 20,
+              "angleDeg": 15
+            }
+          ],
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 17,
+              "gridY": 20,
+              "angleDeg": 15
+            }
+          ],
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:09:0918",
+        "currentStage": {
+          "geometryId": "190caa51027ee872783219eb12a04c32391d5a31964566c6c7a338b0de25e82e",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+        }
+      },
+      {
+        "stage": "10",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 1,
+        "status": "PASS",
+        "expected": {
+          "level": 1,
+          "text": "飛び越えた後の着地まで考えよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "actual": {
+          "level": 1,
+          "text": "飛び越えた後の着地まで考えよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:10:1032",
+        "currentStage": {
+          "geometryId": "e310b77001484036b2c40212f4aed0a320d03e3f55b4570188ebb0ca510a7a9d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        }
+      },
+      {
+        "stage": "10",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 2,
+        "status": "PASS",
+        "expected": {
+          "level": 2,
+          "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "actual": {
+          "level": 2,
+          "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:10:1032",
+        "currentStage": {
+          "geometryId": "e310b77001484036b2c40212f4aed0a320d03e3f55b4570188ebb0ca510a7a9d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        }
+      },
+      {
+        "stage": "10",
+        "caseFamily": "CERTIFIED_HINT",
+        "level": 3,
+        "status": "PASS",
+        "expected": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 6,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "actual": {
+          "level": 3,
+          "parts": [
+            {
+              "type": "B",
+              "gridX": 6,
+              "gridY": 25,
+              "angleDeg": 30
+            }
+          ],
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        },
+        "baselineRunId": "CR009-E8-FORMAL-STAGES:10:1032",
+        "currentStage": {
+          "geometryId": "e310b77001484036b2c40212f4aed0a320d03e3f55b4570188ebb0ca510a7a9d",
+          "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+          "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+        }
+      }
+    ],
+    "legalityAndAdjustmentEvidence": {
+      "stageDefinitionSHA256": "70a0dda5b3efda54e945a28057d64b88621236da46775d09e7c498a710531239",
+      "frozenSourceSHA256": {
+        "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+        "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+        "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+        "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+        "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+      },
+      "priorSearchArchiveSHA256": "20bef0f4ccd3d0c478468ee5c5ff3c4dce0929fd78d4d10d0b43e3c69c897522",
+      "priorSearchRecordCount": 61,
+      "previousGenerated": 11932,
+      "previousSearchWorlds": 6419,
+      "previousSearchTicks": 1875136,
+      "previousSearchAutomationSeconds": 79,
+      "previousPhysicsCandidateTrials": 12,
+      "previousDefinitionAdjustmentCounts": {
+        "ST05": 6,
+        "ST08": 6,
+        "ST10": 12
+      },
+      "currentSearchExecutions": 0,
+      "currentDefinitionAdjustments": 0,
+      "currentPhysicsCandidateTrials": 0
+    },
+    "stageIdentitiesPreserved": true,
+    "newStageAdjustments": 0,
+    "nativeRun": {
+      "runId": "CR009-E8-FORMAL-STAGES",
+      "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "purpose": "FORMAL",
+      "pool": "E8",
+      "engineeringStage": "E8",
+      "preparedPlanSHA256": "261d206dd37f838424220c8e40cfc7932ad55fd5d55a15c4ef3506668e6e731a",
+      "command": [
+        "cr008-e8-formal-native.mjs",
+        "cr009-e8-formal-input.json"
+      ],
+      "reserved": {
+        "automatedSeconds": 180,
+        "formalSimulations": 1146,
+        "formalTicks": 1375200
+      },
+      "reservedAt": "2026-11-25T22:24:47.263Z",
+      "startedAt": "2026-11-25T22:24:47.277Z",
+      "settledAt": "2026-11-25T22:24:54.288Z",
+      "charged": {
+        "automatedSeconds": 7,
+        "formalSimulations": 1146,
+        "formalTicks": 259075
+      },
+      "stdoutFile": "cr009-e8-formal-stages.log",
+      "stderrFile": "cr009-e8-formal-stages-stderr.log",
+      "stdoutSHA256": "07ac55df4cd7d6207b5fcb99f8f35614ba87aea46778f9339d67105a6c04c57e",
+      "stderrSHA256": "ce7cf5e5afd599b00131046034c2ad08ec859889b50f8cd33886996cf728d108",
+      "exit": 0,
+      "signal": null
+    }
   }
 }

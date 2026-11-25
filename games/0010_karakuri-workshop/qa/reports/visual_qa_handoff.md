@@ -1,9 +1,15 @@
-# Phase 6 実機・人間QAへの引き渡し資料（準備記録）
+# Game #0010『からくり工房』 Phase 6 実機・人間QA
 
-対象ソース `bc1426cf1ff84cd18207073303e7d47fd83e5b12`（PP03）。自動ゲートは **HOLD**。実機と人間QAは **NOT_RUN**、最終受入は **HOLD**。EG-08の是正・再検証・正式承認後に引き渡す。
+対象ソースは `14adae996b3ec398ecced875619ae05d28a9b0ec`、物理プロファイルはPP03です。開発ブランチは `codex/game-0010-development`、凍結設計は `d5bae9f0afe6b6d860257e2dfec25e028e557a4f` です。
 
-凍結済みの `17_visual_qa_protocol.md` に沿い、指定5端末（Galaxy S26 Chrome、iPhone SE2 Safari、iPad mini 6 Safari、Windows 11 Chrome、Windows 11 Edge）で80操作と50基準攻略を確認する。認定配置は `qa/fixtures/stages.json`、自動実測は `stage_validation_results.json` を参照する。
+Phase 6の全173件は **NOT_RUN** です。最終受入は **HOLD** です。自動ゲートの現行判定は `gate_results.json`、子ケースの状態と実行証跡は `automated_test_results.json` を参照してください。
 
-実機で前景フレーム、描画間隔p95、操作遅延、200%文字拡大、通信校正付き起動、保存・復元・競合、背景移行、回転、音声、耐久を計測し、機種・OS・ブラウザ・対象SHAと生証跡を残す。目視と試遊の評価は自動判定と別に行う。
+## 検証対象と記録
 
-移植・配布候補は実行ファイルの同一性、配布パス、差分、アクセス条件を照合する。公開には個別承認を要する。
+- 凍結版 `17_visual_qa_protocol.md` の端末と手順を使用します。Galaxy S26 Chrome、iPhone SE2 Safari、iPad mini 6 Safari、Windows 11 Chrome、Windows 11 EdgeでDT-01〜16を確認し、計80操作と10ステージ×5端末の基準攻略を記録します。DT-15は各端末の基準攻略証跡を参照できます。
+- 認定配置は `qa/fixtures/stages.json`、攻略の実行IDと観測は `stage_validation_results.json`、自動ブラウザの性能・耐久は `performance_results.json` にあります。
+- 各記録に実機の機種、OS、ブラウザ版、対象SHA、ケースID、実行ID、操作、期待値、実測値、判定を保存します。実機固有の前景描画、操作遅延、200%文字拡大、背景移行、端末回転、保存と競合、音声、耐久を確認します。
+- 制御起動は同じ配信経路で前後に帯域とRTTを実測し、cold/warm各5試行の値を保存します。面白さ、操作、明瞭さ、難易度、自由度、再遊性、画、音について、凍結QAプロトコルの評価軸で試遊結果を記録します。
+- Phase 6で配布先の比較を行う際は、実行ファイルハッシュ、配布パス、実行差分とアクセス設定を固定候補と照合し、TC-D7-029-C001に紐付けます。Sites移植と実際の配布比較は未実施です。公開には別承認が必要です。
+
+PP03の動的板衝突は有限観測に基づきます。TC-D7-004-C002の旧実物理微小離脱・復帰はBLOCKEDで、CR007-Cによる実物理対照と製品結合の判定を保存しています。

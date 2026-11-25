@@ -256,5 +256,59 @@
     ]
   },
   "latestSettled": 52,
-  "remaining": 18
+  "remaining": 18,
+  "CR009": {
+    "testedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "settledCorrections": 53,
+    "remaining": 17,
+    "casesReopened": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8"
+    ],
+    "correction": {
+      "event": {
+        "previousDigest": "24a2ed79f9dd635b560ebc8f4dda5fda0cee2f6df06be9bd1865aa54e8f15d9c",
+        "approvalId": "EXEC-GAME-0010-CR009-FINAL-ARCHITECTURE",
+        "type": "ARCHITECTURE_CORRECTION_STARTED",
+        "wallClock": "2026-11-25T22:17:20.167Z",
+        "body": {
+          "type": "CR009_CORRECTION_RESERVATION",
+          "approvalId": "EXEC-GAME-0010-CR009-FINAL-ARCHITECTURE",
+          "writerId": "GAME0010-CODEX-PRIMARY-01",
+          "stage": "E8",
+          "attemptId": "CR009-NFR027-CORRECTION-01",
+          "rootCauseId": "e8-rule-layer-native-physics-dependency",
+          "priorTotal": 52,
+          "remediationLimit": 70,
+          "priorRootCauseUses": 0,
+          "rootCauseLimit": 2,
+          "remediationTotalAfterStart": 53,
+          "previousLedgerDigest": "24a2ed79f9dd635b560ebc8f4dda5fda0cee2f6df06be9bd1865aa54e8f15d9c",
+          "authorizationSHA256": "0a76ce085c2641e4df2c470fcbb06cb2ddea58e284b2b6b182c62ddd0910bb34",
+          "targetPaths": [
+            "src/physics/adapter.js",
+            "src/domain/tutorial-evaluator.js",
+            "src/domain/result-evaluator.js",
+            "qa/harness/budget.js",
+            "qa/harness/checkpoint.js"
+          ]
+        }
+      },
+      "digest": "c2ae8903bbf564705479e2fd110cb4c3bca619427dc1d6d3163b95e91b4d083b"
+    },
+    "previousTotal": 52,
+    "obsoleteDriverFailuresRetained": [
+      "CR009-E8-ARCHITECTURE-CHECK",
+      "CR009-E1-CR004-B-PP03"
+    ],
+    "historicRootCauseRetention": {
+      "e0-budget-reservation-and-accounting": 6
+    }
+  }
 }
