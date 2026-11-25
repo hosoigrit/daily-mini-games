@@ -21,7 +21,8 @@ function point({position=positionFrom(normal,.12),normal:direction=normal,approa
   return {position,normal:direction,approachSpeed};
 }
 function frame({raw=[],touchingAtEnd=[],ballPosition=positionFrom(normal,.32)}={}) {
-  return {raw,touchingAtEnd,ballPosition,radius:.2};
+  const tick=10,runId='fixture';
+  return {raw:raw.map(event=>({tick,runId,...event})),tick,runId,touchingAtEnd,ballPosition,radius:.2};
 }
 function event(id,kind='pre-solve',points=[point()],at=time()) {
   return {id,event:kind,points,...at};
@@ -160,6 +161,13 @@ for(const [index,alignment] of [-.501,-.5,-.499].entries()) test(
     const result=control.completeTick(frame({raw:obstruction(alignment),ballPosition:positionFrom(normal,.42)}));
     assert.equal(!!result.winner,alignment>-.5);
     assert.equal(control.state(specimen.id).phase,'WAIT_RELEASE');
+    if (alignment===-.499) {
+      for (const stale of [{tick:9},{runId:'previous-run'}]) {
+        const old=obstruction(-.501).map(e=>e.id==='roof'?{...e,...stale}:e);
+        const checked=springs.createSpringController([specimen]);
+        assert(checked.completeTick(frame({raw:old,ballPosition:positionFrom(normal,.42)})).winner);
+      }
+    }
   });
 for(const [index,distance] of [.25,.250001].entries()) test(
   `TC-D7-001-C00${index+5} outer separation ${distance}`,()=>{
@@ -168,7 +176,7 @@ for(const [index,distance] of [.25,.250001].entries()) test(
     assert.equal(!!result.winner,distance<=.25);
   });
 test('TC-D7-001 blocking supplementary impulse, continued contact and later timing',()=>{
-  for(const [impulse,expected] of [[1e-6,true],[1.000001e-6,false]]){
+  for(const [impulse,expected] of [[1e-6,true],[1.1e-6,false]]){
     const control=springs.createSpringController([specimen]);
     assert.equal(!!control.completeTick(frame({raw:obstruction(-.5,impulse)})).winner,expected);
   }

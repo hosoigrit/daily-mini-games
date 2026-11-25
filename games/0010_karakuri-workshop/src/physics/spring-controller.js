@@ -96,10 +96,11 @@ export function createSpringController(definitions, speed = 9.5) {
   return {
     state: id => ({...states.get(id)}),
     completeTick(frame) {
-      const touched = new Set([...frame.raw.map(event => event.id),
+      const raw = frame.raw.filter(event => event.tick === frame.tick && event.runId === frame.runId);
+      const touched = new Set([...raw.map(event => event.id),
         ...frame.touchingAtEnd.map(contact => contact.id), ...(frame.touchingAtBoundaries ?? [])]);
       const candidates = [];
-      for (const event of frame.raw) {
+      for (const event of raw) {
         const spring = springs.get(event.id);
         if (!spring || event.event !== 'pre-solve' || states.get(spring.id).phase !== 'READY') continue;
         for (const point of event.points) {
@@ -111,7 +112,7 @@ export function createSpringController(definitions, speed = 9.5) {
       const eligible = candidates.filter(candidate => {
         const end = springSeparation(candidate.spring, frame.ballPosition, frame.radius);
         if (!end.above || end.distance > .25 + ROUNDING) return false;
-        const status = blockingStatus(candidate, frame.touchingAtEnd, frame.raw);
+        const status = blockingStatus(candidate, frame.touchingAtEnd, raw);
         if (status === 'unresolved-order') unresolved.push(candidate.spring.id);
         return status === 'clear';
       });
@@ -189,7 +190,8 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
       if (!tracing) return;
       const info = pair(contact);
       if (!info) return;
-      raw.push({event, id: info.id, substep: runtime.substep, phase: Number(toiPhase),
+      raw.push({event, id: info.id, tick: runtime.ticks + 1, runId: runtime.runId,
+        substep: runtime.substep, phase: Number(toiPhase),
         toi: toiPhase ? ball.m_sweep.alpha0 : 0,
         points: pointsFor(contact, info, event === 'post-solve' ? extra : null)});
     };
@@ -217,7 +219,7 @@ export function createSpringSimulation(runtime, ball, definitions, speed = 9.5) 
         if (!info) continue;
         for (const {normal} of pointsFor(contact, info)) touchingAtEnd.push({id: info.id, normal});
       }
-      const frame = {raw, touchingAtEnd, touchingAtBoundaries: [...touchingAtBoundaries], boundaryPositions,
+      const frame = {raw, tick: runtime.ticks, runId: runtime.runId, touchingAtEnd, touchingAtBoundaries: [...touchingAtBoundaries], boundaryPositions,
         ballPosition: vector(ball.getPosition()), radius};
       const {winner, candidates, eligible, unresolved} = controller.completeTick(frame);
       const activation = winner ? applySpringLaunch(runtime, ball, winner, speed) : null;
