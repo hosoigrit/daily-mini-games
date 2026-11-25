@@ -28,26 +28,56 @@
     "resumeNote": "Resume as the same writer after rechecking the branch, candidate SHA and pending reservations. The legacy E0 cases remain pending or failed."
   },
   "EG-01": {
-    "status": "HOLD",
-    "latestCaseStop": "LS-11 BLOCKED",
-    "profileUnderEvaluation": "PP03",
-    "formalProfileSelected": false,
-    "approvalId": "EXEC-GAME-0010-CR004-AUTONOMOUS-FULL",
-    "testedSha": "94125aa8a8a01fcc2b86d9eb8ccdaff2d0b4e9b1",
-    "history": [
+    "status": "PASS",
+    "profileSelected": "PP03",
+    "requiredCases": 125,
+    "casePasses": 125,
+    "caseDeferred": 0,
+    "testedExerciseSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+    "selectionDefaultTestedSHA": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+    "approvalId": "EXEC-GAME-0010-CR005-EVALUATION-AUTONOMY",
+    "priorGateHistory": [
       {
-        "status": "BLOCKED",
-        "previous": "NOT_RUN",
+        "status": "HOLD",
+        "latestCaseStop": "LS-11 BLOCKED",
         "profileUnderEvaluation": "PP03",
         "formalProfileSelected": false,
-        "report": "qa/reports/physics_validation_results.json"
+        "approvalId": "EXEC-GAME-0010-CR004-AUTONOMOUS-FULL",
+        "testedSha": "94125aa8a8a01fcc2b86d9eb8ccdaff2d0b4e9b1",
+        "history": [
+          {
+            "status": "BLOCKED",
+            "previous": "NOT_RUN",
+            "profileUnderEvaluation": "PP03",
+            "formalProfileSelected": false,
+            "report": "qa/reports/physics_validation_results.json"
+          }
+        ],
+        "blocker": "TC-D1-026-C002",
+        "CR004-A": "PASS",
+        "CR004-B": "PASS",
+        "report": "qa/reports/physics_validation_results.json",
+        "successorStages": "NOT_STARTED",
+        "originalMandatoryCaseSet": "125 required, not fully closed"
       }
     ],
-    "blocker": "TC-D1-026-C002",
-    "CR004-A": "PASS",
-    "CR004-B": "PASS",
-    "report": "qa/reports/physics_validation_results.json",
-    "successorStages": "NOT_STARTED",
-    "originalMandatoryCaseSet": "125 required, not fully closed"
+    "qualificationContract": [
+      "CR004-A",
+      "CR004-B",
+      "CR005-A",
+      "CR005-B",
+      "CR005-C"
+    ],
+    "caseReport": "qa/reports/automated_test_results.json",
+    "effectivePredecessor": "CR003 E0-L PASS; EG-00 HOLD retained",
+    "review": "qa/reports/review_findings.json",
+    "priorRegression": {
+      "fixedBase": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+      "reusedExactProtectedTree": true,
+      "games": 9,
+      "passedCases": 2019,
+      "fail": 0,
+      "skipped": 0
+    }
   }
 }

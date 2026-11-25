@@ -38,5 +38,52 @@
       "reviewLimit": "Opposite fixtures creation order is real; pinned Planck only registers polygon-to-circle. Raw records do not retain the DUT comparison values separately.",
       "disposition": "Requires a decision on this physical-case evidence contract; retain original case, the BLOCKED result, and independent synthetic case scope."
     }
-  ]
+  ],
+  "CR005": {
+    "mode": "independent read-only contracts/source/evidence",
+    "agents": [
+      "e1_test_plan",
+      "e0_review"
+    ],
+    "resolution": [
+      {
+        "item": "Independent raw source for real contact event replay",
+        "resolution": "Run 72 reconstructs copied occurrence from raw events and compares full production collector output."
+      },
+      {
+        "item": "Zero residual and removed whole tick after 100 ms",
+        "resolution": "Run 73 checks no early tick at 16.665666 ms then exactly one at 16.666667 ms."
+      },
+      {
+        "item": "Fixed error U versus integration I",
+        "resolution": "Run 74 calls validatePhysicsState directly; run 70 tests the real controller separately."
+      }
+    ],
+    "visibility": "Run 71 native startup and window-input path. Chromium generated trusted hidden and visible events without CDP; the production controller got actual document.hidden; no CR005-B transfer.",
+    "downstream": "No unresolved spec contradictions found in advance scan. Physical qualification, runtime limits and E8 evidence remain subject to execution.",
+    "previousCR004": "Retained in history",
+    "staticCases": {
+      "reviewer": "independent e1_test_plan",
+      "stage": "E1",
+      "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+      "mode": "R read-only archive/lock/source audit",
+      "cases": {
+        "TC-D1-001-C001": {
+          "version": "Planck 1.5.1",
+          "vendorESM": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+          "license": "MIT",
+          "licenseSha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+          "archive": "399a158e2ef778d03255da3414d8e899a771c7d4c55d7e5366c54af142dedd42",
+          "esmExternalImports": 0
+        },
+        "TC-D7-018-C001": {
+          "imports": "E1 product and E1 QA use exact same Planck vendor ESM",
+          "lock": "Node 26.13.0 and Playwright 1.65.0/core 1.65.0 verified against fixed distributions",
+          "browserAssets": 5,
+          "externalCDN": 0,
+          "otherStage": "E8 C003 remains open"
+        }
+      }
+    }
+  }
 }

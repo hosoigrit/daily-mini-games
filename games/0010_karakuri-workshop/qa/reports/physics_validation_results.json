@@ -306,5 +306,388 @@
       "scope": "prior observations, unrelated to full mandatory case qualification",
       "observedPass": 64
     }
-  }
+  },
+  "CR005": {
+    "status": "PASS",
+    "approvedProfile": "PP03",
+    "approvalId": "EXEC-GAME-0010-CR005-EVALUATION-AUTONOMY",
+    "legacyBlockHistoryRetained": true,
+    "CR005-A": {
+      "status": "PASS",
+      "realFixtureOrders": [
+        "P→ball",
+        "P→ball"
+      ],
+      "normalApproachDifferenceMax": 0,
+      "gameTicksEach": 120,
+      "syntheticAndRealSpansSeparated": true,
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      }
+    },
+    "CR005-B": {
+      "status": "PASS",
+      "trustedBackgroundObserved": true,
+      "phase6Transfer": false,
+      "proof": {
+        "runId": "CR005-E1-DISPLAY-71",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "1bb7dfc18291cc1cfe66ac67ec8f01cfe1bd4f120553fdba9827af72775edc30"
+      }
+    },
+    "staticIndependentOracle": [
+      {
+        "caseId": "TC-D1-014-C001",
+        "nearFaceX": 4.72,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C002",
+        "nearFaceX": 4.68,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C003",
+        "nearFaceX": 4.56,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C004",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C005",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C006",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C007",
+        "nearFaceX": 4.72,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C008",
+        "nearFaceX": 4.68,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C009",
+        "nearFaceX": 4.56,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C010",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 58,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C011",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 58,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-014-C012",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 58,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C001",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 86,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C002",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 86,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C003",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 86,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C004",
+        "nearFaceX": 4.72,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 102,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C005",
+        "nearFaceX": 4.68,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 102,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C006",
+        "nearFaceX": 4.56,
+        "minDistance": 0.1999999999999993,
+        "sampleCount": 102,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C007",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C008",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C009",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C010",
+        "nearFaceX": 4.72,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C011",
+        "nearFaceX": 4.68,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C012",
+        "nearFaceX": 4.56,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 82,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C013",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C014",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C015",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C016",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C017",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C018",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000195,
+        "sampleCount": 70,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C019",
+        "nearFaceX": 4.72,
+        "minDistance": 0.1999999999999975,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C020",
+        "nearFaceX": 4.68,
+        "minDistance": 0.1999999999999975,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C021",
+        "nearFaceX": 4.56,
+        "minDistance": 0.1999999999999984,
+        "sampleCount": 62,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C022",
+        "nearFaceX": 4.72,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C023",
+        "nearFaceX": 4.68,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      },
+      {
+        "caseId": "TC-D1-015-C024",
+        "nearFaceX": 4.56,
+        "minDistance": 0.20000000000000107,
+        "sampleCount": 66,
+        "segmentCrossings": 0
+      }
+    ],
+    "defaultSelectionParity": {
+      "runId": "CR005-E1-SELECTED-74",
+      "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+      "rawLogSha256": "351eaf0bb397a9a00e5832babd8c9f2e32c7d72f4990fddfbe1995a8b23c4a5b"
+    },
+    "PP01PP02HistoricalQualityFailures": [
+      {
+        "caseId": "TC-D1-019-C001",
+        "profile": "PP01",
+        "side": -1,
+        "maxPivot": 0,
+        "maxAngle": 32.76165219288519,
+        "contacts": 12,
+        "ticks": 30,
+        "diagnostic": {
+          "runId": "PP01-joint--1",
+          "tick": 31,
+          "substep": 0,
+          "message": "ABNORMAL_JOINT_CONSTRAINT"
+        },
+        "qualityPass": false,
+        "fixtureAngularDamping": 1.2
+      },
+      {
+        "caseId": "TC-D1-019-C001",
+        "profile": "PP01",
+        "side": 1,
+        "maxPivot": 0,
+        "maxAngle": 32.76165219288519,
+        "contacts": 12,
+        "ticks": 30,
+        "diagnostic": {
+          "runId": "PP01-joint-1",
+          "tick": 31,
+          "substep": 0,
+          "message": "ABNORMAL_JOINT_CONSTRAINT"
+        },
+        "qualityPass": false,
+        "fixtureAngularDamping": 1.2
+      },
+      {
+        "caseId": "TC-D1-019-C001",
+        "profile": "PP02",
+        "side": -1,
+        "maxPivot": 0,
+        "maxAngle": 32.76159541875777,
+        "contacts": 12,
+        "ticks": 30,
+        "diagnostic": {
+          "runId": "PP02-joint--1",
+          "tick": 31,
+          "substep": 0,
+          "message": "ABNORMAL_JOINT_CONSTRAINT"
+        },
+        "qualityPass": false,
+        "fixtureAngularDamping": 1.2
+      },
+      {
+        "caseId": "TC-D1-019-C001",
+        "profile": "PP02",
+        "side": 1,
+        "maxPivot": 0,
+        "maxAngle": 32.76159541875777,
+        "contacts": 12,
+        "ticks": 30,
+        "diagnostic": {
+          "runId": "PP02-joint-1",
+          "tick": 31,
+          "substep": 0,
+          "message": "ABNORMAL_JOINT_CONSTRAINT"
+        },
+        "qualityPass": false,
+        "fixtureAngularDamping": 1.2
+      }
+    ],
+    "budget": {
+      "remediationsUsed": 16,
+      "remediationLimit": 50,
+      "automationSecondsSettled": 426,
+      "automationLimit": 21600,
+      "physicsValidationSimulations": 3191,
+      "physicsValidationTicks": 109035,
+      "historicalCause": "e0-budget-reservation-and-accounting",
+      "historicalCauseUses": 6,
+      "originalConservativeReceiptSeconds": 180,
+      "automationSecondsRemaining": 21174,
+      "remediationsRemaining": 34,
+      "openReservations": [
+        {
+          "runId": "CR005-E1-PUSH-76",
+          "expectedRemoteHead": "31c032dbe4d4835e14ce5770fbb94d48cc2fe9ca",
+          "reservedSeconds": 180,
+          "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+          "purpose": "Normal push, frozen refs check and separate readback"
+        }
+      ]
+    }
+  },
+  "currentStatus": "PASS"
 }

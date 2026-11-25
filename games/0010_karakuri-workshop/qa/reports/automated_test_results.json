@@ -1,0 +1,1765 @@
+{
+  "stage": "E1",
+  "approvalId": "EXEC-GAME-0010-CR005-EVALUATION-AUTONOMY",
+  "mandatory": 125,
+  "pass": 125,
+  "testedCandidateSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+  "selectedDefaultSHA": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+  "cases": [
+    {
+      "caseId": "TC-D1-001-C001",
+      "status": "PASS",
+      "proof": {
+        "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+        "path": "qa/reports/review_findings.json",
+        "mode": "independent R"
+      },
+      "assertion": {
+        "version": "Planck 1.5.1",
+        "vendorESM": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1",
+        "license": "MIT",
+        "licenseSha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+        "archive": "399a158e2ef778d03255da3414d8e899a771c7d4c55d7e5366c54af142dedd42",
+        "esmExternalImports": 0
+      },
+      "method": "R",
+      "input": "planck@1.5.1正規配布物",
+      "expected": "承認ハッシュ・版・MIT通知一致"
+    },
+    {
+      "caseId": "TC-D1-001-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 37
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "planck@1.5.1正規配布物",
+      "expected": "承認ハッシュ・版・MIT通知一致"
+    },
+    {
+      "caseId": "TC-D1-002-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "assertion": "Fixed Node and Chromium use pinned same-byte modules; actual canvas and per-tick state/contact comparison where applicable.",
+      "method": "I",
+      "input": "同一配布物をNodeと最小静的HTTPで読込",
+      "expected": "両方起動、CDN不要"
+    },
+    {
+      "caseId": "TC-D1-002-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "assertion": "Fixed Node and Chromium use pinned same-byte modules; actual canvas and per-tick state/contact comparison where applicable.",
+      "method": "B",
+      "input": "同一配布物をNodeと最小静的HTTPで読込",
+      "expected": "両方起動、CDN不要"
+    },
+    {
+      "caseId": "TC-D1-003-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 1
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "論理(0,0)",
+      "expected": "物理(0,7.2)"
+    },
+    {
+      "caseId": "TC-D1-004-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 2
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "論理(960,720)",
+      "expected": "物理(9.6,0)"
+    },
+    {
+      "caseId": "TC-D1-005-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 3
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "全41×31格子点往復",
+      "expected": "誤差≤1e-6m"
+    },
+    {
+      "caseId": "TC-D1-005-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 4
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "grid (0,0)",
+      "expected": "world (0.00,7.20) m and round trip exact grid; ≤1e-6m"
+    },
+    {
+      "caseId": "TC-D1-005-C003",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 5
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "grid (40,30)",
+      "expected": "world (9.60,0.00) m and round trip exact grid; ≤1e-6m"
+    },
+    {
+      "caseId": "TC-D1-005-C004",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 6
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "grid (10,20)",
+      "expected": "world (2.40,2.40) m and round trip exact grid; ≤1e-6m"
+    },
+    {
+      "caseId": "TC-D1-005-C005",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 7
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "grid (20,15)",
+      "expected": "world (4.80,3.60) m and round trip exact grid; ≤1e-6m"
+    },
+    {
+      "caseId": "TC-D1-006-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 8
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "−60〜60°を15°刻み",
+      "expected": "−角度×π/180と一致"
+    },
+    {
+      "caseId": "TC-D1-006-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 9
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=-60°",
+      "expected": "physical rad=1.047197551197 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C003",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 10
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=-45°",
+      "expected": "physical rad=0.785398163397 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C004",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 11
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=-30°",
+      "expected": "physical rad=0.523598775598 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C005",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 12
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=-15°",
+      "expected": "physical rad=0.261799387799 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C006",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 13
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=0°",
+      "expected": "physical rad=0.000000000000 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C007",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 14
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=15°",
+      "expected": "physical rad=-0.261799387799 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C008",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 15
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=30°",
+      "expected": "physical rad=-0.523598775598 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C009",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 16
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=45°",
+      "expected": "physical rad=-0.785398163397 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-006-C010",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 17
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "angle=60°",
+      "expected": "physical rad=-1.047197551197 ±1e-6"
+    },
+    {
+      "caseId": "TC-D1-007-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 18
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "FX02生成",
+      "expected": "半径0.2、質量0.2、速度0、bullet=true、回転可"
+    },
+    {
+      "caseId": "TC-D1-008-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 19
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "同じ3パーツを全6順で生成",
+      "expected": "正規キー・生成順一致"
+    },
+    {
+      "caseId": "TC-D1-008-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 20
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "同じ3パーツを全6順で生成",
+      "expected": "正規キー・生成順一致"
+    },
+    {
+      "caseId": "TC-D1-009-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 21
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "FX03、60tick、減衰0",
+      "expected": "Y=1.6±0.10、vy=−9.8±0.01"
+    },
+    {
+      "caseId": "TC-D1-010-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 22
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "FX04上面から中心1m上、初速0",
+      "expected": "上面接触、反対側通過なし"
+    },
+    {
+      "caseId": "TC-D1-011-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 24
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "FX05±30°上面から転動",
+      "expected": "傾斜下方の正味変位>0"
+    },
+    {
+      "caseId": "TC-D1-012-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 25
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "FX-FRICTION: 両fixture摩擦 .2 と .6、g=(0,-9.8)、減衰0、水平板中心(4.8,2.4) 幅8厚.16、球(3,2.68)、v=(3,0),ω=0。各12tick。",
+      "expected": "両方とも上面接触・有限。物理CCW正で球底部接触点水平速度 vx+rω の絶対値が高摩擦側で低摩擦側より1e-6m/s超小さい。"
+    },
+    {
+      "caseId": "TC-D1-013-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 26
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "FX-BOUNCE: g=0、減衰0、水平板中心(4.8,2.4)幅4厚.16、球(4.8,2.98)、vy=-3, vx=ω=0。両fixture反発0と.1を比較、30tick。",
+      "expected": "両方実接触あり、最初の接触後の最大上向速度は.1側が0側より1e-6m/s超大。すり抜けなし。"
+    },
+    {
+      "caseId": "TC-D1-014-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 1
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 2
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C003",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 3
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C004",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 4
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C005",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 5
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C006",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 6
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C007",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 7
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C008",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 8
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C009",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 9
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C010",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 10
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C011",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 11
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-014-C012",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 12
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 13
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 14
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C003",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 15
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C004",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 16
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C005",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 17
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C006",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 18
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C007",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 19
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C008",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 20
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C009",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 21
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C010",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 22
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C011",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 23
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C012",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 24
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C013",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 25
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C014",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 26
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C015",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 27
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C016",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 28
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C017",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 29
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C018",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 30
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C019",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 31
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C020",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 32
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C021",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 33
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C022",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 34
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.16m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C023",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 35
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.24m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-015-C024",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 36
+      },
+      "assertion": "Independent near-face half-plane segment check includes available solver positions; static contract unchanged.",
+      "method": "P",
+      "input": "静的板、厚さ0.48m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m"
+    },
+    {
+      "caseId": "TC-D1-016-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-EDGE-JOINT-69",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cbc5e85227d32865dbf031853696f11a1b765a2eb33a930b7dfbba83a057ac8c"
+      },
+      "assertion": "FX-EDGE raw independent near-face projection 0.20000000000000195m and no segment crosses. Contact 1; max tick displacement .20m.",
+      "method": "P",
+      "input": "矩形端から内側0.10mに向け入射",
+      "expected": "異常位置飛び・貫通なし"
+    },
+    {
+      "caseId": "TC-D1-017-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 37
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 38
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C003",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 39
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度3m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C004",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 40
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C005",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 41
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C006",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 42
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度3m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C007",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 43
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C008",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 44
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C009",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 45
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度3m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C010",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 46
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C011",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 47
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C012",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 48
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度6m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C013",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 49
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C014",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 50
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C015",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 51
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度6m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C016",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 52
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C017",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 53
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C018",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 54
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度6m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C019",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 55
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C020",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 56
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C021",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 57
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度9m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C022",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 58
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C023",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 59
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C024",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 60
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度9m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C025",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 61
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C026",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 62
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C027",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 63
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度9m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C028",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 64
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C029",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 65
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C030",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 66
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度12m/s、法線角0°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C031",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 67
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C032",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 68
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C033",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 69
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度12m/s、法線角30°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C034",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 70
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.16m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C035",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 71
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.24m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-017-C036",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-MATRIX-62",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+        "line": 72
+      },
+      "assertion": "CR004-A finite synchronized boundary, geometry, contact, and independent crossing check.",
+      "method": "P",
+      "input": "動的回転拘束板、厚さ0.48m、入射速度12m/s、法線角60°。高速行列FX-HS",
+      "expected": "反対側へのすり抜けなし、有限、貫通≤.06m、支点誤差≤.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-018-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 23
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "静止接触と高速行列",
+      "expected": "実形状貫通≤0.01m／0.06m、すり抜けなし"
+    },
+    {
+      "caseId": "TC-D1-019-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-EDGE-JOINT-69",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "cbc5e85227d32865dbf031853696f11a1b765a2eb33a930b7dfbba83a057ac8c"
+      },
+      "assertion": "PP03 both sides 120 ticks, pivot drift 0m, angles <=32. PP01/PP02 failures preserved.",
+      "method": "P",
+      "input": "FX07左右荷重",
+      "expected": "支点誤差≤0.02m、角度超過≤2°"
+    },
+    {
+      "caseId": "TC-D1-020-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 27
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "0/1/60/1200tick",
+      "expected": "0/1÷60/1/20秒"
+    },
+    {
+      "caseId": "TC-D1-020-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 28
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "0/1/60/1200tick",
+      "expected": "0/1÷60/1/20秒"
+    },
+    {
+      "caseId": "TC-D1-021-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "assertion": "Fixed Node and Chromium use pinned same-byte modules; actual canvas and per-tick state/contact comparison where applicable.",
+      "method": "P",
+      "input": "描画60Hz/30Hz/不規則",
+      "expected": "同じtickで位置・速度・角度差≤1e-6各単位"
+    },
+    {
+      "caseId": "TC-D1-021-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "assertion": "Fixed Node and Chromium use pinned same-byte modules; actual canvas and per-tick state/contact comparison where applicable.",
+      "method": "B",
+      "input": "描画60Hz/30Hz/不規則",
+      "expected": "同じtickで位置・速度・角度差≤1e-6各単位"
+    },
+    {
+      "caseId": "TC-D1-022-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "assertion": "Fixed Node and Chromium use pinned same-byte modules; actual canvas and per-tick state/contact comparison where applicable.",
+      "method": "P",
+      "input": "描画あり／なし",
+      "expected": "同じtick・終端一致"
+    },
+    {
+      "caseId": "TC-D1-023-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 29
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "100ms遅延／250ms停止／背景移行",
+      "expected": "最大5tick、長停止はPAUSED、追いつきなし"
+    },
+    {
+      "caseId": "TC-D1-023-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-DISPLAY-71",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "1bb7dfc18291cc1cfe66ac67ec8f01cfe1bd4f120553fdba9827af72775edc30"
+      },
+      "assertion": "Real trusted X11 tab background and return, no catch-up; headful isolated local fixture forwards document visibility to production controller.",
+      "additionalProof": {
+        "runId": "CR005-E1-CONTROLS-73",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "8e967d9d266d9577ae1a08481df7869527d747f2d9a4e5ad0a67fcfce49392c2"
+      },
+      "method": "B",
+      "input": "100ms遅延／250ms停止／背景移行",
+      "expected": "最大5tick、長停止はPAUSED、追いつきなし"
+    },
+    {
+      "caseId": "TC-D1-024-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 30
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "U",
+      "input": "v=(12,9)、ω=80",
+      "expected": "v=(9.6,7.2)、ω=60"
+    },
+    {
+      "caseId": "TC-D1-025-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      },
+      "assertion": "Actual production normalizer and occurrence collector; independent raw replay references including FX04 and transient. Synthetic input identified and segregated.",
+      "method": "I",
+      "input": "同一tickの重複接触",
+      "expected": "事象の欠落・不正重複なし"
+    },
+    {
+      "caseId": "TC-D1-025-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      },
+      "assertion": "Actual production normalizer and occurrence collector; independent raw replay references including FX04 and transient. Synthetic input identified and segregated.",
+      "method": "P",
+      "input": "同一tickの重複接触",
+      "expected": "事象の欠落・不正重複なし"
+    },
+    {
+      "caseId": "TC-D1-026-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      },
+      "assertion": "Actual production normalizer and occurrence collector; independent raw replay references including FX04 and transient. Synthetic input identified and segregated.",
+      "method": "U",
+      "input": "Fixture A/B反転",
+      "expected": "正規法線・接近速度一致"
+    },
+    {
+      "caseId": "TC-D1-026-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      },
+      "assertion": "Actual production normalizer and occurrence collector; independent raw replay references including FX04 and transient. Synthetic input identified and segregated.",
+      "method": "P",
+      "input": "Fixture A/B反転",
+      "expected": "正規法線・接近速度一致"
+    },
+    {
+      "caseId": "TC-D1-027-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-CONTACTS-72",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "27ff35aafde055d2776b1255bbc934039d21db3a63bbd46cc863da23eb3de1e9"
+      },
+      "assertion": "Actual production normalizer and occurrence collector; independent raw replay references including FX04 and transient. Synthetic input identified and segregated.",
+      "method": "P",
+      "input": "tick内begin/end接触",
+      "expected": "一時接触証跡保持"
+    },
+    {
+      "caseId": "TC-D1-028-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-SELECTED-74",
+        "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+        "rawLogSha256": "351eaf0bb397a9a00e5832babd8c9f2e32c7d72f4990fddfbe1995a8b23c4a5b",
+        "line": 2
+      },
+      "assertion": "Direct isolated production validatePhysicsState, 54 boundary fixtures distinct from controller integration case.",
+      "method": "U",
+      "input": "NaN／Infinity／速度30m/s超注入",
+      "expected": "ERROR、正常クリアなし"
+    },
+    {
+      "caseId": "TC-D1-028-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 32
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "NaN／Infinity／速度30m/s超注入",
+      "expected": "ERROR、正常クリアなし"
+    },
+    {
+      "caseId": "TC-D1-029-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 33
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "物理更新例外",
+      "expected": "安全停止、診断記録"
+    },
+    {
+      "caseId": "TC-D1-030-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 34
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "同一世界100回新規生成",
+      "expected": "各tick差≤1e-6各単位・結果一致"
+    },
+    {
+      "caseId": "TC-D1-031-C001",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 35
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "世界生成・破棄100回",
+      "expected": "不要参照・購読・ループ残存0"
+    },
+    {
+      "caseId": "TC-D1-031-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 36
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "P",
+      "input": "世界生成・破棄100回",
+      "expected": "不要参照・購読・ループ残存0"
+    },
+    {
+      "caseId": "TC-D7-018-C001",
+      "status": "PASS",
+      "proof": {
+        "testedSha": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+        "path": "qa/reports/review_findings.json",
+        "mode": "independent R"
+      },
+      "assertion": {
+        "imports": "E1 product and E1 QA use exact same Planck vendor ESM",
+        "lock": "Node 26.13.0 and Playwright 1.65.0/core 1.65.0 verified against fixed distributions",
+        "browserAssets": 5,
+        "externalCDN": 0,
+        "otherStage": "E8 C003 remains open"
+      },
+      "method": "R",
+      "input": "固定依存・本番QA資産",
+      "expected": "版・ハッシュ・権利一致"
+    },
+    {
+      "caseId": "TC-D7-018-C002",
+      "status": "PASS",
+      "proof": {
+        "runId": "CR005-E1-FORMAL-70",
+        "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+        "rawLogSha256": "69f106bfa9e789ee9b6c3dc284d1624f5edcd8511d4406b19c5228fb7bf08071",
+        "line": 38
+      },
+      "assertion": "See per-case actual observations, expected values and input grid in raw output.",
+      "method": "I",
+      "input": "固定依存・本番QA資産",
+      "expected": "版・ハッシュ・権利一致"
+    }
+  ],
+  "otherFormalStatus": "Explicit E1 only. Legacy E0 cases and E2–E8 require separate execution. No Phase 6 transfer.",
+  "reuseBasis": "Candidate tests used explicit PP03. The selection commit changed only the default; explicit/implicit baseline states and all contact records are byte-identical in run 74, selected default regression run 75."
+}

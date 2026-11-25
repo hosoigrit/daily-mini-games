@@ -53,5 +53,41 @@
       "PP02",
       "PP03"
     ]
+  },
+  "CR005Revalidation": {
+    "outcome": "PASS",
+    "candidate": "PP03",
+    "selectionSource": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+    "proof": {
+      "runId": "CR005-E1-PERFORMANCE-63",
+      "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+      "rawLogSha256": "cd3c870dd933750fdb8a0f0bd9aafb7128a521198d1a65e52f25bf8a6c5884af"
+    },
+    "observed": [
+      {
+        "environment": "Node.js",
+        "version": "v26.13.0",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 107.95954799999538,
+          "ticksPerSecond": 40014.98783600117,
+          "p95Milliseconds": 0.05888900000002195,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        }
+      },
+      {
+        "environment": "Chromium",
+        "version": "158.0.8127.18",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 102.19999998062849,
+          "ticksPerSecond": 42270.05871642695,
+          "p95Milliseconds": 0.10000000149011612,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        }
+      }
+    ]
   }
 }
