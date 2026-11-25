@@ -98,13 +98,14 @@ function confirm(editor, stage) {
     return ok({...editor, selection: idle, placements: [], history: [], trajectory: null, revision: editor.revision + 1});
   }
   const parts = [];
-  for (const item of editor.best ?? []) {
+  for (const {id, type, gridX, gridY, angleDeg} of editor.best ?? []) {
+    const item = {id, type, gridX, gridY, angleDeg};
     const result = validatePlacement(stage, parts, item);
     if (!result.ok) return reject(cancelPendingEdit(editor), result.reason);
-    if (parts.some(part => part.id === item.id) || stage.fixed.some(fixed => fixed.id === item.id)) {
+    if (typeof id !== 'string' || !id || parts.some(part => part.id === id) || stage.fixed.some(fixed => fixed.id === id)) {
       return reject(cancelPendingEdit(editor), 'PART_ID');
     }
-    parts.push({...item});
+    parts.push(item);
   }
   return commit(editor, parts);
 }

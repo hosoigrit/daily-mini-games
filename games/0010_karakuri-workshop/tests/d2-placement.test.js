@@ -77,6 +77,13 @@ caseTest(7,1,'outer silhouette within board',()=>{
    [4.8,3.6,true],[.6,3.6,true],[9,3.6,true],[4.8,.08,true],[4.8,7.12,true]]){
     assert.equal(g.insideBoard(g.getOrientedRectangle(loc(x,y))),allowed,`${x},${y}`);
   }
+  const stage={ball:{x:1.2,y:6},goal:{x:4.8,y:4.8},inventory:{P:1},fixed:[]};
+  for(const [x,y,valid] of [[0,15,false],[40,15,false],[3,15,true],[37,15,true],
+    [20,0,false],[20,30,false],[20,1,true],[20,29,true]]){
+    const result=placement.validatePlacement(stage,[],placed('test','P',x,y));
+    assert.equal(result.ok,valid);
+    assert.equal(result.reason,valid?undefined:'BOARD_BOUNDS');
+  }
 });
 
 // The controller fixtures use these corner-and-edge calculations to choose an input
@@ -175,21 +182,29 @@ caseTest(14,1,'goal protection interior versus boundary',()=>{
   const goal=g.getGoalProtection({x:4.8,y:2.4});
   assert.equal(g.intersectRectangles(goal,g.getOrientedRectangle(loc(4.8,3))),true);
   assert.equal(g.intersectRectangles(goal,g.getOrientedRectangle(loc(6.16,3))),false);
+  for(const [x,overlap] of [[6.16,false],[6.15,true],[4.8,true]]){
+    assert.equal(g.intersectRectangles(goal,g.getOrientedRectangle(loc(x,2.8))),overlap);
+  }
 });
 const seesawCenter={x:4.8,y:3.6};
 function testSweep(obstacle){
-  assert.equal(g.intersectRectangles(g.getOrientedRectangle({...seesawCenter,width:1.92,height:.16}),obstacle),false);
-  assert(g.getSweptEnvelope(seesawCenter).some(shape=>g.intersectRectangles(shape,obstacle)),'overlap in swept envelope');
+  const rectangle=g.getOrientedRectangle(obstacle);
+  assert.equal(g.intersectRectangles(g.getOrientedRectangle({...seesawCenter,width:1.92,height:.16}),rectangle),false);
+  const candidate=placed('reserve','S',20,15);
+  const stage={ball:{x:1.2,y:6},goal:{x:7.92,y:5.52},inventory:{S:1},fixed:[]};
+  assert.equal(placement.validatePlacement(stage,[],candidate).ok,true);
+  assert.equal(placement.validatePlacement({...stage,fixed:[obstacle]},[],candidate).reason,
+    'FIXED_OVERLAP','overlap in swept envelope');
 }
 caseTest(31,1,'reservation outside the initial plate',()=>{
-  testSweep(g.getOrientedRectangle({x:5.52,y:4.08,width:.16,height:.16}));
+  testSweep({x:5.52,y:4.08,width:.16,height:.16});
 });
 caseTest(32,1,'reservation between sampled angles',()=>{
   const a=12.5*Math.PI/180;
   const x=4.8+.96*Math.cos(a)-.08*Math.sin(a), y=3.6+.96*Math.sin(a)+.08*Math.cos(a);
-  const tiny=g.getOrientedRectangle({x,y,width:.002,height:.002});
+  const tiny={x,y,width:.002,height:.002};
   const exact=g.getOrientedRectangle({...seesawCenter,width:1.92,height:.16,angle:a});
-  assert.equal(g.intersectRectangles(exact,tiny),true);
+  assert.equal(g.intersectRectangles(exact,g.getOrientedRectangle(tiny)),true);
   testSweep(tiny);
 });
 caseTest(33,1,'two swept reserve envelopes may conflict',()=>{
@@ -289,7 +304,7 @@ caseTest(39,1,'history retains the last fifty confirmed commands',()=>{
 caseTest(40,1,'confirmation reset and best load retain the required state',()=>{
   const stage=stage01, alt=neighbor(stage,sol01);
   assert(alt);
-  const fixture={placements:[sol01],best:[alt],progress:{cleared:true,stars:3},
+  const fixture={placements:[sol01],best:[{...alt,x:999,y:999}],progress:{cleared:true,stars:3},
     trajectory:[[4,5]],history:[[],[alt]]};
   const base=editor.createDesignEditor(fixture);
   for(const type of ['request-reset','request-load-best']){

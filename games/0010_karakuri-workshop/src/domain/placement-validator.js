@@ -23,6 +23,7 @@ export function placementShapes(item) {
   })];
 }
 
+const gridShapes = ({type, gridX, gridY, angleDeg}) => placementShapes({type, gridX, gridY, angleDeg});
 const overlaps = (a, b) => a.some(shape => b.some(other => intersectRectangles(shape, other)));
 
 export function validatePlacement(stage, placements, candidate, replacingId = null) {
@@ -30,8 +31,7 @@ export function validatePlacement(stage, placements, candidate, replacingId = nu
   if (!Number.isInteger(candidate.gridX) || !Number.isInteger(candidate.gridY)) return reject('GRID');
   if (!validateAngle(candidate.type, candidate.angleDeg)) return reject('ANGLE');
 
-  const {type, gridX, gridY, angleDeg} = candidate;
-  const shapes = placementShapes({type, gridX, gridY, angleDeg});
+  const shapes = gridShapes(candidate);
   if (!shapes.every(insideBoard)) return reject('BOARD_BOUNDS');
 
   const ball = {...stage.ball, radius: BALL.radius};
@@ -39,7 +39,7 @@ export function validatePlacement(stage, placements, candidate, replacingId = nu
   if (overlaps(shapes, [getGoalProtection(stage.goal)])) return reject('GOAL_PROTECTION');
   if (stage.fixed.some(item => overlaps(shapes, placementShapes(item)))) return reject('FIXED_OVERLAP');
   const others = placements.filter(item => item.id !== replacingId);
-  if (others.some(item => overlaps(shapes, placementShapes(item)))) return reject('PLACEMENT_OVERLAP');
+  if (others.some(item => overlaps(shapes, gridShapes(item)))) return reject('PLACEMENT_OVERLAP');
   if (calculateInventory(stage, others)[candidate.type] <= 0) return reject('INVENTORY');
   return legal;
 }
