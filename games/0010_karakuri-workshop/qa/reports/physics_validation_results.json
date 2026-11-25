@@ -799,5 +799,266 @@
         "vendor/planck/planck.mjs"
       ]
     }
+  },
+  "CR006-E3": {
+    "status": "PASS",
+    "testedSHA": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+    "profile": "PP03",
+    "cases": {
+      "TC-D7-001-C001": {
+        "source": "roof-formal",
+        "fixture": "ROOF-R1-008",
+        "candidateCount": 64,
+        "rounds": 1,
+        "oldState": "BLOCKED",
+        "physicalObservation": "Distinct substep 1 discrete spring END and later native TOI roof onset same game tick; no roof current manifold at end; same no-roof control launches once; obstacle suppresses without delay.",
+        "productDefectHistory": {
+          "runId": "CR006-ROOF-PRODUCT-DEFECT",
+          "testedSha": "8ee9dd2b5dcfaf8ea8e7742ccffa14e8cab0f8ee",
+          "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "qualifiedByNativeOrder": {
+          "runId": "CR006-ROOF-NATIVE-R1",
+          "testedSha": "8ee9dd2b5dcfaf8ea8e7742ccffa14e8cab0f8ee",
+          "rawLogSha256": "324d8f67e9ca06282c983ccc670497ed6e957bce560240c0a2c3f88e503cadff"
+        },
+        "proofResult": {
+          "tick": 1,
+          "springEnd": {
+            "tick": 1,
+            "substep": 1,
+            "phase": 0,
+            "alpha": 0,
+            "event": "end-contact",
+            "id": "spring",
+            "ordinal": 3,
+            "points": [],
+            "ball": {
+              "x": 4.7154311179273645,
+              "y": 3.551717402539714
+            }
+          },
+          "roofBegin": {
+            "tick": 1,
+            "substep": 1,
+            "phase": 1,
+            "alpha": 0.2959770351452218,
+            "event": "begin-contact",
+            "id": "roof",
+            "ordinal": 4,
+            "points": [
+              {
+                "position": {
+                  "x": 4.742682137402928,
+                  "y": 3.7581256342545424
+                },
+                "normal": {
+                  "x": -0.23909562112071753,
+                  "y": -0.970996026748255
+                },
+                "local": {
+                  "x": -0.04073580296296608,
+                  "y": -0.04298818418405448
+                },
+                "approach": 5.619245453047661,
+                "impulse": null
+              }
+            ],
+            "ball": {
+              "x": 4.696518166427026,
+              "y": 3.5706482049883195
+            }
+          },
+          "impulse": {
+            "tick": 1,
+            "substep": 1,
+            "phase": 1,
+            "alpha": 0.2959770351452218,
+            "event": "post-solve",
+            "id": "roof",
+            "ordinal": 6,
+            "points": [
+              {
+                "position": {
+                  "x": 4.701963525266073,
+                  "y": 3.7630332867486462
+                },
+                "normal": {
+                  "x": -0.23909562112071753,
+                  "y": -0.970996026748255
+                },
+                "local": {
+                  "x": -0.0814544150998211,
+                  "y": -0.038080531689950625
+                },
+                "approach": -0.28096227265237006,
+                "impulse": 1.1800415451400075
+              }
+            ],
+            "ball": {
+              "x": 4.654611169963335,
+              "y": 3.5707296860360405
+            }
+          }
+        }
+      },
+      "TC-D2-026-C001": {
+        "source": "dual-verified",
+        "fixture": "DUAL-R1-008",
+        "candidateCount": 64,
+        "rounds": 1,
+        "oldState": "BLOCKED",
+        "physicalObservation": "Fresh PP03 world, actual A pre-solve in first substep and B in second. First eligible raw trial has A independent winner and both states WAIT_RELEASE.",
+        "proofResult": {
+          "tick": 1,
+          "substeps": [
+            0,
+            1
+          ],
+          "ranking": [
+            {
+              "id": "A",
+              "x": 4.377428824506884,
+              "y": 3.550008621971352,
+              "angleDeg": 45,
+              "v": 4440,
+              "n": 1000
+            },
+            {
+              "id": "B",
+              "x": 5.262471175493115,
+              "y": 3.514908621971352,
+              "angleDeg": -45,
+              "v": 4117,
+              "n": 1000
+            }
+          ],
+          "qualifiedIDs": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "TC-D2-022-C002": {
+        "source": "release-verified",
+        "fixture": [
+          "REL-A-CARRY-036",
+          "REL-B-R1-016",
+          "REL-C-R1-061"
+        ],
+        "candidateCountPerMissingPartition": 64,
+        "rounds": 1,
+        "oldState": "BLOCKED",
+        "physicalObservation": "A has 2 actual contact-free positive geometric gaps below .04. B selected 016 has one full .10560 m minimum quiet tick, genuine recontact and no roof blocker. C selected 061 interrupts quiet with native mid-substep contact and separately measured later END; subsequent return into polygon skin is recorded. No false launch or rearm.",
+        "proofResult": [
+          {
+            "first": 1,
+            "kind": "A",
+            "witness": {
+              "ticks": [
+                3,
+                4
+              ],
+              "minima": [
+                0.016937784132156353,
+                0.002984213597401031
+              ],
+              "pass": true
+            },
+            "actualInitialLaunch": true
+          },
+          {
+            "first": 1,
+            "kind": "B",
+            "witness": {
+              "ticks": [
+                3,
+                4
+              ],
+              "minima": [
+                0.10560264627174792,
+                0.00524248128461996
+              ],
+              "pass": true
+            },
+            "actualInitialLaunch": true
+          },
+          {
+            "first": 1,
+            "kind": "C",
+            "witness": {
+              "ticks": [
+                3,
+                4
+              ],
+              "minima": [
+                0.06766167914123683,
+                0.0030958147030494265
+              ],
+              "begin": {
+                "tick": 4,
+                "substep": 1,
+                "phase": 0,
+                "alpha": 0,
+                "event": "begin-contact",
+                "id": "spring",
+                "ordinal": 10,
+                "points": [
+                  {
+                    "position": {
+                      "x": 5.16263944533296,
+                      "y": 1.1276882575678306
+                    },
+                    "normal": {
+                      "x": 0.3247064217688817,
+                      "y": 0.9458148548537653
+                    },
+                    "local": {
+                      "x": 0.36263944533296044,
+                      "y": 0.12768825756783064
+                    },
+                    "approach": 6.82183055643003,
+                    "impulse": null
+                  }
+                ],
+                "ball": {
+                  "x": 5.226973110802007,
+                  "y": 1.3150813375578763
+                }
+              },
+              "end": {
+                "tick": 4,
+                "substep": 1,
+                "phase": 1,
+                "alpha": 0.8552317842546293,
+                "event": "end-contact",
+                "id": "spring",
+                "ordinal": 15,
+                "points": [],
+                "ball": {
+                  "x": 5.251894754734041,
+                  "y": 1.309123959870361
+                }
+              },
+              "endClearance": 0.010267729679747706,
+              "priorQuiet": 1,
+              "pass": true
+            },
+            "actualInitialLaunch": true
+          }
+        ],
+        "order": {
+          "runId": "CR006-RELEASE-LOCK-ORDER",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "8dd4249a8e8ff6b1aa63e567199dad5a30fd484df2686df76ed7e5486a3f7151"
+        }
+      }
+    },
+    "regr": {
+      "runId": "CR006-REGRESSION",
+      "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+      "rawLogSha256": "a16a864cc81510c5a1e95091a893fe60bf14a4f4e72a4171b69d3150edf3fa49"
+    },
+    "initialResources": "Pinned Node and Planck, no environment or frozen dependency change."
   }
 }

@@ -2819,19 +2819,810 @@
   },
   "E3": {
     "stage": "E3",
-    "source": "1fc699ceae29d984655d59409be15822e8185732",
+    "status": "PASS",
     "mandatory": 42,
-    "pass": 39,
-    "blocked": 3,
+    "pass": 42,
+    "blocked": 0,
+    "source": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+    "historyCR005": {
+      "stage": "E3",
+      "source": "1fc699ceae29d984655d59409be15822e8185732",
+      "mandatory": 42,
+      "pass": 39,
+      "blocked": 3,
+      "caseResults": [
+        {
+          "caseId": "TC-D2-015-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 3
+          },
+          "assertion": "exact positive thresholds through product normalization and launch",
+          "method": "I",
+          "input": "角0°の有効上面接触合成、接近.400/.500m/s各1件",
+          "expected": "各1回作動・v=(0,V)、他候補なし。D2-017の.399/.400/.401は別caseで維持。"
+        },
+        {
+          "caseId": "TC-D2-015-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 3
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "B(4.8,2.4)、球(4.8,2.77)、g=0、ω=0、初速(0,-.4)/(0,-.5)、各60tick",
+          "expected": "各run記録。実測≥.40かつ全作動資格が成立した観測で1回作動・v=(0,V)。全候補資格なしBLOCKED、適格不作動FAIL。"
+        },
+        {
+          "caseId": "TC-D2-016-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 9
+          },
+          "assertion": "side back out-of-width off-surface and steep normal do not launch",
+          "method": "I",
+          "input": "側面／裏面／法線差30°超",
+          "expected": "作動なし"
+        },
+        {
+          "caseId": "TC-D2-016-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 18
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "側面／裏面／法線差30°超",
+          "expected": "作動なし"
+        },
+        {
+          "caseId": "TC-D2-017-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 15
+          },
+          "assertion": "qualifying approach 0.399",
+          "method": "U",
+          "input": "有効上面・他条件成立、接近0.399m/s",
+          "expected": "候補なし"
+        },
+        {
+          "caseId": "TC-D2-017-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 21
+          },
+          "assertion": "qualifying approach 0.4",
+          "method": "U",
+          "input": "有効上面・他条件成立、接近0.4m/s",
+          "expected": "候補あり"
+        },
+        {
+          "caseId": "TC-D2-017-C003",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 27
+          },
+          "assertion": "qualifying approach 0.401",
+          "method": "U",
+          "input": "有効上面・他条件成立、接近0.401m/s",
+          "expected": "候補あり"
+        },
+        {
+          "caseId": "TC-D2-018-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 11
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "許可7角度で有効接触",
+          "expected": "v=V(sinθ,cosθ)"
+        },
+        {
+          "caseId": "TC-D2-018-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 33
+          },
+          "assertion": "component and angular velocity for -45°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度-45°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=-6.717514421、vy=6.717514421 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C003",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 39
+          },
+          "assertion": "component and angular velocity for -30°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度-30°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=-4.750000000、vy=8.227241336 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C004",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 45
+          },
+          "assertion": "component and angular velocity for -15°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度-15°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=-2.458780928、vy=9.176295350 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C005",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 51
+          },
+          "assertion": "component and angular velocity for 0°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度0°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=0.000000000、vy=9.500000000 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C006",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 57
+          },
+          "assertion": "component and angular velocity for 15°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度15°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=2.458780928、vy=9.176295350 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C007",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 63
+          },
+          "assertion": "component and angular velocity for 30°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度30°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=4.750000000、vy=8.227241336 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-018-C008",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 69
+          },
+          "assertion": "component and angular velocity for 45°",
+          "method": "I",
+          "input": "正規有効接触証跡、設定V=9.5、角度45°、初速(0,-2)、ω=1、候補1個",
+          "expected": "作動1、vx=6.717514421、vy=6.717514421 各1e-6m/s以内、ω=1、位置不変"
+        },
+        {
+          "caseId": "TC-D2-019-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 15
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "入射1／3／6m/s",
+          "expected": "同じ設定速度へ置換"
+        },
+        {
+          "caseId": "TC-D2-019-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 75
+          },
+          "assertion": "sets launch velocity rather than adding incoming 1",
+          "method": "I",
+          "input": "角度0°、有効証跡、V=9.5、初速(0,-1)",
+          "expected": "作動1、v=(0,9.5)各1e-6m/s、加算ではない"
+        },
+        {
+          "caseId": "TC-D2-019-C003",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 81
+          },
+          "assertion": "sets launch velocity rather than adding incoming 3",
+          "method": "I",
+          "input": "角度0°、有効証跡、V=9.5、初速(0,-3)",
+          "expected": "作動1、v=(0,9.5)各1e-6m/s、加算ではない"
+        },
+        {
+          "caseId": "TC-D2-019-C004",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 87
+          },
+          "assertion": "sets launch velocity rather than adding incoming 6",
+          "method": "I",
+          "input": "角度0°、有効証跡、V=9.5、初速(0,-6)",
+          "expected": "作動1、v=(0,9.5)各1e-6m/s、加算ではない"
+        },
+        {
+          "caseId": "TC-D2-020-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 93
+          },
+          "assertion": "Initial actual application sets v=(0,9.5); ten subsequent sequential injected ticks with contacts in both substeps remain WAIT_RELEASE, quietTicks=0, zero further activations.",
+          "method": "I",
+          "input": "連続接触10tick",
+          "expected": "再作動なし",
+          "additionalProof": {
+            "runId": "CR005-E3-BOUNDARY-105",
+            "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "raw": "cr005-e3-boundary-verified.log"
+          }
+        },
+        {
+          "caseId": "TC-D2-020-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-FAMILIES-98",
+            "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+            "raw": "cr005-e3-final-families.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 10
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "連続接触10tick",
+          "expected": "再作動なし"
+        },
+        {
+          "caseId": "TC-D2-021-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 99
+          },
+          "assertion": "two complete clear ticks permit a new launch",
+          "method": "I",
+          "input": "離隔0.04m以上・無接触2tick→再接触",
+          "expected": "再作動可",
+          "additionalProof": {
+            "runId": "CR005-E3-BOUNDARY-105",
+            "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "raw": "cr005-e3-boundary-verified.log"
+          }
+        },
+        {
+          "caseId": "TC-D2-021-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 19
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "離隔0.04m以上・無接触2tick→再接触",
+          "expected": "再作動可"
+        },
+        {
+          "caseId": "TC-D2-022-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 105
+          },
+          "assertion": "short, single or interrupted absence remains in WAIT_RELEASE",
+          "method": "I",
+          "input": "0.039m／無接触1tick／途中再接触",
+          "expected": "再作動不可",
+          "additionalProof": {
+            "runId": "CR005-E3-BOUNDARY-105",
+            "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "raw": "cr005-e3-boundary-verified.log"
+          }
+        },
+        {
+          "caseId": "TC-D2-022-C002",
+          "status": "BLOCKED",
+          "proof": {
+            "runId": "CR005-E3-FAMILIES-98",
+            "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+            "raw": "cr005-e3-final-families.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+          },
+          "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
+          "method": "P",
+          "input": "0.039m／無接触1tick／途中再接触",
+          "expected": "再作動不可",
+          "details": {
+            "stop": "LS-11",
+            "status": "BLOCKED",
+            "declared": 63,
+            "initialOverlapRejected": 9,
+            "actualWorlds": 54,
+            "observedPartition": {
+              "two-too-close": {
+                "index": 36,
+                "tick": 3,
+                "held": true
+              }
+            },
+            "unobservedPartitions": [
+              "only one qualified complete clear tick before a qualifying recontact",
+              "a touch inside a substep between observed clear intervals"
+            ],
+            "method": "Independent real before/after observations at every substep and all raw events. Side analysis also considered an actual begin/end within the same tick.",
+            "neededDecision": "Allow fixed physical fixtures for the two unobserved partitions while retaining .04m, two complete clear ticks, real contact, and all waiting-state assertions.",
+            "rawProof": {
+              "runId": "CR005-E3-FAMILIES-98",
+              "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+              "raw": "cr005-e3-final-families.log",
+              "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+            }
+          }
+        },
+        {
+          "caseId": "TC-D2-023-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 111
+          },
+          "assertion": "two and three candidates invoke a single winner",
+          "method": "I",
+          "input": "2／3個同時有効接触",
+          "expected": "最大1回/tick",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D2-023-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-FAMILIES-98",
+            "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+            "raw": "cr005-e3-final-families.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 291
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "2／3個同時有効接触",
+          "expected": "最大1回/tick"
+        },
+        {
+          "caseId": "TC-D2-024-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 117
+          },
+          "assertion": "loser still touching on next tick cannot activate",
+          "method": "I",
+          "input": "非選択バネへの接触継続",
+          "expected": "翌tickの遅延作動なし",
+          "additionalProof": {
+            "runId": "CR005-E3-BOUNDARY-105",
+            "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "raw": "cr005-e3-boundary-verified.log"
+          },
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D2-024-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-FAMILIES-98",
+            "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+            "raw": "cr005-e3-final-families.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 292
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "非選択バネへの接触継続",
+          "expected": "翌tickの遅延作動なし"
+        },
+        {
+          "caseId": "TC-D2-025-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 123
+          },
+          "assertion": "quantized canonical ranking for all six permutations",
+          "method": "U",
+          "input": "候補通知全順序変更",
+          "expected": "選択同一"
+        },
+        {
+          "caseId": "TC-D2-025-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 129
+          },
+          "assertion": "product matching and ranking through all six notification orders",
+          "method": "I",
+          "input": "候補通知全順序変更",
+          "expected": "選択同一"
+        },
+        {
+          "caseId": "TC-D2-026-C001",
+          "status": "BLOCKED",
+          "proof": {
+            "runId": "CR005-E3-INDEPENDENT-97",
+            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+            "raw": "cr005-e3-final-independent.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+          },
+          "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
+          "method": "P",
+          "input": "PP03の両内部更新に候補",
+          "expected": "最大1回/game tick",
+          "details": {
+            "stop": "LS-11",
+            "status": "BLOCKED",
+            "worlds": 108,
+            "ticks": 324,
+            "rawDualSubstepTicks": 0,
+            "rawFirstOnly": 52,
+            "rawSecondOnly": 45,
+            "rawNeither": 227,
+            "neededDecision": "Allow a reproducible fixed fixture that gives actual qualifying contacts in both PP03 substeps, one actual launch; no third-substep or synthetic substitute.",
+            "rawProof": {
+              "runId": "CR005-E3-INDEPENDENT-97",
+              "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+              "raw": "cr005-e3-final-independent.log",
+              "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+            }
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C001",
+          "status": "BLOCKED",
+          "proof": {
+            "runId": "CR005-E3-ROOF-QUALIFICATION-90",
+            "sha256": "919ace60e32c500977e8e59322c0a8b9d5da01a0c65f15a501a9aac96abfed9c",
+            "raw": "cr005-e3-roof.log",
+            "testedSha": "6251632eb5d0a85740b272ef52d2d1735300f113"
+          },
+          "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
+          "method": "P",
+          "input": "バネ接触後離脱し阻害衝突",
+          "expected": "古い候補無効化",
+          "details": {
+            "stop": "LS-11",
+            "status": "BLOCKED",
+            "worldPairs": 81,
+            "physicalWorlds": 162,
+            "ticks": 486,
+            "controlContactPoints": 39,
+            "obstructedContactPoints": 354,
+            "maximumAdmittedAbsLocalX": 0.36,
+            "minimumOutsideFaceM": 0.0003823756135189482,
+            "eligible": 0,
+            "samePhysicsReuse": "E2 source for pre-product raw fixture capture, adapter/body factory/config/vendor bytes identical to E3 tested source; eligibility does not rely on DUT activation.",
+            "independentAlternate": "Pin-supported solver manifold uses same midpoint. A bare box corner changes eligibility. Even for those corner candidates, roof onset is tied/earlier or the roof remains continuously touching at the tick end.",
+            "neededDecision": "If independently reproducible, externally approve a replacement fixed physical roof/no-roof paired input with genuine in-face contact, distinct later roof onset, no continuing roof blocker, and unblocked positive control. Retain all product thresholds and physical-only outcome checks.",
+            "rawProof": {
+              "runId": "CR005-E3-ROOF-QUALIFICATION-90",
+              "sha256": "919ace60e32c500977e8e59322c0a8b9d5da01a0c65f15a501a9aac96abfed9c",
+              "raw": "cr005-e3-roof.log",
+              "testedSha": "6251632eb5d0a85740b272ef52d2d1735300f113"
+            }
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 141
+          },
+          "assertion": "blocking direction -0.501",
+          "method": "I",
+          "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.501、Jnormal=.01N·s、前面内、離隔 .10m",
+          "expected": "候補抑止",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C003",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
+            "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
+            "raw": "cr005-e3-supplement-native.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 1
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "I",
+          "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.5、Jnormal=.01N·s、前面内、離隔 .10m",
+          "expected": "候補抑止",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C004",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 153
+          },
+          "assertion": "blocking direction -0.499",
+          "method": "I",
+          "input": "有効バネ証跡、同tick後続の他物体への接触、正規法線内積=-0.499、Jnormal=.01N·s、前面内、離隔 .10m",
+          "expected": "他条件成立なら作動候補",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C005",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 159
+          },
+          "assertion": "outer separation 0.25",
+          "method": "I",
+          "input": "有効バネ証跡、同tick終了、外周距離=0.25、他阻害なし",
+          "expected": "候補許可",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D7-001-C006",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 165
+          },
+          "assertion": "outer separation 0.250001",
+          "method": "I",
+          "input": "有効バネ証跡、同tick終了、外周距離=0.250001、他阻害なし",
+          "expected": "候補拒否",
+          "fixedInputProof": {
+            "runId": "CR005-E3-FIXED-INPUTS-106",
+            "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+            "testedSha": "9994bd1732e7d2d10a96164f7c97d0ee273592e3",
+            "raw": "cr005-e3-fixed-inputs.log",
+            "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
+          }
+        },
+        {
+          "caseId": "TC-D7-002-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-TESTS-95",
+            "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
+            "raw": "cr005-e3-final-tests.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 135
+          },
+          "assertion": "independent integer ranking for equal scores",
+          "method": "U",
+          "input": "接近速度・法線整数同順位",
+          "expected": "正規キーで一意決定"
+        },
+        {
+          "caseId": "TC-D7-002-C002",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
+            "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
+            "raw": "cr005-e3-supplement-native.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 2
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "P",
+          "input": "接近速度・法線整数同順位",
+          "expected": "正規キーで一意決定"
+        },
+        {
+          "caseId": "TC-D7-003-C001",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
+            "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
+            "raw": "cr005-e3-supplement-native.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 5
+          },
+          "assertion": "Actual 480 tick sequence, 1920 substep-boundary velocity/omega states, five before/after launch velocity writes, distinct isolated abnormal tests; E1 complete boundary product modules byte-identical.",
+          "method": "P",
+          "input": "連続作動、速度上限／異常閾値",
+          "expected": "上限遵守、異常隠蔽なし",
+          "additionalProof": {
+            "runId": "CR005-E3-BOUNDARY-105",
+            "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "raw": "cr005-e3-boundary-verified.log"
+          }
+        },
+        {
+          "caseId": "TC-D7-023-C016",
+          "status": "PASS",
+          "proof": {
+            "runId": "CR005-E3-MUTATION-99",
+            "sha256": "18ba0ba2d3c55aba1e7ebb636207e4b096b7034fe09e798f084c615fb1fbdc25",
+            "raw": "cr005-e3-mutation.log",
+            "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+            "line": 1
+          },
+          "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
+          "method": "I",
+          "input": "MUT-04 バネ多重作動を隔離注入、正常版と比較（当該工程でテスト基準固定前）",
+          "expected": "正常PASS、異常はTC-D2-023/026の意図したassertでFAIL、構文・環境失敗は不可、正式候補に差分残存0"
+        }
+      ],
+      "relatedRegression": {
+        "runId": "CR005-E3-REGRESSION-96",
+        "sha256": "ef5b0ac2bde1ff835737511cc2f484d594651c34145544e37a63f21a55ef6da8",
+        "raw": "cr005-e3-final-regression.log",
+        "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+      },
+      "status": "HOLD",
+      "blockers": [
+        "TC-D7-001-C001",
+        "TC-D2-026-C001",
+        "TC-D2-022-C002"
+      ]
+    },
     "caseResults": [
       {
         "caseId": "TC-D2-015-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 3
         },
         "assertion": "exact positive thresholds through product normalization and launch",
@@ -2843,10 +3634,9 @@
         "caseId": "TC-D2-015-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-INDEPENDENT",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
           "line": 3
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -2858,10 +3648,9 @@
         "caseId": "TC-D2-016-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 9
         },
         "assertion": "side back out-of-width off-surface and steep normal do not launch",
@@ -2873,10 +3662,9 @@
         "caseId": "TC-D2-016-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-INDEPENDENT",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
           "line": 18
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -2888,10 +3676,9 @@
         "caseId": "TC-D2-017-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 15
         },
         "assertion": "qualifying approach 0.399",
@@ -2903,10 +3690,9 @@
         "caseId": "TC-D2-017-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 21
         },
         "assertion": "qualifying approach 0.4",
@@ -2918,10 +3704,9 @@
         "caseId": "TC-D2-017-C003",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 27
         },
         "assertion": "qualifying approach 0.401",
@@ -2933,10 +3718,9 @@
         "caseId": "TC-D2-018-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-INDEPENDENT",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
           "line": 11
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -2948,10 +3732,9 @@
         "caseId": "TC-D2-018-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 33
         },
         "assertion": "component and angular velocity for -45°",
@@ -2963,10 +3746,9 @@
         "caseId": "TC-D2-018-C003",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 39
         },
         "assertion": "component and angular velocity for -30°",
@@ -2978,10 +3760,9 @@
         "caseId": "TC-D2-018-C004",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 45
         },
         "assertion": "component and angular velocity for -15°",
@@ -2993,10 +3774,9 @@
         "caseId": "TC-D2-018-C005",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 51
         },
         "assertion": "component and angular velocity for 0°",
@@ -3008,10 +3788,9 @@
         "caseId": "TC-D2-018-C006",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 57
         },
         "assertion": "component and angular velocity for 15°",
@@ -3023,10 +3802,9 @@
         "caseId": "TC-D2-018-C007",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 63
         },
         "assertion": "component and angular velocity for 30°",
@@ -3038,10 +3816,9 @@
         "caseId": "TC-D2-018-C008",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 69
         },
         "assertion": "component and angular velocity for 45°",
@@ -3053,10 +3830,9 @@
         "caseId": "TC-D2-019-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-INDEPENDENT",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
           "line": 15
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3068,10 +3844,9 @@
         "caseId": "TC-D2-019-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 75
         },
         "assertion": "sets launch velocity rather than adding incoming 1",
@@ -3083,10 +3858,9 @@
         "caseId": "TC-D2-019-C003",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 81
         },
         "assertion": "sets launch velocity rather than adding incoming 3",
@@ -3098,10 +3872,9 @@
         "caseId": "TC-D2-019-C004",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 87
         },
         "assertion": "sets launch velocity rather than adding incoming 6",
@@ -3113,11 +3886,10 @@
         "caseId": "TC-D2-020-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 93
+          "runId": "CR006-SPRING-BOUNDARY",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+          "line": 1
         },
         "assertion": "Initial actual application sets v=(0,9.5); ten subsequent sequential injected ticks with contacts in both substeps remain WAIT_RELEASE, quietTicks=0, zero further activations.",
         "method": "I",
@@ -3134,10 +3906,9 @@
         "caseId": "TC-D2-020-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-FAMILIES-98",
-          "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
-          "raw": "cr005-e3-final-families.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-FAMILIES",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
           "line": 10
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3149,11 +3920,10 @@
         "caseId": "TC-D2-021-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 99
+          "runId": "CR006-SPRING-BOUNDARY",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+          "line": 2
         },
         "assertion": "two complete clear ticks permit a new launch",
         "method": "I",
@@ -3170,10 +3940,9 @@
         "caseId": "TC-D2-021-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-INDEPENDENT",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
           "line": 19
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3185,11 +3954,10 @@
         "caseId": "TC-D2-022-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 105
+          "runId": "CR006-SPRING-BOUNDARY",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+          "line": 5
         },
         "assertion": "short, single or interrupted absence remains in WAIT_RELEASE",
         "method": "I",
@@ -3204,41 +3972,128 @@
       },
       {
         "caseId": "TC-D2-022-C002",
-        "status": "BLOCKED",
+        "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-FAMILIES-98",
-          "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
-          "raw": "cr005-e3-final-families.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+          "runId": "CR006-RELEASE-VERIFIED",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "8a672cd6effa19b3c5568708c6306df8fb88e31f86e0ce98142c17c863ea06a6"
         },
         "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
         "method": "P",
         "input": "0.039m／無接触1tick／途中再接触",
         "expected": "再作動不可",
-        "details": {
-          "stop": "LS-11",
-          "status": "BLOCKED",
-          "declared": 63,
-          "initialOverlapRejected": 9,
-          "actualWorlds": 54,
-          "observedPartition": {
-            "two-too-close": {
-              "index": 36,
-              "tick": 3,
-              "held": true
-            }
-          },
-          "unobservedPartitions": [
-            "only one qualified complete clear tick before a qualifying recontact",
-            "a touch inside a substep between observed clear intervals"
+        "CR006Equivalence": {
+          "source": "release-verified",
+          "fixture": [
+            "REL-A-CARRY-036",
+            "REL-B-R1-016",
+            "REL-C-R1-061"
           ],
-          "method": "Independent real before/after observations at every substep and all raw events. Side analysis also considered an actual begin/end within the same tick.",
-          "neededDecision": "Allow fixed physical fixtures for the two unobserved partitions while retaining .04m, two complete clear ticks, real contact, and all waiting-state assertions.",
-          "rawProof": {
-            "runId": "CR005-E3-FAMILIES-98",
-            "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
-            "raw": "cr005-e3-final-families.log",
-            "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+          "candidateCountPerMissingPartition": 64,
+          "rounds": 1,
+          "oldState": "BLOCKED",
+          "physicalObservation": "A has 2 actual contact-free positive geometric gaps below .04. B selected 016 has one full .10560 m minimum quiet tick, genuine recontact and no roof blocker. C selected 061 interrupts quiet with native mid-substep contact and separately measured later END; subsequent return into polygon skin is recorded. No false launch or rearm.",
+          "proofResult": [
+            {
+              "first": 1,
+              "kind": "A",
+              "witness": {
+                "ticks": [
+                  3,
+                  4
+                ],
+                "minima": [
+                  0.016937784132156353,
+                  0.002984213597401031
+                ],
+                "pass": true
+              },
+              "actualInitialLaunch": true
+            },
+            {
+              "first": 1,
+              "kind": "B",
+              "witness": {
+                "ticks": [
+                  3,
+                  4
+                ],
+                "minima": [
+                  0.10560264627174792,
+                  0.00524248128461996
+                ],
+                "pass": true
+              },
+              "actualInitialLaunch": true
+            },
+            {
+              "first": 1,
+              "kind": "C",
+              "witness": {
+                "ticks": [
+                  3,
+                  4
+                ],
+                "minima": [
+                  0.06766167914123683,
+                  0.0030958147030494265
+                ],
+                "begin": {
+                  "tick": 4,
+                  "substep": 1,
+                  "phase": 0,
+                  "alpha": 0,
+                  "event": "begin-contact",
+                  "id": "spring",
+                  "ordinal": 10,
+                  "points": [
+                    {
+                      "position": {
+                        "x": 5.16263944533296,
+                        "y": 1.1276882575678306
+                      },
+                      "normal": {
+                        "x": 0.3247064217688817,
+                        "y": 0.9458148548537653
+                      },
+                      "local": {
+                        "x": 0.36263944533296044,
+                        "y": 0.12768825756783064
+                      },
+                      "approach": 6.82183055643003,
+                      "impulse": null
+                    }
+                  ],
+                  "ball": {
+                    "x": 5.226973110802007,
+                    "y": 1.3150813375578763
+                  }
+                },
+                "end": {
+                  "tick": 4,
+                  "substep": 1,
+                  "phase": 1,
+                  "alpha": 0.8552317842546293,
+                  "event": "end-contact",
+                  "id": "spring",
+                  "ordinal": 15,
+                  "points": [],
+                  "ball": {
+                    "x": 5.251894754734041,
+                    "y": 1.309123959870361
+                  }
+                },
+                "endClearance": 0.010267729679747706,
+                "priorQuiet": 1,
+                "pass": true
+              },
+              "actualInitialLaunch": true
+            }
+          ],
+          "order": {
+            "runId": "CR006-RELEASE-LOCK-ORDER",
+            "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+            "rawLogSha256": "8dd4249a8e8ff6b1aa63e567199dad5a30fd484df2686df76ed7e5486a3f7151"
           }
         }
       },
@@ -3246,11 +4101,10 @@
         "caseId": "TC-D2-023-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 111
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 1
         },
         "assertion": "two and three candidates invoke a single winner",
         "method": "I",
@@ -3268,10 +4122,9 @@
         "caseId": "TC-D2-023-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-FAMILIES-98",
-          "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
-          "raw": "cr005-e3-final-families.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-FAMILIES",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
           "line": 291
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3283,11 +4136,10 @@
         "caseId": "TC-D2-024-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 117
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 2
         },
         "assertion": "loser still touching on next tick cannot activate",
         "method": "I",
@@ -3311,10 +4163,9 @@
         "caseId": "TC-D2-024-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-FAMILIES-98",
-          "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
-          "raw": "cr005-e3-final-families.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-FAMILIES",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
           "line": 292
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3326,10 +4177,9 @@
         "caseId": "TC-D2-025-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 123
         },
         "assertion": "quantized canonical ranking for all six permutations",
@@ -3341,10 +4191,9 @@
         "caseId": "TC-D2-025-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 129
         },
         "assertion": "product matching and ranking through all six notification orders",
@@ -3354,67 +4203,161 @@
       },
       {
         "caseId": "TC-D2-026-C001",
-        "status": "BLOCKED",
+        "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-INDEPENDENT-97",
-          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-          "raw": "cr005-e3-final-independent.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+          "runId": "CR006-DUAL-VERIFIED",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "57a1ab611eaf8bf6fb95d68470364ffcb7ebcb942a715d3f545929a7c5e49884"
         },
         "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
         "method": "P",
         "input": "PP03の両内部更新に候補",
         "expected": "最大1回/game tick",
-        "details": {
-          "stop": "LS-11",
-          "status": "BLOCKED",
-          "worlds": 108,
-          "ticks": 324,
-          "rawDualSubstepTicks": 0,
-          "rawFirstOnly": 52,
-          "rawSecondOnly": 45,
-          "rawNeither": 227,
-          "neededDecision": "Allow a reproducible fixed fixture that gives actual qualifying contacts in both PP03 substeps, one actual launch; no third-substep or synthetic substitute.",
-          "rawProof": {
-            "runId": "CR005-E3-INDEPENDENT-97",
-            "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
-            "raw": "cr005-e3-final-independent.log",
-            "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+        "CR006Equivalence": {
+          "source": "dual-verified",
+          "fixture": "DUAL-R1-008",
+          "candidateCount": 64,
+          "rounds": 1,
+          "oldState": "BLOCKED",
+          "physicalObservation": "Fresh PP03 world, actual A pre-solve in first substep and B in second. First eligible raw trial has A independent winner and both states WAIT_RELEASE.",
+          "proofResult": {
+            "tick": 1,
+            "substeps": [
+              0,
+              1
+            ],
+            "ranking": [
+              {
+                "id": "A",
+                "x": 4.377428824506884,
+                "y": 3.550008621971352,
+                "angleDeg": 45,
+                "v": 4440,
+                "n": 1000
+              },
+              {
+                "id": "B",
+                "x": 5.262471175493115,
+                "y": 3.514908621971352,
+                "angleDeg": -45,
+                "v": 4117,
+                "n": 1000
+              }
+            ],
+            "qualifiedIDs": [
+              "A",
+              "B"
+            ]
           }
         }
       },
       {
         "caseId": "TC-D7-001-C001",
-        "status": "BLOCKED",
+        "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-ROOF-QUALIFICATION-90",
-          "sha256": "919ace60e32c500977e8e59322c0a8b9d5da01a0c65f15a501a9aac96abfed9c",
-          "raw": "cr005-e3-roof.log",
-          "testedSha": "6251632eb5d0a85740b272ef52d2d1735300f113"
+          "runId": "CR006-ROOF-FORMAL",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "80c3207c41ea893e3d91d22bd20f9e4c26963ccfa01eb3745c1dd5d8ae1e8712"
         },
         "assertion": "No complete qualifying fixed physical witness; evidentiary LS-11, not a product failure.",
         "method": "P",
         "input": "バネ接触後離脱し阻害衝突",
         "expected": "古い候補無効化",
-        "details": {
-          "stop": "LS-11",
-          "status": "BLOCKED",
-          "worldPairs": 81,
-          "physicalWorlds": 162,
-          "ticks": 486,
-          "controlContactPoints": 39,
-          "obstructedContactPoints": 354,
-          "maximumAdmittedAbsLocalX": 0.36,
-          "minimumOutsideFaceM": 0.0003823756135189482,
-          "eligible": 0,
-          "samePhysicsReuse": "E2 source for pre-product raw fixture capture, adapter/body factory/config/vendor bytes identical to E3 tested source; eligibility does not rely on DUT activation.",
-          "independentAlternate": "Pin-supported solver manifold uses same midpoint. A bare box corner changes eligibility. Even for those corner candidates, roof onset is tied/earlier or the roof remains continuously touching at the tick end.",
-          "neededDecision": "If independently reproducible, externally approve a replacement fixed physical roof/no-roof paired input with genuine in-face contact, distinct later roof onset, no continuing roof blocker, and unblocked positive control. Retain all product thresholds and physical-only outcome checks.",
-          "rawProof": {
-            "runId": "CR005-E3-ROOF-QUALIFICATION-90",
-            "sha256": "919ace60e32c500977e8e59322c0a8b9d5da01a0c65f15a501a9aac96abfed9c",
-            "raw": "cr005-e3-roof.log",
-            "testedSha": "6251632eb5d0a85740b272ef52d2d1735300f113"
+        "CR006Equivalence": {
+          "source": "roof-formal",
+          "fixture": "ROOF-R1-008",
+          "candidateCount": 64,
+          "rounds": 1,
+          "oldState": "BLOCKED",
+          "physicalObservation": "Distinct substep 1 discrete spring END and later native TOI roof onset same game tick; no roof current manifold at end; same no-roof control launches once; obstacle suppresses without delay.",
+          "productDefectHistory": {
+            "runId": "CR006-ROOF-PRODUCT-DEFECT",
+            "testedSha": "8ee9dd2b5dcfaf8ea8e7742ccffa14e8cab0f8ee",
+            "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "qualifiedByNativeOrder": {
+            "runId": "CR006-ROOF-NATIVE-R1",
+            "testedSha": "8ee9dd2b5dcfaf8ea8e7742ccffa14e8cab0f8ee",
+            "rawLogSha256": "324d8f67e9ca06282c983ccc670497ed6e957bce560240c0a2c3f88e503cadff"
+          },
+          "proofResult": {
+            "tick": 1,
+            "springEnd": {
+              "tick": 1,
+              "substep": 1,
+              "phase": 0,
+              "alpha": 0,
+              "event": "end-contact",
+              "id": "spring",
+              "ordinal": 3,
+              "points": [],
+              "ball": {
+                "x": 4.7154311179273645,
+                "y": 3.551717402539714
+              }
+            },
+            "roofBegin": {
+              "tick": 1,
+              "substep": 1,
+              "phase": 1,
+              "alpha": 0.2959770351452218,
+              "event": "begin-contact",
+              "id": "roof",
+              "ordinal": 4,
+              "points": [
+                {
+                  "position": {
+                    "x": 4.742682137402928,
+                    "y": 3.7581256342545424
+                  },
+                  "normal": {
+                    "x": -0.23909562112071753,
+                    "y": -0.970996026748255
+                  },
+                  "local": {
+                    "x": -0.04073580296296608,
+                    "y": -0.04298818418405448
+                  },
+                  "approach": 5.619245453047661,
+                  "impulse": null
+                }
+              ],
+              "ball": {
+                "x": 4.696518166427026,
+                "y": 3.5706482049883195
+              }
+            },
+            "impulse": {
+              "tick": 1,
+              "substep": 1,
+              "phase": 1,
+              "alpha": 0.2959770351452218,
+              "event": "post-solve",
+              "id": "roof",
+              "ordinal": 6,
+              "points": [
+                {
+                  "position": {
+                    "x": 4.701963525266073,
+                    "y": 3.7630332867486462
+                  },
+                  "normal": {
+                    "x": -0.23909562112071753,
+                    "y": -0.970996026748255
+                  },
+                  "local": {
+                    "x": -0.0814544150998211,
+                    "y": -0.038080531689950625
+                  },
+                  "approach": -0.28096227265237006,
+                  "impulse": 1.1800415451400075
+                }
+              ],
+              "ball": {
+                "x": 4.654611169963335,
+                "y": 3.5707296860360405
+              }
+            }
           }
         }
       },
@@ -3422,11 +4365,10 @@
         "caseId": "TC-D7-001-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 141
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 3
         },
         "assertion": "blocking direction -0.501",
         "method": "I",
@@ -3444,11 +4386,10 @@
         "caseId": "TC-D7-001-C003",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
-          "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
-          "raw": "cr005-e3-supplement-native.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 1
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 4
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
         "method": "I",
@@ -3466,11 +4407,10 @@
         "caseId": "TC-D7-001-C004",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 153
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 5
         },
         "assertion": "blocking direction -0.499",
         "method": "I",
@@ -3488,11 +4428,10 @@
         "caseId": "TC-D7-001-C005",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 159
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 6
         },
         "assertion": "outer separation 0.25",
         "method": "I",
@@ -3510,11 +4449,10 @@
         "caseId": "TC-D7-001-C006",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 165
+          "runId": "CR006-SPRING-FIXED-INPUTS",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "afa5065c20deb66907e13c133bf9f518b4fb76813e2c376389465f52b58385ab",
+          "line": 7
         },
         "assertion": "outer separation 0.250001",
         "method": "I",
@@ -3532,10 +4470,9 @@
         "caseId": "TC-D7-002-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-TESTS-95",
-          "sha256": "4940869242a4d330ec7c0123d2b48c9a4e3664b2a51c2ee6de2d45c42568491e",
-          "raw": "cr005-e3-final-tests.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-TAP",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "0804e0a054282ebccad4547f9d0f67f3e90b11c4231a3daca3374e9f9c114a8b",
           "line": 135
         },
         "assertion": "independent integer ranking for equal scores",
@@ -3547,10 +4484,9 @@
         "caseId": "TC-D7-002-C002",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
-          "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
-          "raw": "cr005-e3-supplement-native.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-NATIVE",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "176b8c0446047ad1108511f234ce57f2cd16fc36567eccd03b61fdbae6e0b6db",
           "line": 2
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3562,11 +4498,10 @@
         "caseId": "TC-D7-003-C001",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-SUPPLEMENT-NATIVE-101",
-          "sha256": "2e73ffdbb80ce909bf3dca1ce8128dcdd72f97cebad353bf03ee5663a2b8401f",
-          "raw": "cr005-e3-supplement-native.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
-          "line": 5
+          "runId": "CR006-SPRING-BOUNDARY",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+          "line": 7
         },
         "assertion": "Actual 480 tick sequence, 1920 substep-boundary velocity/omega states, five before/after launch velocity writes, distinct isolated abnormal tests; E1 complete boundary product modules byte-identical.",
         "method": "P",
@@ -3583,10 +4518,9 @@
         "caseId": "TC-D7-023-C016",
         "status": "PASS",
         "proof": {
-          "runId": "CR005-E3-MUTATION-99",
-          "sha256": "18ba0ba2d3c55aba1e7ebb636207e4b096b7034fe09e798f084c615fb1fbdc25",
-          "raw": "cr005-e3-mutation.log",
-          "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+          "runId": "CR006-SPRING-MUTATION",
+          "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+          "rawLogSha256": "c76cc4596f691143815d408b7cb7ba0b1f0cdd07a92e56d72a1ff1e346c98e2c",
           "line": 1
         },
         "assertion": "Formal figure/case results include copied actual observations or designated isolated input.",
@@ -3596,16 +4530,9 @@
       }
     ],
     "relatedRegression": {
-      "runId": "CR005-E3-REGRESSION-96",
-      "sha256": "ef5b0ac2bde1ff835737511cc2f484d594651c34145544e37a63f21a55ef6da8",
-      "raw": "cr005-e3-final-regression.log",
-      "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
-    },
-    "status": "HOLD",
-    "blockers": [
-      "TC-D7-001-C001",
-      "TC-D2-026-C001",
-      "TC-D2-022-C002"
-    ]
+      "runId": "CR006-REGRESSION",
+      "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+      "rawLogSha256": "a16a864cc81510c5a1e95091a893fe60bf14a4f4e72a4171b69d3150edf3fa49"
+    }
   }
 }

@@ -163,5 +163,16 @@
         "productSourceSHA": "1fc699ceae29d984655d59409be15822e8185732"
       }
     }
+  },
+  "CR006-E3": {
+    "mode": "Separate read-only reviewers e0_review and e1_test_plan; single approved writer",
+    "independentEquivalence": {
+      "roof": "Raw solver timestamps and native current transforms, current geometric clearance and no-roof comparison.",
+      "dual": "Ordered 64 fixed plans, native qualifying pre-solve in both substeps, independent ranking and one recorded launch.",
+      "release": "B requires no alternative roof blocker; C real before/after substep episode resets one quiet tick; A retains raw contact and positive geometric gap, native skin susceptibility recorded."
+    },
+    "correction": "Final active blockers now use freshly evaluated end-pose manifold without modifying Planck or emitting artificial events.",
+    "casesRevalidated": 42,
+    "openHigh": 0
   }
 }
