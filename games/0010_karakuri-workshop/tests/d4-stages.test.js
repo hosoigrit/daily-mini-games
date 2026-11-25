@@ -82,12 +82,18 @@ test('TC-D4-029-C001 order and operation IDs do not affect the canonical key', (
   const pair=search.uniqueStageCandidates([base,modified]);
   assert.equal(pair.generated,2);
   assert.equal(pair.candidates.length,1);
-  const triple=search.fromSeed([['R',10,20,15],['P',20,16,0],['B',30,10,15]]);
   const permutations=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
-  const ordered=search.uniqueStageCandidates(permutations.map(p=>p.map(i=>triple[i])));
-  assert.equal(ordered.generated,6);
-  assert.equal(ordered.candidates.length,1);
-  assert.deepEqual(ordered.candidates[0].map(p=>p.type),['B','P','R']);
+  const fixtures=[
+    search.fromSeed([['R',10,20,15],['P',20,16,0],['B',30,10,15]]),
+    [{type:'R',gridX:11,gridY:9,angleDeg:30},{type:'P',gridX:20,gridY:20,angleDeg:0},
+      {type:'B',gridX:5,gridY:25,angleDeg:15}],
+  ];
+  for (const triple of fixtures) {
+    const ordered=search.uniqueStageCandidates(permutations.map(p=>p.map(i=>triple[i])));
+    assert.equal(ordered.generated,6);
+    assert.equal(ordered.candidates.length,1);
+    assert.deepEqual(ordered.candidates[0].map(p=>p.type),['B','P','R']);
+  }
 });
 
 test('TC-D4-001-C001 only the ten stage IDs are legal', () => {
@@ -219,7 +225,9 @@ test('TC-D4-024-C001 a one-grid change to only the fixed obstacle invalidates th
   assert(governance.checkAdjustment(stage,next).ok);
   assert.deepEqual(stage.goal,next.goal);
   const [original,changed]=await Promise.all([stages.getStageIdentity(stage),stages.getStageIdentity(next)]);
-  const ghost={level:3,compatibilityId:original.compatibilityId,parts:search.fromSeed(seeds['04'].B).slice(0,1)};
+  const certified=require('../qa/reports/stage_validation_results.json').stages['04'];
+  const ghost=certified.hints.find(hint=>hint.level===3);
+  assert.equal(original.compatibilityId,ghost.compatibilityId);
   assert(stages.resolveStageHint(original,[ghost],3,true));
   assert.equal(stages.resolveStageHint(changed,[ghost],3,true),null);
 });
