@@ -16,6 +16,18 @@
 * { box-sizing: border-box; }
 body { margin: 0; min-inline-size: 0; }
 [hidden] { display: none !important; }
+#audio-notice {
+  position: fixed;
+  z-index: 2;
+  inset: auto 12px 12px;
+  max-inline-size: 32rem;
+  margin: 0 auto;
+  padding: .5rem .75rem;
+  border: 1px solid var(--warning);
+  border-radius: 8px;
+  background: var(--cream);
+  pointer-events: none;
+}
 button, select, input { font: inherit; }
 button, select, input[type=number] {
   min-height: 44px;
