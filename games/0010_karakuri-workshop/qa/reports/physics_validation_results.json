@@ -1,0 +1,125 @@
+{
+  "stage": "E1",
+  "gate": "EG-01",
+  "status": "BLOCKED",
+  "legacyEG00": "HOLD",
+  "E0-L": "PASS",
+  "approvalId": "EXEC-GAME-0010-CR003-HARNESS-LITE",
+  "profileUnderEvaluation": "PP03",
+  "formalProfileSelected": false,
+  "confidence": "Measured components and observations. The E1 formal gate remains incomplete.",
+  "blockers": [
+    {
+      "code": "LS-11",
+      "caseParent": "TC-D1-017",
+      "reason": "Synchronized actual solver states were obtained at constraint events, but coverage does not yet exclude a continuous pass through the moving face between observations."
+    },
+    {
+      "code": "LS-01",
+      "reason": "The profile selection condition requires both quality and performance. A fixed E1 performance fixture and a pass limit for profile selection were not found."
+    }
+  ],
+  "observed": {
+    "firstPilotHarness": {
+      "pass": 10,
+      "fail": 1
+    },
+    "candidateHarnessPass": 12,
+    "highSpeedStatic": 36,
+    "highSpeedDynamic": 36,
+    "observedMatrixThresholdFailures": 0,
+    "certifiedContinuousMovingCrossingCases": 0,
+    "transientEligible": 8,
+    "extraSolverStateSamples": 372,
+    "repeatWorlds": 100,
+    "doubleDisposals": 100,
+    "maximumRepeatDifference": 0,
+    "nodeChromiumIdentical": true
+  },
+  "budget": {
+    "remediationsUsed": 15,
+    "remediationLimit": 50,
+    "automationSeconds": 376,
+    "automationLimit": 21600,
+    "physicsCandidatesCharged": 3,
+    "physicsValidationSimulations": 366,
+    "physicsValidationTicks": 25241
+  },
+  "receipts": {
+    "runtimeSafety": {
+      "runId": "CR003-E1-RUNTIME-SAFETY-44",
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "workspaceDiffSha256": "2ff4e55c369a001230a998a08775e8ad138eafeec31be6fc2a25c70fa18940ea",
+      "exit": 0,
+      "actualSeconds": 1,
+      "physicsValidationSimulations": 13,
+      "physicsValidationTicks": 967,
+      "rawLogSha256": "7ec2c4d1909f30138c9b8b3c05d33885228ee9fffeef1968b163dd776931735b"
+    },
+    "jointProfiles": {
+      "runId": "CR003-E1-JOINT-PROFILE-43",
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "exit": 0,
+      "actualSeconds": 1,
+      "physicsValidationSimulations": 6,
+      "physicsValidationTicks": 720,
+      "rawLogSha256": "ff0f80d1203f58070818e5b268c400ce2eefc9f21748d20816a66ccdba64d6e5"
+    },
+    "matrixAndTransient": {
+      "runId": "CR003-E1-CCD-PROBE-45",
+      "exit": 0,
+      "actualSeconds": 1,
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "workspaceDiffSha256": "2ff4e55c369a001230a998a08775e8ad138eafeec31be6fc2a25c70fa18940ea",
+      "rawLogSha256": "a0dbb22f460aee411771a7537fb12ea1c4ebadb450a4a0372cf526b224fe67ab",
+      "physicsValidationSimulations": 90,
+      "physicsValidationTicks": 918
+    },
+    "repeatAndMaterials": {
+      "runId": "CR003-E1-REPEAT-MATERIAL-46",
+      "exit": 0,
+      "actualSeconds": 1,
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "workspaceDiffSha256": "2ff4e55c369a001230a998a08775e8ad138eafeec31be6fc2a25c70fa18940ea",
+      "rawLogSha256": "147fa34c5d64cf7ae50ff843558661f70e643686aa19e975f12602f86bf2f3f9",
+      "physicsValidationSimulations": 204,
+      "physicsValidationTicks": 19084
+    },
+    "browser": {
+      "runId": "CR003-E1-BROWSER-FIXTURE-47",
+      "exit": 0,
+      "actualSeconds": 2,
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "sourceFilesSha256": {
+        "games/0010_karakuri-workshop/src/physics/adapter.js": "580c6e7be4676c2ebf6708233b6ff825ab959bf45605698b5f33dd301dc5d766",
+        "games/0010_karakuri-workshop/src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "games/0010_karakuri-workshop/src/physics/simulation-controller.js": "62e291a08c6ae4d6c9fee40a84b21e3b34619e06786e795946d7603b5a5c554d",
+        "games/0010_karakuri-workshop/qa/static-server.js": "f83cd75a3023bf765d425e659d4a2759da7c6af13fc626484a3ac78384d319ab"
+      },
+      "rawLogSha256": "bbf8efb190b79e843022ffa1dfd9e39e61b4e484d79a0beafa2b5c7c0d4cc20c",
+      "physicsValidationSimulations": 2,
+      "physicsValidationTicks": 120
+    },
+    "solverObservations": {
+      "runId": "CR003-E1-SOLVER-OBSERVER-48",
+      "exit": 0,
+      "actualSeconds": 1,
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "workspaceDiffSha256": "19d090e342d0d0bfee29896f26777a747d239a4ca49bb81a8ac0a6cc40b264e9",
+      "rawLogSha256": "58374fa9fd03b3bd6d8949d06caa0573f678bd463cf6340d29e84b789633a08a",
+      "physicsValidationSimulations": 36,
+      "physicsValidationTicks": 432
+    },
+    "initialPilot": {
+      "runId": "CR003-E1-PHYSICS-FIRST-42",
+      "testedSha": "9a8354750028b7dc1ad02ee051b4003b20573d91",
+      "exit": 1,
+      "actualSeconds": 1,
+      "rawLogSha256": "52aae863ec0cedad77dc74b3cc640b77bf18950d538e7870b2b62b465b41ce8f",
+      "profilesCharged": 3,
+      "physicsValidationSimulations": 15,
+      "physicsValidationTicks": 3000,
+      "accounting": "reserved maximum"
+    }
+  }
+}

@@ -20,6 +20,8 @@ export const BALL = Object.freeze({
 
 export const ABNORMAL_SPEED = 30;
 export const ABNORMAL_ANGULAR_SPEED = 150;
+export const MAX_PIVOT_DRIFT = 0.02;
+export const JOINT_ANGLE_TOLERANCE = 2 * Math.PI / 180;
 export const DEFAULT_GRAVITY = Object.freeze({x: 0, y: -9.8});
 
 export const MATERIALS = Object.freeze(Object.fromEntries(

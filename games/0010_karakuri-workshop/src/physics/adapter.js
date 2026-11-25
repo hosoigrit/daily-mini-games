@@ -1,5 +1,5 @@
 import {Vec2, World} from '../../vendor/planck/planck.mjs';
-import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, PHYSICS_PROFILES,
+import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, JOINT_ANGLE_TOLERANCE, MAX_PIVOT_DRIFT, PHYSICS_PROFILES,
   TICK_SECONDS} from '../data/physics-config.js';
 
 const copy = ({x, y}) => ({x, y});
@@ -27,6 +27,18 @@ export function validatePhysicsState(runtime) {
     if (body.isDynamic() && (Math.hypot(velocity.x, velocity.y) > ABNORMAL_SPEED
       || Math.abs(angularVelocity) > ABNORMAL_ANGULAR_SPEED)) {
       throw new Error('ABNORMAL_BODY_SPEED');
+    }
+  }
+  for (let joint = runtime.world.getJointList(); joint; joint = joint.getNext()) {
+    if (joint.getType() !== 'revolute-joint') continue;
+    const a = joint.getAnchorA();
+    const b = joint.getAnchorB();
+    const angle = joint.getJointAngle();
+    const offset = Math.hypot(a.x - b.x, a.y - b.y);
+    if (!Number.isFinite(offset) || offset > MAX_PIVOT_DRIFT || !Number.isFinite(angle)
+      || (joint.isLimitEnabled() && (angle < joint.getLowerLimit() - JOINT_ANGLE_TOLERANCE
+        || angle > joint.getUpperLimit() + JOINT_ANGLE_TOLERANCE))) {
+      throw new Error('ABNORMAL_JOINT_CONSTRAINT');
     }
   }
 }
@@ -79,7 +91,7 @@ function watchContacts(runtime) {
       }
       // Callback order is evidence about the observer, not a certified continuous collision timeline.
       runtime.contacts.push({
-        event, tick: runtime.ticks + 1, substep: runtime.substep,
+        event, runId: runtime.runId, tick: runtime.ticks + 1, substep: runtime.substep,
         callbackIndex: runtime.contacts.length, other: {...other.getUserData()}, points,
       });
     };
@@ -88,13 +100,16 @@ function watchContacts(runtime) {
   }
 }
 
-export function createWorld({profile = 'PP01', gravity = DEFAULT_GRAVITY, observe = null} = {}) {
+let worldSequence = 0;
+
+export function createWorld({profile = 'PP01', gravity = DEFAULT_GRAVITY, observe = null,
+  runId = `world-${++worldSequence}`} = {}) {
   if (!Object.hasOwn(PHYSICS_PROFILES, profile) || ![gravity.x, gravity.y].every(Number.isFinite)) {
     throw new RangeError('Unknown physical profile or invalid gravity.');
   }
   const world = new World({gravity: Vec2(gravity.x, gravity.y), allowSleep: false, continuousPhysics: true});
   const runtime = {
-    world, profile, observe, ticks: 0, substep: 0, contacts: [], subscriptions: [], diagnostic: null,
+    world, profile, observe, runId, ticks: 0, substep: 0, contacts: [], subscriptions: [], diagnostic: null,
   };
   watchContacts(runtime);
   return runtime;
@@ -127,18 +142,26 @@ export function advancePhysicsTick(runtime) {
     runtime.ticks++;
     return true;
   } catch (error) {
-    runtime.diagnostic = {tick: runtime.ticks + 1, substep: runtime.substep,
+    runtime.diagnostic = {runId: runtime.runId, tick: runtime.ticks + 1, substep: runtime.substep,
       message: error instanceof Error ? error.message : String(error)};
     return false;
   }
 }
 
 export function disposeWorld(runtime) {
-  if (!runtime.world) return;
-  for (const [name, handler] of runtime.subscriptions) runtime.world.off(name, handler);
-  while (runtime.world.getBodyList()) runtime.world.destroyBody(runtime.world.getBodyList());
+  const world = runtime.world;
+  if (!world) return;
+  const subscriptions = runtime.subscriptions;
   runtime.world = null;
   runtime.observe = null;
   runtime.contacts = [];
   runtime.subscriptions = [];
+  for (const [name, handler] of subscriptions) world.off(name, handler);
+  // A Planck exception can leave the world locked. It is detached and must never be stepped again.
+  if (world.isLocked()) return;
+  for (let body = world.getBodyList(); body;) {
+    const next = body.getNext();
+    world.destroyBody(body);
+    body = next;
+  }
 }

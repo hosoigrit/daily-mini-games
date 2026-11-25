@@ -27,5 +27,11 @@
     "automationSecondsAfterPrecheck": 368,
     "resumeNote": "Resume as the same writer after rechecking the branch, candidate SHA and pending reservations. The legacy E0 cases remain pending or failed."
   },
-  "EG-01": "NOT_RUN"
+  "EG-01": {
+    "status": "BLOCKED",
+    "previous": "NOT_RUN",
+    "profileUnderEvaluation": "PP03",
+    "formalProfileSelected": false,
+    "report": "qa/reports/physics_validation_results.json"
+  }
 }

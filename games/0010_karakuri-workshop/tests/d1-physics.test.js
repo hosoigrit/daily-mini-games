@@ -97,8 +97,10 @@ for (const profile of ['PP01', 'PP02', 'PP03']) {
 }
 
 test('TC-D1-019-C001 fixture: a real joint keeps its pivot when loaded from either side', t => {
+  // The first pilot ran PP01 and its measured failure is retained. This test targets the named candidate.
+  const profile = process.env.E1_JOINT_CANDIDATE ?? 'PP03';
   for (const side of [-1, 1]) {
-    const runtime = physics.createWorld();
+    const runtime = physics.createWorld({profile});
     try {
       const board = factory.createDynamicBody(runtime.world, {
         width: 1.92, height: 0.16, x: 4.8, y: 3.6, kind: 'S', id: 'fx07',
@@ -121,7 +123,7 @@ test('TC-D1-019-C001 fixture: a real joint keeps its pivot when loaded from eith
       assert(maxPivot <= 0.02);
       assert(maxAngle <= 32);
       assert(contacts > 0);
-      t.diagnostic(JSON.stringify({case: 'TC-D1-019-C001', side, maxPivot, maxAngle, contacts}));
+      t.diagnostic(JSON.stringify({case: 'TC-D1-019-C001', profile, fixtureAngularDamping: 1.2, side, maxPivot, maxAngle, contacts}));
     } finally {
       physics.disposeWorld(runtime);
     }
@@ -136,7 +138,8 @@ test('TC-D1-023: excess ticks are dropped and long gaps require an explicit resu
   controller.start();
   assert.equal(controller.advanceFrame(0), 0);
   assert.equal(controller.advanceFrame(100), 5);
-  assert.equal(controller.advanceFrame(350), 0);
+  assert.equal(controller.advanceFrame(101), 0);
+  assert.equal(controller.advanceFrame(351), 0);
   assert.equal(controller.phase, 'PAUSED');
   assert.equal(controller.advanceFrame(900), 0);
   controller.resume();
@@ -162,4 +165,30 @@ test('TC-D1-024/028: the speed limit is radial and abnormal state stops before c
   assert.equal(physics.getDiagnostics(runtime).message, 'ABNORMAL_BODY_SPEED');
   assert.equal(physics.getPhysicsSnapshot(runtime).ticks, 0);
   near(ball.getLinearVelocity().x, 31);
+});
+
+
+test('TC-D1-029: failed locked world detaches and another run can advance', () => {
+  const first = physics.createWorld({runId: 'E1-disposal-fixture'});
+  const brokenEngine = first.world;
+  factory.createStaticBody(brokenEngine, {width:1.2, height:.16, x:4.8, y:2.4, kind:'P'});
+  factory.createBall(brokenEngine, {x:4.8, y:2.68});
+  brokenEngine.on('pre-solve', () => { throw new Error('fixture observer exception'); });
+  assert.equal(physics.advancePhysicsTick(first), false);
+  assert.deepEqual(physics.getDiagnostics(first), {runId:'E1-disposal-fixture',tick:1,substep:0,
+    message:'fixture observer exception'});
+  assert.equal(brokenEngine.isLocked(), true);
+  physics.disposeWorld(first);
+  physics.disposeWorld(first);
+  assert.equal(first.world, null);
+  assert.deepEqual(first.subscriptions, []);
+  assert.equal(physics.advancePhysicsTick(first), false);
+  const following=physics.createWorld({runId:'E1-following-fixture'});
+  try {
+    factory.createBall(following.world,{x:4.8,y:6.5});
+    advance(following,1);
+    assert.deepEqual(physics.collectContactEvidence(following),[]);
+  } finally {
+    physics.disposeWorld(following);
+  }
 });
