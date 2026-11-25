@@ -19,7 +19,8 @@ function compareLayouts(a, b) {
 }
 
 export function compareResults(a, b) {
-  return Number(b.end === 'CLEARED') - Number(a.end === 'CLEARED') || Number(b.required) - Number(a.required)
+  return Number(a.end === 'ERROR') - Number(b.end === 'ERROR')
+    || Number(b.end === 'CLEARED') - Number(a.end === 'CLEARED') || Number(b.required) - Number(a.required)
     || (a.minimumGoalDistanceUm ?? Infinity) - (b.minimumGoalDistanceUm ?? Infinity)
     || a.placed.length - b.placed.length || compareLayouts(a.placed, b.placed);
 }
