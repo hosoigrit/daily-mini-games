@@ -14,8 +14,9 @@ export function initialProgress() {
 }
 
 export function unlockedStages(progress, count = 10) {
-  return Array.from({length: count}, (_, i) => String(i + 1).padStart(2, '0')).filter((id, i) =>
-    i === 0 || progress.stages[String(i).padStart(2, '0')]?.cleared);
+  const stageIds = Array.from({length: count}, (_, i) => String(i + 1).padStart(2, '0'));
+  const furthest = stageIds.findLastIndex(id => progress.stages[id]?.cleared);
+  return stageIds.slice(0, furthest + 2);
 }
 
 export function commitScore(progress, {stageId, status, compatibility, placements, star3Target}) {
