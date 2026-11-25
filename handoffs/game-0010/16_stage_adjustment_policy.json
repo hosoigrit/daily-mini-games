@@ -1,0 +1,75 @@
+{
+  "policyVersion": 1,
+  "projectId": "game-0010",
+  "status": "FROZEN_NOT_AUTHORIZED",
+  "stage": "E6",
+  "reference": "04_detailed_design.md 初期定義",
+  "allowedAdjustments": {
+    "fixedPartPosition": {
+      "maxDeltaGridX": 2,
+      "maxDeltaGridY": 2
+    },
+    "goalPosition": {
+      "maxDeltaGridX": 2,
+      "maxDeltaGridY": 2
+    },
+    "obstaclePosition": {
+      "maxDeltaGridX": 2,
+      "maxDeltaGridY": 2
+    },
+    "obstacleSize": {
+      "maxDeltaGridWidth": 1,
+      "maxDeltaGridHeight": 1
+    },
+    "inventory": {
+      "maxDeltaPerType": 1,
+      "maxTotalParts": 13,
+      "allowNewPartTypes": false,
+      "stage01Fixed": true,
+      "preserveRequiredPart": true
+    },
+    "solutionPlacement": "legal",
+    "hint": "verifiedSolutionOnly"
+  },
+  "forbidden": [
+    "stageCount",
+    "stageIdentity",
+    "stageLearningTheme",
+    "ballInitialPosition",
+    "fixedPartAngle",
+    "obstacleCount",
+    "goalGeometry",
+    "star3Target",
+    "requiredUsageRules",
+    "commonPhysicsAfterE5",
+    "terminalRules",
+    "acceptanceThresholds"
+  ],
+  "robustness": {
+    "early": {
+      "stages": [
+        "01",
+        "02",
+        "03"
+      ],
+      "minLegal": 4,
+      "minPercent": 50,
+      "minSuccess": 2
+    },
+    "later": {
+      "stages": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "minLegal": 10,
+      "minPercent": 20,
+      "minSuccess": 2
+    }
+  },
+  "onExhausted": "HOLD"
+}

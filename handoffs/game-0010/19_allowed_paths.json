@@ -1,0 +1,1780 @@
+{
+  "status": "APPROVED_CANDIDATE_SCOPE_NOT_AUTHORIZED",
+  "activeAllowedWritePaths": [],
+  "candidatePaths": [
+    {
+      "path": "games/0010_karakuri-workshop/index.html",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/styles.css",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/README.md",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/THIRD_PARTY_NOTICES.md",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/package.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/package-lock.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/app.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/app/controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/app/state-machine.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/geometry.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E2"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/placement-validator.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E2"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/design-editor.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E2"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/undo-manager.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E2"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/result-evaluator.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/domain/score-service.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/adapter.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/body-factory.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/simulation-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/spring-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E3"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/seesaw-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E4"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/physics/trajectory-recorder.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/storage/save-repository.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/storage/save-validator.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/storage/lock-manager.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/ui/input-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/ui/canvas-renderer.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/ui/ui-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/presentation/character-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/presentation/audio-controller.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/presentation/sound-definitions.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/data/stage-definitions.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E6"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/data/part-definitions.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/src/data/physics-config.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/asset-manifest.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/decoration/workshop-emblem.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/decoration/workshop-pattern.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/luke-normal.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/luke-surprised.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/luke-happy.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/gear-normal.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/gear-thinking.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/assets/characters/gear-praise.svg",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d1-physics.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d2-placement.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E2"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d2-spring.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E3"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d2-seesaw.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E4"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d3-rules.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E5"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d4-stages.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E6"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d5-save.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d6-ui.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E7"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d7-integration.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/d8-governance.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/tests/supplemental.test.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/playwright.config.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/static-server.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "stage_scope",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/fixtures/stages.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/fixtures/solutions.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/fixtures/physics.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/fixtures/mutations.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/policy.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/preflight.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/scope.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/integrity.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/budget.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/loop.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/test-runner.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/review.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/gate.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/impact.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/checkpoint.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/evidence.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/human-qa.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/release.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/stage-search.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/stage-evaluator.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/adjustment-governance.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/regression.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/harness/verify-mutations.js",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/state/checkpoint.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "latest_snapshot_with_history",
+      "initialCreateStagesCandidate": [
+        "E0"
+      ],
+      "laterModifyRule": "最新snapshotの置換は前世代digestを検証し、完全な旧snapshotと新snapshotの履歴をraw-events.jsonlへ追記・保存確認した後に限る。旧履歴改変禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/state/attempts.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/state/test-baseline.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_baselines",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "固定した基準IDとhashは変更禁止。工程追加の新規基準を履歴配列に追記のみ。基準変更は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/implementation_summary.md",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/requirement_coverage.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/automated_test_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/physics_validation_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/stage_validation_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/stage_adjustment_ledger.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/performance_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/regression_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/test_integrity_report.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/review_findings.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/remediation_history.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/loop_execution_log.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/gate_results.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/visual_qa_handoff.md",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/residual_risks.md",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "報告snapshotは最新集計を更新可。ただし旧試行・失敗・予算・判断・元ログ参照は消去せず履歴として保持し、raw台帳と照合する。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/vendor/planck/planck.mjs",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/vendor/planck/LICENSE",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/state/environment-lock.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0"
+      ],
+      "laterModifyRule": "E0固定後変更禁止。外部変更承認・全関連失効検証。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/state/runtime-manifest.json",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "freeze_after_review",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "承認された是正対象・影響工程再OPEN・固定資産禁止。追加権限は外部承認。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/raw-events.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/raw-test-output.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/browser-evidence.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/device-evidence.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/mutation-results.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/stage-search-events.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    },
+    {
+      "path": "games/0010_karakuri-workshop/qa/reports/physics-samples.jsonl",
+      "operations": [
+        "create",
+        "modify"
+      ],
+      "protection": "append_only_history",
+      "initialCreateStagesCandidate": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "laterModifyRule": "既存バイト列をprefixとして保持し、新規行を追記するのみ。truncate禁止。"
+    }
+  ],
+  "unresolved": [
+    "vendor/planck/planck.mjs は配置先候補。正規npm配布物の実際のESM entry・LICENSE・ハッシュはE0で検証し、同名コピーは内容無改変の場合のみ。追加依存/ファイル必要ならHOLD。",
+    "Playwrightブラウザ実体・node_modulesは作業領域の一時資産、Git追跡禁止。実際の配布構成はE0検証。",
+    "画像・trace等は一時領域に保持し、永続保存が必要な場合は別途個別パス承認。JSONL内にSHA、参照先、必要最小のログを保持。",
+    "RC4: 段階別初回作成候補を割当。E0時点で正規ESM依存閉包、実在entryとLICENSE、node_modules非追跡、ブラウザバイナリ、既存リポジトリ差分を照合。必要な追加ファイルは別承認。",
+    "バイナリ画像/traceの永続証跡が必要な場合は個別許可が必要。JSONLに参照だけ置いて実体消失を合格扱いしない。",
+    "RC4: E1の最小HTTP確認はqa/static-server.jsで一時隔離領域に生成した最小ページを配信する。E7以前に正式index.htmlの変更権限を仮定しない。作業領域外・Git追跡外の成果物の扱いはE0で確認。"
+  ],
+  "forbidden": [
+    "handoffs/game-0010/**",
+    "docs/**",
+    "他ゲーム",
+    "ルート共有設定",
+    "CI・Pages",
+    "symlink・submodule・パス逸脱",
+    "force push",
+    "許可されない削除・移動"
+  ],
+  "rule": "外部grantと固定候補の積集合のみ。現在0件。絶対/../NUL/シンボリックリンク・サブモジュール・ケース違い・rename・deleteを拒否。gitの追跡外も列挙し、作業ツリー・index・HEAD差分で検査。 RC5で108候補・工程方針の採用承認。実効grantは未発行、初期空配列は維持。E0の初回権限はE0に必要なハーネスと固定依存のみ、ゲーム本体は工程ごとに初回作成許可、後続修正は明示的な影響工程再OPENと予算を要する。",
+  "candidateScopeApproved": true
+}

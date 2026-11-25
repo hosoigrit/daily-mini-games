@@ -1,0 +1,228 @@
+{
+  "policyVersion": 1,
+  "projectId": "game-0010",
+  "status": "NOT_AUTHORIZED",
+  "authorizationMode": "EXTERNAL_APPROVAL_REQUIRED",
+  "approval": {
+    "implementation": false,
+    "environmentSetup": false,
+    "localCommit": false,
+    "githubWrite": false,
+    "branchCreation": false,
+    "pushDevelopmentBranch": false,
+    "sitesCreation": false,
+    "pullRequest": false,
+    "merge": false,
+    "publish": false
+  },
+  "externalGrantRequiredFields": [
+    "approvalId",
+    "baseCommitSha",
+    "handoffCommitSha",
+    "allowedPathsDigest",
+    "policyDigest",
+    "targetBranch",
+    "allowedOperations",
+    "authorizedWriterId"
+  ],
+  "repository": {
+    "name": "hosoigrit/daily-mini-games",
+    "handoffBranch": "docs/game-0010-handoff",
+    "developmentBranch": "codex/game-0010-development",
+    "baseCommitSha": null,
+    "handoffCommitSha": null,
+    "allowedPathsRef": "19_allowed_paths.json",
+    "allowForcePush": false,
+    "allowSharedConfigChanges": false
+  },
+  "execution": {
+    "stages": [
+      "E0",
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8"
+    ],
+    "advanceOnGatePass": true,
+    "maxConcurrentWriters": 1,
+    "reviewTasksReadOnly": true,
+    "reviewPreference": [
+      "SEPARATE_TASK",
+      "SEPARATE_CONTEXT",
+      "SAME_CONTEXT"
+    ],
+    "onUnknown": "HOLD",
+    "environment": {
+      "engine": "planck@1.5.1",
+      "engineDistributionSha256": null,
+      "nodeVersion": null,
+      "playwrightVersion": null,
+      "browserVersions": null,
+      "runner": "node:test",
+      "status": "APPROVED_PINS_ENVIRONMENT_UNVERIFIED",
+      "candidateVersions": {
+        "node": "26.13.0",
+        "playwright": "1.65.0",
+        "planck": "1.5.1",
+        "approval": "APPROVED_PIN_CANDIDATE_RC5",
+        "sources": [
+          "https://nodejs.org/en/blog/release/v26.13.0",
+          "https://github.com/microsoft/playwright/releases/tag/v1.65.0",
+          "https://www.npmjs.com/package/planck"
+        ],
+        "verifiedPublishedVersionsDate": "2026-11-25",
+        "note": "固定版候補はユーザー承認済み。公開情報の版存在確認のみ。E0で実環境、全依存完全性・権利・安全性、Node/npm、ブラウザrevisionを照合。不成立はHOLD。"
+      },
+      "lockProcedure": "外部grant後 E0でOS/architecture/node/npm/Playwright browser revision/official npm dist.integrity/ESM import closure/license/runtime hashを確認。全依存lockを固定し、未承認追加/互換不可/重大安全懸念はHOLD。取得前後検証、ネットワーク許可なしに取得禁止。 正規ESMとLICENSEを取得し、実際のimport閉包を列挙、追加許可が必要なら停止。install scriptを未確認で実行しない。",
+      "approvedPins": {
+        "node": "26.13.0",
+        "playwright": "1.65.0",
+        "planck": "1.5.1"
+      }
+    },
+    "authorizationRule": "現版設計FROZEN・外部grantなしのためE0不可。将来凍結した設計契約の上限と、人間の外部grant・固定SHA・許可パス/操作・単一writerの積集合のみ有効。固定JSONの初期false/空配列をAIが変更して権限を得ない。正式な外部grantは当該契約が凍結された後に別途発行。",
+    "earlyMutationStages": {
+      "MUT-01": "E5",
+      "MUT-02": "E2",
+      "MUT-03": "E2",
+      "MUT-04": "E3",
+      "MUT-05": "E2",
+      "MUT-06": "E5",
+      "MUT-07": "E5",
+      "MUT-08": "E5",
+      "MUT-09": "E5",
+      "MUT-10": "E7",
+      "MUT-11": "E7",
+      "MUT-12": "E0"
+    },
+    "fdContractRef": "04/05/06/07/08/14/17 RC6",
+    "timeouts": {
+      "unitAtomicSeconds": 30,
+      "integrationAtomicSeconds": 120,
+      "browserAtomicSeconds": 120,
+      "physicsAtomicSeconds": 180,
+      "normalBatchSeconds": 900,
+      "enduranceDedicatedSecondsCandidate": 2100,
+      "enduranceObservationSeconds": 1800,
+      "onTimeout": "FAIL_OR_PROVEN_ENVIRONMENT_BLOCKED"
+    }
+  },
+  "budgets": {
+    "remediationPerStage": 5,
+    "remediationTotal": 30,
+    "majorRootCauseAttempts": 2,
+    "physicsCandidatesPerStage": 20,
+    "physicsCandidateStages": [
+      "E1",
+      "E3",
+      "E4"
+    ],
+    "physicsCandidatesTotal": 60,
+    "stageDefinitionAdjustmentsPerStage": 12,
+    "stageDefinitionAdjustmentsTotal": 120,
+    "generatedCandidatesPerStage": 6000,
+    "generatedCandidatesTotal": 60000,
+    "stageSearchSimulationsPerStage": 2000,
+    "stageSearchSimulationsTotal": 20000,
+    "stageSearchTicksPerStage": 2400000,
+    "stageSearchTicksTotal": 24000000,
+    "stageSearchTimeSecondsPerStage": 900,
+    "stageSearchTimeSecondsTotal": 5400,
+    "beamWidth": 20,
+    "formalStageSimulationsPerGeneration": 3000,
+    "formalStageTicksPerGeneration": 3600000,
+    "formalStageSimulationsTotal": 12000,
+    "formalStageTicksTotal": 14400000,
+    "formalStagePools": {
+      "E6": {
+        "simulations": 3000,
+        "ticks": 3600000
+      },
+      "INTERIM": {
+        "simulations": 3000,
+        "ticks": 3600000
+      },
+      "E8": {
+        "simulations": 3000,
+        "ticks": 3600000
+      },
+      "POST_HUMAN": {
+        "simulations": 3000,
+        "ticks": 3600000
+      }
+    },
+    "physicsValidationSimulationsTotal": 12000,
+    "physicsValidationTicksTotal": 14400000,
+    "automatedExecutionTimeSecondsTotal": 21600,
+    "reserveBeforeExecution": true,
+    "resetOnResume": false,
+    "runClassificationRule": "手段P/B/I等ではなく実行目的で分類。正式stage=E6/INTERIM/E8/POST_HUMAN、基礎物理=physicsValidation、探索=stageSearch。runId単位で一度だけ計上、再実行は別runId。自動時間全件。手動実機は別台帳。枠間流用禁止。"
+  },
+  "checkpoint": {
+    "singleWriterRequired": true,
+    "verifyPreviousGeneration": true,
+    "requireRecoverableReservation": true,
+    "onUnknownConsumption": "CHARGE_RESERVED_MAX",
+    "onMissingLedger": "HOLD",
+    "remotePushRequiresGrant": true
+  },
+  "integrity": {
+    "requirements": 190,
+    "basicDesignUnits": 31,
+    "detailedDesignUnits": 132,
+    "parentTests": 296,
+    "mutationCases": 12,
+    "protectHandoff": true,
+    "protectApprovedTestCode": true,
+    "protectRunnerAndManifest": true,
+    "allowExpectedValueChanges": false,
+    "allowApprovedTestDeletion": false,
+    "allowUnapprovedSkips": false,
+    "allowSupplementalTestsWithinScope": true,
+    "draftChildCaseCount": 982,
+    "requireAllCasesReviewedBeforeFreeze": true,
+    "approvedRequirementBaselineDigest": "692036528360e1f8d7a8dac900ad90182aa8b569176bae598d452f0a94a989c7"
+  },
+  "gate": {
+    "maxOpenCritical": 0,
+    "maxOpenHigh": 0,
+    "maxMustViolations": 0,
+    "requiredAutoPass": true,
+    "requireRegression": true,
+    "requireEvidence": true,
+    "humanQaNotAutoPass": true,
+    "designFreezeRequired": true,
+    "designFreezeStatus": "FROZEN",
+    "requiredReviewEvidence": true,
+    "onInsufficientIndependence": "記録し、必須独立性の達成不能ならHOLD。SAME_CONTEXTを独立レビューと称さない。"
+  },
+  "humanQa": {
+    "useSitesFinal": true,
+    "useSitesIntermediateIfRequired": true,
+    "deviceCount": 5,
+    "baselineRuns": 50,
+    "operationChecks": 80,
+    "minimumUserScore": 80,
+    "minimumItemRating": 3,
+    "thirdPartyRecommended": true,
+    "publicationSeparateGrant": true
+  },
+  "designFreezeRecord": {
+    "approvalRecordId": "DESIGN-FREEZE-GAME-0010-20261125-01",
+    "phase3": "CLOSED",
+    "designVersion": "1.0",
+    "sourceCandidate": "v1.0-rc9",
+    "sourceZipSha256": "4ea1a16322db72a98cb45cda62b37caefe250f0f4fbfbe9c4c9eb1b5e1e0d3ba",
+    "allCasesStaticAudited": true,
+    "independentSemanticCertification": false,
+    "actualTestsExecuted": 0,
+    "userAcceptedResidualRisk": true,
+    "externalGrantIssued": false,
+    "qualityGateWaiver": false,
+    "reviewConditionNote": "integrity.requireAllCasesReviewedBeforeFreezeは維持。全件静的点検を実施済みとする記録と、独立意味レビュー未実施を区別し、独立意味保証を凍結の前提としない今回の明示的ユーザー承認を記録する。後続テスト固定前レビュー・必須受入・停止条件は免除しない。"
+  }
+}

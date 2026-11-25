@@ -1,0 +1,499 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "checkpointVersion",
+    "projectId",
+    "generation",
+    "checkpointId",
+    "previousCheckpointId",
+    "previousCheckpointDigest",
+    "approvalId",
+    "writerId",
+    "baseCommitSha",
+    "handoffCommitSha",
+    "testedCommitSha",
+    "workspaceFingerprint",
+    "engineeringStage",
+    "state",
+    "gates",
+    "budgetUsage",
+    "attempts",
+    "openFindings",
+    "pendingCases",
+    "evidenceRefs",
+    "nextAction"
+  ],
+  "properties": {
+    "checkpointVersion": {
+      "const": 1
+    },
+    "projectId": {
+      "const": "game-0010"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "checkpointId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "previousCheckpointId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "previousCheckpointDigest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "approvalId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "writerId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "baseCommitSha": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "handoffCommitSha": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "testedCommitSha": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "workspaceFingerprint": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "engineeringStage": {
+      "anyOf": [
+        {
+          "enum": [
+            "E0",
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6",
+            "E7",
+            "E8",
+            "HUMAN_QA"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "enum": [
+        "NOT_AUTHORIZED",
+        "RUNNING",
+        "HOLD",
+        "BLOCKED",
+        "STOP",
+        "INTERRUPTED",
+        "AUTO_COMPLETE"
+      ]
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "NOT_RUN",
+          "RUNNING",
+          "PASS",
+          "FAIL",
+          "BLOCKED",
+          "HOLD",
+          "STALE"
+        ]
+      }
+    },
+    "budgetUsage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "remediationTotal",
+        "remediationByStage",
+        "remediationByRootCause",
+        "physicsCandidatesByStage",
+        "stageAdjustmentsByStage",
+        "generatedByStage",
+        "searchSimulationsByStage",
+        "searchTicksByStage",
+        "searchSecondsByStage",
+        "formalSimulationsByPool",
+        "formalTicksByPool",
+        "physicsValidationSimulations",
+        "physicsValidationTicks",
+        "automatedSeconds"
+      ],
+      "properties": {
+        "remediationTotal": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "remediationByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "propertyNames": {
+            "enum": [
+              "E0",
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E5",
+              "E6",
+              "E7",
+              "E8"
+            ]
+          }
+        },
+        "remediationByRootCause": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          }
+        },
+        "physicsCandidatesByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20
+          },
+          "propertyNames": {
+            "enum": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          }
+        },
+        "stageAdjustmentsByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 12
+          },
+          "propertyNames": {
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10"
+            ]
+          }
+        },
+        "generatedByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6000
+          },
+          "propertyNames": {
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10"
+            ]
+          }
+        },
+        "searchSimulationsByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2000
+          },
+          "propertyNames": {
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10"
+            ]
+          }
+        },
+        "searchTicksByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2400000
+          },
+          "propertyNames": {
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10"
+            ]
+          }
+        },
+        "searchSecondsByStage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 900
+          },
+          "propertyNames": {
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10"
+            ]
+          }
+        },
+        "formalSimulationsByPool": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3000
+          },
+          "propertyNames": {
+            "enum": [
+              "E6",
+              "INTERIM",
+              "E8",
+              "POST_HUMAN"
+            ]
+          }
+        },
+        "formalTicksByPool": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3600000
+          },
+          "propertyNames": {
+            "enum": [
+              "E6",
+              "INTERIM",
+              "E8",
+              "POST_HUMAN"
+            ]
+          }
+        },
+        "physicsValidationSimulations": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12000
+        },
+        "physicsValidationTicks": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 14400000
+        },
+        "automatedSeconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 21600
+        }
+      }
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "attemptId",
+          "category",
+          "scope",
+          "state",
+          "reserved",
+          "actual",
+          "evidenceRefs"
+        ],
+        "properties": {
+          "attemptId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "enum": [
+              "RESERVED",
+              "STARTED",
+              "COMPLETED",
+              "INTERRUPTED",
+              "CANCELLED"
+            ]
+          },
+          "reserved": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "actual": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "openFindings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "pendingCases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "nextAction": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$comment": "構造・個別上限のみ。累積合計・予約残・単一writer・前世代・重複attemptId・state/actual整合は15/14の意味検証が必須。未確認値を0に初期化しない。 RC5: 構造schemaのみ。合計値、予約残、attemptId一意、世代連鎖、同一writer、予算枠、外部grantとの照合は14/15の意味制約に従う。"
+}
