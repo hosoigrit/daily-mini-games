@@ -48,8 +48,9 @@ export function createGameController({stages, identities, hints, storage, change
     dispose();
     stage=next;
     const row=saveData().stages[stage.id];
+    const storedBest=row.currentBest??row.previousBest;
     editor=createDesignEditor({placements:decodePlacements(row.draft?.placements??[]),
-      best:row.currentBest?decodePlacements(row.currentBest.placements):null});
+      best:storedBest?decodePlacements(storedBest.placements):null});
     session=createResultSession({stageId:stage.id,progress:progress(),onTerminal:finish});
     screen='DESIGN';snapshot=null;current=null;ghost=null;dialog=null;hintConfirmed=false;
   }
