@@ -1,0 +1,73 @@
+{
+  "assets": [
+    {
+      "id": "CH01",
+      "path": "assets/characters/luke-normal.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "CH02",
+      "path": "assets/characters/luke-surprised.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "CH03",
+      "path": "assets/characters/luke-happy.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "CH04",
+      "path": "assets/characters/gear-normal.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "CH05",
+      "path": "assets/characters/gear-thinking.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "CH06",
+      "path": "assets/characters/gear-praise.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4",
+      "usage": "自作キャラクターの表情"
+    },
+    {
+      "id": "EM01",
+      "path": "assets/decoration/workshop-emblem.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af",
+      "usage": "工房ヘッダーのマーク"
+    },
+    {
+      "id": "EM02",
+      "path": "assets/decoration/workshop-pattern.svg",
+      "authoring": "Original local vector paths created for Game #0010",
+      "rights": "Project-owned original artwork. No external assets, fonts, or scripts.",
+      "sha256": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977",
+      "usage": "ローカル装飾データ"
+    }
+  ],
+  "synthesis": {
+    "path": "src/presentation/sound-definitions.js",
+    "rights": "Original procedure-generated audio. No audio file imports.",
+    "voices": 8
+  }
+}
