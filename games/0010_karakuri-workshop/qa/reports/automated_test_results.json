@@ -7179,7 +7179,7 @@
   },
   "E6": {
     "status": "PASS",
-    "sourceSHA": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+    "sourceSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
     "mandatory": 125,
     "pass": 125,
     "cases": [
@@ -7188,10 +7188,10 @@
         "status": "PASS",
         "measured": "available hints retain arbitrary access order and confirm first ghost",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1538
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 126
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -7203,10 +7203,10 @@
         "status": "PASS",
         "measured": "hint resolution leaves draft geometry and inventory unchanged",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1544
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 132
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -7218,10 +7218,10 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1550
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 138
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7233,10 +7233,10 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1556
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 144
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -7248,10 +7248,10 @@
         "status": "PASS",
         "measured": "only the ten stage IDs are legal",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1490
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 78
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7263,10 +7263,10 @@
         "status": "PASS",
         "measured": "translate the frozen lower-left coordinates",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1415
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 3
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7278,10 +7278,10 @@
         "status": "PASS",
         "measured": "fixed structures and goal protection fit the board",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1496
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 84
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7293,10 +7293,10 @@
         "status": "PASS",
         "measured": "all frozen initial ball, goal and fixed geometry are compatible",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1421
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 9
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7308,10 +7308,10 @@
         "status": "PASS",
         "measured": "approved inventory and star boundaries",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1502
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 90
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7337,10 +7337,10 @@
         "status": "PASS",
         "measured": "the 17 initial layouts are legal through normal commands",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1428
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 16
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -7352,10 +7352,10 @@
         "status": "PASS",
         "measured": "the 17 initial layouts are legal through normal commands",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1435
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 23
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -7537,10 +7537,10 @@
         "status": "PASS",
         "measured": "form all 17 formal stage layouts through ordinary edit commands",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1568
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 156
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -8347,10 +8347,10 @@
         "status": "PASS",
         "measured": "unused added part does not constitute a distinct solution",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1574
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 162
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -8439,10 +8439,10 @@
         "status": "PASS",
         "measured": "generate every independently enumerated one-step legal layout",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1508
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 96
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8454,10 +8454,10 @@
         "status": "PASS",
         "measured": "illegal moves do not enter the legal denominator",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1514
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 102
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8469,10 +8469,10 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1442
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 30
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8484,10 +8484,10 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1448
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 36
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8499,10 +8499,10 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1454
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 42
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8514,10 +8514,10 @@
         "status": "PASS",
         "measured": "frozen robustness boundary",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1460
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 48
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -8749,10 +8749,10 @@
         "status": "PASS",
         "measured": "reject empty and insubstantial legal neighborhoods",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1466
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 54
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -9464,10 +9464,10 @@
         "status": "PASS",
         "measured": "obsolete compatibility rejects otherwise legal hint ghost",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1562
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 150
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -9479,10 +9479,10 @@
         "status": "PASS",
         "measured": "authorized cumulative geometry and size ranges",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1520
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 108
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -9494,10 +9494,10 @@
         "status": "PASS",
         "measured": "adjustments remain relative to frozen initial baseline",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1472
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 60
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -9509,10 +9509,10 @@
         "status": "PASS",
         "measured": "immutable gameplay and common physics stay fixed",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1478
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 66
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -9538,10 +9538,10 @@
         "status": "PASS",
         "measured": "reserve at the last legal unit and reject at either search ceiling",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1526
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 114
         },
         "method": "I",
         "commandId": "CMD-04",
@@ -9553,10 +9553,10 @@
         "status": "PASS",
         "measured": "order and operation IDs do not affect the canonical key",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1484
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 72
         },
         "method": "U",
         "commandId": "CMD-03",
@@ -9568,10 +9568,10 @@
         "status": "PASS",
         "measured": "real geometry identity matches the frozen vector and order is canonical",
         "proof": {
-          "runId": "CR007-E6-REVIEW-TESTS",
-          "testedSha": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
-          "rawLogSha256": "94a56ce7c147a983f2cd25dea5d54e864124130c971d9ef61791feb4279b5a0b",
-          "line": 1532
+          "runId": "CR007-E6-EXACT-TESTS",
+          "testedSha": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+          "rawLogSha256": "9ea3376f48096bb82fd676e3ccd849d9c0e35b5b92cdf1521de0fd7d0f7074f9",
+          "line": 120
         },
         "method": "I",
         "commandId": "CMD-04",

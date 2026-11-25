@@ -167,7 +167,7 @@
   },
   "EG-06": {
     "status": "PASS",
-    "testedSHA": "e70499614cb74bb9f0c950d7d00bc6daf84183df",
+    "testedSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
     "casePasses": 125,
     "initialUncleared": 10,
     "baselineStars3": 10,

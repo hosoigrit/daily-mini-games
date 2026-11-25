@@ -263,7 +263,8 @@
     "resolved": [
       "Malformed optional trace fingerprint corrected and exact 1000-run suite rerun",
       "Exact fixed-obstacle hint invalidation, inventory, both cumulative directions, fixed-angle/obstacle rejection and generated-duplicate evidence verified",
-      "Independent finite observations and numeric qualification results are keyed to the traced formal control and replayed actual runs. Native sweep does not assert continuous mathematical proof."
+      "Independent finite observations and numeric qualification results are keyed to the traced formal control and replayed actual runs. Native sweep does not assert continuous mathematical proof.",
+      "Fixed-obstacle invalidation uses the certified Stage04 L3 and both historical and current canonical fixture groups remain verified."
     ],
     "unresolvedMandatory": 0
   }
