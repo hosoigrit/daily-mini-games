@@ -313,7 +313,7 @@ caseTest(39,1,'history retains the last fifty confirmed commands',()=>{
 caseTest(40,1,'confirmation reset and best load retain the required state',()=>{
   const stage=stage01, alt=neighbor(stage,sol01);
   assert(alt);
-  const fixture={placements:[sol01],best:[{...alt,x:999,y:999}],progress:{cleared:true,stars:3},
+  const fixture={placements:[sol01],best:[alt],progress:{cleared:true,stars:3},
     trajectory:[[4,5]],history:[[],[alt]]};
   const base=editor.createDesignEditor(fixture);
   for(const type of ['request-reset','request-load-best']){
@@ -330,6 +330,10 @@ caseTest(40,1,'confirmation reset and best load retain the required state',()=>{
   const turned=check(stage,modal,{type:'orientation-change'});
   assert.equal(turned.selection.state,'IDLE');
   assert.deepEqual(facts(stage,turned),facts(stage,unplaced));
+  assert.deepEqual(reset.best,fixture.best);
+  const extraCoordinates=editor.createDesignEditor({...fixture,best:[{...alt,x:999,y:999}]});
+  const cleaned=check(stage,check(stage,extraCoordinates,{type:'request-load-best'}),{type:'confirm'});
+  assert.deepEqual(cleaned.placements,[alt]);
   const wrongId=editor.createDesignEditor({...fixture,best:[{...alt,id:'invalid id'}]});
   const invalidLoad=editor.applyEditCommand(check(stage,wrongId,{type:'request-load-best'}),stage,{type:'confirm'});
   assert.equal(invalidLoad.reason,'PART_ID');
