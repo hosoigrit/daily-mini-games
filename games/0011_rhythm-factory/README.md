@@ -8,3 +8,11 @@ Game #0011 の Stage A-1 用。開発基盤の画面で、React の起動、ス�
 - `npm run build` の後、Playwright 管理ブラウザを準備して `npm run test:e2e` を実行する。E2E は開発版と `dist` をそれぞれサブパスで検査する。
 
 共通契約の正本は `../../handoffs/game-0011/v1.0/approved_v08/interface_contracts.d.ts`。実行時に試験した範囲、引き継ぐ範囲、環境固有の起動設定は `reports/stage-a1/` を参照。設計補足は `docs/design_addendum_stage_a1.md` を参照。
+
+## 今回の Codex Cloud 環境で再実行
+
+タスク専用の Node・npm、依存、管理ブラウザ、起動補助を保持した作業環境では、`bash /workspace/work/game0011-stage-a1a/run-stage-a1.sh` で型、lint、依存方向、テスト、連続ビルド、Git 範囲を再検証できる。
+
+この環境では `PLAYWRIGHT_BROWSERS_PATH` を `/workspace/work/game0011-stage-a1a/runtime-a1/playwright-browsers` に、`STAGE_A1_WEBKIT_EXECUTABLE` を `/workspace/work/game0011-stage-a1a/runtime-a1/webkit-a1` に設定した。WebKit の起動補助はローカルに抽出した Debian ライブラリを読み込む。Firefox はタスク専用 XDG ディレクトリと、ローカル試験プロセスに限定した `MOZ_DISABLE_CONTENT_SANDBOX=1` を使用した。
+
+別の環境では、承認版の Node と npm、`npm ci`、Playwright 1.65.1 の管理ブラウザおよび必要な OS ライブラリを再準備する。Playwright の対応ホストで標準起動できる場合は、Cloud 固有の起動補助を省き `npm run build` と `npm run test:e2e` を実行する。

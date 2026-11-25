@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-11-25T22:09:16+09:00",
+  "recordedAt": "2026-11-25T22:11:33+09:00",
   "fixedBase": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
   "actor": "Codex AG-01/AG-09/AG-13",
   "commands": [
@@ -56,28 +56,28 @@
       "category": "component",
       "name": "POC-13: React displays the store projection without writing state during render",
       "status": "passed",
-      "durationMs": 68.5
+      "durationMs": 62.0
     },
     {
       "file": "tests/component/foundation-screen.test.tsx",
       "category": "component",
       "name": "POC-14: Strict Mode remount keeps exactly one subscription, listener, frame and test resource",
       "status": "passed",
-      "durationMs": 7.0
+      "durationMs": 5.3
     },
     {
       "file": "tests/contract/audio-events.test.ts",
       "category": "contract",
       "name": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
       "status": "passed",
-      "durationMs": 3.0
+      "durationMs": 5.4
     },
     {
       "file": "tests/contract/public-types.test.ts",
       "category": "contract",
       "name": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
       "status": "passed",
-      "durationMs": 2.0
+      "durationMs": 2.6
     },
     {
       "file": "tests/contract/public-types.test.ts",
@@ -91,21 +91,21 @@
       "category": "contract",
       "name": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
       "status": "passed",
-      "durationMs": 0.2
+      "durationMs": 0.6
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
       "status": "passed",
-      "durationMs": 2.5
+      "durationMs": 2.8
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
       "status": "passed",
-      "durationMs": 0.7
+      "durationMs": 0.5
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
@@ -119,7 +119,7 @@
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
       "status": "passed",
-      "durationMs": 1.7
+      "durationMs": 1.6
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
@@ -140,42 +140,42 @@
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
       "status": "passed",
-      "durationMs": 0.6
+      "durationMs": 0.5
     },
     {
       "file": "tests/integration/composition.test.ts",
       "category": "integration",
-      "name": "connects one synthetic state owner to the UI projection and tears down the connection",
+      "name": "connects one synthetic state owner to the UI and renderer and tears down the connection",
       "status": "passed",
-      "durationMs": 2.8
+      "durationMs": 5.2
     },
     {
       "file": "tests/unit/game-store.test.ts",
       "category": "unit",
       "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 keeps the same reference and emits no notification for an equal projection",
       "status": "passed",
-      "durationMs": 2.5
+      "durationMs": 4.9
     },
     {
       "file": "tests/unit/game-store.test.ts",
       "category": "unit",
       "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 updates the public reference and emits a single notification for one state change",
       "status": "passed",
-      "durationMs": 1.7
+      "durationMs": 3.8
     },
     {
       "file": "tests/unit/game-store.test.ts",
       "category": "unit",
       "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 protects nested arrays and error values and keeps a defensive copy of the source",
       "status": "passed",
-      "durationMs": 0.5
+      "durationMs": 0.7
     },
     {
       "file": "tests/unit/game-store.test.ts",
       "category": "unit",
       "name": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 unsubscribes idempotently and removes only the matching registration",
       "status": "passed",
-      "durationMs": 0.2
+      "durationMs": 0.6
     }
   ],
   "playwright": [
@@ -187,7 +187,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 424,
+          "duration": 401,
           "annotations": [
             {
               "type": "browser version",
@@ -206,7 +206,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 1844,
+          "duration": 2085,
           "annotations": [
             {
               "type": "browser version",
@@ -225,7 +225,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 571,
+          "duration": 576,
           "annotations": [
             {
               "type": "browser version",
@@ -244,7 +244,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 224,
+          "duration": 229,
           "annotations": [
             {
               "type": "browser version",
@@ -263,7 +263,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 515,
+          "duration": 492,
           "annotations": [
             {
               "type": "browser version",
@@ -282,7 +282,7 @@
       "attempts": [
         {
           "status": "passed",
-          "duration": 514,
+          "duration": 608,
           "annotations": [
             {
               "type": "browser version",

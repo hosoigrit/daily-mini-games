@@ -5,12 +5,19 @@ import { createRenderPort } from './render-port';
 export function createCompositionRoot() {
   const session = createFoundationSession();
   const store = createGameStore(session);
-  const render = createRenderPort(() => null, () => null);
+  const render = createRenderPort(session.readRenderFrame, () => null);
+  let disposed = false;
 
   return {
     store,
     render,
-    toggleProbeState: session.toggleProbeState,
-    dispose: store.dispose,
+    toggleProbeState() {
+      if (!disposed) session.toggleProbeState();
+    },
+    dispose() {
+      if (disposed) return;
+      disposed = true;
+      store.dispose();
+    },
   };
 }

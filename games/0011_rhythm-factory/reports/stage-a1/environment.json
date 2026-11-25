@@ -40,5 +40,12 @@
     "chromium": "Playwright 標準の管理バイナリ。初回から起動。",
     "firefox": "XDG ディレクトリをタスク領域に隔離。コンテナ内で /proc/self/uid_map を書けず子プロセスが停止したため、ローカル試験中のみ MOZ_DISABLE_CONTENT_SANDBOX=1。Codex 側の隔離とシステム設定は維持。",
     "webkit": "Debian 署名済みパッケージ8件をタスク領域に抽出。管理版 WPE バイナリをライブラリ追加パス付きで起動。OS へのインストールは0件。"
+  },
+  "sameTaskReplay": {
+    "command": "bash /workspace/work/game0011-stage-a1a/run-stage-a1.sh",
+    "PLAYWRIGHT_BROWSERS_PATH": "/workspace/work/game0011-stage-a1a/runtime-a1/playwright-browsers",
+    "STAGE_A1_WEBKIT_EXECUTABLE": "/workspace/work/game0011-stage-a1a/runtime-a1/webkit-a1",
+    "prerequisites": "同タスクのランタイム、node_modules、管理ブラウザ、Debian ライブラリ、起動補助と検証スクリプト。",
+    "freshHost": "承認版 Node と npm、npm ci、Playwright 管理ブラウザと OS ライブラリを再準備。対応ホストで標準起動できる場合は Cloud 固有設定を使用しない。"
   }
 }

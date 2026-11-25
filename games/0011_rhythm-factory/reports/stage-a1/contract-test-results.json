@@ -75,14 +75,14 @@
       "category": "contract",
       "name": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
       "status": "passed",
-      "durationMs": 3.0
+      "durationMs": 5.4
     },
     {
       "file": "tests/contract/public-types.test.ts",
       "category": "contract",
       "name": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
       "status": "passed",
-      "durationMs": 2.0
+      "durationMs": 2.6
     },
     {
       "file": "tests/contract/public-types.test.ts",
@@ -96,21 +96,21 @@
       "category": "contract",
       "name": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
       "status": "passed",
-      "durationMs": 0.2
+      "durationMs": 0.6
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
       "status": "passed",
-      "durationMs": 2.5
+      "durationMs": 2.8
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
       "status": "passed",
-      "durationMs": 0.7
+      "durationMs": 0.5
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
@@ -124,7 +124,7 @@
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
       "status": "passed",
-      "durationMs": 1.7
+      "durationMs": 1.6
     },
     {
       "file": "tests/contract/render-snapshot.test.ts",
@@ -145,7 +145,7 @@
       "category": "contract",
       "name": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
       "status": "passed",
-      "durationMs": 0.6
+      "durationMs": 0.5
     }
   ]
 }
