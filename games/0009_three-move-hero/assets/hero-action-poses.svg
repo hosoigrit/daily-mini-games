@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <title>勇者の剣と詠唱のポーズ補助素材</title>
+  <view id="sword-sweep" viewBox="0 0 100 100"/>
+  <view id="sword-raised" viewBox="100 0 100 100"/>
+  <view id="casting" viewBox="200 0 100 100"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 69Q53 70 87 31L81 55Q58 82 23 82Z" fill="#e9f5ff" stroke="#4a5279" stroke-width="3"/>
+    <path d="M24 75Q55 74 82 42" fill="none" stroke="#ffd787" stroke-width="3"/>
+    <path d="M14 64l11 19" stroke="#f9bc50" stroke-width="5"/>
+    <g transform="translate(100 0)">
+      <path d="M55 70 52 14 58 5 65 15 65 67Z" fill="#eaf8ff" stroke="#343c5b" stroke-width="3"/>
+      <path d="M60 15v47" stroke="#88b0c8" stroke-width="2"/>
+      <path d="M48 68h21M59 68v15" stroke="#f8c36a" stroke-width="5"/>
+      <path d="M78 29v12m-6-6h12M38 48v10m-5-5h10" stroke="#ffe8ac" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(200 0)" fill="none" stroke="#e3c2ff" stroke-width="3">
+      <path d="M49 51q16-19 36-6m-28 16q15-9 26-5"/>
+      <path d="M73 30l5-9 5 9-5 9Z" fill="#fff1ff"/>
+    </g>
+  </g>
+</svg>

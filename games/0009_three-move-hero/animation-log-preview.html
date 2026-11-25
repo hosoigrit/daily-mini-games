@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A2-2 戦闘ログ同期検証</title>
+  <link rel="stylesheet" href="./styles/battle-animations.css">
+  <link rel="stylesheet" href="./styles/action-animations.css">
+</head>
+<body>
+  <main class="preview action-preview">
+    <h1>戦闘ログ同期検証</h1>
+    <p class="description">凍結済みの戦闘ログに沿って、ポーズとエフェクトを再生します。</p>
+    <section class="motion-arena" aria-label="勇者と角の魔物">
+      <div id="scene"></div>
+      <div id="effects" class="motion-effects" aria-hidden="true"></div>
+    </section>
+    <section class="motion-panel" aria-label="ログ再生操作">
+      <div class="motion-fields">
+        <div>
+          <label for="scenario">検証ケース</label>
+          <select id="scenario" disabled>
+            <option value="timeout">時間切れ</option>
+            <option value="victory">勝利</option>
+            <option value="defeat">勇者撃破</option>
+            <option value="counter">ダメージ0の敵攻撃と反撃</option>
+            <option value="thorns">棘反動</option>
+            <option value="heal">回復</option>
+            <option value="ward">魔法結界と魔法攻撃</option>
+            <option value="armor">物理防御と斬撃</option>
+          </select>
+        </div>
+      </div>
+      <div class="motion-buttons">
+        <button id="play" type="button" class="play-button" disabled>再生</button>
+        <button id="stop" type="button" disabled>停止</button>
+        <button id="next" type="button" disabled>1フェーズ進む</button>
+        <label class="motion-option"><input id="reduce" type="checkbox"> 動きを軽減</label>
+      </div>
+      <p id="status" role="status">戦闘データを読み込み中</p>
+      <ol id="timeline" aria-label="ログとモーションの対応"></ol>
+    </section>
+  </main>
+  <script type="module">
+    import { simulateBattle } from './src/battle-core.js';
+    import { battleCuePose, battleCueResult, buildBattleTimeline } from './src/battle-log-motion.js';
+    import { createBattleLogEffects } from './src/battle-log-effects.js';
+    import { createCharacterScene } from './src/character-scene.js';
+
+    const samples = {
+      timeout: ['main-01', ['slash', 'guard', 'focus']],
+      victory: ['main-01', ['slash', 'magic', 'guard']],
+      defeat: ['main-02', ['slash', 'magic', 'focus']],
+      counter: ['main-04', ['slash', 'counter', 'guard']],
+      thorns: ['main-05', ['slash', 'magic', 'guard']],
+      heal: ['main-01', ['slash', 'guard', 'heal']],
+      ward: ['main-07', ['slash', 'magic', 'guard']],
+      armor: ['main-01', ['magic', 'guard', 'slash']],
+    };
+    const defenseLabels = { 'physical-guard': '物理防御', 'magic-ward': '魔法結界', guard: '勇者のガード' };
+    const scenario = document.querySelector('#scenario');
+    const status = document.querySelector('#status');
+    const sequence = document.querySelector('#timeline');
+    const reduce = document.querySelector('#reduce');
+    const playButton = document.querySelector('#play');
+    const stopButton = document.querySelector('#stop');
+    const nextButton = document.querySelector('#next');
+    const arena = document.querySelector('#scene');
+    const media = matchMedia('(prefers-reduced-motion: reduce)');
+    const characterScene = createCharacterScene(arena, { media: null });
+    characterScene.mount();
+    const stage = arena.firstElementChild;
+    const effects = createBattleLogEffects(document.querySelector('#effects'));
+
+    let stages;
+    let frames = [];
+    let index = -1;
+    let phaseStartedAt = 0;
+    let timer;
+    let playing = false;
+    let terminalDisplayed = false;
+    const reduced = () => reduce.checked || media.matches;
+
+    function paint(frame, text) {
+      const mode = reduced();
+      characterScene.setReducedMotion(Boolean(frame) || mode);
+      stage.dataset.reduced = String(mode);
+      stage.dataset.acting = String(Boolean(frame));
+      stage.dataset.heroPose = frame?.hero ?? 'idle';
+      stage.dataset.enemyPose = frame?.enemy ?? 'idle';
+      if (status.textContent !== text) status.textContent = text;
+    }
+
+    function show() {
+      const frame = frames[index];
+      if (!frame) {
+        effects.clear();
+        paint(undefined, '待機中');
+      } else {
+        const { cue, phase } = frame;
+        const chosen = battleCuePose(cue, phase, reduced());
+        const displayed = {
+          ...chosen,
+          hero: chosen.hero ?? (cue.holds.includes('guard') ? 'brace' : undefined),
+          enemy: chosen.enemy ?? (cue.holds.includes('physical-guard') ? 'crouch' :
+            cue.holds.includes('magic-ward') ? 'chant' : undefined),
+        };
+        const result = battleCueResult(cue, phase);
+        const label = reduced() && cue.resultAt !== null && !result ? '演出中' : displayed.name;
+        const detail = result ? `・${result.kind === 'damage' ? 'ダメージ' : '回復'} ${result.value}` : '';
+        const holding = cue.holds.length ? `・防御継続：${cue.holds.map(id => defenseLabels[id]).join('、')}` : '';
+        effects.paint({
+          cue, pose: displayed, at: phase.at, duration: terminalDisplayed ? 0 : frame.duration, reduced: reduced(),
+          elapsed: Math.min(frame.duration, performance.now() - phaseStartedAt),
+        });
+        paint(displayed, terminalDisplayed ? `再生完了：${cue.name}` :
+          `ターン${cue.turn}、${cue.name}：${label}${detail}${holding}`);
+      }
+    }
+
+    function stop() {
+      clearTimeout(timer);
+      timer = undefined;
+      playing = false;
+    }
+
+    function reset() {
+      stop();
+      index = -1;
+      terminalDisplayed = false;
+      show();
+    }
+
+    function advance() {
+      if (index + 1 < frames.length) {
+        index++;
+        phaseStartedAt = performance.now();
+        show();
+        return true;
+      }
+      stop();
+      terminalDisplayed = true;
+      status.textContent = `再生完了：${frames[index].cue.name}`;
+      return false;
+    }
+
+    function playNext() {
+      if (!playing || !advance()) return;
+      timer = setTimeout(playNext, frames[index].duration);
+    }
+
+    function chooseCase() {
+      reset();
+      const [stageId, plan] = samples[scenario.value];
+      const input = stages.find(item => item.stageId === stageId);
+      const timeline = buildBattleTimeline(simulateBattle(input, plan));
+      frames = timeline.cues.flatMap(cue => cue.phases.map((phase, i) => ({
+        cue, phase, duration: (cue.phases[i + 1]?.at ?? cue.duration) - phase.at,
+      })));
+      sequence.replaceChildren(...timeline.cues.map(cue => {
+        const item = document.createElement('li');
+        item.textContent = `${cue.at} ms · ターン${cue.turn} · ${cue.name} · ${cue.origin}`;
+        return item;
+      }));
+    }
+
+    playButton.addEventListener('click', () => {
+      reset();
+      playing = true;
+      playNext();
+    });
+    stopButton.addEventListener('click', reset);
+    nextButton.addEventListener('click', () => {
+      stop();
+      if (terminalDisplayed) reset();
+      advance();
+    });
+    scenario.addEventListener('change', chooseCase);
+    reduce.addEventListener('change', show);
+    media.addEventListener('change', () => reduce.dispatchEvent(new Event('change')));
+    window.addEventListener('pagehide', reset);
+
+    try {
+      const response = await fetch('./data/game0009_stage_manifest_v0.9.json');
+      if (!response.ok) throw new Error(`Manifest HTTP ${response.status}`);
+      ({ stages } = await response.json());
+      chooseCase();
+      for (const control of [scenario, playButton, stopButton, nextButton]) control.disabled = false;
+    } catch (error) {
+      status.textContent = `戦闘データを読み込めません：${error.message}`;
+    }
+  </script>
+</body>
+</html>

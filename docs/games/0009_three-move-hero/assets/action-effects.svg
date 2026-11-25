@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <title>斬撃、魔法、防御、回復、終了の効果素材</title>
+  <view id="arc" viewBox="0 0 100 100"/>
+  <view id="impact" viewBox="100 0 100 100"/>
+  <view id="rune" viewBox="200 0 100 100"/>
+  <view id="orb" viewBox="300 0 100 100"/>
+  <view id="claw" viewBox="0 100 100 100"/>
+  <view id="shield" viewBox="100 100 100 100"/>
+  <view id="gold" viewBox="200 100 100 100"/>
+  <view id="heal" viewBox="300 100 100 100"/>
+  <view id="armor" viewBox="0 200 100 100"/>
+  <view id="ward" viewBox="100 200 100 100"/>
+  <view id="thorns" viewBox="200 200 100 100"/>
+  <view id="clock" viewBox="300 200 100 100"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 70Q49 72 87 21 83 53 65 67 45 82 14 70Z" fill="#fff3c6" stroke="#e6ac58" stroke-width="4"/>
+    <path d="M27 59Q54 52 74 32" fill="none" stroke="#fff9ea" stroke-width="4"/>
+    <g transform="translate(100 0)">
+      <path d="m50 11 8 28 24-17-10 27 19 8-25 7-4 22-15-17-27 10 11-26-22-12 31-1Z" fill="#ffd097" stroke="#b76764" stroke-width="3"/>
+      <path d="m47 39 8 15-12 10-5-14Z" fill="#fff8db"/>
+    </g>
+    <g transform="translate(200 0)" fill="none" stroke="#dbb5ff" stroke-width="4">
+      <circle cx="50" cy="50" r="31"/>
+      <path d="M50 21 73 64 26 64ZM15 44l8 5m63-5-8 5M50 9v8m0 66v8"/>
+      <circle cx="50" cy="50" r="8" fill="#ffecff"/>
+    </g>
+    <g transform="translate(300 0)">
+      <path d="M15 55 48 27Q79 17 88 44 97 70 68 79 42 88 31 69Z" fill="#aa82fc" stroke="#eee0ff" stroke-width="4"/>
+      <circle cx="63" cy="54" r="13" fill="#fff7ff"/>
+    </g>
+    <g transform="translate(0 100)" fill="none" stroke="#ffc197" stroke-width="6">
+      <path d="M73 23Q51 44 28 70m59-39Q65 50 43 79M60 19Q39 43 16 62"/>
+    </g>
+    <g transform="translate(100 100)">
+      <path d="M50 13 80 26v27Q77 72 50 88 24 74 20 53V26Z" fill="#304f83" fill-opacity=".85" stroke="#92daef" stroke-width="5"/>
+      <path d="M50 27v46M34 47h32" stroke="#c5f8fd" stroke-width="4"/>
+    </g>
+    <g transform="translate(200 100)" stroke="#ffdf87" fill="none" stroke-width="4">
+      <path d="M23 76Q17 60 30 41L39 63 50 21 59 62 71 42Q84 63 77 76"/>
+      <path d="M19 80h62M25 28v12m-6-6h12m49-15v12m-6-6h12"/>
+    </g>
+    <g transform="translate(300 100)" fill="#a3f1bd" stroke="#e3ffe7" stroke-width="2">
+      <circle cx="31" cy="64" r="7"/><circle cx="72" cy="41" r="6"/><circle cx="57" cy="21" r="5"/>
+      <path d="M44 31h10v13h13v10H54v13H44V54H31V44h13Z"/>
+      <circle cx="71" cy="75" r="4"/>
+    </g>
+    <g transform="translate(0 200)">
+      <path d="M16 41 31 22h40l14 19-10 31-25 14-27-14Z" fill="#596980" stroke="#c6d4df" stroke-width="5"/>
+      <path d="M16 41h69M50 41v44M30 23l20 18 21-18" fill="none" stroke="#dce6ec" stroke-width="3"/>
+    </g>
+    <g transform="translate(100 200)" fill="none">
+      <circle cx="50" cy="50" r="36" fill="#6c5ad3" fill-opacity=".45" stroke="#c2b3ff" stroke-width="5"/>
+      <circle cx="50" cy="50" r="26" stroke="#a8c2ff" stroke-width="3" stroke-dasharray="4 6"/>
+      <path d="M50 25 67 60 33 60Z" stroke="#e5deff" stroke-width="3"/>
+    </g>
+    <g transform="translate(200 200)" fill="#f6a5d0" stroke="#ffe0f5" stroke-width="3">
+      <path d="M9 68 32 29l6 35 19-50 5 48 28-22-11 37H25Z"/>
+    </g>
+    <g transform="translate(300 200)" fill="none" stroke="#ffdc98" stroke-width="5">
+      <circle cx="50" cy="52" r="31" fill="#443751"/>
+      <path d="M50 34v20l13 8M41 13h18"/>
+    </g>
+  </g>
+
+  <view id="r01-focus-ring" viewBox="0 400 100 100"/>
+  <view id="r01-focus-aura" viewBox="100 400 100 100"/>
+  <view id="r01-focus-sparks" viewBox="200 400 100 100"/>
+  <view id="r01-heal-ring" viewBox="300 400 100 100"/>
+  <view id="r01-heal-sparks" viewBox="0 500 100 100"/>
+  <view id="r01-heal-glow" viewBox="100 500 100 100"/>
+  <view id="r01-ward" viewBox="200 500 100 100"/>
+  <view id="r01-thorns" viewBox="300 500 100 100"/>
+  <view id="r01-rebound" viewBox="0 600 100 100"/>
+  <view id="r01-impact" viewBox="100 600 100 100"/>
+  <view id="r01-direction" viewBox="200 600 100 100"/>
+
+  <svg x="0" y="400" width="100" height="100" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="51" rx="43" ry="18" fill="#ffad3d" fill-opacity=".24" stroke="#ffa743" stroke-width="7"/>
+    <ellipse cx="50" cy="51" rx="39" ry="15" fill="none" stroke="#fff0a6" stroke-width="3"/>
+    <ellipse cx="50" cy="51" rx="30" ry="10" fill="none" stroke="#ffc34e" stroke-width="2"/>
+  </svg>
+  <svg x="100" y="400" width="100" height="100" viewBox="0 0 100 100">
+    <path d="M30 87Q7 78 11 53Q16 60 20 60Q15 41 28 20Q27 37 34 38M70 87Q93 78 89 53Q84 60 80 60Q86 39 72 15Q74 33 66 39" fill="none" stroke="#f4a13a" stroke-width="9" stroke-opacity=".47" stroke-linecap="round"/>
+    <path d="M30 87Q7 78 11 53Q16 60 20 60Q15 41 28 20M70 87Q93 78 89 53Q84 60 80 60Q86 39 72 15" fill="none" stroke="#ffe489" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  <svg x="200" y="400" width="100" height="100" viewBox="0 0 100 100">
+    <path d="M15 49l4-7 4 7-4 7ZM29 26l3-6 3 6-3 6ZM78 31l4-8 4 8-4 8ZM83 62l4-7 4 7-4 7Z" fill="#fff1b4"/>
+    <circle cx="28" cy="73" r="3" fill="#ffb94e"/>
+    <circle cx="73" cy="80" r="2.5" fill="#ffd477"/>
+  </svg>
+  <svg x="300" y="400" width="100" height="100" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="51" rx="44" ry="20" fill="#00c98b" fill-opacity=".30" stroke="#69f2ba" stroke-width="4"/>
+    <ellipse cx="50" cy="51" rx="36" ry="15" fill="none" stroke="#d1ffe7" stroke-width="2" stroke-dasharray="7 3"/>
+    <path d="m50 38 23 13-23 13-23-13Zm0 6v14m-8-7h16" fill="none" stroke="#b7ffe0" stroke-width="2"/>
+  </svg>
+  <svg x="0" y="500" width="100" height="100" viewBox="0 0 100 100">
+    <g fill="#9affcd" stroke="#e5fff1" stroke-width="1.5">
+      <circle cx="18" cy="71" r="4"/><circle cx="25" cy="40" r="3"/>
+      <circle cx="32" cy="64" r="2.7"/><circle cx="74" cy="68" r="3.5"/>
+      <circle cx="84" cy="44" r="4.2"/><circle cx="69" cy="29" r="2.6"/>
+      <circle cx="47" cy="86" r="2.8"/>
+    </g>
+    <path d="M16 53h8m-4-4v8M78 56h8m-4-4v8" stroke="#d2ffe6" stroke-width="2"/>
+  </svg>
+  <svg x="100" y="500" width="100" height="100" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="56" rx="42" ry="32" fill="#48f3af" fill-opacity=".10" stroke="#5df2b7" stroke-opacity=".25" stroke-width="9"/>
+    <ellipse cx="50" cy="58" rx="38" ry="29" fill="none" stroke="#cbffe0" stroke-opacity=".58" stroke-width="3"/>
+  </svg>
+  <svg x="200" y="500" width="100" height="100" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#7965e2" fill-opacity=".15" stroke="#7c79ff" stroke-opacity=".45" stroke-width="6"/>
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#bda8ff" stroke-width="3"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="#9cdfff" stroke-width="2.5"/>
+    <path d="M50 3l5 5-5 5-5-5Zm42 42 5 5-5 5-5-5ZM50 87l5 5-5 5-5-5ZM8 45l5 5-5 5-5-5Z" fill="#efe4ff"/>
+    <path d="m23 22 4 9-9-3Zm54 0 5 6-9 3Zm0 56-4-9 9 3Zm-54 0-5-6 9-3Z" fill="#a5d7ff"/>
+  </svg>
+  <svg x="300" y="500" width="100" height="100" viewBox="0 0 100 100">
+    <g fill="#b92672" stroke="#ff9bd1" stroke-width="2.6" stroke-linejoin="round">
+      <path d="m13 70 2-23 11 18ZM16 46 8 27l21 14ZM28 36 26 14l16 18ZM42 26 49 5l7 22ZM61 32l17-18-4 23ZM75 44l19-14-7 21ZM79 68l13-15-1 23Z"/>
+    </g>
+    <path d="M16 77Q10 50 28 34Q50 17 74 35Q92 50 87 79" fill="none" stroke="#ff79ba" stroke-opacity=".75" stroke-width="3"/>
+  </svg>
+  <svg x="0" y="600" width="100" height="100" viewBox="0 0 100 100">
+    <path d="M6 51 42 32l-7 12 56-6-22 15 25 9-59-3 7 12Z" fill="#db397d" stroke="#ff91c8" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m12 51 28-4-5 5 35-2-15 7-20-2 5 5Z" fill="#ffe2f2"/>
+  </svg>
+  <svg x="100" y="600" width="100" height="100" viewBox="0 0 100 100">
+    <g fill="none" stroke="#ff9acb" stroke-width="5" stroke-linecap="round">
+      <path d="M28 18 42 35M10 37l17 7m-14 21 15-8m-4 25 17-17m29-45-8 15m14 43-14-15m25-18-14 7"/>
+      <circle cx="50" cy="51" r="20" stroke-width="2.5" stroke-dasharray="11 10"/>
+    </g>
+  </svg>
+  <svg x="200" y="600" width="100" height="100" viewBox="0 0 100 100">
+    <path d="M15 50 34 38v8h50v8H34v8Z" fill="#f58abd" stroke="#ffe1f1" stroke-width="2.5" stroke-linejoin="round"/>
+  </svg>
+</svg>
