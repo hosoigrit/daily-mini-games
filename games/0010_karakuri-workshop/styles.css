@@ -99,6 +99,8 @@ p { margin: .5rem 0; line-height: 1.55; }
 }
 .board-panel { padding: 0; overflow: clip; border: 0; outline: 1px solid #b79974; }
 #board { display: block; width: 100%; aspect-ratio: 4/3; background: var(--paper); touch-action: none; }
+#board[data-editor-state=DRAGGING] { cursor: grabbing; }
+#board[data-editor-state=NEW_PART] { cursor: crosshair; }
 .board-status { margin: 0; padding: .5rem .65rem; border-top: 1px solid #c3a57c; font-weight: 650; }
 #board-notice { padding-inline: .65rem; color: var(--warning); }
 #trail-guide { padding-inline: .65rem; font-size: .85rem; color: var(--select); }
@@ -120,6 +122,7 @@ dialog {
 }
 dialog::backdrop { background: rgb(35 27 21 / .65); }
 #dialog-content { display: grid; gap: .75rem; margin: .7rem 0; }
+.dialog-portrait { width: 72px; height: 90px; object-fit: contain; justify-self: center; }
 #dialog-content label { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; min-height: 44px; }
 #dialog-content input[type=range] { max-width: 100%; }
 @media (max-width: 620px) { .title-screen { grid-template-columns: 1fr; } .title-art img { max-height: 12rem; } }

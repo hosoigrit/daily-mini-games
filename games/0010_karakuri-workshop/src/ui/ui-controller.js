@@ -85,10 +85,18 @@ export function createUI(getGame) {
     previousDialog=s.dialog;
     let title='',content=[],actions=[button('閉じる',()=>act({type:'close-dialog'}))];
     const text=value=>element('p',value);
+    const portrait=pose=>{
+      const node=document.createElement('img');
+      node.className='dialog-portrait';
+      node.alt='ギア博士';
+      node.src='./assets/characters/gear-'+pose+'.svg';
+      node.addEventListener('error',()=>node.replaceWith(element('span',node.alt)),{once:true});
+      return node;
+    };
     switch(s.dialog.type){
       case 'HELP':
         title='遊び方';
-        content=[text('道具箱からパーツを選び、盤面をタップするか座標を指定して配置します。'),
+        content=[portrait('normal'),text('道具箱からパーツを選び、盤面をタップするか座標を指定して配置します。'),
           text('実験を始め、球をゴールの中で止めましょう。指定パーツがあるステージでは有効な使い方が必要です。'),
           text('Tabで操作を選べます。盤面では矢印で移動、QとEで回転、Ctrl+Zで元に戻します。')];
         break;
@@ -139,7 +147,7 @@ export function createUI(getGame) {
       }
       case 'HINT':
         title='ギア博士のヒント';
-        content=[text(s.dialog.hint?.text??(s.dialog.hint?'盤面に配置の例を表示しました。':'この設定で使える認定ヒントがありません。'))];
+        content=[portrait('thinking'),text(s.dialog.hint?.text??(s.dialog.hint?'盤面に配置の例を表示しました。':'この設定で使える認定ヒントがありません。'))];
         actions=[1,2,3].map(level=>button(`レベル ${level}`,()=>act({type:'hint',level}))).concat(actions);
         break;
       case 'HINT_CONFIRM':
@@ -223,6 +231,7 @@ export function createUI(getGame) {
       el('result-achievement').textContent=achievements
         .map(a=>a==='ALL_CLEARED'?'全ステージクリア達成':'30個の星を獲得').join('／');
       el('next-stage').hidden=s.screen!=='CLEARED'||s.stage.id==='10';
+      canvas.dataset.editorState=s.screen==='DESIGN'?s.editor.selection.state:'LOCKED';
       editPanel(s);
       portraits(s);
       draw(s);
