@@ -108,3 +108,102 @@ test('part selection uses displayed distances and the specified 8px inclusion bo
     assert.equal(result?.id==='ramp',hit);
   }
 });
+
+async function audioLab(){
+  const {createAudioController}=await import('../src/presentation/audio-controller.js');
+  const events=[],masters=[];
+  const context={state:'running',currentTime:0,destination:{},
+    createGain(){
+      const gain={value:0,setValueAtTime(value){gain.value=value;},linearRampToValueAtTime(value){gain.value=value;},cancelAndHoldAtTime(){}};
+      const node={gain,connect(target){if(target===context.destination)masters.push(gain);},disconnect(){}};
+      return node;
+    },
+    createOscillator(){
+      const data={starts:[],stops:[],frequencies:[]};
+      const tone={frequency:{setValueAtTime:f=>data.frequencies.push(f),linearRampToValueAtTime:f=>data.frequencies.push(f)},
+        start(at){data.starts.push(at);events.push(data);},stop(at){data.stops.push(at);},connect(){},disconnect(){}};
+      return tone;
+    },
+  };
+  const sound=createAudioController(()=>context);
+  await sound.gesture();
+  return {sound,context,events,masters};
+}
+const frameOverrides=props=>({usage:{frames:[],raw:[],state:{usedIds:[]},activation:null,...props?.usage},
+ presentation:{bodyObservations:[],contacts:[],...props?.presentation}});
+test('TC-D6-037-C001 actual normalized contact input crosses J/m and the real clock throttle',async()=>{
+  const {sound,context,events}=await audioLab();
+  sound.begin('R');
+  const collision=amount=>sound.observe('R',frameOverrides({presentation:{
+    contacts:[{event:'post-solve',points:[{normalImpulse:.2*amount}]}]}}));
+  collision(.149);assert.equal(events.length,0);
+  collision(.15);assert.equal(events.length,1);
+  context.currentTime=.050;collision(.151);assert.equal(events.length,1);
+  context.currentTime=.100;collision(.151);assert.equal(events.length,2);
+  assert(events.every(e=>e.frequencies[0]===450));
+});
+test('TC-D6-038-C001 no spring tone without a selected live activation',async()=>{
+  const {sound,events}=await audioLab();
+  sound.begin('R');
+  sound.observe('R',frameOverrides({usage:{raw:[{event:'pre-solve',id:'candidate'}]}}));
+  sound.observe('old',frameOverrides({usage:{activation:{springId:'winner'}}}));
+  assert.equal(events.length,0);
+  sound.observe('R',frameOverrides({usage:{activation:{springId:'winner'}}}));
+  assert.deepEqual(events.map(e=>e.frequencies),[[220,780]]);
+});
+test('TC-D6-039-C001 qualified same-episode tilt boundaries and 250 ms separation',async()=>{
+  const {sound,context,events}=await audioLab();sound.begin('R');
+  const observe=(degrees,upper=true)=>sound.observe('R',frameOverrides({
+    usage:{frames:[{qualified:upper?[{id:'S'}]:[]}]},
+    presentation:{bodyObservations:[{phase:'after-step-before-limit',substep:0,bodies:[{id:'S',kind:'S',angle:degrees*Math.PI/180}]}]}}));
+  observe(0);observe(4.9);assert.equal(events.length,0);
+  observe(5);observe(5.1);assert.equal(events.length,1);
+  context.currentTime=.100;observe(10);assert.equal(events.length,1);
+  context.currentTime=.250;observe(15);assert.equal(events.length,2);
+  observe(16,false);context.currentTime=.600;observe(31);assert.equal(events.length,2);
+});
+test('TC-D6-040-C001 terminal audio is once per run and newly earned stars only',async()=>{
+  const {sound,events}=await audioLab();
+  const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+  sound.begin('A');
+  sound.end({runId:'A',status:'FAILED'});sound.end({runId:'A',status:'FAILED'});
+  assert.equal(events.filter(e=>e.frequencies[0]===440).length,1);
+  for(const [id,newStars] of [['B',1],['C',2],['D',0]]){
+    const earlier=events.filter(e=>e.frequencies[0]===880).length;
+    sound.begin(id);
+    sound.end({runId:id,status:'CLEARED',newStars});sound.end({runId:id,status:'CLEARED',newStars});
+    await wait(300);
+    assert.equal(events.filter(e=>e.frequencies[0]===880).length-earlier,newStars);
+  }
+});
+test('TC-D6-043-C001 stop and old-run notifications cannot add sound',async()=>{
+  const {sound,events}=await audioLab();
+  sound.begin('A');sound.stop();
+  const activation=frameOverrides({usage:{activation:{springId:'stale'}}});
+  sound.observe('A',activation);
+  sound.begin('B');sound.observe('A',activation);assert.equal(events.length,0);
+  sound.observe('B',activation);assert.equal(events.length,1);
+});
+test('TC-D6-044-C001 unavailable audio context and failed resume warn without throwing',async()=>{
+  const {createAudioController}=await import('../src/presentation/audio-controller.js');
+  const failures=[()=>{throw new Error('constructor unavailable');},()=>({state:'suspended',currentTime:0,
+    createGain:()=>({connect(){},gain:{setValueAtTime(){}}}),
+    resume:()=>Promise.reject(new Error('resume failed'))})];
+  for(const make of failures){
+    const sound=createAudioController(make);
+    await sound.gesture();assert.equal(sound.unavailable(),true);
+    assert.equal(sound.play('clear'),false);
+  }
+});
+test('TC-D7-010-C001 four voice ceiling, priority and shared immediate master gain',async()=>{
+  const {sound,events,masters,context}=await audioLab();
+  for(let i=0;i<4;i++){context.currentTime+=.01;assert(sound.play('place'));}
+  assert.equal(sound.play('place'),false);
+  assert(sound.play('clear'));assert.equal(events.length,5);
+  assert(events[0].stops.length>1);
+  sound.configure({muted:false,volume:1});assert.equal(masters[0].value,1);
+  sound.configure({muted:false,volume:.7});assert.equal(masters[0].value,.7);
+  sound.configure({muted:true,volume:.7});assert.equal(masters[0].value,0);
+  assert.equal(sound.play('clear'),false);
+  assert(events.filter(e=>e.stops.length>1).length>=4);
+});

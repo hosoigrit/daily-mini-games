@@ -393,3 +393,114 @@ child('TC-D5-005-C002',async()=>{
     assert.equal(f.scene.state().editor.history.length,status==='legal'?1:0);
   }
 });
+
+for(const [i,scope] of [[6,'gravity'],[8,'engine'],[9,'sweep']]){
+  child('TC-D5-037-C'+String(i).padStart(3,'0'),async()=>{
+    const doc=readFileSync(resolve(__dirname,'../../../handoffs/game-0010/06_data_design.md'),'utf8');
+    const matched=[...doc.matchAll(/正規文字列（末尾改行なし）:\n```json\n([^\n]+)\n```/gu)].map(m=>JSON.parse(m[1]));
+    const canonical=x=>digest(JSON.stringify(stageSource.canonicalPayload(x)));
+    const rows=[];
+    for(const selected of Object.values(designs)){
+      const geometry=stageSource.geometryPayload(selected.stage),physics=stageSource.physicsPayload();
+      const template={...matched[2],stageId:selected.stage.id,geometryId:canonical(geometry),physicsRulesVersion:canonical(physics),
+        star3Target:selected.stage.star3Target,requiredUsage:{type:{slope:'rotated-ramp',R:'ramp',P:'platform',B:'spring',S:'seesaw'}[selected.stage.required]??'none',ruleVersion:'v1'}};
+      assert.equal(canonical(template),selected.identity.compatibilityId);
+      const changedGeometry=structuredClone(geometry),changedPhysics=structuredClone(physics);
+      if(scope==='gravity')changedPhysics.gravity.y=-10;
+      if(scope==='engine')changedPhysics.engineSha='f'.repeat(64);
+      if(scope==='sweep')changedGeometry.sweepEnvelope.expandM=.066;
+      const newGeometry=canonical(changedGeometry),newPhysics=canonical(changedPhysics);
+      assert.equal(newGeometry!==template.geometryId,scope==='sweep');
+      assert.equal(newPhysics!==template.physicsRulesVersion,scope!=='sweep');
+      assert.notEqual(canonical({...template,geometryId:newGeometry,physicsRulesVersion:newPhysics}),selected.identity.compatibilityId);
+      rows.push({stage:selected.stage.id,geometryChanged:scope==='sweep',physicsChanged:scope!=='sweep',compatibilityChanged:true});
+    }
+    return {scope,rows};
+  });
+}
+async function unknownWrite(f){
+  await f.repository.start();
+  const baseline=f.bytes.get(save.SAVE_KEY);
+  f.behavior.read=count=>{if(count>0)throw new Error('readback unavailable');};
+  const candidate={...f.repository.read().data,settings:{volume:.4,muted:true}};
+  assert.equal(f.repository.commit(candidate),false);
+  assert.equal(f.repository.read().status,'UNKNOWN');
+  return {baseline,candidate,written:f.bytes.get(save.SAVE_KEY)};
+}
+child('TC-D7-008-C001',async()=>{
+  const results=[];
+  for(const [kind,expected] of [['new','SAVED'],['old','UNSAVED'],['foreign','CONFLICT'],['unreadable','UNKNOWN']]){
+    const f=setup();
+    const original=await unknownWrite(f);
+    if(kind!=='unreadable')delete f.behavior.read;
+    if(kind==='old')f.bytes.set(save.SAVE_KEY,original.baseline);
+    if(kind==='foreign')f.bytes.set(save.SAVE_KEY,'foreign');
+    const actual=f.repository.reconcile();
+    assert.equal(f.repository.read().status,expected);
+    assert.equal(actual,kind==='new');
+    assert.equal(f.writes.length,1);
+    results.push({kind,expected,actual:f.repository.read().status});
+  }
+  return results;
+});
+for(const id of ['TC-D7-008-C003','TC-D7-008-C007'])child(id,async()=>{
+  const f=setup({...fixture(),revision:12});
+  await unknownWrite(f);
+  const c={...f.repository.read().data,settings:{volume:.2,muted:true}};
+  assert.equal(f.repository.commit(c),false);
+  delete f.behavior.read;
+  assert(f.repository.reconcile());
+  assert.equal(expectRevision(f,13).settings.volume,.4);
+  assert.equal(f.repository.read().data.settings.volume,.2);
+  assert.equal(f.repository.read().status,'UNSAVED');
+  if(id.endsWith('003')){
+    assert(f.repository.commit(f.repository.read().data));
+    assert.equal(expectRevision(f,14).settings.volume,.2);
+  }
+});
+child('TC-D7-008-C004',async()=>{
+  const f=setup();
+  await unknownWrite(f);
+  f.repository.release();
+  delete f.behavior.read;
+  const before=structuredClone(f.repository.read());
+  assert.equal(f.repository.reconcile(),false);
+  assert.deepEqual(f.repository.read(),before);
+  assert.equal(f.writes.length,1);
+});
+child('TC-D7-008-C005',async()=>{
+  const d=fixture();d.revision=Number.MAX_SAFE_INTEGER;draft(d,'01',[ramp]);
+  const f=setup(d);await f.repository.start();
+  f.behavior.read=count=>{if(count>0)throw new Error('readback unavailable');};
+  assert.equal(f.repository.reset(true),false);
+  assert.deepEqual(f.repository.read().data.stages['01'].draft.placements,[ramp]);
+  const written=expectRevision(f,0);
+  assert.equal(written.saveEpoch,newEpoch);
+  delete f.behavior.read;
+  assert(f.repository.reconcile());
+  assert.equal(f.repository.read().data.stages['01'].draft,null);
+});
+child('TC-D7-008-C006',async()=>{
+  const f=setup({...fixture(),schemaVersion:2});
+  const before=f.bytes.get(save.SAVE_KEY);
+  await f.repository.start();
+  assert.equal(f.repository.commit(f.repository.read().data),false);
+  assert.equal(f.repository.reset(true,true),false);
+  assert.equal(f.bytes.get(save.SAVE_KEY),before);
+});
+child('TC-D7-009-C001',()=>{
+  const data=fixture();
+  data.stages['01'].progress={cleared:true,historicalBestStars:3};
+  const saved=activeBest('01',[ramp]);
+  data.stages['01'].currentBest=saved;
+  const render=name=>{
+    const variant={...designs,'01':{...designs['01'],identity:{...designs['01'].identity,compatibilityId:name}}};
+    return save.assessSave(JSON.stringify(data),variant).data;
+  };
+  const once=render('old-revision-a');
+  Object.assign(data,once);
+  const second=render('old-revision-b');
+  assert.deepEqual(second.stages['01'].previousBest,saved);
+  assert.equal(second.stages['01'].currentBest,null);
+  assert.deepEqual(second.stages['01'].progress,{cleared:true,historicalBestStars:3});
+});
