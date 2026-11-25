@@ -4,7 +4,7 @@ import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, MATERIALS
 import {applyEditCommand, canonicalDesign, createDesignEditor} from '../domain/design-editor.js';
 import {createGoal, createRuleSimulation, evaluateTerminal} from '../domain/result-evaluator.js';
 import {starsForResult} from '../domain/score-service.js';
-import {createWorld, disposeWorld} from '../physics/adapter.js';
+import {collectContactEvidence, createWorld, disposeWorld} from '../physics/adapter.js';
 import {canonicalizePlacements, createBall, createDynamicBody, createRevoluteJoint, createStaticBody} from '../physics/body-factory.js';
 
 const stages = [
@@ -158,10 +158,15 @@ export function buildStageDesign(stage, parts) {
   return {ok: true, placements: editor.placements};
 }
 
-export function createStageExperiment(stage, placements, {runId, observe} = {}) {
+export function createStageExperiment(stage, placements, {runId, observe, observePresentation = false} = {}) {
   const design = buildStageDesign(stage, placements);
   if (!design.ok) throw new RangeError(`Illegal stage design: ${design.reason}`);
-  const runtime = createWorld({runId, observe});
+  let bodyObservations=[];
+  const observer=observePresentation?row=>{
+    bodyObservations.push(row);
+    observe?.(row);
+  }:observe;
+  const runtime = createWorld({runId, observe:observer});
   const {world} = runtime;
   try {
     const ordered = canonicalizePlacements([
@@ -197,9 +202,11 @@ export function createStageExperiment(stage, placements, {runId, observe} = {}) 
       get result() { return terminal; },
       step() {
         if (terminal.status !== 'RUNNING') return null;
+        bodyObservations=[];
         const state = rules.advanceTick();
         terminal = evaluateTerminal(state);
         return {...state, ...terminal,
+          ...(observePresentation?{presentation:{bodyObservations,contacts:collectContactEvidence(runtime)}}:{}),
           stars: starsForResult(terminal.status, design.placements.length, stage.star3Target)};
       },
       dispose() { disposeWorld(runtime); },

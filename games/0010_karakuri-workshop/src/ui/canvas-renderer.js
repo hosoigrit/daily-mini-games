@@ -38,7 +38,16 @@ export function createCanvasRenderer(canvas) {
     if(!state.stage)return;
     const {stage,editor}=state;
     rect({x:stage.goal.x,y:stage.goal.y+.32,width:1.52,height:.96},{paint:'#6e9368',open:true,alpha:.5});
-    for(const fixed of stage.fixed)rect(fixed);
+    for(const board of editor.placements.filter(p=>p.type==='S')){
+      for(const angleDeg of [-32,-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30,32]){
+        rect({...board,angleDeg,width:2.05,height:.29},{paint:'#426f91',open:true,alpha:.10});
+      }
+    }
+    for(const fixed of stage.fixed){
+      rect(fixed);
+      const center=point(fixed);
+      ctx.fillStyle='#3d3028';ctx.font='600 16px system-ui';ctx.fillText('固定',center.x-15,center.y-25);
+    }
     const dynamic=state.snapshot?.bodies??[];
     const sortedBoards=editor.placements.filter(p=>p.type==='S').sort((a,b)=>a.gridX-b.gridX||a.gridY-b.gridY);
     const boardBodies=dynamic.filter(p=>p.kind==='S').sort((a,b)=>a.id.localeCompare(b.id,undefined,{numeric:true}));

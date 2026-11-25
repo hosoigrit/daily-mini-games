@@ -10,12 +10,16 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
   let saved = 0;
   let unknown = null;
   let externalChange=false;
-  const read=()=>({mode,status,data,generation:token,editing,saved,dirty:editing!==saved,externalChange});
+  let recoveryReason=null;
+  const read=()=>({mode,status,data,generation:token,editing,saved,dirty:editing!==saved,externalChange,recoveryReason});
   const changed=()=>editing++;
   function persist(next, recovery=false){
     if (!lock.isOwner(token) || !recovery && (mode !== 'OWNER' || unknown || status==='CONFLICT')) return false;
     const newRaw=JSON.stringify(next);
-    if(newRaw.length>MAX_SAVE_LENGTH || assessSave(newRaw,designs).status!=='VALID')return false;
+    if(newRaw.length>MAX_SAVE_LENGTH || assessSave(newRaw,designs).status!=='VALID'){
+      status='UNSAVED';
+      return false;
+    }
     const baseline=raw;
     try{
       if(storage.getItem(SAVE_KEY)!==baseline){status='CONFLICT';return false;}
@@ -62,6 +66,7 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
     token=acquired.generation;mode=acquired.mode;raw=observed;
     const loaded=assessSave(raw,designs);
     data=loaded.data??createDefaultSave(epoch());
+    recoveryReason=loaded.reason??null;
     unknown=null;
     externalChange=false;
     editing=saved=0;
@@ -119,6 +124,7 @@ export function createSaveRepository({storage, lock, designs, epoch = createSave
     },
     reset(confirm=false, preserve=false){
       if(!confirm||!lock.isOwner(token)||unknown||status==='CONFLICT')return false;
+      if(preserve&&recoveryReason==='VERSION')return false;
       const validRevision=Number.isSafeInteger(data.revision)&&data.revision>=0&&data.revision<Number.MAX_SAFE_INTEGER-1;
       const validEpoch=typeof data.saveEpoch==='string'&&/^[0-9a-f]{32}$/u.test(data.saveEpoch);
       const nextEpoch=validEpoch&&validRevision?data.saveEpoch:epoch();

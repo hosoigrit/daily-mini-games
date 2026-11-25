@@ -261,15 +261,21 @@ async function launch(){
   let game=null;
   const change=createUI(()=>game);
   game=createGameController({stages,identities,hints:certifiedHints,storage,sound,change});
-  for(const name of ['pointerdown','keydown'])document.addEventListener(name,()=>sound.gesture(),{capture:true});
+  for(const name of ['pointerdown','keydown'])document.addEventListener(name,()=>{
+    sound.gesture().then(()=>{if(sound.unavailable())change(game.state());});
+  },{capture:true});
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden)game.hidden();
     else{storage.reconcile();change(game.state());}
   });
-  screen.orientation?.addEventListener('change',()=>game.rotated());
+  if(screen.orientation?.addEventListener)screen.orientation.addEventListener('change',()=>game.rotated());
+  else addEventListener('orientationchange',()=>game.rotated());
   addEventListener('pagehide',()=>{game.detached();storage.release();});
   addEventListener('pageshow',async e=>{
-    if(e.persisted){await storage.start();game.restoreView();}
+    if(e.persisted&&await storage.start()){
+      sound.configure(storage.read().data.settings);
+      game.restoreView();
+    }
   });
   addEventListener('storage',e=>{
     if(e.key===SAVE_KEY&&storage.notify(e.newValue))change(game.state());

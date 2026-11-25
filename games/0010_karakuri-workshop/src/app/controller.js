@@ -18,6 +18,7 @@ export function createGameController({stages, identities, hints, storage, change
   let screen='TITLE', stage=null, editor=null, experiment=null, session=null, designId=0, frame=null, runSerial=0;
   let snapshot=null, current=null, dialog=null, ghost=null, hintConfirmed=false, showTrail=true, pauseReason='';
   let notice='';
+  let runGeneration=null, bestUpdated=false, newStars=0;
   const saveData=()=>storage.read().data;
   const identity=()=>identities[stage?.id];
   function progress(){
@@ -35,12 +36,13 @@ export function createGameController({stages, identities, hints, storage, change
   function state(){
     return {screen,stage,editor,snapshot,current,dialog,ghost,showTrail,pauseReason,notice,stages,
       unlocked:unlockedStages(progress()),progress:saveData(),save:storage.read(),result:session?.read().result,
-      failure:failMessages[session?.read().result?.code],previousTrajectory:session?.read().previousTrajectory};
+      failure:failMessages[session?.read().result?.code],previousTrajectory:session?.read().previousTrajectory,
+      bestUpdated,newStars,audioUnavailable:sound.unavailable?.()??false};
   }
   const update=()=>change(state());
-  function saveStage(next){
+  function saveStage(next,generation=storage.read().generation){
     const before=saveData();
-    storage.commit({...before,stages:{...before.stages,[stage.id]:next}});
+    storage.commit({...before,stages:{...before.stages,[stage.id]:next}},generation);
   }
   function loadDesign(next){
     dispose();
@@ -67,11 +69,18 @@ export function createGameController({stages, identities, hints, storage, change
       const pack=entry=>entry?{compatibilityId:entry.compatibility,physicsRulesVersion:identity().physicsRulesVersion,
         usedParts:entry.placedCount,stars:entry.stars,placements:encodePlacements(entry.placements)}:null;
       const best=pack(state.best);
-      saveStage({...saved,progress:{cleared:true,historicalBestStars:state.historicalStars},
-        currentBest:best,previousBest:saved.previousBest});
-      editor={...editor,best:decodePlacements(best.placements)};
+      newStars=Math.max(0,state.historicalStars-(saved.progress.historicalBestStars??0));
+      bestUpdated=!saved.currentBest||best.usedParts<saved.currentBest.usedParts;
+      if(runGeneration===storage.read().generation){
+        saveStage({...saved,progress:{cleared:true,historicalBestStars:state.historicalStars},
+          currentBest:best,previousBest:saved.previousBest},runGeneration);
+        editor={...editor,best:decodePlacements(best.placements)};
+      }else{
+        bestUpdated=false;
+        notice='保存権限の変更により、この実験結果は一時表示です。';
+      }
     }
-    sound.end(result);
+    sound.end({...result,newStars});
     dispose();
   }
   function step(){
@@ -106,7 +115,10 @@ export function createGameController({stages, identities, hints, storage, change
     const settled=applyEditCommand(editor,stage,{type:'cancel'});
     editor=settled.state;
     ghost=null;dialog=null;snapshot=null;current=null;
-    experiment=createStageExperiment(stage,editor.placements,{runId:id,observe:obs=>{snapshot=obs;}});
+    bestUpdated=false;newStars=0;runGeneration=storage.read().generation;
+    experiment=createStageExperiment(stage,editor.placements,{
+      runId:id,observe:obs=>{snapshot=obs;},observePresentation:true,
+    });
     session.start({id,initialPosition:stage.ball,placements:editor.placements,stageId:stage.id,
       compatibility:identity().compatibilityId,star3Target:stage.star3Target});
     sound.begin(id);
@@ -137,8 +149,8 @@ export function createGameController({stages, identities, hints, storage, change
     if(isEditCommand(command)){
       accepted=edit(command);
     }else switch(command.type){
-      case 'enter': dispose();screen='STAGES';dialog=null;break;
-      case 'title': dispose();screen='TITLE';dialog=null;break;
+      case 'enter': dispose();sound.stop();screen='STAGES';dialog=null;break;
+      case 'title': dispose();sound.stop();screen='TITLE';dialog=null;break;
       case 'stage': {
         const candidate=stages.find(s=>s.id===command.id);
         accepted=Boolean(candidate&&unlockedStages(progress()).includes(candidate.id));

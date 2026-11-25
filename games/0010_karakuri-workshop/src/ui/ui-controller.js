@@ -42,7 +42,12 @@ export function createUI(getGame) {
       b.append(element('span',`${stage.id}　${stage.name}`));
       const note=element('span',available?(stars===null?'歴代の星 不明':`歴代の星 ${stars} / 3`):'🔒 前のステージをクリア');
       note.className='stage-note';
-      b.append(note);li.append(b);return li;
+      b.append(note);
+      if(available){
+        const best=s.progress.stages[stage.id].currentBest;
+        b.append(element('span',best?`現行ベスト ${best.stars} / 3`:'現行ベストなし'));
+      }
+      li.append(b);return li;
     });
     el('stage-list').replaceChildren(...cards);
   }
@@ -100,7 +105,9 @@ export function createUI(getGame) {
         mute.addEventListener('change',()=>act({type:'setting',key:'muted',value:mute.checked}));
         content=[volumeLabel,muteLabel,text(saveText[s.save.status]??'一時プレイ')];
         actions.unshift(button('保存データを初期化',()=>act({type:'reset-request'})));
-        if(s.save.mode==='RECOVERY_REQUIRED')actions.unshift(button('保存データを復旧',()=>act({type:'recover-request'})));
+        if(s.save.mode==='RECOVERY_REQUIRED'&&s.save.recoveryReason!=='VERSION'){
+          actions.unshift(button('保存データを復旧',()=>act({type:'recover-request'})));
+        }
         if(s.save.mode!=='OWNER'&&s.save.mode!=='RECOVERY_REQUIRED'||s.save.externalChange){
           actions.unshift(button('保存権限を再取得',()=>act({type:'reacquire'})));
         }
@@ -156,7 +163,8 @@ export function createUI(getGame) {
     if(command==='delete')act({type:command,id:latest.editor?.selection.id});
     else if(command)act({type:command});
   });
-  el('parts').addEventListener('change',event=>act({type:'select',id:event.target.value}));
+  el('parts').addEventListener('change',event=>act(event.target.value
+    ?{type:'select',id:event.target.value}:{type:'clear-selection'}));
   el('place-coordinate').addEventListener('click',()=>{
     const {selection}=latest.editor;
     const gridX=el('grid-x').valueAsNumber,gridY=el('grid-y').valueAsNumber;
@@ -184,6 +192,7 @@ export function createUI(getGame) {
   new ResizeObserver(()=>{if(latest)draw(latest);}).observe(canvas);
   return function render(s){
     latest=s;
+    el('audio-notice').hidden=!s.audioUnavailable;
     el('title-screen').hidden=s.screen!=='TITLE';
     el('stage-screen').hidden=s.screen!=='STAGES';
     const work=s.stage&&['DESIGN','RUNNING','PAUSED','CLEARED','FAILED','ERROR'].includes(s.screen);
@@ -206,7 +215,13 @@ export function createUI(getGame) {
       el('trail-guide').hidden=!s.previousTrajectory||!s.showTrail||['RUNNING','PAUSED'].includes(s.screen);
       el('trail-button').setAttribute('aria-pressed',String(s.showTrail));
       el('result-heading').textContent=s.screen==='CLEARED'?'クリア！':s.screen==='ERROR'?'実験エラー':'実験失敗';
-      el('result-details').textContent=s.screen==='CLEARED'?`星 ${s.result?.stars} / 3　使用 ${s.editor.placements.length} 個`:s.failure??'';
+      el('result-details').textContent=s.screen==='CLEARED'
+        ?`星 ${s.result?.stars} / 3　使用 ${s.editor.placements.length} 個　${s.bestUpdated?'ベスト更新':'ベスト更新なし'}`
+        :s.failure??'';
+      const achievements=s.result?.achievements??[];
+      el('result-achievement').hidden=!achievements.length;
+      el('result-achievement').textContent=achievements
+        .map(a=>a==='ALL_CLEARED'?'全ステージクリア達成':'30個の星を獲得').join('／');
       el('next-stage').hidden=s.screen!=='CLEARED'||s.stage.id==='10';
       editPanel(s);
       portraits(s);

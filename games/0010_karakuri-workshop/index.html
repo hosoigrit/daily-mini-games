@@ -18,6 +18,7 @@
     </nav>
   </header>
   <main id="game" aria-busy="true">
+    <p id="audio-notice" role="status" hidden>この環境では音声を再生できません。実験は続けられます。</p>
     <section id="title-screen" class="title-screen">
       <div class="title-copy">
         <h1>からくり工房</h1>
@@ -92,7 +93,7 @@
           </div>
           <div id="result-panel" hidden aria-live="polite">
             <h2 id="result-heading"></h2>
-            <p id="result-details"></p>
+            <p id="result-details"></p><p id="result-achievement" hidden></p>
             <div class="button-row">
               <button type="button" class="primary" data-command="redesign">もう一度設計</button>
               <button type="button" id="next-stage">次のステージ</button>
