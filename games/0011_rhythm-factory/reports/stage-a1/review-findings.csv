@@ -1,0 +1,3 @@
+review_id,severity,requirement_ids,target,finding,evidence,correction,retest,reviewer,status
+RV-A1-001,MEDIUM,IF-09;TC-D4-009;POC-13,src/app/composition-root.ts:8 (initial),UIに合成セッションがある間も描画ポートが常にnullを読みREADYを返す,初回SHAでUIがINITIALIZINGかつ描画がREADYと独立再現,同じセッション所有元の描画投影に接続し開始と破棄と解放後を統合テストで確認,是正SHAで実装担当とAG-10が全検証を再実行しPASS,AG-10 /root/ag10,CLOSED
+RV-A1-002,LOW,POC-18;A-1成果物引き渡し,README.md:8-10 (initial),Cloudでの管理版ブラウザ再実行手順とWebKit起動補助の指定が不足,既定のnpm run test:e2eだけでは同タスクの起動条件を復元できない,READMEとenvironment.jsonに再実行コマンドと必要パスと再構築条件を追記,是正SHAでAG-10が記載パスと3ブラウザのフルリプレイを確認,AG-10 /root/ag10,CLOSED
