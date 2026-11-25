@@ -8,6 +8,7 @@ export const PHYSICS_PROFILES = Object.freeze({
   PP02: Object.freeze({substeps: 1, velocityIterations: 12, positionIterations: 8}),
   PP03: Object.freeze({substeps: 2, velocityIterations: 8, positionIterations: 3}),
 });
+export const SELECTED_PHYSICS_PROFILE = 'PP03';
 
 export const BALL = Object.freeze({
   radius: 0.2,

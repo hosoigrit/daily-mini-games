@@ -1,6 +1,6 @@
 import {Vec2, World} from '../../vendor/planck/planck.mjs';
-import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, JOINT_ANGLE_TOLERANCE, MAX_PIVOT_DRIFT, PHYSICS_PROFILES,
-  TICK_SECONDS} from '../data/physics-config.js';
+import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, JOINT_ANGLE_TOLERANCE, MAX_PIVOT_DRIFT,
+  PHYSICS_PROFILES, SELECTED_PHYSICS_PROFILE, TICK_SECONDS} from '../data/physics-config.js';
 
 const copy = ({x, y}) => ({x, y});
 const kind = body => body.getUserData()?.kind;
@@ -114,7 +114,7 @@ function watchContacts(runtime) {
 
 let worldSequence = 0;
 
-export function createWorld({profile = 'PP01', gravity = DEFAULT_GRAVITY, observe = null,
+export function createWorld({profile = SELECTED_PHYSICS_PROFILE, gravity = DEFAULT_GRAVITY, observe = null,
   runId = `world-${++worldSequence}`} = {}) {
   if (!Object.hasOwn(PHYSICS_PROFILES, profile) || ![gravity.x, gravity.y].every(Number.isFinite)) {
     throw new RangeError('Unknown physical profile or invalid gravity.');
