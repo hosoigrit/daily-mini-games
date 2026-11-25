@@ -60,7 +60,7 @@ function trial(offset,speed,geometry){
         const {x,y}=board.joint.getAnchorB();
         const torque=-(p.x-x)*normal.y*J+(p.y-y)*normal.x*J;
         load.push({tick:runtime.ticks+1,substep:runtime.substep,p,normal,J,torque,
-          alignment:normal.x*up.x+normal.y*up.y,angle,angularVelocity:native.getAngularVelocity()});
+          alignment:normal.x*up.x+normal.y*up.y,angle,angularVelocity:native.getAngularVelocity(),...calc()});
       }
     });
     let error=null;
@@ -69,8 +69,8 @@ function trial(offset,speed,geometry){
       if(!advanced){error=physics.getDiagnostics(runtime);break;}
     }
     const final=calc();
-    const pivot=Math.max(final.pivotError,...samples.map(x=>x.pivotError));
-    const excursion=Math.max(Math.abs(final.angle),...samples.map(x=>Math.abs(x.angle)));
+    const pivot=Math.max(final.pivotError,...[...samples,...load].map(x=>x.pivotError));
+    const excursion=Math.max(Math.abs(final.angle),...[...samples,...load].map(x=>Math.abs(x.angle)));
     return {runId:runtime.runId,offset,speed,ticks:runtime.ticks,error,pivot,excursion,final,samples,load};
   }finally{physics.disposeWorld(runtime);}
 }
@@ -121,7 +121,7 @@ test('TC-D2-035-C001 new world follows real tilted world',t=>{
 });
 
 function combine(geometry) {
-  const runtime=physics.createWorld();
+  const runtime=physics.createWorld({gravity:geometry.gravity});
   const board=seesaw.createSeesawAssembly(runtime.world,{...geometry.board,id:'S'});
   const b=geometry.spring;
   const body=factory.createStaticBody(runtime.world,{...b,kind:'B',id:'B',width:.72,height:.24});
@@ -168,20 +168,33 @@ test('TC-D1-032-C001 explicitly contaminated old run cannot carry into new world
   }finally{physics.disposeWorld(old.runtime);}
 });
 test('TC-D1-032-C002 after native spring launch and independent tilted runs',t=>{
-  const springGeometry={board:{x:7.5,y:2.4},spring:{x:4.8,y:2.4},ball:{x:4.8,y:2.77}};
+  const springGeometry={board:{x:7.5,y:2.4},spring:{x:4.8,y:2.4},ball:{x:4.8,y:2.77},gravity:{x:0,y:0}};
   const run=combine(springGeometry), id=run.runtime.runId;
-  let actual=null,independent=0;
+  run.ball.setLinearVelocity({x:0,y:-1});
+  let actual=null;
+  const independent=[];
   try{
     run.runtime.world.on('pre-solve',contact=>{
       const a=contact.getFixtureA().getBody(),b=contact.getFixtureB().getBody();
-      if(a===run.ball&&b.getUserData()?.kind==='B'||b===run.ball&&a.getUserData()?.kind==='B') independent++;
+      if(!(a===run.ball&&b.getUserData()?.kind==='B'||b===run.ball&&a.getUserData()?.kind==='B')) return;
+      const manifold=contact.getWorldManifold();
+      if(!manifold?.pointCount) return;
+      const sign=a===run.ball?-1:1;
+      const displ=manifold.points[0], com=run.ball.getWorldCenter(),v=run.ball.getLinearVelocity(),w=run.ball.getAngularVelocity();
+      const normal={x:sign*manifold.normal.x,y:sign*manifold.normal.y};
+      const relative={x:v.x-w*(displ.y-com.y),y:v.y+w*(displ.x-com.x)};
+      const local={x:displ.x-springGeometry.spring.x,y:displ.y-springGeometry.spring.y};
+      const approach=-(normal.x*relative.x+normal.y*relative.y);
+      independent.push({tick:run.runtime.ticks+1,local,normal,approach});
     });
     for(let i=0;i<60;i++){
       const row=run.sim.advanceTick();
       assert(row.advanced);
       if(row.activation){actual=row.activation;break;}
     }
-    assert(actual&&independent>0);
+    assert(actual);
+    assert(independent.some(contact=>contact.tick===actual.tick&&Math.abs(contact.local.x)<=.36
+      &&Math.abs(contact.local.y-.12)<=.025&&contact.normal.y>=Math.cos(Math.PI/6)&&contact.approach>=.4));
     near(actual.velocity.x,0);near(actual.velocity.y,9.5);
   }finally{physics.disposeWorld(run.runtime);}
   const fresh=combine(springGeometry);
