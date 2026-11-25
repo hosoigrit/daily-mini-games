@@ -169,8 +169,9 @@ export function attachTutorialPhysics(runtime, ball, parts, requirement) {
       if (magnitude > 1e-6) {
         const {point} = before.geometry;
         const impulse = {x: -sign * this.v_normal.x * magnitude, y: -sign * this.v_normal.y * magnitude};
+        const tangent = {x: Math.cos(angleBefore), y: Math.sin(angleBefore)};
         const load = {...before.geometry, tick: runtime.ticks + 1, substep: runtime.substep, pivot, impulse,
-          offset: body.getLocalPoint(point).x, omegaBefore, omegaAfter: body.c_velocity.w, angleBefore,
+          offset: dot(difference(point, pivot), tangent), omegaBefore, omegaAfter: body.c_velocity.w, angleBefore,
           angle: body.getAngle(), episode: episode.get(part.id)};
         raw.push({event: 'solver-load', ...load});
         evaluator.observeSeesaw(load);
