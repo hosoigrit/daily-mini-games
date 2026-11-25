@@ -1,0 +1,42 @@
+{
+  "stage": "E1",
+  "testedSha": "94125aa8a8a01fcc2b86d9eb8ccdaff2d0b4e9b1",
+  "approvalId": "EXEC-GAME-0010-CR004-AUTONOMOUS-FULL",
+  "reviewMode": "independent separate read-only contexts",
+  "roles": {
+    "e0_review": "independent E1 rerun evidence and engine review",
+    "e1_test_plan": "independent test design and raw trace audit",
+    "primary": "sole writer and automated execution"
+  },
+  "checks": {
+    "CR004-A": "PASS",
+    "CR004-B": "PASS",
+    "originalLegacyEG00": "HOLD",
+    "fixedPlanckABReversal": "BLOCKED",
+    "solverPivotErrorMaximumM": 0.000357369
+  },
+  "findings": [
+    {
+      "caseId": "TC-D1-026-C002",
+      "code": "LS-11",
+      "status": "BLOCKED",
+      "severity": "High",
+      "frozenManifest": "handoffs/game-0010/18_test_execution_manifest.json:8531",
+      "runId": "CR004-E1-FIXED-CONTROLS-53",
+      "rawFile": "cr004-e1-independent.jsonl",
+      "gameTicksPerWorld": 120,
+      "realPreSolveRowsPerWorld": 192,
+      "realPreSolveRowsTotal": 384,
+      "rawABInBothCreationOrders": [
+        "P",
+        "ball"
+      ],
+      "rawArrayComparison": "IDENTICAL",
+      "actualFixtureABReversals": 0,
+      "comparisonTolerance": 1e-06,
+      "productCheck": "Independently calculated normals and point approach speeds agreed with live product assertions.",
+      "reviewLimit": "Opposite fixtures creation order is real; pinned Planck only registers polygon-to-circle. Raw records do not retain the DUT comparison values separately.",
+      "disposition": "Requires a decision on this physical-case evidence contract; retain original case, the BLOCKED result, and independent synthetic case scope."
+    }
+  ]
+}

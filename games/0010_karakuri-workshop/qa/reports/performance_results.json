@@ -1,0 +1,57 @@
+{
+  "stage": "E1",
+  "testedSha": "94125aa8a8a01fcc2b86d9eb8ccdaff2d0b4e9b1",
+  "approvalId": "EXEC-GAME-0010-CR004-AUTONOMOUS-FULL",
+  "CR004-B": {
+    "status": "PASS",
+    "candidate": "PP03",
+    "formalProfileSelected": false,
+    "runId": "CR004-E1-BENCHMARK-52",
+    "rawFile": "cr004-e1-b.jsonl",
+    "testPolicy": {
+      "staticCases": 36,
+      "dynamicCases": 36,
+      "ticksPerCase": 12,
+      "environments": [
+        "Node.js",
+        "Chromium"
+      ],
+      "warmupPerEnvironment": 1,
+      "measuredPerEnvironment": 5,
+      "minimumTicksPerSecond": 60,
+      "maxTickP95Millis": 16.67
+    },
+    "observed": [
+      {
+        "environment": "Node.js",
+        "version": "v26.13.0",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 113.15643600000112,
+          "ticksPerSecond": 38177.236335014626,
+          "p95Milliseconds": 0.0634059999999863,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        }
+      },
+      {
+        "environment": "Chromium",
+        "version": "158.0.8127.18",
+        "summary": {
+          "totalTicks": 4320,
+          "milliseconds": 103.60000003874302,
+          "ticksPerSecond": 41698.841683247694,
+          "p95Milliseconds": 0.10000000149011612,
+          "abnormalExits": 0,
+          "numericAnomalies": 0
+        }
+      }
+    ],
+    "metric": "nearest-rank p95 per environment; aggregate ticks / aggregate measured production-step time",
+    "priority": [
+      "PP01",
+      "PP02",
+      "PP03"
+    ]
+  }
+}
