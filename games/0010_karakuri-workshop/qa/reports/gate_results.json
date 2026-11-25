@@ -1,0 +1,31 @@
+{
+  "EG-00": "HOLD",
+  "E0-L": {
+    "stage": "E0-L",
+    "status": "PASS",
+    "legacyEG00": "HOLD",
+    "originalE0Cases": "UNCHANGED",
+    "approvalId": "EXEC-GAME-0010-CR003-HARNESS-LITE",
+    "writerId": "GAME0010-CODEX-PRIMARY-01",
+    "commit": "d50fb5074d4af7a206bf1c07ffee7e5afe6e15b2",
+    "tree": "f6f664980b516d2f79cf7193a21c361dfe3dab88",
+    "formalCheckpointPassed": false,
+    "recoveryArchiveSha256": "2e5d0b25208b421a575fea188e9f1bd3468f9e5f93354d64e10648062bd3e60f",
+    "fixedHandoffFiles": 22,
+    "baselineRegressionPassed": 2019,
+    "remediationsUsed": 14,
+    "remediationTotalLimit": 50,
+    "historicalCause": "e0-budget-reservation-and-accounting",
+    "historicalCauseUses": 6,
+    "historicalCauseNewUsesAllowed": 0,
+    "automationSecondsBeforeRun": 367,
+    "remainingChecksDuringExecution": [
+      "per-run budget reservations and receipts",
+      "source SHA and results",
+      "single writer, stage-specific path and protected refs"
+    ],
+    "automationSecondsAfterPrecheck": 368,
+    "resumeNote": "Resume as the same writer after rechecking the branch, candidate SHA and pending reservations. The legacy E0 cases remain pending or failed."
+  },
+  "EG-01": "NOT_RUN"
+}
