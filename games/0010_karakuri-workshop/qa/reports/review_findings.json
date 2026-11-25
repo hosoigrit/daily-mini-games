@@ -174,5 +174,30 @@
     "correction": "Final active blockers now use freshly evaluated end-pose manifold without modifying Planck or emitting artificial events.",
     "casesRevalidated": 42,
     "openHigh": 0
+  },
+  "CR006-E4": {
+    "mode": "Read-only secondary reviewer e0_review; primary writer and execution",
+    "items": [
+      "Frozen physical ranges and E4 selection authority",
+      "Near-threshold pivot and retained initial failure",
+      "Exact spring predecessor for D1-032 and technical proof",
+      "Four exact D2-029 raw streams for D2-030"
+    ],
+    "reviewActionsClosed": [
+      "CR006-E4-BOARD-MASS-SELECTION",
+      "CR006-E4-ZERO-REPRESENTATION",
+      "CR006-E4-RESTART-FIXED-PRECURSOR"
+    ],
+    "openHigh": 0,
+    "testProof": {
+      "runId": "CR006-E4-VERIFIED",
+      "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+      "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0"
+    },
+    "crossProof": {
+      "runId": "CR006-E4-JOINT-VERIFIED",
+      "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+      "rawLogSha256": "e8eb65e81614beebebf228ad8a752564311a77fc3a3e65a72057127bf65ed2ef"
+    }
   }
 }

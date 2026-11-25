@@ -1060,5 +1060,321 @@
       "rawLogSha256": "a16a864cc81510c5a1e95091a893fe60bf14a4f4e72a4171b69d3150edf3fa49"
     },
     "initialResources": "Pinned Node and Planck, no environment or frozen dependency change."
+  },
+  "CR006-E4": {
+    "status": "PASS",
+    "testedSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+    "profile": "PP03",
+    "initialFailure": {
+      "reportedPivotM": 0.025366242711758705,
+      "proof": {
+        "runId": "CR006-E4-PHYSICAL",
+        "testedSha": "8a18c458523ad9a67ca6d53183754e3f3cc381df",
+        "rawLogSha256": "f1f2867b287ff0334eaec7197161ce27f00538e9a18542cac8ca993d4830ef7e"
+      }
+    },
+    "parameterSelection": {
+      "authority": "Pre-E5 E4 product tuning per existing grant and CR004; outside CR006 fixture-design delegation.",
+      "nominalRatio": 1.5,
+      "selectedRatio": 2.5,
+      "angularDamping": 1.2,
+      "candidate": "E4-BOARD-CFG-08",
+      "candidatesUsed": 12,
+      "proof": {
+        "runId": "CR006-E4-TUNING",
+        "testedSha": "8a18c458523ad9a67ca6d53183754e3f3cc381df",
+        "rawLogSha256": "c32377819291f2e09f116547ac93109f35c0af7edcbfc29d90135bd77db6a743"
+      }
+    },
+    "jointAggregate": {
+      "caseId": "TC-D2-030-C001",
+      "status": "PASS",
+      "limitM": 0.02,
+      "product": {
+        "configuration": "selected E4 board mass .5kg / damping 1.2, fixed PP03",
+        "records": [
+          {
+            "runId": "world-4",
+            "side": -1,
+            "speed": -12,
+            "pivotError": 0.019901736280925113,
+            "excursion": 30.141373316637008,
+            "observations": 480
+          },
+          {
+            "runId": "world-6",
+            "side": -1,
+            "speed": 0,
+            "pivotError": 0.002883352205519723,
+            "excursion": 30.721947242443605,
+            "observations": 480
+          },
+          {
+            "runId": "world-5",
+            "side": 1,
+            "speed": -12,
+            "pivotError": 0.019901736280925113,
+            "excursion": 30.14137331663699,
+            "observations": 480
+          },
+          {
+            "runId": "world-7",
+            "side": 1,
+            "speed": 0,
+            "pivotError": 0.002883352205519723,
+            "excursion": 30.7219472424436,
+            "observations": 480
+          }
+        ],
+        "receipt": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "exit": 0,
+          "actualSeconds": 1,
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "stderrSha256": "adee739be72d838b994344351e6b022a31515d272dac197720e8c33cce4535f0",
+          "maximumCharge": true,
+          "physicsValidationSimulations": 20,
+          "physicsValidationTicks": 2400
+        }
+      },
+      "separateQAFixture": {
+        "configuration": "D1-017 frozen QA board .3kg, center (4.8,3.6) vertical; matched fixed PP03 and separate evidence",
+        "records": [
+          {
+            "caseId": "TC-D1-017-C001",
+            "pivotError": 0,
+            "solverPivot": 0.00031720319999983815,
+            "observations": 66
+          },
+          {
+            "caseId": "TC-D1-017-C002",
+            "pivotError": 0,
+            "solverPivot": 0.00031720319999983815,
+            "observations": 66
+          },
+          {
+            "caseId": "TC-D1-017-C003",
+            "pivotError": 0,
+            "solverPivot": 0.00031720319999983815,
+            "observations": 66
+          },
+          {
+            "caseId": "TC-D1-017-C004",
+            "pivotError": 0,
+            "solverPivot": 0.0003277609820402343,
+            "observations": 68
+          },
+          {
+            "caseId": "TC-D1-017-C005",
+            "pivotError": 0,
+            "solverPivot": 0.00032753754064004714,
+            "observations": 68
+          },
+          {
+            "caseId": "TC-D1-017-C006",
+            "pivotError": 0,
+            "solverPivot": 0.000326965460283217,
+            "observations": 66
+          },
+          {
+            "caseId": "TC-D1-017-C007",
+            "pivotError": 0,
+            "solverPivot": 0.00035736882769472043,
+            "observations": 74
+          },
+          {
+            "caseId": "TC-D1-017-C008",
+            "pivotError": 0,
+            "solverPivot": 0.00035683145918415684,
+            "observations": 72
+          },
+          {
+            "caseId": "TC-D1-017-C009",
+            "pivotError": 0,
+            "solverPivot": 0.0003553897252051423,
+            "observations": 70
+          },
+          {
+            "caseId": "TC-D1-017-C010",
+            "pivotError": 0,
+            "solverPivot": 0.00023440639999972035,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C011",
+            "pivotError": 0,
+            "solverPivot": 0.00023440639999972035,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C012",
+            "pivotError": 0,
+            "solverPivot": 0.00023440639999972035,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C013",
+            "pivotError": 0,
+            "solverPivot": 0.0002544814834138304,
+            "observations": 60
+          },
+          {
+            "caseId": "TC-D1-017-C014",
+            "pivotError": 0,
+            "solverPivot": 0.0002535869479332446,
+            "observations": 60
+          },
+          {
+            "caseId": "TC-D1-017-C015",
+            "pivotError": 0,
+            "solverPivot": 0.00025129551629788814,
+            "observations": 60
+          },
+          {
+            "caseId": "TC-D1-017-C016",
+            "pivotError": 0,
+            "solverPivot": 0.0003124012377859631,
+            "observations": 62
+          },
+          {
+            "caseId": "TC-D1-017-C017",
+            "pivotError": 0,
+            "solverPivot": 0.0003102546299247431,
+            "observations": 62
+          },
+          {
+            "caseId": "TC-D1-017-C018",
+            "pivotError": 0,
+            "solverPivot": 0.0003044918688100922,
+            "observations": 60
+          },
+          {
+            "caseId": "TC-D1-017-C019",
+            "pivotError": 0,
+            "solverPivot": 0.00015160959999960255,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C020",
+            "pivotError": 0,
+            "solverPivot": 0.00015160959999960255,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C021",
+            "pivotError": 0,
+            "solverPivot": 0.00015160959999960255,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C022",
+            "pivotError": 0,
+            "solverPivot": 0.00018020623835339903,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C023",
+            "pivotError": 0,
+            "solverPivot": 0.000178192116420789,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C024",
+            "pivotError": 0,
+            "solverPivot": 0.00017303004360584275,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C025",
+            "pivotError": 0,
+            "solverPivot": 0.00026534851509344294,
+            "observations": 60
+          },
+          {
+            "caseId": "TC-D1-017-C026",
+            "pivotError": 0,
+            "solverPivot": 0.00026053728975952527,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C027",
+            "pivotError": 0,
+            "solverPivot": 0.0002476150179235312,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C028",
+            "pivotError": 0,
+            "solverPivot": 6.881280000037293e-05,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C029",
+            "pivotError": 0,
+            "solverPivot": 6.881280000037293e-05,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C030",
+            "pivotError": 0,
+            "solverPivot": 6.881280000037293e-05,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C031",
+            "pivotError": 0,
+            "solverPivot": 0.0001049813113597881,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C032",
+            "pivotError": 0,
+            "solverPivot": 0.00010139884708466366,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C033",
+            "pivotError": 0,
+            "solverPivot": 9.221227121380519e-05,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C034",
+            "pivotError": 0,
+            "solverPivot": 0.0002166032395459538,
+            "observations": 58
+          },
+          {
+            "caseId": "TC-D1-017-C035",
+            "pivotError": 0,
+            "solverPivot": 0.00020812817611968917,
+            "observations": 56
+          },
+          {
+            "caseId": "TC-D1-017-C036",
+            "pivotError": 0,
+            "solverPivot": 0.00018538647569444667,
+            "observations": 56
+          }
+        ],
+        "receipt": {
+          "runId": "CR005-E1-MATRIX-62",
+          "testedSha": "d272f3f22d184a440a845e9db7e2823942499432",
+          "exit": 0,
+          "actualSeconds": 1,
+          "rawLogSha256": "cfb70e2e7487c0f1d27151db919d4ad9ba70b58d101539045b44180025cc3168",
+          "stderrSha256": "ebf90ee4722a7bc3ac124569de16ddf99689a37725c7404c903a469408fa0f70",
+          "physicsValidationSimulations": 72,
+          "physicsValidationTicks": 864
+        }
+      },
+      "totals": {
+        "worlds": 0,
+        "ticks": 0
+      }
+    },
+    "maxHighSpeedPivotM": 0.019901736280925113,
+    "maxHighSpeedAngleDegrees": 30.141373316637008
   }
 }

@@ -132,5 +132,18 @@
     "approvalId": "EXEC-GAME-0010-CR006-FIXTURE-AUTONOMY",
     "successor": "E4",
     "proof": "qa/reports/automated_test_results.json"
+  },
+  "EG-04": {
+    "status": "PASS",
+    "sourceSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+    "requiredCases": 7,
+    "casePasses": 7,
+    "regressionCases": 168,
+    "initialTrialFailureRetained": true,
+    "boardMassKg": 0.5,
+    "boardAngularDamping": 1.2,
+    "profile": "PP03",
+    "proof": "qa/reports/automated_test_results.json",
+    "next": "E5"
   }
 }

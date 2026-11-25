@@ -4534,5 +4534,121 @@
       "testedSha": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
       "rawLogSha256": "a16a864cc81510c5a1e95091a893fe60bf14a4f4e72a4171b69d3150edf3fa49"
     }
+  },
+  "E4": {
+    "stage": "E4",
+    "status": "PASS",
+    "source": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+    "mandatory": 7,
+    "pass": 7,
+    "caseResults": [
+      {
+        "caseId": "TC-D1-032-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 36
+        },
+        "assertion": "explicitly contaminated old run cannot carry into new world",
+        "method": "I",
+        "input": "バネ作動・板傾斜後再実験",
+        "expected": "初期位置速度角度・接触履歴初期化"
+      },
+      {
+        "caseId": "TC-D1-032-C002",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 43
+        },
+        "assertion": "after native spring launch and independent tilted runs",
+        "method": "P",
+        "input": "バネ作動・板傾斜後再実験",
+        "expected": "初期位置速度角度・接触履歴初期化"
+      },
+      {
+        "caseId": "TC-D2-027-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 3
+        },
+        "assertion": "applied ball torque and left/right rotation from real contacts",
+        "method": "P",
+        "input": "FX07左右0.60m荷重",
+        "expected": "荷重方向へ回転"
+      },
+      {
+        "caseId": "TC-D2-028-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 11
+        },
+        "assertion": "centered drop stays within two degrees",
+        "method": "P",
+        "input": "板(4.8,3.6)、球(4.8,4.4)、初速0、120tick",
+        "expected": "実接触、角度絶対値≤2°（提案）、支点誤差≤.02m"
+      },
+      {
+        "caseId": "TC-D2-029-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 18
+        },
+        "assertion": "left/right static and high-speed loads",
+        "method": "P",
+        "input": "左右最大荷重・速度",
+        "expected": "±30°超過≤2°"
+      },
+      {
+        "caseId": "TC-D2-030-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-JOINT-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "e8eb65e81614beebebf228ad8a752564311a77fc3a3e65a72057127bf65ed2ef"
+        },
+        "assertion": "Pinned four real D2-029 trials and separate same-profile QA dynamic matrix.",
+        "method": "P",
+        "input": "荷重・高速衝突",
+        "expected": "支点誤差≤0.02m"
+      },
+      {
+        "caseId": "TC-D2-035-C001",
+        "status": "PASS",
+        "proof": {
+          "runId": "CR006-E4-VERIFIED",
+          "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+          "rawLogSha256": "f2229d980af83001e6684efa164de64504d99bfdf247e9496d77a73f389dc7b0",
+          "line": 28
+        },
+        "assertion": "new world follows real tilted world",
+        "method": "P",
+        "input": "傾斜後再実験",
+        "expected": "水平・角速度0"
+      }
+    ],
+    "relatedRegression": {
+      "runId": "CR006-E4-REGRESSION-VERIFIED",
+      "testedSha": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+      "rawLogSha256": "5c08cea30fed6be40a83d2dde6d2251358589d1d571562bbc23f86132837683c"
+    },
+    "initialFailureHistory": {
+      "runId": "CR006-E4-PHYSICAL",
+      "testedSha": "8a18c458523ad9a67ca6d53183754e3f3cc381df",
+      "rawLogSha256": "f1f2867b287ff0334eaec7197161ce27f00538e9a18542cac8ca993d4830ef7e"
+    }
   }
 }
