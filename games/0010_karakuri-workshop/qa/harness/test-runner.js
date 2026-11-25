@@ -106,7 +106,7 @@ function reserveDispatchedBatch(current, declarations, requested, policy) {
     seen.add(proposal.runId);
     const required = ['automatedSeconds', ...purposeMetrics[declared.purpose]];
     const lower = declared.lowerBounds ?? {};
-    if (Object.keys(proposal.reserve).length !== required.length
+    if (!proposal.reserve || Object.keys(proposal.reserve).length !== required.length
       || required.some(name => !Object.hasOwn(lower, name)
         || !Object.hasOwn(proposal.reserve, name)
         || !Number.isSafeInteger(lower[name]) || lower[name] < 0
