@@ -7316,7 +7316,13 @@
         "method": "U",
         "commandId": "CMD-03",
         "input": "在庫・星3目標・調整差分",
-        "expected": "承認基準一致"
+        "expected": "承認基準一致",
+        "additionalIndependentPolicyProof": {
+          "runId": "CR007-E6-POLICY-ASSERT",
+          "testedSha": "39cf7dd942a5216055329d44e1fb04bd54578465",
+          "rawLogSha256": "eda2c5ec50b6b195d63818ab75bf021e17b8606ce218dccc3f00e7b5c79e37cc",
+          "line": 1
+        }
       },
       {
         "caseId": "TC-D4-005-C002",
@@ -8462,7 +8468,13 @@
         "method": "U",
         "commandId": "CMD-03",
         "input": "範囲外／重複／在庫違反",
-        "expected": "分母から除外"
+        "expected": "分母から除外",
+        "additionalIndependentPolicyProof": {
+          "runId": "CR007-E6-POLICY-ASSERT",
+          "testedSha": "39cf7dd942a5216055329d44e1fb04bd54578465",
+          "rawLogSha256": "eda2c5ec50b6b195d63818ab75bf021e17b8606ce218dccc3f00e7b5c79e37cc",
+          "line": 3
+        }
       },
       {
         "caseId": "TC-D4-021-C001",
@@ -9487,7 +9499,13 @@
         "method": "U",
         "commandId": "CMD-03",
         "input": "初期固定座標・ゴール各軸±2",
-        "expected": "他条件適合時受理"
+        "expected": "他条件適合時受理",
+        "additionalIndependentPolicyProof": {
+          "runId": "CR007-E6-POLICY-ASSERT",
+          "testedSha": "39cf7dd942a5216055329d44e1fb04bd54578465",
+          "rawLogSha256": "eda2c5ec50b6b195d63818ab75bf021e17b8606ce218dccc3f00e7b5c79e37cc",
+          "line": 2
+        }
       },
       {
         "caseId": "TC-D4-026-C001",
