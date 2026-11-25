@@ -689,5 +689,115 @@
       ]
     }
   },
-  "currentStatus": "PASS"
+  "currentStatus": "PASS",
+  "CR005-E3": {
+    "state": "HOLD",
+    "fixedProfile": "PP03",
+    "testedSHA": "1fc699ceae29d984655d59409be15822e8185732",
+    "results": [
+      {
+        "stop": "LS-11",
+        "status": "BLOCKED",
+        "worldPairs": 81,
+        "physicalWorlds": 162,
+        "ticks": 486,
+        "controlContactPoints": 39,
+        "obstructedContactPoints": 354,
+        "maximumAdmittedAbsLocalX": 0.36,
+        "minimumOutsideFaceM": 0.0003823756135189482,
+        "eligible": 0,
+        "samePhysicsReuse": "E2 source for pre-product raw fixture capture, adapter/body factory/config/vendor bytes identical to E3 tested source; eligibility does not rely on DUT activation.",
+        "independentAlternate": "Pin-supported solver manifold uses same midpoint. A bare box corner changes eligibility. Even for those corner candidates, roof onset is tied/earlier or the roof remains continuously touching at the tick end.",
+        "neededDecision": "If independently reproducible, externally approve a replacement fixed physical roof/no-roof paired input with genuine in-face contact, distinct later roof onset, no continuing roof blocker, and unblocked positive control. Retain all product thresholds and physical-only outcome checks.",
+        "rawProof": {
+          "runId": "CR005-E3-ROOF-QUALIFICATION-90",
+          "sha256": "919ace60e32c500977e8e59322c0a8b9d5da01a0c65f15a501a9aac96abfed9c",
+          "raw": "cr005-e3-roof.log",
+          "testedSha": "6251632eb5d0a85740b272ef52d2d1735300f113"
+        }
+      },
+      {
+        "stop": "LS-11",
+        "status": "BLOCKED",
+        "worlds": 108,
+        "ticks": 324,
+        "rawDualSubstepTicks": 0,
+        "rawFirstOnly": 52,
+        "rawSecondOnly": 45,
+        "rawNeither": 227,
+        "neededDecision": "Allow a reproducible fixed fixture that gives actual qualifying contacts in both PP03 substeps, one actual launch; no third-substep or synthetic substitute.",
+        "rawProof": {
+          "runId": "CR005-E3-INDEPENDENT-97",
+          "sha256": "847c01cbe58abdeeee5b644d23743e429956e84b6229e7f32f43938b719796b0",
+          "raw": "cr005-e3-final-independent.log",
+          "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+        }
+      },
+      {
+        "stop": "LS-11",
+        "status": "BLOCKED",
+        "declared": 63,
+        "initialOverlapRejected": 9,
+        "actualWorlds": 54,
+        "observedPartition": {
+          "two-too-close": {
+            "index": 36,
+            "tick": 3,
+            "held": true
+          }
+        },
+        "unobservedPartitions": [
+          "only one qualified complete clear tick before a qualifying recontact",
+          "a touch inside a substep between observed clear intervals"
+        ],
+        "method": "Independent real before/after observations at every substep and all raw events. Side analysis also considered an actual begin/end within the same tick.",
+        "neededDecision": "Allow fixed physical fixtures for the two unobserved partitions while retaining .04m, two complete clear ticks, real contact, and all waiting-state assertions.",
+        "rawProof": {
+          "runId": "CR005-E3-FAMILIES-98",
+          "sha256": "d0ddf6fceb661a0152042ff3d5a426cd4bc28aac9fb55b070e3e151e85c7ce69",
+          "raw": "cr005-e3-final-families.log",
+          "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+        }
+      }
+    ],
+    "controlRegressions": {
+      "runId": "CR005-E3-REGRESSION-96",
+      "sha256": "ef5b0ac2bde1ff835737511cc2f484d594651c34145544e37a63f21a55ef6da8",
+      "raw": "cr005-e3-final-regression.log",
+      "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+    },
+    "MUT04": {
+      "runId": "CR005-E3-MUTATION-99",
+      "sha256": "18ba0ba2d3c55aba1e7ebb636207e4b096b7034fe09e798f084c615fb1fbdc25",
+      "raw": "cr005-e3-mutation.log",
+      "testedSha": "1fc699ceae29d984655d59409be15822e8185732"
+    },
+    "positiveActualCoverage": {
+      "legalAngles": 7,
+      "velocityScenarios": 3,
+      "liveSingleSpringActivationTicks": [
+        15,
+        130,
+        245,
+        360,
+        475
+      ],
+      "qualificationCases": "see automated_test_results.json E3"
+    },
+    "formalSupplement": {
+      "runId": "CR005-E3-BOUNDARY-105",
+      "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+      "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+      "raw": "cr005-e3-boundary-verified.log"
+    },
+    "unchangedE1BoundaryModules": {
+      "testedE1": "3b417ab6938a1c8abad65c94e6d9a0f4454c5505",
+      "modules": [
+        "src/physics/adapter.js",
+        "src/physics/body-factory.js",
+        "src/data/physics-config.js",
+        "vendor/planck/planck.mjs"
+      ]
+    }
+  }
 }

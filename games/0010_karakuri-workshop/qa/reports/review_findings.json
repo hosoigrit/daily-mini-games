@@ -110,5 +110,39 @@
       "raw": "cr005-e2-paired.log",
       "testedSha": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498"
     }
+  },
+  "CR005-E3": {
+    "mode": "Two independent separate read-only contexts, implementation/write by single authorized primary.",
+    "checked": [
+      "Fixed-input 81-pair geometry/TOI",
+      "Alternative collider surface and bare-anchor representations",
+      "Exact real dual-substep qualification zero",
+      "Complete-gap sampling and contact epoch fixes",
+      "Both native two-spring creation orders in run 101",
+      "MUT-04 isolated multiple physical launch detection"
+    ],
+    "materialFixes": [
+      "CR005-E3-RELEASE-BOUNDARY",
+      "CR005-E3-CONTACT-EPOCH"
+    ],
+    "reviewOutcome": "HOLD on required physical case qualification; no method waiver under CR005-C.",
+    "blockingCases": [
+      "TC-D7-001-C001",
+      "TC-D2-026-C001",
+      "TC-D2-022-C002"
+    ],
+    "RereviewClosureProof": {
+      "runId": "CR005-E3-BOUNDARY-105",
+      "rawLogSha256": "f617e2c4b46302b313fe7efafcc9404aa3f226ad8c43d1e09e341d0b13955eb9",
+      "testedSha": "1fc699ceae29d984655d59409be15822e8185732",
+      "raw": "cr005-e3-boundary-verified.log"
+    },
+    "RereviewClosureCases": [
+      "TC-D2-020-C001",
+      "TC-D2-021-C001",
+      "TC-D2-022-C001",
+      "TC-D2-024-C001",
+      "TC-D7-003-C001"
+    ]
   }
 }

@@ -95,5 +95,26 @@
     "exactProtectedRegressionReused": 2019,
     "review": "qa/reports/review_findings.json",
     "automatedProof": "qa/reports/automated_test_results.json"
+  },
+  "EG-03": {
+    "status": "HOLD",
+    "source": "WIP",
+    "requiredCases": 42,
+    "casePasses": 39,
+    "blockedCases": [
+      "TC-D7-001-C001",
+      "TC-D2-026-C001",
+      "TC-D2-022-C002"
+    ],
+    "testedSHA": "1fc699ceae29d984655d59409be15822e8185732",
+    "predecessor": "EG-02 PASS",
+    "mutationsPassed": [
+      "MUT-04"
+    ],
+    "regressionPassed": 162,
+    "successorStages": "E4–E8 NOT_STARTED",
+    "review": "qa/reports/review_findings.json",
+    "proof": "qa/reports/automated_test_results.json",
+    "remainingPrerequisite": "Reproduce invalidated physical fixtures through approved equivalent observations or externally authorize replacement fixed fixtures; do not lower mandatory thresholds."
   }
 }
