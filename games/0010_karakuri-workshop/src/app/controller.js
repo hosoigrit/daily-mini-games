@@ -76,6 +76,7 @@ export function createGameController({stages, identities, hints, storage, change
         saveStage({...saved,progress:{cleared:true,historicalBestStars:state.historicalStars},
           currentBest:best,previousBest:saved.previousBest},runGeneration);
         editor={...editor,best:decodePlacements(best.placements)};
+        if(result.achievements.includes('ALL_CLEARED'))dialog={type:'ACHIEVEMENTS'};
       }else{
         bestUpdated=false;
         notice='保存権限の変更により、この実験結果は一時表示です。';
@@ -138,6 +139,11 @@ export function createGameController({stages, identities, hints, storage, change
       const saved=saveData().stages[stage.id];
       saveStage({...saved,draft:{geometryId:identity().geometryId,placements:encodePlacements(editor.placements)}});
       if(before.selection.operation==='reset')session.clearTrajectory();
+      const previousPart = before.placements.find(part=>part.id===(command.id??before.selection.id));
+      const changedPart = editor.placements.find(part=>part.id===previousPart?.id);
+      if(previousPart&&changedPart&&(previousPart.gridX!==changedPart.gridX||previousPart.gridY!==changedPart.gridY)){
+        ghost=null;
+      }
       if(['add','commit-draft'].includes(command.type))sound.play('place');
     }
     if(command.type==='rotate'||command.type==='rotate-draft')sound.play('rotate');
