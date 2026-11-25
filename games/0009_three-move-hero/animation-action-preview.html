@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#141927">
+  <title>3手の勇者｜A2-1 モーションプレビュー</title>
+  <link rel="stylesheet" href="./styles/battle-animations.css">
+  <link rel="stylesheet" href="./styles/action-animations.css">
+</head>
+<body>
+  <main class="preview action-preview">
+    <header>
+      <p class="preview-label">3手の勇者</p>
+      <h1>A2-1 モーションプレビュー</h1>
+      <p class="description">モーションを選んで、勇者と角の魔物の演出を確認できます。</p>
+    </header>
+    <section class="motion-arena" aria-label="勇者と角の魔物">
+      <div id="scene"></div>
+      <div id="effects" class="motion-effects" aria-hidden="true"></div>
+    </section>
+    <section class="motion-panel" aria-label="再生操作">
+      <form id="controls">
+        <div class="motion-fields">
+          <div>
+            <label for="motion">モーション</label>
+            <select id="motion" required></select>
+          </div>
+          <div id="target-field" hidden>
+            <label for="target">被弾するキャラクター</label>
+            <select id="target">
+              <option value="hero">勇者</option>
+              <option value="enemy">魔物</option>
+            </select>
+          </div>
+        </div>
+        <div class="motion-buttons">
+          <button type="submit" class="play-button">再生</button>
+          <button type="button" id="reset">リセット</button>
+          <label class="motion-option"><input id="reduce" type="checkbox"> 動きを軽減</label>
+        </div>
+      </form>
+      <h2 id="motion-name"></h2>
+      <p id="motion-description" class="description"></p>
+      <p id="motion-status" class="motion-status" role="status" aria-live="polite" aria-atomic="true">待機中</p>
+    </section>
+  </main>
+  <script type="module">
+    import { MOTIONS, getMotion } from './src/action-motion-catalog.js';
+    import { createMotionPreview } from './src/action-animation-controller.js';
+
+    const select = document.querySelector('#motion');
+    const target = document.querySelector('#target');
+    const reduce = document.querySelector('#reduce');
+    const status = document.querySelector('#motion-status');
+    const playButton = document.querySelector('.play-button');
+    let preview;
+    for (const motion of MOTIONS) select.add(new Option(`${motion.code} ${motion.name}`, motion.id));
+
+    function show(motion) {
+      document.querySelector('#motion-name').textContent = motion.name;
+      document.querySelector('#motion-description').textContent = motion.description;
+    }
+
+    function state({ status: state, motion }) {
+      if (motion) show(motion);
+      const held = state === 'held';
+      playButton.disabled = held;
+      status.textContent = {
+        idle: '待機中', playing: `${motion?.name}を再生中`,
+        completed: `${motion?.name}の再生完了・待機中`,
+        held: `${motion?.name}・リセットで待機に戻ります`,
+      }[state];
+    }
+
+    function mount() {
+      preview = createMotionPreview({
+        sceneRegion: document.querySelector('#scene'),
+        effectRegion: document.querySelector('#effects'),
+        onState: state,
+      });
+      preview.setReducedMotion(reduce.checked);
+      state({ status: 'idle' });
+      show(getMotion(select.value));
+    }
+
+    select.addEventListener('change', () => {
+      preview.interrupt();
+      document.querySelector('#target-field').hidden = select.value !== 'hit';
+      if (!playButton.disabled) show(getMotion(select.value));
+    });
+    target.addEventListener('change', () => preview.interrupt());
+    reduce.addEventListener('change', () => preview.setReducedMotion(reduce.checked));
+    document.querySelector('#reset').addEventListener('click', () => {
+      preview.reset();
+      show(getMotion(select.value));
+    });
+    document.querySelector('#controls').addEventListener('submit', event => {
+      event.preventDefault();
+      void preview.play(select.value, { target: target.value });
+    });
+    window.addEventListener('pagehide', () => preview.destroy());
+    window.addEventListener('pageshow', event => { if (event.persisted) mount(); });
+    mount();
+  </script>
+</body>
+</html>

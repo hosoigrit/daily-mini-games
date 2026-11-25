@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#141927">
+  <title>3手の勇者｜A1 戦闘シーンプレビュー</title>
+  <link rel="stylesheet" href="./styles/battle-animations.css">
+</head>
+<body>
+  <main class="preview">
+    <header>
+      <p class="preview-label">3手の勇者</p>
+      <h1>A1 戦闘シーンプレビュー</h1>
+      <p class="description">勇者と角の魔物の待機モーションを確認できます。</p>
+    </header>
+    <section id="character-scene" aria-label="待機中の勇者と角の魔物">
+      <div class="battle-stage is-still">
+        <figure class="fighter fighter--hero">
+          <img src="./assets/hero.svg" alt="" width="240" height="240">
+          <figcaption>勇者</figcaption>
+        </figure>
+        <figure class="fighter fighter--enemy">
+          <img src="./assets/enemy.svg" alt="" width="240" height="240">
+          <figcaption>角の魔物</figcaption>
+        </figure>
+      </div>
+    </section>
+    <footer>
+      <label class="motion-option"><input id="motion" type="checkbox"> 動きを軽減する</label>
+      <p class="description">端末で動きの軽減が有効な場合も静止表示になります。</p>
+    </footer>
+  </main>
+  <script type="module">
+    import { createCharacterScene } from './src/character-scene.js';
+
+    const control = document.querySelector('#motion');
+    const scene = createCharacterScene(document.querySelector('#character-scene'));
+    const syncMotion = () => scene.setReducedMotion(control.checked);
+
+    function activate() {
+      syncMotion();
+      scene.mount();
+      control.addEventListener('change', syncMotion);
+    }
+
+    window.addEventListener('pagehide', () => {
+      control.removeEventListener('change', syncMotion);
+      scene.destroy();
+    });
+    window.addEventListener('pageshow', event => {
+      if (event.persisted) activate();
+    });
+    activate();
+  </script>
+</body>
+</html>

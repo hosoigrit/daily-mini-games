@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">右を向いた軽装の勇者</title>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      #idle:target #cape {
+        transform-origin: 92px 108px;
+        animation: cape 1.95s ease-in-out infinite;
+      }
+    }
+    @keyframes cape {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(4deg); }
+    }
+  </style>
+  <g id="idle" stroke="#211b2a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path id="cape" d="M94 106C67 106 61 127 43 142L19 155C31 159 30 171 42 171L34 186C61 191 91 175 110 149Z" fill="#be4651"/>
+    <path d="M91 150 116 149 113 177 103 199 83 199 82 185Z" fill="#263956"/>
+    <path d="M108 151 134 149 137 174 149 192 126 200 113 182Z" fill="#3d5273"/>
+    <path d="M85 194 103 194 106 208 103 218 74 218Q64 213 75 203Z" fill="#534052"/>
+    <path d="M128 193 145 188 154 201 168 206Q173 210 168 218H134L127 207Z" fill="#534052"/>
+    <path d="M76 212H104M135 212H168" fill="none" stroke="#a17465" stroke-width="3"/>
+    <path d="M101 99 126 99Q147 111 148 133L139 154 101 160 83 143 85 117Z" fill="#ede3c9"/>
+    <path d="M102 105 119 116 130 105 137 134 126 153 104 154 94 136Z" fill="#435f85"/>
+    <path d="M88 112Q80 114 75 131L82 149 97 142 94 128 101 119Z" fill="#f7ecd5"/>
+    <path d="M82 143 96 139 101 149Q96 162 84 155Z" fill="#d49273"/>
+    <path d="M99 153 138 149 143 159 100 164Z" fill="#694655"/>
+    <rect x="116" y="149" width="13" height="13" rx="2" fill="#f5be63" stroke-width="3"/>
+    <path d="M91 108 119 117 141 108 134 101 104 99Z" fill="#d1535c"/>
+    <circle cx="126" cy="115" r="5" fill="#ffd275" stroke-width="2.5"/>
+    <path d="M138 113Q150 113 154 130L165 132 162 146Q142 150 136 135L130 125Z" fill="#f7ecd5"/>
+    <path d="M167 129 179 133 178 143 167 149Q155 147 157 137Z" fill="#e9a485"/>
+    <path d="M173 132 218 72 229 61 230 85 191 143Z" fill="#e6f7f3"/>
+    <path d="M185 136 228 68" stroke="#91bfc8" stroke-width="4"/>
+    <path d="M169 126 196 146 189 153 163 136Z" fill="#f9c566"/>
+    <path d="M179 144 164 164" stroke="#513749" stroke-width="8"/>
+    <path d="M163 158 169 165 159 170 155 164Z" fill="#f9c566" stroke-width="3"/>
+    <path d="M82 56Q77 27 110 23 151 16 163 49L164 68 173 78 164 85Q161 110 136 111 110 112 95 91Z" fill="#f1bd95"/>
+    <path d="M97 91Q83 87 89 73 94 67 102 73L108 80" fill="#e6a17f"/>
+    <path d="M87 73 72 67 78 56 71 49 84 44 78 33 95 29 105 16 126 22 148 19 158 29 170 30 161 47 150 53 151 43Q131 59 108 59L105 74 98 68Z" fill="#523442"/>
+    <path d="M89 43Q105 33 123 34M104 48Q124 43 138 35" stroke="#8d5b55" fill="none" stroke-width="3"/>
+    <path d="M145 62Q153 58 159 62" fill="none" stroke="#583843" stroke-width="3"/>
+    <ellipse cx="154" cy="72" rx="3" ry="5" fill="#251d31" stroke="none"/>
+    <path d="M151 92Q157 94 161 89" fill="none" stroke="#7c4149" stroke-width="3"/>
+    <path d="M133 82h9" stroke="#e58577" stroke-width="4"/>
+  </g>
+</svg>
