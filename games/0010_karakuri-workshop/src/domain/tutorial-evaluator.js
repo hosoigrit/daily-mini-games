@@ -94,6 +94,7 @@ export function createRampContactTracker(runId, ramps, evaluator) {
   let previous = null;
   return {
     completeTick(frames, events) {
+      if (frames.length === 0) return previous && {...previous};
       const upperEvents = events.filter(event => event.event === 'pre-solve'
         && event.localPoint && isUpperSurface(event));
       function staysOnRamp({id}) {
@@ -112,7 +113,7 @@ export function createRampContactTracker(runId, ramps, evaluator) {
         : Math.max(...frames.map(frame => frame.rampDistances.find(ramp => ramp.id === id).gap));
       previous = evaluator.observeRamp({id, angleDeg, runId, continuous: Boolean(continuous), distance,
         from: frames[0].position, to: frames.at(-1).position});
-      return previous;
+      return previous && {...previous};
     },
   };
 }
