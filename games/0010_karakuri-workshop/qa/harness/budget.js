@@ -108,8 +108,8 @@ const formalMetrics = {
   formalTicks: ['formalTicksByPool', 'ticks', 'formalStageTicksTotal'],
 };
 
-function fail(code, message) {
-  throw Object.assign(new Error(message), {code});
+function fail(code, message, details) {
+  throw Object.assign(new Error(message), {code}, details);
 }
 
 function count(value) {
@@ -265,7 +265,8 @@ function reserveBudget(current, proposal, policy) {
   for (const debit of debits) increment(projectedUsage, debit);
   const exceeded = debits.filter(debit => exceeds(projectedUsage, debit, policy));
   if (exceeded.length > 0) {
-    fail('BUDGET_EXCEEDED', exceeded.map(({section, key}) => key ? `${section}:${key}` : section).join(', '));
+    fail('BUDGET_EXCEEDED', exceeded.map(({section, key}) => key ? `${section}:${key}` : section).join(', '),
+      {exceededSections: exceeded.map(({section}) => section)});
   }
   return {...current, reservations: [...current.reservations, {
     runId, fingerprint: fingerprint ?? null, state: 'RESERVED', resources, remediation, metrics: Object.keys(reserve),

@@ -114,7 +114,14 @@ function reserveDispatchedBatch(current, declarations, requested, policy) {
       || (declared.purpose !== 'AUTOMATED' && lower[required[1]] < 1)) {
       stop('LS-13', 'A required resource bound is missing, unverified or too small.');
     }
-    next = reserveBudget(next, proposal, policy);
+    try {
+      next = reserveBudget(next, proposal, policy);
+    } catch (error) {
+      if (error.code === 'BUDGET_EXCEEDED' && error.exceededSections?.includes('remediationByRootCause')) {
+        stop('LS-04', error.message);
+      }
+      throw error;
+    }
   }
   return next;
 }
