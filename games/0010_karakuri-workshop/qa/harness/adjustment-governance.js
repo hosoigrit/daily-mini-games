@@ -39,6 +39,7 @@ export function checkAdjustment(initial, next, {physicsUnchanged = true} = {}) {
     if (!after || before.id !== after.id || before.type !== after.type || before.category !== after.category
       || before.angleDeg !== after.angleDeg) return fail('FIXED_PART_IDENTITY');
     if (!gridLimit(before.x, after.x, 2) || !gridLimit(before.y, after.y, 2)
+      || ![after.gridX, after.gridY].every(Number.isFinite)
       || Math.abs(after.x - .24 * after.gridX) > 1e-9 || Math.abs(after.y - .24 * (30 - after.gridY)) > 1e-9) {
       return fail('FIXED_DISPLACEMENT');
     }
