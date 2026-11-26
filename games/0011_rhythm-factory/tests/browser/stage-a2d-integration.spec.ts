@@ -3,6 +3,8 @@ import { stageA2TrialChart } from '../../src/content/stage-a2b-trial-chart';
 import { stageA2TrialMusic } from '../../src/content/stage-a2-trial';
 import type { Gen, SaveDataV1 } from '../../src/contracts/interface_contracts';
 import { buildIdealInputs, compileChart, createChartMusicContext } from '../../src/domain/chart-compiler';
+import { installControlledReplay, scheduleControlledReplay } from './fixtures/a2dr1-replay';
+import { installNativeAudioObserver, type NativeAudioTrace, type NativeSourceStart } from '../fixtures/a2dr1-native-observer';
 
 const mount = '/daily-mini-games/games/0011_rhythm-factory/';
 const saveKey = 'daily-mini-games.game0011.save.v1';
@@ -143,6 +145,9 @@ async function observeNativeTrial(page: Page, info: TestInfo): Promise<() => Pro
     const data = await page.evaluate(() => ({
       transitions: Reflect.get(window, 'a2dE2eTransitions') as unknown,
       diagnostics: Reflect.get(window, 'a2dE2eDiagnostics') as unknown,
+      controlledReplay: window.stageA2dr1ControlledReplay ?? null,
+      nativeAudio: Reflect.get(window, 'stageA2dr1NativeAudio') as unknown,
+      trustedReplayIssuance: Reflect.get(window, 'stageA2dr1TrustedReplayIssuance') as unknown,
     }));
     await info.attach('audio-ui-transitions', { body: JSON.stringify({ ...data, issues, requests: [...requests] }), contentType: 'application/json' });
     const scope = new URL(mount, page.url()).href;
@@ -150,109 +155,226 @@ async function observeNativeTrial(page: Page, info: TestInfo): Promise<() => Pro
   };
 }
 
-async function firstClockPoint(page: Page, targetGeneration?: number): Promise<{ originMs: number; epochMs: number }> {
-  const firstClock = await page.waitForFunction((generation) => {
-    const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly {
-      kind: string;
-      detail: { atMs: number; judgeTimeUs: number | null; state: string; generation: number };
-    }[];
-    const tick = diagnostics.find(({ kind, detail }) => kind === 'clock' && detail.judgeTimeUs !== null
-      && (generation === undefined || detail.generation === generation) && ['PREROLL', 'PLAYING'].includes(detail.state));
-    if (!tick || tick.detail.judgeTimeUs === null) return false;
-    const originMs = tick.detail.atMs - tick.detail.judgeTimeUs / 1000;
-    return { originMs, epochMs: performance.timeOrigin + originMs };
-  }, targetGeneration, { timeout: 12_000 });
-  const point = await firstClock.jsonValue();
-  if (point === false) throw new Error('No active judgement clock.');
-  return point;
-}
-
-async function scheduleTrustedKeys(page: Page): Promise<void> {
-  const point = await firstClockPoint(page);
-  for (const input of ideal) {
-    const delay = point.epochMs + input.judgeTimeUs / 1000 - Date.now();
-    // The chart defines intended button times; Chromium generates the trusted events and their timestamps.
-    if (delay > 0) await new Promise<void>((resolve) => { setTimeout(resolve, delay); });
-    const key = keys[input.lane - 1]!;
-    if (input.action === 'DOWN') await page.keyboard.down(key);
-    else await page.keyboard.up(key);
+async function scheduleTrustedKeys(page: Page, inputs = ideal, targetGeneration?: number): Promise<void> {
+  const ordinal = targetGeneration === undefined ? 1 : 2;
+  const sourceHandle = await page.waitForFunction((ordinal) => {
+    const trace = Reflect.get(window, 'stageA2dr1NativeAudio') as NativeAudioTrace | undefined;
+    return trace?.sources.filter(source => source.scope === 'full-track-bgm')[ordinal - 1] ?? false;
+  }, ordinal, { timeout: 12_000 });
+  const source = await sourceHandle.jsonValue();
+  if (!source || source.anchorPerformanceTime === null || source.anchorContextTime === null
+      || source.whenSec === null || source.offsetSec === null) throw new Error('Native trial source has no fixed clock evidence.');
+  if ((targetGeneration === undefined && source.offsetSec !== 0) || (targetGeneration !== undefined && source.offsetSec <= 0)) {
+    throw new Error('Native trial source offset did not match the requested playback segment.');
+  }
+  const save = await readSave(page);
+  expect(save?.settings.timingOffsetMs).toBe(0);
+  if (targetGeneration !== undefined && inputs.some(input => input.judgeTimeUs <= Math.round(source.offsetSec! * 1_000_000))) {
+    throw new Error('Native replay would cross the frozen judgement boundary.');
+  }
+  const originMs = source.anchorPerformanceTime + (source.whenSec - source.anchorContextTime - source.offsetSec) * 1000;
+  const timeOrigin = await page.evaluate(() => performance.timeOrigin);
+  const issued: { judgeUs: number; lane: number; action: string; plannedBrowserMs: number; issuedEpochMs: number }[] = [];
+  try {
+    let lastStateCheckUs = Number.NEGATIVE_INFINITY;
+    for (const [index, input] of inputs.entries()) {
+      const plannedBrowserMs = originMs + input.judgeTimeUs / 1000;
+      const check = async () => {
+        const data = await application(page).evaluate(root => ({ state: root.dataset.state, error: root.dataset.error,
+          generation: root.dataset.generation }));
+        if (data.state === 'ERROR') throw new Error(`Native replay stopped before ${input.judgeTimeUs}us: ${data.error}`);
+        if (targetGeneration !== undefined && Number(data.generation) !== targetGeneration) throw new Error('Native replay generation not established.');
+        lastStateCheckUs = input.judgeTimeUs;
+      };
+      if (index !== 0 && input.judgeTimeUs - lastStateCheckUs >= 500_000) await check();
+      const delay = timeOrigin + plannedBrowserMs - Date.now();
+      if (delay > 0) await new Promise<void>((resolve) => { setTimeout(resolve, delay); });
+      if (index === 0) await check();
+      const key = keys[input.lane - 1]!;
+      issued.push({ judgeUs: input.judgeTimeUs, lane: input.lane, action: input.action, plannedBrowserMs, issuedEpochMs: Date.now() });
+      // Chromium supplies the trusted KeyboardEvent timestamp. The plan is only a scheduling target.
+      if (input.action === 'DOWN') await page.keyboard.down(key);
+      else await page.keyboard.up(key);
+    }
+  } finally {
+    await page.evaluate((segment) => {
+      const previous = Reflect.get(window, 'stageA2dr1TrustedReplayIssuance') as unknown[] | undefined;
+      Reflect.set(window, 'stageA2dr1TrustedReplayIssuance', [...(previous ?? []), segment]);
+    }, { ordinal, targetGeneration, source, originMs, timeOrigin, issued });
   }
 }
 
-async function scheduleControlledKeys(page: Page, inputs = ideal, targetGeneration?: number): Promise<void> {
-  const strokes = inputs.map(input => ({ judgeMs: input.judgeTimeUs / 1000,
+async function scheduleControlledKeys(page: Page, inputs = ideal, generation?: number): Promise<void> {
+  await scheduleControlledReplay(page, inputs.map(input => ({ judgeUs: input.judgeTimeUs,
     type: input.action === 'DOWN' ? 'keydown' : 'keyup', key: keys[input.lane - 1]!,
-  }));
-  await page.evaluate(async ({ plan, generation }) => {
-    interface Point { atMs: number; judgeTimeUs: number | null; state: string; generation: number }
-    const isStart = (point: Point) => point.judgeTimeUs !== null
-      && (generation === undefined || generation === point.generation)
-      && ['PREROLL', 'PLAYING'].includes(point.state);
-    const history = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: Point }[];
-    const first = history.find(({ kind, detail }) => kind === 'clock' && isStart(detail))?.detail
-      ?? await new Promise<Point>((resolve, reject) => {
-        const finish = () => window.removeEventListener('stage-a2d:clock', observe);
-        const deadline = window.setTimeout(() => { finish(); reject(new Error('No matching judgement clock observation')); }, 12_000);
-        function observe(event: Event) {
-          const point: Point = (event as CustomEvent<Point>).detail;
-          if (!isStart(point)) return;
-          window.clearTimeout(deadline);
-          finish();
-          resolve(point);
-        }
-        window.addEventListener('stage-a2d:clock', observe);
-      });
-    const originMs = first.atMs - first.judgeTimeUs! / 1000;
-    for (const stroke of plan) {
-      const atMs = originMs + stroke.judgeMs;
-      for (let delay = atMs - performance.now(); delay > 0; delay = atMs - performance.now()) {
-        await new Promise<void>(resolve => { setTimeout(resolve, delay); });
-      }
-      const screen = document.querySelector<HTMLElement>('main[data-screen]');
-      if (screen?.dataset.state === 'ERROR') throw new Error(`Replay stopped at ${stroke.judgeMs}ms: ${screen.dataset.error}`);
-      const event = new KeyboardEvent(stroke.type, {
-        code: `Key${stroke.key.toUpperCase()}`, key: stroke.key, bubbles: true, cancelable: true,
-      });
-      // Supply the ideal event's occurrence time through the same DOM input adapter.
-      Object.defineProperty(event, 'timeStamp', { value: atMs });
-      window.dispatchEvent(event);
-    }
-  }, { plan: strokes, generation: targetGeneration });
+  })), generation);
 }
 
-async function installOutputClockFixture(page: Page): Promise<void> {
-  await page.addInitScript(() => {
-    const origin = new WeakMap<AudioContext, { context: number; performance: number }>();
-    // Use native synthesis, source nodes and user activation. Replace just the output timestamp pair.
-    Object.defineProperty(AudioContext.prototype, 'getOutputTimestamp', {
-      configurable: true,
-      value(this: AudioContext): AudioTimestamp {
-        if (this.state !== 'running' || this.currentTime <= 0) return {};
-        const at = performance.now();
-        let first = origin.get(this);
-        if (!first) {
-          first = { context: this.currentTime, performance: at };
-          origin.set(this, first);
-        }
-        return { contextTime: first.context + (at - first.performance) / 1000, performanceTime: at };
-      },
-    });
-  });
-}
-
-async function expectPerfectSave(page: Page, info: TestInfo): Promise<void> {
+async function expectPerfectSave(page: Page, info: TestInfo, expectedSources = 1): Promise<void> {
+  expect(trialChart.notes).toHaveLength(63);
+  expect(totalJudgements).toBe(82);
   await expect(application(page)).toHaveAttribute('data-screen', 'RESULT', { timeout: 6_000 });
   await expect(page.getByRole('heading', { name: 'CLEAR', exact: true })).toBeVisible();
   await expect(application(page)).toHaveAttribute('data-save-status', 'SAVED');
   const saved = await readSave(page);
   await info.attach('clear-save-readback', { body: JSON.stringify(saved), contentType: 'application/json' });
   expect(saved).toMatchObject({ revision: 1,
-    records: { 'CHART-01-H': { clear: { bestScore: 1_000_000, clearCount: 1,
+    records: { 'CHART-01-H': { clear: { bestScore: 1_000_000, bestCombo: totalJudgements, clearCount: 1,
       fullComboAchieved: true, allPerfectAchieved: true,
-      bestScoreResult: { counts: { perfect: totalJudgements,
+      bestScoreResult: { maxCombo: totalJudgements, remainingLifeUnits: 200, counts: { perfect: totalJudgements,
         great: 0, good: 0, miss: 0, unplayed: 0, ghost: 0 } },
     }, failed: null } },
+    commitReceipt: { revision: 1 },
   });
+  expect(saved?.commitReceipt?.sessionId).toBe(saved?.records['CHART-01-H']?.clear?.bestScoreResult.sessionId);
+
+  const control = await page.evaluate(() => {
+    const trace = window.stageA2dr1ControlledReplay;
+    if (!trace) return null;
+    const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly {
+      kind: string; detail: { eventPerformanceMs?: number; judgeTimeUs?: number; lane?: number; action?: string };
+    }[];
+    const inputs = diagnostics.filter(record => record.kind === 'input').map(record => record.detail);
+    const exact = trace.dispatches.map(stroke => {
+      const lane = ['d', 'f', 'j', 'k'].indexOf(stroke.key) + 1;
+      const action = stroke.type === 'keydown' ? 'DOWN' : 'UP';
+      const matches = inputs.filter(input => input.eventPerformanceMs === stroke.modeledOccurrenceMs
+        && input.lane === lane && input.action === action);
+      return { plannedJudgeUs: stroke.judgeUs, receivedJudgeUs: matches[0]?.judgeTimeUs ?? null, matches: matches.length };
+    });
+    return { exact, sources: trace.sources.length, unexpected: trace.unexpected };
+  });
+  if (control) {
+    await info.attach('controlled-exact-input-reconciliation', { body: JSON.stringify(control), contentType: 'application/json' });
+    expect(control.unexpected).toEqual([]);
+    expect(control.sources).toBe(expectedSources);
+    expect(control.exact).toHaveLength(ideal.length);
+    expect(control.exact.every(row => row.matches === 1 && row.plannedJudgeUs === row.receivedJudgeUs)).toBe(true);
+  }
+}
+
+function nativeSampleWithinLimit(source: NativeSourceStart, context: number, performanceMs: number): boolean {
+  // Evaluate the independent signed residual on an exact decimal millisecond scale.
+  // The product's diagnostic double is retained in the raw trace rather than used for this boundary comparison.
+  if (source.anchorContextTime === null || source.anchorPerformanceTime === null) return false;
+  const readings = [context, source.anchorContextTime, performanceMs, source.anchorPerformanceTime].map(value => {
+    const [mantissa, exponent = '0'] = String(value).split('e');
+    const fraction = mantissa!.split('.')[1] ?? '';
+    return { n: BigInt(mantissa!.replace('.', '')), scale: fraction.length - Number(exponent) };
+  });
+  const scale = Math.max(0, ...readings.map(reading => reading.scale));
+  const [audio, audioAnchor, wall, wallAnchor] = readings.map(reading => reading.n * 10n ** BigInt(scale - reading.scale));
+  const residual = (audio! - audioAnchor!) * 1000n - (wall! - wallAnchor!);
+  const limit = 20n * 10n ** BigInt(scale);
+  return residual >= -limit && residual <= limit;
+}
+
+async function expectNativeLifecycle(page: Page, info: TestInfo, sources: number): Promise<void> {
+  const terminalMs = await page.evaluate(() => {
+    const events = Reflect.get(window, 'a2dE2eTransitions') as readonly { screen: string; state: string; performanceMs: number }[];
+    return events.find(row => row.screen === 'RESULT' && row.state === 'CLEAR')?.performanceMs ?? null;
+  });
+  expect(terminalMs).not.toBeNull();
+  // Observe through the next expected 100ms monitor opportunity after terminal UI publication.
+  await page.waitForFunction((atMs) => atMs !== null && performance.now() >= atMs + 100, terminalMs);
+  const trace = await page.evaluate(() => (Reflect.get(window, 'stageA2dr1NativeAudio') as NativeAudioTrace | undefined) ?? null);
+  expect(trace).not.toBeNull();
+  if (!trace) throw new Error('Native audio trace missing.');
+  const bgm = trace.sources.filter(source => source.scope === 'full-track-bgm');
+  const groups = [...new Set(trace.monitor.map(row => row.generation))];
+  await info.attach('native-terminal-audio-check', { body: JSON.stringify({ terminalMs, sourceIds: bgm.map(row => row.sourceId),
+    groups, lastMonitorMs: trace.monitor.at(-1)?.atMs ?? null, resources: trace.resources.at(-1), lifecycle: trace.lifecycle,
+  }), contentType: 'application/json' });
+  expect(trace.missingHooks).toEqual([]);
+  expect(trace.observerErrors).toEqual([]);
+  expect(bgm).toHaveLength(sources);
+  expect(groups).toHaveLength(sources);
+  if (sources === 2) expect(groups[1]).toBe(groups[0]! + 1);
+  expect(bgm[0]?.offsetSec).toBe(0);
+  if (sources === 2) expect(bgm[1]?.offsetSec).toBeGreaterThan(0);
+  for (const [index, source] of bgm.entries()) {
+    expect(source.anchorPerformanceTime).toBeGreaterThan(0);
+    expect(source.anchorContextTime).toBeGreaterThan(0);
+    const samples = trace.monitor.filter(row => row.generation === groups[index]);
+    expect(samples.length).toBeGreaterThan(0);
+    for (const sample of samples) {
+      const read = trace.timestampReads.find(row => row.readId === sample.nativeReadId);
+      expect(sample.correlation).toBe('fresh-same-context');
+      expect(sample.anchorReadId).toBe(source.anchorReadId);
+      expect(sample.sourceId).toBe(source.sourceId);
+      expect(sample.contextId).toBe(source.contextId);
+      expect(read?.contextTime).toBeGreaterThan(0);
+      expect(read?.performanceTime).toBeGreaterThan(0);
+      expect(read?.state).toBe('running');
+      expect(sample.errorCode).toBeUndefined();
+      expect(sample.rawDifferenceUs !== null && Number.isFinite(sample.rawDifferenceUs)).toBe(true);
+      expect(read?.contextTime != null && read.performanceTime != null
+        && nativeSampleWithinLimit(source, read.contextTime, read.performanceTime)).toBe(true);
+      // This is the externally observed dispatch interval, not the internal tick timestamp.
+      if (sample.intervalMs !== null) expect(sample.intervalMs).toBeGreaterThan(0);
+    }
+    expect(trace.lifecycle.some(row => row.sourceId === source.sourceId && row.phase === 'ended')).toBe(true);
+  }
+  expect(trace.activeSourceIds).toEqual([]);
+  expect(trace.resources.at(-1)).toMatchObject({ activeSources: 0, activeRafLoops: 0, activeRenders: 0, voices: 0 });
+  expect(trace.monitor.at(-1)?.atMs).toBeLessThanOrEqual(terminalMs!);
+}
+
+
+async function exerciseHeldRehold(page: Page, info: TestInfo, url: string, replay: typeof scheduleControlledKeys): Promise<void> {
+  const hold = trialChart.events.find(event => event.type === 'HOLD_START');
+  if (!hold) throw new Error('The fixed trial must include a HOLD.');
+  const prior = ideal.filter(input => input.judgeTimeUs <= hold.targetTimeUs + 50_000);
+  const later = ideal.slice(prior.length);
+  const key = keys[hold.lane - 1]!;
+  await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
+  await replay(page, prior);
+  await page.waitForFunction((afterUs) => {
+    const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: { judgeTimeUs?: number } }[];
+    return diagnostics.some(({ kind, detail }) => kind === 'clock' && (detail.judgeTimeUs ?? 0) >= afterUs);
+  }, hold.targetTimeUs + 120_000, { timeout: 4_000 });
+
+  const state = application(page);
+  const score = page.locator('[data-stat="score"]');
+  const firstGeneration = Number(await state.getAttribute('data-generation'));
+  await button(page, '一時停止').click();
+  await expect(state).toHaveAttribute('data-state', 'PAUSED');
+  await page.setViewportSize({ width: 320, height: 568 });
+  await expectFirstPlayViewport(page, '再開');
+  const pausedScore = await score.innerText();
+  await page.keyboard.up(key);
+  await button(page, '再開').click();
+  await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
+  const lane = page.locator(`button[data-lane="${hold.lane}"]`);
+  await expect(lane).toHaveAttribute('data-rehold', 'true');
+  await page.keyboard.down(key);
+  await expect(state).toHaveAttribute('data-state', 'RESUMING');
+  await expect(lane).toHaveAttribute('data-reheld', 'true');
+  await page.keyboard.up(key);
+  await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
+  await expect(lane).toHaveAttribute('data-reheld', 'false');
+  await expect(score).toHaveText(pausedScore);
+  await expect(state).toHaveAttribute('data-generation', String(firstGeneration));
+
+  const reheldAt = Date.now();
+  await page.keyboard.down(key);
+  const resumedGeneration = firstGeneration + 1;
+  let reholdElapsedMs = 0;
+  await Promise.all([
+    replay(page, later, resumedGeneration),
+    (async () => {
+      await expect(state).toHaveAttribute('data-state', 'RESUMING');
+      await expect(state).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
+      reholdElapsedMs = Date.now() - reheldAt;
+      expect(reholdElapsedMs).toBeGreaterThanOrEqual(3000);
+      await expect(state).toHaveAttribute('data-generation', String(resumedGeneration));
+    })(),
+  ]);
+  await page.keyboard.up(key);
+  await expectPerfectSave(page, info, 2);
+  await info.attach('rehold-new-generation', { body: JSON.stringify({
+    lane: hold.lane, firstGeneration, resumedGeneration, reholdElapsedMs, pausedScore,
+  }), contentType: 'application/json' });
 }
 
 for (const { name, port } of modes) {
@@ -362,7 +484,8 @@ for (const { name, port } of modes) {
       await expect(application(page)).toHaveAttribute('data-save-status', 'SAVED');
       const save = await readSave(page);
       expect(save).toMatchObject({ revision: 1,
-        records: { 'CHART-01-H': { clear: null, failed: { failureCount: 1, bestScore: 0 } } },
+        records: { 'CHART-01-H': { clear: null, failed: { failureCount: 1, bestScore: 0,
+          latestResult: { remainingLifeUnits: 0, counts: { perfect: 0, great: 0, good: 0, miss: 10, unplayed: 72, ghost: 0 } } } } },
         commitReceipt: { revision: 1 },
       });
       expect(save?.commitReceipt?.sessionId).toBe(save?.records['CHART-01-H']?.failed?.latestResult.sessionId);
@@ -444,11 +567,28 @@ for (const { name, port } of modes) {
     test.skip(browserName !== 'chromium', 'Supplementary full-chart trial planned separately for Chromium.');
     test.setTimeout(85_000);
     info.annotations.push({ type: 'browser version', description: browser.version() });
+    await installNativeAudioObserver(page);
     const saveObservation = await observeNativeTrial(page, info);
     try {
       await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
       await scheduleTrustedKeys(page);
       await expectPerfectSave(page, info);
+      await expectNativeLifecycle(page, info, 1);
+    } finally {
+      await saveObservation();
+    }
+  });
+
+  test(`Stage A-2d / ${name}: native audio performs a held HOLD release and new-generation rehold`, async ({ page, browser, browserName }, info) => {
+    test.skip(browserName !== 'chromium', 'Supplementary held HOLD native trial planned for Chromium.');
+    test.setTimeout(90_000);
+    info.annotations.push({ type: 'browser version', description: browser.version() });
+    info.annotations.push({ type: 'condition', description: 'Original output timestamp pair and Chromium trusted key events.' });
+    await installNativeAudioObserver(page);
+    const saveObservation = await observeNativeTrial(page, info);
+    try {
+      await exerciseHeldRehold(page, info, url, scheduleTrustedKeys);
+      await expectNativeLifecycle(page, info, 2);
     } finally {
       await saveObservation();
     }
@@ -481,7 +621,7 @@ for (const { name, port } of modes) {
     test.setTimeout(85_000);
     info.annotations.push({ type: 'browser version', description: browser.version() });
     info.annotations.push({ type: 'condition', description: 'Controlled audio output timestamps and DOM keyboard event timestamps. Excluded from native audio synchronization evidence.' });
-    await installOutputClockFixture(page);
+    await installControlledReplay(page);
     const saveObservation = await observeNativeTrial(page, info);
     try {
       await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
@@ -496,7 +636,7 @@ for (const { name, port } of modes) {
     test('result UI recovers an unreadable first commit without applying the result twice', async ({ page, browserName }, info) => {
       test.skip(browserName !== 'chromium', 'Storage failure injection is scoped to Chromium.');
       test.setTimeout(45_000);
-      await installOutputClockFixture(page);
+      await installControlledReplay(page);
       await page.addInitScript(key => {
         const get = Storage.prototype.getItem;
         const set = Storage.prototype.setItem;
@@ -540,62 +680,10 @@ for (const { name, port } of modes) {
       test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
       test.setTimeout(85_000);
       info.annotations.push({ type: 'condition', description: 'Controlled output and chart input timestamps, trusted manual rehold transitions.' });
-      await installOutputClockFixture(page);
+      await installControlledReplay(page);
       const saveObservation = await observeNativeTrial(page, info);
       try {
-        const hold = trialChart.events.find(event => event.type === 'HOLD_START');
-        if (!hold) throw new Error('The fixed trial must include a HOLD.');
-        const prior = ideal.filter(input => input.judgeTimeUs <= hold.targetTimeUs + 50_000);
-        const later = ideal.slice(prior.length);
-        const key = keys[hold.lane - 1]!;
-        await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
-        await scheduleControlledKeys(page, prior);
-        await page.waitForFunction((afterUs) => {
-          const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: { judgeTimeUs?: number } }[];
-          return diagnostics.some(({ kind, detail }) => kind === 'clock' && (detail.judgeTimeUs ?? 0) >= afterUs);
-        }, hold.targetTimeUs + 120_000, { timeout: 4_000 });
-
-        const state = application(page);
-        const score = page.locator('[data-stat="score"]');
-        const firstGeneration = Number(await state.getAttribute('data-generation'));
-        await button(page, '一時停止').click();
-        await expect(state).toHaveAttribute('data-state', 'PAUSED');
-        await page.setViewportSize({ width: 320, height: 568 });
-        await expectFirstPlayViewport(page, '再開');
-        const pausedScore = await score.innerText();
-        await page.keyboard.up(key);
-        await button(page, '再開').click();
-        await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
-        const lane = page.locator(`button[data-lane="${hold.lane}"]`);
-        await expect(lane).toHaveAttribute('data-rehold', 'true');
-        await page.keyboard.down(key);
-        await expect(state).toHaveAttribute('data-state', 'RESUMING');
-        await expect(lane).toHaveAttribute('data-reheld', 'true');
-        await page.keyboard.up(key);
-        await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
-        await expect(lane).toHaveAttribute('data-reheld', 'false');
-        await expect(score).toHaveText(pausedScore);
-        await expect(state).toHaveAttribute('data-generation', String(firstGeneration));
-
-        const reheldAt = Date.now();
-        await page.keyboard.down(key);
-        const resumedGeneration = firstGeneration + 1;
-        let reholdElapsedMs = 0;
-        await Promise.all([
-          scheduleControlledKeys(page, later, resumedGeneration),
-          (async () => {
-            await expect(state).toHaveAttribute('data-state', 'RESUMING');
-            await expect(state).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
-            reholdElapsedMs = Date.now() - reheldAt;
-            expect(reholdElapsedMs).toBeGreaterThanOrEqual(3000);
-            await expect(state).toHaveAttribute('data-generation', String(resumedGeneration));
-          })(),
-        ]);
-        await page.keyboard.up(key);
-        await expectPerfectSave(page, info);
-        await info.attach('rehold-new-generation', { body: JSON.stringify({
-          lane: hold.lane, firstGeneration, resumedGeneration, reholdElapsedMs, pausedScore,
-        }), contentType: 'application/json' });
+        await exerciseHeldRehold(page, info, url, scheduleControlledKeys);
       } finally {
         await saveObservation();
       }
@@ -605,7 +693,7 @@ for (const { name, port } of modes) {
       test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
       test.setTimeout(85_000);
       info.annotations.push({ type: 'condition', description: 'Controlled output timestamps. A real isolated storage context is used.' });
-      await installOutputClockFixture(page);
+      await installControlledReplay(page);
       const saveObservation = await observeNativeTrial(page, info);
       try {
         await open(page, `${url}?stage-a2d-diagnostics=1`);
@@ -633,7 +721,7 @@ for (const { name, port } of modes) {
       test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
       test.setTimeout(40_000);
       info.annotations.push({ type: 'condition', description: 'Controlled output timestamps with trusted calibration key presses.' });
-      await installOutputClockFixture(page);
+      await installControlledReplay(page);
       const saveObservation = await observeNativeTrial(page, info);
       try {
         await open(page, `${url}?stage-a2d-diagnostics=1`);
