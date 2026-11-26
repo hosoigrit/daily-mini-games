@@ -65,6 +65,21 @@ describe('IF-03/04 fixed-generation clock', () => {
     )).differenceUs).toBe(20_000);
   });
 
+  it('keeps exact 20 ms inclusive at fractional starting offsets on both sides', () => {
+    for (const { a0, observed, exceeded } of [
+      { a0: 0.006, observed: 0.086, exceeded: 0.0859999 },
+      { a0: 0.051, observed: 0.171, exceeded: 0.1710001 },
+    ]) {
+      const start = { ...anchor, anchorAudioSec: a0 as Sec };
+      const exact = unwrap(createFixedAudioClock(start, 0 as Us));
+      const over = unwrap(createFixedAudioClock(start, 0 as Us));
+      expect(unwrap(exact.observe({ contextTime: observed, performanceTime: 1100 })).differenceUs).toBe(20_000);
+      expect(over.observe({ contextTime: exceeded, performanceTime: 1100 })).toMatchObject({
+        ok: false, error: { code: 'ERR-006', messageKey: 'clock.outOfSync' },
+      });
+    }
+  });
+
   it('rejects backward, stalled and unavailable observations, invalid opening anchors and stale generations', () => {
     expect(createFixedAudioClock({ ...anchor, anchorPerformanceMs: 0 as Ms }, 0 as Us).ok).toBe(false);
     expect(createFixedAudioClock({ ...anchor, anchorAudioSec: 0 as Sec }, 0 as Us).ok).toBe(false);

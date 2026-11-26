@@ -35,6 +35,35 @@ interface ClockObservation {
   readonly differenceUs: Us;
 }
 
+function decimalInMicroseconds(value: number, unitExponent: number) {
+  const parts = /^(\d+)(?:\.(\d+))?(?:e([+-]?\d+))?$/.exec(String(value));
+  if (!parts?.[1]) throw new RangeError('Expected a finite positive clock reading');
+  const fraction = parts[2] ?? '';
+  return {
+    digits: BigInt(parts[1] + fraction),
+    exponent: unitExponent + Number(parts[3] ?? 0) - fraction.length,
+  };
+}
+
+function preciseDifferenceUs(reference: OutputClockSample, observed: OutputClockSample): Us | null {
+  // Compare the canonical decimal readings at the same scale without a tolerance or an early round.
+  const observedAudio = decimalInMicroseconds(observed.contextTime, 6);
+  const referenceAudio = decimalInMicroseconds(reference.contextTime, 6);
+  const observedPerformance = decimalInMicroseconds(observed.performanceTime, 3);
+  const referencePerformance = decimalInMicroseconds(reference.performanceTime, 3);
+  const exponent = Math.min(0, observedAudio.exponent, referenceAudio.exponent,
+    observedPerformance.exponent, referencePerformance.exponent);
+  const scaled = (reading: ReturnType<typeof decimalInMicroseconds>) =>
+    reading.digits * 10n ** BigInt(reading.exponent - exponent);
+  const unitsPerMicrosecond = 10n ** BigInt(-exponent);
+  const signedDifference = scaled(observedAudio) - scaled(referenceAudio)
+    - (scaled(observedPerformance) - scaled(referencePerformance));
+  const absoluteDifference = signedDifference < 0n ? -signedDifference : signedDifference;
+
+  if (absoluteDifference > BigInt(maximumClockDifferenceUs) * unitsPerMicrosecond) return null;
+  return Number((absoluteDifference * 2n + unitsPerMicrosecond) / (2n * unitsPerMicrosecond)) as Us;
+}
+
 export function createFixedAudioClock(anchor: PlaybackAnchor, offsetUs: Us): Result<TimePort & {
   observe(sample: OutputClockSample | undefined): Result<ClockObservation>;
 }> {
@@ -46,7 +75,8 @@ export function createFixedAudioClock(anchor: PlaybackAnchor, offsetUs: Us): Res
     return failure('ERR-005', sessionId, 'clock.invalidAnchor');
   }
 
-  let lastSample: OutputClockSample = { contextTime: anchorAudioSec, performanceTime: anchorPerformanceMs };
+  const reference: OutputClockSample = { contextTime: anchorAudioSec, performanceTime: anchorPerformanceMs };
+  let lastSample = reference;
   let stopped = false;
   const estimateAudioSeconds = (atMs: number) => anchorAudioSec + (atMs - anchorPerformanceMs) / 1000;
 
@@ -74,15 +104,12 @@ export function createFixedAudioClock(anchor: PlaybackAnchor, offsetUs: Us): Res
           stopped = true;
           return failure('ERR-006', sessionId, 'clock.notAdvancing');
         }
-        const predicted = estimateAudioSeconds(sample.performanceTime);
-        const limitSeconds = maximumClockDifferenceUs / 1_000_000;
-        // Compare the observed seconds against the inclusive band before rounding the reported difference to μs.
-        if (sample.contextTime < predicted - limitSeconds || sample.contextTime > predicted + limitSeconds) {
+        const differenceUs = preciseDifferenceUs(reference, sample);
+        if (differenceUs === null) {
           stopped = true;
           return failure('ERR-006', sessionId, 'clock.outOfSync');
         }
         lastSample = { ...sample };
-        const differenceUs = Math.round(Math.abs(sample.contextTime - predicted) * 1_000_000) as Us;
         return { ok: true, value: { differenceUs } };
       },
     },
