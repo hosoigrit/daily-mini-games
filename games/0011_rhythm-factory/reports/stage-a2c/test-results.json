@@ -1,0 +1,1337 @@
+{
+  "stage": "A-2c",
+  "fixedImplementation": "d5793be3334e5eb28b65853db4c6c01bbfa5727a",
+  "developmentBase": "e8644751b38e03662aa1cce50180c081cca9f4d2",
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "node": "26.13.1",
+    "npm": "11.20.0",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0",
+    "webkit": "27.2"
+  },
+  "vitest": {
+    "command": "./node_modules/.bin/vitest run --reporter=json --outputFile=<evidence>",
+    "executionAgent": "/root",
+    "exitCode": 0,
+    "total": 270,
+    "passed": 270,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "path": "tests/component/a2c-store-strict.test.tsx",
+        "passed": 1
+      },
+      {
+        "path": "tests/component/foundation-screen.test.tsx",
+        "passed": 2
+      },
+      {
+        "path": "tests/contract/audio-events.test.ts",
+        "passed": 1
+      },
+      {
+        "path": "tests/contract/public-types.test.ts",
+        "passed": 3
+      },
+      {
+        "path": "tests/contract/render-snapshot.test.ts",
+        "passed": 7
+      },
+      {
+        "path": "tests/integration/composition.test.ts",
+        "passed": 1
+      },
+      {
+        "path": "tests/integration/stage-a2b-replay.test.ts",
+        "passed": 8
+      },
+      {
+        "path": "tests/integration/stage-a2c-controller.test.ts",
+        "passed": 15
+      },
+      {
+        "path": "tests/unit/a2c-storage.test.ts",
+        "passed": 23
+      },
+      {
+        "path": "tests/unit/audio-clock.test.ts",
+        "passed": 7
+      },
+      {
+        "path": "tests/unit/audio-preparation.test.ts",
+        "passed": 2
+      },
+      {
+        "path": "tests/unit/calibration.test.ts",
+        "passed": 18
+      },
+      {
+        "path": "tests/unit/chart-compiler.test.ts",
+        "passed": 57
+      },
+      {
+        "path": "tests/unit/game-session.test.ts",
+        "passed": 26
+      },
+      {
+        "path": "tests/unit/game-store.test.ts",
+        "passed": 4
+      },
+      {
+        "path": "tests/unit/judgement-engine.test.ts",
+        "passed": 37
+      },
+      {
+        "path": "tests/unit/judgement-reducers.test.ts",
+        "passed": 19
+      },
+      {
+        "path": "tests/unit/keyboard-pointer-input.test.ts",
+        "passed": 10
+      },
+      {
+        "path": "tests/unit/save-data.test.ts",
+        "passed": 14
+      },
+      {
+        "path": "tests/unit/session-audio-bridge.test.ts",
+        "passed": 2
+      },
+      {
+        "path": "tests/unit/session-command-guards.test.ts",
+        "passed": 7
+      },
+      {
+        "path": "tests/unit/session-lifecycle.test.ts",
+        "passed": 3
+      },
+      {
+        "path": "tests/unit/web-audio-clock-adapter.test.ts",
+        "passed": 3
+      }
+    ],
+    "byCategory": {
+      "component": {
+        "passed": 3
+      },
+      "contract": {
+        "passed": 11
+      },
+      "integration": {
+        "passed": 24
+      },
+      "unit": {
+        "passed": 232
+      }
+    }
+  },
+  "browser": {
+    "command": "./node_modules/.bin/playwright test --reporter=json --output=<evidence>",
+    "executionAgent": "/root",
+    "passed": 32,
+    "failed": 16,
+    "skipped": 0,
+    "flaky": 0,
+    "byScopeAndBrowser": {
+      "a2a_audio": {
+        "chromium": {
+          "failed": 2,
+          "passed": 6
+        },
+        "firefox": {
+          "failed": 7,
+          "passed": 1
+        },
+        "webkit": {
+          "failed": 7,
+          "passed": 1
+        }
+      },
+      "a2b_input": {
+        "chromium": {
+          "passed": 3
+        },
+        "firefox": {
+          "passed": 3
+        },
+        "webkit": {
+          "passed": 3
+        }
+      },
+      "new_a2c": {
+        "chromium": {
+          "passed": 3
+        },
+        "firefox": {
+          "passed": 3
+        },
+        "webkit": {
+          "passed": 3
+        }
+      },
+      "a1_subpath": {
+        "chromium": {
+          "passed": 2
+        },
+        "firefox": {
+          "passed": 2
+        },
+        "webkit": {
+          "passed": 2
+        }
+      }
+    },
+    "failures": [
+      {
+        "scope": "a2a_audio",
+        "browser": "chromium",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 1",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -20247,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 1",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 1",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -101667,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "chromium",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 2",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -40241,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 2",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 2",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -99333,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 3",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 natural trial 3",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -99667,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 1",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 1",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -100667,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 2",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 2",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -100667,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 3",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "case": "A-2a-R CASE-05 stop-restart trial 3",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -98667,
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "firefox",
+        "file": "stage-a2a-audio.spec.ts",
+        "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "status": "failed",
+        "probeStatus": "activation-unavailable",
+        "knownCloud": true
+      },
+      {
+        "scope": "a2a_audio",
+        "browser": "webkit",
+        "file": "stage-a2a-audio.spec.ts",
+        "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "status": "failed",
+        "probeStatus": "safety-stop",
+        "knownCloud": true
+      }
+    ],
+    "exitCode": 1,
+    "nativeTakeoverProbes": [
+      {
+        "browser": "chromium",
+        "afterNativeClose": [
+          "OK"
+        ]
+      },
+      {
+        "browser": "firefox",
+        "afterNativeClose": [
+          "OK"
+        ]
+      },
+      {
+        "browser": "webkit",
+        "afterNativeClose": [
+          "ERR-009",
+          "OK"
+        ]
+      }
+    ]
+  },
+  "earlierExecutions": {
+    "notes": "Development and review trial executions. Only the final run is the adopted full regression.",
+    "initialVitest": {
+      "exitCode": 0,
+      "total": 253,
+      "passed": 253,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        {
+          "path": "tests/component/a2c-store-strict.test.tsx",
+          "passed": 1
+        },
+        {
+          "path": "tests/component/foundation-screen.test.tsx",
+          "passed": 2
+        },
+        {
+          "path": "tests/integration/composition.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "tests/integration/stage-a2b-replay.test.ts",
+          "passed": 8
+        },
+        {
+          "path": "tests/integration/stage-a2c-controller.test.ts",
+          "passed": 9
+        },
+        {
+          "path": "tests/contract/audio-events.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "tests/contract/public-types.test.ts",
+          "passed": 3
+        },
+        {
+          "path": "tests/contract/render-snapshot.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/unit/a2c-storage.test.ts",
+          "passed": 18
+        },
+        {
+          "path": "tests/unit/audio-clock.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/unit/audio-preparation.test.ts",
+          "passed": 2
+        },
+        {
+          "path": "tests/unit/calibration.test.ts",
+          "passed": 18
+        },
+        {
+          "path": "tests/unit/chart-compiler.test.ts",
+          "passed": 57
+        },
+        {
+          "path": "tests/unit/game-session.test.ts",
+          "passed": 22
+        },
+        {
+          "path": "tests/unit/game-store.test.ts",
+          "passed": 4
+        },
+        {
+          "path": "tests/unit/judgement-engine.test.ts",
+          "passed": 37
+        },
+        {
+          "path": "tests/unit/judgement-reducers.test.ts",
+          "passed": 19
+        },
+        {
+          "path": "tests/unit/keyboard-pointer-input.test.ts",
+          "passed": 10
+        },
+        {
+          "path": "tests/unit/save-data.test.ts",
+          "passed": 14
+        },
+        {
+          "path": "tests/unit/session-command-guards.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/unit/session-lifecycle.test.ts",
+          "passed": 3
+        },
+        {
+          "path": "tests/unit/web-audio-clock-adapter.test.ts",
+          "passed": 3
+        }
+      ],
+      "byCategory": {
+        "component": {
+          "passed": 3
+        },
+        "integration": {
+          "passed": 18
+        },
+        "contract": {
+          "passed": 11
+        },
+        "unit": {
+          "passed": 221
+        }
+      }
+    },
+    "cycle1Vitest": {
+      "exitCode": 0,
+      "total": 268,
+      "passed": 268,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        {
+          "path": "tests/component/a2c-store-strict.test.tsx",
+          "passed": 1
+        },
+        {
+          "path": "tests/component/foundation-screen.test.tsx",
+          "passed": 2
+        },
+        {
+          "path": "tests/contract/audio-events.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "tests/contract/public-types.test.ts",
+          "passed": 3
+        },
+        {
+          "path": "tests/contract/render-snapshot.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/integration/composition.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "tests/integration/stage-a2b-replay.test.ts",
+          "passed": 8
+        },
+        {
+          "path": "tests/integration/stage-a2c-controller.test.ts",
+          "passed": 13
+        },
+        {
+          "path": "tests/unit/a2c-storage.test.ts",
+          "passed": 23
+        },
+        {
+          "path": "tests/unit/audio-clock.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/unit/audio-preparation.test.ts",
+          "passed": 2
+        },
+        {
+          "path": "tests/unit/calibration.test.ts",
+          "passed": 18
+        },
+        {
+          "path": "tests/unit/chart-compiler.test.ts",
+          "passed": 57
+        },
+        {
+          "path": "tests/unit/game-session.test.ts",
+          "passed": 26
+        },
+        {
+          "path": "tests/unit/game-store.test.ts",
+          "passed": 4
+        },
+        {
+          "path": "tests/unit/judgement-engine.test.ts",
+          "passed": 37
+        },
+        {
+          "path": "tests/unit/judgement-reducers.test.ts",
+          "passed": 19
+        },
+        {
+          "path": "tests/unit/keyboard-pointer-input.test.ts",
+          "passed": 10
+        },
+        {
+          "path": "tests/unit/save-data.test.ts",
+          "passed": 14
+        },
+        {
+          "path": "tests/unit/session-audio-bridge.test.ts",
+          "passed": 2
+        },
+        {
+          "path": "tests/unit/session-command-guards.test.ts",
+          "passed": 7
+        },
+        {
+          "path": "tests/unit/session-lifecycle.test.ts",
+          "passed": 3
+        },
+        {
+          "path": "tests/unit/web-audio-clock-adapter.test.ts",
+          "passed": 3
+        }
+      ],
+      "byCategory": {
+        "component": {
+          "passed": 3
+        },
+        "contract": {
+          "passed": 11
+        },
+        "integration": {
+          "passed": 22
+        },
+        "unit": {
+          "passed": 232
+        }
+      }
+    },
+    "initialBrowser": {
+      "passed": 31,
+      "failed": 17,
+      "skipped": 0,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "a2a_audio": {
+          "chromium": {
+            "failed": 2,
+            "passed": 6
+          },
+          "firefox": {
+            "failed": 7,
+            "passed": 1
+          },
+          "webkit": {
+            "failed": 7,
+            "passed": 1
+          }
+        },
+        "a2b_input": {
+          "chromium": {
+            "passed": 3
+          },
+          "firefox": {
+            "passed": 3
+          },
+          "webkit": {
+            "passed": 2,
+            "failed": 1
+          }
+        },
+        "new_a2c": {
+          "chromium": {
+            "passed": 3
+          },
+          "firefox": {
+            "passed": 3
+          },
+          "webkit": {
+            "passed": 3
+          }
+        },
+        "a1_subpath": {
+          "chromium": {
+            "passed": 2
+          },
+          "firefox": {
+            "passed": 2
+          },
+          "webkit": {
+            "passed": 2
+          }
+        }
+      },
+      "failures": [
+        {
+          "scope": "a2a_audio",
+          "browser": "chromium",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -80250,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -101667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "chromium",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -20114,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "status": "failed",
+          "knownCloud": false,
+          "message": [
+            "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation"
+          ]
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "stage-a2a-audio.spec.ts",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "stage-a2a-audio.spec.ts",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2b_input",
+          "browser": "webkit",
+          "file": "stage-a2b-input.spec.ts",
+          "case": "Stage A-2b / native pointer capture keeps release on the starting lane",
+          "status": "failed",
+          "knownCloud": false,
+          "message": [
+            "Error: expect(received).toEqual(expected) // deep equality",
+            "",
+            "- Expected  - 7",
+            "+ Received  + 1",
+            ""
+          ]
+        }
+      ],
+      "exitCode": 1,
+      "nativeTakeoverProbes": [
+        {
+          "browser": "chromium",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "firefox",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "webkit",
+          "afterNativeClose": [
+            "ERR-009",
+            "OK"
+          ]
+        }
+      ]
+    },
+    "cycle1Browser": {
+      "passed": 32,
+      "failed": 16,
+      "skipped": 0,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "a2a_audio": {
+          "chromium": {
+            "failed": 2,
+            "passed": 6
+          },
+          "firefox": {
+            "failed": 7,
+            "passed": 1
+          },
+          "webkit": {
+            "failed": 7,
+            "passed": 1
+          }
+        },
+        "a2b_input": {
+          "chromium": {
+            "passed": 3
+          },
+          "firefox": {
+            "passed": 3
+          },
+          "webkit": {
+            "passed": 3
+          }
+        },
+        "new_a2c": {
+          "chromium": {
+            "passed": 3
+          },
+          "firefox": {
+            "passed": 3
+          },
+          "webkit": {
+            "passed": 3
+          }
+        },
+        "a1_subpath": {
+          "chromium": {
+            "passed": 2
+          },
+          "firefox": {
+            "passed": 2
+          },
+          "webkit": {
+            "passed": 2
+          }
+        }
+      },
+      "failures": [
+        {
+          "scope": "a2a_audio",
+          "browser": "chromium",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -20296,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -103000,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "chromium",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -88368,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -101667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -101667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "a2ar-trial-cycle.spec.ts",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "firefox",
+          "file": "stage-a2a-audio.spec.ts",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "status": "failed",
+          "probeStatus": "activation-unavailable",
+          "knownCloud": true
+        },
+        {
+          "scope": "a2a_audio",
+          "browser": "webkit",
+          "file": "stage-a2a-audio.spec.ts",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "status": "failed",
+          "probeStatus": "safety-stop",
+          "knownCloud": true
+        }
+      ],
+      "exitCode": 1,
+      "nativeTakeoverProbes": [
+        {
+          "browser": "chromium",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "firefox",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "webkit",
+          "afterNativeClose": [
+            "ERR-009",
+            "OK"
+          ]
+        }
+      ]
+    },
+    "nativeBeforeTestPolling": {
+      "passed": 5,
+      "failed": 1,
+      "skipped": 0,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "new_a2c": {
+          "chromium": {
+            "passed": 2
+          },
+          "firefox": {
+            "passed": 2
+          },
+          "webkit": {
+            "failed": 1,
+            "passed": 1
+          }
+        }
+      },
+      "failures": [
+        {
+          "scope": "new_a2c",
+          "browser": "webkit",
+          "file": "stage-a2c-storage.spec.ts",
+          "case": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+          "status": "failed",
+          "knownCloud": false,
+          "message": [
+            "Error: expect(received).toMatchObject(expected)",
+            "",
+            "- Expected  - 4",
+            "+ Received  + 1",
+            ""
+          ]
+        }
+      ],
+      "nativeTakeoverProbes": [
+        {
+          "browser": "chromium",
+          "afterNativeClose": []
+        },
+        {
+          "browser": "firefox",
+          "afterNativeClose": []
+        }
+      ]
+    },
+    "nativeAfterTestPolling": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "new_a2c": {
+          "chromium": {
+            "passed": 2
+          },
+          "firefox": {
+            "passed": 2
+          },
+          "webkit": {
+            "passed": 2
+          }
+        }
+      },
+      "failures": [],
+      "nativeTakeoverProbes": [
+        {
+          "browser": "chromium",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "firefox",
+          "afterNativeClose": [
+            "OK"
+          ]
+        },
+        {
+          "browser": "webkit",
+          "afterNativeClose": [
+            "ERR-009",
+            "ERR-009",
+            "OK"
+          ]
+        }
+      ]
+    }
+  },
+  "R3QA": {
+    "devAndVitestSHA": "e8644751b38e03662aa1cce50180c081cca9f4d2",
+    "approvedBuildSHA": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+    "blockingGuardAtA2bSHA": {
+      "command": "vite build --config qa/device-audio-clock/vite.config.ts",
+      "exitCode": 1,
+      "cause": "R3 immutable build guard checks the full src tree against R2; A-2b source additions are already outside that guard."
+    },
+    "approvedBuild": {
+      "command": "vite build --config qa/device-audio-clock/vite.config.ts",
+      "exitCode": 0
+    },
+    "unit": {
+      "command": "vitest run --config qa/device-audio-clock/vitest.config.ts",
+      "exitCode": 0,
+      "total": 34,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        {
+          "path": "qa/device-audio-clock/tests/controller.test.ts",
+          "passed": 18
+        },
+        {
+          "path": "qa/device-audio-clock/tests/export.test.ts",
+          "passed": 6
+        },
+        {
+          "path": "qa/device-audio-clock/tests/fixtures.test.ts",
+          "passed": 1
+        },
+        {
+          "path": "qa/device-audio-clock/tests/model.test.ts",
+          "passed": 9
+        }
+      ],
+      "byCategory": {
+        "device-audio-clock": {
+          "passed": 34
+        }
+      }
+    },
+    "dev": {
+      "command": "playwright test --config qa/device-audio-clock/playwright.config.ts",
+      "passed": 22,
+      "failed": 0,
+      "skipped": 28,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "r3_qa": {
+          "chromium-desktop": {
+            "passed": 8,
+            "skipped": 2
+          },
+          "firefox-desktop": {
+            "passed": 5,
+            "skipped": 5
+          },
+          "webkit-desktop": {
+            "passed": 4,
+            "skipped": 6
+          },
+          "chromium-android-emulation": {
+            "skipped": 8,
+            "passed": 2
+          },
+          "webkit-ios-emulation": {
+            "skipped": 7,
+            "passed": 3
+          }
+        }
+      },
+      "failures": [],
+      "exitCode": 0
+    },
+    "built": {
+      "command": "STAGE_A2A_QA_TEST_PREVIEW=1 playwright test --config qa/device-audio-clock/playwright.config.ts",
+      "passed": 22,
+      "failed": 0,
+      "skipped": 28,
+      "flaky": 0,
+      "byScopeAndBrowser": {
+        "r3_qa": {
+          "chromium-desktop": {
+            "passed": 8,
+            "skipped": 2
+          },
+          "firefox-desktop": {
+            "passed": 5,
+            "skipped": 5
+          },
+          "webkit-desktop": {
+            "passed": 4,
+            "skipped": 6
+          },
+          "chromium-android-emulation": {
+            "skipped": 8,
+            "passed": 2
+          },
+          "webkit-ios-emulation": {
+            "skipped": 7,
+            "passed": 3
+          }
+        }
+      },
+      "failures": [],
+      "exitCode": 0
+    },
+    "unchangedSourceAndRuntimeImportsVerified": true
+  },
+  "utilities": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run lint -- --ignore-pattern '**/dist/**'",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check:architecture",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "diff -rq dist <A-2b GitHub readback dist>",
+      "exitCode": 0
+    }
+  ],
+  "logicalEvidence": {
+    "trialChart": {
+      "notes": 63,
+      "judgements": 82,
+      "idealScore": 1000000,
+      "idealPerfect": 82,
+      "noInputFailedAtUs": 2750000,
+      "noInputMiss": 10,
+      "noInputUnplayed": 72
+    },
+    "pause": {
+      "B_us": 4100000,
+      "offset_us": 0,
+      "b_us": 4100000,
+      "at50ms": "PAUSING",
+      "at50001us": "PAUSED",
+      "processedBeforeUs": 4100001,
+      "resumeGenerationDelta": 1,
+      "holdEndUs": 4750000
+    },
+    "terminal": {
+      "C_us": 24000000,
+      "F_us": 24050000,
+      "atF": "FINALIZING",
+      "F_plus1us": "CLEAR"
+    },
+    "receipt": {
+      "first": "ERR-016",
+      "retry": "ALREADY_COMMITTED",
+      "clearCount": 1,
+      "secondWrites": 0,
+      "matchingReceiptWrongPayload": "ERR-016"
+    }
+  },
+  "notRun": [
+    "Five physical acceptance devices",
+    "native BFCache cache admission",
+    "human full play",
+    "new audio or music content",
+    "production UI",
+    "human audible correction",
+    "formal release"
+  ]
+}
