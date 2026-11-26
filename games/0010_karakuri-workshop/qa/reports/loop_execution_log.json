@@ -4596,5 +4596,50 @@
         "stderrSHA256": "9eeb1d2131241e94c94709f595952d345b82fabacc4db3116868eb6ad5a653ca"
       }
     ]
+  },
+  "CR010_R4": {
+    "previousReadbackSettlementSHA256": "1706b4f6044e4346e746632b89f61d257be5734b9244bfe5967d5d096139f999",
+    "settledStaticAudits": [
+      {
+        "runId": "CR010-R4-STATIC-RECONCILIATION",
+        "state": "SETTLED",
+        "exitCode": 1,
+        "reservationSHA256": "9f03eccb447f5dbe3b129497c5dd3cd2dde9136199ba9ea116f61aae45ed77bb",
+        "chargedAutomatedSeconds": 90,
+        "totalAutomatedSeconds": 12329,
+        "outstandingReservations": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "9e243c650e2ea84e96c869929dd0e8584c00a9e3d10b8a6819c47b881f1208c1"
+      },
+      {
+        "runId": "CR010-R4-STATIC-RECONCILIATION-02",
+        "state": "SETTLED",
+        "exitCode": 0,
+        "reservationSHA256": "58b79b9939ced25109fb3d878aa7f4dd86ca4badc3e00d8bb963012eda85fed6",
+        "chargedAutomatedSeconds": 1,
+        "totalAutomatedSeconds": 12330,
+        "outstandingReservations": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "currentR4Reservation": {
+      "runId": "CR010-R4-FINAL-EVIDENCE-READBACK",
+      "approvalId": "EXEC-GAME-0010-CR010-R4-GOVERNANCE-CLOSURE",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorAuditSettlementSHA256": "3a23e38d61010a569be4ba090cedc03cc1e038e1dc8d442221aa88e576e42ca3",
+      "authorizedScopeSHA256": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+      "previousAutomatedSeconds": 12330,
+      "reservationSeconds": 180,
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "purpose": "Final QA evidence push and GitHub blob readback"
+    },
+    "newPhysicalWorlds": 0,
+    "newEnduranceAttempts": 0
   }
 }

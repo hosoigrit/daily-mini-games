@@ -1852,5 +1852,459 @@
       }
     ],
     "newCaseEvidenceAdmittedByPredicate": true
+  },
+  "CR010_R4": {
+    "status": "PASS",
+    "mode": "SEPARATE_CONTEXT_READ_ONLY",
+    "formerR3CFindings": {
+      "TC-D7-028-C015": {
+        "caseId": "TC-D7-028-C015",
+        "state": "HOLD",
+        "reason": "The preserved first R2 reservation was established at 2150 s against its recorded 2100 s contract and already started before manual stop. Full debit, LS stop, explicit external R3 adjustment and independently measured replacement are retained. Frozen R case separately expects zero violations over applicable authority and execution history.",
+        "specifiedOriginalRequiredSeconds": 2100,
+        "originalCharged": 2150,
+        "originalRun": "CR010-R2-E8-ENDURANCE-1800",
+        "laterAuthorizedDedicatedCap": 4250,
+        "laterSettled": 1820,
+        "dedicatedUsed": 3970,
+        "neededDecision": "Whether recovered R2 reservation incident is a historical exception for current frozen GOV-013 audit, while preserving breach and actual charge."
+      },
+      "TC-D8-022-C002": {
+        "reason": "Earlier nine actual independent stage review records are preserved. The current Must finding from GOV-013 is unresolved, so zero major findings cannot be certified.",
+        "unresolvedReviewFindingCaseId": "TC-D7-028-C015",
+        "reviewProof": {
+          "file": "r3c-e8-review-material.json",
+          "sha256": "7c927f0ffd59a6244692af8392116776ec01f04d2b3fbd21dd52561aa7496223",
+          "reviewers": [
+            "/root/e8_coverage",
+            "/root/e0_review",
+            "/root/e1_test_plan",
+            "/root/e7_revalidation_review"
+          ]
+        }
+      }
+    },
+    "adjudications": {
+      "TC-D7-028-C015": {
+        "caseId": "TC-D7-028-C015",
+        "approvalId": "EXEC-GAME-0010-CR010-R4-GOVERNANCE-CLOSURE",
+        "testedSHA": "56334926fee679412c4978471f812d454e854525",
+        "parentEvidenceSHA": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+        "previousDecision": "HOLD_INCOMPLETE",
+        "revisedDecision": "PASS",
+        "appliesOnlyTo": "CR010-R2-E8-ENDURANCE-1800",
+        "independentReviewer": "/root/e0_review",
+        "reviewMode": "SEPARATE_CONTEXT_READ_ONLY",
+        "countsInLimitedScope": {
+          "historicalReservationViolations": 1,
+          "remediatedHistoricalViolations": 1,
+          "unresolvedPostCorrectionViolations": 0
+        },
+        "historical": {
+          "runId": "CR010-R2-E8-ENDURANCE-1800",
+          "contractSeconds": 2100,
+          "reservedSeconds": 2150,
+          "differenceSeconds": 50,
+          "settledSeconds": 2150,
+          "started": true,
+          "stopped": true,
+          "elapsedSeconds": 214,
+          "originalResult": "HOLD",
+          "retroactivelyApproved": false
+        },
+        "checks": [
+          {
+            "condition": "original_preserved",
+            "result": "PASS",
+            "evidence": "R2 ledger lines 133–135 and original stdout/stderr hashes; prior HOLD remains in fixed evidence."
+          },
+          {
+            "condition": "stopped_and_fully_debited",
+            "result": "PASS",
+            "evidence": "Observed SIGTERM and interruption after 214 seconds. Full 2,150 seconds plus 400 worlds and 480,000 ticks charged."
+          },
+          {
+            "condition": "reservation_and_consumption_reconciled",
+            "result": "PASS",
+            "evidence": "Original chain, append-only replay, R3 and R3C settlements, and verified GitHub receipt reconcile."
+          },
+          {
+            "condition": "recurrence_guard_applied",
+            "result": "PASS",
+            "evidence": "R3 dispatcher enforced exact 2,100-second reservation, prior full debit, dedicated and general budget intersections, one permitted retry, independent preflight and single writer."
+          },
+          {
+            "condition": "r3_budget_applied",
+            "result": "PASS",
+            "evidence": "Dedicated cumulative ceiling raised from 4,200 to 4,250 seconds. Other ceilings preserved."
+          },
+          {
+            "condition": "corrected_run_reserved_before_start",
+            "result": "PASS",
+            "evidence": "R3 ledger lines 1–3 show RESERVED for 2,100 seconds, 400 worlds and 480,000 ticks before STARTED, then SETTLED."
+          },
+          {
+            "condition": "post_correction_violation_free",
+            "result": "PASS",
+            "evidence": "R3 formal run charged 1,820 seconds, 400 worlds and 90,550 ticks, consistent with reservation. Dedicated 3,970 of 4,250 seconds. Later failures retain their actual status and full charges. The SELECT-ACHIEVE metering correction retained the original valid reservation and limits. No additional endurance launches."
+          },
+          {
+            "condition": "read_only_review",
+            "result": "PASS",
+            "evidence": "Independent /root/e0_review verified the other seven conditions against preserved sources and approved the revised determination."
+          }
+        ],
+        "sourceSHA256": {
+          "r2-execution-ledger.jsonl": "0ca4ff1800e1a01006679e5c0c05098a83ee0652405e375db01c3dd1824ef2f8",
+          "r2-containment-checkpoint.json": "b0ff026f563a8cc90d0e878f0474b6cbc42168aa7d58a53aae1447751e6468be",
+          "r3-dispatch.cjs": "16ffa018888e73b130559a3ea4c2d3f55487274c17cddd46a5bd1a2862b040e3",
+          "r3-authority.json": "acc9493744ec0b851ae753a1d16987438872c97a3e3985dfb7bd36c87997cd41",
+          "r3-qualification-ledger.jsonl": "63baef100b70eda8e1a183fb2a75ef11fa2f92147cb2642446feda10f82e31d1",
+          "r3-endurance-verified.json": "86b30399befcd961bbb7742b9e8e97d3efbd459e0ff914e8247c77e09a022183",
+          "r3c-execution-ledger.jsonl": "a8c169522a6ea869ead928ed64b02259f3d2b35260124e7f91dd1ab97a989eb2",
+          "r3c-post-push-settlement.json": "1706b4f6044e4346e746632b89f61d257be5734b9244bfe5967d5d096139f999"
+        },
+        "correctedResult": {
+          "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+          "proof": {
+            "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+            "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+            "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+            "sourceLine": 402
+          },
+          "actual": {
+            "formalSimulations": 400,
+            "formalTicks": 90550,
+            "automatedSeconds": 1820
+          },
+          "measured": {
+            "exactTenCycles": 100,
+            "realBrowserSoakSeconds": 1800.4342869650002,
+            "cycles": 300,
+            "pageStart": {
+              "ms": 193,
+              "visible": true,
+              "hasFocus": true
+            },
+            "pageEnd": {
+              "ms": 1800630.5999999978,
+              "visible": true,
+              "hasFocus": true
+            },
+            "detectedCrashes": 0,
+            "fixedPitchWorldsAndSubscriptionsMeasured": true,
+            "neverBackgrounded": true
+          },
+          "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+        },
+        "r3cOriginalHold": {
+          "caseId": "TC-D7-028-C015",
+          "state": "HOLD",
+          "reason": "The preserved first R2 reservation was established at 2150 s against its recorded 2100 s contract and already started before manual stop. Full debit, LS stop, explicit external R3 adjustment and independently measured replacement are retained. Frozen R case separately expects zero violations over applicable authority and execution history.",
+          "specifiedOriginalRequiredSeconds": 2100,
+          "originalCharged": 2150,
+          "originalRun": "CR010-R2-E8-ENDURANCE-1800",
+          "laterAuthorizedDedicatedCap": 4250,
+          "laterSettled": 1820,
+          "dedicatedUsed": 3970,
+          "neededDecision": "Whether recovered R2 reservation incident is a historical exception for current frozen GOV-013 audit, while preserving breach and actual charge."
+        }
+      },
+      "TC-D8-022-C002": {
+        "caseId": "TC-D8-022-C002",
+        "approvalId": "EXEC-GAME-0010-CR010-R4-GOVERNANCE-CLOSURE",
+        "testedSHA": "56334926fee679412c4978471f812d454e854525",
+        "parentEvidenceSHA": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+        "previousDecision": "HOLD_INCOMPLETE",
+        "revisedDecision": "PASS",
+        "independentReviewer": "/root/e8_coverage",
+        "reviewMode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewedAfterC015Determination": true,
+        "reviewedC015SHA256": "b854fdc897ce60af40a10a01d2f038aa0d55556a4cb3356af1cc9669c0e2750e",
+        "findingsSource": {
+          "path": "games/0010_karakuri-workshop/qa/reports/review_findings.json",
+          "commit": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+          "sha256": "518a25b2e83d77612ae6c86e03653d1cc6c397ad0d751ffc273dd5fdf9a7aafb"
+        },
+        "stageChecks": [
+          {
+            "stage": "E0-L",
+            "sourceLines": [
+              1040
+            ],
+            "assessment": "Existing EG-00 HOLD remains historical. Current evidence covers the 68 required controls and isolated MUT12.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E1",
+            "sourceLines": [
+              74,
+              1040
+            ],
+            "assessment": "PP01/02 and old CR004 contact-order BLOCKED are retained. CR005 contact-output and visibility evidence applies.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E2",
+            "sourceLines": [
+              89,
+              1040
+            ],
+            "assessment": "Grid, rotation and Undo findings were remediated. Independent rereview covers the required cases.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E3",
+            "sourceLines": [
+              114,
+              167,
+              1040
+            ],
+            "assessment": "Each of three previously BLOCKED physical fixtures was revalidated under the individually authorized contract.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E4",
+            "sourceLines": [
+              178,
+              1040
+            ],
+            "assessment": "Native pivot/load and prerequisite corrections are verified.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E5",
+            "sourceLines": [
+              243,
+              1040
+            ],
+            "assessment": "Live observations and approved CR007-C integration cover the current contract. Original P BLOCKED remains recorded.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E6",
+            "sourceLines": [
+              254,
+              1040
+            ],
+            "assessment": "Stage, alternate, ablation, neighbor, repeat and hint findings were verified. Current CR-010 native replay and adjustment guard apply.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E7",
+            "sourceLines": [
+              272,
+              366,
+              1040,
+              1652
+            ],
+            "assessment": "Historical mixed-run violation remains recorded. CR008 reconciliation, independent current UI, storage and R3C scoped joins cover the current contract.",
+            "mandatoryOpen": 0
+          },
+          {
+            "stage": "E8",
+            "sourceLines": [
+              945,
+              1030,
+              1040,
+              1392,
+              1415,
+              1428,
+              1652
+            ],
+            "assessment": "Prior architecture High was fixed and independently verified. R1 ceiling incident, R2 interrupted endurance and other terminated runs remain preserved; current controls and separate authorizations address their respective findings. R4 limited acceptance closes only the former C015 hold.",
+            "mandatoryOpen": 0
+          }
+        ],
+        "mandatoryOpenCounts": {
+          "Critical": 0,
+          "High": 0,
+          "Must": 0
+        },
+        "currentRuntimeAssetsVerified": 46,
+        "officialEvidenceFilesVerified": 15,
+        "humanQAOld": "173 NOT_RUN_HUMAN",
+        "humanQAAdditional": "5 NOT_RUN_HUMAN",
+        "phase6": "HOLD",
+        "finalAcceptance": "HOLD",
+        "scopeOfException": "Limited to CR010-R2-E8-ENDURANCE-1800. Independent review separately verified other past findings and current unresolved count."
+      }
+    },
+    "mandatoryOpenCounts": {
+      "Critical": 0,
+      "High": 0,
+      "Must": 0
+    },
+    "earlierStageReviewHistory": [
+      {
+        "stage": "E0-L",
+        "priorTestedSHA": "d50fb5074d4af7a206bf1c07ffee7e5afe6e15b2",
+        "priorReviewKeys": [
+          "E0-L",
+          "EG-00"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e0_review",
+        "scopeAndOutcome": "Reconciled old68 labels, exact selectors, controls and current mutation; original EG00 HOLD kept.",
+        "currentRunIds": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS",
+          "CR009-E8-LEGACY-TWO-ASSERTIONS",
+          "CR009-E8-ISOLATED-MUT12-EXACT"
+        ]
+      },
+      {
+        "stage": "E1",
+        "priorTestedSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+        "priorReviewKeys": [
+          "CR005"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "CR004 finite matrix and real background, CR005 same raw A/B order accepted with equal response. PP01/02 rejection retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E1-MATRIX",
+          "CR009-E8-RETEST-E1-FORMAL",
+          "CR009-E8-RETEST-E1-CONTACTS",
+          "CR009-E8-RETEST-E1-VISIBILITY",
+          "CR009-E1-CR004-B-PP03-EXACT"
+        ]
+      },
+      {
+        "stage": "E2",
+        "priorTestedSHA": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+        "priorReviewKeys": [
+          "CR005-E2"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Placement and Undo assertions, legal versus invalid coordinates and fixed controls.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-NONPHYSICAL-NODE",
+          "CR009-E8-ISOLATED-MUT02-03-05"
+        ]
+      },
+      {
+        "stage": "E3",
+        "priorTestedSHA": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+        "priorReviewKeys": [
+          "CR005-E3",
+          "CR006-E3"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Independent fixture and equilibrium tests, chronology, tie, post-contact blocker and release, with old BLOCKED retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E3-INDEPENDENT",
+          "CR009-E8-RETEST-E3-NATIVE",
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-ISOLATED-MUT04"
+        ]
+      },
+      {
+        "stage": "E4",
+        "priorTestedSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+        "priorReviewKeys": [
+          "CR006-E4"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Native pivot, angle and load, plus new world resets with fixed settings.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-FOUNDATION-NODE",
+          "CR009-E8-NATIVE-VERDICTS"
+        ]
+      },
+      {
+        "stage": "E5",
+        "priorTestedSHA": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+        "priorReviewKeys": [
+          "CR006-E5",
+          "CR007-E5"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Real solver/goal required-use controls, joint CR007-C evidence with original physical microgap still BLOCKED.",
+        "currentRunIds": [
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-RETEST-E5-CR007-C",
+          "CR009-E8-ISOLATED-MUT01-06-07-08-09"
+        ]
+      },
+      {
+        "stage": "E6",
+        "priorTestedSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+        "priorReviewKeys": [
+          "CR007-E6"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "Complete stage oracles, canonical legal near placements, causal ablation and fixed identities.",
+        "currentRunIds": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-EXACT-HINTS",
+          "CR009-E8-DISTINCT-ALTERNATIVES"
+        ]
+      },
+      {
+        "stage": "E7",
+        "priorTestedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "priorReviewKeys": [
+          "CR007-E7-WIP",
+          "CR008-E7"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e7_revalidation_review",
+        "scopeAndOutcome": "E7 25 browser jobs plus exact chosen controls and native/synthetic separation with legacy failed driver excluded.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-BACKGROUND-DRAG",
+          "CR009-E8-RETEST-BFCACHE-LEASE",
+          "CR009-E8-RETEST-SELECT-ACHIEVE",
+          "CR009-E8-ISOLATED-MUT10-EXACT",
+          "CR009-E8-ISOLATED-MUT11",
+          "CR009-E7-AUDIO-EXACT"
+        ]
+      },
+      {
+        "stage": "E8",
+        "priorTestedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "priorReviewKeys": [
+          "CR008-E8"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "NFR-027 corrected; Planck ownership and pooled solver isolated, inspected 53-module QA/runtime graph and fresh candidate outcomes.",
+        "currentRunIds": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-CHROMIUM-MODE-CROSSCHECK",
+          "CR009-E8-EXISTING-REGRESSION",
+          "CR009-E8-EXISTING-BROWSER"
+        ],
+        "additionalReadOnlyReviewer": "/root/e0_review"
+      }
+    ],
+    "limitedScopeViolationCounts": {
+      "historicalReservationViolations": 1,
+      "remediatedHistoricalViolations": 1,
+      "unresolvedPostCorrectionViolations": 0
+    }
   }
 }

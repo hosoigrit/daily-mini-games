@@ -2159,5 +2159,235 @@
         "CR010-R3-GitHub-receipts.tar.gz": "6df18502244689dc040174922e9b0cdb41d856afcb68b770f429a56bd5a690a2"
       }
     }
+  },
+  "CR010_R4": {
+    "approvalId": "EXEC-GAME-0010-CR010-R4-GOVERNANCE-CLOSURE",
+    "phase6": "HOLD",
+    "finalAcceptance": "HOLD",
+    "sitesVerification": "NOT_RUN",
+    "qualityGate": "PASS",
+    "developmentAndAutomation": "CLOSED",
+    "eligibilityOfPhase6Material": "READY_FOR_HUMAN_QA",
+    "TestedSHA": "56334926fee679412c4978471f812d454e854525",
+    "parentEvidenceSHA": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+    "frozenSHA": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+    "effectivePathsSHA256": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "oldCases": {
+      "VERIFIED_OLD_UNCHANGED_LOCAL": 165,
+      "PASS_CURRENT_DIRECT_PROOF": 513,
+      "PASS_CURRENT_VERSIONED_LEGACY": 46,
+      "PASS_CURRENT_INDEPENDENT_REVIEW": 85,
+      "NOT_RUN_HUMAN": 173
+    },
+    "additionalCases": {
+      "PASS": 73,
+      "NOT_RUN_HUMAN": 5
+    },
+    "automatedOldPassed": 809,
+    "automatedAdditionalPassed": 73,
+    "pendingCaseIdsByStage": {},
+    "mandatoryOpenCounts": {
+      "Critical": 0,
+      "High": 0,
+      "Must": 0
+    },
+    "historicalUXScore": 51,
+    "limitedScopeViolationCounts": {
+      "historicalReservationViolations": 1,
+      "remediatedHistoricalViolations": 1,
+      "unresolvedPostCorrectionViolations": 0
+    },
+    "endurance": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "dedicatedEnduranceSeconds": {
+      "firstRetained": 2150,
+      "formalSecondCharged": 1820,
+      "used": 3970,
+      "ceiling": 4250,
+      "furtherTrialsAuthorized": 0
+    },
+    "reviewModes": [
+      "SEPARATE_CONTEXT_READ_ONLY"
+    ],
+    "independentReviewers": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e1_test_plan"
+    ],
+    "officialEvidencePreviousSHA256": {
+      "implementation_summary.md": "47051af20579538a168f73e10187ea0d3189c9974d8b4de60a431f505368f4ea",
+      "requirement_coverage.json": "11cafd1ae1218aa1501ab185489d018215e002e01c13f1a566cada9e8e5db739",
+      "automated_test_results.json": "090f08de2f2ab1de3e7f9f403a11564f6c3b6ae5f5b37ca5cddab9856bb5922f",
+      "physics_validation_results.json": "c7171273f113110766dc0c5a5a4168b02576a0b39b861a10fa2d6f0347ac5739",
+      "stage_validation_results.json": "9b81f605852614877a444b58072d18511896a082457cc95a4fa3b839bcc701b4",
+      "stage_adjustment_ledger.json": "88f217bee251dbb89b25f40e259c74a1aa0e63f615b488de375b6d83e17d6e86",
+      "performance_results.json": "b513d9c3f166e3dfa578d40741a549800824870eec9bc6e7b8eb28fe4d5855f2",
+      "regression_results.json": "ce07c1638b921c68300fd196cd6f24c121ec0fb17c16d677935e59c07092d3ae",
+      "test_integrity_report.json": "05d673394429991a4d0f94975bbbea78646f2de200caa6b22b00831039b26ef8",
+      "review_findings.json": "518a25b2e83d77612ae6c86e03653d1cc6c397ad0d751ffc273dd5fdf9a7aafb",
+      "remediation_history.json": "c89af5d539f4492cd02867e842f61585b31644ea01453d72a1b7d62345c29034",
+      "loop_execution_log.json": "06d9d4e7cfd4dca6cb27477d08926a6a72990757cc488c2bbd9aa02341323bb9",
+      "gate_results.json": "c1384f3495469908546e9cc67de226d273bcc2db618c95db65ca7a2b472aae6c",
+      "visual_qa_handoff.md": "c7444264ee04a75b39b76fb37274ee3761ff0e76189c1283de3b50f32c7763fd",
+      "residual_risks.md": "500e07f7690694d399f4f06c0ee346a7a7d9bba4362a132bfc184f74d7c7a3fb"
+    },
+    "verifiedProtectedAssets": {
+      "frozen": 22,
+      "otherGameAssets": 22,
+      "oldGames": 9
+    },
+    "verifiedRuntimeAssets": 46,
+    "reservationBeforeGitHub": {
+      "runId": "CR010-R4-FINAL-EVIDENCE-READBACK",
+      "approvalId": "EXEC-GAME-0010-CR010-R4-GOVERNANCE-CLOSURE",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "dde9adc7787f8e28f1f28e17228aa3afe00da8de",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorAuditSettlementSHA256": "3a23e38d61010a569be4ba090cedc03cc1e038e1dc8d442221aa88e576e42ca3",
+      "authorizedScopeSHA256": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+      "previousAutomatedSeconds": 12330,
+      "reservationSeconds": 180,
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "purpose": "Final QA evidence push and GitHub blob readback"
+    },
+    "settledUsageBeforeGitHub": {
+      "automatedSeconds": 12330,
+      "formalSimulationsByPool": {
+        "E6": 3588,
+        "E8": 5697,
+        "INTERIM": 206,
+        "POST_HUMAN": 0
+      },
+      "formalTicksByPool": {
+        "E6": 826820,
+        "E8": 1624986,
+        "INTERIM": 66910,
+        "POST_HUMAN": 0
+      },
+      "generatedByStage": {
+        "10": 5977,
+        "01": 979,
+        "02": 951,
+        "03": 707,
+        "04": 775,
+        "05": 8828,
+        "06": 755,
+        "07": 6628,
+        "08": 42727,
+        "09": 38172
+      },
+      "githubSettledRunIds": [
+        "CR008-E7-GITHUB",
+        "CR008-E8-GITHUB"
+      ],
+      "physicsValidationSimulations": 13504,
+      "physicsValidationTicks": 754425,
+      "remediationByRootCause": {
+        "e0-budget-reservation-and-accounting": 6,
+        "e7-audio-availability-render-invalidates-pointer-target": 2,
+        "e7-batch-launch-bypassed-budget-reservation": 1,
+        "e7-navigation-and-background-state-boundary": 2,
+        "e8-audio-comparison-used-other-engine-oracle": 1,
+        "e8-mutation-budget-oracle-compared-error-count": 1,
+        "e8-mutation-readonly-fixture-missing-design-identities": 1,
+        "e8-remediation-stop-reason-propagation": 1,
+        "e8-rule-layer-native-physics-dependency": 1,
+        "cr010-usage-requirement-shape-validation": 1,
+        "cr010-search-eager-generation-unaccounted": 1,
+        "cr010-save-transition-and-generation-guard": 1,
+        "cr010-tutorial-transition-correctness": 1
+      },
+      "remediationTotal": 57,
+      "searchSimulationsByStage": {
+        "10": 4291,
+        "01": 302,
+        "02": 302,
+        "03": 316,
+        "04": 326,
+        "05": 2305,
+        "06": 332,
+        "07": 825,
+        "08": 1196,
+        "09": 1236
+      },
+      "searchTicksByStage": {
+        "10": 2349627,
+        "01": 83296,
+        "02": 69466,
+        "03": 94188,
+        "04": 72085,
+        "05": 806519,
+        "06": 132935,
+        "07": 317080,
+        "08": 263611,
+        "09": 362301
+      },
+      "stageAdjustmentsByStage": {
+        "10": 14,
+        "05": 6,
+        "08": 6
+      },
+      "remediationByStage": {
+        "E5": 1,
+        "E6": 1,
+        "E7": 2
+      },
+      "searchSecondsByStage": {
+        "10": 173,
+        "03": 1,
+        "04": 1,
+        "05": 10,
+        "06": 1,
+        "07": 14,
+        "08": 8,
+        "09": 16
+      }
+    },
+    "outstandingReservationsBeforeGitHub": 0,
+    "reviewAndSettlementSHA256": {
+      "r4-audit-reservation.json": "9f03eccb447f5dbe3b129497c5dd3cd2dde9136199ba9ea116f61aae45ed77bb",
+      "r4-audit-settlement.json": "a605026e3f600f15b47225e293ce2a93770a5f1bee40949e6f866647d03cce8d",
+      "r4-audit-recheck-reservation.json": "58b79b9939ced25109fb3d878aa7f4dd86ca4badc3e00d8bb963012eda85fed6",
+      "r4-audit-recheck-settlement.json": "3a23e38d61010a569be4ba090cedc03cc1e038e1dc8d442221aa88e576e42ca3",
+      "r4-baseline-audit.json": "20a929f077588ddb3a73ae952c2e44b28caf5e9b4a862fd49b280319cb6003ec",
+      "r4-c015-decision.json": "b854fdc897ce60af40a10a01d2f038aa0d55556a4cb3356af1cc9669c0e2750e",
+      "r4-c022-review.json": "58f270e3d458d29c1eff5abd440e9bac634b9f8be516e816b84c74deea172d5f"
+    },
+    "supersedesForCurrentGate": "CR010_R3_CONTINUATION",
+    "preservesHistoricalDecisions": true
   }
 }
