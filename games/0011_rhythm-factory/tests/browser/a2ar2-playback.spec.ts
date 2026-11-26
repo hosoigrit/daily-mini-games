@@ -110,7 +110,9 @@ for (const { kind, durationSec, count } of scenarios) {
     test(`A-2a-R2 ${kind}-${durationSec} trial ${run}`, async ({ playwright, browserName, launchOptions }, info) => {
       const expectedTrackUs = durationSec * 1_000_000;
       const progressWaitMs = durationSec * 1000 + 20_000;
-      test.setTimeout(progressWaitMs + 20_000);
+      // The runner budget includes offline synthesis, outside the live playback evidence window.
+      const preparationAllowanceMs = durationSec === 84 ? 110_000 : 20_000;
+      test.setTimeout(progressWaitMs + preparationAllowanceMs);
       const browser = await playwright[browserName].launch(launchOptions);
       try {
         const page = await browser.newPage();
