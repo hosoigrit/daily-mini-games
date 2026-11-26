@@ -2306,5 +2306,29 @@
       "remediatedHistoricalViolations": 1,
       "unresolvedPostCorrectionViolations": 0
     }
+  },
+  "CR010_PHASE6_ACCEPTANCE_20261126": {
+    "reviewers": [
+      "/root/e1_test_plan",
+      "/root/e8_coverage"
+    ],
+    "mode": "SEPARATE_CONTEXT_READ_ONLY",
+    "arithmeticAndDeviceTranscription": "VERIFIED",
+    "caseAndGateApplication": "VERIFIED",
+    "sitesRuntimeContentAndRemainingDiff": "VERIFIED",
+    "caseGroupCounts": {
+      "stage": 50,
+      "deviceSpecific": 20,
+      "frame": 6,
+      "inputLatency": 6,
+      "network": 1,
+      "endurance": 6,
+      "sites": 1,
+      "dt": 80,
+      "ux": 1,
+      "thirdParty": 1,
+      "aggregate": 1,
+      "crDevice": 5
+    }
   }
 }

@@ -11676,5 +11676,1617 @@
       "TC-D8-022-C002"
     ],
     "TestedSHA": "56334926fee679412c4978471f812d454e854525"
+  },
+  "CR010_PHASE6_ACCEPTANCE_20261126": {
+    "TestedSHA": "56334926fee679412c4978471f812d454e854525",
+    "automatedCoverageBasis": "CR010_R4",
+    "humanCaseStatusesByRequirement": {
+      "NFR-003": [
+        {
+          "caseId": "TC-D4-018-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C007",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C008",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C009",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C010",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C011",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C012",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C013",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C014",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C015",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C016",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C017",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C018",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C019",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C020",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C021",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C022",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C023",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C024",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C025",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C026",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C027",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C028",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C029",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C030",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C031",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C032",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C033",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C034",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C035",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C036",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C037",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C038",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C039",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C040",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C041",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C042",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C043",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C044",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C045",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C046",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C047",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C048",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C049",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D4-018-C050",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-086": [
+        {
+          "caseId": "TC-D5-025-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-034-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-012": [
+        {
+          "caseId": "TC-D5-025-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-034-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-034": [
+        {
+          "caseId": "TC-D5-034-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-033": [
+        {
+          "caseId": "TC-D5-034-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-037": [
+        {
+          "caseId": "TC-D5-034-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D5-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "BR-007": [
+        {
+          "caseId": "TC-D6-013-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-014-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-026-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-018": [
+        {
+          "caseId": "TC-D6-013-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-047-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-014": [
+        {
+          "caseId": "TC-D6-014-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-024-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-015": [
+        {
+          "caseId": "TC-D6-015-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-011": [
+        {
+          "caseId": "TC-D6-015-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-013": [
+        {
+          "caseId": "TC-D6-023-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-026-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-082": [
+        {
+          "caseId": "TC-D6-024-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-034": [
+        {
+          "caseId": "TC-D6-024-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-013": [
+        {
+          "caseId": "TC-D6-024-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C001",
+          "status": "BLOCKED",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C007",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C008",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C009",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C010",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C011",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C012",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C013",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C014",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C015",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C016",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C017",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C018",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C019",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C020",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C021",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C022",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C023",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C024",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C025",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C026",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C027",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C028",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C029",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C030",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C031",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C032",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C033",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C034",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C035",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C036",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C037",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C038",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C039",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C040",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C041",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C042",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C043",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C044",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C045",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C046",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C047",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C048",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C049",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C050",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C051",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C052",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C053",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C054",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C055",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C056",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C057",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C058",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C059",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C060",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C061",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C062",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C063",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C064",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C065",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C066",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C067",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C068",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C069",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C070",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C071",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C072",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C073",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C074",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C075",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C076",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C077",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C078",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C079",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C080",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C081",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-012": [
+        {
+          "caseId": "TC-D6-026-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-006": [
+        {
+          "caseId": "TC-D6-026-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "BR-009": [
+        {
+          "caseId": "TC-D6-027-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-031-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C002",
+          "status": "NOT_RUN",
+          "required": false
+        },
+        {
+          "caseId": "TC-D7-030-C003",
+          "status": "HOLD",
+          "required": true
+        }
+      ],
+      "FR-071": [
+        {
+          "caseId": "TC-D6-027-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-010": [
+        {
+          "caseId": "TC-D6-027-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-028-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-031-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-072": [
+        {
+          "caseId": "TC-D6-028-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-031-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "DR-018": [
+        {
+          "caseId": "TC-D6-028-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-048-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-074": [
+        {
+          "caseId": "TC-D6-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-011": [
+        {
+          "caseId": "TC-D6-035-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-041-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-042-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-035": [
+        {
+          "caseId": "TC-D6-041-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-036": [
+        {
+          "caseId": "TC-D6-041-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-042-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-076": [
+        {
+          "caseId": "TC-D6-042-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-017": [
+        {
+          "caseId": "TC-D6-042-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-014": [
+        {
+          "caseId": "TC-D6-045-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D6-047-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-077": [
+        {
+          "caseId": "TC-D6-045-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-047": [
+        {
+          "caseId": "TC-D6-046-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-048": [
+        {
+          "caseId": "TC-D6-046-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-049": [
+        {
+          "caseId": "TC-D6-046-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "FR-022": [
+        {
+          "caseId": "TC-D6-047-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-016": [
+        {
+          "caseId": "TC-D6-047-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-020": [
+        {
+          "caseId": "TC-D7-011-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-008": [
+        {
+          "caseId": "TC-D7-012-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-012-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-012-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-012-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-012-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-012-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-013-C007",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-014-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "NFR-009": [
+        {
+          "caseId": "TC-D7-015-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-015-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-015-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-015-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-015-C007",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-015-C008",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        }
+      ],
+      "QR-015": [
+        {
+          "caseId": "TC-D7-029-C001",
+          "status": "BLOCKED",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C002",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C003",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C004",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C005",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C006",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C007",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C008",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C009",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C010",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C011",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C012",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C013",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C014",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C015",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C016",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C017",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C018",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C019",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C020",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C021",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C022",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C023",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C024",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C025",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C026",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C027",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C028",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C029",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C030",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C031",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C032",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C033",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C034",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C035",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C036",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C037",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C038",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C039",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C040",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C041",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C042",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C043",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C044",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C045",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C046",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C047",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C048",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C049",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C050",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C051",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C052",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C053",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C054",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C055",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C056",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C057",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C058",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C059",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C060",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C061",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C062",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C063",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C064",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C065",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C066",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C067",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C068",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C069",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C070",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C071",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C072",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C073",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C074",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C075",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C076",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C077",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C078",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C079",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C080",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-029-C081",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C002",
+          "status": "NOT_RUN",
+          "required": false
+        },
+        {
+          "caseId": "TC-D7-030-C003",
+          "status": "HOLD",
+          "required": true
+        }
+      ],
+      "BR-002": [
+        {
+          "caseId": "TC-D7-030-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C002",
+          "status": "NOT_RUN",
+          "required": false
+        },
+        {
+          "caseId": "TC-D7-030-C003",
+          "status": "HOLD",
+          "required": true
+        }
+      ],
+      "BR-006": [
+        {
+          "caseId": "TC-D7-030-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C002",
+          "status": "NOT_RUN",
+          "required": false
+        },
+        {
+          "caseId": "TC-D7-030-C003",
+          "status": "HOLD",
+          "required": true
+        }
+      ],
+      "QR-016": [
+        {
+          "caseId": "TC-D7-030-C001",
+          "status": "EVIDENCE_INSUFFICIENT",
+          "required": true
+        },
+        {
+          "caseId": "TC-D7-030-C002",
+          "status": "NOT_RUN",
+          "required": false
+        },
+        {
+          "caseId": "TC-D7-030-C003",
+          "status": "HOLD",
+          "required": true
+        }
+      ]
+    },
+    "additionalHumanCasesByCR010Contract": [
+      "CR010-DV-01",
+      "CR010-DV-02",
+      "CR010-DV-03",
+      "CR010-DV-04",
+      "CR010-DV-05"
+    ]
   }
 }

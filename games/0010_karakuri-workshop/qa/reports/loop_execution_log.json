@@ -4641,5 +4641,31 @@
     },
     "newPhysicalWorlds": 0,
     "newEnduranceAttempts": 0
+  },
+  "CR010_PHASE6_ACCEPTANCE_20261126": {
+    "approvalId": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+    "previousR4BudgetSHA256": "ce1dce32fccf63ae7667b884b0cc1465dee36ee596404452acfb5a8dbd24d78f",
+    "reservation": {
+      "runId": "CR010-P6-ACCEPTANCE-EVIDENCE-READBACK",
+      "approvalId": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "5c6da42c6a82ecb2a7a57b111d06cb0a1d7eed89",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "r4SettlementSHA256": "ce1dce32fccf63ae7667b884b0cc1465dee36ee596404452acfb5a8dbd24d78f",
+      "previousAutomatedSeconds": 12340,
+      "reservationSeconds": 300,
+      "durationAccounting": "Automated QA evidence inventory/build/verification and GitHub push/readback are timed separately within this reservation.",
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "remediations": 0,
+      "purpose": "Phase 6 QA evidence reconciliation and QA-only GitHub readback"
+    },
+    "siteReadback": {
+      "status": "COMPLETE_READBACK",
+      "seconds": 2
+    },
+    "purpose": "QA evidence and review, no physical experiments"
   }
 }

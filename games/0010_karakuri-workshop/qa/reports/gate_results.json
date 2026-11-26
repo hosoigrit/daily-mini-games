@@ -2389,5 +2389,309 @@
     },
     "supersedesForCurrentGate": "CR010_R3_CONTINUATION",
     "preservesHistoricalDecisions": true
+  },
+  "CR010_PHASE6_ACCEPTANCE_20261126": {
+    "approvalId": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+    "TestedSHA": "56334926fee679412c4978471f812d454e854525",
+    "parentEvidenceSHA": "5c6da42c6a82ecb2a7a57b111d06cb0a1d7eed89",
+    "automaticGate": "PASS",
+    "developmentAndAutomation": "CLOSED",
+    "phase6": "HOLD",
+    "EG-09": "HOLD",
+    "finalAcceptance": "HOLD",
+    "officialRelease": "NOT_AUTHORIZED",
+    "frozenReferences": [
+      "08_acceptance_criteria.md",
+      "09_implementation_plan.md",
+      "17_visual_qa_protocol.md",
+      "18_test_execution_manifest.json"
+    ],
+    "summary": {
+      "oldTotal": 982,
+      "oldAutomationPASS": 809,
+      "addedTotal": 78,
+      "addedAutomationPASS": 73,
+      "humanTotal": 178,
+      "formalHumanPASS": 0,
+      "totalCases": 1060,
+      "automatedPASS": 882,
+      "humanStatuses": {
+        "EVIDENCE_INSUFFICIENT": 175,
+        "BLOCKED": 1,
+        "NOT_RUN": 1,
+        "HOLD": 1
+      },
+      "requiredHumanCasesWithoutFormalPASS": 177,
+      "recommendedHumanCasesWithoutFormalPASS": 1,
+      "fiveEnvironmentReportCount": 5
+    },
+    "deviceReports": [
+      {
+        "deviceId": "DV-01",
+        "device": "Galaxy S26",
+        "osFamily": "Android",
+        "browserFamily": "Chrome",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-02",
+        "device": "iPhone SE2",
+        "osFamily": "iOS",
+        "browserFamily": "Safari",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-03",
+        "device": "iPad mini 6",
+        "osFamily": "iPadOS",
+        "browserFamily": "Safari",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-04",
+        "device": "Windows 11",
+        "osFamily": "Windows 11",
+        "browserFamily": "Chrome",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-05",
+        "device": "Windows 11",
+        "osFamily": "Windows 11",
+        "browserFamily": "Edge",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      }
+    ],
+    "UX": {
+      "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+      "previous": 51,
+      "current": 84,
+      "difference": 33,
+      "minimumRating": 3,
+      "pointsAtLeast80": "PASS",
+      "allRatingsAtLeast3": "PASS",
+      "rubric": [
+        {
+          "item": "面白さ",
+          "previousRating": 2,
+          "rating": 4,
+          "weight": 20,
+          "previousPoints": 8,
+          "points": 16
+        },
+        {
+          "item": "操作性",
+          "previousRating": 3,
+          "rating": 4,
+          "weight": 20,
+          "previousPoints": 12,
+          "points": 16
+        },
+        {
+          "item": "ルールの明瞭さ",
+          "previousRating": 3,
+          "rating": 5,
+          "weight": 15,
+          "previousPoints": 9,
+          "points": 15
+        },
+        {
+          "item": "難易度の適切さ",
+          "previousRating": 2,
+          "rating": 5,
+          "weight": 15,
+          "previousPoints": 6,
+          "points": 15
+        },
+        {
+          "item": "攻略の自由度",
+          "previousRating": 2,
+          "rating": 4,
+          "weight": 10,
+          "previousPoints": 4,
+          "points": 8
+        },
+        {
+          "item": "再遊性",
+          "previousRating": 2,
+          "rating": 3,
+          "weight": 10,
+          "previousPoints": 4,
+          "points": 6
+        },
+        {
+          "item": "グラフィック",
+          "previousRating": 4,
+          "rating": 4,
+          "weight": 5,
+          "previousPoints": 4,
+          "points": 4
+        },
+        {
+          "item": "効果音",
+          "previousRating": 4,
+          "rating": 4,
+          "weight": 5,
+          "previousPoints": 4,
+          "points": 4
+        }
+      ],
+      "freeText": null,
+      "userScopeMajorOrMustDefects": 0,
+      "caseId": "TC-D7-030-C001",
+      "individualCaseStatus": "EVIDENCE_INSUFFICIENT"
+    },
+    "sites": {
+      "caseId": "TC-D7-029-C001",
+      "status": "BLOCKED",
+      "version": 2,
+      "confirmedActiveDeployment": true,
+      "ownerOnlySettingConfirmed": true,
+      "anonymousRootHttpStatus": 403,
+      "exactNamedPathMatches": 45,
+      "rootHtmlMatchesTestedIndex": true,
+      "expectedRuntimeContentMatches": 46,
+      "indexNamedPathStatus": 307,
+      "indexNamedPathSameOriginRedirect": true,
+      "indexRedirectDestinationPathRecorded": false,
+      "deployedArchiveReportedFiles": 47,
+      "archiveContentSHA256": "sha256:ad6628cff546c2406fb84fe84e2a139f71bf119d94beaa281b52a3be415f090f",
+      "platformSourceCommit": "8eb894f902fe10949729dd8495eaa4c9015106a3",
+      "testedCommit": "56334926fee679412c4978471f812d454e854525",
+      "archiveDownload": "UNAVAILABLE_FILE_AUTHORIZATION_OR_RESOLUTION",
+      "archiveInventoryAndDiff": "INCOMPLETE",
+      "userTrialDeploymentBinding": "NOT_DOCUMENTED",
+      "rawServices": "Read-only Sites metadata, owner credential HTTPS GET, anonymous GET, and post-readback deployment recheck.",
+      "originSHA256": "3e2f519b295cc106dbe743d89acd909d7b9fa044dd7763f4dd800af150972230",
+      "privateEvidenceSHA256": {
+        "p6-site-metadata.json": "891692dfe57e0fe1d9b96a4fb2e329330a010a848918dc8ef1396ed5b4be7371",
+        "p6-sites-readback.json": "1d44278f4023d0b185c6a7c3975b9aeb694b33fd29a9c68d847ce291906cfa42",
+        "p6-sites-after.json": "4121d34336a92c730eca1cff45b6d4b38ffda9122c1b7a629093da060eee385e"
+      },
+      "originLocation": "User QA evidence bundle; private endpoint omitted from public repository.",
+      "missing": [
+        "Authoritative exact v2 archive inventory and port diff identifying all archive members, routing and source mapping, with effects and approval if changed.",
+        "Record linking human trial sessions to the deployed version and tested candidate."
+      ]
+    },
+    "generalRiskAcceptance": {
+      "reporter": "owner",
+      "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+      "reported": true,
+      "exemptsRequiredCases": false,
+      "thirdPartyNonExecutionSpecificallyAccepted": false,
+      "freeText": null
+    },
+    "independentReview": {
+      "reviewers": [
+        "/root/e1_test_plan",
+        "/root/e8_coverage"
+      ],
+      "mode": "SEPARATE_CONTEXT_READ_ONLY",
+      "arithmeticAndDeviceTranscription": "VERIFIED",
+      "caseAndGateApplication": "VERIFIED",
+      "sitesRuntimeContentAndRemainingDiff": "VERIFIED",
+      "caseGroupCounts": {
+        "stage": 50,
+        "deviceSpecific": 20,
+        "frame": 6,
+        "inputLatency": 6,
+        "network": 1,
+        "endurance": 6,
+        "sites": 1,
+        "dt": 80,
+        "ux": 1,
+        "thirdParty": 1,
+        "aggregate": 1,
+        "crDevice": 5
+      }
+    },
+    "unresolvedRequiredGroups": {
+      "stage": 50,
+      "deviceSpecific": 20,
+      "frame": 6,
+      "inputLatency": 6,
+      "network": 1,
+      "endurance": 6,
+      "sites": 1,
+      "dt": 80,
+      "ux": 1,
+      "aggregate": 1,
+      "crDevice": 5
+    },
+    "baselineR4Preserved": true,
+    "scopeDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "protectedAssets": {
+      "frozen": 22,
+      "gameProtected": 22,
+      "runtime": 46,
+      "otherGames": 9
+    },
+    "budgetReservation": {
+      "runId": "CR010-P6-ACCEPTANCE-EVIDENCE-READBACK",
+      "approvalId": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "5c6da42c6a82ecb2a7a57b111d06cb0a1d7eed89",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "r4SettlementSHA256": "ce1dce32fccf63ae7667b884b0cc1465dee36ee596404452acfb5a8dbd24d78f",
+      "previousAutomatedSeconds": 12340,
+      "reservationSeconds": 300,
+      "durationAccounting": "Automated QA evidence inventory/build/verification and GitHub push/readback are timed separately within this reservation.",
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "remediations": 0,
+      "purpose": "Phase 6 QA evidence reconciliation and QA-only GitHub readback"
+    },
+    "applicableModifiedFiles": [
+      "games/0010_karakuri-workshop/qa/reports/automated_test_results.json",
+      "games/0010_karakuri-workshop/qa/reports/gate_results.json",
+      "games/0010_karakuri-workshop/qa/reports/implementation_summary.md",
+      "games/0010_karakuri-workshop/qa/reports/loop_execution_log.json",
+      "games/0010_karakuri-workshop/qa/reports/raw-events.jsonl",
+      "games/0010_karakuri-workshop/qa/reports/requirement_coverage.json",
+      "games/0010_karakuri-workshop/qa/reports/residual_risks.md",
+      "games/0010_karakuri-workshop/qa/reports/review_findings.json",
+      "games/0010_karakuri-workshop/qa/reports/test_integrity_report.json",
+      "games/0010_karakuri-workshop/qa/reports/visual_qa_handoff.md",
+      "games/0010_karakuri-workshop/qa/state/attempts.jsonl",
+      "games/0010_karakuri-workshop/qa/state/runtime-manifest.json"
+    ]
   }
 }
