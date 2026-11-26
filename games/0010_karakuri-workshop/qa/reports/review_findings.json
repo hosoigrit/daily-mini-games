@@ -2330,5 +2330,44 @@
       "aggregate": 1,
       "crDevice": 5
     }
+  },
+  "CR011_RISK_BASED_ACCEPTANCE": {
+    "mode": "SEPARATE_CONTEXT_READ_ONLY",
+    "caseInventoryReviewer": "/root/e1_test_plan",
+    "sitesAndGateReviewer": "/root/e8_coverage",
+    "verdict": "NO_KNOWN_CRITICAL_HIGH_MUST_OR_MATERIAL_RUNTIME_DIFFERENCE",
+    "caseReview": {
+      "scope": "Exact 175-case census and requirements, 882 automatic outcomes, 18 mutations, 20 ST00 tests, 12 save tests, 46 release asset hashes, previously settled ledger.",
+      "originalRequirementIds": 42,
+      "originalCaseToRequirementLinks": 291,
+      "needsNewOriginalRequirementIdsForAddedDV": false,
+      "retainsPriorHumanStatuses": true,
+      "ownerUX": {
+        "old": 51,
+        "new": 84,
+        "minimum": 3
+      }
+    },
+    "sitesReview": {
+      "scope": "Compared all 46 live byte hashes and sizes and all 37 actual Chromium startup responses independently with immutable Tested Git objects.",
+      "exactExpectedLiveAssets": 46,
+      "exactStartupAssets": 37,
+      "additionalSameOriginRequests": 0,
+      "externalAttempts": 0,
+      "privateAccessConfirmed": true,
+      "fullPortIdentityPASS": false,
+      "archiveExtraMemberContents": "UNKNOWN",
+      "historicalTrialVersion": "NOT_DOCUMENTED",
+      "pastTrialVersionCertaintyIsNotAnIndependentConjunctOfRevisedGate": true,
+      "freshContextServiceWorkerBlockedObservation": true,
+      "postMetadataSHA256": "2fb25cd014a6565cea3b1ddf91278652e98392c459d0ff060a610b23d4187a71"
+    },
+    "liveCaptureSHA256": "1a73af6e454094cf06b84f1921c8d06a547b37894105abadacf7488977fdd61b",
+    "riskScope": "Evidence-submission only, specific third-party non-execution, and explicitly bounded current Sites acceptance.",
+    "knownOpenCriticalHighMust": {
+      "Critical": 0,
+      "High": 0,
+      "Must": 0
+    }
   }
 }

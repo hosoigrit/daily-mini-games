@@ -4667,5 +4667,75 @@
       "seconds": 2
     },
     "purpose": "QA evidence and review, no physical experiments"
+  },
+  "CR011_RISK_BASED_ACCEPTANCE": {
+    "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE",
+    "reservation": {
+      "runId": "CR011-SITES-AND-ACCEPTANCE-READBACK",
+      "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "56d3a4e91b443fed0d254fa2cb0b0757d1ef921d",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorBudgetSHA256": "105a2b11903cf588d58d4fa75cca9400c455c771c3432e8365fca14bf3840374",
+      "previousAutomatedSeconds": 12355,
+      "reservationSeconds": 360,
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "remediations": 0,
+      "purpose": "Read-only Sites assets and title screen network observation; QA acceptance evidence and GitHub readback"
+    },
+    "priorBudgetSHA256": "105a2b11903cf588d58d4fa75cca9400c455c771c3432e8365fca14bf3840374",
+    "automatedSitesTrialTimings": [
+      {
+        "attempt": 1,
+        "evidence": {
+          "status": "INCOMPLETE",
+          "seconds": 6
+        },
+        "fileSHA256": "cb0dc7f0a24c66804b0d80da5b0287585f44b3c88ab3311c15e257320311cf2a"
+      },
+      {
+        "attempt": 2,
+        "evidence": {
+          "status": "INCOMPLETE",
+          "seconds": 1
+        },
+        "fileSHA256": "81a18ece319087bd48bfbd846e3947137a51c5e4017a77a2a0dac01edc4c605d"
+      },
+      {
+        "attempt": 3,
+        "evidence": {
+          "status": "INCOMPLETE",
+          "seconds": 1
+        },
+        "fileSHA256": "81a18ece319087bd48bfbd846e3947137a51c5e4017a77a2a0dac01edc4c605d"
+      },
+      {
+        "attempt": 4,
+        "evidence": {
+          "status": "INCOMPLETE",
+          "seconds": 2
+        },
+        "fileSHA256": "7d6eead5995ecf198a9b794a5cd5e55ff2699061d669509b4983dfa94b495bff"
+      },
+      {
+        "attempt": 5,
+        "evidence": {
+          "status": "INCOMPLETE",
+          "seconds": 2
+        },
+        "fileSHA256": "7d6eead5995ecf198a9b794a5cd5e55ff2699061d669509b4983dfa94b495bff"
+      },
+      {
+        "attempt": 6,
+        "evidence": {
+          "status": "COMPLETE",
+          "seconds": 3
+        },
+        "fileSHA256": "3bc3a724c440c4773e6501869fb0c9a2116c068a50c15cc5e2dbea24425e16ee"
+      }
+    ]
   }
 }

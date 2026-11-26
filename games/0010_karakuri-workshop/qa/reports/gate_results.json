@@ -2693,5 +2693,305 @@
       "games/0010_karakuri-workshop/qa/state/attempts.jsonl",
       "games/0010_karakuri-workshop/qa/state/runtime-manifest.json"
     ]
+  },
+  "CR011_RISK_BASED_ACCEPTANCE": {
+    "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE",
+    "TestedSHA": "56334926fee679412c4978471f812d454e854525",
+    "previousEvidenceSHA": "56d3a4e91b443fed0d254fa2cb0b0757d1ef921d",
+    "automaticGate": "PASS",
+    "phase6": "CLOSED_WITH_ACCEPTED_RESIDUAL_RISKS",
+    "EG-09": "PASS_UNDER_CR011",
+    "finalAcceptance": "ACCEPTED_WITH_LIMITED_EVIDENCE",
+    "officialRelease": "NOT_AUTHORIZED",
+    "priorContract": {
+      "phase6": "HOLD",
+      "EG-09": "HOLD",
+      "finalAcceptance": "HOLD",
+      "source": "CR010_PHASE6_ACCEPTANCE_20261126"
+    },
+    "caseCounts": {
+      "total": 1060,
+      "automatedAccepted": 882,
+      "oldAutomatedAccepted": 809,
+      "addedAutomatedAccepted": 73,
+      "humanRows": 178,
+      "humanIndividualMeasuredPASS": 0,
+      "detailedEvidenceRiskAccepted": 175,
+      "thirdPartyNotRunRiskAccepted": 1,
+      "limitedSiteAccepted": 1,
+      "aggregateAcceptedUnderCR011": 1
+    },
+    "coveredHumanEvidenceGroups": {
+      "crDevice": 5,
+      "stage": 50,
+      "deviceSpecific": 20,
+      "frame": 6,
+      "inputLatency": 6,
+      "network": 1,
+      "endurance": 6,
+      "dt": 80,
+      "ux": 1
+    },
+    "deviceReports": [
+      {
+        "deviceId": "DV-01",
+        "device": "Galaxy S26",
+        "osFamily": "Android",
+        "browserFamily": "Chrome",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-02",
+        "device": "iPhone SE2",
+        "osFamily": "iOS",
+        "browserFamily": "Safari",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-03",
+        "device": "iPad mini 6",
+        "osFamily": "iPadOS",
+        "browserFamily": "Safari",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-04",
+        "device": "Windows 11",
+        "osFamily": "Windows 11",
+        "browserFamily": "Chrome",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      },
+      {
+        "deviceId": "DV-05",
+        "device": "Windows 11",
+        "osFamily": "Windows 11",
+        "browserFamily": "Edge",
+        "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+        "operationCheck": "PERFORMED_AND_CONFIRMED_BY_OWNER_REPORT",
+        "reportedScopeHasNoMajorOrMustFinding": true,
+        "actualOSVersion": null,
+        "actualBrowserVersion": null,
+        "caseLogsSupplied": false,
+        "testedCandidateReported": "56334926fee679412c4978471f812d454e854525",
+        "trialDeploymentVersionIndependentlyBound": false
+      }
+    ],
+    "UX": {
+      "source": "ACCEPT-GAME-0010-CR010-PHASE6-20261126-01",
+      "previous": 51,
+      "current": 84,
+      "difference": 33,
+      "minimumRating": 3,
+      "pointsAtLeast80": "PASS",
+      "allRatingsAtLeast3": "PASS",
+      "rubric": [
+        {
+          "item": "面白さ",
+          "previousRating": 2,
+          "rating": 4,
+          "weight": 20,
+          "previousPoints": 8,
+          "points": 16
+        },
+        {
+          "item": "操作性",
+          "previousRating": 3,
+          "rating": 4,
+          "weight": 20,
+          "previousPoints": 12,
+          "points": 16
+        },
+        {
+          "item": "ルールの明瞭さ",
+          "previousRating": 3,
+          "rating": 5,
+          "weight": 15,
+          "previousPoints": 9,
+          "points": 15
+        },
+        {
+          "item": "難易度の適切さ",
+          "previousRating": 2,
+          "rating": 5,
+          "weight": 15,
+          "previousPoints": 6,
+          "points": 15
+        },
+        {
+          "item": "攻略の自由度",
+          "previousRating": 2,
+          "rating": 4,
+          "weight": 10,
+          "previousPoints": 4,
+          "points": 8
+        },
+        {
+          "item": "再遊性",
+          "previousRating": 2,
+          "rating": 3,
+          "weight": 10,
+          "previousPoints": 4,
+          "points": 6
+        },
+        {
+          "item": "グラフィック",
+          "previousRating": 4,
+          "rating": 4,
+          "weight": 5,
+          "previousPoints": 4,
+          "points": 4
+        },
+        {
+          "item": "効果音",
+          "previousRating": 4,
+          "rating": 4,
+          "weight": 5,
+          "previousPoints": 4,
+          "points": 4
+        }
+      ],
+      "freeText": null,
+      "userScopeMajorOrMustDefects": 0,
+      "caseId": "TC-D7-030-C001",
+      "individualCaseStatus": "EVIDENCE_INSUFFICIENT",
+      "adoptedOwnerScore": 84,
+      "numericCriteria": "PASS"
+    },
+    "recommendationThirdParty": {
+      "status": "NOT_RUN",
+      "omissionExplicitlyAccepted": true,
+      "caseId": "TC-D7-030-C002"
+    },
+    "sites": {
+      "caseId": "TC-D7-029-C001",
+      "priorFormalStatus": "BLOCKED",
+      "newAcceptance": "ACCEPTED_LIMITED_UNDER_CR011",
+      "completeMigrationIdentityPASS": false,
+      "currentVersion": 2,
+      "sameBeforeAndAfterDeployment": true,
+      "ownerOnly": true,
+      "expectedRuntimeAssetContentMatches": 46,
+      "indexRedirect": {
+        "status": 307,
+        "sameOrigin": true,
+        "destinationPath": "/"
+      },
+      "priorAnonymousStatus": 403,
+      "currentAnonymousRootStatus": 401,
+      "currentAnonymousScriptStatus": 401,
+      "platformSourceSHA": "8eb894f902fe10949729dd8495eaa4c9015106a3",
+      "sourceOfFutureReleaseAssets": "56334926fee679412c4978471f812d454e854525",
+      "releaseAllowedRuntimeFileCount": 46,
+      "archivedFileCount": 47,
+      "unclassifiedArchiveMemberCount": 1,
+      "archiveReadStatus": "UNAVAILABLE_AUTHORIZATION_OR_RESOLUTION",
+      "deploymentPortDiff": "PARTIAL_LIVE_BYTES_AND_REDIRECT_VERIFIED_ARCHIVE_EXTRA_ITEM_UNKNOWN",
+      "historicalUserTrialVersion": "NOT_DOCUMENTED",
+      "historicalTrialVersionQuestion": "5環境での試遊に使用したのは、今回照合した本人限定のQAサイトv2でしたか？",
+      "chromiumTitleScreen": {
+        "browserVersion": "158.0.8127.18",
+        "uniqueExpectedLoads": 37,
+        "unexpectedSameOriginRequests": 0,
+        "externalRequestAttempts": 0,
+        "bodyMismatches": 0,
+        "observationScope": "Fresh Chromium context; same-origin GETs relayed to live HTTPS with unmodified decompressed bodies and preserved end-to-end headers; service workers blocked, external requests recorded and blocked; no gameplay actions."
+      },
+      "carryUnconfirmedSiteFilesToFutureRelease": false,
+      "openKnownMaterialOrSafetyDifferences": 0,
+      "originSHA256": "3e2f519b295cc106dbe743d89acd909d7b9fa044dd7763f4dd800af150972230",
+      "rawLiveProofSHA256": "1a73af6e454094cf06b84f1921c8d06a547b37894105abadacf7488977fdd61b",
+      "releaseConstraint": "Use exactly the 46 fixed GitHub Tested SHA assets for a separately authorized publication."
+    },
+    "independentReview": {
+      "mode": "SEPARATE_CONTEXT_READ_ONLY",
+      "caseInventoryReviewer": "/root/e1_test_plan",
+      "sitesAndGateReviewer": "/root/e8_coverage",
+      "verdict": "NO_KNOWN_CRITICAL_HIGH_MUST_OR_MATERIAL_RUNTIME_DIFFERENCE",
+      "caseReview": {
+        "scope": "Exact 175-case census and requirements, 882 automatic outcomes, 18 mutations, 20 ST00 tests, 12 save tests, 46 release asset hashes, previously settled ledger.",
+        "originalRequirementIds": 42,
+        "originalCaseToRequirementLinks": 291,
+        "needsNewOriginalRequirementIdsForAddedDV": false,
+        "retainsPriorHumanStatuses": true,
+        "ownerUX": {
+          "old": 51,
+          "new": 84,
+          "minimum": 3
+        }
+      },
+      "sitesReview": {
+        "scope": "Compared all 46 live byte hashes and sizes and all 37 actual Chromium startup responses independently with immutable Tested Git objects.",
+        "exactExpectedLiveAssets": 46,
+        "exactStartupAssets": 37,
+        "additionalSameOriginRequests": 0,
+        "externalAttempts": 0,
+        "privateAccessConfirmed": true,
+        "fullPortIdentityPASS": false,
+        "archiveExtraMemberContents": "UNKNOWN",
+        "historicalTrialVersion": "NOT_DOCUMENTED",
+        "pastTrialVersionCertaintyIsNotAnIndependentConjunctOfRevisedGate": true,
+        "freshContextServiceWorkerBlockedObservation": true,
+        "postMetadataSHA256": "2fb25cd014a6565cea3b1ddf91278652e98392c459d0ff060a610b23d4187a71"
+      },
+      "liveCaptureSHA256": "1a73af6e454094cf06b84f1921c8d06a547b37894105abadacf7488977fdd61b",
+      "riskScope": "Evidence-submission only, specific third-party non-execution, and explicitly bounded current Sites acceptance.",
+      "knownOpenCriticalHighMust": {
+        "Critical": 0,
+        "High": 0,
+        "Must": 0
+      }
+    },
+    "releaseRuntimeAssets": 46,
+    "openCriticalHighMust": {
+      "Critical": 0,
+      "High": 0,
+      "Must": 0
+    },
+    "previousBudgetSHA256": "105a2b11903cf588d58d4fa75cca9400c455c771c3432e8365fca14bf3840374",
+    "reservation": {
+      "runId": "CR011-SITES-AND-ACCEPTANCE-READBACK",
+      "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "56d3a4e91b443fed0d254fa2cb0b0757d1ef921d",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorBudgetSHA256": "105a2b11903cf588d58d4fa75cca9400c455c771c3432e8365fca14bf3840374",
+      "previousAutomatedSeconds": 12355,
+      "reservationSeconds": 360,
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "remediations": 0,
+      "purpose": "Read-only Sites assets and title screen network observation; QA acceptance evidence and GitHub readback"
+    },
+    "effectivePathsSHA256": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed"
   }
 }

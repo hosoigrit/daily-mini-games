@@ -205349,5 +205349,2991 @@
       },
       "details": "phase6 property in each human row"
     }
+  },
+  "CR011_RISK_BASED_ACCEPTANCE": {
+    "automaticBasis": "CR010_R4",
+    "initialPhase6Basis": "CR010_PHASE6_ACCEPTANCE_20261126",
+    "caseCounts": {
+      "total": 1060,
+      "automatedAccepted": 882,
+      "oldAutomatedAccepted": 809,
+      "addedAutomatedAccepted": 73,
+      "humanRows": 178,
+      "humanIndividualMeasuredPASS": 0,
+      "detailedEvidenceRiskAccepted": 175,
+      "thirdPartyNotRunRiskAccepted": 1,
+      "limitedSiteAccepted": 1,
+      "aggregateAcceptedUnderCR011": 1
+    },
+    "humanCases": [
+      {
+        "caseId": "TC-D4-018-C001",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C002",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C003",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C004",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C005",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C006",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C007",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C008",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C009",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C010",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C011",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C012",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C013",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C014",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C015",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C016",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C017",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C018",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C019",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C020",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C021",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C022",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C023",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C024",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C025",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C026",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C027",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C028",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C029",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C030",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C031",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C032",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C033",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C034",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C035",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C036",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C037",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C038",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C039",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C040",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C041",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C042",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C043",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C044",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C045",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C046",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C047",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C048",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C049",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D4-018-C050",
+        "requirementIds": [
+          "NFR-003"
+        ],
+        "scope": "FROZEN",
+        "group": "stage",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "実機での完走、星・必須使用の端末差が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D5-025-C002",
+        "requirementIds": [
+          "FR-086",
+          "QR-012"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D5-034-C002",
+        "requirementIds": [
+          "FR-034",
+          "FR-086",
+          "NFR-033",
+          "NFR-037",
+          "QR-012"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D5-035-C002",
+        "requirementIds": [
+          "FR-086",
+          "NFR-033",
+          "NFR-037",
+          "QR-012"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-013-C002",
+        "requirementIds": [
+          "BR-007",
+          "NFR-018"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-014-C002",
+        "requirementIds": [
+          "BR-007",
+          "NFR-014"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-015-C002",
+        "requirementIds": [
+          "FR-015",
+          "NFR-011"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-023-C002",
+        "requirementIds": [
+          "NFR-013"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-024-C002",
+        "requirementIds": [
+          "FR-082",
+          "NFR-014",
+          "NFR-034",
+          "QR-013"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-026-C002",
+        "requirementIds": [
+          "BR-007",
+          "NFR-012",
+          "NFR-013",
+          "QR-006"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-027-C002",
+        "requirementIds": [
+          "BR-009",
+          "FR-071",
+          "QR-010"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-028-C002",
+        "requirementIds": [
+          "FR-072",
+          "DR-018",
+          "QR-010"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-031-C002",
+        "requirementIds": [
+          "BR-009",
+          "FR-072",
+          "QR-010"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-035-C002",
+        "requirementIds": [
+          "BR-009",
+          "FR-074",
+          "DR-018",
+          "QR-011"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-041-C002",
+        "requirementIds": [
+          "NFR-035",
+          "NFR-036",
+          "QR-011"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-042-C002",
+        "requirementIds": [
+          "FR-076",
+          "NFR-017",
+          "NFR-036",
+          "QR-011"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-045-C002",
+        "requirementIds": [
+          "FR-014",
+          "FR-077"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-046-C002",
+        "requirementIds": [
+          "FR-047",
+          "FR-048",
+          "FR-049"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-047-C002",
+        "requirementIds": [
+          "FR-014",
+          "FR-022",
+          "NFR-016",
+          "NFR-018"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D6-048-C003",
+        "requirementIds": [
+          "DR-018"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-011-C002",
+        "requirementIds": [
+          "NFR-020"
+        ],
+        "scope": "FROZEN",
+        "group": "deviceSpecific",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "OS・ブラウザ固有の入力、ライフサイクル、表示や音声の挙動が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C001",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C002",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C003",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C004",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C005",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-012-C006",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "frame",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機のFPS、p95と物理進行率を再現できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C002",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C003",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C004",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C005",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C006",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-013-C007",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "inputLatency",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機の操作p95が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-014-C002",
+        "requirementIds": [
+          "NFR-008"
+        ],
+        "scope": "FROZEN",
+        "group": "network",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "対象実機と配信経路ごとの起動性能が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C003",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C004",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C005",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C006",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C007",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-015-C008",
+        "requirementIds": [
+          "NFR-009"
+        ],
+        "scope": "FROZEN",
+        "group": "endurance",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "指定実機の長時間動作・資源解放が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C001",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "sites",
+        "required": true,
+        "priorFormalStatus": "BLOCKED",
+        "cr011AcceptanceStatus": "ACCEPTED_LIMITED_UNDER_CR011",
+        "detailedEvidenceSubmissionWaived": false,
+        "individualMeasuredPASS": false,
+        "risk": "期待資産以外の1件の役割やルーティングの影響が未確認。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C002",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C003",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C004",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C005",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C006",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C007",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C008",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C009",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C010",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C011",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C012",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C013",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C014",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C015",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C016",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C017",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C018",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C019",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C020",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C021",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C022",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C023",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C024",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C025",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C026",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C027",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C028",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C029",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C030",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C031",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C032",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C033",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C034",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C035",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C036",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C037",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C038",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C039",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C040",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C041",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C042",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C043",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C044",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C045",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C046",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C047",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C048",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C049",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C050",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C051",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C052",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C053",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C054",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C055",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C056",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C057",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C058",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C059",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C060",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C061",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C062",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C063",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C064",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C065",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C066",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C067",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C068",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C069",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C070",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C071",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C072",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C073",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C074",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C075",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C076",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C077",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C078",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C079",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C080",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-029-C081",
+        "requirementIds": [
+          "QR-013",
+          "QR-015"
+        ],
+        "scope": "FROZEN",
+        "group": "dt",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "該当する入力、UI、可視性、保存、音声などの端末差が未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-030-C001",
+        "requirementIds": [
+          "BR-002",
+          "BR-006",
+          "BR-009",
+          "QR-015",
+          "QR-016"
+        ],
+        "scope": "FROZEN",
+        "group": "ux",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "評価点は確認済み。体験範囲が固定手順に適合するか未確定。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-030-C002",
+        "requirementIds": [
+          "BR-002",
+          "BR-006",
+          "BR-009",
+          "QR-015",
+          "QR-016"
+        ],
+        "scope": "FROZEN",
+        "group": "thirdParty",
+        "required": false,
+        "priorFormalStatus": "NOT_RUN",
+        "cr011AcceptanceStatus": "NOT_RUN_RISK_ACCEPTED_UNDER_CR011",
+        "detailedEvidenceSubmissionWaived": false,
+        "individualMeasuredPASS": false,
+        "risk": "初見の第三者による評価が未取得。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "TC-D7-030-C003",
+        "requirementIds": [
+          "BR-002",
+          "BR-006",
+          "BR-009",
+          "QR-015",
+          "QR-016"
+        ],
+        "scope": "FROZEN",
+        "group": "aggregate",
+        "required": true,
+        "priorFormalStatus": "HOLD",
+        "cr011AcceptanceStatus": "PASS_UNDER_CR011",
+        "detailedEvidenceSubmissionWaived": false,
+        "individualMeasuredPASS": false,
+        "risk": "欠落のあるまま最終受入は確定できない。",
+        "priorContractReference": "18_test_execution_manifest.json",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "CR010-DV-01",
+        "requirementIds": [],
+        "scope": "CR010_ADDITIONAL",
+        "group": "crDevice",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "端末別の改訂機能と移行・保存の挙動が未確定。",
+        "priorContractReference": "CR-010 独立承認設計の実機ケース CR010-DV-01〜05; frozen 17_visual_qa_protocol.md",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "CR010-DV-02",
+        "requirementIds": [],
+        "scope": "CR010_ADDITIONAL",
+        "group": "crDevice",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "端末別の改訂機能と移行・保存の挙動が未確定。",
+        "priorContractReference": "CR-010 独立承認設計の実機ケース CR010-DV-01〜05; frozen 17_visual_qa_protocol.md",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "CR010-DV-03",
+        "requirementIds": [],
+        "scope": "CR010_ADDITIONAL",
+        "group": "crDevice",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "端末別の改訂機能と移行・保存の挙動が未確定。",
+        "priorContractReference": "CR-010 独立承認設計の実機ケース CR010-DV-01〜05; frozen 17_visual_qa_protocol.md",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "CR010-DV-04",
+        "requirementIds": [],
+        "scope": "CR010_ADDITIONAL",
+        "group": "crDevice",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "端末別の改訂機能と移行・保存の挙動が未確定。",
+        "priorContractReference": "CR-010 独立承認設計の実機ケース CR010-DV-01〜05; frozen 17_visual_qa_protocol.md",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      },
+      {
+        "caseId": "CR010-DV-05",
+        "requirementIds": [],
+        "scope": "CR010_ADDITIONAL",
+        "group": "crDevice",
+        "required": true,
+        "priorFormalStatus": "EVIDENCE_INSUFFICIENT",
+        "cr011AcceptanceStatus": "ACCEPTED_WITHOUT_FULL_CASE_EVIDENCE",
+        "detailedEvidenceSubmissionWaived": true,
+        "individualMeasuredPASS": false,
+        "risk": "端末別の改訂機能と移行・保存の挙動が未確定。",
+        "priorContractReference": "CR-010 独立承認設計の実機ケース CR010-DV-01〜05; frozen 17_visual_qa_protocol.md",
+        "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
+      }
+    ]
   }
 }
