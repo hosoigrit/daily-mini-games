@@ -14,6 +14,13 @@ interface GenerationClock {
   readonly anchor: PlaybackAnchor;
   readonly sinceMs: Ms;
   readonly clock: FixedClock;
+  readonly calibration: boolean;
+}
+
+export interface CalibrationCue {
+  start(firstBeatAt: Sec, beatTimesUs: readonly Us[]): boolean;
+  stop(): void;
+  setVolume(value: number): void;
 }
 
 export function createSessionAudioBridge(
@@ -21,6 +28,7 @@ export function createSessionAudioBridge(
   createClock: SessionClockFactory,
   monitorIntervalMs: number,
   audio = createWebAudio(tickToUs),
+  cue?: CalibrationCue,
 ): SessionAudioPort & { dispose(): Promise<void> } {
   const history = new Map<Gen, GenerationClock>();
   let active: GenerationClock | null = null;
@@ -31,6 +39,7 @@ export function createSessionAudioBridge(
   }
 
   function stopObserving() {
+    if (active?.calibration) cue?.stop();
     active = null;
     nextMonitorMs = Infinity;
   }
@@ -44,13 +53,15 @@ export function createSessionAudioBridge(
       const stamp = audio.outputTimestamp();
       const currentTime = audio.currentTime();
       if (!stamp || currentTime === undefined) return failure('ERR-005', 'clock.noAnchor');
+      const beats = request.playBgm ? undefined : request.calibrationBeatsUs;
 
       const result: Result<PlaybackAnchor> = playBgm
         ? audio.playAt(request.track, songTimeUs, (currentTime + playbackLeadSec) as Sec, token)
         : {
           ok: true, value: Object.freeze({
             playbackId: `silent-${token.generation}`, sessionId: token.sessionId, generation: token.generation,
-            startAudioSec: (stamp.contextTime + (atMs - stamp.performanceTime) / 1000) as Sec,
+            startAudioSec: (beats && cue ? currentTime + playbackLeadSec
+              : stamp.contextTime + (atMs - stamp.performanceTime) / 1000) as Sec,
             startSongUs: songTimeUs, anchorAudioSec: stamp.contextTime as Sec, anchorPerformanceMs: stamp.performanceTime as Ms,
           }),
         };
@@ -62,8 +73,9 @@ export function createSessionAudioBridge(
         return fixed;
       }
       const anchor = result.value;
+      if (beats && cue && !cue.start(anchor.startAudioSec, beats)) return failure('ERR-004', 'audio.calibrationCueFailed');
       const beginsAt = anchor.anchorPerformanceMs + (anchor.startAudioSec - anchor.anchorAudioSec) * 1000;
-      const record = { anchor, sinceMs: Math.max(atMs, beginsAt) as Ms, clock: fixed.value };
+      const record = { anchor, sinceMs: Math.max(atMs, beginsAt) as Ms, clock: fixed.value, calibration: !!beats };
       history.set(result.value.generation, record);
       active = record;
       nextMonitorMs = atMs + monitorIntervalMs;
@@ -99,6 +111,7 @@ export function createSessionAudioBridge(
     applySettings(settings) {
       audio.setVolume('MUSIC', settings.musicVolume);
       audio.setVolume('SFX', settings.sfxVolume);
+      cue?.setVolume(settings.sfxVolume);
     },
     subscribeAudioEvents: audio.subscribeAudioEvents,
     forgetGeneration(generation) { history.delete(generation); },

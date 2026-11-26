@@ -264,19 +264,38 @@ async function observeActivePlay(browser, inputs) {
   }
 }
 
+async function listenerProbe(context, page) {
+  if (flags.browser !== 'chromium') return null;
+  try {
+    const cdp = await context.newCDPSession(page);
+    await cdp.send('Performance.enable');
+    return async () => {
+      const result = await cdp.send('Performance.getMetrics').catch(() => null);
+      const count = result?.metrics.find(metric => metric.name === 'JSEventListeners')?.value;
+      return Number.isSafeInteger(count) && count >= 0 ? count : null;
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function measureLifecycle(browser) {
   if (!cycles) return { result: 'NOT_RUN', completed: 0, requested: 0, trace: [] };
   const { context, page, errors, externalRequests } = await openWindow(browser);
   const trace = [];
+  const listenerCount = await listenerProbe(context, page);
+  let selectionListeners = null;
   let completed = 0;
   let error = null;
   try {
     await prepareTrack(page);
+    selectionListeners = await listenerCount?.() ?? null;
     for (let cycle = 1; cycle <= cycles; cycle++) {
       const item = { cycle, steps: [] };
       trace.push(item);
       await startTrack(page);
       item.generationBefore = await page.locator('main').getAttribute('data-generation');
+      item.playingBrowserListeners = await listenerCount?.() ?? null;
       item.steps.push('PLAYING');
       await button(page, labels.pause).click({ timeout: 5000 });
       await state(page, 'PAUSED').waitFor({ timeout: 5000 });
@@ -298,6 +317,7 @@ async function measureLifecycle(browser) {
       await button(page, labels.retry).click({ timeout: 5000 });
       await button(page, labels.start).waitFor({ timeout: 10_000 });
       item.steps.push('RETRY_READY');
+      item.retryReadyBrowserListeners = await listenerCount?.() ?? null;
       completed++;
     }
   } catch (failure) {
@@ -321,7 +341,16 @@ async function measureLifecycle(browser) {
       trace, error, errors, externalRequests: [...externalRequests], save, resources: measured,
       resourceTimeline: telemetry.resources,
       audioClock: summarizeAudioSync(telemetry.audio),
-      listenerAndAnimationLoopCountsAvailable: measured.activeListeners.sampleCount > 0 && measured.activeRafLoops.sampleCount > 0,
+      browserListeners: {
+        method: listenerCount ? 'Chromium CDP Performance.getMetrics JSEventListeners' : 'UNMEASURED',
+        scope: 'Aggregate browser listeners, including framework and diagnostics; compared within the same lifecycle phase',
+        selection: selectionListeners,
+        playing: summarizeSamples(trace.flatMap(item =>
+          item.playingBrowserListeners == null ? [] : [item.playingBrowserListeners])),
+        retryReady: summarizeSamples(trace.flatMap(item =>
+          item.retryReadyBrowserListeners == null ? [] : [item.retryReadyBrowserListeners])),
+        final: await listenerCount?.() ?? null,
+      },
     };
   } finally {
     await context.close();

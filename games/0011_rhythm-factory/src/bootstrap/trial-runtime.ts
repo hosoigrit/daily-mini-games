@@ -13,7 +13,9 @@ import { createSignal } from '../domain/signal';
 import { attachKeyboardPointerInput } from '../infrastructure/keyboard-pointer-input';
 import { createSessionAudioBridge } from '../infrastructure/session-audio-bridge';
 import { attachSessionLifecycle } from '../infrastructure/session-lifecycle';
+import { audioSampleRate } from '../infrastructure/offline-music';
 import { createStorageCoordinator } from '../infrastructure/storage-coordinator';
+import { createTrialCalibrationCue } from '../infrastructure/trial-calibration-cue';
 import { mountTrialCanvas } from '../infrastructure/trial-canvas';
 import { createWebAudio } from '../infrastructure/web-audio';
 import { createWriterLock } from '../infrastructure/writer-lock';
@@ -55,7 +57,12 @@ export function createTrialRuntime(view: Window): TrialRuntime & { dispose(): vo
   const settings = () => storage.read().data?.settings ?? null;
   const writerStatus = () => writer.currentLease() ? 'OWNED' : !writer.available ? 'UNSUPPORTED' : lost ? 'LOST' : 'UNOWNED';
 
-  const webAudio = createWebAudio(tickToUs);
+  let audioContext: AudioContext | undefined;
+  const webAudio = createWebAudio(tickToUs, () => {
+    audioContext = new AudioContext({ sampleRate: audioSampleRate });
+    return audioContext;
+  });
+  const calibrationCue = createTrialCalibrationCue(() => audioContext);
   const inspectedClock: SessionClockFactory = (anchor, offset) => {
     const fixed = createFixedAudioClock(anchor, offset);
     if (!fixed.ok || !diagnostic) return fixed;
@@ -75,7 +82,7 @@ export function createTrialRuntime(view: Window): TrialRuntime & { dispose(): vo
       },
     };
   };
-  const bridge = createSessionAudioBridge(tickToUs, inspectedClock, clockSampleIntervalMs, webAudio);
+  const bridge = createSessionAudioBridge(tickToUs, inspectedClock, clockSampleIntervalMs, webAudio, calibrationCue);
   const audio: SessionAudioPort = !diagnostic ? bridge : {
     ...bridge,
     async prepare(music, token) {
@@ -91,6 +98,7 @@ export function createTrialRuntime(view: Window): TrialRuntime & { dispose(): vo
   };
   const controller = createSessionController({
     audio, storage, writer: { status: writerStatus, currentLease: writer.currentLease },
+    hasPreviewSource: () => webAudio.diagnostics().sources > 0,
     initialDifficulty: chart.difficulty,
     getMusic: id => id === chart.musicId ? definition : null,
     getChart: (id, level) => id === chart.musicId && level === chart.difficulty ? chart : null,
@@ -123,7 +131,7 @@ export function createTrialRuntime(view: Window): TrialRuntime & { dispose(): vo
     if (!diagnostic) return;
     const meters = webAudio.diagnostics();
     const summary = { cacheTracks: meters.cached, activeRenders: meters.rendering, activeSources: meters.sources,
-      voices: meters.voices, activeRafLoops };
+      voices: meters.voices + calibrationCue.active(), activeRafLoops };
     const serial = JSON.stringify(summary);
     if (serial === previousResources) return;
     previousResources = serial;
@@ -197,10 +205,7 @@ export function createTrialRuntime(view: Window): TrialRuntime & { dispose(): vo
       lastBeat = -1;
     }
     const beat = Math.floor(time.value.songTimeUs / tickToUs(480 as Tick, 100));
-    if (beat < 16 && beat !== lastBeat) {
-      lastBeat = beat;
-      webAudio.playTick();
-    }
+    if (beat < 16) lastBeat = beat;
   }
 
   function tick() {

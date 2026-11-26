@@ -29,5 +29,13 @@ export default defineConfig({
       command: 'node tools/serve-subpath.mjs',
       url: `http://127.0.0.1:4174${mount}`,
     },
+    {
+      command: `npm run dev -- --config tests/browser/fixtures/foundation/vite.config.ts --host 127.0.0.1 --port 4175 --strictPort --base ${mount}`,
+      url: `http://127.0.0.1:4175${mount}`,
+    },
+    {
+      command: 'npm run build -- --config tests/browser/fixtures/foundation/vite.config.ts && node tools/serve-subpath.mjs node_modules/.cache/game0011/a1-foundation-dist 4176',
+      url: `http://127.0.0.1:4176${mount}`,
+    },
   ],
 });

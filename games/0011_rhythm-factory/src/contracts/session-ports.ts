@@ -24,7 +24,7 @@ interface SessionPlaybackPosition {
 
 export type SessionPlaybackRequest = SessionPlaybackPosition & (
   { readonly playBgm: true; readonly track: PreparedTrack }
-  | { readonly playBgm: false }
+  | { readonly playBgm: false; readonly calibrationBeatsUs?: readonly Us[] }
 );
 
 export interface SessionAudioPort {

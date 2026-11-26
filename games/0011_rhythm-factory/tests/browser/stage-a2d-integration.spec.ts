@@ -16,8 +16,9 @@ const viewports = [
 const keys = ['d', 'f', 'j', 'k'] as const;
 const compiled = compileChart(stageA2TrialChart, createChartMusicContext(stageA2TrialMusic), 'complete');
 if (!compiled.ok) throw new Error('The fixed Stage A-2 trial chart no longer compiles.');
-const ideal = buildIdealInputs(compiled.value, { sessionId: 'playwright-schedule-only', clockGeneration: 1 as Gen });
-const totalJudgements = compiled.value.totalJudgements;
+const trialChart = compiled.value;
+const ideal = buildIdealInputs(trialChart, { sessionId: 'playwright-schedule-only', clockGeneration: 1 as Gen });
+const totalJudgements = trialChart.totalJudgements;
 
 const application = (page: Page) => page.locator('main[data-screen]');
 const button = (page: Page, name: string) => page.getByRole('button', { name, exact: true });
@@ -54,6 +55,33 @@ async function readSave(page: Page): Promise<SaveDataV1 | null> {
     const raw = localStorage.getItem(key);
     return raw === null ? null : JSON.parse(raw) as SaveDataV1;
   }, saveKey);
+}
+
+async function expectFirstPlayViewport(page: Page, action: string): Promise<void> {
+  const layout = await page.evaluate((name) => {
+    scrollTo(0, 0);
+    const controls = [...document.querySelectorAll('main button')];
+    const actionButton = controls.find(node => node.textContent?.trim() === name);
+    const target = [document.querySelector('main canvas'), ...controls.filter(node => node.hasAttribute('data-lane')), actionButton];
+    return {
+      viewport: [innerWidth, innerHeight],
+      scrollWidth: document.documentElement.scrollWidth,
+      bounds: target.map(node => node?.getBoundingClientRect().toJSON() as { left: number; top: number;
+        right: number; bottom: number; width: number; height: number } | null),
+    };
+  }, action);
+  expect(layout.viewport).toEqual([320, 568]);
+  expect(layout.scrollWidth).toBeLessThanOrEqual(320);
+  expect(layout.bounds).toHaveLength(6);
+  for (const box of layout.bounds) {
+    expect(box).toBeTruthy();
+    expect(box?.left).toBeGreaterThanOrEqual(0);
+    expect(box?.top).toBeGreaterThanOrEqual(0);
+    expect(box?.right).toBeLessThanOrEqual(320);
+    expect(box?.bottom).toBeLessThanOrEqual(568);
+    expect(box?.width).toBeGreaterThanOrEqual(44);
+    expect(box?.height).toBeGreaterThanOrEqual(44);
+  }
 }
 
 async function observeNativeTrial(page: Page, info: TestInfo): Promise<() => Promise<void>> {
@@ -122,27 +150,53 @@ async function observeNativeTrial(page: Page, info: TestInfo): Promise<() => Pro
   };
 }
 
-async function scheduleTrustedKeys(page: Page): Promise<void> {
-  const firstClock = await page.waitForFunction(() => {
+async function firstClockPoint(page: Page, targetGeneration?: number): Promise<{ originMs: number; epochMs: number }> {
+  const firstClock = await page.waitForFunction((generation) => {
     const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly {
       kind: string;
-      detail: { atMs: number; judgeTimeUs: number | null; state: string };
+      detail: { atMs: number; judgeTimeUs: number | null; state: string; generation: number };
     }[];
     const tick = diagnostics.find(({ kind, detail }) => kind === 'clock' && detail.judgeTimeUs !== null
-      && ['PREROLL', 'PLAYING'].includes(detail.state));
+      && (generation === undefined || detail.generation === generation) && ['PREROLL', 'PLAYING'].includes(detail.state));
     if (!tick || tick.detail.judgeTimeUs === null) return false;
-    return performance.timeOrigin + tick.detail.atMs - tick.detail.judgeTimeUs / 1000;
-  }, undefined, { timeout: 12_000 });
-  const judgeZeroEpochMs = await firstClock.jsonValue();
-  if (judgeZeroEpochMs === false) throw new Error('No active judgement clock.');
+    const originMs = tick.detail.atMs - tick.detail.judgeTimeUs / 1000;
+    return { originMs, epochMs: performance.timeOrigin + originMs };
+  }, targetGeneration, { timeout: 12_000 });
+  const point = await firstClock.jsonValue();
+  if (point === false) throw new Error('No active judgement clock.');
+  return point;
+}
+
+async function scheduleTrustedKeys(page: Page): Promise<void> {
+  const point = await firstClockPoint(page);
   for (const input of ideal) {
-    const delay = judgeZeroEpochMs + input.judgeTimeUs / 1000 - Date.now();
+    const delay = point.epochMs + input.judgeTimeUs / 1000 - Date.now();
     // The chart defines intended button times; Chromium generates the trusted events and their timestamps.
     if (delay > 0) await new Promise<void>((resolve) => { setTimeout(resolve, delay); });
     const key = keys[input.lane - 1]!;
     if (input.action === 'DOWN') await page.keyboard.down(key);
     else await page.keyboard.up(key);
   }
+}
+
+async function scheduleControlledKeys(page: Page, inputs = ideal, targetGeneration?: number): Promise<void> {
+  const point = await firstClockPoint(page, targetGeneration);
+  const strokes = inputs.map(input => ({ atMs: point.originMs + input.judgeTimeUs / 1000,
+    type: input.action === 'DOWN' ? 'keydown' : 'keyup', key: keys[input.lane - 1]!,
+  }));
+  await page.evaluate(async (plan) => {
+    for (const stroke of plan) {
+      for (let delay = stroke.atMs - performance.now(); delay > 0; delay = stroke.atMs - performance.now()) {
+        await new Promise<void>(resolve => { setTimeout(resolve, delay); });
+      }
+      const event = new KeyboardEvent(stroke.type, {
+        code: `Key${stroke.key.toUpperCase()}`, key: stroke.key, bubbles: true, cancelable: true,
+      });
+      // Supply the ideal event's occurrence time through the same DOM input adapter.
+      Object.defineProperty(event, 'timeStamp', { value: stroke.atMs });
+      window.dispatchEvent(event);
+    }
+  }, strokes);
 }
 
 async function installOutputClockFixture(page: Page): Promise<void> {
@@ -320,6 +374,7 @@ for (const { name, port } of modes) {
         for (const viewport of viewports) {
           await page.setViewportSize(viewport);
           await expect(field).toHaveAttribute('data-state', 'PAUSED');
+          if (viewport.width === 320) await expectFirstPlayViewport(page, '再開');
           await info.attach(`paused-playfield-${viewport.width}x${viewport.height}`, {
             body: await page.screenshot({ fullPage: true }), contentType: 'image/png',
           });
@@ -346,11 +401,8 @@ for (const { name, port } of modes) {
       const saveObservation = await observeNativeTrial(page, info);
       try {
         await startNative(page, `${url}?stage-a2d-diagnostics=1`);
+        await expectFirstPlayViewport(page, '一時停止');
         const lane = button(page, 'レーン1 D');
-        const bounds = await lane.boundingBox();
-        expect(bounds?.width).toBeGreaterThanOrEqual(44);
-        expect(bounds?.height).toBeGreaterThanOrEqual(44);
-        expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
         await lane.tap();
         const observed: unknown = await page.evaluate(() => Reflect.get(window, 'a2dE2eDiagnostics'));
         expect(observed).toEqual(expect.arrayContaining([
@@ -381,19 +433,183 @@ for (const { name, port } of modes) {
     }
   });
 
-  test(`Stage A-2d / ${name}: clock fixture DOM completes the chart with trusted key replay`, async ({ page, browser, browserName }, info) => {
+  test(`Stage A-2d / ${name}: native preview ends naturally and leaves records untouched`, async ({ page, browserName }, info) => {
+    test.skip(browserName !== 'chromium', 'Supplementary native preview trial planned separately for Chromium.');
+    test.setTimeout(45_000);
+    const saveObservation = await observeNativeTrial(page, info);
+    try {
+      await open(page, `${url}?stage-a2d-diagnostics=1`);
+      await expect(application(page)).toHaveAttribute('data-writer', 'OWNED');
+      const before = await readSave(page);
+      await openSelection(page);
+      await button(page, '音源を準備').click();
+      const preview = button(page, '試聴する');
+      await expect(preview).toBeEnabled({ timeout: 20_000 });
+      await preview.click();
+      await expect(button(page, '試聴を停止')).toBeVisible();
+      await expect(preview).toBeEnabled({ timeout: stageA2TrialMusic.master.previewDurationMs + 8_000 });
+      await expect(application(page)).toHaveAttribute('data-screen', 'MUSIC_SELECT');
+      expect(await readSave(page)).toEqual(before);
+    } finally {
+      await saveObservation();
+    }
+  });
+
+  test(`Stage A-2d / ${name}: clock fixture DOM completes the chart with controlled key timestamps`, async ({ page, browser, browserName }, info) => {
     test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
     test.setTimeout(85_000);
     info.annotations.push({ type: 'browser version', description: browser.version() });
-    info.annotations.push({ type: 'condition', description: 'Controlled AudioContext output timestamp fixture. Excluded from native audio synchronization evidence.' });
+    info.annotations.push({ type: 'condition', description: 'Controlled audio output timestamps and DOM keyboard event timestamps. Excluded from native audio synchronization evidence.' });
     await installOutputClockFixture(page);
     const saveObservation = await observeNativeTrial(page, info);
     try {
       await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
-      await scheduleTrustedKeys(page);
+      await scheduleControlledKeys(page);
       await expectPerfectSave(page, info);
     } finally {
       await saveObservation();
     }
+  });
+
+  test.describe(`Stage A-2d / ${name} controlled browser routes`, () => {
+    test('clock fixture DOM rehold release resets the countdown and the new generation retains the hold', async ({ page, browserName }, info) => {
+      test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
+      test.setTimeout(85_000);
+      info.annotations.push({ type: 'condition', description: 'Controlled output and chart input timestamps, trusted manual rehold transitions.' });
+      await installOutputClockFixture(page);
+      const saveObservation = await observeNativeTrial(page, info);
+      try {
+        const hold = trialChart.events.find(event => event.type === 'HOLD_START');
+        if (!hold) throw new Error('The fixed trial must include a HOLD.');
+        const prior = ideal.filter(input => input.judgeTimeUs <= hold.targetTimeUs + 50_000);
+        const later = ideal.slice(prior.length);
+        const key = keys[hold.lane - 1]!;
+        await beginPlayback(page, `${url}?stage-a2d-diagnostics=1`);
+        await scheduleControlledKeys(page, prior);
+        await page.waitForFunction((afterUs) => {
+          const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: { judgeTimeUs?: number } }[];
+          return diagnostics.some(({ kind, detail }) => kind === 'clock' && (detail.judgeTimeUs ?? 0) >= afterUs);
+        }, hold.targetTimeUs + 120_000);
+
+        const state = application(page);
+        const score = page.locator('[data-stat="score"]');
+        const firstGeneration = Number(await state.getAttribute('data-generation'));
+        await button(page, '一時停止').click();
+        await expect(state).toHaveAttribute('data-state', 'PAUSED');
+        await page.setViewportSize({ width: 320, height: 568 });
+        await expectFirstPlayViewport(page, '再開');
+        const pausedScore = await score.innerText();
+        await page.keyboard.up(key);
+        await button(page, '再開').click();
+        await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
+        const lane = page.locator(`button[data-lane="${hold.lane}"]`);
+        await expect(lane).toHaveAttribute('data-rehold', 'true');
+        await page.keyboard.down(key);
+        await expect(state).toHaveAttribute('data-state', 'RESUMING');
+        await expect(lane).toHaveAttribute('data-reheld', 'true');
+        await page.keyboard.up(key);
+        await expect(state).toHaveAttribute('data-state', 'REHOLD_WAIT');
+        await expect(lane).toHaveAttribute('data-reheld', 'false');
+        await expect(score).toHaveText(pausedScore);
+        await expect(state).toHaveAttribute('data-generation', String(firstGeneration));
+
+        const reheldAt = Date.now();
+        await page.keyboard.down(key);
+        await expect(state).toHaveAttribute('data-state', 'RESUMING');
+        await expect(state).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
+        const reholdElapsedMs = Date.now() - reheldAt;
+        expect(reholdElapsedMs).toBeGreaterThanOrEqual(3000);
+        const resumedGeneration = Number(await state.getAttribute('data-generation'));
+        expect(resumedGeneration).toBeGreaterThan(firstGeneration);
+        await scheduleControlledKeys(page, later, resumedGeneration);
+        await page.keyboard.up(key);
+        await expectPerfectSave(page, info);
+        await info.attach('rehold-new-generation', { body: JSON.stringify({
+          lane: hold.lane, firstGeneration, resumedGeneration, reholdElapsedMs, pausedScore,
+        }), contentType: 'application/json' });
+      } finally {
+        await saveObservation();
+      }
+    });
+
+    test('clock fixture DOM practice completion records tutorial progress only', async ({ page, browserName }, info) => {
+      test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
+      test.setTimeout(85_000);
+      info.annotations.push({ type: 'condition', description: 'Controlled output timestamps. A real isolated storage context is used.' });
+      await installOutputClockFixture(page);
+      const saveObservation = await observeNativeTrial(page, info);
+      try {
+        await open(page, `${url}?stage-a2d-diagnostics=1`);
+        await expect(application(page)).toHaveAttribute('data-writer', 'OWNED');
+        await button(page, '練習').click();
+        await expect(application(page)).toHaveAttribute('data-screen', 'TUTORIAL');
+        await button(page, '練習音源を準備').click();
+        const start = button(page, '練習を始める');
+        await expect(start).toBeEnabled({ timeout: 30_000 });
+        await start.click();
+        await scheduleControlledKeys(page);
+        await expect(application(page)).toHaveAttribute('data-screen', 'RESULT');
+        await expect(application(page)).toHaveAttribute('data-state', 'CLEAR');
+        await expect(page.getByRole('heading', { name: '練習完了', exact: true })).toBeVisible();
+        await expect.poll(() => readSave(page)).toMatchObject({ revision: 1,
+          progress: { completedTutorialIds: ['TUT-01'] }, records: {}, collection: {}, commitReceipt: null,
+        });
+        await info.attach('practice-save-readback', { body: JSON.stringify(await readSave(page)), contentType: 'application/json' });
+      } finally {
+        await saveObservation();
+      }
+    });
+
+    test('clock fixture DOM calibration applies the measured timing offset', async ({ page, browserName }, info) => {
+      test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
+      test.setTimeout(40_000);
+      info.annotations.push({ type: 'condition', description: 'Controlled output timestamps with trusted calibration key presses.' });
+      await installOutputClockFixture(page);
+      const saveObservation = await observeNativeTrial(page, info);
+      try {
+        await open(page, `${url}?stage-a2d-diagnostics=1`);
+        await expect(application(page)).toHaveAttribute('data-writer', 'OWNED');
+        await button(page, '設定').click();
+        await button(page, '音声を有効にする').click();
+        // Observation-only setup allowance for the real AudioContext to start producing a timestamp.
+        await page.waitForTimeout(250);
+        await button(page, 'タイミング補正を測る').click();
+        await expect(application(page)).toHaveAttribute('data-screen', 'CALIBRATION');
+        for (let beat = 4; beat < 16; beat++) {
+          await page.waitForFunction(index => document.querySelector('[data-calibration-beat]')
+            ?.getAttribute('data-calibration-beat') === String(index), beat, { timeout: 4000 });
+          await page.keyboard.press('d');
+        }
+        const status = page.getByRole('status').filter({ hasText: '補正の提案' });
+        await expect(status).toBeVisible();
+        const proposed = Number((await status.locator('strong').innerText()).replace(' ms', ''));
+        expect(Number.isInteger(proposed)).toBe(true);
+        expect(Math.abs(proposed)).toBeLessThanOrEqual(200);
+        expect(proposed % 5 === 0).toBe(true);
+        await button(page, '補正を適用').click();
+        await expect(application(page)).toHaveAttribute('data-screen', 'SETTINGS');
+        const save = await readSave(page);
+        expect(save).toMatchObject({ revision: 1, settings: { timingOffsetMs: proposed }, records: {}, commitReceipt: null });
+        await button(page, 'タイミング補正を測る').click();
+        await expect(application(page)).toHaveAttribute('data-screen', 'CALIBRATION');
+        await page.waitForFunction(() => document.querySelector('[data-calibration-beat]')?.hasAttribute('data-calibration-beat'));
+        const target = await button(page, '拍に合わせて入力').boundingBox();
+        if (!target) throw new Error('Calibration input target is unavailable.');
+        const pointer = await page.context().newCDPSession(page);
+        try {
+          await pointer.send('Input.dispatchTouchEvent', {
+            type: 'touchStart', touchPoints: [{ x: target.x + target.width / 2, y: target.y + target.height / 2 }],
+          });
+          await pointer.send('Input.dispatchTouchEvent', { type: 'touchCancel', touchPoints: [] });
+        } finally {
+          await pointer.detach();
+        }
+        await expect(application(page)).toHaveAttribute('data-screen', 'SETTINGS');
+        expect(await readSave(page)).toEqual(save);
+        await info.attach('calibration-save-readback', { body: JSON.stringify({ proposed, save }), contentType: 'application/json' });
+      } finally {
+        await saveObservation();
+      }
+    });
   });
 }

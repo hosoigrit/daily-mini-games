@@ -480,3 +480,27 @@ body {
   border: 0;
   accent-color: var(--trial-accent);
 }
+
+@media (max-height: 36rem) {
+  .trial-shell:has(.trial-play-panel) .trial-header {
+    min-height: 0;
+    padding-block: 0.4rem;
+  }
+
+  .trial-content:has(.trial-play-panel) {
+    gap: 0.5rem;
+    padding-block: 0.5rem;
+  }
+
+  .trial-play-panel {
+    gap: 0.4rem;
+  }
+
+  .trial-play-panel .trial-canvas {
+    height: clamp(7rem, 31dvh, 13rem);
+  }
+
+  .trial-play-panel .trial-lane {
+    min-height: 48px;
+  }
+}

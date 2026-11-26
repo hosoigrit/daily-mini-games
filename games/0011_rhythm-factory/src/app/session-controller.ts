@@ -47,6 +47,7 @@ interface ControllerOptions<Binding> {
   readonly audio: SessionAudioPort;
   readonly storage: SessionStorage<Binding>;
   readonly writer: { readonly status: () => WriterStatus; readonly currentLease: () => WriterLease | null };
+  readonly hasPreviewSource?: () => boolean;
   readonly initialDifficulty?: Difficulty;
   readonly getMusic: (id: MusicId) => MusicDefinition | null;
   readonly getChart: (id: MusicId, difficulty: Difficulty) => CompiledChart | null;
@@ -92,6 +93,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   let prepared: { readonly definition: MusicDefinition; readonly track: PreparedTrack } | null = null;
   let prepareToken: Token | null = null;
   let previewToken: Token | null = null;
+  let previewStarted = false;
   let active: ActiveSession<Binding> | null = null;
   let pendingResult: { readonly result: FinalResult; readonly snapshot: GameUiSnapshot } | null = null;
   let showingRecovery = false;
@@ -133,6 +135,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   function stopPreview() {
     const current = previewToken;
     previewToken = null;
+    previewStarted = false;
     if (current) audio.stop(current);
   }
 
@@ -384,6 +387,10 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
 
   function advance(at: Ms) {
     if (disposed || !pageAvailable) return;
+    if (previewStarted && options.hasPreviewSource && !options.hasPreviewSource()) {
+      stopPreview();
+      publish();
+    }
     if (calibration && !calibration.measure.read()) {
       const measured = audio.convert(at, calibration.token.generation as Gen);
       const monitor = audio.monitor(at);
@@ -556,7 +563,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       if (!played.ok) {
         previewToken = null;
         recordError(played.error);
-      }
+      } else previewStarted = true;
     })());
     return empty;
   }
@@ -675,12 +682,14 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
         const ready = storage.guard('CALIBRATION', owner ?? undefined);
         if (!ready.ok) return ready;
         const calibrationToken = token(command.requestId, `calibration-${generation + 1}`);
+        const measure = createCalibration();
         const result = audio.start({
           atMs: at, offsetUs: zeroUs, playBgm: false, songTimeUs: zeroUs,
+          calibrationBeatsUs: measure.beatTimesUs,
           token: { ...calibrationToken, sessionId: calibrationToken.sessionId!, generation: calibrationToken.generation as Gen },
         });
         if (!result.ok) return result;
-        calibration = { token: calibrationToken, measure: createCalibration() };
+        calibration = { token: calibrationToken, measure };
         screen = 'CALIBRATION';
         return empty;
       }
@@ -747,6 +756,14 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       if (disposed) return transition();
       const session = active;
       const info = session?.game.read();
+      if (event.sessionId !== null && calibration?.token.sessionId === event.sessionId
+          && calibration.token.generation === event.generation) {
+        if (event.kind === 'POINTER_CANCEL' || event.kind === 'AUDIO_INTERRUPTED') {
+          stopCalibration();
+          publish();
+        }
+        return transition();
+      }
       if (event.sessionId !== null && (!info || event.sessionId !== info.sessionId || event.generation !== info.generation)) {
         return transition();
       }
@@ -771,15 +788,18 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
         if (intent !== lifecycleGeneration) return transition();
         pageShowing = false;
         pageAvailable = true;
-        if (!ready.save.ok && storage.read().error === null) recordError(ready.save.error);
+        if (ready.save.ok) audio.applySettings(ready.save.value.settings);
+        else if (storage.read().error === null) recordError(ready.save.error);
       } else if (event.kind === 'VISIBLE') {
         if (session && info && !isTerminal(info.state) && writer.status() !== 'OWNED') {
           session.game.fail({ code: 'ERR-011', messageKey: 'controller.writerLost', severity: 'ERROR', recoverable: false });
           updateSession(session);
         }
       } else {
-        stopPreview();
-        stopCalibration();
+        if (event.kind !== 'RESIZE') {
+          stopPreview();
+          stopCalibration();
+        }
         const invalidation = event.kind === 'LOCK_LOST' ? storage.pageHide() : null;
         if (session && info && !isTerminal(info.state)) {
           interruptSession(session, event, info.state);

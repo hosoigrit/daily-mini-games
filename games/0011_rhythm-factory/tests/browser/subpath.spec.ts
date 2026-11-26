@@ -1,7 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 const folder = '/daily-mini-games/games/0011_rhythm-factory/';
-const modes = [{ name: 'dev', port: 4173 }, { name: 'dist', port: 4174 }] as const;
+// Preserve the Stage A-1 UI assertions against its isolated foundation entry.
+const modes = [{ name: 'dev', port: 4175 }, { name: 'dist', port: 4176 }] as const;
 
 for (const { name, port } of modes) {
   test(`POC-16 / ${name}: starts under the subpath, paints and loads scoped assets`, async ({ page, browser }, testInfo) => {
