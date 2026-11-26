@@ -497,7 +497,7 @@ body {
   }
 
   .trial-play-panel .trial-canvas {
-    height: clamp(7rem, 31dvh, 13rem);
+    height: clamp(6rem, calc(27dvh - env(safe-area-inset-top, 0px)), 12rem);
   }
 
   .trial-play-panel .trial-lane {

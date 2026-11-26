@@ -180,23 +180,44 @@ async function scheduleTrustedKeys(page: Page): Promise<void> {
 }
 
 async function scheduleControlledKeys(page: Page, inputs = ideal, targetGeneration?: number): Promise<void> {
-  const point = await firstClockPoint(page, targetGeneration);
-  const strokes = inputs.map(input => ({ atMs: point.originMs + input.judgeTimeUs / 1000,
+  const strokes = inputs.map(input => ({ judgeMs: input.judgeTimeUs / 1000,
     type: input.action === 'DOWN' ? 'keydown' : 'keyup', key: keys[input.lane - 1]!,
   }));
-  await page.evaluate(async (plan) => {
+  await page.evaluate(async ({ plan, generation }) => {
+    interface Point { atMs: number; judgeTimeUs: number | null; state: string; generation: number }
+    const isStart = (point: Point) => point.judgeTimeUs !== null
+      && (generation === undefined || generation === point.generation)
+      && ['PREROLL', 'PLAYING'].includes(point.state);
+    const history = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: Point }[];
+    const first = history.find(({ kind, detail }) => kind === 'clock' && isStart(detail))?.detail
+      ?? await new Promise<Point>((resolve, reject) => {
+        const finish = () => window.removeEventListener('stage-a2d:clock', observe);
+        const deadline = window.setTimeout(() => { finish(); reject(new Error('No matching judgement clock observation')); }, 12_000);
+        function observe(event: Event) {
+          const point: Point = (event as CustomEvent<Point>).detail;
+          if (!isStart(point)) return;
+          window.clearTimeout(deadline);
+          finish();
+          resolve(point);
+        }
+        window.addEventListener('stage-a2d:clock', observe);
+      });
+    const originMs = first.atMs - first.judgeTimeUs! / 1000;
     for (const stroke of plan) {
-      for (let delay = stroke.atMs - performance.now(); delay > 0; delay = stroke.atMs - performance.now()) {
+      const atMs = originMs + stroke.judgeMs;
+      for (let delay = atMs - performance.now(); delay > 0; delay = atMs - performance.now()) {
         await new Promise<void>(resolve => { setTimeout(resolve, delay); });
       }
+      const screen = document.querySelector<HTMLElement>('main[data-screen]');
+      if (screen?.dataset.state === 'ERROR') throw new Error(`Replay stopped at ${stroke.judgeMs}ms: ${screen.dataset.error}`);
       const event = new KeyboardEvent(stroke.type, {
         code: `Key${stroke.key.toUpperCase()}`, key: stroke.key, bubbles: true, cancelable: true,
       });
       // Supply the ideal event's occurrence time through the same DOM input adapter.
-      Object.defineProperty(event, 'timeStamp', { value: stroke.atMs });
+      Object.defineProperty(event, 'timeStamp', { value: atMs });
       window.dispatchEvent(event);
     }
-  }, strokes);
+  }, { plan: strokes, generation: targetGeneration });
 }
 
 async function installOutputClockFixture(page: Page): Promise<void> {
@@ -472,6 +493,49 @@ for (const { name, port } of modes) {
   });
 
   test.describe(`Stage A-2d / ${name} controlled browser routes`, () => {
+    test('result UI recovers an unreadable first commit without applying the result twice', async ({ page, browserName }, info) => {
+      test.skip(browserName !== 'chromium', 'Storage failure injection is scoped to Chromium.');
+      test.setTimeout(45_000);
+      await installOutputClockFixture(page);
+      await page.addInitScript(key => {
+        const get = Storage.prototype.getItem;
+        const set = Storage.prototype.setItem;
+        let injected = false;
+        let failReadback = false;
+        Storage.prototype.setItem = function (name, value) {
+          set.call(this, name, value);
+          if (!injected && name === key && (JSON.parse(value) as SaveDataV1).commitReceipt?.revision === 1) failReadback = true;
+        };
+        Storage.prototype.getItem = function (name) {
+          if (failReadback && name === key) {
+            failReadback = false;
+            injected = true;
+            throw new DOMException('A-2d controlled first-save readback failure', 'InvalidStateError');
+          }
+          return get.call(this, name);
+        };
+      }, saveKey);
+      const saveObservation = await observeNativeTrial(page, info);
+      try {
+        await startNative(page, `${url}?stage-a2d-diagnostics=1`);
+        await expect(application(page)).toHaveAttribute('data-screen', 'RESULT', { timeout: 10_000 });
+        await expect(page.getByRole('heading', { name: 'FAILED', exact: true })).toBeVisible();
+        await expect(application(page)).toHaveAttribute('data-save-status', 'SAVE_ERROR');
+        await expect(button(page, 'リトライ')).toBeDisabled();
+        const written = await readSave(page);
+        expect(written).toMatchObject({ revision: 1, commitReceipt: { revision: 1 }, records: {
+          'CHART-01-H': { clear: null, failed: { failureCount: 1, bestScore: 0,
+            latestResult: { counts: { miss: 10, unplayed: 72 }, remainingLifeUnits: 0 } } },
+        } });
+        await button(page, '保存を再試行').click();
+        await expect(application(page)).toHaveAttribute('data-save-status', 'SAVED');
+        expect(await readSave(page)).toEqual(written);
+        await info.attach('recovered-first-write', { body: JSON.stringify(written), contentType: 'application/json' });
+      } finally {
+        await saveObservation();
+      }
+    });
+
     test('clock fixture DOM rehold release resets the countdown and the new generation retains the hold', async ({ page, browserName }, info) => {
       test.skip(browserName !== 'chromium', 'Controlled output timestamp fixture planned for Chromium only.');
       test.setTimeout(85_000);
@@ -489,7 +553,7 @@ for (const { name, port } of modes) {
         await page.waitForFunction((afterUs) => {
           const diagnostics = Reflect.get(window, 'a2dE2eDiagnostics') as readonly { kind: string; detail: { judgeTimeUs?: number } }[];
           return diagnostics.some(({ kind, detail }) => kind === 'clock' && (detail.judgeTimeUs ?? 0) >= afterUs);
-        }, hold.targetTimeUs + 120_000);
+        }, hold.targetTimeUs + 120_000, { timeout: 4_000 });
 
         const state = application(page);
         const score = page.locator('[data-stat="score"]');
@@ -515,13 +579,18 @@ for (const { name, port } of modes) {
 
         const reheldAt = Date.now();
         await page.keyboard.down(key);
-        await expect(state).toHaveAttribute('data-state', 'RESUMING');
-        await expect(state).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
-        const reholdElapsedMs = Date.now() - reheldAt;
-        expect(reholdElapsedMs).toBeGreaterThanOrEqual(3000);
-        const resumedGeneration = Number(await state.getAttribute('data-generation'));
-        expect(resumedGeneration).toBeGreaterThan(firstGeneration);
-        await scheduleControlledKeys(page, later, resumedGeneration);
+        const resumedGeneration = firstGeneration + 1;
+        let reholdElapsedMs = 0;
+        await Promise.all([
+          scheduleControlledKeys(page, later, resumedGeneration),
+          (async () => {
+            await expect(state).toHaveAttribute('data-state', 'RESUMING');
+            await expect(state).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
+            reholdElapsedMs = Date.now() - reheldAt;
+            expect(reholdElapsedMs).toBeGreaterThanOrEqual(3000);
+            await expect(state).toHaveAttribute('data-generation', String(resumedGeneration));
+          })(),
+        ]);
         await page.keyboard.up(key);
         await expectPerfectSave(page, info);
         await info.attach('rehold-new-generation', { body: JSON.stringify({
