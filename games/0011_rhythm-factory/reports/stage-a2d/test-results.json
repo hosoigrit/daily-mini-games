@@ -1,0 +1,4342 @@
+{
+  "sourceCommit": "165eccc8b223160088abd82ad78567b2f76e5208",
+  "sourceTree": "25478e28809aa7820c4182e9c0200a6853324886",
+  "registrationBase": "26e99fffda128dbc7ff5bec354e28b59429ae263",
+  "runtime": {
+    "node": "26.13.1",
+    "npm": "11.20.0",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0",
+    "webkit": "27.2 (WPE)",
+    "platform": "Linux (Cloud)"
+  },
+  "commands": {
+    "checks": [
+      "npm run typecheck",
+      "npm run lint",
+      "npm run check:architecture",
+      "npm run build"
+    ],
+    "vitest": "./node_modules/.bin/vitest run --reporter=json --outputFile=FINAL_JSON",
+    "browser": "./node_modules/.bin/playwright test --workers=2 --reporter=list,json --output=FINAL_ARTIFACTS",
+    "transport": "Final Playwright scratch changes only HTTP ports 4173–4176 to 4373–4376; app/fixtures from fixed Git archive."
+  },
+  "checks": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "architecture": "PASS",
+    "productionBuild": "PASS",
+    "log": {
+      "file": "final-165-static-build.log",
+      "sha256": "8cb305b74e5fecd567a86310aa17cf52ec3dc515d76751559012d6832ecf4971",
+      "bytes": 897
+    },
+    "assets": {
+      "file": "final-165-build.sha256",
+      "sha256": "51022bf99274d01ad9c3e16bae9b5772db35b88d7532a94d3ac9cc9398288be7",
+      "bytes": 266
+    }
+  },
+  "currentVitest": {
+    "source": {
+      "file": "final-165-vitest.json",
+      "sha256": "19d34918c291c5cd9445493ba0f21ddf6537ed86d847a34825e1cf520e15980d",
+      "bytes": 107612
+    },
+    "tests": 289,
+    "passed": 289,
+    "failed": 0,
+    "groups": {
+      "component": {
+        "passed": 8
+      },
+      "contract": {
+        "passed": 11
+      },
+      "integration": {
+        "passed": 24
+      },
+      "unit": {
+        "passed": 246
+      }
+    }
+  },
+  "qaR3": {
+    "pinnedCommit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+    "harnessUnchanged": true,
+    "vitest": {
+      "source": {
+        "file": "r3-vitest.json",
+        "sha256": "57891d85299eca7ee5d183fa3a20214c5da4f7bd4ef523f5ef21ee49a85a5dc5",
+        "bytes": 14782
+      },
+      "tests": 34,
+      "passed": 34,
+      "failed": 0,
+      "groups": {
+        "tests": {
+          "passed": 34
+        }
+      }
+    },
+    "dev": {
+      "startTime": "2026-11-26T09:05:45.905Z",
+      "duration": 71943.656,
+      "expected": 22,
+      "skipped": 28,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "devSource": {
+      "file": "r3-dev.json",
+      "sha256": "a98ac53774c28c5cdb1c2a71a00cc05c769f018122d7e9fc2eb4f4af72ca19ee",
+      "bytes": 175564
+    },
+    "dist": {
+      "startTime": "2026-11-26T09:06:58.793Z",
+      "duration": 100785.683,
+      "expected": 22,
+      "skipped": 28,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "distSource": {
+      "file": "r3-dist.json",
+      "sha256": "9cabdfc2a09f317a510ee88cdecd2fa7b33714ac16fa69d52e05da7b4ae5d01b",
+      "bytes": 175703
+    }
+  },
+  "priorIndependentReadbackFoundation": {
+    "startTime": "2026-11-26T09:05:31.699Z",
+    "duration": 7634.035000000001,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "baselineA2cBrowser": {
+    "source": {
+      "file": "A2c-previous-browser.json",
+      "sha256": "77a351e8a9bf9965f6e5828277379aebd0cd903d6dc3931ed8c7ce60d014738e",
+      "bytes": 423820
+    },
+    "totals": {
+      "startTime": "2026-11-26T07:20:28.069Z",
+      "duration": 189517.192,
+      "expected": 32,
+      "skipped": 0,
+      "unexpected": 16,
+      "flaky": 0
+    }
+  },
+  "physicalDevices": "NOT RUN",
+  "subjectivePlay": "NOT RUN",
+  "networkExternalPaidAudioGenerationRequests": 0,
+  "initialFixedPlaywright": {
+    "source": {
+      "file": "browser-fixed-e8d2f83-default.json",
+      "sha256": "09d7a4065ac77c816e3e9e374db95d74f1f730a3e2dfac3a2f3520888aa1b2ac",
+      "bytes": 3609100
+    },
+    "totals": {
+      "startTime": "2026-11-26T09:13:44.073Z",
+      "duration": 500457.763,
+      "expected": 19,
+      "skipped": 8,
+      "unexpected": 15,
+      "flaky": 0
+    },
+    "groups": {
+      "integration": {
+        "passed": 19,
+        "failed": 15,
+        "skipped": 8
+      },
+      "integration/chromium": {
+        "passed": 11,
+        "failed": 3
+      },
+      "integration/firefox": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 4
+      },
+      "integration/webkit": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 4
+      }
+    },
+    "cases": [
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 13946.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 13946.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1459,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9243,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9243,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14793.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14793.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1990,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9344,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9344,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 31754.19999999553,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 31754.19999999553,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 206,
+        "outputClockDifferenceMaxMs": 101.248833,
+        "outputClockFailures": [
+          {
+            "atMs": 31713,
+            "rawDifferenceUs": 101248.83333631374,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": 10.6,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 35727.60000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 35727.60000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 233,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 4.4,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14332.29999999702,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14332.29999999702,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1199,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9143,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9143,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14739.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14739.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2537,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9194,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9194,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 25996.60000000149,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 25996.60000000149,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 146,
+        "outputClockDifferenceMaxMs": 20.028167,
+        "outputClockFailures": [
+          {
+            "atMs": 25984.70000000298,
+            "rawDifferenceUs": 20028.166669648683,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": 4.0,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)",
+        "terminal": {
+          "performanceMs": 35081.60000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 35081.60000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 237,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 14.9,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 996341,
+          "rank": "SS",
+          "counts": {
+            "perfect": 81,
+            "great": 1,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 10728,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 10728,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 4,
+        "outputClockDifferenceMaxMs": 0.098667,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 16.2,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2078,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9147,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9147,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 108.666666,
+        "outputClockFailures": [
+          {
+            "atMs": 9142,
+            "rawDifferenceUs": 108666.666,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14196.79999999702,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14196.79999999702,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 4,
+        "outputClockDifferenceMaxMs": 1.010333,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 7.9,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1960,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9155,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9155,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 109.666667,
+        "outputClockFailures": [
+          {
+            "atMs": 9152,
+            "rawDifferenceUs": 109666.66700000007,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      }
+    ]
+  },
+  "cycle1Playwright": {
+    "source": {
+      "file": "browser-final-cde9c6ab-default.json",
+      "sha256": "99031a671a4ba86aa461f47a10a5474e87ef707a0a38f66f16750981a7b27cab",
+      "bytes": 4602319
+    },
+    "totals": {
+      "startTime": "2026-11-26T09:22:16.063Z",
+      "duration": 889743.476,
+      "expected": 57,
+      "skipped": 24,
+      "unexpected": 33,
+      "flaky": 0
+    },
+    "groups": {
+      "regression": {
+        "failed": 17,
+        "passed": 31
+      },
+      "regression/chromium": {
+        "failed": 3,
+        "passed": 13
+      },
+      "regression/firefox": {
+        "failed": 7,
+        "passed": 9
+      },
+      "regression/webkit": {
+        "failed": 7,
+        "passed": 9
+      },
+      "integration": {
+        "passed": 26,
+        "failed": 16,
+        "skipped": 24
+      },
+      "integration/chromium": {
+        "passed": 18,
+        "failed": 4
+      },
+      "integration/firefox": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 12
+      },
+      "integration/webkit": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 12
+      }
+    },
+    "cases": [
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14559.59999999404,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14559.59999999404,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1503,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 11656,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 11656,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 15397.5,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 15397.5,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2348,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 11494,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 11494,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 35107.30000000447,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 35107.30000000447,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 237,
+        "outputClockDifferenceMaxMs": 2.492333,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 5.7,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 439.5,
+          "screen": "MUSIC_SELECT",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 34542,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 34542,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 236,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 11.8,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14993.20000000298,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14993.20000000298,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1258,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 10408,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 10408,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14772.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14772.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1949,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9336,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9336,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 12709.70000000298,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 12709.70000000298,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 2,
+        "outputClockDifferenceMaxMs": 59.652167,
+        "outputClockFailures": [
+          {
+            "atMs": 12695.39999999851,
+            "rawDifferenceUs": 59652.166663686694,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 276,
+          "screen": "MUSIC_SELECT",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 38596.19999999553,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 38596.19999999553,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 233,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 50.0,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 10872.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 10872.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 5,
+        "outputClockDifferenceMaxMs": 0.2,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 33.1,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2073,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9838,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9838,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 107.333333,
+        "outputClockFailures": [
+          {
+            "atMs": 9831,
+            "rawDifferenceUs": 107333.33300000017,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBeLessThanOrEqual(expected)",
+        "terminal": null,
+        "last": {
+          "performanceMs": 15696.89999999851,
+          "screen": "PAUSE",
+          "state": "PAUSED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 42,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 16.7,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 32094.39999999851,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 32094.39999999851,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 236,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 46.9,
+        "inputDelayOver50MsCount": 0,
+        "practice-save-readback": {
+          "revision": 1,
+          "progress": {
+            "unlockedMusicIds": [
+              "music-01"
+            ],
+            "completedTutorialIds": [
+              "TUT-01"
+            ]
+          }
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 10692.80000000447,
+          "screen": "SETTINGS",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 92,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 5.9,
+        "inputDelayOver50MsCount": 0,
+        "calibration-save-readback": {
+          "proposed": 15,
+          "revision": 1
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 11188.10000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 11188.10000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 4,
+        "outputClockDifferenceMaxMs": 0.052167,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 30.4,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2208,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9182,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9182,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 107.333333,
+        "outputClockFailures": [
+          {
+            "atMs": 9178,
+            "rawDifferenceUs": 107333.33299999972,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBeLessThanOrEqual(expected)",
+        "terminal": null,
+        "last": {
+          "performanceMs": 18391.69999999553,
+          "screen": "PAUSE",
+          "state": "PAUSED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 42,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 5.6,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 22439,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": "ERR-007"
+        },
+        "last": {
+          "performanceMs": 22439,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": "ERR-007"
+        },
+        "outputClockObservationCount": 79,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 167.6,
+        "inputDelayOver50MsCount": 2
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 10950.79999999702,
+          "screen": "SETTINGS",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 90,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 8.7,
+        "inputDelayOver50MsCount": 0,
+        "calibration-save-readback": {
+          "proposed": 20,
+          "revision": 1
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "webkit",
+        "status": "passed"
+      }
+    ]
+  },
+  "finalPlaywright": {
+    "source": {
+      "file": "final-165-browser.json",
+      "sha256": "c70be949dd738e22c6e5f5cf11550bf3f77817394c4024a002894748785d080a",
+      "bytes": 5194058
+    },
+    "totals": {
+      "startTime": "2026-11-26T09:29:05.187Z",
+      "duration": 549273.3609999999,
+      "expected": 55,
+      "skipped": 28,
+      "unexpected": 37,
+      "flaky": 0
+    },
+    "groups": {
+      "regression": {
+        "failed": 21,
+        "passed": 27
+      },
+      "regression/chromium": {
+        "failed": 7,
+        "passed": 9
+      },
+      "regression/firefox": {
+        "failed": 7,
+        "passed": 9
+      },
+      "regression/webkit": {
+        "failed": 7,
+        "passed": 9
+      },
+      "integration": {
+        "passed": 28,
+        "failed": 16,
+        "skipped": 28
+      },
+      "integration/chromium": {
+        "passed": 20,
+        "failed": 4
+      },
+      "integration/firefox": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 14
+      },
+      "integration/webkit": {
+        "passed": 4,
+        "failed": 6,
+        "skipped": 14
+      }
+    },
+    "cases": [
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 1",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 2",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 natural trial 3",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 1",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 2",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "name": "A-2a-R CASE-05 stop-restart trial 3",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toBe(expected) // Object.is equality"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "name": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(received).toMatchObject(expected)"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "Stage A-2b / native pointer capture keeps release on the starting lane",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2b-input.spec.ts",
+        "name": "native touch events reach the real DOM and normalize once per direction",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-session.spec.ts",
+        "name": "A-2c native composition readies original offline track and protected storage on the subpath",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2c-storage.spec.ts",
+        "name": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 16824,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 16824,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2392,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 11956,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 11956,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 14476.90000000596,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 14476.90000000596,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2378,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 13182,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 13182,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 20291.5,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 20291.5,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 46,
+        "outputClockDifferenceMaxMs": 22.147333,
+        "outputClockFailures": [
+          {
+            "atMs": 20248.89999999851,
+            "rawDifferenceUs": 22147.333334824103,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": 9.3,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 721.8999999985099,
+          "screen": "MUSIC_SELECT",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 37118.10000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 37118.10000000149,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 235,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 68.0,
+        "inputDelayOver50MsCount": 1,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 15614.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 15614.89999999851,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "native-failed-save-readback": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1686,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9358,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9358,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 18334.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 18334.60000000149,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 1975,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9705,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9705,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 19055.90000000596,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 19055.90000000596,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 72,
+        "outputClockDifferenceMaxMs": 60.015333,
+        "outputClockFailures": [
+          {
+            "atMs": 19052.70000000298,
+            "rawDifferenceUs": 60015.33333035258,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": 5.5,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 365.19999999552965,
+          "screen": "MUSIC_SELECT",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: page.evaluate: Error: Replay stopped at 1000ms: ERR-007",
+        "terminal": {
+          "performanceMs": 12514.69999999553,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-007"
+        },
+        "last": {
+          "performanceMs": 12514.69999999553,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-007"
+        },
+        "outputClockObservationCount": 7,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 61.0,
+        "inputDelayOver50MsCount": 1
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14203.5,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14203.5,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 4,
+        "outputClockDifferenceMaxMs": 0.224167,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 29.7,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2143,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 9167,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 9167,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 109.666667,
+        "outputClockFailures": [
+          {
+            "atMs": 9161,
+            "rawDifferenceUs": 109666.66700000007,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 16342.69999999553,
+          "screen": "RESULT",
+          "state": "FAILED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 16342.69999999553,
+          "screen": "RESULT",
+          "state": "FAILED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 31,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "recovered-first-write": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 38636.20000000298,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 38636.20000000298,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 234,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 55.033,
+        "inputDelayOver50MsCount": 3,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        },
+        "rehold-new-generation": {
+          "lane": 1,
+          "firstGeneration": 3,
+          "resumedGeneration": 4,
+          "reholdElapsedMs": 3342,
+          "pausedScore": "182,927"
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 33170.20000000298,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 33170.20000000298,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 235,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 59.2,
+        "inputDelayOver50MsCount": 2,
+        "practice-save-readback": {
+          "revision": 1,
+          "progress": {
+            "unlockedMusicIds": [
+              "music-01"
+            ],
+            "completedTutorialIds": [
+              "TUT-01"
+            ]
+          }
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 10943.10000000149,
+          "screen": "SETTINGS",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 90,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 4.8,
+        "inputDelayOver50MsCount": 0,
+        "calibration-save-readback": {
+          "proposed": 30,
+          "revision": 1
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 14429,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 14429,
+          "screen": "MENU",
+          "state": "ABORTED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 5,
+        "outputClockDifferenceMaxMs": 3.945667,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 34.1,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "firefox",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 2030,
+          "screen": "GAME",
+          "state": "INITIALIZING",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 0,
+        "outputClockDifferenceMaxMs": null,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "native audio accepts a trusted DOM touch without horizontal overflow",
+        "browser": "webkit",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 10355,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 10355,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 1,
+        "outputClockDifferenceMaxMs": 107.333334,
+        "outputClockFailures": [
+          {
+            "atMs": 10351,
+            "rawDifferenceUs": 107333.33399999981,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 16161.39999999851,
+          "screen": "RESULT",
+          "state": "FAILED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 16161.39999999851,
+          "screen": "RESULT",
+          "state": "FAILED",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 30,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": null,
+        "inputDelayOver50MsCount": 0,
+        "recovered-first-write": {
+          "score": 0,
+          "rank": "D",
+          "counts": {
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 10,
+            "ghost": 0,
+            "unplayed": 72
+          },
+          "maxCombo": 0,
+          "remainingLifeUnits": 0
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "result UI recovers an unreadable first commit without applying the result twice",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 39756.29999999702,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 39756.29999999702,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "4",
+          "saveStatus": "SAVED",
+          "error": null
+        },
+        "outputClockObservationCount": 236,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 22.0,
+        "inputDelayOver50MsCount": 0,
+        "clear-save-readback": {
+          "score": 1000000,
+          "rank": "SS",
+          "counts": {
+            "perfect": 82,
+            "great": 0,
+            "good": 0,
+            "miss": 0,
+            "ghost": 0,
+            "unplayed": 0
+          },
+          "maxCombo": 82,
+          "remainingLifeUnits": 200
+        },
+        "rehold-new-generation": {
+          "lane": 1,
+          "firstGeneration": 3,
+          "resumedGeneration": 4,
+          "reholdElapsedMs": 3369,
+          "pausedScore": "182,927"
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": {
+          "performanceMs": 31396.5,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "last": {
+          "performanceMs": 31396.5,
+          "screen": "RESULT",
+          "state": "CLEAR",
+          "writer": "OWNED",
+          "generation": "2",
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 235,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 9.1,
+        "inputDelayOver50MsCount": 0,
+        "practice-save-readback": {
+          "revision": 1,
+          "progress": {
+            "unlockedMusicIds": [
+              "music-01"
+            ],
+            "completedTutorialIds": [
+              "TUT-01"
+            ]
+          }
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM practice completion records tutorial progress only",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "chromium",
+        "status": "passed",
+        "terminal": null,
+        "last": {
+          "performanceMs": 10609,
+          "screen": "SETTINGS",
+          "state": "READY",
+          "writer": "OWNED",
+          "generation": null,
+          "saveStatus": "IDLE",
+          "error": null
+        },
+        "outputClockObservationCount": 93,
+        "outputClockDifferenceMaxMs": 0.0,
+        "outputClockFailures": [],
+        "inputDeliveryMaxMs": 18.0,
+        "inputDelayOver50MsCount": 0,
+        "calibration-save-readback": {
+          "proposed": 30,
+          "revision": 1
+        }
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "firefox",
+        "status": "skipped"
+      },
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "clock fixture DOM calibration applies the measured timing offset",
+        "browser": "webkit",
+        "status": "skipped"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "browser": "webkit",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "chromium",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "firefox",
+        "status": "passed"
+      },
+      {
+        "file": "subpath.spec.ts",
+        "name": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "browser": "webkit",
+        "status": "passed"
+      }
+    ]
+  },
+  "finalQuietNativeChromium": {
+    "source": {
+      "file": "browser-165eccc-quiet-native-dist.json",
+      "sha256": "3fec24eb0d6daf3429718f709a6ff49fa76261455aa08dfa036fc36f16e8b69c",
+      "bytes": 158595
+    },
+    "totals": {
+      "startTime": "2026-11-26T09:38:15.680Z",
+      "duration": 45183.356,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "groups": {
+      "integration": {
+        "failed": 1
+      },
+      "integration/chromium": {
+        "failed": 1
+      }
+    },
+    "cases": [
+      {
+        "file": "stage-a2d-integration.spec.ts",
+        "name": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+        "browser": "chromium",
+        "status": "failed",
+        "failure": "Error: expect(locator).toHaveAttribute(expected) failed",
+        "terminal": {
+          "performanceMs": 17018.5,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "last": {
+          "performanceMs": 17018.5,
+          "screen": "MENU",
+          "state": "ERROR",
+          "writer": "OWNED",
+          "generation": "3",
+          "saveStatus": "IDLE",
+          "error": "ERR-006"
+        },
+        "outputClockObservationCount": 59,
+        "outputClockDifferenceMaxMs": 40.075,
+        "outputClockFailures": [
+          {
+            "atMs": 17008.10000000149,
+            "rawDifferenceUs": 40074.99999552788,
+            "generation": 3,
+            "error": "clock.outOfSync",
+            "errorCode": "ERR-006"
+          }
+        ],
+        "inputDeliveryMaxMs": 1.3,
+        "inputDelayOver50MsCount": 0
+      }
+    ]
+  },
+  "performance": {
+    "initialFixedDefault": {
+      "source": {
+        "file": "performance-chromium-fixed-default.json",
+        "sha256": "89f89986237f3faed1642560a0c94a703e0c22ea1428a6e6fe1ba243e8c248ea",
+        "bytes": 783496
+      },
+      "commit": "e8d2f8338c4f4b8ce9b401adf8719f97950e3ded",
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 2340.2999999970198,
+          "p95": 2344.7000000029802,
+          "p99": 2344.7000000029802,
+          "maximum": 2344.7000000029802
+        },
+        "coldMenuStatus": "WITHIN_REFERENCE",
+        "coldPreparationMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 3358.0999999940395,
+          "p95": 4799.5,
+          "p99": 4799.5,
+          "maximum": 4799.5
+        },
+        "coldPreparationStatus": "WITHIN_REFERENCE",
+        "initialTransferBytes": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 365162,
+          "p95": 365162,
+          "p99": 365162,
+          "maximum": 365162
+        },
+        "initialTransferStatus": "WITHIN_REFERENCE",
+        "exceedsInternalTransferBudget": false
+      }
+    },
+    "initialComparativePrivate": {
+      "source": {
+        "file": "performance-chromium-private-null.json",
+        "sha256": "b430a27e54f1bd350c048849a0ccc36f2dda2440b30194a8db946f668cbe81e6",
+        "bytes": 928250
+      },
+      "commit": "26e99fffda128dbc7ff5bec354e28b59429ae263",
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 2315.7999999970198,
+          "p95": 2336.6999999955297,
+          "p99": 2336.6999999955297,
+          "maximum": 2336.6999999955297
+        },
+        "coldMenuStatus": "WITHIN_REFERENCE",
+        "coldPreparationMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 3494.89999999851,
+          "p95": 3606.8000000044703,
+          "p99": 3606.8000000044703,
+          "maximum": 3606.8000000044703
+        },
+        "coldPreparationStatus": "WITHIN_REFERENCE",
+        "initialTransferBytes": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 365162,
+          "p95": 365162,
+          "p99": 365162,
+          "maximum": 365162
+        },
+        "initialTransferStatus": "WITHIN_REFERENCE",
+        "exceedsInternalTransferBudget": false
+      }
+    },
+    "cycle1Default": {
+      "source": {
+        "file": "performance-chromium-final-default.json",
+        "sha256": "d552c3b38d83968662bf7ede933d6f47e03f1cbc2cd55227b19f1b8d9c411f35",
+        "bytes": 332148
+      },
+      "commit": "cde9c6ab523729827eb8f29053f8d9ec19af3b38",
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 2392.60000000149,
+          "p95": 2836.4000000059605,
+          "p99": 2836.4000000059605,
+          "maximum": 2836.4000000059605
+        },
+        "coldMenuStatus": "WITHIN_REFERENCE",
+        "coldPreparationMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 5284.60000000149,
+          "p95": 7117.5,
+          "p99": 7117.5,
+          "maximum": 7117.5
+        },
+        "coldPreparationStatus": "OUTSIDE_REFERENCE",
+        "initialTransferBytes": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 366931,
+          "p95": 366931,
+          "p99": 366931,
+          "maximum": 366931
+        },
+        "initialTransferStatus": "WITHIN_REFERENCE",
+        "exceedsInternalTransferBudget": false
+      }
+    },
+    "finalDefault": {
+      "source": {
+        "file": "performance-chromium-165-default.json",
+        "sha256": "05fb1d68fd3894166fae74491e269d4310ac0488376e0f33518dd125d535b471",
+        "bytes": 641999
+      },
+      "commit": "165eccc8b223160088abd82ad78567b2f76e5208",
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 2424,
+          "p95": 2546.60000000149,
+          "p99": 2546.60000000149,
+          "maximum": 2546.60000000149
+        },
+        "coldMenuStatus": "WITHIN_REFERENCE",
+        "coldPreparationMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 4274,
+          "p95": 6038.60000000149,
+          "p99": 6038.60000000149,
+          "maximum": 6038.60000000149
+        },
+        "coldPreparationStatus": "WITHIN_REFERENCE",
+        "initialTransferBytes": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 367004,
+          "p95": 367004,
+          "p99": 367004,
+          "maximum": 367004
+        },
+        "initialTransferStatus": "WITHIN_REFERENCE",
+        "exceedsInternalTransferBudget": false
+      }
+    },
+    "unchanged84SecondFixture": {
+      "source": {
+        "file": "long-fixture-chromium.json",
+        "sha256": "278155e4b40ca31b2b0162e0b37a7f1b69a1a8a00d3a849ec309e25ccb030baf",
+        "bytes": 1547
+      },
+      "commit": null,
+      "aggregate": {
+        "renderMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 59056.10000000149,
+          "p95": 59461.40000000596,
+          "p99": 59461.40000000596,
+          "maximum": 59461.40000000596
+        },
+        "generationReference": "OUTSIDE_REFERENCE"
+      }
+    }
+  }
+}

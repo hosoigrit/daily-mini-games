@@ -1,0 +1,33 @@
+tc_id,acceptance_ids,contract_or_gate,parent_status,stage_a2d_subset,remaining
+TC-D4-001,AT-083,IF-01,PARTIAL,web-audio.tsと既存A-2aブラウザ検証。統合入口は同じ音源ポートを使用,正式5曲と全物理環境
+TC-D4-002,AT-083,IF-02,PARTIAL,24秒・63ノーツの固定楽曲／譜面を実コンパイル,正式5曲全件と不一致fixtureの画面実行
+TC-D4-003,AT-083,IF-03,PARTIAL,実音声と固定出力スタンプの統合、100ms監視の単体,全環境での実音声連続成立と出力時計異常
+TC-D4-004,AT-083,IF-04,PARTIAL,既存変換をDOMアダプター、演奏HUD、補正で使用,全物理ブラウザの時刻原点
+TC-D4-005,AT-083,IF-05,PARTIAL,既存譜面契約単体と理想入力統合,正式15譜面
+TC-D4-006,AT-083;AT-110,IF-06,PARTIAL,A-2b実アダプター回帰と統合DOM操作,物理マルチタッチの競合全条件
+TC-D4-007,AT-083,IF-07,PARTIAL,固定clockの理想入力、既存判定境界テスト,実機入力と正式譜面
+TC-D4-008,AT-009;AT-083,IF-08,PARTIAL,ライフ200と0の統合結果、内部1の既存単体,正式譜面・難易度の全組合せ
+TC-D4-009,AT-083,IF-09,PARTIAL,Canvas絶対時計、DPR、HOLD／CHORD／RAPIDの描画単体,物理5環境と負荷下の描画
+TC-D4-010,AT-083;AT-123,IF-10,PARTIAL,仮演出の分離と既存通知テスト。HUDは正式確定グループのみ参照,正式演出・演出通知全条件の追跡
+TC-D4-011,AT-027;AT-083,IF-11,PARTIAL,正式CLEAR／FAILED封印と練習でのnull、旧通知回帰,人間操作での全分岐
+TC-D4-012,AT-083,IF-12,PARTIAL,既存純粋更新テストと隔離LocalStorageの結果保存,正式全曲・全収集素材での成立
+TC-D4-013,AT-071;AT-083,IF-13,PARTIAL,実Web Locks、設定と練習の保存、旧保存回帰,物理5環境と全ストレージ障害の実UI経路
+TC-D4-014,AT-041;AT-069;AT-083,IF-14,PARTIAL,既存ライフサイクルと統合停止／入力中断試験,ブラウザ間BFCache復帰と実機回転
+TC-D4-015,AT-083,IF-15,PARTIAL,現行実コントローラーのガード試験と画面からの命令,正式9画面全条件
+TC-D4-016,AT-083;AT-105,IF-16,PARTIAL,Strict Modeの購読と旧Store回帰,物理端末の実負荷
+TC-D4-017,AT-083,IF-17,PARTIAL,同一オリジンの2タブと既存排他回帰,実機での所有権競合・復帰
+TC-D4-018,AT-034;AT-083,IF-18,PARTIAL,固定入力履歴、配送境界の既存テスト、再保持経路,物理端末での遅着・描画負荷組合せ
+TC-D4-019,AT-083;AT-121,IF-19,PARTIAL,既存CHART/SAVE検証と試験曲の接続,正式素材の検証全条件
+TC-D4-020,AT-083,IF-20,PARTIAL,既存音声通知購読・解除と現行実音声終了／中断,長時間の実音声中断と完全な実機ケース
+TC-D4-028,AT-016,A2D-G09,PARTIAL,A-2c停止境界の1μs及び配送待ち回帰・DOM停止,物理環境での再保持
+TC-D4-029,AT-016;AT-095;AT-097;AT-107,A2D-G09,PARTIAL,旧世代処理とウォーターマーク回帰、DOM再開,長時間実音声再保持の反復
+TC-D4-045,AT-044;AT-086;AT-087,A2D-G04,PARTIAL,4ノーツ形状、Canvas座標、CSSエミュレーション,正式演出と指定端末
+TC-D4-049,AT-023,A2D-G14,PARTIAL,回転相当の再配置、ライフサイクル回帰,物理端末の回転・前景復帰
+TC-D4-062,AT-060,A2D-G11,PARTIAL,専用オリジンの実Web Locksと設定書込,物理端末ブラウザ
+TC-D4-069,AT-078,A2D-G12,PARTIAL,既存補正統計・実AudioContext予約・DOM計測,人間の聴取と実機での補正
+TC-D4-079,AT-051,A2D-G15,PARTIAL,Chromium最初3秒除外、nearest-rank P95,正式2譜面×5環境×3回
+TC-D4-080,AT-043;AT-051;AT-120,A2D-G15,PARTIAL,ネイティブ出力時計の実測と安全停止,長時間反復
+TC-D4-081,AT-052,A2D-G15,PARTIAL,冷キャッシュの指定回線3回,5物理環境
+TC-D4-082,AT-052,A2D-G15,PARTIAL,24秒・84秒冷生成を別計測,正式全5曲と物理端末
+TC-D4-083,AT-093;AT-119,A2D-G15,PARTIAL,試験版でのキャッシュ、描画、生成の実測,正式全曲・全環境
+TC-D4-084,AT-018;AT-044,A2D-G14/G15,PARTIAL,Chromiumで20操作を計画、実測と中断理由を保全,安全停止のある実測を完遂扱いしない
