@@ -106,6 +106,20 @@ describe('回転灯のStage A-2b実証', () => {
     expect(engine.getFinalResult()?.score).toBe(1_000_000);
   });
 
+  it('理想入力の独立TAPを1件落とすと、実判定後の理想再生検証はCHART-E14で拒否する', () => {
+    const engine = makeEngine();
+    const inputs = getInputs();
+    const omitted = inputs.find(input => input.action === 'DOWN' && input.lane === 1 && input.judgeTimeUs === 0);
+    expect(omitted).toBeDefined();
+    for (const input of inputs) if (input !== omitted) value(engine.enqueueInput(input));
+    value(engine.advance(24_100_000 as Us));
+    const result = engine.getFinalResult();
+    expect(result).toMatchObject({ outcome: 'CLEAR', counts: { perfect: 81, miss: 1, ghost: 0 } });
+    expect(validateIdealReplay(compiled, result)).toMatchObject({
+      valid: false, issues: [{ code: 'CHART-E14' }],
+    });
+  });
+
   it('無操作の試験譜面でライフ0となり、後続の判定は未プレイになる', () => {
     const engine = makeEngine();
     expect(engine.getFinalResult()).toBeNull();

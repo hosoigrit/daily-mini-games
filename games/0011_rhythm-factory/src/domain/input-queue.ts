@@ -18,6 +18,7 @@ export interface InputQueue extends Pick<Contracts, 'enqueueInput' | 'drainBefor
   readonly processedBeforeUs: Us;
   readonly delaysOver50Ms: number;
   readonly lateInputs: number;
+  readonly stopError: GameError | null;
   seal(): void;
 }
 
@@ -32,7 +33,7 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
   const pendingOrder = new Set<string>();
   const orderKey = (input: NormalizedInput) => `${input.judgeTimeUs}/${input.sequence}`;
 
-  function halt(code: 'ERR-006' | 'ERR-007', key: string) {
+  function halt(code: 'ERR-006' | 'ERR-007' | 'ERR-018', key: string) {
     const failure = inputFailure(code, key, sessionId);
     if (!failure.ok) fault = failure.error;
     return failure;
@@ -42,6 +43,7 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
     get processedBeforeUs() { return processedBeforeUs; },
     get delaysOver50Ms() { return delaysOver50Ms; },
     get lateInputs() { return lateInputs; },
+    get stopError() { return fault; },
     enqueueInput(input) {
       if (!input || typeof input.sessionId !== 'string' || !input.sessionId.trim()
           || !Number.isSafeInteger(input.clockGeneration) || input.clockGeneration < 0) {
@@ -74,7 +76,7 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
       }
 
       const key = orderKey(input);
-      if (pendingOrder.has(key)) return inputFailure('ERR-018', 'input.ambiguousSequence', sessionId);
+      if (pendingOrder.has(key)) return halt('ERR-018', 'input.ambiguousSequence');
       pendingOrder.add(key);
       seen.add(input.eventId);
       pending.push(Object.freeze({ ...input }));

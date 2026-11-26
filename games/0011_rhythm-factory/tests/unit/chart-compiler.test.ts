@@ -61,6 +61,14 @@ it.each([
   if (note.type === 'CHORD') expect(new Set(result.events.map(event => event.groupId)).size).toBe(1);
 });
 
+it('checks that level is finite without imposing an unapproved range or integer constraint', () => {
+  const original = chart([tap('note', 1, 480)]);
+  for (const level of [11, 4.5]) expect(validateChart({ ...original, level }, context()).valid).toBe(true);
+  expect(validateChart({ ...original, level: Infinity }, context()).issues).toContainEqual(
+    expect.objectContaining({ code: 'CHART-SCHEMA', path: 'level' }),
+  );
+});
+
 it('IF-05 sorts unsorted notes, merges exact-time groups across source notes, and exposes immutable results', () => {
   const data = chart([rapid('rapid', 4, [1440, 1560, 1680]), chord('chord', [4, 2], 240), hold('hold', 1, 840, 1200), tap('tap', 3, 1200)]);
   const result = compiled(data);

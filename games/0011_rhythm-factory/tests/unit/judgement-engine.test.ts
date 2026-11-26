@@ -176,7 +176,7 @@ describe('IF-06 / IF-18', () => {
     expect(queue.processedBeforeUs).toBe(1_150_002);
   });
 
-  it('不正レーン・時刻・ID・順序を拒否し、正常入力を変更しない (TC-D4-006)', () => {
+  it('不正レーン・時刻・IDを拒否し、正常入力を変更しない (TC-D4-006)', () => {
     const queue = createInputQueue(sessionId, generation, 3_000_000 as Us);
     const valid = input(1, 1_000_000);
     expect(value(queue.enqueueInput(valid)).reason).toBe('QUEUED');
@@ -186,10 +186,28 @@ describe('IF-06 / IF-18', () => {
     for (const malformed of [
       { ...bad, lane: 5 as Lane }, { ...bad, judgeTimeUs: NaN as Us },
       { ...bad, receivedPerformanceMs: 0 as Ms }, { ...bad, eventId: '' },
-      { ...bad, songTimeUs: 1_020_000 as Us }, bad,
+      { ...bad, songTimeUs: 1_020_000 as Us },
     ]) expect(error(queue.enqueueInput(malformed))).toBe('ERR-018');
     expect(value(queue.drainBefore(1_000_001 as Us)).events).toEqual([valid]);
   });
+});
+
+it.each([false, true])('同時刻のsequenceが衝突したら、どちらの配送順でも正式成績を凍結する', reverse => {
+  const judge = engine([event('earlier', 500_000), event('target', 1_000_000)]);
+  value(judge.enqueueInput(input(1, 500_000)));
+  value(judge.enqueueInput(input(2, 550_000, 1, 'UP')));
+  advance(judge, 600_000);
+  const history = judge.read().official;
+  const inputs = [
+    input(3, 1_000_000), { ...input(3, 1_000_000, 2, 'DOWN', 'B'), eventId: 'ambiguous' },
+  ];
+  if (reverse) inputs.reverse();
+  value(judge.enqueueInput(inputs[0]!));
+  expect(error(judge.enqueueInput(inputs[1]!))).toBe('ERR-018');
+  expect(judge.read().stopError?.messageKey).toBe('input.ambiguousSequence');
+  expect(error(judge.advance(4_000_000 as Us))).toBe('ERR-018');
+  expect(judge.read().official).toEqual(history);
+  expect(judge.getFinalResult()).toBeNull();
 });
 
 describe('ロング保持と正式集計', () => {

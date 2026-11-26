@@ -259,7 +259,7 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
       return { ok: false, error: stopError };
     }
     const receipt = inputQueue.enqueueInput(input);
-    if (!receipt.ok && receipt.error.code === 'ERR-007') stopError = receipt.error;
+    stopError ??= inputQueue.stopError;
     return receipt;
   };
 

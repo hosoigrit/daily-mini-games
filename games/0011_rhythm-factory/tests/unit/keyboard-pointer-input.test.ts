@@ -133,6 +133,16 @@ describe('Stage A-2b browser input boundary', () => {
     ]);
   });
 
+  it('clears a physical key on unusable release time without submitting a logical UP', () => {
+    const { inputs, physical, rejected } = setup();
+    keyboard(window, 'keydown', 1_100, { code: 'KeyD' });
+    const release = keyboard(window, 'keyup', NaN, { code: 'KeyD' });
+    window.dispatchEvent(release);
+    expect(physical).toEqual([[1], []]);
+    expect(inputs.map(input => input.action)).toEqual(['DOWN']);
+    expect(rejected).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({ reason: 'INVALID_TIMESTAMP' }));
+  });
+
   it('drops key repeats and a redispatched event without filtering logically distinct DOWN and UP', () => {
     const { inputs, physical } = setup();
     const release = keyboard(window, 'keyup', 1_100, { code: 'KeyF' });

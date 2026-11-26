@@ -142,11 +142,16 @@ export function attachKeyboardPointerInput(options: KeyboardPointerInputOptions)
     if (action === 'DOWN' && event.repeat) return;
 
     deliveredEvents.add(event);
+    if (action === 'UP') {
+      pressedKeys.delete(event.code);
+      physicalChange();
+    }
     const timing = time(event, received);
     if (!timing) return;
-    if (action === 'DOWN') pressedKeys.add(event.code);
-    else pressedKeys.delete(event.code);
-    physicalChange();
+    if (action === 'DOWN') {
+      pressedKeys.add(event.code);
+      physicalChange();
+    }
     emitInput(timing, `keyboard:${event.code}`, lane, action);
   }
 

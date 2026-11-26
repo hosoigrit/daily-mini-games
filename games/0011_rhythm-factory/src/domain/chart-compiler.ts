@@ -289,8 +289,8 @@ function inspectChart(data: unknown, music: ChartMusicContext, profile: ChartVal
     return inspection;
   }
   if (data.schemaVersion !== 1) add('CHART-SCHEMA', 'schemaVersion', 'The chart schema version must be 1.');
-  if (!isNonnegativeInteger(data.level) || data.level < 1 || data.level > 10) {
-    add('CHART-SCHEMA', 'level', 'The chart level must be an integer from 1 to 10.');
+  if (typeof data.level !== 'number' || !Number.isFinite(data.level)) {
+    add('CHART-SCHEMA', 'level', 'The chart level must be a finite number.');
   }
   if (!isMusicId(data.musicId)) add('CHART-E02', 'musicId', 'The chart references an unknown music ID.');
   else if (data.musicId !== music.musicId) add('CHART-E13', 'musicId', 'The chart and music context IDs must match.');
