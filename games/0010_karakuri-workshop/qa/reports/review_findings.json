@@ -1388,5 +1388,28 @@
     ],
     "E7VerbatimIndependentCertificateDigest": "4795c09ee330625647e8bec62311d09eefa7a48c974ec0b6a057e5dcee0db6f1",
     "manualHumanQualities": "NOT_RUN"
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "status": "HOLD",
+    "independent": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e7_revalidation_review",
+      "/root/e1_test_plan"
+    ],
+    "reviewedScopes": [
+      "budgeting, reservation and interruption",
+      "independent physics evidence and release map",
+      "V2/save and tutorial follow-up",
+      "old case impact and trace"
+    ],
+    "blockingFinding": {
+      "case": "TC-D7-015-C002",
+      "kind": "Dedicated time over-reservation",
+      "status": "OPEN",
+      "impact": "50 seconds short for exact fresh reservation"
+    },
+    "confirmedStages": "Evidence of every normal board, independent removal contrasts, and approved same-physics methods. ST10 alternate long-run review preserved."
   }
 }

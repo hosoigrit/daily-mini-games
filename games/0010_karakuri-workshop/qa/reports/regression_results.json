@@ -1200,5 +1200,42 @@
         "signal": null
       }
     ]
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "currentNodeNineGamesCases": 2019,
+    "nodeRun": {
+      "runId": "CR010-R2-E8-EXISTING-REGRESSION",
+      "actual": {
+        "automatedSeconds": 5
+      },
+      "elapsed": 5,
+      "status": 0,
+      "error": null,
+      "measurementError": null,
+      "progressSHA256": null,
+      "rawSHA256": "291295bed751f51009532ca199bd33202d52d96ad3d982db7da60c24fb07b567",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receiptHash": "647af582c579fce4d654ab674a8f9bfe0fec976c329f3538b6473522f62ccab9",
+      "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+      "log": "CR010-R2-E8-EXISTING-REGRESSION.out"
+    },
+    "browserRun": {
+      "runId": "CR010-R2-E8-EXISTING-BROWSER",
+      "actual": {
+        "automatedSeconds": 5
+      },
+      "elapsed": 5,
+      "status": 0,
+      "error": null,
+      "measurementError": null,
+      "progressSHA256": null,
+      "rawSHA256": "3b983a4bf17462f05a6e99f7c885af9af7045b32ca739ba3e10860e63dbf6f33",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receiptHash": "8ed2c00996a0e8aa3c8fa1387985d778d67d0e612bd6dd810b018a1e7dbba4df",
+      "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+      "log": "CR010-R2-E8-EXISTING-BROWSER.out"
+    },
+    "browserRecordedPass": true
   }
 }

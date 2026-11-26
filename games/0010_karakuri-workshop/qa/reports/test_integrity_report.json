@@ -1298,5 +1298,37 @@
       "signal": null
     },
     "evidenceDeltaPolicy": "actual pre-push diff and remote exact bytes verification"
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "pathsDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "fixedHandoffFilesChecked": 22,
+    "protectedGameFilesChecked": 22,
+    "currentArchitectureProof": {
+      "runId": "CR010-R2-E8-ARCHITECTURE-01",
+      "actual": {
+        "automatedSeconds": 1
+      },
+      "elapsed": 1,
+      "status": 0,
+      "error": null,
+      "measurementError": null,
+      "progressSHA256": null,
+      "rawSHA256": "f2beddf3a0a75e2db9f11d13fec1ba145238d7f824f15726eb911d8091a53afe",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receiptHash": "72bd11024436769ad6ee9acf9d0fae6e5663ae4b0b1439f52377117b5edc91f7",
+      "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+      "log": "CR010-R2-E8-ARCHITECTURE-01.out"
+    },
+    "caseHistoryRetained": true,
+    "qualification": "HOLD",
+    "archive": {
+      "name": "CR010-R2-HOLD-recovery.tar.gz",
+      "sha256": "f0e5578bd3afd7f356751475590d02387082fd482d59552c53b7e3c7950e0131",
+      "sizeBytes": 25512302,
+      "memberHashesVerified": 267,
+      "candidateBundleVerified": true,
+      "previousR1Archive": "CR010-R1-settlement.tar.gz"
+    }
   }
 }

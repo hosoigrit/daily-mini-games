@@ -8483,5 +8483,19 @@
     "PASS": 148,
     "AUTOMATED_PASS_PHASE6_PENDING": 40,
     "HUMAN_NOT_RUN": 2
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "oldRequirements": 190,
+    "oldCases": 982,
+    "caseStatusCounts": {
+      "CURRENT_ADMISSION_PENDING": 742,
+      "PASS_CURRENT_DIRECT_PROOF": 66,
+      "NOT_RUN_HUMAN": 173,
+      "HOLD_INCOMPLETE": 1
+    },
+    "status": "CURRENT_ADMISSION_OPEN",
+    "requirementsReviewedNotAllReadmitted": true,
+    "caseAssessment": "qa/reports/automated_test_results.json"
   }
 }

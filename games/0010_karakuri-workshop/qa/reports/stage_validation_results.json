@@ -4375,5 +4375,628 @@
       "exit": 0,
       "signal": null
     }
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "status": "MATCHING_STAGE_MEASUREMENTS",
+    "qualityGate": "HOLD",
+    "certifiedDataset": "qa/fixtures/cr010-certified-stages.json",
+    "details": {
+      "case": "CR010-STAGE",
+      "testedSHA": "56334926fee679412c4978471f812d454e854525",
+      "stages": [
+        {
+          "stage": "01",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-01-2",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 6,
+            "successes": 6,
+            "percent": 50
+          },
+          "identity": {
+            "geometryId": "c43f9098db281443248095daf4836acfaddf6750c896df3859e61e1ad5013f36",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "81ac485f061876b5683cf00033a67be4d68afabf792a9af80064c85af6756804"
+          },
+          "causal": [],
+          "hints": 3
+        },
+        {
+          "stage": "02",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-02-10",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 6,
+            "successes": 5,
+            "percent": 50
+          },
+          "identity": {
+            "geometryId": "3f5cf58d40e42e9aea0f0c092bec56c5025c8686886b4124bf2ba5683caa3390",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "0c5729d32100654d427e82d956669c2e318b44481d566a9cb3bfae32dfeff8de"
+          },
+          "causal": [],
+          "hints": 3
+        },
+        {
+          "stage": "03",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-03-19",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 10,
+            "successes": 10,
+            "percent": 50
+          },
+          "identity": {
+            "geometryId": "df899b4dabaf7d5f5f5fc0eceffe5c63984f1211e9c3b548ea1c86299c713aa4",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "510bd370c8bba7bcf02ed61496ce18a90a18e2efef58e59769f5d93657a11555"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "P:12:9:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-03-20",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "R:18:12:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-03-21",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "04",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-04-34",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-04-37",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 11,
+            "successes": 6,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "40cf98c3d9cb2820c0d618433e936fe761c002d80314f08d047436c4460e4658",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "44a43e4021176de36e59157daaf5b197d35e2f715c948d57acc33efaeae7d091"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "R:7:21:-30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-04-35",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "B:2:25:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-04-36",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:6:25:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-04-38",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "05",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-05-52",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-05-56",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 15,
+            "successes": 3,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "2aa33109cfe43fdc44e5708f757e6772a6ebdd7a944fc7f211480bad8dbf8b35",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "37f5dd406e0cd92c40bc9cdea505d87c9d1b243fbbea7a0091dfd716f9988572"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "R:9:23:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-05-53",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "B:14:25:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-05-54",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "P:30:12:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-05-55",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:7:26:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-05-57",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:27:12:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-05-58",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "06",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-06-76",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-06-79",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 10,
+            "successes": 10,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "3440fd184c26b1c35495037ff471e9b2feb8209ced381ac52aecdc2da369ecf1",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "b1c9decad8a0dc66e2094c0a3c661e76d5dbc5199b3f88d21368e99305451868"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "S:11:9:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-06-77",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "R:18:15:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-06-78",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "S:12:9:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-06-80",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:17:15:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-06-81",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "07",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-07-94",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-07-98",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 12,
+            "successes": 10,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "74d6e92d75529c6e82694926a633f0c3fb2c8a3f7d9229b188f19a0f094677bb",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "9c5e391b194f20c51dc8eb9a5d3272cb8fb7306327dde2a04bb048ecb439e892"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "S:12:9:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-95",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "P:17:15:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-96",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "P:23:16:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-97",
+              "effect": {
+                "lostDetour": true,
+                "observed": {
+                  "upper": {
+                    "pass": true,
+                    "extremum": 3.7062067898486664
+                  },
+                  "lower": {
+                    "pass": false,
+                    "extremum": 3.0399828437755287
+                  }
+                }
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "S:11:9:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-99",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "R:17:14:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-100",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:22:16:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-07-101",
+              "effect": {
+                "lostDetour": true,
+                "observed": {
+                  "upper": {
+                    "pass": true,
+                    "extremum": 3.860818666041256
+                  },
+                  "lower": {
+                    "pass": false,
+                    "extremum": 3.0660411689392157
+                  }
+                }
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "08",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-08-116",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-08-119",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 12,
+            "successes": 8,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "2af8008a4e5095a7936dfe18651b56834f594117fa13010383c857315fb713f0",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "029741624f8f4390bfa3269d8cf2367955656439c00cf70483cc29ea9af4e89f"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "B:4:27:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-08-117",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "B:32:20:-15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-08-118",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:4:27:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-08-120",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:32:20:-15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-08-121",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "R:20:4:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-08-122",
+              "effect": {
+                "differentOrderedCrossings": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "09",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-09-137",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-09-141",
+          "overTargetReview": false,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 14,
+            "successes": 6,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "18d8c660c2b1e84e70177da4746828c2816ab144efdebcaf8664c50bf651d4d8",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "cd67e97d8ac8795ac397bc487958da6ae979fb77648c6f511fa9f1d916ce1b70"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "S:10:8:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-138",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "B:17:20:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-139",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "P:29:7:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-140",
+              "effect": {
+                "greatestSampleDistance": 1.005582917273286,
+                "sharedResultStillStable": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "S:10:8:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-142",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:14:12:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-143",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:19:20:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-144",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:29:7:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-09-145",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        },
+        {
+          "stage": "10",
+          "baseline": "CR010-R2-E8-FORMAL-FULL-01-10-162",
+          "alternate": "CR010-R2-E8-FORMAL-FULL-01-10-167",
+          "overTargetReview": true,
+          "repeat": 100,
+          "passNeighbors": {
+            "pass": true,
+            "legal": 20,
+            "successes": 5,
+            "percent": 20
+          },
+          "identity": {
+            "geometryId": "ff9d2030009321b08da0948372280596ed1cca2531264acede34c4bd38059bb8",
+            "physicsRulesVersion": "8e69e82e660d20121e8878dc98e91f86a3ed8759e34d7d071f63a8507fb845bd",
+            "compatibilityId": "ba35cc72d042290895b4bef1c590671661ecf58854938ff7f3737788be6ae317"
+          },
+          "causal": [
+            {
+              "for": "baseline",
+              "removed": "B:20:23:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-163",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "P:30:7:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-164",
+              "effect": {
+                "differentOrderedCrossings": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "R:8:8:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-165",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "baseline",
+              "removed": "S:13:16:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-166",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "B:22:22:15",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-168",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "P:30:8:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-169",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "R:8:8:30",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-170",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            },
+            {
+              "for": "alternate",
+              "removed": "S:14:17:0",
+              "control": "CR010-R2-E8-FORMAL-FULL-01-10-171",
+              "effect": {
+                "lostPhysicalGoal": true
+              }
+            }
+          ],
+          "hints": 3
+        }
+      ],
+      "counts": {
+        "star3": 10,
+        "alternates": 7,
+        "repeat": 1000,
+        "hints": 30
+      },
+      "accepted": [
+        "E8 fixed layouts and causal contrasts"
+      ],
+      "formalSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+      "repeatSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b"
+    },
+    "selectedMetadata": {
+      "stageMatrix": {
+        "runId": "CR010-R2-E8-FORMAL-FULL-01",
+        "actual": {
+          "formalSimulations": 191,
+          "formalTicks": 47914,
+          "automatedSeconds": 4
+        },
+        "elapsed": 4,
+        "status": 0,
+        "error": null,
+        "measurementError": null,
+        "progressSHA256": null,
+        "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+        "stderrSHA256": "9b15f369a0a8235348720218568cfba73a46f41c167ff76bc9c105c3ddf73f82",
+        "receiptHash": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+        "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+        "log": "CR010-R2-E8-FORMAL-FULL-01.out"
+      },
+      "stageRepeats": {
+        "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+        "actual": {
+          "formalSimulations": 1000,
+          "formalTicks": 230800,
+          "automatedSeconds": 10
+        },
+        "elapsed": 10,
+        "status": 0,
+        "error": null,
+        "measurementError": null,
+        "progressSHA256": null,
+        "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+        "stderrSHA256": "006741f4f988b9de4054fe0e7450de44e02f919c4bc5e4606b44f8a7465126b7",
+        "receiptHash": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f",
+        "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+        "log": "CR010-R2-E8-FORMAL-REPEAT-01.out"
+      },
+      "stageQualifications": {
+        "runId": "CR010-R2-CERT-CHECK-01",
+        "actual": {
+          "automatedSeconds": 2
+        },
+        "elapsed": 2,
+        "status": 0,
+        "error": null,
+        "measurementError": null,
+        "progressSHA256": null,
+        "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "receiptHash": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+        "headAtReservation": "56334926fee679412c4978471f812d454e854525",
+        "log": "CR010-R2-CERT-CHECK-01.out"
+      }
+    }
   }
 }

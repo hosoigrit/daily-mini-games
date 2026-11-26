@@ -88,5 +88,54 @@
     "reopeningControl": "PASS",
     "gameQualityGate": "IN_PROGRESS",
     "historicalReservationsPreserved": true
+  },
+  "CR010_R2": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "qualityGate": "HOLD",
+    "r2ContainedInterruption": {
+      "type": "CONTAINED_INTERRUPTION_RECONCILED",
+      "approvalId": "EXEC-GAME-0010-CR010-R2-SEARCH-CONTINUATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "previousDigest": "545af8969fb07f666dca119f662e63c09f75669ba9e2ab403690285110700df8",
+      "runId": "CR010-R2-E8-ENDURANCE-1800",
+      "caseId": "TC-D7-015-C002",
+      "status": "HOLD",
+      "stopCause": "Intentional SIGTERM of verified runner PID 30488 after detecting an oversized dedicated reservation",
+      "elapsedDiagnosticSeconds": 214,
+      "partialObservedWorlds": 132,
+      "partialObservedTicks": 10552,
+      "charged": {
+        "automatedSeconds": 2150,
+        "formalSimulations": 400,
+        "formalTicks": 480000
+      },
+      "dedicatedSeconds": {
+        "totalLimit": 4200,
+        "firstAttemptCharged": 2150,
+        "nextFormalReservationRequired": 2100,
+        "shortfall": 50
+      },
+      "rawSHA256": "fda2c45ae5e8be3bd947463d68f03bc9526162bb145af4ab2bd57db7023f5516",
+      "stderrSHA256": "83d44be3393d357fbd7aa42cff95e541b384526f999225ab53181ffcac19b383",
+      "independentReview": [
+        "/root/e0_review",
+        "/root/e8_coverage"
+      ],
+      "historicalDebitRetained": true,
+      "formalEnduranceResumed": false,
+      "ignoredRuns": [],
+      "outstandingReservations": 0
+    },
+    "recoveryArchive": {
+      "name": "CR010-R2-HOLD-recovery.tar.gz",
+      "sha256": "f0e5578bd3afd7f356751475590d02387082fd482d59552c53b7e3c7950e0131",
+      "sizeBytes": 25512302,
+      "memberHashesVerified": 267,
+      "candidateBundleVerified": true,
+      "previousR1Archive": "CR010-R1-settlement.tar.gz"
+    },
+    "testLedgerTail": "323e3705f27d40f34cb9efe78ae5802e01ebedbb7a61dd07919aaaf338b60634",
+    "outstandingTestReservations": 0
   }
 }
