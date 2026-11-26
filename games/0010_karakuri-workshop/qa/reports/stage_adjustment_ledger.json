@@ -287,5 +287,14 @@
       "currentDefinitionAdjustments": 0,
       "currentPhysicsCandidateTrials": 0
     }
+  },
+  "CR010_R2_FOLLOWUP": {
+    "previousAdjustmentsKept": {
+      "10": 14,
+      "05": 6,
+      "08": 6
+    },
+    "newStageAdjustments": 0,
+    "generatedTotal": 106499
   }
 }

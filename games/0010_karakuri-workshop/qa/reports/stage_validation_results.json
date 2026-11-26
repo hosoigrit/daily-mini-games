@@ -4998,5 +4998,63 @@
         "log": "CR010-R2-CERT-CHECK-01.out"
       }
     }
+  },
+  "CR010_R2_FOLLOWUP": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "normalUiBaselines": 10,
+    "normalUiAlternates": 7,
+    "normalUiAlternateProofs": [
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 1,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 2,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 3,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 4,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 5,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 6,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      },
+      {
+        "runId": "CR010-R2-FOLLOWUP-BROWSER-ALTERNATES",
+        "line": 7,
+        "rawSHA256": "fd4eeb9b78dcad855cc74fd53cb05d400be0a584d1069e2f40d9d7bccf4835fd",
+        "settledDigest": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c"
+      }
+    ],
+    "faultRejection": [
+      {
+        "runId": "CR010-R2-FOLLOWUP-CERTIFICATE-FAULTS",
+        "line": 1,
+        "rawSHA256": "dd15a1b495f55603f6d4e94be896b030a494c0d6088fec981fe2ceaf8dc06c4b",
+        "settledDigest": "c8fbe9b89676a703eac9d1e18a2ac2de7e2c4cf00676bbebefa935341147d9ed"
+      }
+    ],
+    "stageQualificationOverallStatus": "PENDING_OTHER_FROZEN_CASES"
   }
 }

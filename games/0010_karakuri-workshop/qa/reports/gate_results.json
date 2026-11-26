@@ -1480,5 +1480,177 @@
       "priorLedgerTail": "323e3705f27d40f34cb9efe78ae5802e01ebedbb7a61dd07919aaaf338b60634",
       "purpose": "WIP HOLD preservation only. Fast-forward source and evidence; fresh readback; diagnostic only."
     }
+  },
+  "CR010_R2_FOLLOWUP": {
+    "status": "HOLD",
+    "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+    "priorEvidence": "29e56598226cbc51ff4ffdb9eba0239174f016b8",
+    "phase6": "HOLD_HUMAN_REASSESSMENT",
+    "finalAcceptance": "HOLD",
+    "effectivePathsDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "olderR2Gate": "CR010_R2",
+    "currentEndurance": {
+      "type": "CONTAINED_INTERRUPTION_RECONCILED",
+      "approvalId": "EXEC-GAME-0010-CR010-R2-SEARCH-CONTINUATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "previousDigest": "545af8969fb07f666dca119f662e63c09f75669ba9e2ab403690285110700df8",
+      "runId": "CR010-R2-E8-ENDURANCE-1800",
+      "caseId": "TC-D7-015-C002",
+      "status": "HOLD",
+      "stopCause": "Intentional SIGTERM of verified runner PID 30488 after detecting an oversized dedicated reservation",
+      "elapsedDiagnosticSeconds": 214,
+      "partialObservedWorlds": 132,
+      "partialObservedTicks": 10552,
+      "charged": {
+        "automatedSeconds": 2150,
+        "formalSimulations": 400,
+        "formalTicks": 480000
+      },
+      "dedicatedSeconds": {
+        "totalLimit": 4200,
+        "firstAttemptCharged": 2150,
+        "nextFormalReservationRequired": 2100,
+        "shortfall": 50
+      },
+      "rawSHA256": "fda2c45ae5e8be3bd947463d68f03bc9526162bb145af4ab2bd57db7023f5516",
+      "stderrSHA256": "83d44be3393d357fbd7aa42cff95e541b384526f999225ab53181ffcac19b383",
+      "independentReview": [
+        "/root/e0_review",
+        "/root/e8_coverage"
+      ],
+      "historicalDebitRetained": true,
+      "formalEnduranceResumed": false,
+      "ignoredRuns": [],
+      "outstandingReservations": 0
+    },
+    "currentClassifications": {
+      "VERIFIED_OLD_UNCHANGED_LOCAL": 140,
+      "PASS_CURRENT_DIRECT_PROOF": 331,
+      "CURRENT_ADMISSION_PENDING": 337,
+      "NOT_RUN_HUMAN": 173,
+      "HOLD_INCOMPLETE": 1
+    },
+    "used": {
+      "automatedSeconds": 9151,
+      "formalSimulationsByPool": {
+        "E6": 3588,
+        "E8": 5242,
+        "INTERIM": 206,
+        "POST_HUMAN": 0
+      },
+      "formalTicksByPool": {
+        "E6": 826820,
+        "E8": 1513526,
+        "INTERIM": 66910,
+        "POST_HUMAN": 0
+      },
+      "generatedByStage": {
+        "10": 5977,
+        "01": 979,
+        "02": 951,
+        "03": 707,
+        "04": 775,
+        "05": 8828,
+        "06": 755,
+        "07": 6628,
+        "08": 42727,
+        "09": 38172
+      },
+      "githubSettledRunIds": [
+        "CR008-E7-GITHUB",
+        "CR008-E8-GITHUB"
+      ],
+      "physicsValidationSimulations": 13413,
+      "physicsValidationTicks": 746316,
+      "remediationByRootCause": {
+        "e0-budget-reservation-and-accounting": 6,
+        "e7-audio-availability-render-invalidates-pointer-target": 2,
+        "e7-batch-launch-bypassed-budget-reservation": 1,
+        "e7-navigation-and-background-state-boundary": 2,
+        "e8-audio-comparison-used-other-engine-oracle": 1,
+        "e8-mutation-budget-oracle-compared-error-count": 1,
+        "e8-mutation-readonly-fixture-missing-design-identities": 1,
+        "e8-remediation-stop-reason-propagation": 1,
+        "e8-rule-layer-native-physics-dependency": 1,
+        "cr010-usage-requirement-shape-validation": 1,
+        "cr010-search-eager-generation-unaccounted": 1,
+        "cr010-save-transition-and-generation-guard": 1,
+        "cr010-tutorial-transition-correctness": 1
+      },
+      "remediationTotal": 57,
+      "searchSimulationsByStage": {
+        "10": 4291,
+        "01": 302,
+        "02": 302,
+        "03": 316,
+        "04": 326,
+        "05": 2305,
+        "06": 332,
+        "07": 825,
+        "08": 1196,
+        "09": 1236
+      },
+      "searchTicksByStage": {
+        "10": 2349627,
+        "01": 83296,
+        "02": 69466,
+        "03": 94188,
+        "04": 72085,
+        "05": 806519,
+        "06": 132935,
+        "07": 317080,
+        "08": 263611,
+        "09": 362301
+      },
+      "stageAdjustmentsByStage": {
+        "10": 14,
+        "05": 6,
+        "08": 6
+      },
+      "remediationByStage": {
+        "E5": 1,
+        "E6": 1,
+        "E7": 2
+      },
+      "searchSecondsByStage": {
+        "10": 173,
+        "03": 1,
+        "04": 1,
+        "05": 10,
+        "06": 1,
+        "07": 14,
+        "08": 8,
+        "09": 16
+      }
+    },
+    "settlementTail": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c",
+    "outstandingReservations": 0,
+    "priorGitHubReceiptSHA256": "0d83ed4c36ca19a704d99452c69dc16fec5ba986df7cff3a7d728b3a4121e97c",
+    "archive": {
+      "name": "CR010-R2-followup-QA-recovery.tar.gz",
+      "sha256": "9a8a2bcec19af3bdbd7f1bc5587f131d40bb8c80157d5d62731e34322c4cb413",
+      "members": 127,
+      "predecessor": "CR010-R2-HOLD-recovery.tar.gz"
+    },
+    "remotePreservationReservation": {
+      "runId": "CR010-R2-FOLLOWUP-PRESERVATION",
+      "approvalId": "EXEC-GAME-0010-CR010-R2-SEARCH-CONTINUATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "expectedRemoteHead": "29e56598226cbc51ff4ffdb9eba0239174f016b8",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorLedgerTail": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c",
+      "reservationSeconds": 180,
+      "purpose": "Normal WIP HOLD preservation and fresh byte readback"
+    },
+    "independentReview": [
+      "/root/e0_review",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review",
+      "/root/e8_coverage"
+    ],
+    "olderHumanUxScore": 51,
+    "phase6HumanCasesNotRun": 173
   }
 }

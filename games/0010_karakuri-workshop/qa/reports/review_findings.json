@@ -1411,5 +1411,18 @@
       "impact": "50 seconds short for exact fresh reservation"
     },
     "confirmedStages": "Evidence of every normal board, independent removal contrasts, and approved same-physics methods. ST10 alternate long-run review preserved."
+  },
+  "CR010_R2_FOLLOWUP": {
+    "status": "HOLD",
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "reviewers": [
+      "/root/e0_review",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review",
+      "/root/e8_coverage"
+    ],
+    "scopedOldCasesValidated": 237,
+    "browserPerformanceAndAudioReviewed": true,
+    "dedicatedEnduranceFinding": "OPEN_50_SECOND_SHORTFALL"
   }
 }

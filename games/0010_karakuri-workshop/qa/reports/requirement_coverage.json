@@ -8497,5 +8497,714 @@
     "status": "CURRENT_ADMISSION_OPEN",
     "requirementsReviewedNotAllReadmitted": true,
     "caseAssessment": "qa/reports/automated_test_results.json"
+  },
+  "CR010_R2_FOLLOWUP": {
+    "status": "CURRENT_ADMISSION_OPEN",
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "oldRequirements": 190,
+    "oldCases": 982,
+    "perRequirement": {
+      "NFR-025": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "NFR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 7,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-077": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-018": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-019": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10,
+        "PASS_CURRENT_DIRECT_PROOF": 42,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-003": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "NOT_RUN_HUMAN": 50
+      },
+      "FR-028": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 80
+      },
+      "FR-011": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 18
+      },
+      "NFR-005": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 74
+      },
+      "FR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-001": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-002": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-004": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-007": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-080": {
+        "PASS_CURRENT_DIRECT_PROOF": 15,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 11
+      },
+      "FR-035": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-009": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "HOLD_INCOMPLETE": 1,
+        "NOT_RUN_HUMAN": 6
+      },
+      "FR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-021": {
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "DR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 22,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10
+      },
+      "FR-013": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5
+      },
+      "NFR-006": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "FR-081": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "BR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-025": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-020": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-061": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-083": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-037": {
+        "PASS_CURRENT_DIRECT_PROOF": 12,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 4
+      },
+      "FR-038": {
+        "PASS_CURRENT_DIRECT_PROOF": 7,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-039": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-042": {
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-043": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-036": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "FR-033": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-087": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-040": {
+        "PASS_CURRENT_DIRECT_PROOF": 21,
+        "CURRENT_ADMISSION_PENDING": 14
+      },
+      "FR-079": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-057": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-058": {
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "BR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-055": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "BR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-059": {
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "CURRENT_ADMISSION_PENDING": 10
+      },
+      "FR-060": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-088": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-062": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-045": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-084": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "DR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "QR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "BR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-046": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-050": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-051": {
+        "CURRENT_ADMISSION_PENDING": 33
+      },
+      "FR-052": {
+        "CURRENT_ADMISSION_PENDING": 33
+      },
+      "FR-054": {
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-053": {
+        "CURRENT_ADMISSION_PENDING": 34
+      },
+      "FR-056": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-028": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-001": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "GOV-016": {
+        "CURRENT_ADMISSION_PENDING": 19,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "DR-013": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-041": {
+        "PASS_CURRENT_DIRECT_PROOF": 17
+      },
+      "QR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 11
+      },
+      "QR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "BR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "QR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 7,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "BR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "QR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "CURRENT_ADMISSION_PENDING": 4
+      },
+      "QR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "QR-008": {
+        "CURRENT_ADMISSION_PENDING": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-017": {
+        "CURRENT_ADMISSION_PENDING": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-007": {
+        "CURRENT_ADMISSION_PENDING": 31
+      },
+      "GOV-018": {
+        "CURRENT_ADMISSION_PENDING": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "FR-003": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "DR-008": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-063": {
+        "CURRENT_ADMISSION_PENDING": 8
+      },
+      "DR-009": {
+        "CURRENT_ADMISSION_PENDING": 11
+      },
+      "FR-066": {
+        "CURRENT_ADMISSION_PENDING": 5
+      },
+      "FR-065": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-064": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-070": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-068": {
+        "CURRENT_ADMISSION_PENDING": 28
+      },
+      "NFR-022": {
+        "CURRENT_ADMISSION_PENDING": 21
+      },
+      "DR-011": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "DR-012": {
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "DR-010": {
+        "CURRENT_ADMISSION_PENDING": 10,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-067": {
+        "CURRENT_ADMISSION_PENDING": 24
+      },
+      "FR-086": {
+        "CURRENT_ADMISSION_PENDING": 14,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "QR-012": {
+        "CURRENT_ADMISSION_PENDING": 14,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "NFR-033": {
+        "CURRENT_ADMISSION_PENDING": 11,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-016": {
+        "CURRENT_ADMISSION_PENDING": 21
+      },
+      "NFR-037": {
+        "CURRENT_ADMISSION_PENDING": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-019": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 13
+      },
+      "FR-069": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-021": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-001": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-002": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-015": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-017": {
+        "CURRENT_ADMISSION_PENDING": 4
+      },
+      "FR-026": {
+        "CURRENT_ADMISSION_PENDING": 15
+      },
+      "FR-029": {
+        "CURRENT_ADMISSION_PENDING": 16
+      },
+      "FR-085": {
+        "CURRENT_ADMISSION_PENDING": 16
+      },
+      "FR-031": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-044": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-076": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-007": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 3
+      },
+      "NFR-018": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-014": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-011": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-022": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-016": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-013": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "FR-082": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-013": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 82
+      },
+      "NFR-015": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-020": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-012": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-009": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 6
+      },
+      "FR-071": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-010": {
+        "CURRENT_ADMISSION_PENDING": 5,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-072": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-018": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-078": {
+        "CURRENT_ADMISSION_PENDING": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-073": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-075": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-019": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-074": {
+        "CURRENT_ADMISSION_PENDING": 11,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-011": {
+        "CURRENT_ADMISSION_PENDING": 17,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "NFR-036": {
+        "CURRENT_ADMISSION_PENDING": 14,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-035": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "NFR-017": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-014": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "FR-047": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-048": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-049": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-016": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-008": {
+        "NOT_RUN_HUMAN": 13,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "BR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-026": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-015": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-031": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "GOV-003": {
+        "CURRENT_ADMISSION_PENDING": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-004": {
+        "CURRENT_ADMISSION_PENDING": 5
+      },
+      "GOV-006": {
+        "CURRENT_ADMISSION_PENDING": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "GOV-019": {
+        "CURRENT_ADMISSION_PENDING": 32
+      },
+      "GOV-013": {
+        "PASS_CURRENT_DIRECT_PROOF": 16,
+        "CURRENT_ADMISSION_PENDING": 14
+      },
+      "GOV-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-014": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "BR-010": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "NFR-029": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-001": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-002": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "GOV-005": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-008": {
+        "CURRENT_ADMISSION_PENDING": 6,
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "GOV-009": {
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "GOV-010": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "GOV-011": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 8
+      },
+      "GOV-012": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "GOV-014": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-017": {
+        "CURRENT_ADMISSION_PENDING": 4
+      },
+      "QR-015": {
+        "NOT_RUN_HUMAN": 84
+      },
+      "QR-016": {
+        "NOT_RUN_HUMAN": 3
+      }
+    }
   }
 }

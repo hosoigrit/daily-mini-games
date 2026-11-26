@@ -1237,5 +1237,85 @@
       "log": "CR010-R2-E8-EXISTING-BROWSER.out"
     },
     "browserRecordedPass": true
+  },
+  "CR010_R2_FOLLOWUP": {
+    "event": "Additional rules, placement and governance regression",
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "additionalNodeCases": 268,
+    "nativeSuites": {
+      "NATIVE-RULES": {
+        "summary": {
+          "kind": "SUITE_OBSERVATION",
+          "mode": "rules",
+          "suiteResult": "PASS",
+          "childExit": 0,
+          "cases": {
+            "pass": 101,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "quotaDenied": false,
+          "meteredWorlds": 1,
+          "nativeStepsConservativelyChargedAsGameTicks": 0
+        },
+        "proof": {
+          "runId": "CR010-R2-FOLLOWUP-NATIVE-RULES",
+          "line": 725,
+          "rawSHA256": "fad2c1098e8eb9b51336529e89c7617e71b2d27042a5a97abbec78311f776e51",
+          "settledDigest": "6e72eae89033977f10d5f81a9ccc81f567605886747593a574955a53a26667d1"
+        }
+      },
+      "NATIVE-EARLIER": {
+        "summary": {
+          "kind": "SUITE_OBSERVATION",
+          "mode": "earlier",
+          "suiteResult": "PASS",
+          "childExit": 0,
+          "cases": {
+            "pass": 116,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "quotaDenied": false,
+          "meteredWorlds": 44,
+          "nativeStepsConservativelyChargedAsGameTicks": 3875
+        },
+        "proof": {
+          "runId": "CR010-R2-FOLLOWUP-NATIVE-EARLIER",
+          "line": 732,
+          "rawSHA256": "2cbbb6cc0b8fbd6c456f75683130de006b10592de97f02bae190c0fbc38e4157",
+          "settledDigest": "2ca94a19809cda7d2d9aff433dd915f346569eaa8fe27eef3ff8deac1ec00a1e"
+        }
+      },
+      "NATIVE-GUARD": {
+        "summary": {
+          "kind": "SUITE_OBSERVATION",
+          "mode": "guard",
+          "suiteResult": "PASS",
+          "childExit": 0,
+          "cases": {
+            "pass": 51,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "quotaDenied": false,
+          "meteredWorlds": 0,
+          "nativeStepsConservativelyChargedAsGameTicks": 0
+        },
+        "proof": {
+          "runId": "CR010-R2-FOLLOWUP-NATIVE-GUARD",
+          "line": 319,
+          "rawSHA256": "bd5911abd85fb433edddcec5da2220e10836a1d317d6d711e1d5b579db048aac",
+          "settledDigest": "14d7ec7cc59096932e592c91059d9fc580c98dc5192a15667e8c5df556a1884c"
+        }
+      }
+    },
+    "earlierGamesSeparatePriorR2": 2019
   }
 }

@@ -310,5 +310,11 @@
     "historicRootCauseRetention": {
       "e0-budget-reservation-and-accounting": 6
     }
+  },
+  "CR010_R2_FOLLOWUP": {
+    "continuedPriorBudget": 57,
+    "newProductFixes": 0,
+    "firstStartupRejectedRetained": true,
+    "newVerificationCalibration": "CDP nominal RTT 47ms; frozen observed 45–55ms acceptance remained exact."
   }
 }
