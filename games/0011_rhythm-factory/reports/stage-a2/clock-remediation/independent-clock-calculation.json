@@ -1,0 +1,648 @@
+{
+  "reviewer": "/root/ag10",
+  "reviewedSourceSha": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "method": "(Decimal(contextTime)-Decimal(anchorContextTime))*1000 - (Decimal(performanceTime)-Decimal(anchorPerformanceTime)); absolute value compared to inclusive 20 ms. Native raw timestamps, no values from the product difference implementation.",
+  "nativeHarness": {
+    "freshBrowsers": 9,
+    "caseExecutions": 45,
+    "evidence": "independent-raw-clock-observations.json",
+    "case04": [
+      {
+        "browser": "chromium",
+        "trial": 1,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 303.5,
+            "signedDifferenceMs": "0.79933333296083000"
+          },
+          {
+            "observationAtMs": 403.70000000018626,
+            "signedDifferenceMs": "0.84666666610789000"
+          },
+          {
+            "observationAtMs": 503.80000000074506,
+            "signedDifferenceMs": "0.45299999981377000"
+          },
+          {
+            "observationAtMs": 603.9000000003725,
+            "signedDifferenceMs": "0.84633333333335000"
+          },
+          {
+            "observationAtMs": 704.1000000005588,
+            "signedDifferenceMs": "0.82466666648045000"
+          },
+          {
+            "observationAtMs": 804.3000000007451,
+            "signedDifferenceMs": "0.82799999962745000"
+          },
+          {
+            "observationAtMs": 904.4000000003725,
+            "signedDifferenceMs": "0.83933333277445000"
+          },
+          {
+            "observationAtMs": 1004.7000000001863,
+            "signedDifferenceMs": "0.84466666685295000"
+          },
+          {
+            "observationAtMs": 1104.7000000001863,
+            "signedDifferenceMs": "0.86100000000005000"
+          },
+          {
+            "observationAtMs": 1204.9000000003725,
+            "signedDifferenceMs": "0.86733333314715000"
+          },
+          {
+            "observationAtMs": 1305,
+            "signedDifferenceMs": "0.77766666666665000"
+          },
+          {
+            "observationAtMs": 1405.1000000005588,
+            "signedDifferenceMs": "0.88299999944135000"
+          },
+          {
+            "observationAtMs": 1505.2000000001863,
+            "signedDifferenceMs": "0.88633333351955000"
+          },
+          {
+            "observationAtMs": 1605.4000000003725,
+            "signedDifferenceMs": "0.90166666666685000"
+          },
+          {
+            "observationAtMs": 1705.5,
+            "signedDifferenceMs": "0.81100000018625000"
+          }
+        ],
+        "maximumMs": "0.90166666666685000"
+      },
+      {
+        "browser": "chromium",
+        "trial": 2,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 260.1000000005588,
+            "signedDifferenceMs": "0.10133333370586000"
+          },
+          {
+            "observationAtMs": 360.20000000018626,
+            "signedDifferenceMs": "0.02866666722541000"
+          },
+          {
+            "observationAtMs": 460.30000000074506,
+            "signedDifferenceMs": "0.06900000037250000"
+          },
+          {
+            "observationAtMs": 560.5,
+            "signedDifferenceMs": "-0.04766666610787000"
+          },
+          {
+            "observationAtMs": 660.7000000001863,
+            "signedDifferenceMs": "0.03666666666653000"
+          },
+          {
+            "observationAtMs": 760.8000000007451,
+            "signedDifferenceMs": "0.06200000074503000"
+          },
+          {
+            "observationAtMs": 861,
+            "signedDifferenceMs": "-0.04866666666677000"
+          },
+          {
+            "observationAtMs": 961.2000000001863,
+            "signedDifferenceMs": "0.06266666703913000"
+          },
+          {
+            "observationAtMs": 1061.300000000745,
+            "signedDifferenceMs": "-0.00799999944117000"
+          },
+          {
+            "observationAtMs": 1161.4000000003725,
+            "signedDifferenceMs": "-0.11166666592147000"
+          },
+          {
+            "observationAtMs": 1261.7000000001863,
+            "signedDifferenceMs": "-0.00133333314697000"
+          },
+          {
+            "observationAtMs": 1361.800000000745,
+            "signedDifferenceMs": "0.00500000000023000"
+          },
+          {
+            "observationAtMs": 1462,
+            "signedDifferenceMs": "0.00333333407843000"
+          },
+          {
+            "observationAtMs": 1562,
+            "signedDifferenceMs": "0.01866666722563000"
+          },
+          {
+            "observationAtMs": 1662.2000000001863,
+            "signedDifferenceMs": "0.03000000037263000"
+          }
+        ],
+        "maximumMs": "0.11166666592147000"
+      },
+      {
+        "browser": "chromium",
+        "trial": 3,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 272.3999999994412,
+            "signedDifferenceMs": "-0.01466666685291000"
+          },
+          {
+            "observationAtMs": 372.59999999962747,
+            "signedDifferenceMs": "0.01166666629414000"
+          },
+          {
+            "observationAtMs": 472.70000000018626,
+            "signedDifferenceMs": "-0.07600000018627000"
+          },
+          {
+            "observationAtMs": 572.8999999994412,
+            "signedDifferenceMs": "-0.05266666703917000"
+          },
+          {
+            "observationAtMs": 673,
+            "signedDifferenceMs": "0.05066666666673000"
+          },
+          {
+            "observationAtMs": 773.0999999996275,
+            "signedDifferenceMs": "-0.17100000037257000"
+          },
+          {
+            "observationAtMs": 873.2999999998137,
+            "signedDifferenceMs": "-0.05166666666677000"
+          },
+          {
+            "observationAtMs": 973.5999999996275,
+            "signedDifferenceMs": "0.04866666703913000"
+          },
+          {
+            "observationAtMs": 1073.7000000001863,
+            "signedDifferenceMs": "0.05700000018633000"
+          },
+          {
+            "observationAtMs": 1173.7999999998137,
+            "signedDifferenceMs": "0.00833333370593000"
+          },
+          {
+            "observationAtMs": 1274,
+            "signedDifferenceMs": "-0.01733333314707000"
+          },
+          {
+            "observationAtMs": 1374.2000000001863,
+            "signedDifferenceMs": "-0.01499999999997000"
+          },
+          {
+            "observationAtMs": 1475.5999999996275,
+            "signedDifferenceMs": "-3.32366666685297000"
+          },
+          {
+            "observationAtMs": 1576.2000000001863,
+            "signedDifferenceMs": "0.00066666629413000"
+          },
+          {
+            "observationAtMs": 1676.2999999998137,
+            "signedDifferenceMs": "0.11400000000013000"
+          }
+        ],
+        "maximumMs": "3.32366666685297000"
+      },
+      {
+        "browser": "firefox",
+        "trial": 1,
+        "validAnchor": false,
+        "casesSuspended": 5
+      },
+      {
+        "browser": "firefox",
+        "trial": 2,
+        "validAnchor": false,
+        "casesSuspended": 5
+      },
+      {
+        "browser": "firefox",
+        "trial": 3,
+        "validAnchor": false,
+        "casesSuspended": 5
+      },
+      {
+        "browser": "webkit",
+        "trial": 1,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 389,
+            "signedDifferenceMs": "-101.66666699999998000"
+          }
+        ],
+        "maximumMs": "101.66666699999998000"
+      },
+      {
+        "browser": "webkit",
+        "trial": 2,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 303,
+            "signedDifferenceMs": "-100.66666699999999000"
+          }
+        ],
+        "maximumMs": "100.66666699999999000"
+      },
+      {
+        "browser": "webkit",
+        "trial": 3,
+        "validAnchor": true,
+        "observationsUntilSafetyStopOrCompletion": [
+          {
+            "observationAtMs": 297,
+            "signedDifferenceMs": "-98.33333299999997000"
+          }
+        ],
+        "maximumMs": "98.33333299999997000"
+      }
+    ]
+  },
+  "finalCase05Recalculation": [
+    {
+      "engine": "chromium",
+      "kind": "natural",
+      "run": 1,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 43,
+      "worst": {
+        "sample": 43,
+        "generation": 1,
+        "signedDifferenceMs": "-30.94633333370563000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "natural",
+      "run": 1,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "natural",
+      "run": 1,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-100.66666700000001000"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "natural",
+      "run": 2,
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "outgoing": [],
+      "observations": 241,
+      "worst": {
+        "sample": 56,
+        "generation": 1,
+        "signedDifferenceMs": "-1.25433333389182000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "natural",
+      "run": 2,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "natural",
+      "run": 2,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-99.333333000"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "natural",
+      "run": 3,
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "outgoing": [],
+      "observations": 240,
+      "worst": {
+        "sample": 13,
+        "generation": 1,
+        "signedDifferenceMs": "-1.39566666629412000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "natural",
+      "run": 3,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "natural",
+      "run": 3,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-100.66666700000001000"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "stop-restart",
+      "run": 1,
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "outgoing": [],
+      "observations": 20,
+      "worst": {
+        "sample": 6,
+        "generation": 1,
+        "signedDifferenceMs": "-1.48199999944103000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "stop-restart",
+      "run": 1,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "stop-restart",
+      "run": 1,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-98.333333000"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "stop-restart",
+      "run": 2,
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "outgoing": [],
+      "observations": 20,
+      "worst": {
+        "sample": 4,
+        "generation": 1,
+        "signedDifferenceMs": "-0.65566666666657000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "stop-restart",
+      "run": 2,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "stop-restart",
+      "run": 2,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-100.666666000"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "stop-restart",
+      "run": 3,
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "outgoing": [],
+      "observations": 20,
+      "worst": {
+        "sample": 7,
+        "generation": 1,
+        "signedDifferenceMs": "-2.00966666666672000"
+      }
+    },
+    {
+      "engine": "firefox",
+      "kind": "stop-restart",
+      "run": 3,
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "outgoing": [],
+      "observations": 0,
+      "worst": null
+    },
+    {
+      "engine": "webkit",
+      "kind": "stop-restart",
+      "run": 3,
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "outgoing": [],
+      "observations": 1,
+      "worst": {
+        "sample": 1,
+        "generation": 1,
+        "signedDifferenceMs": "-100.66666700000001000"
+      }
+    }
+  ],
+  "independentOfflineRender": {
+    "command": "npm exec playwright -- test tests/browser/stage-a2a-audio.spec.ts --grep 'renders the original QA track' --reporter=list,json",
+    "exitCode": 0,
+    "originalPlaywrightReportSha256": "083bd59c200c3d39a8430309d7b3af6d58fdf5cc70257b096d9b9b51cb762c54",
+    "cases": {
+      "chromium": {
+        "status": "passed",
+        "length": 1152000,
+        "rate": 48000,
+        "channels": 2,
+        "float32": true,
+        "durationUs": 24000000,
+        "bytes": 9216000,
+        "music": {
+          "peak": 0.29440736770629883,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 1141246,
+          "audibleHalfSecondBlocks": 48
+        },
+        "singleSfx": {
+          "peak": 0.06237667053937912,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3592,
+          "audibleHalfSecondBlocks": 1
+        },
+        "fourSfx": {
+          "peak": 0.24950668215751648,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3596,
+          "audibleHalfSecondBlocks": 1
+        },
+        "mix": {
+          "peak": 0.44548094272613525,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 4799,
+          "audibleHalfSecondBlocks": 1
+        },
+        "renderMs": [
+          3270.9000000003725,
+          3246.7999999998137,
+          3266.5
+        ],
+        "invalid": [
+          true,
+          true
+        ],
+        "version": "159.0.8154.6",
+        "outgoing": []
+      },
+      "firefox": {
+        "status": "passed",
+        "length": 1152000,
+        "rate": 48000,
+        "channels": 2,
+        "float32": true,
+        "durationUs": 24000000,
+        "bytes": 9216000,
+        "music": {
+          "peak": 0.2945835292339325,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 1141246,
+          "audibleHalfSecondBlocks": 48
+        },
+        "singleSfx": {
+          "peak": 0.0623767115175724,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3592,
+          "audibleHalfSecondBlocks": 1
+        },
+        "fourSfx": {
+          "peak": 0.2495068460702896,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3596,
+          "audibleHalfSecondBlocks": 1
+        },
+        "mix": {
+          "peak": 0.4455273151397705,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 4799,
+          "audibleHalfSecondBlocks": 1
+        },
+        "renderMs": [
+          379,
+          376,
+          374
+        ],
+        "invalid": [
+          true,
+          true
+        ],
+        "version": "159.0",
+        "outgoing": []
+      },
+      "webkit": {
+        "status": "passed",
+        "length": 1152000,
+        "rate": 48000,
+        "channels": 2,
+        "float32": true,
+        "durationUs": 24000000,
+        "bytes": 9216000,
+        "music": {
+          "peak": 0.29440730810165405,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 1141246,
+          "audibleHalfSecondBlocks": 48
+        },
+        "singleSfx": {
+          "peak": 0.06237666681408882,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3592,
+          "audibleHalfSecondBlocks": 1
+        },
+        "fourSfx": {
+          "peak": 0.24950666725635529,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 3596,
+          "audibleHalfSecondBlocks": 1
+        },
+        "mix": {
+          "peak": 0.44548091292381287,
+          "nonfinite": 0,
+          "lastFrameOverNoiseFloor": 4799,
+          "audibleHalfSecondBlocks": 1
+        },
+        "renderMs": [
+          2965,
+          2901,
+          2925
+        ],
+        "invalid": [
+          true,
+          true
+        ],
+        "version": "27.2",
+        "outgoing": []
+      }
+    }
+  },
+  "sourceReview": {
+    "initialFocusedTests": 9,
+    "finalFocusedTests": 10,
+    "finalFocusedPassed": 10,
+    "findingsClosed": [
+      "RV-A2AR-01"
+    ],
+    "unresolvedSourceFindings": []
+  }
+}

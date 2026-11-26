@@ -1,0 +1,149 @@
+{
+  "executionSha": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "measurements": {
+    "chromium": {
+      "status": "passed",
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.29440733790397644,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.06237667053937912,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.24950668215751648,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.44548094272613525,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        3133.4000000003725,
+        3180.4000000003725,
+        3198.7999999998137
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "159.0.8154.6",
+      "outgoing": []
+    },
+    "firefox": {
+      "status": "passed",
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.2945835292339325,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.0623767115175724,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.2495068460702896,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.4455273151397705,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        351,
+        361,
+        362
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "159.0",
+      "outgoing": []
+    },
+    "webkit": {
+      "status": "passed",
+      "length": 1152000,
+      "rate": 48000,
+      "channels": 2,
+      "float32": true,
+      "durationUs": 24000000,
+      "bytes": 9216000,
+      "music": {
+        "peak": 0.29440733790397644,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 1141246,
+        "audibleHalfSecondBlocks": 48
+      },
+      "singleSfx": {
+        "peak": 0.06237666681408882,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3592,
+        "audibleHalfSecondBlocks": 1
+      },
+      "fourSfx": {
+        "peak": 0.24950666725635529,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 3596,
+        "audibleHalfSecondBlocks": 1
+      },
+      "mix": {
+        "peak": 0.44548091292381287,
+        "nonfinite": 0,
+        "lastFrameOverNoiseFloor": 4799,
+        "audibleHalfSecondBlocks": 1
+      },
+      "renderMs": [
+        2479,
+        2466,
+        2490
+      ],
+      "invalid": [
+        true,
+        true
+      ],
+      "version": "27.2",
+      "outgoing": []
+    }
+  },
+  "budget": {
+    "bgmPeak": 0.7079457843841379,
+    "sfxOnePeak": 0.0625,
+    "sfxVoices": 4,
+    "sfxPeak": 0.25,
+    "theoreticalMixPeak": 0.9579457843841379
+  },
+  "mixMeasuredScope": "100 ms at the trial opening, volumes 100%. BGM finite/peak scan covers the whole 24 s.",
+  "subjectiveListening": "NOT RUN",
+  "newMusicServices": 0,
+  "trackSourceSha256": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+  "cacheRegression": "Existing two audio-preparation tests use controllable render completions. Final browser observations record cache, render and source counts."
+}

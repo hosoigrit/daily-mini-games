@@ -1,0 +1,55 @@
+2026-11-26T00:04:55.712Z pw:browser [pid=15273][err] 2026-11-26 00:04:55.711974 UTC - [Child 15354: Main Thread]: W/cubeb could not set real-time limit in CubebUtils::InitLibrary
+2026-11-26T00:04:55.721Z pw:browser [pid=15273][err] 2026-11-26 00:04:55.721411 UTC - [Parent 15273: Main Thread]: D/cubeb Starting cubeb server...
+2026-11-26T00:04:55.722Z pw:browser [pid=15273][err] 2026-11-26 00:04:55.721965 UTC - [Parent 15273: Main Thread]: D/cubeb media.audioipc.shm_area_size: 0
+2026-11-26T00:04:56.138Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.138262 UTC - [Child 15413: Main Thread]: W/cubeb could not set real-time limit in CubebUtils::InitLibrary
+2026-11-26T00:04:56.194Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.193891 UTC - [Parent 15273: Main Thread]: D/cubeb media.audioipc.shm_area_size: 0
+2026-11-26T00:04:56.959Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.959352 UTC - [Child 15413: Main Thread]: I/cubeb media.cubeb.sandbox: true
+2026-11-26T00:04:56.959Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.959368 UTC - [Child 15413: Main Thread]: D/cubeb media.audioipc.stack_size: 262144
+2026-11-26T00:04:56.960Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.960078 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.962Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.961280 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.962Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.961564 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.962Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.961834 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.963Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.963074 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.963Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.963394 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.967Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.967584 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.968Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.967966 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.968Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.968069 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.968Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.968394 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.971Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.968819 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.971Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.968907 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.971Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.969063 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.971Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.969309 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.971Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.969379 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.972Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.971978 UTC - [Child 15413: Main Thread]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 ctor - input: device 0x0, channel 0, output: device 0x0, channel 0
+2026-11-26T00:04:56.975Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.972140 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T00:04:56.975Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.972405 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T00:04:56.975Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.972476 UTC - [Parent 15273: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T00:04:56.978Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.977541 UTC - [Child 15413: Main Thread]: D/MediaTrackGraph 0x7f06c8a4e700: Starting a graph with a AudioCallbackDriver
+2026-11-26T00:04:56.978Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.977544 UTC - [Child 15413: Main Thread]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Falling back to SystemClockDriver.
+2026-11-26T00:04:56.978Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.977926 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:56.978Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.977953 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:56.988Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.988712 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:56.988Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.988764 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:56.988Z pw:browser [pid=15273][err] 2026-11-26 00:04:56.988776 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:57.010Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.010041 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:57.010Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.010083 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:57.010Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.010093 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:57.052Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.052707 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:57.052Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.052773 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:57.052Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.052784 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:57.138Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.138116 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:57.138Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.138209 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:57.138Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.138221 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:57.308Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.308719 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:57.308Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.308772 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:57.308Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.308785 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:57.639Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.639372 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:57.639Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.639421 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:57.639Z pw:browser [pid=15273][err] 2026-11-26 00:04:57.639435 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+2026-11-26T00:04:58.279Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.279381 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Attempting to re-init audio stream from fallback driver.
+2026-11-26T00:04:58.279Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.279486 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Init driver=0x7f06c97adad0
+2026-11-26T00:04:58.279Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.279504 UTC - [Child 15413: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+AG10 159.0 {"trusted":true,"active":true,"state":"suspended","currentTime":0,"timestamp":{"contextTime":0,"performanceTime":2243},"resumed":false,"error":null}
+2026-11-26T00:04:58.824Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.823692 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Fallback driver has stopped.
+2026-11-26T00:04:58.824Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.823709 UTC - [Child 15413: MediaTrackGrph]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver 0x7f06c97adad0 Fallback driver stopped. Draining.
+2026-11-26T00:04:58.824Z pw:browser [pid=15273][err] 2026-11-26 00:04:58.823895 UTC - [Child 15413: CubebOperation #1]: D/MediaTrackGraph 0x7f06c8a4e720: AudioCallbackDriver::Stop driver=0x7f06c97adad0

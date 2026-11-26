@@ -1,0 +1,50 @@
+{
+  "baseline": "751a1d8cbc40d3f58b2871b9993056be16d36fc8",
+  "implementation": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "platform": "Debian GNU/Linux 13 (trixie)",
+  "arch": "x86_64",
+  "node": "26.13.1",
+  "npm": "11.20.0",
+  "playwright": "1.65.1",
+  "browserProjects": {
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0",
+    "webkit": "27.2"
+  },
+  "launchMode": "headless; same managed browsers, Firefox scoped A-1 settings, WebKit A-1 WPE wrapper",
+  "headedComparison": "UNAVAILABLE: DISPLAY, /tmp/.X11-unix and Xvfb unavailable. No new dependencies authorized.",
+  "hostProbes": {
+    "/dev/snd": false,
+    "/run/user/1000/pulse/native": false,
+    "/tmp/.X11-unix": false
+  },
+  "hostCommands": {
+    "pulseaudio": false,
+    "pipewire": false,
+    "pactl": false,
+    "Xvfb": false
+  },
+  "firefoxNativeDiagnostic": {
+    "executor": "AG-10 /root/ag10",
+    "loggingOnly": [
+      "DEBUG=pw:browser",
+      "MOZ_LOG=timestamp,sync,cubeb:4,MediaTrackGraph:4"
+    ],
+    "selectedLibrary": "/lib/x86_64-linux-gnu/libpulse.so.0",
+    "observedMessages": [
+      "error while waiting for pulse's context to be ready",
+      "couldn't init pulse's context",
+      "Output number of channels is 0."
+    ],
+    "observedAfterMs": 1800,
+    "resume": "pending",
+    "state": "suspended",
+    "currentTime": 0,
+    "backendCause": "Pulse context initialization failure. No determination of the daemon/socket or policy source beyond host probes.",
+    "evidence": "firefox-native.txt"
+  },
+  "webkitNativeDiagnostic": "Approved A-1 launcher selects WPE MiniBrowser. Selected endpoint unavailable through standard Web Audio API.",
+  "environmentChangeCount": 0,
+  "notes": "Local loopback test content and diagnostics only. Read-only host probes.",
+  "nativeSourceRevision": "c3d6a0bd84d4066617bf337872f4fbc0066a2189"
+}

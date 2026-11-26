@@ -1,0 +1,274 @@
+{
+  "executionSha": "751a1d8cbc40d3f58b2871b9993056be16d36fc8",
+  "referencePriorReport": {
+    "chromiumMaximumMs": 0.08233333333339488,
+    "firefox": "suspended and currentTime=0",
+    "webkitFirstMaximumMs": 106.33333300000001
+  },
+  "stats": {
+    "startTime": "2026-11-25T23:59:33.491Z",
+    "duration": 50542.598,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "clockMeasurements": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "result": {
+        "status": "running",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.162,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.07019733333333332,
+          "anchorPerformanceMs": 3924.5
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.17038566666666663,
+              "performanceTime": 4024.699999999255
+            },
+            "now": 4032.899999999441,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 12
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.2706509999999999,
+              "performanceTime": 4124.899999999441
+            },
+            "now": 4133.0999999996275,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 54
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.37081333333333333,
+              "performanceTime": 4225
+            },
+            "now": 4233.5,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 116
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.4710216666666667,
+              "performanceTime": 4325.299999999814
+            },
+            "now": 4333.5999999996275,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 24
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.57124,
+              "performanceTime": 4425.5
+            },
+            "now": 4433.799999999814,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 43
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.6714263333333333,
+              "performanceTime": 4525.699999999255
+            },
+            "now": 4534,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 29
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.7716756666666665,
+              "performanceTime": 4626.0999999996275
+            },
+            "now": 4634.299999999814,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 122
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.87186,
+              "performanceTime": 4726.0999999996275
+            },
+            "now": 4734.399999999441,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 63
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.9720713333333334,
+              "performanceTime": 4826.299999999814
+            },
+            "now": 4834.5,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 74
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.0722886666666667,
+              "performanceTime": 4926.5
+            },
+            "now": 4934.5999999996275,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 91
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.172456,
+              "performanceTime": 5026.699999999255
+            },
+            "now": 5034.799999999814,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 59
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.2726673333333336,
+              "performanceTime": 5126.899999999441
+            },
+            "now": 5134.899999999441,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 70
+              }
+            }
+          }
+        ],
+        "lifecycle": [],
+        "staleStopIgnored": true,
+        "replay": {
+          "ok": true,
+          "value": {
+            "playbackId": "audio-2",
+            "sessionId": "a2a-live-proof",
+            "generation": 2,
+            "startAudioSec": 1.3646666666666667,
+            "startSongUs": 0,
+            "anchorAudioSec": 1.2726673333333336,
+            "anchorPerformanceMs": 5126.899999999441
+          }
+        },
+        "disposed": {
+          "rendering": 0,
+          "cached": 0,
+          "sources": 0,
+          "voices": 0
+        }
+      },
+      "suiteStatus": "passed",
+      "maximumMs": 0.12166666629432
+    },
+    "firefox": {
+      "version": "159.0",
+      "result": {
+        "status": "activation-unavailable",
+        "contextState": "suspended",
+        "currentTime": 0,
+        "timestamp": {
+          "contextTime": 0,
+          "performanceTime": 2533
+        }
+      },
+      "suiteStatus": "failed",
+      "maximumMs": null
+    },
+    "webkit": {
+      "version": "27.2",
+      "result": {
+        "status": "safety-stop",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.06866666666666667,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.016,
+          "anchorPerformanceMs": 4353
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.12,
+              "performanceTime": 4560
+            },
+            "now": 4443,
+            "observation": {
+              "ok": false,
+              "error": {
+                "code": "ERR-006",
+                "severity": "ERROR",
+                "messageKey": "clock.outOfSync",
+                "recoverable": false,
+                "sessionId": "a2a-live-proof"
+              }
+            }
+          }
+        ],
+        "stopped": true
+      },
+      "suiteStatus": "failed",
+      "maximumMs": 103.0
+    }
+  },
+  "command": "npm run test:e2e -- stage-a2a-audio.spec.ts subpath.spec.ts",
+  "unitReproduction": {
+    "testFiles": 2,
+    "targetedCases": 9,
+    "pass": 6,
+    "fail": 3,
+    "usesNewFixturesAgainstHoldCode": true
+  }
+}

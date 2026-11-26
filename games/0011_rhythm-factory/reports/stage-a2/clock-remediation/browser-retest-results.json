@@ -1,0 +1,1149 @@
+{
+  "implementationSha": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "previousImplementationSha": "c3d6a0bd84d4066617bf337872f4fbc0066a2189",
+  "finalStats": {
+    "startTime": "2026-11-26T00:04:13.710Z",
+    "duration": 179545.682,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 15,
+    "flaky": 0
+  },
+  "original12Status": {
+    "passed": 10,
+    "failed": 2
+  },
+  "intermediateStats": {
+    "startTime": "2026-11-26T00:00:52.406Z",
+    "duration": 155352.41999999998,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 13,
+    "flaky": 0
+  },
+  "intermediateCase05": [
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "observations": 240,
+      "maximumMs": 3.71233333314732,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 27745,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4867,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 101.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3352,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "observations": 241,
+      "maximumMs": 1.59033333388836,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 27957,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4380,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3552,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "observations": 241,
+      "maximumMs": 1.39200000000032,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 28487,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4449,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 101.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3462,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 6,
+      "maximumMs": 20.12466666648063,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 4494,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4468,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3280,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "observations": 20,
+      "maximumMs": 0.4486666670389,
+      "trusted": true,
+      "anchors": 2,
+      "durationMs": 6023,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4339,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 101.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3326,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "observations": 20,
+      "maximumMs": 0.2136666674116,
+      "trusted": true,
+      "anchors": 2,
+      "durationMs": 6079,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4458,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3447,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    }
+  ],
+  "finalCase05": [
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 43,
+      "maximumMs": 30.94633333370563,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 8274,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4714,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3172,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "observations": 241,
+      "maximumMs": 1.25433333389182,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 27976,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4391,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 99.333333,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3289,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "natural-completed",
+      "observations": 240,
+      "maximumMs": 1.39566666629412,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 28249,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4361,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "natural",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3261,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "observations": 20,
+      "maximumMs": 1.48199999944103,
+      "trusted": true,
+      "anchors": 2,
+      "durationMs": 5740,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4393,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 1,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 98.333333,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3232,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "observations": 20,
+      "maximumMs": 0.65566666666657,
+      "trusted": true,
+      "anchors": 2,
+      "durationMs": 5788,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4360,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 2,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666666,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3264,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "passed",
+      "measuredStatus": "restart-completed",
+      "observations": 20,
+      "maximumMs": 2.00966666666672,
+      "trusted": true,
+      "anchors": 2,
+      "durationMs": 6174,
+      "activated": true,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "firefox",
+      "version": "159.0",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "activation-unavailable",
+      "observations": 0,
+      "maximumMs": null,
+      "trusted": true,
+      "anchors": 0,
+      "durationMs": 4316,
+      "activated": false,
+      "safeStop": false,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "kind": "stop-restart",
+      "run": 3,
+      "outgoing": [],
+      "status": "failed",
+      "measuredStatus": "safety-stop",
+      "observations": 1,
+      "maximumMs": 100.666667,
+      "trusted": true,
+      "anchors": 1,
+      "durationMs": 3399,
+      "activated": true,
+      "safeStop": true,
+      "stateAfterDispose": {
+        "action": "after-dispose",
+        "rendering": 0,
+        "cached": 0,
+        "sources": 0,
+        "voices": 0,
+        "activeNative": 0
+      }
+    }
+  ],
+  "shortClockBefore": {
+    "chromium": 0.12166666629432,
+    "firefox": null,
+    "webkit": 103.0
+  },
+  "shortClockAfter": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "result": {
+        "status": "running",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.162,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.07019333333333333,
+          "anchorPerformanceMs": 4419.4000000003725
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.17036566666666667,
+              "performanceTime": 4519.5
+            },
+            "now": 4529.300000000745,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 72
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.270607,
+              "performanceTime": 4619.800000000745
+            },
+            "now": 4629.5,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 14
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.37078733333333325,
+              "performanceTime": 4719.9000000003725
+            },
+            "now": 4729.700000000186,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 94
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.4710256666666667,
+              "performanceTime": 4820.300000000745
+            },
+            "now": 4829.800000000745,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 68
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.57121,
+              "performanceTime": 4920.4000000003725
+            },
+            "now": 4930,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 17
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.6714253333333333,
+              "performanceTime": 5020.600000000559
+            },
+            "now": 5030.200000000186,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 32
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.7716256666666667,
+              "performanceTime": 5120.800000000745
+            },
+            "now": 5130.300000000745,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 32
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.8718239999999999,
+              "performanceTime": 5221
+            },
+            "now": 5230.4000000003725,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 31
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 0.9720393333333334,
+              "performanceTime": 5321.200000000186
+            },
+            "now": 5330.700000000186,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 46
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.0722496666666668,
+              "performanceTime": 5421.5
+            },
+            "now": 5430.800000000745,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 44
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.172455,
+              "performanceTime": 5521.600000000559
+            },
+            "now": 5530.9000000003725,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 62
+              }
+            }
+          },
+          {
+            "timestamp": {
+              "contextTime": 1.2726653333333333,
+              "performanceTime": 5621.800000000745
+            },
+            "now": 5631,
+            "observation": {
+              "ok": true,
+              "value": {
+                "differenceUs": 72
+              }
+            }
+          }
+        ],
+        "lifecycle": [],
+        "staleStopIgnored": true,
+        "replay": {
+          "ok": true,
+          "value": {
+            "playbackId": "audio-2",
+            "sessionId": "a2a-live-proof",
+            "generation": 2,
+            "startAudioSec": 1.3646666666666667,
+            "startSongUs": 0,
+            "anchorAudioSec": 1.2726653333333333,
+            "anchorPerformanceMs": 5621.800000000745
+          }
+        },
+        "disposed": {
+          "rendering": 0,
+          "cached": 0,
+          "sources": 0,
+          "voices": 0
+        }
+      },
+      "suiteStatus": "passed",
+      "maximumMs": 0.09399999999992
+    },
+    "firefox": {
+      "version": "159.0",
+      "result": {
+        "status": "activation-unavailable",
+        "contextState": "suspended",
+        "currentTime": 0,
+        "timestamp": {
+          "contextTime": 0,
+          "performanceTime": 2556
+        }
+      },
+      "suiteStatus": "failed",
+      "maximumMs": null
+    },
+    "webkit": {
+      "version": "27.2",
+      "result": {
+        "status": "safety-stop",
+        "anchor": {
+          "playbackId": "audio-1",
+          "sessionId": "a2a-live-proof",
+          "generation": 1,
+          "startAudioSec": 0.066,
+          "startSongUs": 0,
+          "anchorAudioSec": 0.013333333,
+          "anchorPerformanceMs": 2896
+        },
+        "peakVoices": 4,
+        "results": [
+          {
+            "timestamp": {
+              "contextTime": 0.122666666,
+              "performanceTime": 3114
+            },
+            "now": 2993,
+            "observation": {
+              "ok": false,
+              "error": {
+                "code": "ERR-006",
+                "severity": "ERROR",
+                "messageKey": "clock.outOfSync",
+                "recoverable": false,
+                "sessionId": "a2a-live-proof"
+              }
+            }
+          }
+        ],
+        "stopped": true
+      },
+      "suiteStatus": "failed",
+      "maximumMs": 108.666667
+    }
+  },
+  "renderEvidence": "audio-regression-results.json",
+  "rawCase05Evidence": "case05-clock-observations.json"
+}

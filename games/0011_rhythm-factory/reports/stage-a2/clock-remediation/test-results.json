@@ -1,0 +1,238 @@
+{
+  "implementationSha": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "finalVitest": [
+    {
+      "category": "component",
+      "file": "tests/component/foundation-screen.test.tsx",
+      "title": "POC-13: React displays the store projection without writing state during render",
+      "status": "passed"
+    },
+    {
+      "category": "component",
+      "file": "tests/component/foundation-screen.test.tsx",
+      "title": "POC-14: Strict Mode remount keeps exactly one subscription, listener, frame and test resource",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/audio-events.test.ts",
+      "title": "IF-20 / TC-D4-020 / A1a-R02 isolates unsubscribe and rejects stale audio events",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/public-types.test.ts",
+      "title": "IF-01 to IF-20 preserve the specified argument types and return boundaries",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/public-types.test.ts",
+      "title": "the layer ports project the entire public surface and retain the internal lifecycle contracts",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/public-types.test.ts",
+      "title": "TC-D3-001 negatives reject mixed units and unbranded time values under strict tsc",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-A projects the complete active session frame",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-B projects every empty field using current settings",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-C projects every empty field using current settings",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-D falls back on absent or invalid settings without writes or status changes",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-E keeps a valid sealed frame until disposal and drops the old note and lanes afterwards",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-F rejects mutations of nested data and isolates each rendering view",
+      "status": "passed"
+    },
+    {
+      "category": "contract",
+      "file": "tests/contract/render-snapshot.test.ts",
+      "title": "IF-09 / TC-D4-009 / A1a-R01 009-G uses session-start settings while current settings change",
+      "status": "passed"
+    },
+    {
+      "category": "integration",
+      "file": "tests/integration/composition.test.ts",
+      "title": "connects one synthetic state owner to the UI and renderer and tears down the connection",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "TC-D1-001〜004 absolute ticks converts the approved BPM examples without accumulating rounded intervals",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "TC-D1-001〜004 absolute ticks rejects nonfinite, fractional, negative and overflowing values before use",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "IF-03/04 fixed-generation clock applies the signed offset once and does not replace the anchor after an observation",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "IF-03/04 fixed-generation clock TC-D4-030 checks the 20 ms / +1 μs boundary and prohibits continuation",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "IF-03/04 fixed-generation clock stops on the first out-of-band sample before output diagnostics round to μs",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "IF-03/04 fixed-generation clock keeps exact 20 ms inclusive at fractional starting offsets on both sides",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-clock.test.ts",
+      "title": "IF-03/04 fixed-generation clock rejects backward, stalled and unavailable observations, invalid opening anchors and stale generations",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-preparation.test.ts",
+      "title": "TC-D4-001/039/042 POC-17 keeps one render in flight and retains only the final selected preparation",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/audio-preparation.test.ts",
+      "title": "TC-D4-001/039/042 POC-17 reports invalid content and rendering failure, then retries rather than caching failure",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/game-store.test.ts",
+      "title": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 keeps the same reference and emits no notification for an equal projection",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/game-store.test.ts",
+      "title": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 updates the public reference and emits a single notification for one state change",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/game-store.test.ts",
+      "title": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 protects nested arrays and error values and keeps a defensive copy of the source",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/game-store.test.ts",
+      "title": "IF-16 / AT-104 / TC-D3-006/007 / TC-D4-016 unsubscribes idempotently and removes only the matching registration",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/web-audio-clock-adapter.test.ts",
+      "title": "A-2a-R approved audio/clock safety boundaries reports rejected resume and leaves retry available for the next gesture",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/web-audio-clock-adapter.test.ts",
+      "title": "A-2a-R approved audio/clock safety boundaries does not adopt uninitialized or nonfinite timestamps even when context state says running",
+      "status": "passed"
+    },
+    {
+      "category": "unit",
+      "file": "tests/unit/web-audio-clock-adapter.test.ts",
+      "title": "A-2a-R approved audio/clock safety boundaries rejects an old ended callback and releases the active source on interruption",
+      "status": "passed"
+    }
+  ],
+  "finalVitestGroups": {
+    "component": 2,
+    "contract": 11,
+    "integration": 1,
+    "unit": 16
+  },
+  "comparison": {
+    "existingVitest": 25,
+    "addedVitest": 5,
+    "finalVitest": 30,
+    "pass": 30,
+    "fail": 0,
+    "implementersVitestExecutions": {
+      "targetedAgainstHold": 9,
+      "intermediate": 29,
+      "final": 30
+    },
+    "existingE2E": 12,
+    "addedE2E": 18,
+    "finalE2E": 30,
+    "implementersE2EExecutions": {
+      "baseline": 12,
+      "intermediateCase05": 18,
+      "final": 30
+    }
+  },
+  "finalE2E": {
+    "expected": 15,
+    "unexpected": 15,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "stageA1": {
+    "vitest": 18,
+    "e2ePass": 6,
+    "static": 3,
+    "includedInTotals": true
+  },
+  "checks": {
+    "typecheck": 0,
+    "lint": 0,
+    "architecture": 0,
+    "build": 0
+  },
+  "commands": [
+    "npm run typecheck",
+    "npm run lint",
+    "npm run check:architecture",
+    "npm test",
+    "npm run build",
+    "npm run test:e2e -- --reporter=list,json"
+  ],
+  "unexecuted": "Production audio integration and physical devices remain pending. The A-1 production subpath regression is included."
+}
