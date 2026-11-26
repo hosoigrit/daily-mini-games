@@ -208335,5 +208335,48 @@
         "approvalId": "ACCEPT-GAME-0010-CR011-RISK-BASED-RELEASE"
       }
     ]
+  },
+  "CR011_QA_V2_OWNER_ATTESTATION": {
+    "priorCaseMatrixKey": "CR011_RISK_BASED_ACCEPTANCE",
+    "testedSHA": "56334926fee679412c4978471f812d454e854525",
+    "caseCounts": {
+      "total": 1060,
+      "automatedAccepted": 882,
+      "oldAutomatedAccepted": 809,
+      "addedAutomatedAccepted": 73,
+      "humanRows": 178,
+      "humanIndividualMeasuredPASS": 0,
+      "detailedEvidenceRiskAccepted": 175,
+      "thirdPartyNotRunRiskAccepted": 1,
+      "limitedSiteAccepted": 1,
+      "aggregateAcceptedUnderCR011": 1
+    },
+    "evidenceAdded": {
+      "status": "OWNER_CONFIRMED_QA_SITE_V2",
+      "attestationBasis": "Direct user reply now explicitly identifies the owner-only Sites v2 for all five device checks and UX score.",
+      "target": "CR-010 revised owner-only QA Sites v2",
+      "testedSHA": "56334926fee679412c4978471f812d454e854525",
+      "version": 2,
+      "coveredDeviceIds": [
+        "DV-01",
+        "DV-02",
+        "DV-03",
+        "DV-04",
+        "DV-05"
+      ],
+      "reportedUXScore": 84,
+      "userApprovedGate": {
+        "phase6": "CLOSED_WITH_ACCEPTED_RESIDUAL_RISKS",
+        "EG-09": "PASS_UNDER_CR011",
+        "finalAcceptance": "ACCEPTED_WITH_LIMITED_EVIDENCE"
+      },
+      "previousGateEvidenceSHA": "2b19b117ae7cc551fe27839b3d76b5f714d91479",
+      "releaseStatus": "NOT_AUTHORIZED",
+      "trialVersionBindingMethod": "OWNER_ATTESTATION",
+      "deploymentEvidenceSHA256": "1a73af6e454094cf06b84f1921c8d06a547b37894105abadacf7488977fdd61b",
+      "sitesCompletePortIdentityPASS": false,
+      "archive47thMember": "UNKNOWN",
+      "individualHumanMeasuredPASSAdded": 0
+    }
   }
 }

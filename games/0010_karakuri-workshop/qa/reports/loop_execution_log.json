@@ -4737,5 +4737,25 @@
         "fileSHA256": "3bc3a724c440c4773e6501869fb0c9a2116c068a50c15cc5e2dbea24425e16ee"
       }
     ]
+  },
+  "CR011_QA_V2_OWNER_ATTESTATION": {
+    "reservation": {
+      "runId": "CR011-USER-V2-CONFIRMATION-AND-RELEASE-PREFLIGHT",
+      "approvalBasis": "User CR011 acceptance and explicit QA-only push/readback instruction",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "expectedRemoteHead": "2b19b117ae7cc551fe27839b3d76b5f714d91479",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorBudgetSHA256": "2200d72ddbc20fc6bb1626e0f18cdada40da10aa2ebd1af4b93acd09e886ce9b",
+      "previousAutomatedSeconds": 12383,
+      "reservationSeconds": 240,
+      "worlds": 0,
+      "ticks": 0,
+      "enduranceAttempts": 0,
+      "remediations": 0,
+      "purpose": "Accept exact v2 owner attestation; QA records, and read-only GitHub Pages release planning"
+    },
+    "priorBudgetSHA256": "2200d72ddbc20fc6bb1626e0f18cdada40da10aa2ebd1af4b93acd09e886ce9b",
+    "releasePreflightIsReadOnly": true
   }
 }
