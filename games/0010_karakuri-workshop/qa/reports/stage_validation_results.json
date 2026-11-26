@@ -5056,5 +5056,705 @@
       }
     ],
     "stageQualificationOverallStatus": "PENDING_OTHER_FROZEN_CASES"
+  },
+  "CR010_R3": {
+    "revisedCases": [
+      {
+        "caseId": "CR010-STAGE-01",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 2
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-02",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 11
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-01",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 20
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 19
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 21
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-01",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 21
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-03",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 21
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-02",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 36
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 35
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 37
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-02",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 37
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-04",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 37
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-03",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 55
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 54
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 56
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-03",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 56
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-05",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 56
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-04",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 80
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 79
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 81
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-04",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 81
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-06",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 81
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-05",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 99
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 98
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 100
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-05",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 100
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-07",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 100
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-06",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 122
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 121
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 123
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-06",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 123
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-08",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 123
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-07",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 144
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 143
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 145
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-07",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 145
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-09",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 145
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-08",
+        "status": "PASS",
+        "basis": "Revised stage actual legal ramp-only and empty controls fail; valid baseline passes with applied required usage",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 170
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 169
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 171
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-ABL-08",
+        "status": "PASS",
+        "basis": "Exact candidate star-3 route plus physical removal contrast; independent geometry, contacts, trajectory and goal observed",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 171
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-STAGE-10",
+        "status": "PASS",
+        "basis": "Current physical star3, neighbor thresholds, 100 repetitions, three hints and alternate where applicable. Shared false-alternate qualification checked.",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-FORMAL-FULL-01",
+            "rawSHA256": "8d0bb07312d5c2ee104f636bb3ce59c9628c06af25cabbfe12dea674d51bbf7a",
+            "ledgerDigest": "751df979209e005104bb442c65dcc5c0e7ba4bcb090092fb9b14a83249a87ed8",
+            "sourceLine": 171
+          },
+          {
+            "runId": "CR010-R2-E8-FORMAL-REPEAT-01",
+            "rawSHA256": "aa74ea8f111cede76549a7fd50e162888b37963d73bdc469feb6616d410daa6b",
+            "ledgerDigest": "1e224a4a9c0d640de792f45fdfc00cb8517ec6f53e4e013b30bb0d1d17d7dc9f"
+          },
+          {
+            "runId": "CR010-R2-CERT-CHECK-01",
+            "rawSHA256": "af4ea2571c8c9e49b4e4e1c497e1fd47a33601e1421c7cc6c95f69fd6fba3002",
+            "ledgerDigest": "af8b12fec824a932c93bd66e59b3abde1be83f964c6e9690dd8b323fc545cfe5",
+            "sourceLine": 1
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-09",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-10",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-11",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-12",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-13",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-14",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 7
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-15",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 13
+          }
+        ]
+      },
+      {
+        "caseId": "CR010-USE-16",
+        "status": "PASS",
+        "basis": "Production usage rules with frozen test-specific controls. Same run, physical ID uniqueness, AND and FL-006",
+        "proofs": [
+          {
+            "runId": "CR010-R2-E8-PRODUCT-CONTROLS-EXACT",
+            "rawSHA256": "9703957ef38ca2e12a27bdfcb81e38c1bb68a3fc3e50442c8499c8abcfce5cd0",
+            "ledgerDigest": "95c82b71c77613d4a9d9084b7815743e9d536e9d51b03ccfbb1216d49ea6a5c0",
+            "sourceLine": 19
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1424,5 +1424,229 @@
     "scopedOldCasesValidated": 237,
     "browserPerformanceAndAudioReviewed": true,
     "dedicatedEnduranceFinding": "OPEN_50_SECOND_SHORTFALL"
+  },
+  "CR010_R3": {
+    "status": "HOLD",
+    "independent": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review"
+    ],
+    "review": {
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "method": "SEPARATE_CONTEXT_READ_ONLY",
+      "scopes": [
+        {
+          "reviewer": "/root/e8_coverage",
+          "decision": "PASS_ENDURANCE_HOLD_OVERALL",
+          "findings": [
+            "Formal soak certificate, resource rows and exact receipts matched.",
+            "Original execution/materials crosscheck, 18 detected mutations, old review provenance and current case completeness examined.",
+            "Open E8 aggregate requirement, authorization, mandatory review and evidence scope. Preserve nonzero outcomes and historical cases."
+          ]
+        },
+        {
+          "reviewer": "/root/e0_review",
+          "decision": "PASS_ON_CLOSED_ACCOUNTING_SCOPE",
+          "findings": [
+            "One started ST10 world was bundled with a failed browser assertion and initially reported zero ticks.",
+            "Plus 1200 E8 ticks conservatively recorded in a separate chained entry. Source/receipt/auth/max tested; prior terminal bytes retained."
+          ]
+        },
+        {
+          "reviewer": "/root/e7_revalidation_review",
+          "decision": "NATIVE_CASE_ASSERTIONS_ONLY",
+          "findings": [
+            "Two live Chromium TUT-18/19 lines verified. Exit1 came after evidence emission, during isolated profile removal. Full debit remains; no global execution PASS.",
+            "Preserve as separate measured <=45 game ticks. The evidence is behavioral and does not independently enumerate native bodies and subscriptions."
+          ]
+        },
+        {
+          "reviewer": "/root/e1_test_plan",
+          "decision": "PASS_EXACT_CASE_JOINS_ONLY",
+          "findings": [
+            "Case-specific old fixture boundaries, current exercises with approved V1-only scopes, governance negatives, stage certificate and exact 30 hints checked."
+          ]
+        }
+      ],
+      "openCaseIds": {
+        "E6": [
+          "TC-D4-027-C002"
+        ],
+        "E7": [
+          "TC-D5-007-C001",
+          "TC-D5-010-C001",
+          "TC-D5-012-C002",
+          "TC-D5-013-C002",
+          "TC-D5-024-C001",
+          "TC-D5-044-C002",
+          "TC-D6-002-C001",
+          "TC-D6-007-C001",
+          "TC-D6-008-C001",
+          "TC-D6-010-C001",
+          "TC-D6-011-C001",
+          "TC-D6-014-C001",
+          "TC-D6-015-C001",
+          "TC-D6-016-C001",
+          "TC-D6-017-C001",
+          "TC-D6-018-C001",
+          "TC-D6-019-C001",
+          "TC-D6-020-C001",
+          "TC-D6-022-C001",
+          "TC-D6-023-C001",
+          "TC-D6-024-C001",
+          "TC-D6-026-C001",
+          "TC-D6-028-C001",
+          "TC-D6-029-C001",
+          "TC-D6-030-C001",
+          "TC-D6-032-C001",
+          "TC-D6-033-C001",
+          "TC-D6-033-C002",
+          "TC-D6-034-C001",
+          "TC-D6-034-C002",
+          "TC-D6-035-C001",
+          "TC-D6-036-C001",
+          "TC-D6-037-C002",
+          "TC-D6-038-C002",
+          "TC-D6-039-C002",
+          "TC-D6-041-C001",
+          "TC-D6-043-C002",
+          "TC-D6-044-C002",
+          "TC-D6-047-C001",
+          "TC-D7-008-C002",
+          "TC-D7-010-C002",
+          "TC-D7-011-C001",
+          "TC-D7-023-C022",
+          "TC-D7-023-C023"
+        ],
+        "E1": [
+          "TC-D7-018-C002"
+        ],
+        "E8": [
+          "TC-D7-028-C001",
+          "TC-D7-028-C003",
+          "TC-D7-028-C009",
+          "TC-D7-028-C010",
+          "TC-D7-028-C012",
+          "TC-D7-028-C015",
+          "TC-D7-028-C016",
+          "TC-D7-028-C021",
+          "TC-D8-022-C002",
+          "TC-D8-023-C002"
+        ]
+      },
+      "openNewCaseIds": [
+        "CR010-TUT-07",
+        "CR010-TUT-08",
+        "CR010-TUT-09",
+        "CR010-TUT-10",
+        "CR010-TUT-11",
+        "CR010-TUT-12",
+        "CR010-TUT-17",
+        "CR010-SAVE-10",
+        "CR010-SAVE-11"
+      ]
+    },
+    "recordSHA256": "ad8e2875058162c2fc5de5502a2ceb65c462b3650d5559a1b68218c932006697",
+    "endurance": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "pendingPerCase": {
+      "E6": [
+        "TC-D4-027-C002"
+      ],
+      "E7": [
+        "TC-D5-007-C001",
+        "TC-D5-010-C001",
+        "TC-D5-012-C002",
+        "TC-D5-013-C002",
+        "TC-D5-024-C001",
+        "TC-D5-044-C002",
+        "TC-D6-002-C001",
+        "TC-D6-007-C001",
+        "TC-D6-008-C001",
+        "TC-D6-010-C001",
+        "TC-D6-011-C001",
+        "TC-D6-014-C001",
+        "TC-D6-015-C001",
+        "TC-D6-016-C001",
+        "TC-D6-017-C001",
+        "TC-D6-018-C001",
+        "TC-D6-019-C001",
+        "TC-D6-020-C001",
+        "TC-D6-022-C001",
+        "TC-D6-023-C001",
+        "TC-D6-024-C001",
+        "TC-D6-026-C001",
+        "TC-D6-028-C001",
+        "TC-D6-029-C001",
+        "TC-D6-030-C001",
+        "TC-D6-032-C001",
+        "TC-D6-033-C001",
+        "TC-D6-033-C002",
+        "TC-D6-034-C001",
+        "TC-D6-034-C002",
+        "TC-D6-035-C001",
+        "TC-D6-036-C001",
+        "TC-D6-037-C002",
+        "TC-D6-038-C002",
+        "TC-D6-039-C002",
+        "TC-D6-041-C001",
+        "TC-D6-043-C002",
+        "TC-D6-044-C002",
+        "TC-D6-047-C001",
+        "TC-D7-008-C002",
+        "TC-D7-010-C002",
+        "TC-D7-011-C001",
+        "TC-D7-023-C022",
+        "TC-D7-023-C023"
+      ],
+      "E1": [
+        "TC-D7-018-C002"
+      ],
+      "E8": [
+        "TC-D7-028-C001",
+        "TC-D7-028-C003",
+        "TC-D7-028-C009",
+        "TC-D7-028-C010",
+        "TC-D7-028-C012",
+        "TC-D7-028-C015",
+        "TC-D7-028-C016",
+        "TC-D7-028-C021",
+        "TC-D8-022-C002",
+        "TC-D8-023-C002"
+      ]
+    }
   }
 }

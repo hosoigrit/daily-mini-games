@@ -1652,5 +1652,282 @@
     ],
     "olderHumanUxScore": 51,
     "phase6HumanCasesNotRun": 173
+  },
+  "CR010_R3": {
+    "status": "HOLD",
+    "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+    "previousEvidence": "66cfca48981e6666dc45b638863ec6a904c16241",
+    "externalAcceptance": "HOLD",
+    "phase6": "HOLD_HUMAN_REASSESSMENT",
+    "authority": {
+      "approvalId": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+      "caseId": "TC-D7-015-C002",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "branch": "codex/game-0010-development",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorEvidence": "66cfca48981e6666dc45b638863ec6a904c16241",
+      "priorRemoteReceiptSHA256": "80f34a14832a73432219f456f721f2630ac5dbdff3951af93b8b7be1c7e3b38e",
+      "priorEnduranceRunId": "CR010-R2-E8-ENDURANCE-1800",
+      "oldDedicatedSeconds": 4200,
+      "newDedicatedSeconds": 4250,
+      "priorDedicatedChargeSeconds": 2150,
+      "requiredSecondReservationSeconds": 2100,
+      "authorizedNewAttempts": 1
+    },
+    "oldCounts": {
+      "VERIFIED_OLD_UNCHANGED_LOCAL": 164,
+      "PASS_CURRENT_DIRECT_PROOF": 485,
+      "PASS_CURRENT_VERSIONED_LEGACY": 46,
+      "PASS_CURRENT_INDEPENDENT_REVIEW": 58,
+      "NOT_RUN_HUMAN": 173,
+      "CURRENT_ADMISSION_PENDING": 56
+    },
+    "additionalCounts": {
+      "PASS": 64,
+      "OBSERVED_PARTIAL": 9,
+      "NOT_RUN_HUMAN": 5
+    },
+    "evidenceLedgerTail": "576950a99d9d8087b92710f186773e9de86cd84f7ed628193b14aaa9e3e2a779",
+    "usage": {
+      "automatedSeconds": 11828,
+      "formalSimulationsByPool": {
+        "E6": 3588,
+        "E8": 5677,
+        "INTERIM": 206,
+        "POST_HUMAN": 0
+      },
+      "formalTicksByPool": {
+        "E6": 826820,
+        "E8": 1614112,
+        "INTERIM": 66910,
+        "POST_HUMAN": 0
+      },
+      "generatedByStage": {
+        "10": 5977,
+        "01": 979,
+        "02": 951,
+        "03": 707,
+        "04": 775,
+        "05": 8828,
+        "06": 755,
+        "07": 6628,
+        "08": 42727,
+        "09": 38172
+      },
+      "githubSettledRunIds": [
+        "CR008-E7-GITHUB",
+        "CR008-E8-GITHUB"
+      ],
+      "physicsValidationSimulations": 13486,
+      "physicsValidationTicks": 752157,
+      "remediationByRootCause": {
+        "e0-budget-reservation-and-accounting": 6,
+        "e7-audio-availability-render-invalidates-pointer-target": 2,
+        "e7-batch-launch-bypassed-budget-reservation": 1,
+        "e7-navigation-and-background-state-boundary": 2,
+        "e8-audio-comparison-used-other-engine-oracle": 1,
+        "e8-mutation-budget-oracle-compared-error-count": 1,
+        "e8-mutation-readonly-fixture-missing-design-identities": 1,
+        "e8-remediation-stop-reason-propagation": 1,
+        "e8-rule-layer-native-physics-dependency": 1,
+        "cr010-usage-requirement-shape-validation": 1,
+        "cr010-search-eager-generation-unaccounted": 1,
+        "cr010-save-transition-and-generation-guard": 1,
+        "cr010-tutorial-transition-correctness": 1
+      },
+      "remediationTotal": 57,
+      "searchSimulationsByStage": {
+        "10": 4291,
+        "01": 302,
+        "02": 302,
+        "03": 316,
+        "04": 326,
+        "05": 2305,
+        "06": 332,
+        "07": 825,
+        "08": 1196,
+        "09": 1236
+      },
+      "searchTicksByStage": {
+        "10": 2349627,
+        "01": 83296,
+        "02": 69466,
+        "03": 94188,
+        "04": 72085,
+        "05": 806519,
+        "06": 132935,
+        "07": 317080,
+        "08": 263611,
+        "09": 362301
+      },
+      "stageAdjustmentsByStage": {
+        "10": 14,
+        "05": 6,
+        "08": 6
+      },
+      "remediationByStage": {
+        "E5": 1,
+        "E6": 1,
+        "E7": 2
+      },
+      "searchSecondsByStage": {
+        "10": 173,
+        "03": 1,
+        "04": 1,
+        "05": 10,
+        "06": 1,
+        "07": 14,
+        "08": 8,
+        "09": 16
+      }
+    },
+    "endurance": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "dedicatedActualSeconds": 3970,
+    "originalEnduranceDebit": {
+      "automatedSeconds": 2150,
+      "formalSimulations": 400,
+      "formalTicks": 480000
+    },
+    "remainingDedicatedSecondsArithmetic": 280,
+    "authorizedAdditionalEnduranceAttempts": 0,
+    "remotePreservationReservation": {
+      "runId": "CR010-R3-QUALIFICATION-PRESERVATION",
+      "approvalId": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "expectedRemoteHead": "66cfca48981e6666dc45b638863ec6a904c16241",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorLedgerTail": "576950a99d9d8087b92710f186773e9de86cd84f7ed628193b14aaa9e3e2a779",
+      "reservationSeconds": 180,
+      "purpose": "Normal WIP HOLD evidence preservation and fresh byte readback"
+    },
+    "proofArchive": {
+      "filename": "CR010-R3-QA-recovery.tar.gz",
+      "sha256": "b725d55bbc804ecb847e215832fa3e0d605c1304115562bd35286944fc6c0277",
+      "verifiedMembers": 300,
+      "predecessorArchives": [
+        "CR010-R1-settlement.tar.gz",
+        "CR010-R2-HOLD-recovery.tar.gz",
+        "CR010-R2-followup-QA-recovery.tar.gz"
+      ]
+    },
+    "effectivePathsDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "pendingCaseIdsByStage": {
+      "E6": [
+        "TC-D4-027-C002"
+      ],
+      "E7": [
+        "TC-D5-007-C001",
+        "TC-D5-010-C001",
+        "TC-D5-012-C002",
+        "TC-D5-013-C002",
+        "TC-D5-024-C001",
+        "TC-D5-044-C002",
+        "TC-D6-002-C001",
+        "TC-D6-007-C001",
+        "TC-D6-008-C001",
+        "TC-D6-010-C001",
+        "TC-D6-011-C001",
+        "TC-D6-014-C001",
+        "TC-D6-015-C001",
+        "TC-D6-016-C001",
+        "TC-D6-017-C001",
+        "TC-D6-018-C001",
+        "TC-D6-019-C001",
+        "TC-D6-020-C001",
+        "TC-D6-022-C001",
+        "TC-D6-023-C001",
+        "TC-D6-024-C001",
+        "TC-D6-026-C001",
+        "TC-D6-028-C001",
+        "TC-D6-029-C001",
+        "TC-D6-030-C001",
+        "TC-D6-032-C001",
+        "TC-D6-033-C001",
+        "TC-D6-033-C002",
+        "TC-D6-034-C001",
+        "TC-D6-034-C002",
+        "TC-D6-035-C001",
+        "TC-D6-036-C001",
+        "TC-D6-037-C002",
+        "TC-D6-038-C002",
+        "TC-D6-039-C002",
+        "TC-D6-041-C001",
+        "TC-D6-043-C002",
+        "TC-D6-044-C002",
+        "TC-D6-047-C001",
+        "TC-D7-008-C002",
+        "TC-D7-010-C002",
+        "TC-D7-011-C001",
+        "TC-D7-023-C022",
+        "TC-D7-023-C023"
+      ],
+      "E1": [
+        "TC-D7-018-C002"
+      ],
+      "E8": [
+        "TC-D7-028-C001",
+        "TC-D7-028-C003",
+        "TC-D7-028-C009",
+        "TC-D7-028-C010",
+        "TC-D7-028-C012",
+        "TC-D7-028-C015",
+        "TC-D7-028-C016",
+        "TC-D7-028-C021",
+        "TC-D8-022-C002",
+        "TC-D8-023-C002"
+      ]
+    },
+    "independentReviewRecordSHA256": "ad8e2875058162c2fc5de5502a2ceb65c462b3650d5559a1b68218c932006697",
+    "historicalAndSupplementalRunExceptions": [
+      "CR010-R2-E8-ENDURANCE-1800",
+      "CR010-R3-QUAL-TUTORIAL-NATIVE",
+      "CR010-R3-QUAL-TUTORIAL-NATIVE-02",
+      "CR010-R3-QUAL-TUTORIAL-NATIVE-03",
+      "CR010-R3-QUAL-EDIT-RULES",
+      "CR010-R3-QUAL-EDIT-RULES-02",
+      "CR010-R3-QUAL-ST10-ACHIEVEMENT-02",
+      "CR010-R3-QUAL-ST10-ACHIEVEMENT-03"
+    ],
+    "independentReviewers": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review"
+    ],
+    "historicalUserUX": 51,
+    "humanQaCasesNotRun": 173
   }
 }

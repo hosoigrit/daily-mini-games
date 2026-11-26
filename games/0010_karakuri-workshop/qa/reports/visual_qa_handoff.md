@@ -23,3 +23,33 @@ PP03の動的板衝突は有限観測に基づきます。TC-D7-004-C002の旧�
 ## CR-010-R2 継続検証後
 
 Chromiumでの実背景・BFCache・3音声モードを確認。実機5環境は採点前に自動ゲート終了を待つ。既存の評価基準を使用。
+
+
+## CR-010-R3 検証報告
+
+**自動品質ゲートはHOLDです。** Chromiumの正式30分耐久は合格しました。自動必須ケースの照合・実行が残っています。
+
+検証候補 56334926fee679412c4978471f812d454e854525
+
+## Chromium前景30分耐久
+
+- 10 tickの開始・中止を100回。前景連続実測 1800.434 秒、反復 300 サイクル。背景遷移、クラッシュ、破棄後の物理更新は0件。初回部分結果は別に維持。
+- 正式再試行は 1820 秒、400 world、90,550 tick。初回2,150秒を維持し、専用消費は 3,970／4,250秒。承認済みの再試行枠は消費済み。
+
+## 個別ケースの状況
+
+- 旧982件。164件 VERIFIED_OLD_UNCHANGED_LOCAL、485件 PASS_CURRENT_DIRECT_PROOF、46件 PASS_CURRENT_VERSIONED_LEGACY、58件 PASS_CURRENT_INDEPENDENT_REVIEW、173件 NOT_RUN_HUMAN、56件 CURRENT_ADMISSION_PENDING。
+- CR-010追加・改訂78件。64件 PASS、9件 OBSERVED_PARTIAL、5件 NOT_RUN_HUMAN。
+- 残りのケースIDと観測は qa/reports/automated_test_results.json。旧証跡と現候補の直接実行を区別。
+- 全10面の星3、7別解、1,000回反復、30ヒントを実測・照合。ST00全12STEPと保存V2移行は既存現候補のChromium観測を維持。凍結mutation12種類および追加6種類は正常対照と意図した失敗を照合。
+
+## Phase 6実機QAの準備
+
+- 改訂版候補の実行資産46件のSHA-256を照合した。候補の攻略配置は qa/fixtures/cr010-certified-stages.json。自動ゲート合格後にST00、通常10面、保存V1→V2とV1原本、長時間の操作を実機で確認する。
+- 5環境はGalaxy S26 Android Chrome、iPhone SE2 iOS Safari、iPad mini 6 iPadOS Safari、Windows 11 Chrome、Windows 11 Edge。採点は総合80以上、全項目3以上、重大・Must違反なし。Sitesでの差分照合はTC-D7-029-C001の実機工程。
+- 旧証跡の参照先は履歴。現行候補、改訂版攻略、残件の実行条件は最新版の個別台帳を適用する。
+- V2では実Web Locksの同時起動20組で同時OWNERなし。旧V1の原本とエクスポートはバイト一致し、V2初期化は主キー1件に限定。
+- ST10は現行9面・星27から、実物理の2星と3星で10面・星29、30を観測。再読込で達成通知は再発火しなかった。
+- 実背景・BFCacheの個別観測を採用。補助試験の終了時プロファイル削除エラーと全額精算は保持。
+- 旧達成通知試験の失敗は保持し、未計測だった1 worldの消費をE8へ1,200 tick追記。旧記録を上書きしていない。
+- 人間QA173件は未実施。旧体験評価51点を履歴に保持し、Phase 6および最終受入をHOLDとする。

@@ -316,5 +316,10 @@
     "newProductFixes": 0,
     "firstStartupRejectedRetained": true,
     "newVerificationCalibration": "CDP nominal RTT 47ms; frozen observed 45–55ms acceptance remained exact."
+  },
+  "CR010_R3": {
+    "oldRemediationRetained": 57,
+    "currentRemediationTotal": 57,
+    "productChangesInR3": 0
   }
 }

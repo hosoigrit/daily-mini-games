@@ -296,5 +296,14 @@
     },
     "newStageAdjustments": 0,
     "generatedTotal": 106499
+  },
+  "CR010_R3": {
+    "unchangedGeneration": 106499,
+    "used": {
+      "10": 14,
+      "05": 6,
+      "08": 6
+    },
+    "r3Adjustments": 0
   }
 }

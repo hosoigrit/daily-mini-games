@@ -9206,5 +9206,833 @@
         "NOT_RUN_HUMAN": 3
       }
     }
+  },
+  "CR010_R3": {
+    "status": "CURRENT_ADMISSION_OPEN",
+    "requirements": {
+      "NFR-025": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 7,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-077": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-018": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-019": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10,
+        "PASS_CURRENT_DIRECT_PROOF": 43
+      },
+      "FR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-003": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "NOT_RUN_HUMAN": 50
+      },
+      "FR-028": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 80
+      },
+      "FR-011": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 18
+      },
+      "NFR-005": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 74
+      },
+      "FR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-001": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-002": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-004": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-007": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-080": {
+        "PASS_CURRENT_DIRECT_PROOF": 15,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 11
+      },
+      "FR-035": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-009": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 6
+      },
+      "FR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-021": {
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "DR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 22,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10
+      },
+      "FR-013": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5
+      },
+      "NFR-006": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "FR-081": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "BR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 12
+      },
+      "FR-025": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-020": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "DR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-061": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2
+      },
+      "FR-083": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-037": {
+        "PASS_CURRENT_DIRECT_PROOF": 13
+      },
+      "FR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "FR-038": {
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "FR-039": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-042": {
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-043": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-036": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "FR-033": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-087": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-040": {
+        "PASS_CURRENT_DIRECT_PROOF": 35
+      },
+      "FR-079": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-057": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-058": {
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "BR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-055": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "BR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-059": {
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "PASS_CURRENT_VERSIONED_LEGACY": 9,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-060": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-088": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "FR-062": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-045": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-084": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "DR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "QR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "BR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-046": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-050": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-051": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 30,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-052": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 30,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-054": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-053": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 30,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-056": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-028": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-001": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "GOV-016": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "DR-013": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "QR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-041": {
+        "PASS_CURRENT_DIRECT_PROOF": 17
+      },
+      "QR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 11
+      },
+      "QR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "BR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "QR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 8
+      },
+      "BR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "QR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 12,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "QR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "QR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 12,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5
+      },
+      "QR-017": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 12
+      },
+      "QR-007": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 30,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-018": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 6
+      },
+      "FR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "DR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-063": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-009": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-066": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-065": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-064": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-070": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-068": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 4,
+        "CURRENT_ADMISSION_PENDING": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 21
+      },
+      "NFR-022": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 17
+      },
+      "DR-011": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-010": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_VERSIONED_LEGACY": 9
+      },
+      "FR-067": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 16,
+        "PASS_CURRENT_DIRECT_PROOF": 5,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-086": {
+        "PASS_CURRENT_DIRECT_PROOF": 13,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 3
+      },
+      "QR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 13,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 3
+      },
+      "NFR-033": {
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-016": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 15,
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-037": {
+        "PASS_CURRENT_DIRECT_PROOF": 7,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-019": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 13
+      },
+      "FR-069": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-021": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "FR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-002": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-026": {
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "FR-029": {
+        "PASS_CURRENT_DIRECT_PROOF": 16
+      },
+      "FR-085": {
+        "PASS_CURRENT_DIRECT_PROOF": 15,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-031": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-044": {
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-076": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 3,
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-018": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "NFR-014": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-011": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-022": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-016": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-013": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "FR-082": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-013": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 82
+      },
+      "NFR-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-020": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-012": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-009": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "NOT_RUN_HUMAN": 6,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-071": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-010": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "NOT_RUN_HUMAN": 3,
+        "CURRENT_ADMISSION_PENDING": 3
+      },
+      "FR-072": {
+        "CURRENT_ADMISSION_PENDING": 3,
+        "NOT_RUN_HUMAN": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "DR-018": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-078": {
+        "CURRENT_ADMISSION_PENDING": 4,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-073": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-075": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "NFR-019": {
+        "CURRENT_ADMISSION_PENDING": 2
+      },
+      "FR-074": {
+        "CURRENT_ADMISSION_PENDING": 5,
+        "NOT_RUN_HUMAN": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "QR-011": {
+        "CURRENT_ADMISSION_PENDING": 8,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 23,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 6
+      },
+      "NFR-036": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 6,
+        "CURRENT_ADMISSION_PENDING": 6,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-035": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "NOT_RUN_HUMAN": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "NFR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 21,
+        "NOT_RUN_HUMAN": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "FR-047": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-048": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-049": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-016": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-008": {
+        "NOT_RUN_HUMAN": 13,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "BR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-026": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-015": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-031": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3
+      },
+      "GOV-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-019": {
+        "PASS_CURRENT_DIRECT_PROOF": 28,
+        "CURRENT_ADMISSION_PENDING": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "GOV-013": {
+        "PASS_CURRENT_DIRECT_PROOF": 29,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "GOV-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "DR-014": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "BR-010": {
+        "CURRENT_ADMISSION_PENDING": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "NFR-029": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-001": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "GOV-002": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "GOV-005": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "GOV-008": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 11
+      },
+      "GOV-009": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "GOV-010": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-011": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "GOV-012": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 16
+      },
+      "GOV-014": {
+        "CURRENT_ADMISSION_PENDING": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "GOV-017": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "CURRENT_ADMISSION_PENDING": 1
+      },
+      "QR-015": {
+        "NOT_RUN_HUMAN": 84
+      },
+      "QR-016": {
+        "NOT_RUN_HUMAN": 3
+      }
+    },
+    "pending": {
+      "E6": [
+        "TC-D4-027-C002"
+      ],
+      "E7": [
+        "TC-D5-007-C001",
+        "TC-D5-010-C001",
+        "TC-D5-012-C002",
+        "TC-D5-013-C002",
+        "TC-D5-024-C001",
+        "TC-D5-044-C002",
+        "TC-D6-002-C001",
+        "TC-D6-007-C001",
+        "TC-D6-008-C001",
+        "TC-D6-010-C001",
+        "TC-D6-011-C001",
+        "TC-D6-014-C001",
+        "TC-D6-015-C001",
+        "TC-D6-016-C001",
+        "TC-D6-017-C001",
+        "TC-D6-018-C001",
+        "TC-D6-019-C001",
+        "TC-D6-020-C001",
+        "TC-D6-022-C001",
+        "TC-D6-023-C001",
+        "TC-D6-024-C001",
+        "TC-D6-026-C001",
+        "TC-D6-028-C001",
+        "TC-D6-029-C001",
+        "TC-D6-030-C001",
+        "TC-D6-032-C001",
+        "TC-D6-033-C001",
+        "TC-D6-033-C002",
+        "TC-D6-034-C001",
+        "TC-D6-034-C002",
+        "TC-D6-035-C001",
+        "TC-D6-036-C001",
+        "TC-D6-037-C002",
+        "TC-D6-038-C002",
+        "TC-D6-039-C002",
+        "TC-D6-041-C001",
+        "TC-D6-043-C002",
+        "TC-D6-044-C002",
+        "TC-D6-047-C001",
+        "TC-D7-008-C002",
+        "TC-D7-010-C002",
+        "TC-D7-011-C001",
+        "TC-D7-023-C022",
+        "TC-D7-023-C023"
+      ],
+      "E1": [
+        "TC-D7-018-C002"
+      ],
+      "E8": [
+        "TC-D7-028-C001",
+        "TC-D7-028-C003",
+        "TC-D7-028-C009",
+        "TC-D7-028-C010",
+        "TC-D7-028-C012",
+        "TC-D7-028-C015",
+        "TC-D7-028-C016",
+        "TC-D7-028-C021",
+        "TC-D8-022-C002",
+        "TC-D8-023-C002"
+      ]
+    }
   }
 }

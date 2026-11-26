@@ -4175,5 +4175,86 @@
     "executionCount": 14,
     "executionTail": "c3efc48e67cf077203b62a8d6e435dc17cf3e345f2dbe591251aba4412450f6c",
     "disconnectedDependentEnduranceRemainsHOLD": true
+  },
+  "CR010_R3": {
+    "lastTail": "576950a99d9d8087b92710f186773e9de86cd84f7ed628193b14aaa9e3e2a779",
+    "status": "HOLD",
+    "preservationBeforePush": {
+      "runId": "CR010-R3-QUALIFICATION-PRESERVATION",
+      "approvalId": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "expectedRemoteHead": "66cfca48981e6666dc45b638863ec6a904c16241",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorLedgerTail": "576950a99d9d8087b92710f186773e9de86cd84f7ed628193b14aaa9e3e2a779",
+      "reservationSeconds": 180,
+      "purpose": "Normal WIP HOLD evidence preservation and fresh byte readback"
+    },
+    "pending": {
+      "E6": [
+        "TC-D4-027-C002"
+      ],
+      "E7": [
+        "TC-D5-007-C001",
+        "TC-D5-010-C001",
+        "TC-D5-012-C002",
+        "TC-D5-013-C002",
+        "TC-D5-024-C001",
+        "TC-D5-044-C002",
+        "TC-D6-002-C001",
+        "TC-D6-007-C001",
+        "TC-D6-008-C001",
+        "TC-D6-010-C001",
+        "TC-D6-011-C001",
+        "TC-D6-014-C001",
+        "TC-D6-015-C001",
+        "TC-D6-016-C001",
+        "TC-D6-017-C001",
+        "TC-D6-018-C001",
+        "TC-D6-019-C001",
+        "TC-D6-020-C001",
+        "TC-D6-022-C001",
+        "TC-D6-023-C001",
+        "TC-D6-024-C001",
+        "TC-D6-026-C001",
+        "TC-D6-028-C001",
+        "TC-D6-029-C001",
+        "TC-D6-030-C001",
+        "TC-D6-032-C001",
+        "TC-D6-033-C001",
+        "TC-D6-033-C002",
+        "TC-D6-034-C001",
+        "TC-D6-034-C002",
+        "TC-D6-035-C001",
+        "TC-D6-036-C001",
+        "TC-D6-037-C002",
+        "TC-D6-038-C002",
+        "TC-D6-039-C002",
+        "TC-D6-041-C001",
+        "TC-D6-043-C002",
+        "TC-D6-044-C002",
+        "TC-D6-047-C001",
+        "TC-D7-008-C002",
+        "TC-D7-010-C002",
+        "TC-D7-011-C001",
+        "TC-D7-023-C022",
+        "TC-D7-023-C023"
+      ],
+      "E1": [
+        "TC-D7-018-C002"
+      ],
+      "E8": [
+        "TC-D7-028-C001",
+        "TC-D7-028-C003",
+        "TC-D7-028-C009",
+        "TC-D7-028-C010",
+        "TC-D7-028-C012",
+        "TC-D7-028-C015",
+        "TC-D7-028-C016",
+        "TC-D7-028-C021",
+        "TC-D8-022-C002",
+        "TC-D8-023-C002"
+      ]
+    }
   }
 }

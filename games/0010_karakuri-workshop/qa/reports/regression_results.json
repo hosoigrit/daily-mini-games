@@ -1317,5 +1317,30 @@
       }
     },
     "earlierGamesSeparatePriorR2": 2019
+  },
+  "CR010_R3": {
+    "existingGamesTests": 2019,
+    "existingGamesBrowserBoots": 9,
+    "unchangedTrees": {
+      "games/0001_target-tap": "743ad53e417d25450671fb646b71cfd57c66974e",
+      "games/0002_light-panels": "3a788b34cddc4556fde928c23212562a21abff9d",
+      "games/0003_30sec-survival": "4088a7a35dc9c3e2c4eb91e9f31ac1f5d2858a6d",
+      "games/0004_wobbly-tower": "e12cf93d9a5a282130028feff99637a07cbca87e",
+      "games/0005_hitofude-delivery": "9f49462243b4fc5f2825e5ff1a53f9ea0d86d2cd",
+      "games/0006_traffic-panic": "ad91f999f05f95a3af88972d0717a42e4e462545",
+      "games/0007_weather-bakery": "0795236980c96be5067ffb8dbbb5102779b19b47",
+      "games/0008_three-minute-detective": "a78e51fcd121ab72248211ef038d4cb14f062017",
+      "games/0009_three-move-hero": "ad0a89226ac95923b24a5971032166ae6eb331aa"
+    },
+    "archive": {
+      "filename": "CR010-R3-QA-recovery.tar.gz",
+      "sha256": "b725d55bbc804ecb847e215832fa3e0d605c1304115562bd35286944fc6c0277",
+      "verifiedMembers": 300,
+      "predecessorArchives": [
+        "CR010-R1-settlement.tar.gz",
+        "CR010-R2-HOLD-recovery.tar.gz",
+        "CR010-R2-followup-QA-recovery.tar.gz"
+      ]
+    }
   }
 }

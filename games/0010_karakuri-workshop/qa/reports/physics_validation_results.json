@@ -4045,5 +4045,41 @@
       }
     },
     "currentIndependentObservationNotAGlobalPass": true
+  },
+  "CR010_R3": {
+    "settledEndurance": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "nativeReviewScope": "Native, oracle, and fixtures identified separately."
   }
 }

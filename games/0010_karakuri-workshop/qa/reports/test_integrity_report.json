@@ -1386,5 +1386,383 @@
       "games/0010_karakuri-workshop/tests/d2-spring.test.js": "184ba79780cf738ee7db24d4a68293e874579044f9fd39615274e4198467bcb3"
     },
     "frozenItems": 22
+  },
+  "CR010_R3": {
+    "scope": {
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "evidenceAtReview": "66cfca48981e6666dc45b638863ec6a904c16241",
+      "originalHandoff": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+      "oldTested": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+      "actualPhase4Source": {
+        "name": "source.zip",
+        "bytes": 320897,
+        "sha256": "cccc981618e72e5ffa65ee2f4b6c2d185847de27e40eb90d290a0c012475635f",
+        "listedHashes": {
+          "00_project_overview.md": "32673356170fa4774b408790e2158a9dbc02f008b90a445965dbb0a0cda0e3c9",
+          "01_game_concept.md": "d9d28cd582620a5179f04cd4e5434148787210729d9ff295298625e2c537f250",
+          "02_requirements.md": "68e0769af45fbf5f617457b2c1029d3c3ee2028cd04d5b5ac8352a97ae14ae74",
+          "03_basic_design.md": "4cf6aea0d3e8a1b9180fc608b7eb3e069fc4ebfd4cebc015d90e7a8b080be71e",
+          "04_detailed_design.md": "6a039a97a0dad63e9ceac3484f94d51cedb6a44e03bef4ef2cf55b42cfd837fa",
+          "05_ui_ux_design.md": "8a286392b13aa00380050c8cfc25bf37987e870dc9658a6c1fa64eea68b7e047",
+          "06_data_design.md": "66c393460229efea4094e8b9dce59a32e5e9baa9d9b2c54b558163d651e8f2e0",
+          "07_test_specification.md": "c02a75c9ee329106feed6aee781275f5c9df52b281bd40f1789654a855446bcd",
+          "08_acceptance_criteria.md": "308b7eed2da91f3813b443531e98a2066d9d9c34054fe96ced5eae848f8cf9f8",
+          "09_implementation_plan.md": "e8f96e439db2fcd6acd005b0804dad8a31fe5d332a746e0ea56116301305144d",
+          "10_codex_instructions.md": "842abeb9f3d8296c998b83e6cadf0d24edd285380f06b7a05320e09b1587787e",
+          "11_traceability_matrix.md": "5cece7eadec346e63cce992b02dacc4bac843b563d0a206a7c40980120a1ccb2",
+          "12_risk_register.md": "bcd4d683e0511be5e439919d557da8f8c5607af683422ab76cb98ddfea9ef50e",
+          "13_approval_record.md": "a4e426643cb31eecbc1f02a2ba33aa41b64bf6cb22d389c22d0a0f5e2795fe20",
+          "14_loop_engineering_protocol.md": "a91b4ecac144df4237e496bb04790648bd53b75a31d035f44298fe9035341aa1",
+          "15_execution_policy.json": "b89f94b4bf800aefe5fd27c19a66b0a7715ccdb2f95d97af031b5984b6df3cfa",
+          "16_stage_adjustment_policy.json": "a7610e22770c1e095cef0c0a4e57322179c9d46ea62115866e0c9527467d4fec",
+          "17_visual_qa_protocol.md": "07776ab8096fceb2b1ad45188141eacb2a9c5b306f53c92312be1a2d6a2d76b9",
+          "18_test_execution_manifest.json": "b8781028fd58de806855c57e6e20f4dae69c49e82d5c80f23e473f1e9daecc26",
+          "19_allowed_paths.json": "e9b7f557cb26c535dd1ddb3f1903db060cd90ac49d2aa0d0d908d2174a98dbd6",
+          "20_checkpoint_schema.json": "6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05"
+        },
+        "allHandoffHashes": {
+          "00_project_overview.md": "32673356170fa4774b408790e2158a9dbc02f008b90a445965dbb0a0cda0e3c9",
+          "01_game_concept.md": "d9d28cd582620a5179f04cd4e5434148787210729d9ff295298625e2c537f250",
+          "02_requirements.md": "68e0769af45fbf5f617457b2c1029d3c3ee2028cd04d5b5ac8352a97ae14ae74",
+          "03_basic_design.md": "4cf6aea0d3e8a1b9180fc608b7eb3e069fc4ebfd4cebc015d90e7a8b080be71e",
+          "04_detailed_design.md": "6a039a97a0dad63e9ceac3484f94d51cedb6a44e03bef4ef2cf55b42cfd837fa",
+          "05_ui_ux_design.md": "8a286392b13aa00380050c8cfc25bf37987e870dc9658a6c1fa64eea68b7e047",
+          "06_data_design.md": "66c393460229efea4094e8b9dce59a32e5e9baa9d9b2c54b558163d651e8f2e0",
+          "07_test_specification.md": "c02a75c9ee329106feed6aee781275f5c9df52b281bd40f1789654a855446bcd",
+          "08_acceptance_criteria.md": "308b7eed2da91f3813b443531e98a2066d9d9c34054fe96ced5eae848f8cf9f8",
+          "09_implementation_plan.md": "e8f96e439db2fcd6acd005b0804dad8a31fe5d332a746e0ea56116301305144d",
+          "10_codex_instructions.md": "842abeb9f3d8296c998b83e6cadf0d24edd285380f06b7a05320e09b1587787e",
+          "11_traceability_matrix.md": "5cece7eadec346e63cce992b02dacc4bac843b563d0a206a7c40980120a1ccb2",
+          "12_risk_register.md": "bcd4d683e0511be5e439919d557da8f8c5607af683422ab76cb98ddfea9ef50e",
+          "13_approval_record.md": "a4e426643cb31eecbc1f02a2ba33aa41b64bf6cb22d389c22d0a0f5e2795fe20",
+          "14_loop_engineering_protocol.md": "a91b4ecac144df4237e496bb04790648bd53b75a31d035f44298fe9035341aa1",
+          "15_execution_policy.json": "b89f94b4bf800aefe5fd27c19a66b0a7715ccdb2f95d97af031b5984b6df3cfa",
+          "16_stage_adjustment_policy.json": "a7610e22770c1e095cef0c0a4e57322179c9d46ea62115866e0c9527467d4fec",
+          "17_visual_qa_protocol.md": "07776ab8096fceb2b1ad45188141eacb2a9c5b306f53c92312be1a2d6a2d76b9",
+          "18_test_execution_manifest.json": "b8781028fd58de806855c57e6e20f4dae69c49e82d5c80f23e473f1e9daecc26",
+          "19_allowed_paths.json": "e9b7f557cb26c535dd1ddb3f1903db060cd90ac49d2aa0d0d908d2174a98dbd6",
+          "20_checkpoint_schema.json": "6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05",
+          "SHA256SUMS.txt": "002d01293ab2d48058167c7352fcd5e03f7f5596f35549865dca686a087cd845"
+        }
+      },
+      "protectedRuntimeHashes": {
+        "assets/asset-manifest.json": "fc2150fd425eaf0819a40cf5f7a864c214e779651a2d785fafc6a3f6088346d6",
+        "assets/characters/gear-normal.svg": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e",
+        "assets/characters/gear-praise.svg": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4",
+        "assets/characters/gear-thinking.svg": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259",
+        "assets/characters/luke-happy.svg": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8",
+        "assets/characters/luke-normal.svg": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694",
+        "assets/characters/luke-surprised.svg": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271",
+        "assets/decoration/workshop-emblem.svg": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af",
+        "assets/decoration/workshop-pattern.svg": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977",
+        "qa/fixtures/solutions.json": "17c9dd7fd20694a8bafefeab8516daa6ce1fa32d842e0773d074647ec7eee138",
+        "qa/fixtures/stages.json": "2246606e3195d6aca3ed0a71532f290f2c0bc21065299ffbebaa96a023f92c9f",
+        "src/data/part-definitions.js": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7",
+        "src/data/physics-config.js": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756",
+        "src/domain/result-evaluator.js": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b",
+        "src/physics/adapter.js": "0dd6de7de8a8d42e858f745a0525462a56ef838bb3b70ca852bc1b8fd0595a19",
+        "src/physics/body-factory.js": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b",
+        "src/physics/seesaw-controller.js": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd",
+        "src/physics/spring-controller.js": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa",
+        "src/presentation/sound-definitions.js": "1ee009657df18d07ad52c6d8bb8abf5055a7c4b301ea4d24b02c1064a8028046",
+        "src/storage/lock-manager.js": "a3d21dab38054735c159410c0c336b2fb3829ed9a0dc449f9d49f215246d24bd",
+        "vendor/planck/LICENSE": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca",
+        "vendor/planck/planck.mjs": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1"
+      },
+      "allowDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+      "approvedProductDiff": [
+        "games/0010_karakuri-workshop/index.html",
+        "games/0010_karakuri-workshop/qa/fixtures/cr010-certified-stages.json",
+        "games/0010_karakuri-workshop/qa/fixtures/cr010-stage-candidates.json",
+        "games/0010_karakuri-workshop/qa/harness/budget.js",
+        "games/0010_karakuri-workshop/qa/harness/checkpoint.js",
+        "games/0010_karakuri-workshop/qa/harness/stage-evaluator.js",
+        "games/0010_karakuri-workshop/qa/harness/stage-search.js",
+        "games/0010_karakuri-workshop/qa/harness/test-runner.js",
+        "games/0010_karakuri-workshop/qa/state/runtime-manifest.json",
+        "games/0010_karakuri-workshop/src/app.js",
+        "games/0010_karakuri-workshop/src/app/controller.js",
+        "games/0010_karakuri-workshop/src/app/tutorial-controller.js",
+        "games/0010_karakuri-workshop/src/data/legacy-stage-identities.js",
+        "games/0010_karakuri-workshop/src/data/stage-definitions.js",
+        "games/0010_karakuri-workshop/src/data/tutorial-definitions.js",
+        "games/0010_karakuri-workshop/src/domain/score-service.js",
+        "games/0010_karakuri-workshop/src/domain/tutorial-evaluator.js",
+        "games/0010_karakuri-workshop/src/domain/usage-requirements.js",
+        "games/0010_karakuri-workshop/src/storage/save-migration.js",
+        "games/0010_karakuri-workshop/src/storage/save-repository.js",
+        "games/0010_karakuri-workshop/src/storage/save-validator.js",
+        "games/0010_karakuri-workshop/src/ui/input-controller.js",
+        "games/0010_karakuri-workshop/src/ui/ui-controller.js",
+        "games/0010_karakuri-workshop/styles.css",
+        "games/0010_karakuri-workshop/tests/cr010-gameplay.test.js",
+        "games/0010_karakuri-workshop/tests/cr010-migration.test.js",
+        "games/0010_karakuri-workshop/tests/cr010-tutorial.test.js"
+      ],
+      "existingGameTrees": {
+        "games/0001_target-tap": "743ad53e417d25450671fb646b71cfd57c66974e",
+        "games/0002_light-panels": "3a788b34cddc4556fde928c23212562a21abff9d",
+        "games/0003_30sec-survival": "4088a7a35dc9c3e2c4eb91e9f31ac1f5d2858a6d",
+        "games/0004_wobbly-tower": "e12cf93d9a5a282130028feff99637a07cbca87e",
+        "games/0005_hitofude-delivery": "9f49462243b4fc5f2825e5ff1a53f9ea0d86d2cd",
+        "games/0006_traffic-panic": "ad91f999f05f95a3af88972d0717a42e4e462545",
+        "games/0007_weather-bakery": "0795236980c96be5067ffb8dbbb5102779b19b47",
+        "games/0008_three-minute-detective": "a78e51fcd121ab72248211ef038d4cb14f062017",
+        "games/0009_three-move-hero": "ad0a89226ac95923b24a5971032166ae6eb331aa"
+      },
+      "releaseFileInventory": [
+        {
+          "name": "assets/asset-manifest.json",
+          "bytes": 3248,
+          "sha256": "fc2150fd425eaf0819a40cf5f7a864c214e779651a2d785fafc6a3f6088346d6"
+        },
+        {
+          "name": "assets/characters/gear-normal.svg",
+          "bytes": 1699,
+          "sha256": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e"
+        },
+        {
+          "name": "assets/characters/gear-praise.svg",
+          "bytes": 1873,
+          "sha256": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4"
+        },
+        {
+          "name": "assets/characters/gear-thinking.svg",
+          "bytes": 1812,
+          "sha256": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259"
+        },
+        {
+          "name": "assets/characters/luke-happy.svg",
+          "bytes": 1774,
+          "sha256": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8"
+        },
+        {
+          "name": "assets/characters/luke-normal.svg",
+          "bytes": 1713,
+          "sha256": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694"
+        },
+        {
+          "name": "assets/characters/luke-surprised.svg",
+          "bytes": 1708,
+          "sha256": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271"
+        },
+        {
+          "name": "assets/decoration/workshop-emblem.svg",
+          "bytes": 235,
+          "sha256": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af"
+        },
+        {
+          "name": "assets/decoration/workshop-pattern.svg",
+          "bytes": 212,
+          "sha256": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977"
+        },
+        {
+          "name": "index.html",
+          "bytes": 6953,
+          "sha256": "09f891877165d9c4c9d4af8844c0f772a8f128115eecf536d11856f7d2c6c754"
+        },
+        {
+          "name": "src/app.js",
+          "bytes": 9482,
+          "sha256": "76b85d59c1c1a1e9939a8f5d1d7fe2cc85c7d7cf10e0c5a4cecc7387bae0801d"
+        },
+        {
+          "name": "src/app/controller.js",
+          "bytes": 18778,
+          "sha256": "aac7ebd280dec2de299c5188fe13f87e9342065cf58441ce49ca224bc2edc18a"
+        },
+        {
+          "name": "src/app/state-machine.js",
+          "bytes": 1091,
+          "sha256": "a32900ecbfa7c03cb31c7516f54beaa5ca2367c8fcb9bbb94cdec4ecd220c23f"
+        },
+        {
+          "name": "src/app/tutorial-controller.js",
+          "bytes": 11612,
+          "sha256": "ea7b4c7ce794150e354cdab57139193be735bfff6835fe6b6dd9019d7c7dd426"
+        },
+        {
+          "name": "src/data/legacy-stage-identities.js",
+          "bytes": 1945,
+          "sha256": "97f875f9c72f807038988f0106de72550af3512b8f96039438b3c4921d13b91c"
+        },
+        {
+          "name": "src/data/part-definitions.js",
+          "bytes": 796,
+          "sha256": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7"
+        },
+        {
+          "name": "src/data/physics-config.js",
+          "bytes": 1526,
+          "sha256": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756"
+        },
+        {
+          "name": "src/data/stage-definitions.js",
+          "bytes": 13789,
+          "sha256": "b281afb505e1c496d02c0c8b1bcadbf3ad5ce8c348ed18e8eb14202b5d9aa740"
+        },
+        {
+          "name": "src/data/tutorial-definitions.js",
+          "bytes": 4091,
+          "sha256": "1b7419844c9f2d9d8c588cb69e0e31bb4f7cda48577e3a15269c9f52ec7e8fa8"
+        },
+        {
+          "name": "src/domain/design-editor.js",
+          "bytes": 7677,
+          "sha256": "f089ca44259dd2ede96f6e7e541850217b08d7b4488fb327c4428d6a048cd149"
+        },
+        {
+          "name": "src/domain/geometry.js",
+          "bytes": 2617,
+          "sha256": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db"
+        },
+        {
+          "name": "src/domain/placement-validator.js",
+          "bytes": 2302,
+          "sha256": "7ebebefdbe5eb7a2bd4576780ab4666afc6442b6f2f36ccf6ae99f330fbb07cd"
+        },
+        {
+          "name": "src/domain/result-evaluator.js",
+          "bytes": 5787,
+          "sha256": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b"
+        },
+        {
+          "name": "src/domain/score-service.js",
+          "bytes": 2287,
+          "sha256": "fdc4243dc90f3935243623aee7d8f4d074e16e918b54a3b994b92ed46a3c2c91"
+        },
+        {
+          "name": "src/domain/tutorial-evaluator.js",
+          "bytes": 5963,
+          "sha256": "891e0aa44cc76afb209894dd783648780a11deca0ae381f20e0e6e5338749216"
+        },
+        {
+          "name": "src/domain/undo-manager.js",
+          "bytes": 310,
+          "sha256": "c5de8ef64a45d4338cd35226bc08816174960096f61a66b571ca4eef77d70a36"
+        },
+        {
+          "name": "src/domain/usage-requirements.js",
+          "bytes": 1874,
+          "sha256": "6a7e116ac4c7ed7b9ce8258f8922fcde317018f85f97b344f9113c911d7bc340"
+        },
+        {
+          "name": "src/physics/adapter.js",
+          "bytes": 17832,
+          "sha256": "0dd6de7de8a8d42e858f745a0525462a56ef838bb3b70ca852bc1b8fd0595a19"
+        },
+        {
+          "name": "src/physics/body-factory.js",
+          "bytes": 2732,
+          "sha256": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b"
+        },
+        {
+          "name": "src/physics/seesaw-controller.js",
+          "bytes": 1089,
+          "sha256": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd"
+        },
+        {
+          "name": "src/physics/simulation-controller.js",
+          "bytes": 1707,
+          "sha256": "62e291a08c6ae4d6c9fee40a84b21e3b34619e06786e795946d7603b5a5c554d"
+        },
+        {
+          "name": "src/physics/spring-controller.js",
+          "bytes": 10882,
+          "sha256": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+        },
+        {
+          "name": "src/physics/trajectory-recorder.js",
+          "bytes": 982,
+          "sha256": "bc81b406fcaf0a10b7b91e7fc79f0e17cabafdbe32b399074a34741beb3b0ed0"
+        },
+        {
+          "name": "src/presentation/audio-controller.js",
+          "bytes": 4727,
+          "sha256": "464f334b7a96ec527aa3fb2c84deab97037554144c597b4a10460ac731930f55"
+        },
+        {
+          "name": "src/presentation/character-controller.js",
+          "bytes": 1220,
+          "sha256": "5616ef73dc1bec1eee6ee782f78a788a2c418a432e218a38a8fa9d79f3f82561"
+        },
+        {
+          "name": "src/presentation/sound-definitions.js",
+          "bytes": 478,
+          "sha256": "1ee009657df18d07ad52c6d8bb8abf5055a7c4b301ea4d24b02c1064a8028046"
+        },
+        {
+          "name": "src/storage/lock-manager.js",
+          "bytes": 1400,
+          "sha256": "a3d21dab38054735c159410c0c336b2fb3829ed9a0dc449f9d49f215246d24bd"
+        },
+        {
+          "name": "src/storage/save-migration.js",
+          "bytes": 2574,
+          "sha256": "479954bdca8457d161b527839e1bb09e1eb778a1ea42f3e7eaaafce5fa5cbda8"
+        },
+        {
+          "name": "src/storage/save-repository.js",
+          "bytes": 9270,
+          "sha256": "4b695d4e7ed9b49ae174d0d493a356fd1ea0340ac5c7648ead9d837f39817488"
+        },
+        {
+          "name": "src/storage/save-validator.js",
+          "bytes": 8914,
+          "sha256": "3f5d3c7111ff5aaef765fc92fc8cfe9cea32d8b5ab55917040240d20e4c6f9be"
+        },
+        {
+          "name": "src/ui/canvas-renderer.js",
+          "bytes": 4058,
+          "sha256": "dddd5f185767e984d147e9cf6168e3f861c0f446fa3c9bd7ad4afd72632ba37f"
+        },
+        {
+          "name": "src/ui/input-controller.js",
+          "bytes": 3656,
+          "sha256": "31af38eb14583bcf25402b38325dc463d98dbdbdca727d3b66b363fdf562820e"
+        },
+        {
+          "name": "src/ui/ui-controller.js",
+          "bytes": 20786,
+          "sha256": "284b825a4b842149ed47d33e406112aff7c05b93918fcc674b683f51522fd84b"
+        },
+        {
+          "name": "styles.css",
+          "bytes": 5960,
+          "sha256": "23b6bc421e37ca6943a627095ce6f686f9de918d93d5a64698c6dd37b5603e40"
+        },
+        {
+          "name": "vendor/planck/LICENSE",
+          "bytes": 1078,
+          "sha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca"
+        },
+        {
+          "name": "vendor/planck/planck.mjs",
+          "bytes": 402646,
+          "sha256": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1"
+        }
+      ],
+      "oldCanonicalCases": 982,
+      "oldParentTests": 296,
+      "readOnlyReviewers": [
+        "/root/e0_review",
+        "/root/e8_coverage",
+        "/root/e1_test_plan",
+        "/root/e7_revalidation_review"
+      ],
+      "releaseReceiptRawSHA256": "305d8704783175525d753c4cb61b07a41ca46fc3e7cc9002210c05bb279a0a1c"
+    },
+    "originalsPreserved": true,
+    "status": "HOLD",
+    "recoveryArchive": {
+      "filename": "CR010-R3-QA-recovery.tar.gz",
+      "sha256": "b725d55bbc804ecb847e215832fa3e0d605c1304115562bd35286944fc6c0277",
+      "verifiedMembers": 300,
+      "predecessorArchives": [
+        "CR010-R1-settlement.tar.gz",
+        "CR010-R2-HOLD-recovery.tar.gz",
+        "CR010-R2-followup-QA-recovery.tar.gz"
+      ]
+    }
   }
 }
