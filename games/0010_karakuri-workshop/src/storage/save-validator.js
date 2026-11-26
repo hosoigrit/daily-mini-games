@@ -21,10 +21,15 @@ export function createSaveEpoch(random = globalThis.crypto) {
 }
 
 const emptyRecord = () => ({progress: {cleared: false, historicalBestStars: 0}, draft: null, currentBest: null, previousBest: null});
-export function createDefaultSave(saveEpoch) {
+export function unseenTutorial() {
+  return {curriculumVersion: 1, state: 'unseen', nextStep: 1};
+}
+
+export function createDefaultSave(saveEpoch, schemaVersion = 1) {
   if (typeof saveEpoch !== 'string' || !epochFormat.test(saveEpoch)) throw new TypeError('Invalid save epoch.');
-  return {gameId: 'game-0010', schemaVersion: 1, revision: 0, saveEpoch,
-    stages: Object.fromEntries(STAGE_IDS.map(id => [id, emptyRecord()])), settings: {muted: false, volume: .7}};
+  return {gameId: 'game-0010', schemaVersion, revision: 0, saveEpoch,
+    stages: Object.fromEntries(STAGE_IDS.map(id => [id, emptyRecord()])), settings: {muted: false, volume: .7},
+    ...(schemaVersion === 2 ? {tutorial: unseenTutorial(), legacyV1: null} : {})};
 }
 
 export function parseSaveRaw(raw) {
@@ -83,22 +88,42 @@ const validSettings = s => keysAre(s,['muted','volume']) && typeof s.muted === '
 const validProgress = p => keysAre(p,['cleared','historicalBestStars']) && typeof p.cleared === 'boolean'
   && (p.cleared ? p.historicalBestStars === null || integer(p.historicalBestStars,1,3) : p.historicalBestStars === 0);
 
-export function assessSave(raw, designs) {
+export function validTutorial(tutorial) {
+  return keysAre(tutorial,['curriculumVersion','state','nextStep']) && tutorial.curriculumVersion === 1
+    && (tutorial.state === 'unseen' && tutorial.nextStep === 1
+      || tutorial.state === 'completed' && tutorial.nextStep === 13
+      || ['inProgress','skipped'].includes(tutorial.state) && integer(tutorial.nextStep,1,12));
+}
+
+const validLegacyReference = reference => reference === null
+  || keysAre(reference,['sourceEpoch','sourceRevision','sourceSHA256'])
+  && typeof reference.sourceEpoch === 'string' && epochFormat.test(reference.sourceEpoch)
+  && integer(reference.sourceRevision,0,Number.MAX_SAFE_INTEGER - 2)
+  && typeof reference.sourceSHA256 === 'string' && /^[0-9a-f]{64}$/u.test(reference.sourceSHA256);
+
+export function assessSave(raw, designs, {version = 1} = {}) {
   if (raw === null) return {status:'NEW'};
   let source;
   try { source=parseSaveRaw(raw); } catch { return {status:'RECOVERY_REQUIRED', raw, reason:'SYNTAX'}; }
-  if (!source || source.gameId !== 'game-0010' || source.schemaVersion !== 1) {
+  if (!source || source.gameId !== 'game-0010' || source.schemaVersion !== version) {
     return {status:'RECOVERY_REQUIRED',raw,reason:'VERSION'};
   }
-  const validRoot = keysAre(source,['gameId','schemaVersion','revision','saveEpoch','stages','settings'])
+  const legacyKeys = ['gameId','schemaVersion','revision','saveEpoch','stages','settings'];
+  const v2 = version === 2;
+  const validRoot = keysAre(source,v2 ? [...legacyKeys,'tutorial','legacyV1'] : legacyKeys)
+    && (!v2 || validTutorial(source.tutorial) && validLegacyReference(source.legacyV1))
     && integer(source.revision,0,Number.MAX_SAFE_INTEGER) && typeof source.saveEpoch==='string' && epochFormat.test(source.saveEpoch)
     && keysAre(source.stages,STAGE_IDS) && validSettings(source.settings);
   const issues=[];
-  const data={gameId:'game-0010',schemaVersion:1,revision:source.revision,saveEpoch:source.saveEpoch,
+  const data={gameId:'game-0010',schemaVersion:version,revision:source.revision,saveEpoch:source.saveEpoch,
     stages:{},settings:{
       muted:typeof source.settings?.muted==='boolean'?source.settings.muted:false,
       volume:Number.isFinite(source.settings?.volume)&&source.settings.volume>=0&&source.settings.volume<=1?source.settings.volume:.7,
     }};
+  if(v2) {
+    data.tutorial=validTutorial(source.tutorial)?source.tutorial:unseenTutorial();
+    data.legacyV1=validLegacyReference(source.legacyV1)?source.legacyV1:null;
+  }
   for(const id of STAGE_IDS){
     const row=source.stages?.[id];
     const {stage,identity}=designs[id];
@@ -110,7 +135,7 @@ export function assessSave(raw, designs) {
       issues.push(id+':progress');
     }
     if(validDraft(row?.draft)){
-      if(row.draft && legal(stage,row.draft.placements))cleaned.draft={...row.draft,geometryId:identity.geometryId};
+      if(row.draft && (!v2 || row.draft.geometryId===identity.geometryId) && legal(stage,row.draft.placements))cleaned.draft={...row.draft,geometryId:identity.geometryId};
       else if(row.draft)issues.push(id+':draft-geometry');
     }else issues.push(id+':draft');
     if(validBest(row?.previousBest))cleaned.previousBest=row.previousBest;
@@ -122,7 +147,8 @@ export function assessSave(raw, designs) {
       if(!cleaned.progress.cleared || cleaned.progress.historicalBestStars!==null && best.stars>cleaned.progress.historicalBestStars){
         issues.push(id+':best-progress');
       }else if(!current){
-        cleaned.previousBest=best;
+        if(v2)issues.push(id+':best-compatibility');
+        else cleaned.previousBest=best;
       }else if(!legal(stage,best.placements)||best.stars!==starsForResult('CLEARED',best.usedParts,stage.star3Target)){
         issues.push(id+':best-geometry');
       }else cleaned.currentBest=best;

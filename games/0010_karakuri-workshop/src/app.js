@@ -1,4 +1,5 @@
 import {getStages,getStageIdentity} from './data/stage-definitions.js';
+import {getLegacyDesigns} from './data/legacy-stage-identities.js';
 import {createGameController} from './app/controller.js';
 import {createSaveLock} from './storage/lock-manager.js';
 import {createSaveRepository} from './storage/save-repository.js';
@@ -58,13 +59,13 @@ const certifiedHints = {
   "03": [
     {
       "level": 1,
-      "text": "落下する球はいったん受け止められる。",
-      "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+      "text": "球の落下を、足場で受け止めよう。",
+      "compatibilityId": "510bd370c8bba7bcf02ed61496ce18a90a18e2efef58e59769f5d93657a11555"
     },
     {
       "level": 2,
-      "text": "固定の坂道の先に足場を置き、その先の坂道へつなごう。",
-      "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+      "text": "固定の坂道から落ちる球を受け、次の坂道へ渡そう。",
+      "compatibilityId": "510bd370c8bba7bcf02ed61496ce18a90a18e2efef58e59769f5d93657a11555"
     },
     {
       "level": 3,
@@ -76,19 +77,19 @@ const certifiedHints = {
           "angleDeg": 0
         }
       ],
-      "compatibilityId": "35aa413c5cffcd8ebf1b320ec147d00874632c4aba00cc26218fa63c3a0cd37f"
+      "compatibilityId": "510bd370c8bba7bcf02ed61496ce18a90a18e2efef58e59769f5d93657a11555"
     }
   ],
   "04": [
     {
       "level": 1,
-      "text": "高さの差は跳躍で越えられる。",
-      "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+      "text": "谷を越えるには、先に高さを作ろう。",
+      "compatibilityId": "44a43e4021176de36e59157daaf5b197d35e2f715c948d57acc33efaeae7d091"
     },
     {
       "level": 2,
-      "text": "初めの坂道で球をバネまで導き、壁を越える向きに跳ばそう。",
-      "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+      "text": "坂道で球をバネの上へ導き、谷の向こうまで跳ばそう。",
+      "compatibilityId": "44a43e4021176de36e59157daaf5b197d35e2f715c948d57acc33efaeae7d091"
     },
     {
       "level": 3,
@@ -100,151 +101,151 @@ const certifiedHints = {
           "angleDeg": 30
         }
       ],
-      "compatibilityId": "91330b0d4ab9b4ff3685c67e9fb8ed051ff06fc7574c7b23f1e42b2a8adb19c6"
+      "compatibilityId": "44a43e4021176de36e59157daaf5b197d35e2f715c948d57acc33efaeae7d091"
     }
   ],
   "05": [
     {
       "level": 1,
-      "text": "高さと飛距離の両方を見よう。",
-      "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
+      "text": "高く跳んだ球は、着地まで見届けよう。",
+      "compatibilityId": "37f5dd406e0cd92c40bc9cdea505d87c9d1b243fbbea7a0091dfd716f9988572"
     },
     {
       "level": 2,
-      "text": "バネで壁を越えた球を、ゴールの手前で坂道に受け渡そう。",
-      "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
-    },
-    {
-      "level": 3,
-      "parts": [
-        {
-          "type": "B",
-          "gridX": 7,
-          "gridY": 25,
-          "angleDeg": 30
-        }
-      ],
-      "compatibilityId": "ab12d15cfbcb950adc0ff1e6aa79e5b910370333affd93bb0d261595e1eb9ef1"
-    }
-  ],
-  "06": [
-    {
-      "level": 1,
-      "text": "支点から離れた場所に球を落とそう。",
-      "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
-    },
-    {
-      "level": 2,
-      "text": "シーソーで右へ向きを変え、先の坂道でゴールへつなごう。",
-      "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
-    },
-    {
-      "level": 3,
-      "parts": [
-        {
-          "type": "R",
-          "gridX": 18,
-          "gridY": 15,
-          "angleDeg": 30
-        }
-      ],
-      "compatibilityId": "8d42f75fb86ce456fbb9c0309543a32ca045bc1c33dee5abb181cb1ec84eb2de"
-    }
-  ],
-  "07": [
-    {
-      "level": 1,
-      "text": "障害物を避ける道は複数ある。",
-      "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
-    },
-    {
-      "level": 2,
-      "text": "坂道を何枚かつなぎ、最後の足場でゴールへ向かう球を受けよう。",
-      "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+      "text": "バネから落ちてくる球を、右側の足場で受けよう。",
+      "compatibilityId": "37f5dd406e0cd92c40bc9cdea505d87c9d1b243fbbea7a0091dfd716f9988572"
     },
     {
       "level": 3,
       "parts": [
         {
           "type": "P",
-          "gridX": 28,
-          "gridY": 17,
+          "gridX": 30,
+          "gridY": 12,
           "angleDeg": 0
         }
       ],
-      "compatibilityId": "ae32a083d6714866e5c3b245f449aa00047ef0cd28342b0f2e374d3be91c0924"
+      "compatibilityId": "37f5dd406e0cd92c40bc9cdea505d87c9d1b243fbbea7a0091dfd716f9988572"
+    }
+  ],
+  "06": [
+    {
+      "level": 1,
+      "text": "シーソーの支点から離れた場所で球を受けよう。",
+      "compatibilityId": "b1c9decad8a0dc66e2094c0a3c661e76d5dbc5199b3f88d21368e99305451868"
+    },
+    {
+      "level": 2,
+      "text": "板が傾いた先に、ゴールへ続く坂道を置けるよ。",
+      "compatibilityId": "b1c9decad8a0dc66e2094c0a3c661e76d5dbc5199b3f88d21368e99305451868"
+    },
+    {
+      "level": 3,
+      "parts": [
+        {
+          "type": "S",
+          "gridX": 11,
+          "gridY": 9,
+          "angleDeg": 0
+        }
+      ],
+      "compatibilityId": "b1c9decad8a0dc66e2094c0a3c661e76d5dbc5199b3f88d21368e99305451868"
+    }
+  ],
+  "07": [
+    {
+      "level": 1,
+      "text": "上の壁の下、下の壁の上に通り道を作ろう。",
+      "compatibilityId": "9c5e391b194f20c51dc8eb9a5d3272cb8fb7306327dde2a04bb048ecb439e892"
+    },
+    {
+      "level": 2,
+      "text": "シーソーの先で、足場から次の足場に球を渡そう。",
+      "compatibilityId": "9c5e391b194f20c51dc8eb9a5d3272cb8fb7306327dde2a04bb048ecb439e892"
+    },
+    {
+      "level": 3,
+      "parts": [
+        {
+          "type": "P",
+          "gridX": 23,
+          "gridY": 16,
+          "angleDeg": 0
+        }
+      ],
+      "compatibilityId": "9c5e391b194f20c51dc8eb9a5d3272cb8fb7306327dde2a04bb048ecb439e892"
     }
   ],
   "08": [
     {
       "level": 1,
-      "text": "一度目の跳躍の着地点を見よう。",
-      "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+      "text": "最初のバネと別のバネで、二度目に跳ねよう。",
+      "compatibilityId": "029741624f8f4390bfa3269d8cf2367955656439c00cf70483cc29ea9af4e89f"
     },
     {
       "level": 2,
-      "text": "最初のバネで右へ送り、次のバネで左のゴールへ跳ばそう。",
-      "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+      "text": "右側のバネで球を左上のゴールへ折り返そう。",
+      "compatibilityId": "029741624f8f4390bfa3269d8cf2367955656439c00cf70483cc29ea9af4e89f"
     },
     {
       "level": 3,
       "parts": [
         {
           "type": "B",
-          "gridX": 4,
-          "gridY": 27,
-          "angleDeg": 30
+          "gridX": 32,
+          "gridY": 20,
+          "angleDeg": -15
         }
       ],
-      "compatibilityId": "2be016ff471eed206caaa224e9a0c142a2654d825cfb9f3ff9a31610a1d3bef7"
+      "compatibilityId": "029741624f8f4390bfa3269d8cf2367955656439c00cf70483cc29ea9af4e89f"
     }
   ],
   "09": [
     {
       "level": 1,
-      "text": "一つの仕掛けから次の仕掛けへ球を渡そう。",
-      "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+      "text": "バネで跳ねた球を、落下する途中で受けよう。",
+      "compatibilityId": "cd67e97d8ac8795ac397bc487958da6ae979fb77648c6f511fa9f1d916ce1b70"
     },
     {
       "level": 2,
-      "text": "シーソーの右側に荷重をかけ、落ちた先のバネでゴールに届かせよう。",
-      "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+      "text": "シーソーで送った球をバネで跳ばし、右側の足場へつなごう。",
+      "compatibilityId": "cd67e97d8ac8795ac397bc487958da6ae979fb77648c6f511fa9f1d916ce1b70"
     },
     {
       "level": 3,
       "parts": [
         {
-          "type": "B",
-          "gridX": 17,
-          "gridY": 20,
-          "angleDeg": 15
+          "type": "P",
+          "gridX": 29,
+          "gridY": 7,
+          "angleDeg": 0
         }
       ],
-      "compatibilityId": "124fd048598df1c66c41fff92c4d84ad2b7a7b1990c9fd23be23be620d7aa9b6"
+      "compatibilityId": "cd67e97d8ac8795ac397bc487958da6ae979fb77648c6f511fa9f1d916ce1b70"
     }
   ],
   "10": [
     {
       "level": 1,
-      "text": "飛び越えた後の着地まで考えよう。",
-      "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+      "text": "坂道からボールを渡す順番を考えよう。",
+      "compatibilityId": "ba35cc72d042290895b4bef1c590671661ecf58854938ff7f3737788be6ae317"
     },
     {
       "level": 2,
-      "text": "バネで壁の下を通し、横向きの坂道でゴール手前に着地させよう。",
-      "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+      "text": "シーソーからバネに渡し、跳ねた球を右側の足場へ導こう。",
+      "compatibilityId": "ba35cc72d042290895b4bef1c590671661ecf58854938ff7f3737788be6ae317"
     },
     {
       "level": 3,
       "parts": [
         {
-          "type": "B",
-          "gridX": 6,
-          "gridY": 25,
-          "angleDeg": 30
+          "type": "P",
+          "gridX": 30,
+          "gridY": 7,
+          "angleDeg": 0
         }
       ],
-      "compatibilityId": "79723c0ddcd058d97d89765d728b79a5eba17b4c3051de5130a19e8300b254ab"
+      "compatibilityId": "ba35cc72d042290895b4bef1c590671661ecf58854938ff7f3737788be6ae317"
     }
   ]
 };
@@ -253,8 +254,12 @@ async function launch(){
   const stages=getStages();
   const identities=Object.fromEntries(await Promise.all(stages.map(async s=>[s.id,await getStageIdentity(s)])));
   const designs=Object.fromEntries(stages.map(stage=>[stage.id,{stage,identity:identities[stage.id]}]));
-  const back={getItem:key=>globalThis.localStorage.getItem(key),setItem:(key,value)=>globalThis.localStorage.setItem(key,value)};
-  const storage=createSaveRepository({storage:back,lock:createSaveLock(navigator.locks),designs});
+  const back={
+    getItem:key=>globalThis.localStorage.getItem(key),
+    setItem:(key,value)=>globalThis.localStorage.setItem(key,value),
+    keys:()=>Array.from({length:globalThis.localStorage.length},(_,index)=>globalThis.localStorage.key(index)),
+  };
+  const storage=createSaveRepository({storage:back,lock:createSaveLock(navigator.locks),designs,legacyDesigns:getLegacyDesigns()});
   await storage.start();
   const sound=createAudioController();
   sound.configure(storage.read().data.settings);

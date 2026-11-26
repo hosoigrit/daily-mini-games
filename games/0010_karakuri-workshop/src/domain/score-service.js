@@ -33,12 +33,13 @@ export function commitScore(progress, {stageId, status, compatibility, placement
     previousBest: (newVersion ? old?.best : null) ?? old?.previousBest ?? null,
   };
   const stages = {...progress.stages, [stageId]: updated};
-  const complete = Object.values(stages).filter(entry => entry.cleared).length === 10;
-  const maximum = Object.values(stages).reduce((sum, entry) => sum + entry.historicalStars, 0) === 30;
+  const complete = Object.values(stages).filter(entry => progress.currentOnly ? entry.best : entry.cleared).length === 10;
+  const maximum = Object.values(stages).reduce((sum, entry) => sum + (progress.currentOnly
+    ? entry.best?.stars ?? 0 : entry.historicalStars), 0) === 30;
   const achievements = [];
   if (complete && !progress.achievements.allCleared) achievements.push('ALL_CLEARED');
   if (maximum && !progress.achievements.allStars) achievements.push('ALL_STARS');
-  return {stars, achievements, progress: {stages, achievements: {
+  return {stars, achievements, progress: {...progress, stages, achievements: {
     allCleared: progress.achievements.allCleared || complete,
     allStars: progress.achievements.allStars || maximum,
   }}};

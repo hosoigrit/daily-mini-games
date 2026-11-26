@@ -1,0 +1,1218 @@
+{
+  "coordinateSystem": {
+    "unitM": 0.24,
+    "origin": "top-left",
+    "conversion": "x=.24*gx; y=7.2-.24*gy",
+    "fixedObstacleTuple": [
+      "gx",
+      "gy",
+      "widthG",
+      "heightG"
+    ],
+    "pieceTuple": [
+      "type",
+      "gx",
+      "gy",
+      "clockwiseDegrees"
+    ]
+  },
+  "status": "UNMEASURED_DESIGN_PROPOSAL",
+  "inventoryOrder": [
+    "R",
+    "P",
+    "B",
+    "S"
+  ],
+  "solutionStatus": "ST01/02 historical references. CR010 is unmeasured; only explicit prePlaced or resumePrePlacedByStep may be loaded by ST00",
+  "stages": [
+    {
+      "id": "01",
+      "name": "はじめての発明",
+      "ball": [
+        3,
+        1.5
+      ],
+      "goal": [
+        19,
+        18
+      ],
+      "fixed": [
+        [
+          "R",
+          5,
+          4,
+          15
+        ]
+      ],
+      "walls": [],
+      "inventory": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "star3": 1,
+      "require": {
+        "R": 1
+      },
+      "originalRequirement": "R",
+      "A": [
+        [
+          "R",
+          12,
+          10,
+          30
+        ]
+      ],
+      "B": null,
+      "notes": "現行維持・旧認定配置を参照。"
+    },
+    {
+      "id": "02",
+      "name": "傾きのひみつ",
+      "ball": [
+        36,
+        1.5
+      ],
+      "goal": [
+        21,
+        19
+      ],
+      "fixed": [
+        [
+          "R",
+          34,
+          4,
+          -15
+        ]
+      ],
+      "walls": [
+        [
+          35,
+          13,
+          4,
+          2
+        ]
+      ],
+      "inventory": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "star3": 1,
+      "require": {
+        "R": 1
+      },
+      "originalRequirement": "slope",
+      "A": [
+        [
+          "R",
+          27,
+          10,
+          -45
+        ]
+      ],
+      "B": null,
+      "notes": "現行維持・回転坂道限定の旧認定配置を参照。"
+    },
+    {
+      "id": "03",
+      "name": "落とさないで！",
+      "ball": [
+        4,
+        1.5
+      ],
+      "goal": [
+        25,
+        20
+      ],
+      "fixed": [
+        [
+          "R",
+          6,
+          4,
+          15
+        ]
+      ],
+      "walls": [
+        [
+          14,
+          13,
+          3,
+          2
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "star3": 2,
+      "require": {
+        "P": 1
+      },
+      "A": [
+        [
+          "P",
+          12,
+          9,
+          0
+        ],
+        [
+          "R",
+          18,
+          12,
+          30
+        ]
+      ],
+      "B": null,
+      "notes": "固定坂道から低い障害物の手前の足場に着地し、右端から坂道へ渡す。"
+    },
+    {
+      "id": "04",
+      "name": "大きな谷を越えて",
+      "ball": [
+        6,
+        19
+      ],
+      "goal": [
+        21,
+        14
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          13,
+          23,
+          2,
+          14
+        ],
+        [
+          18,
+          23,
+          4,
+          3
+        ]
+      ],
+      "inventory": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "star3": 2,
+      "require": {
+        "B": 1
+      },
+      "A": [
+        [
+          "R",
+          7,
+          21,
+          -30
+        ],
+        [
+          "B",
+          2,
+          25,
+          30
+        ]
+      ],
+      "B": [
+        [
+          "B",
+          6,
+          25,
+          15
+        ]
+      ],
+      "notes": "落下から変向して左バネへ渡すか、真下のバネへ直落下。高所のゴールと谷壁を越える。"
+    },
+    {
+      "id": "05",
+      "name": "空まで届け",
+      "ball": [
+        8,
+        20
+      ],
+      "goal": [
+        34,
+        16
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          19,
+          23,
+          2,
+          14
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "star3": 3,
+      "require": {
+        "B": 1,
+        "P": 1
+      },
+      "A": [
+        [
+          "R",
+          9,
+          23,
+          15
+        ],
+        [
+          "B",
+          14,
+          25,
+          15
+        ],
+        [
+          "P",
+          30,
+          12,
+          0
+        ]
+      ],
+      "B": [
+        [
+          "B",
+          7,
+          25,
+          30
+        ],
+        [
+          "P",
+          27,
+          12,
+          0
+        ]
+      ],
+      "notes": "壁越え後、下降中に高い足場で受けて右へ落とす。進入補助坂道とバネ角度が異なる。"
+    },
+    {
+      "id": "06",
+      "name": "てこの原理",
+      "ball": [
+        13,
+        4
+      ],
+      "goal": [
+        25,
+        21
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          5,
+          19,
+          4,
+          2
+        ],
+        [
+          18,
+          20,
+          2,
+          4
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "star3": 2,
+      "require": {
+        "S": 1
+      },
+      "A": [
+        [
+          "S",
+          11,
+          9,
+          0
+        ],
+        [
+          "R",
+          18,
+          15,
+          30
+        ]
+      ],
+      "B": [
+        [
+          "S",
+          12,
+          9,
+          0
+        ],
+        [
+          "P",
+          17,
+          15,
+          0
+        ]
+      ],
+      "notes": "支点の右を落下荷重で傾け、右の坂道か足場へ渡して壁の上から落とす。"
+    },
+    {
+      "id": "07",
+      "name": "ぐるっと回り道",
+      "ball": [
+        13,
+        4
+      ],
+      "goal": [
+        29,
+        23
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          23,
+          10,
+          2,
+          5
+        ],
+        [
+          24,
+          20,
+          2,
+          4
+        ]
+      ],
+      "inventory": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "star3": 3,
+      "require": {
+        "P": 1,
+        "S": 1
+      },
+      "A": [
+        [
+          "S",
+          12,
+          9,
+          0
+        ],
+        [
+          "P",
+          17,
+          15,
+          0
+        ],
+        [
+          "P",
+          23,
+          16,
+          0
+        ]
+      ],
+      "B": [
+        [
+          "S",
+          11,
+          9,
+          0
+        ],
+        [
+          "R",
+          17,
+          14,
+          15
+        ],
+        [
+          "P",
+          23,
+          16,
+          0
+        ]
+      ],
+      "detour": {
+        "wallIndex": 1,
+        "startFormula": "23 - 2/2 - 0.20/0.24",
+        "endFormula": "23 + 2/2 + 0.20/0.24",
+        "minimumGyFormula": "10 + 5/2 + 0.20/0.24",
+        "direction": "left-to-right",
+        "side": "below"
+      },
+      "notes": "上壁の下・床壁の上を通す。受け渡しに2枚目の足場か勾配を使う。"
+    },
+    {
+      "id": "08",
+      "name": "ジャンプ・リレー",
+      "ball": [
+        5,
+        22
+      ],
+      "goal": [
+        17,
+        9
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          18,
+          25,
+          2,
+          10
+        ],
+        [
+          12,
+          6,
+          2,
+          4
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        3,
+        0
+      ],
+      "star3": 3,
+      "require": {
+        "B": 2
+      },
+      "A": [
+        [
+          "B",
+          4,
+          27,
+          30
+        ],
+        [
+          "B",
+          32,
+          20,
+          -15
+        ]
+      ],
+      "B": [
+        [
+          "B",
+          4,
+          27,
+          30
+        ],
+        [
+          "B",
+          32,
+          20,
+          -15
+        ],
+        [
+          "R",
+          20,
+          4,
+          -15
+        ]
+      ],
+      "notes": "右の低い壁を越え、第2バネで左の高所へ戻す。左の高い壁が近道の単発ジャンプを遮る。Bは戻りの坂道が有効な場合のみ別解候補。"
+    },
+    {
+      "id": "09",
+      "name": "からくり連鎖",
+      "ball": [
+        13,
+        3
+      ],
+      "goal": [
+        35,
+        13
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          22,
+          25,
+          2,
+          10
+        ],
+        [
+          29,
+          18,
+          2,
+          6
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "star3": 4,
+      "require": {
+        "P": 1,
+        "B": 1,
+        "S": 1
+      },
+      "A": [
+        [
+          "S",
+          10,
+          8,
+          0
+        ],
+        [
+          "B",
+          17,
+          20,
+          15
+        ],
+        [
+          "P",
+          31,
+          7,
+          0
+        ]
+      ],
+      "B": [
+        [
+          "R",
+          12,
+          5,
+          15
+        ],
+        [
+          "S",
+          12,
+          10,
+          0
+        ],
+        [
+          "B",
+          18,
+          20,
+          15
+        ],
+        [
+          "P",
+          32,
+          7,
+          0
+        ]
+      ],
+      "notes": "板が低いバネへ送り、壁を越えた後の下降を高い足場で受け、右側ゴールに落とす。"
+    },
+    {
+      "id": "10",
+      "name": "最後の大発明",
+      "ball": [
+        6,
+        4
+      ],
+      "goal": [
+        36,
+        15
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          16,
+          5,
+          2,
+          10
+        ],
+        [
+          25,
+          24,
+          2,
+          10
+        ]
+      ],
+      "inventory": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "star3": 5,
+      "require": {
+        "R": 1,
+        "P": 1,
+        "B": 1,
+        "S": 1
+      },
+      "A": [
+        [
+          "R",
+          8,
+          8,
+          30
+        ],
+        [
+          "S",
+          14,
+          15,
+          0
+        ],
+        [
+          "B",
+          19,
+          23,
+          15
+        ],
+        [
+          "P",
+          32,
+          10,
+          0
+        ]
+      ],
+      "B": [
+        [
+          "R",
+          7,
+          8,
+          30
+        ],
+        [
+          "S",
+          14,
+          15,
+          0
+        ],
+        [
+          "B",
+          18,
+          23,
+          15
+        ],
+        [
+          "P",
+          30,
+          8,
+          0
+        ],
+        [
+          "P",
+          34,
+          11,
+          0
+        ]
+      ],
+      "notes": "開始の斜面で加速し、吊壁の手前から板へ。板で下へ送り、Bで低壁を越え、Pで着地からゴールへ。"
+    }
+  ],
+  "tutorial": [
+    {
+      "profile": "EDIT",
+      "steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "ball": [
+        3,
+        1.5
+      ],
+      "goal": [
+        19,
+        18
+      ],
+      "fixed": [
+        [
+          "R",
+          5,
+          4,
+          15
+        ]
+      ],
+      "walls": [],
+      "inventory": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "designWitness": [],
+      "objective": {},
+      "notes": "R(11,10,0)→方向(12,10)→ドラッグ(13,10)→+15°→削除→Undo。",
+      "resumePrePlacedByStep": {
+        "04": [
+          [
+            "R",
+            11,
+            10,
+            0
+          ]
+        ],
+        "05": [
+          [
+            "R",
+            13,
+            10,
+            0
+          ]
+        ],
+        "06": [
+          [
+            "R",
+            13,
+            10,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "profile": "CLOCK",
+      "steps": [
+        7
+      ],
+      "ball": [
+        20,
+        12.5
+      ],
+      "goal": [
+        32,
+        20
+      ],
+      "fixed": [
+        [
+          "P",
+          20,
+          15,
+          0
+        ]
+      ],
+      "walls": [],
+      "inventory": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "designWitness": [],
+      "objective": {},
+      "notes": "中央着地。開始・自分で停止・同じrunで再開。"
+    },
+    {
+      "profile": "RETRY",
+      "steps": [
+        8
+      ],
+      "ball": [
+        3,
+        1.5
+      ],
+      "goal": [
+        19,
+        18
+      ],
+      "fixed": [
+        [
+          "R",
+          5,
+          4,
+          15
+        ]
+      ],
+      "walls": [],
+      "inventory": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "designWitness": [
+        [
+          "R",
+          12,
+          10,
+          30
+        ]
+      ],
+      "objective": {
+        "R": 1
+      },
+      "notes": "空で失敗、軌跡、再設計、Rを置いて攻略。"
+    },
+    {
+      "profile": "PLATFORM",
+      "steps": [
+        9
+      ],
+      "ball": [
+        4,
+        1.5
+      ],
+      "goal": [
+        25,
+        20
+      ],
+      "fixed": [
+        [
+          "R",
+          6,
+          4,
+          15
+        ]
+      ],
+      "walls": [],
+      "inventory": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "designWitness": [
+        [
+          "R",
+          18,
+          12,
+          30
+        ],
+        [
+          "P",
+          12,
+          9,
+          0
+        ]
+      ],
+      "prePlaced": [
+        [
+          "R",
+          18,
+          12,
+          30
+        ]
+      ],
+      "objective": {
+        "P": 1
+      },
+      "notes": "Rは開示済み練習用配置。本人のPを使用。"
+    },
+    {
+      "profile": "SPRING",
+      "steps": [
+        10
+      ],
+      "ball": [
+        6,
+        19
+      ],
+      "goal": [
+        21,
+        14
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          13,
+          23,
+          2,
+          14
+        ]
+      ],
+      "inventory": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "designWitness": [
+        [
+          "B",
+          6,
+          25,
+          15
+        ]
+      ],
+      "objective": {
+        "B": 1
+      },
+      "notes": "本人のバネ。"
+    },
+    {
+      "profile": "SEESAW",
+      "steps": [
+        11
+      ],
+      "ball": [
+        13,
+        4
+      ],
+      "goal": [
+        25,
+        21
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          5,
+          19,
+          4,
+          2
+        ]
+      ],
+      "inventory": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "designWitness": [
+        [
+          "P",
+          17,
+          15,
+          0
+        ],
+        [
+          "S",
+          12,
+          9,
+          0
+        ]
+      ],
+      "prePlaced": [
+        [
+          "P",
+          17,
+          15,
+          0
+        ]
+      ],
+      "objective": {
+        "S": 1
+      },
+      "notes": "Pは開示済み練習用配置。本人のSを使用。"
+    },
+    {
+      "profile": "GRADUATION",
+      "steps": [
+        12
+      ],
+      "ball": [
+        13,
+        3
+      ],
+      "goal": [
+        32,
+        13
+      ],
+      "fixed": [],
+      "walls": [
+        [
+          22,
+          25,
+          2,
+          10
+        ]
+      ],
+      "inventory": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "designWitness": [
+        [
+          "S",
+          10,
+          8,
+          0
+        ],
+        [
+          "B",
+          17,
+          20,
+          15
+        ]
+      ],
+      "objective": {
+        "S": 1,
+        "B": 1
+      },
+      "notes": "両方本人が配置。予想順S→B。実際の同一run有効使用と通常クリア。"
+    }
+  ],
+  "staticDesignCheck": {
+    "01A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.58144,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "02A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.59871,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "03A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.20746,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "04A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.43254,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "04B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.48,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "05A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.08,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "05B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.32,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "06A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.27674,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "06B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.56,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "07A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.2,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "07B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.10532,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "08A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.2,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "08B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.10532,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "09A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.44,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "09B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.23058,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "10A": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.32,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "10B": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.08,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-EDIT": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 2.33398,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-CLOCK": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 1.52,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-RETRY": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.58144,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-PLATFORM": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.20746,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-SPRING": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.92,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-SEESAW": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.56,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-GRADUATION": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.58121,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-03": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 1.04,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-04-dir": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 1.04,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-04-drag": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 1.04,
+      "errors": [],
+      "physics": "UNMEASURED"
+    },
+    "00-05": {
+      "staticGeometry": "PASS",
+      "minSeparationOnSeparatingAxesM": 0.734,
+      "errors": [],
+      "physics": "UNMEASURED"
+    }
+  }
+}

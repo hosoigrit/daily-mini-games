@@ -6,7 +6,7 @@ const {dirname} = require('node:path');
 const {isDeepStrictEqual} = require('node:util');
 const {
   reserveBudget, startReservation, settleBudgetUsage, releaseUnstartedReservation,
-  remediationLimits, checkEffectiveBudgetUsage, architectureLimits,
+  remediationLimits, checkEffectiveBudgetUsage, architectureLimits, gameplayLimits,
 } = require('./budget.js');
 
 function hash(bytes) {
@@ -247,7 +247,7 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses, effectiveB
     budget[field].properties = override;
     changes.push({op: 'add', path: `/properties/budgetUsage/properties/${field}/properties`, value: override});
   }
-  if (effective?.total === 70) {
+  if (effective?.total >= 70) {
     for (const [path, target, value] of [
       ['remediationTotal/maximum', budget.remediationTotal, effective.total],
       ['remediationByStage/additionalProperties/maximum', budget.remediationByStage.additionalProperties, effective.ordinaryStage],
@@ -268,6 +268,31 @@ function deriveCheckpointSchema(frozenBytes, grant, historicalCauses, effectiveB
     budget.physicsValidationSimulations.maximum = architecture.foundationWorlds;
     changes.push({op: 'replace', path: '/properties/budgetUsage/properties/physicsValidationSimulations/maximum',
       value: architecture.foundationWorlds});
+  }
+  const gameplay = gameplayLimits(effectiveBudget);
+  if (gameplay) {
+    for (const [field, metric] of [
+      ['formalSimulationsByPool', 'simulations'], ['formalTicksByPool', 'ticks'],
+    ]) {
+      const override = {...budget[field].additionalProperties, maximum: gameplay.e6[metric]};
+      budget[field].properties.E6 = override;
+      changes.push({op: 'add', path: `/properties/budgetUsage/properties/${field}/properties/E6`, value: override});
+    }
+    for (const [field, metric] of [
+      ['stageAdjustmentsByStage', 'stageDefinitionAdjustments'], ['generatedByStage', 'generatedCandidates'],
+      ['searchSimulationsByStage', 'stageSearchSimulations'], ['searchTicksByStage', 'stageSearchTicks'],
+      ['searchSecondsByStage', 'stageSearchTimeSeconds'],
+    ]) {
+      const properties = Object.fromEntries(gameplay.stages.map(stage => [stage, {
+        ...budget[field].additionalProperties,
+        maximum: field === 'generatedByStage' ? gameplay.generatedByStage[stage] ?? gameplay.stage[metric] : gameplay.stage[metric],
+      }]));
+      budget[field].properties = properties;
+      changes.push({op: 'add', path: `/properties/budgetUsage/properties/${field}/properties`, value: properties});
+    }
+    budget.automatedSeconds.maximum = effective.automatedSeconds;
+    changes.push({op: 'replace', path: '/properties/budgetUsage/properties/automatedSeconds/maximum',
+      value: effective.automatedSeconds});
   }
   // Canonical JSON matches the separately verified derivation, independent of input key order.
   const canonical = (_, value) => {

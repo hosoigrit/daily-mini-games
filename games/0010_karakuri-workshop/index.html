@@ -35,12 +35,22 @@
     </section>
     <section id="stage-screen" hidden>
       <div class="section-head"><h1>ステージを選ぶ</h1><button type="button" data-command="achievements">達成状況</button></div>
+      <button type="button" data-command="tutorial-open">ST00 からくり講座</button>
+      <p id="stage-notice" role="status"></p>
       <ol id="stage-list" class="stage-list"></ol>
     </section>
     <section id="workbench" hidden>
       <div class="section-head">
         <h1 id="stage-title"></h1><p id="save-state" role="status"></p>
       </div>
+      <section id="tutorial-panel" hidden aria-labelledby="tutorial-step">
+        <h2 id="tutorial-step"></h2>
+        <p id="tutorial-instruction"></p><p id="tutorial-save" role="status"></p>
+        <div class="button-row">
+          <button type="button" data-command="help" id="tutorial-help">遊び方</button>
+          <button type="button" data-command="tutorial-exit">講座を終了</button>
+        </div>
+      </section>
       <div class="workspace-layout">
         <section class="board-panel" aria-label="実験盤">
           <canvas id="board" width="960" height="720" tabindex="0" aria-label="実験盤。パーツ一覧と座標入力でも操作できます"></canvas>
@@ -73,7 +83,7 @@
               <button type="button" data-command="request-reset">配置をリセット</button>
               <button type="button" data-command="request-load-best" id="best-button">ベスト配置</button>
               <button type="button" data-command="toggle-trail" id="trail-button" aria-pressed="true">前回の軌跡</button>
-              <button type="button" data-command="hint-open">ヒント</button>
+              <button type="button" data-command="hint-open" id="hint-button">ヒント</button>
             </div>
             <div class="button-row confirmation" id="edit-confirm" hidden>
               <p id="edit-confirm-text"></p>

@@ -6,6 +6,45 @@ export const fromSeed = seed => seed.map(([type, u, v, angleDeg = 0]) => ({type,
 export const placementKey = design => canonicalDesign(design)
   .map(p => `${p.type}:${p.gridX}:${p.gridY}:${p.angleDeg}`).join(';');
 
+export function createSearchMeter(binding, appendEvent) {
+  const limits = {
+    generated: binding.generated,
+    searchSimulations: binding.searchSimulations,
+    searchTicks: binding.searchTicks,
+  };
+  const usage = {generated: 0, searchSimulations: 0, searchTicks: 0};
+  const capacities = [binding.stageRemaining, binding.totalRemaining, binding.automatedSeconds, binding.searchSeconds];
+  if (typeof appendEvent !== 'function' || ![...Object.values(limits), ...capacities]
+    .every(value => Number.isSafeInteger(value) && value > 0)
+    || limits.generated > Math.min(binding.stageRemaining, binding.totalRemaining)
+    || binding.searchSeconds > binding.automatedSeconds || limits.generated > 1000) {
+    throw new RangeError('Missing or insufficient search reservation');
+  }
+
+  function debit(metric) {
+    if (usage[metric] === limits[metric]) throw new RangeError(`Search reservation exhausted: ${metric}`);
+    usage[metric]++;
+    if (metric !== 'searchTicks') appendEvent({metric, ordinal: usage[metric]});
+  }
+
+  return {
+    makeCandidate(produce) {
+      debit('generated');
+      return produce();
+    },
+    runWorld(produce) {
+      debit('searchSimulations');
+      return produce();
+    },
+    beforeTick() {
+      debit('searchTicks');
+    },
+    totals() {
+      return {...usage};
+    },
+  };
+}
+
 export function uniqueStageCandidates(layouts) {
   const unique = new Map();
   for (const layout of layouts) {
@@ -34,7 +73,7 @@ export function compareResults(a, b) {
     || a.placed.length - b.placed.length || compareLayouts(a.placed, b.placed);
 }
 
-export function generateNeighbors(stage, design) {
+export function generateNeighbors(stage, design, makeCandidate = produce => produce()) {
   const sorted = canonicalDesign(design);
   const seen = new Set([placementKey(sorted)]);
   const legal = [];
@@ -44,9 +83,9 @@ export function generateNeighbors(stage, design) {
     const p = sorted[index];
     for (const [field, delta] of [['gridX', -1], ['gridX', 1], ['gridY', -1], ['gridY', 1],
       ['angleDeg', -15], ['angleDeg', 15]]) {
-      const moved = {...p, [field]: p[field] + delta};
-      if (!getPartDefinition(p.type).angles.includes(moved.angleDeg)) continue;
-      const candidate = sorted.map((old, i) => i === index ? moved : old);
+      const next = p[field] + delta;
+      if (field === 'angleDeg' && !getPartDefinition(p.type).angles.includes(next)) continue;
+      const candidate = makeCandidate(() => sorted.map((old, i) => i === index ? {...p, [field]: next} : old));
       generated++;
       const key = placementKey(candidate);
       if (seen.has(key)) {

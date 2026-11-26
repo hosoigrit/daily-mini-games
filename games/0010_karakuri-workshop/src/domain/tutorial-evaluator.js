@@ -1,3 +1,5 @@
+import {normalizeUsageRequirement, summarizeUsage} from './usage-requirements.js';
+
 const ROUNDING = 8 * Number.EPSILON;
 const TOP_ALIGNMENT = Math.cos(Math.PI / 6);
 const FIVE_DEGREES = Math.PI / 36;
@@ -34,20 +36,17 @@ export function seesawLoadDirection({upper, offset, point, pivot, impulse, omega
 
 export function createTutorialEvaluator(runId, parts, requirement = null) {
   const free = new Map(parts.filter(item => !item.fixed).map(item => [item.id, item.type]));
+  const usageRequirement = normalizeUsageRequirement(requirement);
   const used = new Set();
   const seesaws = new Map();
   let ramp = null;
   function owned(input, type) {
     return input.runId === runId && free.get(input.id) === type;
   }
-  function isRequired(id) {
-    const type = free.get(id);
-    return requirement === 'slope' ? type === 'R' : type === requirement;
-  }
   return {
     observeRamp(input) {
       if (input.runId !== runId) return ramp;
-      ramp = owned(input, 'R') ? rampTick(ramp, input, requirement === 'slope') : null;
+      ramp = owned(input, 'R') ? rampTick(ramp, input, usageRequirement === 'slope') : null;
       if (ramp?.achieved) used.add(input.id);
       return ramp;
     },
@@ -77,8 +76,7 @@ export function createTutorialEvaluator(runId, parts, requirement = null) {
       if (state.direction * (angle - state.startAngle) + ROUNDING >= FIVE_DEGREES) used.add(id);
     },
     snapshot() {
-      const usedIds = [...used];
-      return {usedIds, achieved: requirement === null || usedIds.some(isRequired)};
+      return summarizeUsage(usageRequirement, used, free);
     },
   };
 }

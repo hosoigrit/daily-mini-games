@@ -22,7 +22,7 @@ export function isDistinctSolution(base, alternative, ablations = []) {
       && (a.result === 'FAILED' || a.result === 'CLEARED' && a.sameResidualSequence === false)));
 }
 
-export function runStageSimulation(stage, design, {trace = false, runId} = {}) {
+export function runStageSimulation(stage, design, {trace = false, runId, beforeTick} = {}) {
   const experiment = createStageExperiment(stage, design, {runId});
   const trajectory = [{tick: 0, ...stage.ball}];
   const records = [];
@@ -72,7 +72,9 @@ export function runStageSimulation(stage, design, {trace = false, runId} = {}) {
   }
 
   try {
-    while ((row = experiment.step())) {
+    while (experiment.result.status === 'RUNNING') {
+      beforeTick?.();
+      row = experiment.step();
       if (row.tick % 6 === 0 || row.status !== 'RUNNING') {
         trajectory.push({tick: row.tick, x: row.position.x, y: row.position.y});
       }

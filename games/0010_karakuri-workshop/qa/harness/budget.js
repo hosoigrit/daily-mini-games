@@ -46,10 +46,32 @@ const architectureGrant = Object.freeze({
   e8Ticks: 7200000,
 });
 
+const gameplayGrant = Object.freeze({
+  approvalId: 'EXEC-GAME-0010-CR010-IMPLEMENTATION',
+  precedingGrant: architectureGrant.approvalId,
+  baseCommitSha: convergenceGrant.baseCommitSha,
+  handoffCommitSha: convergenceGrant.handoffCommitSha,
+  branch: convergenceGrant.branch,
+  writerId: convergenceGrant.writerId,
+  testedSha: '14adae996b3ec398ecced875619ae05d28a9b0ec',
+  evidenceSha: 'ad1a5dcf6afb9ceb034434ead9e6470c861014dc',
+  boardDigest: 'af85e58a9674746ad1950ecc30883fbd12662195697411b82bcb57710c8af3eb',
+  allowedPathsDigest: '32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed',
+});
+
+const searchRecoveryGrant = Object.freeze({
+  approvalId: 'EXEC-GAME-0010-CR010-R2-SEARCH-CONTINUATION',
+  settlementDigest: 'd27613b11cf6c210eca8f96ebf79d47c07daf668943382356b988b53e885b17b',
+  maximum: 140000,
+  stageMaximum: Object.freeze({'08': 55000, '09': 50000}),
+  revisedStageMaximum: 24000,
+});
+const searchRecoveryPolicies = new WeakMap();
 const effectivePolicies = new WeakMap();
+const gameplayPolicies = new WeakSet();
 const architecturePolicies = new WeakSet();
 
-function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, finalArchitectureGrant) {
+function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, finalArchitectureGrant, gameplayApproval, recoveryApproval) {
   if (!isDeepStrictEqual(externalGrant, convergenceGrant)) {
     fail('LS-08', 'The convergence budget needs the matching external approval.');
   }
@@ -59,6 +81,10 @@ function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, 
   if (finalArchitectureGrant !== undefined
     && (!autonomyGrant || !isDeepStrictEqual(finalArchitectureGrant, architectureGrant))) {
     fail('LS-08', 'The final architecture budget needs the matching CR009 external approval.');
+  }
+  if (gameplayApproval !== undefined
+    && (!finalArchitectureGrant || !isDeepStrictEqual(gameplayApproval, gameplayGrant))) {
+    fail('LS-08', 'The gameplay budget needs the matching CR010 external approval.');
   }
   const {budgets} = loadExecutionPolicy(frozenPolicyBytes, convergenceGrant.policyDigest);
   if (autonomyGrant) {
@@ -76,6 +102,34 @@ function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, 
     });
     architecturePolicies.add(budgets);
   }
+  if (gameplayApproval) {
+    Object.assign(budgets, {
+      remediationTotal: 80, remediationPerStage: 80, automatedExecutionTimeSecondsTotal: 27000,
+      stageSearchSimulationsTotal: 26000, stageSearchTicksTotal: 25000000, stageSearchTimeSecondsTotal: 6500,
+      generatedCandidatesTotal: 60000, stageDefinitionAdjustmentsTotal: 168,
+      formalStageSimulationsTotal: 17000, formalStageTicksTotal: 20400000,
+      physicsValidationSimulationsTotal: 17000,
+    });
+    Object.assign(budgets.formalStagePools.E6, {simulations: 4000, ticks: 4800000});
+    Object.assign(budgets.formalStagePools.E8, {simulations: 7000, ticks: 8400000});
+    gameplayPolicies.add(budgets);
+  }
+  if (recoveryApproval !== undefined) {
+    const {approvalId, settlementDigest, generatedTotal, generatedByStage} = recoveryApproval ?? {};
+    if (!gameplayApproval || approvalId !== searchRecoveryGrant.approvalId
+      || settlementDigest !== searchRecoveryGrant.settlementDigest
+      || Object.keys(recoveryApproval).length !== 4
+      || !Number.isSafeInteger(generatedTotal) || generatedTotal < budgets.generatedCandidatesTotal
+      || generatedTotal > searchRecoveryGrant.maximum
+      || !generatedByStage || Object.getPrototypeOf(generatedByStage) !== Object.prototype
+      || Object.entries(generatedByStage).some(([id, value]) =>
+        !/^(0[3-9]|10)$/u.test(id) || !Number.isSafeInteger(value) || value < 12000
+        || value > (searchRecoveryGrant.stageMaximum[id] ?? searchRecoveryGrant.revisedStageMaximum))) {
+      fail('LS-08', 'The search recovery ceilings exceed the approved R2 contract.');
+    }
+    budgets.generatedCandidatesTotal = generatedTotal;
+    searchRecoveryPolicies.set(budgets, Object.freeze({...generatedByStage}));
+  }
   Object.freeze(budgets.physicsCandidateStages);
   for (const pool of Object.values(budgets.formalStagePools)) Object.freeze(pool);
   Object.freeze(budgets.formalStagePools);
@@ -87,6 +141,27 @@ function deriveEffectiveBudget(frozenPolicyBytes, externalGrant, autonomyGrant, 
 function architectureLimits(policy) {
   if (!architecturePolicies.has(policy)) return null;
   return {foundationWorlds: policy.physicsValidationSimulationsTotal, ...policy.formalStagePools.E8};
+}
+
+function gameplayLimits(policy) {
+  if (!gameplayPolicies.has(policy)) return null;
+  return {
+    stages: [...stageIds].slice(2),
+    stage: {
+      stageDefinitionAdjustments: 36, generatedCandidates: 12000,
+      stageSearchSimulations: 5600, stageSearchTicks: 5000000, stageSearchTimeSeconds: 1400,
+    },
+    e6: policy.formalStagePools.E6,
+    generatedByStage: searchRecoveryPolicies.get(policy) ?? {},
+  };
+}
+
+function stageLimit(policy, metric, stage) {
+  if (metric === 'generatedCandidates' && Object.hasOwn(searchRecoveryPolicies.get(policy) ?? {}, stage)) {
+    return searchRecoveryPolicies.get(policy)[stage];
+  }
+  return gameplayPolicies.has(policy) && stageIds.has(stage) && stage !== '01' && stage !== '02'
+    ? gameplayLimits(policy).stage[metric] : policy[`${metric}PerStage`];
 }
 
 function remediationLimits(policy) {
@@ -123,6 +198,15 @@ function checkEffectiveBudgetUsage(usage, policy, requireComplete = false) {
   for (const [section, maximum] of Object.entries(globalMetrics)) {
     if (count(usage[section] ?? 0) > policy[maximum]) {
       fail('LS-03', 'Checkpoint or gate use exceeds the effective authorization.');
+    }
+  }
+  if (gameplayPolicies.has(policy)) {
+    for (const [section, limit] of Object.values(stageMetrics)) {
+      const rows = Object.entries(usage[section] ?? {});
+      if (rows.some(([stage, used]) => !stageIds.has(stage) || count(used) > stageLimit(policy, limit, stage))
+        || rows.reduce((sum, [, used]) => sum + count(used), 0) > policy[`${limit}Total`]) {
+        fail('LS-03', 'Stage use exceeds the effective authorization.');
+      }
     }
   }
   for (const [section, metric, total] of Object.values(formalMetrics)) {
@@ -199,7 +283,7 @@ function resourceOperations(proposal, policy) {
     }
     if (Object.hasOwn(stageMetrics, name) && stageIds.has(targetStage) && pool === undefined) {
       const [section, limit] = stageMetrics[name];
-      return operation(section, amount, policy[`${limit}PerStage`], targetStage, policy[`${limit}Total`]);
+      return operation(section, amount, stageLimit(policy, limit, targetStage), targetStage, policy[`${limit}Total`]);
     }
     if (Object.hasOwn(formalMetrics, name) && Object.hasOwn(policy.formalStagePools, pool)) {
       const [section, limit, globalLimit] = formalMetrics[name];
@@ -252,8 +336,8 @@ function increment(usage, {section, amount, key}) {
   usage[section] = {...group, [key]: count(previous + amount)};
 }
 
-function permitsStageSearchSimulations({stageUsed, totalUsed, request}, policy) {
-  return count(stageUsed) + count(request) <= count(policy.stageSearchSimulationsPerStage)
+function permitsStageSearchSimulations({stageUsed, totalUsed, request, targetStage}, policy) {
+  return count(stageUsed) + count(request) <= count(stageLimit(policy, 'stageSearchSimulations', targetStage))
     && count(totalUsed) + count(request) <= count(policy.stageSearchSimulationsTotal);
 }
 
@@ -267,7 +351,7 @@ function exceeds(usage, {section, maximum, key, totalMaximum}, policy) {
   const group = usage[section];
   if (section === 'searchSimulationsByStage') {
     const totalUsed = Object.values(group).reduce((sum, value) => sum + count(value), 0);
-    return !permitsStageSearchSimulations({stageUsed: group[key], totalUsed, request: 0}, policy);
+    return !permitsStageSearchSimulations({stageUsed: group[key], totalUsed, request: 0, targetStage: key}, policy);
   }
   if (section === 'physicsCandidatesByStage') {
     const totalUsed = Object.values(group).reduce((sum, value) => sum + count(value), 0);
@@ -380,6 +464,7 @@ function releaseUnstartedReservation(current, runId, confirmedNotStarted) {
 }
 
 module.exports = {
+  gameplayLimits, gameplayGrant, searchRecoveryGrant, stageLimit,
   deriveEffectiveBudget,
   architectureLimits,
   remediationLimits,

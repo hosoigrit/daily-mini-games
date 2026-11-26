@@ -72,5 +72,21 @@
     "limitedCause": "e0-budget-reservation-and-accounting",
     "lastRemediationRunId": "E0-CONVERGENCE-BUDGET-35",
     "validation": "PASS"
+  },
+  "CR010_R2_searchContinuation": {
+    "approvalId": "EXEC-GAME-0010-CR010-R2-SEARCH-CONTINUATION",
+    "predecessor": "d27613b11cf6c210eca8f96ebf79d47c07daf668943382356b988b53e885b17b",
+    "activeGenerationTotal": 134577,
+    "activeStageOverrides": {
+      "08": 48686,
+      "09": 44093,
+      "10": 14004
+    },
+    "recoveryReceiptSHA256": "3d271a9817c07744118daa46c9444f411df303c6c91bd9ed6f0b2fe1abfe1195",
+    "generationReconciledBeforeR2": 104177,
+    "reopeningGateSHA256": "0fab42394712802495975dfa1d9bd28e28d39dfc55bb7e2a9aeac329b6da0878",
+    "reopeningControl": "PASS",
+    "gameQualityGate": "IN_PROGRESS",
+    "historicalReservationsPreserved": true
   }
 }

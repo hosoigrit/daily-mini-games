@@ -5,7 +5,7 @@ import {createCharacterGuide} from '../presentation/character-controller.js';
 
 const labels={R:'坂道',P:'足場',B:'バネ',S:'シーソー',slope:'傾斜坂道'};
 const saveText={SAVED:'保存済み',UNSAVED:'未保存',UNKNOWN:'保存結果が不明',CONFLICT:'他のタブで更新されました',
-  TEMPORARY:'一時プレイ',RECOVERY_REQUIRED:'保存データの復旧が必要'};
+  TEMPORARY:'一時プレイ',MIGRATION_REQUIRED:'旧保存の移行を選べます',RECOVERY_REQUIRED:'保存データの復旧が必要'};
 const el=id=>document.getElementById(id);
 const element=(tag,text)=>{
   const node=document.createElement(tag);
@@ -17,7 +17,7 @@ export function createUI(getGame) {
   const canvas=el('board');
   const draw=createCanvasRenderer(canvas);
   const portraits=createCharacterGuide(el('guide'));
-  let latest=null,previousEditor=null,previousStage=null,previousDialog=null,previousProgress=null,opener=null;
+  let latest=null,previousEditor=null,previousStage=null,previousDialog=null,previousProgress=null,opener=null,highlight=null;
   const gameProxy={state:()=>getGame().state(),dispatch:command=>getGame().dispatch(command)};
   const act=command=>gameProxy.dispatch(command);
   const button=(label,action)=>{
@@ -29,6 +29,9 @@ export function createUI(getGame) {
   bindBoardInput(canvas,gameProxy);
   const modal=el('game-dialog');
   modal.addEventListener('cancel',event=>{event.preventDefault();act({type:'close-dialog'});});
+  el('workbench').addEventListener('focusin',()=>{
+    if(latest?.dialog?.type==='TUTORIAL_HELP_CLOSING'&&!modal.open)act({type:'tutorial-help-returned'});
+  });
 
   function outcomes(s){
     if(previousProgress===s.progress)return;
@@ -76,6 +79,13 @@ export function createUI(getGame) {
     el('place-coordinate').disabled=!part;
   }
   function dialog(s){
+    if(s.dialog?.type==='TUTORIAL_HELP_CLOSING') {
+      if(modal.open)modal.close();
+      previousDialog=opener=null;
+      canvas.focus();
+      if(document.activeElement!==canvas)el('tutorial-help').focus();
+      return;
+    }
     if(previousDialog===s.dialog){
       const status=modal.querySelector('[data-settings-save-status]');
       if(status)status.textContent=saveText[s.save.status]??'一時プレイ';
@@ -119,6 +129,9 @@ export function createUI(getGame) {
         status.dataset.settingsSaveStatus='';
         status.setAttribute('role','status');
         content=[volumeLabel,muteLabel,status];
+        if(s.save.legacyBlocked)actions.unshift(button('旧原文を確認',()=>act({type:'archive-raw-export'})));
+        if(s.save.migrationAvailable)actions.unshift(button('旧保存を移行',()=>act({type:'migration-open'})));
+        if(s.progress.schemaVersion===2)actions.unshift(button('旧保存の履歴',()=>act({type:'archives'})));
         actions.unshift(button('保存データを初期化',()=>act({type:'reset-request'})));
         if(s.save.mode==='RECOVERY_REQUIRED'&&s.save.recoveryReason!=='VERSION'){
           actions.unshift(button('保存データを復旧',()=>act({type:'recover-request'})));
@@ -128,6 +141,73 @@ export function createUI(getGame) {
         }
         break;
       }
+      case 'TUTORIAL_INTRO':{
+        title='ギア博士のからくり講座';
+        const mark=s.progress.tutorial;
+        content=[portrait('normal'),text('パーツの置き方と実験を、工房で操作しながら12ステップで学べます。')];
+        actions=[button(mark.state==='completed'?'もう一度受講':'始める',()=>act({type:'tutorial-start'}))];
+        if(mark.nextStep>1&&mark.nextStep<=12){
+          actions[0].textContent='続きから';
+          actions.push(button('最初から',()=>act({type:'tutorial-start',fromBeginning:true})));
+        }
+        if(mark.state!=='completed')actions.push(button('スキップ',()=>act({type:'tutorial-skip-request'})));
+        actions.push(button('あとで',()=>act({type:'tutorial-later'})));
+        break;
+      }
+      case 'TUTORIAL_SKIP':
+        title='講座をスキップしますか？';
+        content=[text('ステージ一覧の「からくり講座」から、いつでも学び直せます。')];
+        actions=[button('スキップする',()=>act({type:'tutorial-skip-confirm'})),
+          button('取り消す',()=>act({type:'tutorial-open'}))];
+        break;
+      case 'TUTORIAL_EXIT':
+        title='講座を終了しますか？';
+        content=[text('実験は終了します。保存済みのステップは次回も使えます。')];
+        actions=[button('一覧へ戻る',()=>act({type:'tutorial-exit-confirm'})),
+          ...(!s.tutorial?.review&&!s.tutorial?.graduated?[button('スキップして戻る',()=>act({type:'tutorial-exit-skip'}))]:[]),
+          button('講座を続ける',()=>act({type:'close-dialog'}))];
+        break;
+      case 'SAVE_MIGRATION':
+        title='旧保存を移行';
+        content=[text('旧保存の原文を保管してから移行します。歴代の実績と解放は引き継ぎ、改訂面の攻略は新たに記録します。'),
+          text('他に工房を開いているタブがあれば閉じてから移行してください。')];
+        if(s.dialog.error){
+          const error=text(s.dialog.error);error.setAttribute('role','alert');content.push(error);
+        }
+        if(s.dialog.pending){
+          const busy=text('旧保存を保管しています…');busy.setAttribute('role','status');content.push(busy);
+          actions=[];
+        }else actions=[button('保管して移行',()=>act({type:'migration-confirm'})),button('あとで',()=>act({type:'close-dialog'}))];
+        break;
+      case 'SAVE_ARCHIVES':
+        title='旧保存の履歴';
+        content=[text(s.dialog.keys.length?'閲覧または保存する旧データを選んでください。':'閲覧できる旧保存はありません。')];
+        actions=s.dialog.keys.map((key,index)=>button(`保管データ ${index+1}`,()=>act({type:'archive-open',key}))).concat(actions);
+        break;
+      case 'SAVE_ARCHIVE':{
+        title='旧保存の閲覧';
+        const entry=s.dialog.value;
+        if(!entry){content=[text('保管データを確認できませんでした。')];break;}
+        const details=element('details');
+        details.append(element('summary','V1の原文を見る'),element('pre',entry.raw));
+        content=[text(entry.blocked?'リビジョンの上限に達しています。旧原本をファイルに保存できます。':
+          `保存時のリビジョン ${entry.reference.sourceRevision}`),details];
+        if(!entry.blocked&&s.screen==='DESIGN')actions.unshift(button('現在の盤面へ旧配置をコピー',
+          ()=>act({type:'archive-draft-request'})));
+        actions.unshift(button('原文をファイルに保存',()=>{
+          const url=URL.createObjectURL(new Blob([entry.raw],{type:'application/json'}));
+          const link=document.createElement('a');
+          link.href=url;link.download='karakuri-legacy-v1.json';link.click();
+          setTimeout(()=>URL.revokeObjectURL(url),0);
+        }));
+        break;
+      }
+      case 'SAVE_DRAFT_CONFIRM':
+        title='旧配置をコピーしますか？';
+        content=[text('現在の盤面に合法な場合だけ、設計中の配置と入れ替えます。達成やベストには反映しません。')];
+        actions=[button('コピーする',()=>act({type:'archive-draft-confirm'})),
+          button('取り消す',()=>act({type:'close-dialog'}))];
+        break;
       case 'RECOVER_SAVE':
         title='保存データの復旧';
         content=[text('正常な実績と設定を引き継ぎ、復旧可能なデータだけを保存し直します。')];
@@ -148,7 +228,13 @@ export function createUI(getGame) {
         const rows=Object.values(s.progress.stages);
         const clear=rows.filter(r=>r.progress.cleared).length;
         const stars=rows.reduce((n,r)=>n+(r.progress.historicalBestStars??0),0);
-        content=[text(`全ステージクリア　${clear} / 10`),text(`歴代の星　${stars} / 30`)];
+        content=[text(s.progress.schemaVersion===2?`歴代のクリア　${clear} / 10`:`全ステージクリア　${clear} / 10`),
+          text(`歴代の星　${stars} / 30`)];
+        if(s.progress.schemaVersion===2){
+          const current=rows.filter(r=>r.currentBest);
+          content.unshift(text(`現行のクリア　${current.length} / 10`),
+            text(`現行の星　${current.reduce((n,r)=>n+r.currentBest.stars,0)} / 30`));
+        }
         if(rows.some(r=>r.progress.historicalBestStars===null))content.push(text('不明な星があるステージがあります。'));
         break;
       }
@@ -184,7 +270,7 @@ export function createUI(getGame) {
     const {selection}=latest.editor;
     const gridX=el('grid-x').valueAsNumber,gridY=el('grid-y').valueAsNumber;
     if(selection.draft)act({type:'commit-draft',id:selection.id??'k-'+crypto.randomUUID().slice(0,16),gridX,gridY});
-    else if(selection.id)act({type:'move',id:selection.id,gridX,gridY});
+    else if(selection.id)act({type:'move',id:selection.id,gridX,gridY,source:'coordinate'});
   });
   el('next-stage').addEventListener('click',()=>{
     const next=String(Number(latest.stage.id)+1).padStart(2,'0');
@@ -212,7 +298,22 @@ export function createUI(getGame) {
     el('stage-screen').hidden=s.screen!=='STAGES';
     const work=s.stage&&['DESIGN','RUNNING','PAUSED','CLEARED','FAILED','ERROR'].includes(s.screen);
     el('workbench').hidden=!work;
-    if(s.screen==='STAGES')outcomes(s);
+    if(s.screen==='STAGES'){outcomes(s);el('stage-notice').textContent=s.notice;}
+    el('tutorial-panel').hidden=!s.tutorial;
+    const lessonTarget=s.tutorial?.lesson[2];
+    const nextHighlight=s.tutorial&&!s.tutorial.graduated?el(lessonTarget==='help'?'tutorial-help':lessonTarget):null;
+    if(highlight!==nextHighlight){
+      highlight?.classList.remove('lesson-target');
+      nextHighlight?.classList.add('lesson-target');
+      highlight=nextHighlight;
+    }
+    if(s.tutorial){
+      const {step,lesson,graduated,review,saved}=s.tutorial;
+      el('tutorial-step').textContent=graduated?'卒業！':`STEP ${step} / 12　${lesson[0]}`;
+      el('tutorial-instruction').textContent=graduated?'からくり講座を修了しました。ステージで腕試ししましょう。':lesson[1];
+      el('tutorial-save').textContent=review?'復習中':saved?'':'保存未確認。再読込時は確定済みのステップに戻ります。';
+      el('tutorial-help').hidden=step!==1;
+    }
     if(work){
       el('stage-title').textContent=`${s.stage.id}　${s.stage.name}`;
       el('save-state').textContent=(saveText[s.save.status]??'一時プレイ')
@@ -225,19 +326,28 @@ export function createUI(getGame) {
       el('pause-button').hidden=s.screen!=='RUNNING';
       el('resume-button').hidden=s.screen!=='PAUSED';
       el('run-time').value=`${((s.current?.tick??0)/60).toFixed(2)} 秒`;
-      el('required').textContent=s.stage.required?`${labels[s.stage.required]} ${s.current?.requiredUse?'達成':'必須'}`:'必須パーツなし';
+      const required=s.stage.required;
+      const counts=s.current?.usage?.state.counts;
+      el('required').textContent=required&&typeof required==='object'
+        ?Object.entries(required.counts).map(([kind,n])=>`${labels[kind]} ${counts?.[kind]??0}/${n}`).join('、')
+        :required?`${labels[required]} ${s.current?.requiredUse?'達成':'必須'}`:'必須パーツなし';
       el('board-notice').textContent=s.notice;
       el('trail-guide').hidden=!s.previousTrajectory||!s.showTrail||['RUNNING','PAUSED'].includes(s.screen);
       el('trail-button').setAttribute('aria-pressed',String(s.showTrail));
       el('result-heading').textContent=s.screen==='CLEARED'?'クリア！':s.screen==='ERROR'?'実験エラー':'実験失敗';
-      el('result-details').textContent=s.screen==='CLEARED'
+      el('result-details').textContent=s.tutorial&&s.screen==='CLEARED'
+        ?(s.tutorial.graduated?'通常ステージに進む準備ができました。':s.notice)
+        :s.screen==='CLEARED'
         ?`星 ${s.result?.stars} / 3　使用 ${s.editor.placements.length} 個　${s.bestUpdated?'ベスト更新':'ベスト更新なし'}`
         :s.failure??'';
       const achievements=s.result?.achievements??[];
       el('result-achievement').hidden=!achievements.length;
       el('result-achievement').textContent=achievements
         .map(a=>a==='ALL_CLEARED'?'全ステージクリア達成':'30個の星を獲得').join('／');
-      el('next-stage').hidden=s.screen!=='CLEARED'||s.stage.id==='10';
+      el('next-stage').hidden=Boolean(s.tutorial)||s.screen!=='CLEARED'||s.stage.id==='10';
+      el('best-button').hidden=Boolean(s.tutorial);
+      el('hint-button').hidden=Boolean(s.tutorial);
+      el('result-panel').querySelector('[data-command=redesign]').hidden=Boolean(s.tutorial?.graduated);
       canvas.dataset.editorState=s.screen==='DESIGN'?s.editor.selection.state:'LOCKED';
       editPanel(s);
       portraits(s);

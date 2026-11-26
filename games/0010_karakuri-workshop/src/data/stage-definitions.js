@@ -3,6 +3,7 @@ import {ABNORMAL_ANGULAR_SPEED, ABNORMAL_SPEED, BALL, DEFAULT_GRAVITY, MATERIALS
   PHYSICS_PROFILES, SELECTED_PHYSICS_PROFILE} from './physics-config.js';
 import {applyEditCommand, canonicalDesign, createDesignEditor} from '../domain/design-editor.js';
 import {createGoal, createRuleSimulation, evaluateTerminal} from '../domain/result-evaluator.js';
+import {normalizeUsageRequirement} from '../domain/usage-requirements.js';
 import {starsForResult} from '../domain/score-service.js';
 import {collectContactEvidence, createWorld, disposeWorld} from '../physics/adapter.js';
 import {canonicalizePlacements, createBall, createDynamicBody, createRevoluteJoint, createStaticBody} from '../physics/body-factory.js';
@@ -40,7 +41,7 @@ export function getInitialStages() {
   }));
 }
 
-export function getStages() {
+export function getLegacyStages() {
   const result = getInitialStages();
   result[7].goal.x += grid;
   const final = result[9];
@@ -49,6 +50,32 @@ export function getStages() {
   final.fixed[0].gridX -= 1;
   final.fixed[0].x = final.fixed[0].gridX * grid;
   return result;
+}
+
+const revisedStages = [
+  ['03', [4, 1.5], [25, 20], [['R', 6, 4, 15], ['W', 14, 13, 3, 2]], [2, 2, 0, 0], 2, {P: 1}],
+  ['04', [6, 19], [21, 14], [['W', 13, 23, 2, 14], ['W', 18, 23, 4, 3]], [2, 1, 1, 0], 2, {B: 1}],
+  ['05', [8, 20], [34, 16], [['W', 19, 23, 2, 14]], [2, 2, 2, 0], 3, {B: 1, P: 1}],
+  ['06', [13, 4], [25, 21], [['W', 5, 19, 4, 2], ['W', 18, 20, 2, 4]], [2, 2, 0, 1], 2, {S: 1}],
+  ['07', [13, 4], [29, 23], [['W', 23, 10, 2, 5], ['W', 24, 20, 2, 4]], [2, 3, 0, 1], 3, {P: 1, S: 1}],
+  ['08', [5, 22], [17, 9], [['W', 18, 25, 2, 10], ['W', 12, 6, 2, 4]], [2, 2, 3, 0], 3, {B: 2}],
+  ['09', [13, 3], [35, 13], [['W', 22, 25, 2, 10], ['W', 29, 18, 2, 6]], [2, 2, 2, 2], 4, {B: 1, P: 1, S: 1}],
+  // ST10: the signed one-cell upward goal adjustment is recorded in the R2 stage proof.
+  ['10', [6, 4], [36, 14], [['W', 16, 5, 2, 10], ['W', 25, 24, 2, 10]], [3, 3, 2, 2], 5, {B: 1, P: 1, R: 1, S: 1}],
+];
+
+const topLeft = ([u, v]) => [u, 30 - v];
+
+export function getStages() {
+  const legacy = getLegacyStages();
+  return [...legacy.slice(0, 2), ...revisedStages.map(([id, ball, goal, fixed, stock, star3Target, counts], index) => {
+    const inventory = Object.fromEntries(PART_TYPES.map((type, i) => [type, stock[i]]));
+    return {
+      id, name: legacy[index + 2].name, ball: point(topLeft(ball)), goal: point(topLeft(goal)),
+      fixed: fixed.map(([type, x, y, ...shape], i) => fixedPart([type, ...topLeft([x, y]), ...shape], i)),
+      inventory, star3Target, required: normalizeUsageRequirement({version: 2, counts}, inventory),
+    };
+  })];
 }
 
 export function validateStageSet(entries) {
@@ -133,10 +160,13 @@ export function physicsPayload() {
 export async function getStageIdentity(stage) {
   const geometryId = await payloadSha256(geometryPayload(stage));
   const physicsRulesVersion = await payloadSha256(physicsPayload());
-  const type = stage.required === 'slope' ? 'rotated-ramp' : partName[stage.required] ?? 'none';
+  const requirement = normalizeUsageRequirement(stage.required, stage.inventory);
+  const revised = requirement !== null && typeof requirement === 'object';
+  const type = requirement === 'slope' ? 'rotated-ramp' : partName[requirement] ?? 'none';
   const compatibilityId = await payloadSha256({
-    domain: 'game-0010/compatibility/v1', stageId: stage.id, geometryId, physicsRulesVersion,
-    requiredUsage: {type, ruleVersion: 'v1'},
+    domain: revised ? 'game-0010/compatibility/v2' : 'game-0010/compatibility/v1',
+    stageId: stage.id, geometryId, physicsRulesVersion,
+    requiredUsage: revised ? requirement : {type, ruleVersion: 'v1'},
     goalRule: {innerMinX: -.61, innerMaxX: .61, innerMinY: -.01, innerMaxY: .72,
       speedMax: .15, stableTicks: 30, comparisonEpsilonM: 1e-6, ruleVersion: 'v1'},
     boundaryRule: {mode: 'edge-lines', ruleVersion: 'v1'},
@@ -196,6 +226,7 @@ export function createStageExperiment(stage, placements, {runId, observe, observ
     const solidBodies = [...obstacles, ...goalBodies, ...parts.map(p => p.body)];
     const rules = createRuleSimulation(runtime, {ball, goal: stage.goal, solidBodies, parts, requirement: stage.required});
     let terminal = {status: 'RUNNING', code: null};
+    const firstUseTick = new Map();
     return {
       runId: runtime.runId,
       placements: design.placements,
@@ -204,8 +235,11 @@ export function createStageExperiment(stage, placements, {runId, observe, observ
         if (terminal.status !== 'RUNNING') return null;
         bodyObservations=[];
         const state = rules.advanceTick();
+        for (const id of state.usage?.state.usedIds ?? []) {
+          if (!firstUseTick.has(id)) firstUseTick.set(id, state.tick);
+        }
         terminal = evaluateTerminal(state);
-        return {...state, ...terminal,
+        return {...state, ...terminal, firstUseTick: Object.fromEntries(firstUseTick),
           ...(observePresentation?{presentation:{bodyObservations,contacts:collectContactEvidence(runtime)}}:{}),
           stars: starsForResult(terminal.status, design.placements.length, stage.star3Target)};
       },

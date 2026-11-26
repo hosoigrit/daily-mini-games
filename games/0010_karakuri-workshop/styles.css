@@ -139,3 +139,13 @@ dialog::backdrop { background: rgb(35 27 21 / .65); }
 #dialog-content input[type=range] { max-width: 100%; }
 @media (max-width: 620px) { .title-screen { grid-template-columns: 1fr; } .title-art img { max-height: 12rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::after, *::before { scroll-behavior: auto !important; } }
+
+#tutorial-panel {
+  margin-block: 0 1rem;
+  padding: .875rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: .75rem;
+}
+#tutorial-panel button { min-height: 44px; }
+.lesson-target { outline: 3px solid #9a510b; outline-offset: 3px; }
+#game-dialog details pre { overflow: auto; max-height: 18rem; white-space: pre-wrap; overflow-wrap: anywhere; }

@@ -75,7 +75,7 @@ export function editWithDirection(game,direction) {
   const [dx,dy]=direction;
   const current=selection.draft??selected;
   if(!current)return false;
-  return game.dispatch({type:selection.draft?'preview':'move',id:selection.id,
+  return game.dispatch({type:selection.draft?'preview':'move',id:selection.id,source:'direction',
     gridX:(current.gridX??20)+dx,gridY:(current.gridY??15)+dy});
 }
 

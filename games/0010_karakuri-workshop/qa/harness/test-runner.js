@@ -106,6 +106,12 @@ function reserveDispatchedBatch(current, declarations, requested, policy) {
     seen.add(proposal.runId);
     const required = ['automatedSeconds', ...purposeMetrics[declared.purpose]];
     const lower = declared.lowerBounds ?? {};
+    if (declared.stageAdjustment === true) {
+      if (declared.purpose !== 'SEARCH' || lower.stageAdjustments !== 1 || proposal.reserve?.stageAdjustments !== 1) {
+        stop('LS-13', 'A search board adjustment requires one separately reserved adjustment.');
+      }
+      required.push('stageAdjustments');
+    }
     if (!proposal.reserve || Object.keys(proposal.reserve).length !== required.length
       || required.some(name => !Object.hasOwn(lower, name)
         || !Object.hasOwn(proposal.reserve, name)
