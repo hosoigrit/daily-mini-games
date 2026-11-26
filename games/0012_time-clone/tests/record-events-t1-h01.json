@@ -1,0 +1,238 @@
+{
+  "approval": "T1-H01",
+  "e1Commit": "85f51abd7260fc71b3abe11880269fb0c9c1b800",
+  "sources": [
+    {
+      "path": "handoffs/game-0012/e1/01_frozen/Game0012_Detailed_Design_v0.4_DRAFT.md",
+      "sha256": "02956f760a70e94e2d95ba49ff6bc6d41f7e2f92db2048599b108f080fe1c690"
+    },
+    {
+      "path": "handoffs/game-0012/e1/02_reference/game0012_golden_record_reference_v0_2_DRAFT.csv",
+      "sha256": "cd466f9f1cc3779b6f6cc157c6d4bb27bedaac548feb194b43846dc9d9afd143"
+    },
+    {
+      "path": "handoffs/game-0012/e1/02_reference/game0012_golden_cases_v0_2_DRAFT.json",
+      "sha256": "7eee3c12e14ed1a7d1cc94f63a5e59e6d8c90df62fdfec7ad2bfffcf88332df4"
+    }
+  ],
+  "derivation": [
+    "詳細設計v0.4 §5.1・§5.4と承認済み記録CSVの連続した実行枠の状態差分を使用する。",
+    "スイッチのON/OFF、同期解錠、扉の状態変化をその順に並べる。同種はID順とする。",
+    "初期状態7行は差分計算の起点。待機補完71行と記録終了・巻き戻しのイベントは対象外。",
+    "製品実装および実測結果は導出に使用していない。"
+  ],
+  "executedTicks": 41,
+  "changedTicks": 11,
+  "unchangedTicks": 30,
+  "paddingExcluded": 71,
+  "cases": {
+    "GC-01": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": [
+          "SW_a_ON",
+          "DOOR_D_OPEN"
+        ]
+      }
+    ],
+    "GC-02": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": []
+      },
+      {
+        "tick": 4,
+        "events": []
+      },
+      {
+        "tick": 5,
+        "events": []
+      },
+      {
+        "tick": 6,
+        "events": []
+      },
+      {
+        "tick": 7,
+        "events": [
+          "SW_a_ON",
+          "DOOR_D_OPEN"
+        ]
+      }
+    ],
+    "GC-03": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": []
+      },
+      {
+        "tick": 4,
+        "events": [
+          "SW_a_ON"
+        ]
+      }
+    ],
+    "GC-04": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": []
+      },
+      {
+        "tick": 4,
+        "events": [
+          "SW_a_ON",
+          "DOOR_A_OPEN"
+        ]
+      },
+      {
+        "tick": 5,
+        "events": []
+      },
+      {
+        "tick": 6,
+        "events": []
+      },
+      {
+        "tick": 7,
+        "events": [
+          "SW_a_OFF",
+          "DOOR_A_CLOSED"
+        ]
+      },
+      {
+        "tick": 8,
+        "events": []
+      },
+      {
+        "tick": 9,
+        "events": []
+      },
+      {
+        "tick": 10,
+        "events": []
+      },
+      {
+        "tick": 11,
+        "events": [
+          "SW_b_ON",
+          "DOOR_B_OPEN"
+        ]
+      }
+    ],
+    "GC-05": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": []
+      },
+      {
+        "tick": 4,
+        "events": []
+      },
+      {
+        "tick": 5,
+        "events": [
+          "SW_a_ON",
+          "DOOR_A_OPEN"
+        ]
+      }
+    ],
+    "GC-06": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": [
+          "SW_b_ON",
+          "DOOR_B_OPEN"
+        ]
+      }
+    ],
+    "GC-07": [
+      {
+        "tick": 1,
+        "events": []
+      },
+      {
+        "tick": 2,
+        "events": []
+      },
+      {
+        "tick": 3,
+        "events": []
+      },
+      {
+        "tick": 4,
+        "events": [
+          "SW_a_ON"
+        ]
+      },
+      {
+        "tick": 5,
+        "events": [
+          "SW_a_OFF"
+        ]
+      },
+      {
+        "tick": 6,
+        "events": []
+      },
+      {
+        "tick": 7,
+        "events": []
+      },
+      {
+        "tick": 8,
+        "events": []
+      },
+      {
+        "tick": 9,
+        "events": [
+          "SW_c_ON",
+          "DOOR_D_OPEN"
+        ]
+      }
+    ]
+  }
+}

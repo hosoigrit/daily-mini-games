@@ -1,0 +1,12 @@
+{
+  "name": "daily-mini-games-0012-time-clone",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/test.mjs",
+    "verify:h01": "node tests/verify-h01.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
