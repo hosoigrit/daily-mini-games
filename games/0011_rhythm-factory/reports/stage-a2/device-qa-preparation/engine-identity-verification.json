@@ -1,0 +1,32 @@
+{
+  "reviewedEngine": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "registeredR2": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+  "qaSource": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+  "productSourceTreeIdentical": true,
+  "trackedProductSourceFiles": 17,
+  "productPathsCompared": [
+    "games/0011_rhythm-factory/src",
+    "games/0011_rhythm-factory/package.json",
+    "games/0011_rhythm-factory/package-lock.json",
+    "games/0011_rhythm-factory/tests/fixtures/a2ar2-load-track.ts",
+    "games/0011_rhythm-factory/tests/browser",
+    "games/0011_rhythm-factory/vite.config.ts",
+    "games/0011_rhythm-factory/playwright.config.ts",
+    "handoffs",
+    "Game0011_Phase4_Handoff_v1.0.zip"
+  ],
+  "realImports": [
+    "src/content/stage-a2-trial.ts",
+    "src/domain/audio-clock.ts",
+    "src/infrastructure/web-audio.ts",
+    "tests/fixtures/a2ar2-load-track.ts"
+  ],
+  "prodBuild": {
+    "r2GitHubReadbackProductBuildEqualsLocal": true,
+    "assets": {
+      "index.html": "8a864d6aad712ea36f1e36de5dcbe5b5cc7a805183deff527487caa82fce3615",
+      "assets/index-B3ekpQ5g.css": "98c31e8850ef3d4facacab299e78eec527c0ac01ab8c4da27473de03ea9cb6c0",
+      "assets/index-RmQXfrQk.js": "e436a27a63a1dcc45e7d5ae20f0c4570f6f610975a8ef5c3d7fac57aabaf5031"
+    }
+  }
+}

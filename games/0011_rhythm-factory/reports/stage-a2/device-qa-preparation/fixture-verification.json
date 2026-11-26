@@ -1,0 +1,28 @@
+{
+  "assets": {
+    "rotation-24": {
+      "source": "src/content/stage-a2-trial.ts",
+      "sha256": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+      "seconds": 24,
+      "events": 222,
+      "sounds": 6,
+      "framesPerChannel": 1152000,
+      "pcmBytes": 9216000,
+      "sampleRate": 48000,
+      "unchanged": true
+    },
+    "load-84": {
+      "source": "tests/fixtures/a2ar2-load-track.ts",
+      "sha256": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+      "seconds": 84,
+      "events": 768,
+      "sounds": 6,
+      "framesPerChannel": 4032000,
+      "pcmBytes": 32256000,
+      "sampleRate": 48000,
+      "unchanged": true
+    }
+  },
+  "fixtureIdentityUnitTest": "PASS",
+  "previousR2ArtifactsPreserved": true
+}

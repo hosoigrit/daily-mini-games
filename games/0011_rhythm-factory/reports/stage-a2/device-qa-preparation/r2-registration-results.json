@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "pushExitCode": 0,
+  "refsBefore": {
+    "refs/heads/codex/game-0011-rhythm-factory": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+    "refs/heads/docs/game-0011-handoff": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
+    "refs/heads/main": "afbb965fe57c4772f91cbe67e59571180e9073f8"
+  },
+  "refsAfter": {
+    "refs/heads/codex/game-0011-rhythm-factory": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+    "refs/heads/docs/game-0011-handoff": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
+    "refs/heads/main": "afbb965fe57c4772f91cbe67e59571180e9073f8"
+  },
+  "targetHead": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+  "targetTree": "c0e85360113c4394dcde3fbe615fc9e6b1bf3b7f",
+  "readbackFromFreshGitDirectory": true,
+  "verifiedComparisons": {
+    "fromR": {
+      "added": 28
+    },
+    "fromA1": {
+      "added": 67,
+      "modified": 1
+    },
+    "fromReviewedEngine": {
+      "added": 45
+    },
+    "main": {
+      "added": 147
+    }
+  },
+  "differenceCounts": {
+    "afbb965fe57c4772f91cbe67e59571180e9073f8": 13,
+    "d6fd061bb986532307ed5b575a7cbd8b52261f26": 8,
+    "277d8775ee2a0ef2350b695e89c79a5a0d361847": 4,
+    "e34e1345e4ecd0fa0b251176f7af64136a46b0ee": 5
+  },
+  "modifiedPath": "games/0011_rhythm-factory/tools/check-architecture.mjs",
+  "modifiedPathPurpose": "One content dependency layer allows contracts and content. No runtime changes.",
+  "originalDesignReadback": "30/30 ZIP and tree bytes, 29 outer +20 inner checksums; lock and source shared contract unchanged.",
+  "otherRemoteWrites": 0,
+  "mainCiPagesSharedDiff": 0,
+  "pullRequestsCreated": 0
+}

@@ -1,0 +1,102 @@
+{
+  "fixedHead": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+  "tree": "c0e85360113c4394dcde3fbe615fc9e6b1bf3b7f",
+  "cleanWorktree": true,
+  "localExistingWorkspace": true,
+  "origin": "https://github.com/hosoigrit/daily-mini-games.git",
+  "refsBefore": {
+    "refs/heads/codex/game-0011-rhythm-factory": "d6fd061bb986532307ed5b575a7cbd8b52261f26",
+    "refs/heads/docs/game-0011-handoff": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
+    "refs/heads/main": "afbb965fe57c4772f91cbe67e59571180e9073f8"
+  },
+  "reviewedEngine": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "reviewedEngineAncestor": true,
+  "a1Ancestor": true,
+  "savedBundleAndManifests": "All 8 packaged checksums match. Verified bundle and change manifests match git object manifests.",
+  "sourceZip": {
+    "bytes": 209523,
+    "crc": "PASS",
+    "sha256": "eb5e70388c5dd20cfbc5ae390d00c2ff88fa99449ab76e0ea1145bf194734075",
+    "originalFiles": 30,
+    "outerChecksums": 29,
+    "innerChecksums": 20
+  },
+  "counts": {
+    "tc": 310,
+    "tcStatus": "NOT RUN",
+    "traceability": 581,
+    "at": 125,
+    "if": 20,
+    "qg": 11,
+    "poc": 18
+  },
+  "lockFileSha256": "5f5cce304c990aa7c647c0f8b7789c8cbc674ba77d0e1bdd1b4edaf127d8b8cc",
+  "sharedTypeSha256": "db040783239fbd26a96b3ee18c01878d47917da6e73ec88d5a52d3dc02d840ed",
+  "r2Recorded": {
+    "r2Head": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+    "independentValidObservations": 6502,
+    "independentMismatches": 0,
+    "maximaMs": {
+      "chromium-approved": 170.7333333325884,
+      "firefox-isolated": 78.99999999999866,
+      "webkit-approved": 104.0
+    },
+    "statuses": {
+      "base": {
+        "passed": 14,
+        "failed": 16
+      },
+      "r2Normal": {
+        "failed": 31,
+        "passed": 16,
+        "timedOut": 1
+      },
+      "r2Additional": {
+        "failed": 1,
+        "passed": 2
+      }
+    },
+    "commitCounts": {
+      "afbb965fe57c4772f91cbe67e59571180e9073f8": 13,
+      "d6fd061bb986532307ed5b575a7cbd8b52261f26": 8,
+      "277d8775ee2a0ef2350b695e89c79a5a0d361847": 4,
+      "e34e1345e4ecd0fa0b251176f7af64136a46b0ee": 5
+    }
+  },
+  "preservedExceptions": [
+    "Firefox isolated wrapper log exception; 16 JSON trials preserved",
+    "Chromium 84 s trial 3 timeout with no attachment, and separate successful rerun",
+    "Unverified matching WebKit candidate BLOCKED",
+    "Physical hardware and subjective audio NOT RUN"
+  ],
+  "audit": {
+    "checkedObjectCounts": {
+      "commit": 8,
+      "tree": 58,
+      "blob": 75
+    },
+    "uncompressedBlobBytes": 6152421,
+    "largestBlob": {
+      "path": "games/0011_rhythm-factory/reports/stage-a2/clock-remediation-r2/raw-clock-observations.json",
+      "blobId": "4ee4aefb522f9237d795ab8090e31d848cd9cb0a",
+      "bytes": 3139641,
+      "sha256": "edfdb7dc6f949ab7eebf2b073e596e32c9cb6f97a92f1837f4bb1d66e56d550d"
+    },
+    "allBlobsUtf8Text": true,
+    "payloadPatternMatches": 0,
+    "historicalCommitIdentity": "Exactly the author and committer identity already present in the published A-1 baseline. Identity values omitted here."
+  },
+  "independentAuditSha256": "32d24ce88c8154e36ccb9fc4c71917346c7cb55b938315c2901f580d05871fcd",
+  "gateChecks": {
+    "R3-REG-01": "PASS",
+    "R3-REG-02": "PASS",
+    "R3-REG-03": "PASS",
+    "R3-REG-04": "PASS",
+    "R3-REG-05": "PASS",
+    "R3-REG-06": "PASS",
+    "R3-REG-07": "PASS",
+    "R3-REG-08": "PASS",
+    "R3-REG-09": "PASS",
+    "R3-REG-10": "PASS"
+  }
+}

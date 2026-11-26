@@ -1,0 +1,424 @@
+{
+  "staticExitCodes": {
+    "typecheck": 0,
+    "vitest": 0,
+    "build": 0,
+    "playwright": 1
+  },
+  "unchangedProductE2e": {
+    "stats": {
+      "startTime": "2026-11-26T01:54:51.742Z",
+      "duration": 220566.381,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 15,
+      "flaky": 0
+    },
+    "sha256": "e06694b6ab34fca3e9ad74bd4ad8ad95938e3e0c8e1880b0c472ae6659e45536",
+    "trials": [
+      {
+        "test": "A-2a-R CASE-05 natural trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "natural",
+            "run": 1,
+            "status": "natural-completed"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "natural",
+            "run": 1,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "natural",
+            "run": 1,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "natural",
+            "run": 2,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "natural",
+            "run": 2,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "natural",
+            "run": 2,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "natural",
+            "run": 3,
+            "status": "natural-completed"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "natural",
+            "run": 3,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 natural trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "natural",
+            "run": 3,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "stop-restart",
+            "run": 1,
+            "status": "restart-completed"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "stop-restart",
+            "run": 1,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 1",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "stop-restart",
+            "run": 1,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "stop-restart",
+            "run": 2,
+            "status": "restart-completed"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "stop-restart",
+            "run": 2,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 2",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "stop-restart",
+            "run": 2,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0.8154.6",
+            "engine": "chromium",
+            "kind": "stop-restart",
+            "run": 3,
+            "status": "restart-completed"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "159.0",
+            "engine": "firefox",
+            "kind": "stop-restart",
+            "run": 3,
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a-R CASE-05 stop-restart trial 3",
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "a2ar-case-05-raw": {
+            "version": "27.2",
+            "engine": "webkit",
+            "kind": "stop-restart",
+            "run": 3,
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "audio-render-result": {
+            "version": "159.0.8154.6"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "firefox",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "audio-render-result": {
+            "version": "159.0"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "webkit",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "audio-render-result": {
+            "version": "27.2"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {
+          "output-clock-result": {
+            "version": "159.0.8154.6",
+            "status": "running"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "firefox",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "output-clock-result": {
+            "version": "159.0",
+            "status": "activation-unavailable"
+          }
+        }
+      },
+      {
+        "test": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "webkit",
+        "testStatus": "failed",
+        "engineEvidence": {
+          "output-clock-result": {
+            "version": "27.2",
+            "status": "safety-stop"
+          }
+        }
+      },
+      {
+        "test": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      },
+      {
+        "test": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "firefox",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      },
+      {
+        "test": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "webkit",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      },
+      {
+        "test": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "chromium",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      },
+      {
+        "test": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "firefox",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      },
+      {
+        "test": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+        "file": "subpath.spec.ts",
+        "browser": "webkit",
+        "testStatus": "passed",
+        "engineEvidence": {}
+      }
+    ]
+  },
+  "existingVitest": {
+    "pass": 30,
+    "tests": 30
+  },
+  "a1": {
+    "vitestPassed": 18,
+    "playwrightPassed": 6,
+    "includedInCounts": true
+  },
+  "r2PriorEvidenceMaintained": {
+    "regularTrialCount": 48,
+    "reportedStatus": "HOLD",
+    "currentExecution": "NOT RUN"
+  },
+  "productBuildIdentity": {
+    "r2GitHubReadbackProductBuildEqualsLocal": true,
+    "assets": {
+      "index.html": "8a864d6aad712ea36f1e36de5dcbe5b5cc7a805183deff527487caa82fce3615",
+      "assets/index-B3ekpQ5g.css": "98c31e8850ef3d4facacab299e78eec527c0ac01ab8c4da27473de03ea9cb6c0",
+      "assets/index-RmQXfrQk.js": "e436a27a63a1dcc45e7d5ae20f0c4570f6f610975a8ef5c3d7fac57aabaf5031"
+    }
+  }
+}

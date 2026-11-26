@@ -1,0 +1,2938 @@
+{
+  "reviewedSource": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+  "tree": "6845b07368840f27a2902608e490643404eb326c",
+  "staticExitCodes": {
+    "typecheck": 0,
+    "lint": 0,
+    "architecture": 0,
+    "unit": 0,
+    "build": 0
+  },
+  "qaUnitCount": 34,
+  "vitestPerFile": {
+    "controller.test.ts": {
+      "passed": 18
+    },
+    "export.test.ts": {
+      "passed": 6
+    },
+    "fixtures.test.ts": {
+      "passed": 1
+    },
+    "model.test.ts": {
+      "passed": 9
+    }
+  },
+  "browserEnvironments": {
+    "dev": {
+      "sha256": "79eccac159f3bb5d47096e1c33639f61b4bb94f5a1261564612431e1b49d2be5",
+      "stats": {
+        "startTime": "2026-11-26T02:07:46.756Z",
+        "duration": 65047.861000000004,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "tests": [
+        {
+          "project": "chromium-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 3916,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 2822,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 4018,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "skipped",
+          "durationMs": 66,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "skipped",
+          "durationMs": 205,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "passed",
+          "durationMs": 7508,
+          "attachments": {
+            "qa-dev05-ui-simulated-clock": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "PASS"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 195,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 190,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 39,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 170,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "passed",
+          "durationMs": 3886,
+          "attachments": {
+            "qa-over-limit-ui-simulated-clock": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "FAIL"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 223,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 158,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 31,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 162,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 3815,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "outcome": "PASS",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 1,
+                "failedTrials": 0,
+                "blockedTrials": 0,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 1,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 3253.199999999255,
+                  "p95": 3253.199999999255,
+                  "p99": 3253.199999999255,
+                  "max": 3253.199999999255
+                },
+                "syncDifferenceMs": {
+                  "count": 1,
+                  "median": 0.01733333221575606,
+                  "p95": 0.01733333221575606,
+                  "p99": 0.01733333221575606,
+                  "max": 0.01733333221575606
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "ff5e2a3ee16af14ddb7cd3df"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 1,
+                    "failedTrials": 0,
+                    "blockedTrials": 0,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 1,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 3253.199999999255,
+                      "p95": 3253.199999999255,
+                      "p99": 3253.199999999255,
+                      "max": 3253.199999999255
+                    },
+                    "syncDifferenceMs": {
+                      "count": 1,
+                      "median": 0.01733333221575606,
+                      "p95": 0.01733333221575606,
+                      "p99": 0.01733333221575606,
+                      "max": 0.01733333221575606
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "528731db80a68d5fb2d7536a",
+                  "trialId": "ff5e2a3ee16af14ddb7cd3df",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:08:03.121Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "PASS",
+                  "activation": "SUCCESS",
+                  "anchor": "SUCCESS",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "trial.anchorVerified",
+                  "anchors": [
+                    {
+                      "generation": 1,
+                      "a0": 0.01005833333333333,
+                      "p0": 3543.2999999988824,
+                      "performanceNow": 3544.199999999255,
+                      "currentTime": 0.050666666666666665,
+                      "contextTime": 0.01005833333333333,
+                      "performanceTime": 3543.2999999988824,
+                      "audioContextState": "running",
+                      "startAudioSec": 0.10066666666666667,
+                      "startSongUs": 0
+                    }
+                  ],
+                  "observations": [
+                    {
+                      "generation": 1,
+                      "a0": 0.01005833333333333,
+                      "p0": 3543.2999999988824,
+                      "performanceNow": 3644.699999999255,
+                      "currentTime": 0.152,
+                      "contextTime": 0.11027566666666667,
+                      "performanceTime": 3643.5,
+                      "audioContextState": "running",
+                      "intervalMs": null,
+                      "signedResidualMs": 0.01733333221575606,
+                      "absoluteDifferenceMs": 0.01733333221575606,
+                      "valid": true,
+                      "overLimit": false,
+                      "reason": null,
+                      "safetyStopReason": null
+                    }
+                  ],
+                  "preparations": [
+                    {
+                      "startedAtMs": 145.59999999962747,
+                      "completedAtMs": 3398.7999999988824,
+                      "generationMs": 3253.199999999255,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.29440736770629883,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 145.40000000037253,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3420.5999999996275,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3510.5,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 3543.9000000003725,
+                      "kind": "trusted-start"
+                    },
+                    {
+                      "atMs": 3544.0999999996275,
+                      "kind": "anchor-readiness",
+                      "detail": "{\"performanceNow\":3544.0999999996275,\"currentTime\":0.050666666666666665,\"contextTime\":0.01005833333333333,\"performanceTime\":3543.2999999988824,\"audioContextState\":\"running\"}"
+                    },
+                    {
+                      "atMs": 3544.4000000003725,
+                      "kind": "anchor-fixed",
+                      "detail": "1"
+                    },
+                    {
+                      "atMs": 3645.199999999255,
+                      "kind": "finish",
+                      "detail": "trial.anchorVerified"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 3271,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "firefox",
+              "version": "159.0",
+              "outcome": "BLOCKED",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 0,
+                "blockedTrials": 1,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 0,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 425,
+                  "p95": 425,
+                  "p99": 425,
+                  "max": 425
+                },
+                "syncDifferenceMs": {
+                  "count": 0,
+                  "median": null,
+                  "p95": null,
+                  "p99": null,
+                  "max": null
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "e13895951ecdc081c86ba68f"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 0,
+                    "blockedTrials": 1,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 0,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 425,
+                      "p95": 425,
+                      "p99": 425,
+                      "max": 425
+                    },
+                    "syncDifferenceMs": {
+                      "count": 0,
+                      "median": null,
+                      "p95": null,
+                      "p99": null,
+                      "max": null
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "b1de6d3f51babbd9f916a0fc",
+                  "trialId": "e13895951ecdc081c86ba68f",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:08:25.191Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "BLOCKED",
+                  "activation": "PENDING",
+                  "anchor": "NOT RUN",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "qa.activationObservationEnded",
+                  "anchors": [],
+                  "observations": [],
+                  "preparations": [
+                    {
+                      "startedAtMs": 282,
+                      "completedAtMs": 707,
+                      "generationMs": 425,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.2945835292339325,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 281,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 736,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 1143,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 2946,
+                      "kind": "finish",
+                      "detail": "qa.activationObservationEnded"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 4118,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "outcome": "FAIL",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 1,
+                "blockedTrials": 0,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 1,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 2567,
+                  "p95": 2567,
+                  "p99": 2567,
+                  "max": 2567
+                },
+                "syncDifferenceMs": {
+                  "count": 1,
+                  "median": 101.66666700000003,
+                  "p95": 101.66666700000003,
+                  "p99": 101.66666700000003,
+                  "max": 101.66666700000003
+                },
+                "overLimitCount": 1,
+                "firstOverLimit": {
+                  "runId": "54fe4de61b678fc6d7952fb9",
+                  "trialId": "adb6a8e5025c99a363e0b091",
+                  "generation": 1,
+                  "performanceNow": 3750,
+                  "absoluteDifferenceMs": 101.66666700000003
+                },
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "adb6a8e5025c99a363e0b091"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 1,
+                    "blockedTrials": 0,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 1,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 2567,
+                      "p95": 2567,
+                      "p99": 2567,
+                      "max": 2567
+                    },
+                    "syncDifferenceMs": {
+                      "count": 1,
+                      "median": 101.66666700000003,
+                      "p95": 101.66666700000003,
+                      "p99": 101.66666700000003,
+                      "max": 101.66666700000003
+                    },
+                    "overLimitCount": 1,
+                    "firstOverLimit": {
+                      "runId": "54fe4de61b678fc6d7952fb9",
+                      "trialId": "adb6a8e5025c99a363e0b091",
+                      "generation": 1,
+                      "performanceNow": 3750,
+                      "absoluteDifferenceMs": 101.66666700000003
+                    },
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "54fe4de61b678fc6d7952fb9",
+                  "trialId": "adb6a8e5025c99a363e0b091",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:08:40.648Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "FAIL",
+                  "activation": "SUCCESS",
+                  "anchor": "SUCCESS",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "clock.outOfSync",
+                  "anchors": [
+                    {
+                      "generation": 1,
+                      "a0": 0.149333333,
+                      "p0": 3798,
+                      "performanceNow": 3650,
+                      "currentTime": 0.152,
+                      "contextTime": 0.149333333,
+                      "performanceTime": 3798,
+                      "audioContextState": "running",
+                      "startAudioSec": 0.202,
+                      "startSongUs": 0
+                    }
+                  ],
+                  "observations": [
+                    {
+                      "generation": 1,
+                      "a0": 0.149333333,
+                      "p0": 3798,
+                      "performanceNow": 3750,
+                      "currentTime": 0.25333333333333335,
+                      "contextTime": 0.250666666,
+                      "performanceTime": 4001,
+                      "audioContextState": "running",
+                      "intervalMs": null,
+                      "signedResidualMs": -101.66666700000003,
+                      "absoluteDifferenceMs": 101.66666700000003,
+                      "valid": true,
+                      "overLimit": true,
+                      "reason": "clock.outOfSync",
+                      "safetyStopReason": "clock.outOfSync"
+                    }
+                  ],
+                  "preparations": [
+                    {
+                      "startedAtMs": 574,
+                      "completedAtMs": 3141,
+                      "generationMs": 2567,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.29440733790397644,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 573,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3166,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3477,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 3649,
+                      "kind": "trusted-start"
+                    },
+                    {
+                      "atMs": 3650,
+                      "kind": "anchor-readiness",
+                      "detail": "{\"performanceNow\":3650,\"currentTime\":0.152,\"contextTime\":0.149333333,\"performanceTime\":3798,\"audioContextState\":\"running\"}"
+                    },
+                    {
+                      "atMs": 3650,
+                      "kind": "anchor-fixed",
+                      "detail": "1"
+                    },
+                    {
+                      "atMs": 3751,
+                      "kind": "finish",
+                      "detail": "clock.outOfSync"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "skipped",
+          "durationMs": 37,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "skipped",
+          "durationMs": 157,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 35,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "passed",
+          "durationMs": 4189,
+          "attachments": {
+            "qa-native-84-second-render": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 0,
+                "blockedTrials": 0,
+                "abortedTrials": 1,
+                "unexecutedTrials": 20,
+                "validObservations": 0,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 3459,
+                  "p95": 3459,
+                  "p99": 3459,
+                  "max": 3459
+                },
+                "syncDifferenceMs": {
+                  "count": 0,
+                  "median": null,
+                  "p95": null,
+                  "p99": null,
+                  "max": null
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-04",
+                      "testProfile": "screening",
+                      "fixtureId": "load-84",
+                      "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-04",
+                    "testProfile": "screening",
+                    "fixtureId": "load-84",
+                    "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "837a9584a0de9227f55ef5c3"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 0,
+                    "blockedTrials": 0,
+                    "abortedTrials": 1,
+                    "unexecutedTrials": 0,
+                    "validObservations": 0,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 3459,
+                      "p95": 3459,
+                      "p99": 3459,
+                      "max": 3459
+                    },
+                    "syncDifferenceMs": {
+                      "count": 0,
+                      "median": null,
+                      "p95": null,
+                      "p99": null,
+                      "max": null
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "load-84",
+                  "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                  "runId": "81a6ec6f7efbad6c9d43a932",
+                  "trialId": "837a9584a0de9227f55ef5c3",
+                  "testCaseId": "DEV-AUD-04",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:08:28.458Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "ABORTED",
+                  "activation": "NOT RUN",
+                  "anchor": "NOT RUN",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "trial.userReleased",
+                  "anchors": [],
+                  "observations": [],
+                  "preparations": [
+                    {
+                      "startedAtMs": 273,
+                      "completedAtMs": 3732,
+                      "generationMs": 3459,
+                      "durationSec": 84,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 4032000,
+                      "pcmBytes": 32256000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.2945835292339325,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 168
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 272,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3842,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3897,
+                      "kind": "finish",
+                      "detail": "trial.userReleased"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 167,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 31,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 144,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "passed",
+          "durationMs": 8053,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 254,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 154,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 30,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 137,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "passed",
+          "durationMs": 5169,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 244,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 149,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 36,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 146,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 180,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "profile": "chromium-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 445,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "firefox",
+              "version": "159.0",
+              "profile": "firefox-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 668,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "profile": "webkit-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 212,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "profile": "chromium-android-emulation",
+              "mobileEmulation": true,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 412,
+              "height": 839
+            }
+          }
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 675,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "profile": "webkit-ios-emulation",
+              "mobileEmulation": true,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 390,
+              "height": 664
+            }
+          }
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 307,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 882,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 795,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 287,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 910,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 36,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 645,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 189,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 36,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "passed",
+          "durationMs": 778,
+          "attachments": {}
+        }
+      ],
+      "exitCode": 0
+    },
+    "preview": {
+      "sha256": "d1c0c0051c968910d4baab505a79d1bb7f8aa5c5db2881bbdbb356466a0b76a4",
+      "stats": {
+        "startTime": "2026-11-26T02:08:52.335Z",
+        "duration": 64258.352,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "tests": [
+        {
+          "project": "chromium-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 3806,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 2507,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "passed",
+          "durationMs": 3849,
+          "attachments": {
+            "qa-blocked-export": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "BLOCKED"
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "skipped",
+          "durationMs": 66,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "status": "skipped",
+          "durationMs": 166,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "passed",
+          "durationMs": 8141,
+          "attachments": {
+            "qa-dev05-ui-simulated-clock": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "PASS"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 216,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 180,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 35,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "status": "skipped",
+          "durationMs": 161,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "passed",
+          "durationMs": 3821,
+          "attachments": {
+            "qa-over-limit-ui-simulated-clock": {
+              "input": "TEST FIXTURE",
+              "schemaValidation": "PASS",
+              "status": "FAIL"
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 228,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 154,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 31,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "retains the first over-limit sample and releases resources (simulated clock)",
+          "status": "skipped",
+          "durationMs": 158,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 3818,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "outcome": "PASS",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 1,
+                "failedTrials": 0,
+                "blockedTrials": 0,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 1,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 3184,
+                  "p95": 3184,
+                  "p99": 3184,
+                  "max": 3184
+                },
+                "syncDifferenceMs": {
+                  "count": 1,
+                  "median": 0.1053333337058433,
+                  "p95": 0.1053333337058433,
+                  "p99": 0.1053333337058433,
+                  "max": 0.1053333337058433
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "dc41df471b18c9dd8ac39b52"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 1,
+                    "failedTrials": 0,
+                    "blockedTrials": 0,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 1,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 3184,
+                      "p95": 3184,
+                      "p99": 3184,
+                      "max": 3184
+                    },
+                    "syncDifferenceMs": {
+                      "count": 1,
+                      "median": 0.1053333337058433,
+                      "p95": 0.1053333337058433,
+                      "p99": 0.1053333337058433,
+                      "max": 0.1053333337058433
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "76bda378ff6cb77e1a77ac4a",
+                  "trialId": "dc41df471b18c9dd8ac39b52",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:09:09.119Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "PASS",
+                  "activation": "SUCCESS",
+                  "anchor": "SUCCESS",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "trial.anchorVerified",
+                  "anchors": [
+                    {
+                      "generation": 1,
+                      "a0": 0.020073166666666663,
+                      "p0": 3526.300000000745,
+                      "performanceNow": 3534,
+                      "currentTime": 0.06133333333333333,
+                      "contextTime": 0.020073166666666663,
+                      "performanceTime": 3526.300000000745,
+                      "audioContextState": "running",
+                      "startAudioSec": 0.11133333333333334,
+                      "startSongUs": 0
+                    }
+                  ],
+                  "observations": [
+                    {
+                      "generation": 1,
+                      "a0": 0.020073166666666663,
+                      "p0": 3526.300000000745,
+                      "performanceNow": 3634.4000000003725,
+                      "currentTime": 0.16266666666666665,
+                      "contextTime": 0.12027849999999997,
+                      "performanceTime": 3626.4000000003725,
+                      "audioContextState": "running",
+                      "intervalMs": null,
+                      "signedResidualMs": 0.1053333337058433,
+                      "absoluteDifferenceMs": 0.1053333337058433,
+                      "valid": true,
+                      "overLimit": false,
+                      "reason": null,
+                      "safetyStopReason": null
+                    }
+                  ],
+                  "preparations": [
+                    {
+                      "startedAtMs": 118.80000000074506,
+                      "completedAtMs": 3302.800000000745,
+                      "generationMs": 3184,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.29440736770629883,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 118.5,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3324.5999999996275,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3483.9000000003725,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 3533.5999999996275,
+                      "kind": "trusted-start"
+                    },
+                    {
+                      "atMs": 3533.9000000003725,
+                      "kind": "anchor-readiness",
+                      "detail": "{\"performanceNow\":3533.800000000745,\"currentTime\":0.06133333333333333,\"contextTime\":0.020073166666666663,\"performanceTime\":3526.300000000745,\"audioContextState\":\"running\"}"
+                    },
+                    {
+                      "atMs": 3534.199999999255,
+                      "kind": "anchor-fixed",
+                      "detail": "1"
+                    },
+                    {
+                      "atMs": 3634.800000000745,
+                      "kind": "finish",
+                      "detail": "trial.anchorVerified"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 3217,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "firefox",
+              "version": "159.0",
+              "outcome": "BLOCKED",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 0,
+                "blockedTrials": 1,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 0,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 381,
+                  "p95": 381,
+                  "p99": 381,
+                  "max": 381
+                },
+                "syncDifferenceMs": {
+                  "count": 0,
+                  "median": null,
+                  "p95": null,
+                  "p99": null,
+                  "max": null
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "29a0d846258509b3d65a7eaa"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 0,
+                    "blockedTrials": 1,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 0,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 381,
+                      "p95": 381,
+                      "p99": 381,
+                      "max": 381
+                    },
+                    "syncDifferenceMs": {
+                      "count": 0,
+                      "median": null,
+                      "p95": null,
+                      "p99": null,
+                      "max": null
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "9c01871c46da2862855cfd02",
+                  "trialId": "29a0d846258509b3d65a7eaa",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:09:30.761Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "BLOCKED",
+                  "activation": "PENDING",
+                  "anchor": "NOT RUN",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "qa.activationObservationEnded",
+                  "anchors": [],
+                  "observations": [],
+                  "preparations": [
+                    {
+                      "startedAtMs": 196,
+                      "completedAtMs": 577,
+                      "generationMs": 381,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.2945835292339325,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 196,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 606,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 1055,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 2860,
+                      "kind": "finish",
+                      "detail": "qa.activationObservationEnded"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "passed",
+          "durationMs": 3973,
+          "attachments": {
+            "qa-native-clock-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "outcome": "FAIL",
+              "outgoing": []
+            },
+            "qa-native-clock-evidence": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 1,
+                "blockedTrials": 0,
+                "abortedTrials": 0,
+                "unexecutedTrials": 20,
+                "validObservations": 1,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 2547,
+                  "p95": 2547,
+                  "p99": 2547,
+                  "max": 2547
+                },
+                "syncDifferenceMs": {
+                  "count": 1,
+                  "median": 98.33333299999998,
+                  "p95": 98.33333299999998,
+                  "p99": 98.33333299999998,
+                  "max": 98.33333299999998
+                },
+                "overLimitCount": 1,
+                "firstOverLimit": {
+                  "runId": "0b6850f33d22acb2d7dcef49",
+                  "trialId": "4067958db4a248f7575d884b",
+                  "generation": 1,
+                  "performanceNow": 3660,
+                  "absoluteDifferenceMs": 98.33333299999998
+                },
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-01",
+                      "testProfile": "screening",
+                      "fixtureId": "rotation-24",
+                      "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-01",
+                    "testProfile": "screening",
+                    "fixtureId": "rotation-24",
+                    "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "4067958db4a248f7575d884b"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 1,
+                    "blockedTrials": 0,
+                    "abortedTrials": 0,
+                    "unexecutedTrials": 0,
+                    "validObservations": 1,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 2547,
+                      "p95": 2547,
+                      "p99": 2547,
+                      "max": 2547
+                    },
+                    "syncDifferenceMs": {
+                      "count": 1,
+                      "median": 98.33333299999998,
+                      "p95": 98.33333299999998,
+                      "p99": 98.33333299999998,
+                      "max": 98.33333299999998
+                    },
+                    "overLimitCount": 1,
+                    "firstOverLimit": {
+                      "runId": "0b6850f33d22acb2d7dcef49",
+                      "trialId": "4067958db4a248f7575d884b",
+                      "generation": 1,
+                      "performanceNow": 3660,
+                      "absoluteDifferenceMs": 98.33333299999998
+                    },
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "rotation-24",
+                  "fixtureHash": "1a89dbc07d125dd9198ffe145ebb45e5973397cc8aee226da58293c396f7c1cc",
+                  "runId": "0b6850f33d22acb2d7dcef49",
+                  "trialId": "4067958db4a248f7575d884b",
+                  "testCaseId": "DEV-AUD-01",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:09:45.700Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "FAIL",
+                  "activation": "SUCCESS",
+                  "anchor": "SUCCESS",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "clock.outOfSync",
+                  "anchors": [
+                    {
+                      "generation": 1,
+                      "a0": 0.133333333,
+                      "p0": 3693,
+                      "performanceNow": 3560,
+                      "currentTime": 0.136,
+                      "contextTime": 0.133333333,
+                      "performanceTime": 3693,
+                      "audioContextState": "running",
+                      "startAudioSec": 0.186,
+                      "startSongUs": 0
+                    }
+                  ],
+                  "observations": [
+                    {
+                      "generation": 1,
+                      "a0": 0.133333333,
+                      "p0": 3693,
+                      "performanceNow": 3660,
+                      "currentTime": 0.23466666666666666,
+                      "contextTime": 0.232,
+                      "performanceTime": 3890,
+                      "audioContextState": "running",
+                      "intervalMs": null,
+                      "signedResidualMs": -98.33333299999998,
+                      "absoluteDifferenceMs": 98.33333299999998,
+                      "valid": true,
+                      "overLimit": true,
+                      "reason": "clock.outOfSync",
+                      "safetyStopReason": "clock.outOfSync"
+                    }
+                  ],
+                  "preparations": [
+                    {
+                      "startedAtMs": 491,
+                      "completedAtMs": 3038,
+                      "generationMs": 2547,
+                      "durationSec": 24,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 1152000,
+                      "pcmBytes": 9216000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.29440736770629883,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 48
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 491,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3061,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3407,
+                      "kind": "trusted-enable"
+                    },
+                    {
+                      "atMs": 3559,
+                      "kind": "trusted-start"
+                    },
+                    {
+                      "atMs": 3560,
+                      "kind": "anchor-readiness",
+                      "detail": "{\"performanceNow\":3559,\"currentTime\":0.136,\"contextTime\":0.133333333,\"performanceTime\":3693,\"audioContextState\":\"running\"}"
+                    },
+                    {
+                      "atMs": 3560,
+                      "kind": "anchor-fixed",
+                      "detail": "1"
+                    },
+                    {
+                      "atMs": 3661,
+                      "kind": "finish",
+                      "detail": "clock.outOfSync"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "skipped",
+          "durationMs": 32,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "records the native short-track activation and clock outcome without forcing PASS",
+          "status": "skipped",
+          "durationMs": 144,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 34,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "passed",
+          "durationMs": 4113,
+          "attachments": {
+            "qa-native-84-second-render": {
+              "schemaVersion": 1,
+              "formalStatus": "HOLD",
+              "physicalDeviceVerified": false,
+              "percentileMethod": "nearest-rank",
+              "summary": {
+                "plannedTrials": 21,
+                "executedTrials": 1,
+                "successfulTrials": 0,
+                "failedTrials": 0,
+                "blockedTrials": 0,
+                "abortedTrials": 1,
+                "unexecutedTrials": 20,
+                "validObservations": 0,
+                "invalidObservations": 0,
+                "generationMs": {
+                  "count": 1,
+                  "median": 3409,
+                  "p95": 3409,
+                  "p99": 3409,
+                  "max": 3409
+                },
+                "syncDifferenceMs": {
+                  "count": 0,
+                  "median": null,
+                  "p95": null,
+                  "p99": null,
+                  "max": null
+                },
+                "overLimitCount": 0,
+                "firstOverLimit": null,
+                "restartSuccesses": 0,
+                "mixedConditions": false,
+                "generationPerformance": [
+                  {
+                    "condition": {
+                      "testCaseId": "DEV-AUD-04",
+                      "testProfile": "screening",
+                      "fixtureId": "load-84",
+                      "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                      "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                      "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                      "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                      "environmentId": null,
+                      "deviceType": null,
+                      "os": null,
+                      "browser": null,
+                      "browserVersion": null,
+                      "audioOutputType": null,
+                      "powerState": null,
+                      "diagnosticsEnabled": true,
+                      "visibilityAtStart": "visible",
+                      "activationObservationLimitMs": 1800,
+                      "viewport": {
+                        "width": 1280,
+                        "height": 720,
+                        "orientation": "landscape-primary"
+                      }
+                    },
+                    "minimumTrials": 3,
+                    "medianLimitMs": 5000,
+                    "maxLimitMs": 10000,
+                    "status": "NOT RUN",
+                    "sampleCount": 1,
+                    "resourceCapExceeded": false
+                  }
+                ]
+              },
+              "groups": [
+                {
+                  "condition": {
+                    "testCaseId": "DEV-AUD-04",
+                    "testProfile": "screening",
+                    "fixtureId": "load-84",
+                    "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                    "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                    "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                    "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                    "environmentId": null,
+                    "deviceType": null,
+                    "os": null,
+                    "browser": null,
+                    "browserVersion": null,
+                    "audioOutputType": null,
+                    "powerState": null,
+                    "diagnosticsEnabled": true,
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800,
+                    "viewport": {
+                      "width": 1280,
+                      "height": 720,
+                      "orientation": "landscape-primary"
+                    }
+                  },
+                  "trialIds": [
+                    "4b856495f81729e8fe65b48e"
+                  ],
+                  "summary": {
+                    "plannedTrials": 1,
+                    "executedTrials": 1,
+                    "successfulTrials": 0,
+                    "failedTrials": 0,
+                    "blockedTrials": 0,
+                    "abortedTrials": 1,
+                    "unexecutedTrials": 0,
+                    "validObservations": 0,
+                    "invalidObservations": 0,
+                    "generationMs": {
+                      "count": 1,
+                      "median": 3409,
+                      "p95": 3409,
+                      "p99": 3409,
+                      "max": 3409
+                    },
+                    "syncDifferenceMs": {
+                      "count": 0,
+                      "median": null,
+                      "p95": null,
+                      "p99": null,
+                      "max": null
+                    },
+                    "overLimitCount": 0,
+                    "firstOverLimit": null,
+                    "restartSuccesses": 0,
+                    "generationPerformance": {
+                      "minimumTrials": 3,
+                      "medianLimitMs": 5000,
+                      "maxLimitMs": 10000,
+                      "status": "NOT RUN",
+                      "sampleCount": 1,
+                      "resourceCapExceeded": false
+                    }
+                  }
+                }
+              ],
+              "trials": [
+                {
+                  "schemaVersion": 1,
+                  "qaHarnessVersion": "1.0.0",
+                  "qaHarnessCommit": "f20b2ff7aab092bec58824a3856b6c6ca8ba8105",
+                  "productImplementationCommit": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+                  "baselineCommit": "8afe3cfb1d63920ba0c31c6391cc9a644ee24492",
+                  "fixtureId": "load-84",
+                  "fixtureHash": "c59df3fc2dc4c8771c0461a3e20ade6946240b55c0f0bde2e1441fa256a99379",
+                  "runId": "2ef333451f06be669312a9d7",
+                  "trialId": "4b856495f81729e8fe65b48e",
+                  "testCaseId": "DEV-AUD-04",
+                  "testProfile": "screening",
+                  "recordedAt": "2026-11-26T02:09:34.044Z",
+                  "deviceType": null,
+                  "os": null,
+                  "browser": null,
+                  "browserVersion": null,
+                  "audioOutputType": null,
+                  "viewport": {
+                    "width": 1280,
+                    "height": 720,
+                    "orientation": "landscape-primary"
+                  },
+                  "testConditions": {
+                    "source": "browser-qa",
+                    "physicalDeviceVerified": false,
+                    "diagnosticsEnabled": true,
+                    "environmentId": null,
+                    "powerState": null,
+                    "deviceFieldsSource": "user",
+                    "viewportSource": "browser",
+                    "visibilityAtStart": "visible",
+                    "activationObservationLimitMs": 1800
+                  },
+                  "status": "ABORTED",
+                  "activation": "NOT RUN",
+                  "anchor": "NOT RUN",
+                  "naturalCompletion": false,
+                  "restarted": false,
+                  "released": true,
+                  "reason": "trial.userReleased",
+                  "anchors": [],
+                  "observations": [],
+                  "preparations": [
+                    {
+                      "startedAtMs": 231,
+                      "completedAtMs": 3640,
+                      "generationMs": 3409,
+                      "durationSec": 84,
+                      "channels": 2,
+                      "sampleRate": 48000,
+                      "frames": 4032000,
+                      "pcmBytes": 32256000,
+                      "cacheCount": 1,
+                      "renderingCount": 0,
+                      "maxSimultaneousRenders": 1,
+                      "nonfiniteSamples": 0,
+                      "bgmPeak": 0.2945835292339325,
+                      "float32": true,
+                      "audibleHalfSecondBlocks": 168
+                    }
+                  ],
+                  "events": [
+                    {
+                      "atMs": 230,
+                      "kind": "cold-render-start"
+                    },
+                    {
+                      "atMs": 3748,
+                      "kind": "cold-render-done"
+                    },
+                    {
+                      "atMs": 3801,
+                      "kind": "finish",
+                      "detail": "trial.userReleased"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 181,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 32,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "status": "skipped",
+          "durationMs": 156,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "passed",
+          "durationMs": 8066,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 205,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 162,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 30,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 165,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "passed",
+          "durationMs": 5175,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 208,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 152,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 43,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "status": "skipped",
+          "durationMs": 196,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 127,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "profile": "chromium-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 452,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "firefox",
+              "version": "159.0",
+              "profile": "firefox-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 630,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "profile": "webkit-desktop",
+              "mobileEmulation": false,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 183,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "chromium",
+              "version": "159.0.8154.6",
+              "profile": "chromium-android-emulation",
+              "mobileEmulation": true,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 412,
+              "height": 839
+            }
+          }
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "status": "passed",
+          "durationMs": 642,
+          "attachments": {
+            "qa-browser-visit": {
+              "browserName": "webkit",
+              "version": "27.2",
+              "profile": "webkit-ios-emulation",
+              "mobileEmulation": true,
+              "physicalDeviceVerified": false,
+              "hasAudioContext": true,
+              "hasOfflineAudioContext": true,
+              "width": 390,
+              "height": 664
+            }
+          }
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 290,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 851,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 855,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 270,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "status": "passed",
+          "durationMs": 789,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 32,
+          "attachments": {}
+        },
+        {
+          "project": "firefox-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 693,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-desktop",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 160,
+          "attachments": {}
+        },
+        {
+          "project": "chromium-android-emulation",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "skipped",
+          "durationMs": 32,
+          "attachments": {}
+        },
+        {
+          "project": "webkit-ios-emulation",
+          "unit": "fits tablet portrait and landscape in the WebKit touch profile",
+          "status": "passed",
+          "durationMs": 747,
+          "attachments": {}
+        }
+      ],
+      "exitCode": 0
+    }
+  },
+  "physicalHardware": "NOT RUN",
+  "simulatedEvidencePolicy": "TEST FIXTURE results only establish QA behaviour."
+}

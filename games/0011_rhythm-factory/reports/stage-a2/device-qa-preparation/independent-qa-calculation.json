@@ -1,0 +1,1105 @@
+{
+  "schemaSha256": "55bc48e71cfcd8cf606f0c93f94cc41a31f301ea15552231c3fc97f8187a3e02",
+  "reports": {
+    "dev": {
+      "reporterSha256": "79eccac159f3bb5d47096e1c33639f61b4bb94f5a1261564612431e1b49d2be5",
+      "playwrightStats": {
+        "startTime": "2026-11-26T02:07:46.756Z",
+        "duration": 65047.861000000004,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "exports": [
+        {
+          "project": "chromium-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "180e4732ed622a88c2daeb1f0c52183037edf7573f677a354bef2de80d4af614",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "bbfbb880276ad5d242ae8e66",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3362.7999999988824,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "931d09957250a4e6c43be18392e20fe05efd2196d0de8bbf4637a05d9bca0f5b",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "7391b030ee705df10adf69e8",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 425,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "webkit-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "fe776a18ba79d20fb0b521a4d7f896a0df08da64bc05a681b99c41041a1b49db",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "4128737c1ed226df7cc35fa8",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 2479,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "testResult": "passed",
+          "attachment": "qa-dev05-ui-simulated-clock",
+          "attachmentSha256": "eeea643b4e581926a2c513a1fbec5e4bc363b7a0f3a2ff46fc4106e067e4a73c",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "54b66c54ce70fc3307bf1030",
+              "fixtureId": "rotation-24",
+              "status": "PASS",
+              "statusReason": "trial.exportAndRerunVerified",
+              "anchorCount": 2,
+              "decisionMatches": 2,
+              "observations": 2,
+              "valid": 2,
+              "invalid": 0,
+              "distribution": {
+                "count": 2,
+                "median": 2e-13,
+                "p95": 4e-13,
+                "p99": 4e-13,
+                "max": 4e-13
+              },
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3251.300000000745,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                },
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3296.9000000003725,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-05",
+              "countsMatch": true,
+              "distribution": {
+                "count": 2,
+                "median": 2e-13,
+                "p95": 4e-13,
+                "p99": 4e-13,
+                "max": 4e-13
+              },
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "PASS": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "testResult": "passed",
+          "attachment": "qa-over-limit-ui-simulated-clock",
+          "attachmentSha256": "d12e20de22b07087af1e7ed09e2186830338e50409cf3f7c66be2aaccfaf1c8f",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "5b8d3665aab0104e7f2315cd",
+              "fixtureId": "rotation-24",
+              "status": "FAIL",
+              "statusReason": "clock.outOfSync",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 34.9999999999999,
+                "p95": 34.9999999999999,
+                "p99": 34.9999999999999,
+                "max": 34.9999999999999
+              },
+              "firstOver": {
+                "observation": 1,
+                "generation": 1,
+                "performanceNowMs": 3718.0999999996275,
+                "signedMs": 34.9999999999999,
+                "exactSignedMs": "349999999999999/10000000000000",
+                "a0": 1.031800000000745,
+                "p0": 3617.5,
+                "contextTime": 1.1674000000003724,
+                "performanceTime": 3718.0999999996275
+              },
+              "overCount": 1,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3186.4000000003725,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 34.9999999999999,
+                "p95": 34.9999999999999,
+                "p99": 34.9999999999999,
+                "max": 34.9999999999999
+              },
+              "invalid": 0,
+              "overCount": 1,
+              "statuses": {
+                "FAIL": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "dcaa402336179efcf55b8b78b65739c192d40101a5399b95f6dd60acd5bf5436",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "ff5e2a3ee16af14ddb7cd3df",
+              "fixtureId": "rotation-24",
+              "status": "PASS",
+              "statusReason": "trial.anchorVerified",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 0.01733333221574,
+                "p95": 0.01733333221574,
+                "p99": 0.01733333221574,
+                "max": 0.01733333221574
+              },
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3253.199999999255,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 0.01733333221574,
+                "p95": 0.01733333221574,
+                "p99": 0.01733333221574,
+                "max": 0.01733333221574
+              },
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "PASS": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "c65a25b41c1666ee88712c6b36bede722afb22fcfc2f0f4388eeb333ab369c40",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "e13895951ecdc081c86ba68f",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "qa.activationObservationEnded",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 425,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "webkit-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "2e7c33f615e0c65af60cf60167b1542ff269be2eef61ade801c3d7358ae02bf4",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "adb6a8e5025c99a363e0b091",
+              "fixtureId": "rotation-24",
+              "status": "FAIL",
+              "statusReason": "clock.outOfSync",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 101.666667,
+                "p95": 101.666667,
+                "p99": 101.666667,
+                "max": 101.666667
+              },
+              "firstOver": {
+                "observation": 1,
+                "generation": 1,
+                "performanceNowMs": 3750,
+                "signedMs": -101.666667,
+                "exactSignedMs": "-101666667/1000000",
+                "a0": 0.149333333,
+                "p0": 3798,
+                "contextTime": 0.250666666,
+                "performanceTime": 4001
+              },
+              "overCount": 1,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 2567,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 101.666667,
+                "p95": 101.666667,
+                "p99": 101.666667,
+                "max": 101.666667
+              },
+              "invalid": 0,
+              "overCount": 1,
+              "statuses": {
+                "FAIL": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "testResult": "passed",
+          "attachment": "qa-native-84-second-render",
+          "attachmentSha256": "4fcfdf441a750fd9c6d754dea8b6b5230318400cedbf30a602e3eca376cdd23f",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "837a9584a0de9227f55ef5c3",
+              "fixtureId": "load-84",
+              "status": "ABORTED",
+              "statusReason": "trial.userReleased",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3459,
+                  "frames": 4032000,
+                  "pcmBytes": 32256000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-04",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "ABORTED": 1
+              }
+            }
+          ]
+        }
+      ],
+      "otherAttachments": {
+        "qa-native-clock-visit": 3,
+        "qa-browser-visit": 5
+      }
+    },
+    "preview": {
+      "reporterSha256": "d1c0c0051c968910d4baab505a79d1bb7f8aa5c5db2881bbdbb356466a0b76a4",
+      "playwrightStats": {
+        "startTime": "2026-11-26T02:08:52.335Z",
+        "duration": 64258.352,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "exports": [
+        {
+          "project": "chromium-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "a3ba82461c21883f065e34a20259f3042cfa47f9c8ce3e3e377ef32068599368",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "6b19c577812a5a27d8b371e9",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3301.699999999255,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "8f65ba0e40709e52ac62def5c72557368b45d2101c8c31539ac2d35e90126a94",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "5db3a22ea8e2a1b629d8a8ad",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 455,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "webkit-desktop",
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "testResult": "passed",
+          "attachment": "qa-blocked-export",
+          "attachmentSha256": "8d5e886fb4c1851205a59f7a74ab41da9b306a81e131bd7261e7ee06dfc600ed",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "dc5b16f01d553803b2fe246a",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "audio.gestureRequired",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 2564,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "testResult": "passed",
+          "attachment": "qa-dev05-ui-simulated-clock",
+          "attachmentSha256": "4cfef74552ba556c178eab0c861cf8907111be644c9e8bd9f09f6cf4967da771",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "293b29288ee4adc30ae3dada",
+              "fixtureId": "rotation-24",
+              "status": "PASS",
+              "statusReason": "trial.exportAndRerunVerified",
+              "anchorCount": 2,
+              "decisionMatches": 2,
+              "observations": 2,
+              "valid": 2,
+              "invalid": 0,
+              "distribution": {
+                "count": 2,
+                "median": 2.5e-13,
+                "p95": 4e-13,
+                "p99": 4e-13,
+                "max": 4e-13
+              },
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3336.0,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                },
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3373.8000000007455,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-05",
+              "countsMatch": true,
+              "distribution": {
+                "count": 2,
+                "median": 2.5e-13,
+                "p95": 4e-13,
+                "p99": 4e-13,
+                "max": 4e-13
+              },
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "PASS": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "testResult": "passed",
+          "attachment": "qa-over-limit-ui-simulated-clock",
+          "attachmentSha256": "34e67293fca770ab06344f915bf53ea6823e28458fbe35c1867e0d1c79187142",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "f8bb37a5203b0f273fbb41b6",
+              "fixtureId": "rotation-24",
+              "status": "FAIL",
+              "statusReason": "clock.outOfSync",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 34.9999999999997,
+                "p95": 34.9999999999997,
+                "p99": 34.9999999999997,
+                "max": 34.9999999999997
+              },
+              "firstOver": {
+                "observation": 1,
+                "generation": 1,
+                "performanceNowMs": 3690.300000000745,
+                "signedMs": 34.9999999999997,
+                "exactSignedMs": "349999999999997/10000000000000",
+                "a0": 1.0488000000007451,
+                "p0": 3577.10000000149,
+                "contextTime": 1.1969000000003724,
+                "performanceTime": 3690.2000000011176
+              },
+              "overCount": 1,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3344.2000000011176,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 34.9999999999997,
+                "p95": 34.9999999999997,
+                "p99": 34.9999999999997,
+                "max": 34.9999999999997
+              },
+              "invalid": 0,
+              "overCount": 1,
+              "statuses": {
+                "FAIL": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "chromium-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "c6d6051df071a26646ef7d0b48bbe7633e351f9711f2129aef9948b2c83c19eb",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "dc41df471b18c9dd8ac39b52",
+              "fixtureId": "rotation-24",
+              "status": "PASS",
+              "statusReason": "trial.anchorVerified",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 0.105333333705807,
+                "p95": 0.105333333705807,
+                "p99": 0.105333333705807,
+                "max": 0.105333333705807
+              },
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3184.0,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 0.105333333705807,
+                "p95": 0.105333333705807,
+                "p99": 0.105333333705807,
+                "max": 0.105333333705807
+              },
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "PASS": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "e27460841b715d8fa7eca09f2dfed47f178ca093d99ee8f65c4a40a79fb3be0b",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "29a0d846258509b3d65a7eaa",
+              "fixtureId": "rotation-24",
+              "status": "BLOCKED",
+              "statusReason": "qa.activationObservationEnded",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 381,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "BLOCKED": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "webkit-desktop",
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "testResult": "passed",
+          "attachment": "qa-native-clock-evidence",
+          "attachmentSha256": "c274f29e722174d6fd71eb2c20eda0d589bb5aa58392810d10b013689c9a651a",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "4067958db4a248f7575d884b",
+              "fixtureId": "rotation-24",
+              "status": "FAIL",
+              "statusReason": "clock.outOfSync",
+              "anchorCount": 1,
+              "decisionMatches": 1,
+              "observations": 1,
+              "valid": 1,
+              "invalid": 0,
+              "distribution": {
+                "count": 1,
+                "median": 98.333333,
+                "p95": 98.333333,
+                "p99": 98.333333,
+                "max": 98.333333
+              },
+              "firstOver": {
+                "observation": 1,
+                "generation": 1,
+                "performanceNowMs": 3660,
+                "signedMs": -98.333333,
+                "exactSignedMs": "-98333333/1000000",
+                "a0": 0.133333333,
+                "p0": 3693,
+                "contextTime": 0.232,
+                "performanceTime": 3890
+              },
+              "overCount": 1,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 2547,
+                  "frames": 1152000,
+                  "pcmBytes": 9216000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-01",
+              "countsMatch": true,
+              "distribution": {
+                "count": 1,
+                "median": 98.333333,
+                "p95": 98.333333,
+                "p99": 98.333333,
+                "max": 98.333333
+              },
+              "invalid": 0,
+              "overCount": 1,
+              "statuses": {
+                "FAIL": 1
+              }
+            }
+          ]
+        },
+        {
+          "project": "firefox-desktop",
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "testResult": "passed",
+          "attachment": "qa-native-84-second-render",
+          "attachmentSha256": "80ade2d463cd9d197aba96c2ce00f0ee3bde1fb817ffec269663333ebcfde6f0",
+          "commitIds": [
+            "f20b2ff7aab092bec58824a3856b6c6ca8ba8105"
+          ],
+          "schemaErrors": [],
+          "trials": [
+            {
+              "trialId": "4b856495f81729e8fe65b48e",
+              "fixtureId": "load-84",
+              "status": "ABORTED",
+              "statusReason": "trial.userReleased",
+              "anchorCount": 0,
+              "decisionMatches": 0,
+              "observations": 0,
+              "valid": 0,
+              "invalid": 0,
+              "distribution": null,
+              "firstOver": null,
+              "overCount": 0,
+              "preparations": [
+                {
+                  "pcmPass": true,
+                  "elapsedMs": 3409,
+                  "frames": 4032000,
+                  "pcmBytes": 32256000
+                }
+              ],
+              "released": true,
+              "naturalEndEvents": [],
+              "endVerification": [],
+              "problems": []
+            }
+          ],
+          "groups": [
+            {
+              "testCase": "DEV-AUD-04",
+              "countsMatch": true,
+              "distribution": null,
+              "invalid": 0,
+              "overCount": 0,
+              "statuses": {
+                "ABORTED": 1
+              }
+            }
+          ]
+        }
+      ],
+      "otherAttachments": {
+        "qa-native-clock-visit": 3,
+        "qa-browser-visit": 5
+      }
+    }
+  }
+}
