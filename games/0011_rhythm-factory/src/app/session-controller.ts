@@ -713,7 +713,11 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
     const session = active;
     if (!session) return ignored;
     let info = session.game.read();
-    if (input.sessionId === info.sessionId && session.scheduled) {
+    const reservation = session.scheduled;
+    const startsAt = reservation ? audio.startPerformanceMs(reservation.anchor.generation) : null;
+    const belongsToRehold = reservation?.plan && info.state === 'RESUMING'
+      && input.clockGeneration === info.generation && startsAt !== null && input.eventPerformanceMs < startsAt;
+    if (input.sessionId === info.sessionId && reservation && !belongsToRehold) {
       commitScheduled(session, input.receivedPerformanceMs);
       info = session.game.read();
     }
@@ -766,7 +770,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
         if (intent !== lifecycleGeneration) return transition();
         pageShowing = false;
         pageAvailable = true;
-        if (!ready.save.ok) recordError(ready.save.error);
+        if (!ready.save.ok && storage.read().error === null) recordError(ready.save.error);
       } else if (event.kind === 'VISIBLE') {
         if (session && info && !isTerminal(info.state) && writer.status() !== 'OWNED') {
           session.game.fail({ code: 'ERR-011', messageKey: 'controller.writerLost', severity: 'ERROR', recoverable: false });

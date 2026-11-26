@@ -135,7 +135,7 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     r.controller.dispose();
   });
 
-  it('予約前に発生した再保持解除が開始後に遅着したら、確定履歴を維持してERR-007で停止する', async () => {
+  it.each([false, true])('再保持解除の遅着を新世代の正式確定有無に応じて処理する (確定済み=%s)', async committed => {
     const r = rig();
     await r.start();
     r.enterPlayback();
@@ -156,13 +156,24 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     value(r.controller.enqueueInput(hold));
     r.step(13_000);
     const official = r.session().judgement.official;
-    // Native anchor takes effect at 13050ms. No intervening frame has committed yet.
+    // Native anchor takes effect at 13050ms. Deliberately vary whether the generation is already committed.
+    if (committed) r.step(13_050);
     const result = r.controller.enqueueInput({
       ...hold, eventId: 'resume-up', action: 'UP', sequence: 1002,
       eventPerformanceMs: ms(13_049.999), receivedPerformanceMs: ms(13_050.001),
     });
-    expect(result).toMatchObject({ ok: false, error: { code: 'ERR-007', messageKey: 'input.lateReholdRelease' } });
-    expect(r.session()).toMatchObject({ state: 'ERROR', judgement: { official } });
+    if (committed) {
+      expect(result).toMatchObject({ ok: false, error: { code: 'ERR-007', messageKey: 'input.lateReholdRelease' } });
+      expect(r.session()).toMatchObject({ state: 'ERROR', judgement: { official } });
+    } else {
+      expect(result).toMatchObject({ ok: true });
+      expect(r.session()).toMatchObject({
+        state: 'REHOLD_WAIT', generation: initial.generation, songTimeUs: b, judgement: { official },
+      });
+      expect(r.audio.stop).toHaveBeenCalledWith(expect.objectContaining({ generation: initial.generation + 1 }));
+      r.step(13_150);
+      expect(r.session().state).toBe('REHOLD_WAIT');
+    }
     expect(r.controller.getFinalResult()).toBeNull();
     r.controller.dispose();
   });
@@ -265,7 +276,7 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     r.controller.dispose();
   });
 
-  it('BFCache復帰後の新leaseで未解決結果を確認し、旧セッションを再利用せず既保存のreceiptを保全する', async () => {
+  it.each([false, true])('BFCache復帰後に既保存のreceiptを再確認する (復帰時の読込失敗=%s)', async failedOnShow => {
     const r = rig();
     await r.start();
     r.enterPlayback();
@@ -275,8 +286,12 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     const final = r.controller.getFinalResult()!;
     const originalLease = r.writer.currentLease();
     value(await r.lifecycle('PAGEHIDE'));
-    r.restoreReads();
+    if (!failedOnShow) r.restoreReads();
     value(await r.lifecycle('PAGESHOW'));
+    if (failedOnShow) {
+      expect(r.storage.read().error).toMatchObject({ code: 'ERR-016' });
+      r.restoreReads();
+    }
     expect(r.controller.read().session).toBeNull();
     expect(r.writer.currentLease()?.generation).toBeGreaterThan(originalLease?.generation ?? -1);
     expect(r.controller.navigate('RESULT')).toBe(true);
