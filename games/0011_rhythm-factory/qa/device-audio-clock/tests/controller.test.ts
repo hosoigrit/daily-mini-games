@@ -217,22 +217,26 @@ describe('QA trial controller with fixed product clock and controlled native rea
     expect(controller.getState().current).toMatchObject({ status: 'BLOCKED', anchor: 'FAIL', released: true });
   });
 
-  it.each([false, true])('checks native elapsed frames before accepting ENDED (complete=%s)', async (complete) => {
+  it.each([
+    { frameDelta: -1_147_200, completes: false },
+    { frameDelta: -129, completes: false },
+    { frameDelta: -128, completes: true },
+    { frameDelta: -96, completes: true },
+    { frameDelta: 0, completes: true },
+  ])('checks native ENDED within one render quantum (delta=$frameDelta)', async ({ frameDelta, completes }) => {
     const controller = await toPlaying();
     const token = controlled.owner();
     const anchor = controlled.anchor();
     controlled.setSample(.106, 200);
     await vi.advanceTimersByTimeAsync(100);
-    controlled.audio.currentTime.mockReturnValueOnce((anchor.startAudioSec + (complete ? 24 : .1)) as Sec);
+    controlled.audio.currentTime.mockReturnValueOnce((anchor.startAudioSec + 24 + frameDelta / 48_000) as Sec);
     controlled.emit({ ...token, kind: 'ENDED', playbackId: anchor.playbackId, clockGeneration: anchor.generation });
     await vi.advanceTimersByTimeAsync(0);
     expect(controller.getState().current).toMatchObject({
-      status: complete ? 'PASS' : 'FAIL', naturalCompletion: complete, released: true,
+      status: completes ? 'PASS' : 'FAIL', naturalCompletion: completes, released: true,
     });
-    expect(controller.getState().current?.events).toEqual(expect.arrayContaining([expect.objectContaining({
-      kind: 'native-ended',
-      detail: expect.stringContaining('"expectedFrames":1152000'),
-    })]));
+    const ended = controller.getState().current?.events.find(({ kind }) => kind === 'native-ended');
+    expect(JSON.parse(ended!.detail!)).toMatchObject({ expectedFrames: 1_152_000, frameDelta, nativeRenderQuantumFrames: 128 });
   });
 
   it('handles interruption from the matching owner without consuming another clock sample', async () => {

@@ -37,6 +37,7 @@ const activationObservationLimitMs = 1800;
 const anchorObservationLimitMs = 1800;
 const releaseObservationLimitMs = 3000;
 const restartSamples = 10;
+const nativeRenderQuantumFrames = 128;
 
 function viewport(): Viewport {
   return {
@@ -207,9 +208,11 @@ export function createHarnessController() {
       const expectedFrames = Math.round((track.durationUs - active.anchor.startSongUs) * track.sampleRate / 1_000_000);
       const playedFrames = endAudioSec === null || !Number.isFinite(endAudioSec)
         ? null : Math.round((endAudioSec - active.anchor.startAudioSec) * track.sampleRate);
-      event('native-ended', JSON.stringify({ endAudioSec, playedFrames, expectedFrames }));
+      const frameDelta = playedFrames === null ? null : playedFrames - expectedFrames;
+      event('native-ended', JSON.stringify({ endAudioSec, playedFrames, expectedFrames, frameDelta, nativeRenderQuantumFrames }));
+      // Web Audio exposes currentTime at render-quantum resolution. This only validates the end event.
       const natural = testCase().mode === 'natural' && active.validSamples > 0
-        && playedFrames !== null && playedFrames >= expectedFrames;
+        && frameDelta !== null && frameDelta >= -nativeRenderQuantumFrames;
       current.naturalCompletion = natural;
       void settle(natural ? 'PASS' : 'FAIL', natural ? 'trial.naturalComplete' : 'trial.unexpectedEnd');
     }
