@@ -135,6 +135,59 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     r.controller.dispose();
   });
 
+  it('予約前に発生した再保持解除が開始後に遅着したら、確定履歴を維持してERR-007で停止する', async () => {
+    const r = rig();
+    await r.start();
+    r.enterPlayback();
+    const b = 4_100_000;
+    const pauseAt = zeroTime + b / 1000;
+    const initial = r.session();
+    for (const input of r.ideal().filter(input => input.judgeTimeUs <= b)) value(r.controller.enqueueInput(input));
+    r.step(pauseAt);
+    value(await r.controller.dispatch({ kind: 'PAUSE_GAME', sessionId: initial.sessionId, requestId: 'pause' }));
+    r.step(pauseAt + 50.001);
+    r.at(10_000);
+    value(await r.controller.dispatch({ kind: 'RESUME_GAME', sessionId: initial.sessionId, requestId: 'resume' }));
+    const hold: NormalizedInput = {
+      eventId: 'resume-down', sessionId: initial.sessionId, clockGeneration: initial.generation,
+      inputId: 'new-owner', lane: 1, action: 'DOWN', sequence: 1001,
+      eventPerformanceMs: ms(10_000), receivedPerformanceMs: ms(10_000), songTimeUs: us(b), judgeTimeUs: us(b),
+    };
+    value(r.controller.enqueueInput(hold));
+    r.step(13_000);
+    const official = r.session().judgement.official;
+    // Native anchor takes effect at 13050ms. No intervening frame has committed yet.
+    const result = r.controller.enqueueInput({
+      ...hold, eventId: 'resume-up', action: 'UP', sequence: 1002,
+      eventPerformanceMs: ms(13_049.999), receivedPerformanceMs: ms(13_050.001),
+    });
+    expect(result).toMatchObject({ ok: false, error: { code: 'ERR-007', messageKey: 'input.lateReholdRelease' } });
+    expect(r.session()).toMatchObject({ state: 'ERROR', judgement: { official } });
+    expect(r.controller.getFinalResult()).toBeNull();
+    r.controller.dispose();
+  });
+
+  it('再開予約中の新世代音声中断を受け、旧世代のPAUSEDに安全復帰する', async () => {
+    const r = rig();
+    await r.start();
+    r.enterPlayback();
+    r.step(zeroTime + 300);
+    const previous = r.session();
+    value(await r.controller.dispatch({ kind: 'PAUSE_GAME', sessionId: previous.sessionId, requestId: 'pause' }));
+    r.step(zeroTime + 351);
+    r.at(5000);
+    value(await r.controller.dispatch({ kind: 'RESUME_GAME', sessionId: previous.sessionId, requestId: 'resume' }));
+    r.step(8000);
+    expect(r.starts).toHaveLength(2);
+    expect(r.session()).toMatchObject({ state: 'RESUMING', generation: previous.generation });
+    r.interrupt(8001);
+    expect(r.session()).toMatchObject({ state: 'PAUSED', generation: previous.generation, error: { code: 'ERR-004' } });
+    r.step(8051);
+    expect(r.session().state).toBe('PAUSED');
+    expect(r.controller.getFinalResult()).toBeNull();
+    r.controller.dispose();
+  });
+
   it('setItem成功後の読戻し失敗は同じpendingで確認し、二重加算しない', async () => {
     const r = rig();
     await r.start();
@@ -146,6 +199,7 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     r.restoreReads();
     value(await r.controller.dispatch({ kind: 'RETRY_SAVE', sessionId: r.session().sessionId, requestId: 'retry' }));
     await waitSave(r, 'SAVED');
+    expect(r.controller.store.getSnapshot()).toMatchObject({ saveStatus: 'SAVED', error: null });
     expect(r.writes()).toBe(2);
     expect(r.storage.read().data?.records[trial.chartId]?.clear?.clearCount).toBe(1);
     r.controller.dispose();
@@ -190,6 +244,51 @@ describe('A-2c 回転灯と固定時計・保存ポートの統合', () => {
     value(await r.controller.dispatch({ kind: 'RETRY_SAVE', sessionId: r.session().sessionId, requestId: 'retry' }));
     await waitSave(r, 'SAVED');
     expect(JSON.parse(r.raw()!).records[trial.chartId].clear.clearCount).toBe(1);
+    r.controller.dispose();
+  });
+
+  it('所有権喪失直後、Web Locks解放完了を待たずに正式封印を遮断する', async () => {
+    const r = rig();
+    await r.start();
+    r.enterPlayback();
+    for (const input of r.ideal()) value(r.controller.enqueueInput(input));
+    r.at(zeroTime + 24_000);
+    const invalidation = r.lifecycle('LOCK_LOST');
+    r.ended();
+    r.step(zeroTime + 24_051);
+    expect(r.session().state).toBe('ERROR');
+    expect(r.controller.getFinalResult()).toBeNull();
+    value(await invalidation);
+    expect(r.writer.currentLease()).toBeNull();
+    expect(r.writes()).toBe(1);
+    expect(r.storage.read().pending).toBeNull();
+    r.controller.dispose();
+  });
+
+  it('BFCache復帰後の新leaseで未解決結果を確認し、旧セッションを再利用せず既保存のreceiptを保全する', async () => {
+    const r = rig();
+    await r.start();
+    r.enterPlayback();
+    r.failNextReadback();
+    r.finishIdeal();
+    await waitSave(r, 'SAVE_ERROR');
+    const final = r.controller.getFinalResult()!;
+    const originalLease = r.writer.currentLease();
+    value(await r.lifecycle('PAGEHIDE'));
+    r.restoreReads();
+    value(await r.lifecycle('PAGESHOW'));
+    expect(r.controller.read().session).toBeNull();
+    expect(r.writer.currentLease()?.generation).toBeGreaterThan(originalLease?.generation ?? -1);
+    expect(r.controller.navigate('RESULT')).toBe(true);
+    expect(r.controller.getFinalResult()).toBe(final);
+    expect(r.controller.getRenderSnapshot().sessionId).toBeNull();
+    expect(r.controller.store.getSnapshot()).toMatchObject({ sessionId: final.sessionId, state: 'CLEAR', saveStatus: 'SAVE_ERROR' });
+    const stored = r.raw();
+    value(await r.controller.dispatch({ kind: 'DISCARD_RESULT', sessionId: final.sessionId, confirmed: true, requestId: 'reconcile' }));
+    expect(r.storage.read().saveStatus).toBe('SAVED');
+    expect(r.controller.store.getSnapshot()).toMatchObject({ saveStatus: 'SAVED', error: null });
+    expect(r.raw()).toBe(stored);
+    expect(r.writes()).toBe(2);
     r.controller.dispose();
   });
 

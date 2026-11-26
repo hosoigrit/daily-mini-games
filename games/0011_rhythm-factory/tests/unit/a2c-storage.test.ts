@@ -250,6 +250,80 @@ describe('Stage A-2c LocalStorage persistence IF-13', () => {
     await env.state.pageHide();
   });
 
+  it.each(['retry', 'discard'] as const)('protects a schema-valid document whose matching receipt has the wrong result data on %s', async (action) => {
+    const env = environment();
+    const lease = await env.acquire();
+    const initial = env.currentSave()!;
+    const sealed = clearResult('conflicting-payload');
+    const pending = await env.prepare(sealed, lease);
+    env.next.readbackFails = true;
+    expectError(await env.state.commitResult(sealed, lease), 'ERR-016');
+    const committed = env.currentSave()!;
+    // This receipt agrees with the exact pending identity, but the completed result was never reflected.
+    const contradictory = { ...initial, revision: committed.revision, commitReceipt: committed.commitReceipt };
+    expect(env.rules.validateSave(contradictory).ok).toBe(true);
+    const raw = JSON.stringify(contradictory);
+    env.contents.set(saveStorageKey, raw);
+
+    const resolution = action === 'retry'
+      ? await env.state.retrySave(lease)
+      : env.state.discardResult(true, lease);
+    expectError(resolution, 'ERR-016');
+    expect(env.state.read()).toMatchObject({ pending, saveStatus: 'SAVE_ERROR', unresolved: true });
+    expect(env.contents.get(saveStorageKey)).toBe(raw);
+    expect(env.storage.setItem).toHaveBeenCalledTimes(2);
+    await env.state.pageHide();
+  });
+
+  it('verifies equivalent stored result data in any object key order', async () => {
+    const env = environment();
+    const lease = await env.acquire();
+    const sealed = clearResult('reordered-payload');
+    await env.prepare(sealed, lease);
+    env.next.readbackFails = true;
+    expectError(await env.state.commitResult(sealed, lease), 'ERR-016');
+    const reordered = JSON.stringify(env.currentSave(), (_, value: unknown) =>
+      value !== null && typeof value === 'object' && !Array.isArray(value)
+        ? Object.fromEntries(Object.entries(value).reverse()) : value);
+    env.contents.set(saveStorageKey, reordered);
+
+    expect(value(await env.state.retrySave(lease))).toMatchObject({ status: 'ALREADY_COMMITTED', receipt: { revision: 1 } });
+    expect(env.contents.get(saveStorageKey)).toBe(reordered);
+    expect(env.storage.setItem).toHaveBeenCalledTimes(2);
+    await env.state.pageHide();
+  });
+
+  it('verifies an older receipt after another owner writes actual settings and tutorial changes', async () => {
+    const env = environment();
+    const original = await env.acquire();
+    const sealed = clearResult('historical-payload');
+    const pending = await env.prepare(sealed, original);
+    env.next.readbackFails = true;
+    expectError(await env.state.commitResult(sealed, original), 'ERR-016');
+    await env.state.pageHide();
+    const replacementTab = createStorageCoordinator({
+      storage: env.storage, lock: createWriterLock({ locks: env.locks, ownerId: 'tab-b' }),
+      rules: env.rules, createEpoch: () => 'unexpected',
+    });
+    const externalLease = value((await replacementTab.pageShow()).lease);
+    const latest = replacementTab.read().data!;
+    value(replacementTab.updateSettings({ ...latest.settings, musicVolume: 27 }, externalLease));
+    value(replacementTab.completePractice('TUT-01', externalLease));
+    await replacementTab.pageHide();
+
+    const replacement = await env.acquire();
+    const preserved = env.contents.get(saveStorageKey);
+    expect(value(env.state.discardResult(true, replacement))).toBe('ALREADY_COMMITTED');
+    expect(env.state.read().data).toMatchObject({
+      revision: 3, settings: { musicVolume: 27 }, progress: { completedTutorialIds: ['TUT-01'] },
+      commitReceipt: { revision: 1, resultDigest: pending.digest },
+    });
+    expect(env.contents.get(saveStorageKey)).toBe(preserved);
+    expect(env.currentSave()?.records['CHART-01-E']?.clear?.clearCount).toBe(1);
+    expect(env.storage.setItem).toHaveBeenCalledTimes(4);
+    await env.state.pageHide();
+  });
+
   it('preserves uncertainty on discard failure and cannot undo an already committed result', async () => {
     const env = environment();
     const lease = await env.acquire();
@@ -383,6 +457,25 @@ describe('Stage A-2c LocalStorage persistence IF-13', () => {
     expectError(result.save, 'ERR-011');
     expect(lock.currentLease()).toBeNull();
     expect(memory.storage.setItem).not.toHaveBeenCalled();
+  });
+
+  it('keeps a pending result after independent lease invalidation and reports the actual stale owner', async () => {
+    const env = environment();
+    const original = await env.acquire();
+    const sealed = clearResult('independent-lease-loss');
+    const pending = await env.prepare(sealed, original);
+    const raw = env.contents.get(saveStorageKey);
+    await env.lock.invalidate();
+    expectError(await env.state.commitResult(sealed, { ...original }), 'ERR-011');
+    expect(env.state.read()).toMatchObject({ pending, saveStatus: 'PENDING_SAVE', unresolved: true });
+
+    expectError(await env.state.commitResult(sealed, original), 'ERR-011');
+    expect(env.state.read()).toMatchObject({ pending, saveStatus: 'SAVE_ERROR', unresolved: true, error: { code: 'ERR-011' } });
+    expect(env.contents.get(saveStorageKey)).toBe(raw);
+    expect(env.storage.setItem).toHaveBeenCalledTimes(1);
+    const replacement = await env.acquire();
+    expect(value(env.state.discardResult(true, replacement))).toBe('DISCARDED');
+    await env.state.pageHide();
   });
 
   it('protects a committed receipt after pagehide, preserving the record under replacement authority', async () => {

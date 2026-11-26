@@ -92,7 +92,8 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   let prepareToken: Token | null = null;
   let previewToken: Token | null = null;
   let active: ActiveSession<Binding> | null = null;
-  let pendingResult: ActiveSession<Binding> | null = null;
+  let pendingResult: { readonly result: FinalResult; readonly snapshot: GameUiSnapshot } | null = null;
+  let showingRecovery = false;
   let initialization: Token | null = null;
   let initializeReady = false;
   let retryAudio = false;
@@ -104,7 +105,9 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   let disposed = false;
   let dispatching = false;
 
-  const state = () => active?.game.read().state ?? 'READY';
+  const recovery = () => screen === 'RESULT' && showingRecovery ? pendingResult : null;
+  const state = () => recovery()?.result.outcome ?? active?.game.read().state ?? 'READY';
+  const currentSessionId = () => recovery()?.result.sessionId ?? active?.game.read().sessionId ?? null;
   const token = (requestId: string, sessionId: string | null = null, atGeneration = ++generation as Gen): Token =>
     Object.freeze({ requestId, generation: atGeneration, sessionId });
   const sessionToken = (session: ActiveSession<Binding>) => {
@@ -196,24 +199,25 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
     audio.stop(sessionToken(session));
     resetInitialization();
     const terminal = session.game.read();
+    showingRecovery = false;
     screen = terminal.state === 'CLEAR' || terminal.state === 'FAILED' ? 'RESULT' : 'MENU';
 
     const result = session.game.getFinalResult();
     const binding = session.binding;
     if (result && binding !== null) {
-      pendingResult = session;
+      pendingResult = Object.freeze({ result, snapshot: Object.freeze(view()) });
       const owner = lease();
       const page = lifecycleGeneration;
       background((async () => {
         const pending = await storage.prepareCommit(result, binding, options.recordedAt());
         if (!pending.ok) {
-          recordError(pending.error);
+          if (storage.read().error === null) recordError(pending.error);
+          else publish();
           return;
         }
         publish();
         if (owner && pageAvailable && page === lifecycleGeneration) {
-          const saved = await storage.commitResult(result, owner);
-          if (!saved.ok) recordError(saved.error);
+          await storage.commitResult(result, owner);
         }
         publish();
       })());
@@ -334,10 +338,12 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       if (error) session.game.fail(error);
       return;
     }
-    if (converted.value.songTimeUs < anchor.startSongUs) return;
+    const anchorStartsAt = audio.startPerformanceMs(anchor.generation);
+    if (converted.value.songTimeUs < anchor.startSongUs || (anchorStartsAt !== null && at < anchorStartsAt)) return;
     session.scheduled = null;
     const accepted = plan
-      ? session.game.completeResume(plan, plan.playBgm ? anchor : undefined, at)
+      ? session.game.completeResume(plan, plan.playBgm ? anchor : undefined, at,
+        anchorStartsAt ?? at)
       : session.game.startPlayback(at, anchor);
     if (!accepted.ok) {
       audio.stop(token(anchor.sessionId, anchor.sessionId, anchor.generation));
@@ -424,6 +430,18 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
     const session = active;
     if (!session || disposed || !pageAvailable) return;
     const info = session.game.read();
+    const scheduled = session.scheduled;
+    if (scheduled && event.kind === 'INTERRUPTED' && event.sessionId === scheduled.anchor.sessionId
+        && event.generation === scheduled.anchor.generation && event.playbackId === scheduled.anchor.playbackId) {
+      cancelScheduled(session);
+      if (scheduled.plan) {
+        session.game.resumeDenied(scheduled.plan, {
+          code: 'ERR-004', messageKey: 'audio.interruptedWhileReserved', severity: 'ERROR', recoverable: true,
+        });
+      } else session.game.requestPause(event.at);
+      updateSession(session);
+      return;
+    }
     if (event.sessionId !== info.sessionId || event.generation !== info.generation
         || (event.kind !== 'ENDED' && event.kind !== 'INTERRUPTED')) return;
     const at = event.kind === 'INTERRUPTED' ? event.at : options.now();
@@ -433,9 +451,11 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   }
 
   function view(): GameUiSnapshot {
+    const saved = storage.read();
+    const archived = recovery();
+    if (archived) return { ...archived.snapshot, saveStatus: saved.saveStatus, error: saved.error ?? applicationError };
     const shown = active?.game.read();
     const summary = shown?.judgement.summary;
-    const saved = storage.read();
     return {
       sessionId: shown?.sessionId ?? null, state: shown?.state ?? 'READY', revision: shown?.revision ?? 0,
       score: summary?.ok ? summary.value.score : 0, combo: summary?.ok ? summary.value.combo : 0,
@@ -463,14 +483,17 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
 
   function navigate(to: Screen): boolean {
     const save = storage.read();
-    const target = to === 'RESULT' && save.unresolved ? pendingResult : active;
-    const info = target?.game.read();
-    if (!canNavigate(screen, to, info?.state ?? 'READY', info?.sessionId ?? null, (save.pending?.result.sessionId ?? save.preparingResult?.sessionId))) return false;
+    const pendingSessionId = save.pending?.result.sessionId ?? save.preparingResult?.sessionId;
+    const archived = to === 'RESULT' && pendingResult?.result.sessionId === pendingSessionId ? pendingResult : null;
+    const result = archived?.result;
+    const previousState = result?.outcome ?? state();
+    const previousId = result?.sessionId ?? currentSessionId();
+    if (!canNavigate(screen, to, previousState, previousId, pendingSessionId)) return false;
     if (screen === 'MUSIC_SELECT') {
       stopPreview();
       prepareToken = null;
     }
-    if (to === 'RESULT') active = target;
+    showingRecovery = archived !== null;
     screen = to;
     if (to === 'MUSIC_SELECT') {
       const music = options.getMusic(selectedMusicId);
@@ -548,14 +571,14 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       const tutorial = command.kind === 'START_TUTORIAL' ? options.getTutorial(command.tutorialId) : null;
       const chosen = options.getMusic(selectedMusicId);
       const guard = guardCommand(command, {
-        screen, state: info?.state ?? 'READY', sessionId: info?.sessionId ?? null, mode: info?.mode ?? null,
+        screen, state: state(), sessionId: currentSessionId(), mode: recovery() ? 'FORMAL' : info?.mode ?? null,
         writer: writer.status(), unlockedMusicIds: save.data?.progress.unlockedMusicIds ?? ['music-01'],
         selectedMusicId, saveStatus: save.saveStatus, pendingSessionId: (save.pending?.result.sessionId ?? save.preparingResult?.sessionId) ?? null,
         selectionReady: prepared?.definition === chosen && !!selectedChart(), sessionReady: !!active,
         previewAvailable: command.kind === 'START_PREVIEW' && options.getMusic(command.musicId) !== null,
         previewActive: previewToken !== null, audioGesture, clockReady: audio.anchorAvailable() || info?.state === 'PAUSED',
         initializationRetry: retryAudio, playbackReserved: !retryAudio && initialization !== null,
-        retryReady: !!active, tutorialReady: tutorial !== null && prepared?.definition === tutorial.definition,
+        retryReady: !!active && !recovery(), tutorialReady: tutorial !== null && prepared?.definition === tutorial.definition,
         calibrationActive: calibration !== null, calibrationProposalMs: proposal?.kind === 'PROPOSED' ? proposal.proposedOffsetMs : null,
         settingsValid: command.kind === 'APPLY_SETTINGS' && options.settingsValid(command.settings),
       });
@@ -690,7 +713,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
     const session = active;
     if (!session) return ignored;
     let info = session.game.read();
-    if (input.sessionId === info.sessionId && session.scheduled?.anchor.generation === input.clockGeneration) {
+    if (input.sessionId === info.sessionId && session.scheduled) {
       commitScheduled(session, input.receivedPerformanceMs);
       info = session.game.read();
     }
@@ -713,7 +736,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   const handleLifecycleEvent: Contracts['handleLifecycleEvent'] = async event => {
     const previous = state();
     const transition = () => ({
-      ok: true, value: { previous, current: state(), sessionId: active?.game.read().sessionId ?? null },
+      ok: true, value: { previous, current: state(), sessionId: currentSessionId() },
     } as const);
     try {
       if (disposed) return transition();
@@ -732,7 +755,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
         stopCalibration();
         if (session && info && !isTerminal(info.state)) session.game.abort();
         retire();
-        pendingResult = null;
+        showingRecovery = false;
         screen = 'MENU';
         await storage.pageHide();
       } else if (event.kind === 'PAGESHOW') {
@@ -752,11 +775,12 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       } else {
         stopPreview();
         stopCalibration();
-        if (event.kind === 'LOCK_LOST') await storage.pageHide();
+        const invalidation = event.kind === 'LOCK_LOST' ? storage.pageHide() : null;
         if (session && info && !isTerminal(info.state)) {
           interruptSession(session, event, info.state);
           updateSession(session);
         }
+        await invalidation;
       }
       publish();
       return transition();
@@ -792,7 +816,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
       animationIds.add(event.eventId);
       animation.publish(Object.freeze({ ...event, lanes: Object.freeze([...event.lanes]) }));
     },
-    getFinalResult: () => active?.game.getFinalResult() ?? null,
+    getFinalResult: () => recovery()?.result ?? active?.game.getFinalResult() ?? null,
     store,
     read: () => ({ screen, session: active?.game.read() ?? null, prepared: prepared !== null,
       preview: previewToken !== null, calibration: calibration?.measure.read() ?? null, pending: storage.read().pending }),

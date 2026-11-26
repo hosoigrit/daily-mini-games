@@ -98,7 +98,26 @@ interface PauseRecord {
   readonly boundary: PauseBoundary | null;
 }
 
-type ReholdInput = Pick<NormalizedInput, 'lane' | 'inputId' | 'action' | 'clockGeneration'>;
+type InputOrder = Pick<NormalizedInput, 'eventPerformanceMs' | 'sequence'>;
+interface ReholdPress extends InputOrder {
+  readonly inputId: string;
+}
+interface CompletedRehold {
+  readonly anchorStartPerformanceMs: Ms;
+  readonly presses: ReadonlyMap<Lane, ReholdPress>;
+}
+
+const compareInputOrder = (left: InputOrder, right: InputOrder) =>
+  left.eventPerformanceMs - right.eventPerformanceMs || left.sequence - right.sequence;
+
+function isValidReholdInput(input: NormalizedInput): boolean {
+  return typeof input.eventId === 'string' && input.eventId.trim() !== ''
+    && typeof input.inputId === 'string' && input.inputId.trim() !== ''
+    && (input.action === 'DOWN' || input.action === 'UP')
+    && Number.isSafeInteger(input.sequence) && input.sequence >= 0
+    && isWallTime(input.eventPerformanceMs) && isWallTime(input.receivedPerformanceMs)
+    && input.receivedPerformanceMs >= input.eventPerformanceMs;
+}
 
 export function createGameSession(chart: CompiledChart, options: Options) {
   const { sessionId, mode = 'FORMAL', offsetUs = zeroUs } = options;
@@ -139,7 +158,12 @@ export function createGameSession(chart: CompiledChart, options: Options) {
   let abortPending = false;
   let resumePlan: SessionResumePlan | null = null;
   let reholdLanes = noLanes;
-  const reheld = new Map<Lane, string>();
+  let reholdRequestedAtMs: Ms | null = null;
+  const reheld = new Map<Lane, ReholdPress>();
+  const reholdEventIds = new Set<string>();
+  const reholdOrders = new Set<string>();
+  const lastReleases = new Map<string, InputOrder>();
+  const completedReholds = new Map<Gen, CompletedRehold>();
   let lastError: GameError | null = null;
 
   function sendUpdate() {
@@ -161,7 +185,9 @@ export function createGameSession(chart: CompiledChart, options: Options) {
       resumeReadyAtMs = null;
       resumePlan = null;
       reholdLanes = noLanes;
-      reheld.clear();
+      resetReholdAttempt();
+      completedReholds.clear();
+      reholdEventIds.clear();
       abortPending = false;
     }
     const value = { previous, current: next, sessionId };
@@ -311,23 +337,47 @@ export function createGameSession(chart: CompiledChart, options: Options) {
 
   function requestResume(atMs: Ms): Result<TransitionResult> {
     if (state !== 'PAUSED' || !pause || !markWall(atMs)) return reject();
-    reheld.clear();
+    resetReholdAttempt();
     resumePlan = null;
     lastError = null;
     const needHolds = reholdLanes.length > 0;
+    if (needHolds) reholdRequestedAtMs = atMs;
     engine.setReholdWaiting(needHolds);
     resumeReadyAtMs = needHolds ? null : (atMs + countdownMs) as Ms;
     return move('RESUME_GAME', needHolds ? 'REHOLD_WAIT' : 'RESUMING');
   }
 
-  function rehold(input: ReholdInput, atMs: Ms): Result<TransitionResult> {
-    if (input.clockGeneration !== generation || !reholdLanes.includes(input.lane)) return unchanged();
-    if ((state !== 'REHOLD_WAIT' && state !== 'RESUMING') || !markWall(atMs)) return reject();
-    if (typeof input.inputId !== 'string' || !input.inputId.trim() || (input.action !== 'DOWN' && input.action !== 'UP')) {
-      return reject('session.invalidRehold');
+  function resetReholdAttempt() {
+    reholdRequestedAtMs = null;
+    reheld.clear();
+    reholdOrders.clear();
+    lastReleases.clear();
+  }
+
+  function rehold(input: NormalizedInput, atMs: Ms): Result<TransitionResult> {
+    if (input.sessionId !== sessionId || input.clockGeneration !== generation || reholdEventIds.has(input.eventId)) return unchanged();
+    if (state !== 'REHOLD_WAIT' && state !== 'RESUMING') return reject();
+    if (pause && input.eventPerformanceMs <= pause.atMs) {
+      const delivered = enqueueInput(input);
+      return delivered.ok ? unchanged() : delivered;
     }
+    if (reholdRequestedAtMs === null || !reholdLanes.includes(input.lane) || input.eventPerformanceMs < reholdRequestedAtMs) return unchanged();
+    if (!isValidReholdInput(input) || atMs < input.receivedPerformanceMs || !markWall(atMs)) {
+      return stopWith(error('ERR-018', 'input.invalidRehold'));
+    }
+    const orderKey = `${input.eventPerformanceMs}/${input.sequence}`;
+    if (reholdOrders.has(orderKey)) return stopWith(error('ERR-018', 'input.ambiguousReholdSequence'));
+    reholdOrders.add(orderKey);
+    reholdEventIds.add(input.eventId);
+
+    const { inputId, eventPerformanceMs, sequence } = input;
+    const order = { eventPerformanceMs, sequence };
+    const releaseKey = `${input.lane}:${inputId}`;
+    const previousRelease = lastReleases.get(releaseKey);
+    const pressing = reheld.get(input.lane);
     if (input.action === 'UP') {
-      if (reheld.get(input.lane) !== input.inputId) return unchanged();
+      if (previousRelease === undefined || compareInputOrder(order, previousRelease) > 0) lastReleases.set(releaseKey, order);
+      if (pressing?.inputId !== inputId || compareInputOrder(order, pressing) <= 0) return unchanged();
       reheld.delete(input.lane);
       if (state === 'RESUMING') {
         resumeReadyAtMs = null;
@@ -335,8 +385,10 @@ export function createGameSession(chart: CompiledChart, options: Options) {
         return move('REHOLD_RELEASE', 'REHOLD_WAIT');
       }
     } else {
-      if (reheld.has(input.lane) || [...reheld.values()].includes(input.inputId)) return unchanged();
-      reheld.set(input.lane, input.inputId);
+      // An UP delivered ahead of its DOWN records that this owner has already released.
+      if ((previousRelease && compareInputOrder(order, previousRelease) <= 0)
+          || pressing || [...reheld.values()].some(owner => owner.inputId === inputId)) return unchanged();
+      reheld.set(input.lane, { ...order, inputId });
       if (reheld.size === reholdLanes.length) {
         resumeReadyAtMs = (atMs + countdownMs) as Ms;
         return move('ALL_REHELD', 'RESUMING');
@@ -360,13 +412,18 @@ export function createGameSession(chart: CompiledChart, options: Options) {
     return { ok: true, value: resumePlan };
   }
 
-  function completeResume(plan: SessionResumePlan, identity?: SessionAudioIdentity, atMs?: Ms): Result<TransitionResult> {
+  function completeResume(plan: SessionResumePlan, identity?: SessionAudioIdentity, atMs?: Ms, anchorStartPerformanceMs?: Ms): Result<TransitionResult> {
     if (state !== 'RESUMING' || resumePlan !== plan) return unchanged();
     if (plan.playBgm ? !matchesAudio(identity, plan.generation) : identity !== undefined) return reject('session.invalidResumeAudio');
     const completionAt = atMs ?? wallMs;
-    if (completionAt === null || !markWall(completionAt)) return stopWith(error('ERR-006', 'session.invalidResumeTime'));
-    const rotated = engine.resumeGeneration(plan.generation, reheld);
+    const anchorStart = anchorStartPerformanceMs ?? completionAt;
+    if (completionAt === null || anchorStart === null || !isWallTime(anchorStart)
+        || anchorStart > completionAt || resumeReadyAtMs === null || anchorStart < resumeReadyAtMs || !markWall(completionAt)) {
+      return stopWith(error('ERR-006', 'session.invalidResumeTime'));
+    }
+    const rotated = engine.resumeGeneration(plan.generation, new Map([...reheld].map(([lane, press]) => [lane, press.inputId])));
     if (!rotated.ok) return stopWith(rotated.error);
+    if (reheld.size > 0) completedReholds.set(generation, { anchorStartPerformanceMs: anchorStart, presses: new Map(reheld) });
     generation = plan.generation;
     clock = plan.songTimeUs === null ? null : clockAt(plan.songTimeUs);
     activeAudio = identity ? Object.freeze({ ...identity }) : null;
@@ -376,7 +433,7 @@ export function createGameSession(chart: CompiledChart, options: Options) {
     resumePlan = null;
     resumeReadyAtMs = null;
     reholdLanes = noLanes;
-    reheld.clear();
+    resetReholdAttempt();
     if (plan.target === 'COUNTDOWN') countdownEndsAtMs = (completionAt + countdownMs) as Ms;
     return move('RESUME_COUNTDOWN_END', plan.target);
   }
@@ -385,7 +442,7 @@ export function createGameSession(chart: CompiledChart, options: Options) {
     if (state !== 'RESUMING' && state !== 'REHOLD_WAIT') return reject();
     resumePlan = null;
     resumeReadyAtMs = null;
-    reheld.clear();
+    resetReholdAttempt();
     engine.setReholdWaiting(false);
     return move(event, 'PAUSED');
   }
@@ -401,10 +458,19 @@ export function createGameSession(chart: CompiledChart, options: Options) {
     if (!input || typeof input.sessionId !== 'string' || !Number.isSafeInteger(input.clockGeneration)) {
       return { ok: false, error: error('ERR-018', 'input.invalidContext') };
     }
-    const receipt = (reason: 'IGNORED_STATE' | 'STALE_SESSION'): Result<InputReceipt> => ({
+    const receipt = (reason: 'IGNORED_STATE' | 'STALE_SESSION' | 'DUPLICATE'): Result<InputReceipt> => ({
       ok: true, value: { eventId: input.eventId, accepted: false, reason },
     });
     if (input.sessionId !== sessionId) return receipt('STALE_SESSION');
+    if (!isTerminal(state) && reholdEventIds.has(input.eventId)) return receipt('DUPLICATE');
+    const completed = completedReholds.get(input.clockGeneration);
+    const press = completed?.presses.get(input.lane);
+    if (completed && press && input.action === 'UP' && input.inputId === press.inputId && isValidReholdInput(input)
+        && input.eventPerformanceMs < completed.anchorStartPerformanceMs && compareInputOrder(input, press) > 0) {
+      // The old generation was closed with this press held. We cannot amend that
+      // assumption after resuming without rewriting a formal judgement history.
+      return stopWith(error('ERR-007', 'input.lateReholdRelease'));
+    }
     const prePauseInput = pause?.boundary != null && (input.clockGeneration !== generation || input.eventPerformanceMs <= pause.atMs);
     if ((!hasPlayback(state) && !(prePauseInput && !isTerminal(state))) || input.songTimeUs < startSongUs) {
       return receipt(input.clockGeneration === generation ? 'IGNORED_STATE' : 'STALE_SESSION');

@@ -90,6 +90,31 @@ function matchingReceipt(save: SaveDataV1, pending: PendingCommit): SaveReceipt 
   return receipt;
 }
 
+function sameJson(actual: unknown, expected: unknown): boolean {
+  if (actual === expected) return true;
+  if (Array.isArray(actual) || Array.isArray(expected)) {
+    return Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length
+      && actual.every((value, index) => sameJson(value, expected[index]));
+  }
+  if (actual === null || expected === null || typeof actual !== 'object' || typeof expected !== 'object') return false;
+  const entries = Object.entries(actual);
+  const expectedObject = expected as Record<string, unknown>;
+  return entries.length === Object.keys(expected).length && entries.every(([key, value]) =>
+    Object.hasOwn(expected, key) && sameJson(value, expectedObject[key]));
+}
+
+function matchesCommittedData(actual: SaveDataV1, expected: SaveDataV1): boolean {
+  if (actual.revision === expected.revision) return sameJson(actual, expected);
+  // The same receipt can outlive settings updates and appended tutorial completions only.
+  const previousTutorials = expected.progress.completedTutorialIds;
+  return actual.revision > expected.revision
+    && sameJson(actual.records, expected.records)
+    && sameJson(actual.collection, expected.collection)
+    && sameJson(actual.achievements, expected.achievements)
+    && sameJson(actual.progress.unlockedMusicIds, expected.progress.unlockedMusicIds)
+    && previousTutorials.every((id, index) => actual.progress.completedTutorialIds[index] === id);
+}
+
 export function createStorageCoordinator({ storage, lock, rules, createEpoch, digest }: StorageCoordinatorOptions) {
   let data: SaveDataV1 | null = null;
   let persisted: SavedDocument | null = null;
@@ -294,6 +319,27 @@ export function createStorageCoordinator({ storage, lock, rules, createEpoch, di
     saveError = null;
   }
 
+  function expectedCommit(document: PendingDocument): Result<SaveDataV1> {
+    const { commit, baseline } = document;
+    const revision = commit.baseRevision + 1;
+    if (!Number.isSafeInteger(revision)) return fail('ERR-016', 'storage.revisionExhausted');
+    const update = rules.buildRecordUpdate(baseline.data, commit.result, commit.recordedAt);
+    if (!update.ok) return update;
+    const receipt: SaveReceipt = {
+      sessionId: commit.result.sessionId, saveEpoch: commit.saveEpoch, revision, resultDigest: commit.digest,
+    };
+    return ok({ ...update.value.data, revision, commitReceipt: receipt });
+  }
+
+  function recoverReceipt(latest: SavedDocument, document: PendingDocument): Result<SaveReceipt | null> {
+    const receipt = matchingReceipt(latest.data, document.commit);
+    if (!receipt) return ok(null);
+    const expected = expectedCommit(document);
+    if (!expected.ok) return expected;
+    return matchesCommittedData(latest.data, expected.value)
+      ? ok(receipt) : fail('ERR-016', 'storage.receiptPayloadMismatch');
+  }
+
   function writePending(document: PendingDocument, lease: WriterLease): Result<SaveCommitResult> {
     const authority = permission(lease);
     if (!authority.ok) return commitFailure(authority);
@@ -302,24 +348,21 @@ export function createStorageCoordinator({ storage, lock, rules, createEpoch, di
     const latest = readLatest();
     if (!latest.ok) return commitFailure(latest);
     if (latest.value) {
-      const matching = matchingReceipt(latest.value.data, commit);
-      if (matching) {
+      const recovered = recoverReceipt(latest.value, document);
+      if (!recovered.ok) return commitFailure(recovered);
+      if (recovered.value) {
         completeCommit(latest.value);
-        return ok({ status: 'ALREADY_COMMITTED', receipt: matching });
+        return ok({ status: 'ALREADY_COMMITTED', receipt: recovered.value });
       }
     }
 
     if (latest.value?.raw !== baseline.raw || latest.value.data.saveEpoch !== commit.saveEpoch
-        || latest.value.data.revision !== commit.baseRevision || !Number.isSafeInteger(commit.baseRevision + 1)) {
+        || latest.value.data.revision !== commit.baseRevision) {
       return commitFailure(fail('ERR-016', 'storage.changedUnexpectedly'));
     }
-    const update = rules.buildRecordUpdate(baseline.data, commit.result, commit.recordedAt);
-    if (!update.ok) return commitFailure(update);
-    const receipt: SaveReceipt = {
-      sessionId: commit.result.sessionId, saveEpoch: commit.saveEpoch,
-      revision: commit.baseRevision + 1, resultDigest: commit.digest,
-    };
-    const stored = writeDocument({ ...update.value.data, revision: receipt.revision, commitReceipt: receipt }, lease);
+    const expected = expectedCommit(document);
+    if (!expected.ok) return commitFailure(expected);
+    const stored = writeDocument(expected.value, lease);
     if (!stored.ok) return commitFailure(stored);
     const verified = matchingReceipt(stored.value.data, commit);
     if (!verified) return commitFailure(fail('ERR-016', 'storage.readbackUnconfirmed'));
@@ -330,7 +373,7 @@ export function createStorageCoordinator({ storage, lock, rules, createEpoch, di
   const commitResult: Contracts['commitResult'] = (result, lease) => {
     const document = pending;
     const authority = permission(lease);
-    if (!authority.ok) return Promise.resolve(authority);
+    if (!authority.ok) return Promise.resolve(document && document.lease === lease ? commitFailure(authority) : authority);
     if (document?.lease !== lease || document.commit.leaseGeneration !== lease.generation
         || canonicalResult(result) !== document.canonical) {
       return Promise.resolve(fail('ERR-018', 'storage.invalidPending'));
@@ -359,9 +402,13 @@ export function createStorageCoordinator({ storage, lock, rules, createEpoch, di
     if (!confirmed || !before || saveStatus !== 'SAVE_ERROR' || committing) return fail('ERR-008', 'storage.discardUnavailable');
     const latest = readLatest();
     if (!latest.ok) return commitFailure(latest);
-    if (pending && latest.value && matchingReceipt(latest.value.data, pending.commit)) {
-      completeCommit(latest.value);
-      return ok('ALREADY_COMMITTED');
+    if (pending && latest.value) {
+      const recovered = recoverReceipt(latest.value, pending);
+      if (!recovered.ok) return commitFailure(recovered);
+      if (recovered.value) {
+        completeCommit(latest.value);
+        return ok('ALREADY_COMMITTED');
+      }
     }
     if (latest.value?.raw !== before.raw) return commitFailure(fail('ERR-016', 'storage.discardUnconfirmed'));
     remember(latest.value);

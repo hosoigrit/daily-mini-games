@@ -251,7 +251,9 @@ describe('rehold', () => {
     value(session.advancePause(ms(4550.001)));
     return session;
   }
-  const left = (action: 'DOWN' | 'UP', inputId = 'B') => ({ lane: 1 as const, clockGeneration: gen(1), inputId, action });
+  const left = (
+    sequence: number, eventAtMs: number, action: 'DOWN' | 'UP', inputId = 'B', receivedAtMs = eventAtMs,
+  ) => input(sequence, Math.round((eventAtMs - 3000) * 1000), eventAtMs, { inputId, action, receivedPerformanceMs: ms(receivedAtMs) });
 
   it('TC-D1-058/059 reholds a normal hold for exactly 3 seconds and resumes with the new controller', () => {
     const session = suspended();
@@ -260,8 +262,8 @@ describe('rehold', () => {
     value(session.requestResume(ms(4551)));
     ui(session, 'REHOLD_WAIT');
     expect(session.holdStates()[0]).toMatchObject({ state: 'REHOLD_WAIT', activeInputId: null });
-    value(session.rehold(left('DOWN'), ms(4552)));
-    value(session.rehold(left('UP', 'different-owner'), ms(4553)));
+    value(session.rehold(left(101, 4552, 'DOWN'), ms(4552)));
+    value(session.rehold(left(102, 4553, 'UP', 'different-owner'), ms(4553)));
     expect(session.getResumePlan(ms(7551)).ok).toBe(false);
     const plan = value(session.getResumePlan(ms(7552)));
     expect(plan).toMatchObject({ generation: 2, target: 'PLAYING', songTimeUs: 1_500_000, sourceOffsetUs: 1_500_000, playBgm: true });
@@ -276,13 +278,13 @@ describe('rehold', () => {
   it('TC-D1-060 invalidates a released rehold plan and restarts the whole 3-second timer', () => {
     const session = suspended();
     value(session.requestResume(ms(4551)));
-    value(session.rehold(left('DOWN'), ms(4552)));
+    value(session.rehold(left(101, 4552, 'DOWN'), ms(4552)));
     const oldPlan = value(session.getResumePlan(ms(7552)));
-    value(session.rehold(left('UP'), ms(7553)));
+    value(session.rehold(left(102, 7553, 'UP'), ms(7553)));
     ui(session, 'REHOLD_WAIT');
     value(session.completeResume(oldPlan, identity(2, 'old-reservation')));
     ui(session, 'REHOLD_WAIT');
-    value(session.rehold(left('DOWN', 'C'), ms(7554)));
+    value(session.rehold(left(103, 7554, 'DOWN', 'C'), ms(7554)));
     expect(session.getResumePlan(ms(10_553.999)).ok).toBe(false);
     const fresh = value(session.getResumePlan(ms(10_554)));
     expect(fresh).not.toBe(oldPlan);
@@ -298,10 +300,10 @@ describe('rehold', () => {
     value(session.advancePause(ms(4550.001)));
     value(session.requestResume(ms(4551)));
     expect(session.read().reholdLanes).toEqual([1, 3]);
-    value(session.rehold(left('DOWN'), ms(4552)));
-    value(session.rehold({ ...left('DOWN'), lane: 3 }, ms(4553)));
+    value(session.rehold(left(101, 4552, 'DOWN'), ms(4552)));
+    value(session.rehold({ ...left(102, 4553, 'DOWN'), lane: 3 }, ms(4553)));
     ui(session, 'REHOLD_WAIT');
-    value(session.rehold({ ...left('DOWN', 'C'), lane: 3 }, ms(4554)));
+    value(session.rehold({ ...left(103, 4554, 'DOWN', 'C'), lane: 3 }, ms(4554)));
     const plan = value(session.getResumePlan(ms(7554)));
     value(session.resumeDenied(plan, recoverable));
     ui(session, 'PAUSED');
@@ -328,6 +330,68 @@ describe('rehold', () => {
     value(session.completeResume(plan, identity(2, 'take-2')));
     value(session.advance(context(2_050_001, 0, 2), ms(8101.001)));
     expect(value(session.read().judgement.summary).counts).toMatchObject({ perfect: 1, miss: 1 });
+  });
+
+  it('uses occurrence at or after RESUME and keeps preceding pause input out of rehold', () => {
+    const session = suspended();
+    value(session.requestResume(ms(4551)));
+    value(session.rehold(input(1, 1_000_000, 4000, { receivedPerformanceMs: ms(4552) }), ms(4552)));
+    value(session.rehold(left(101, 4550.999, 'DOWN', 'B', 4553), ms(4553)));
+    expect(session.read()).toMatchObject({ state: 'REHOLD_WAIT', reheldLanes: [], resumeReadyAtMs: null });
+    value(session.rehold(left(102, 4551, 'DOWN', 'B', 4554), ms(4554)));
+    expect(session.read()).toMatchObject({ state: 'RESUMING', reheldLanes: [1], resumeReadyAtMs: 7554 });
+    expect(value(session.read().judgement.summary).counts).toMatchObject({ perfect: 1, miss: 0, ghost: 0 });
+  });
+
+  it('orders reversed releases and presses by occurrence and sequence and makes repeat IDs idempotent', () => {
+    const session = suspended();
+    value(session.requestResume(ms(4551)));
+    const release = left(102, 4552, 'UP', 'B', 4553);
+    value(session.rehold(release, ms(4553)));
+    value(session.rehold(left(101, 4552, 'DOWN', 'B', 4554), ms(4554)));
+    expect(session.read()).toMatchObject({ state: 'REHOLD_WAIT', reheldLanes: [] });
+    const press = left(103, 4552, 'DOWN', 'B', 4555);
+    value(session.rehold(press, ms(4555)));
+    value(session.rehold(left(104, 4551.999, 'UP', 'B', 4556), ms(4556)));
+    value(session.rehold(release, ms(4553)));
+    value(session.rehold(press, ms(4555)));
+    expect(session.read()).toMatchObject({ state: 'RESUMING', reheldLanes: [1], resumeReadyAtMs: 7555 });
+    value(session.rehold(left(105, 4552, 'UP', 'B', 4557), ms(4557)));
+    value(session.rehold(press, ms(4555)));
+    expect(session.read()).toMatchObject({ state: 'REHOLD_WAIT', reheldLanes: [], resumeReadyAtMs: null });
+  });
+
+  it('stops when distinct rehold events claim the same occurrence and sequence', () => {
+    const session = suspended();
+    value(session.requestResume(ms(4551)));
+    value(session.rehold(left(101, 4552, 'DOWN'), ms(4552)));
+    const ambiguous = { ...left(101, 4552, 'UP', 'B', 4553), eventId: 'unrelated-id' };
+    expect(session.rehold(ambiguous, ms(4553))).toMatchObject({ ok: false, error: { code: 'ERR-018', messageKey: 'input.ambiguousReholdSequence' } });
+    ui(session, 'ERROR');
+  });
+
+  it('uses the fixed start as late-release cutoff and safely stops on a matching unseen pre-start UP', () => {
+    const session = suspended();
+    value(session.requestResume(ms(4551)));
+    const press = left(101, 4552, 'DOWN');
+    value(session.rehold(press, ms(4552)));
+    const plan = value(session.getResumePlan(ms(7552)));
+    value(session.completeResume(plan, identity(2, 'take-2'), ms(7580), ms(7575)));
+    expect(session.holdStates()[0]).toMatchObject({ state: 'HOLDING', activeInputId: 'B' });
+    const frozen = session.read().judgement;
+    expect(value(session.enqueueInput(press)).reason).toBe('DUPLICATE');
+    for (const harmless of [
+      left(102, 4551.999, 'UP', 'B', 7581), left(103, 7574, 'UP', 'different-owner', 7581),
+      { ...left(104, 7574, 'UP', 'B', 7581), lane: 2 as const }, left(105, 7575, 'UP', 'B', 7581),
+      left(106, 7575.001, 'UP', 'B', 7581), left(107, 7574, 'DOWN', 'B', 7581),
+    ]) expect(value(session.enqueueInput(harmless)).accepted).toBe(false);
+    expect(session.enqueueInput(left(108, 7574.999, 'UP', 'B', 7582))).toMatchObject({
+      ok: false, error: { code: 'ERR-007', messageKey: 'input.lateReholdRelease' },
+    });
+    ui(session, 'ERROR');
+    expect(session.read().judgement.official).toEqual(frozen.official);
+    expect(session.read().judgement.processedBeforeUs).toBe(frozen.processedBeforeUs);
+    expect(session.getFinalResult()).toBeNull();
   });
 });
 

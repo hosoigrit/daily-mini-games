@@ -35,6 +35,7 @@ function createAudioProbe() {
   const events = createSignal<AudioEvent>();
   const clocks = new Map<Gen, ReturnType<typeof clockEntry>>();
   const starts: PlaybackAnchor[] = [];
+  const boundaries = new Map<Gen, Ms>();
   let lastRequest: Token | null = null;
   let lastAnchor: PlaybackAnchor | null = null;
   const render = (music: MusicDefinition, request: Token): Result<PreparedTrack> => ok({
@@ -56,6 +57,7 @@ function createAudioProbe() {
         anchorAudioSec: 10 as Sec, anchorPerformanceMs: request.atMs,
       };
       starts.push(lastAnchor);
+      boundaries.set(lastAnchor.generation, ms(request.atMs + (request.playBgm ? 50 : 0)));
       clocks.set(lastAnchor.generation, clockEntry(lastAnchor, request.offsetUs));
       return ok(lastAnchor);
     }),
@@ -64,14 +66,18 @@ function createAudioProbe() {
     convert(at, generation) {
       return clocks.get(generation)?.clock.convertEventTime(at, generation) ?? denied;
     },
+    startPerformanceMs: generation => boundaries.get(generation) ?? null,
     contextAt: () => null,
     monitor: () => ok(undefined),
     applySettings: vi.fn(),
     subscribeAudioEvents: events.subscribe,
     forgetSession(sessionId) {
-      for (const [generation, entry] of clocks) if (entry.anchor.sessionId === sessionId) clocks.delete(generation);
+      for (const [generation, entry] of clocks) if (entry.anchor.sessionId === sessionId) {
+        clocks.delete(generation);
+        boundaries.delete(generation);
+      }
     },
-    forgetGeneration: generation => { clocks.delete(generation); },
+    forgetGeneration: generation => { clocks.delete(generation); boundaries.delete(generation); },
   } satisfies SessionAudioPort;
 
   return {
@@ -79,6 +85,10 @@ function createAudioProbe() {
     ended() {
       if (!lastAnchor || !lastRequest) throw new Error('No playback');
       events.publish({ ...lastRequest, kind: 'ENDED', playbackId: lastAnchor.playbackId, clockGeneration: lastAnchor.generation });
+    },
+    interrupt(at: number) {
+      if (!lastAnchor || !lastRequest) throw new Error('No playback');
+      events.publish({ ...lastRequest, kind: 'INTERRUPTED', playbackId: lastAnchor.playbackId, at: ms(at) });
     },
   };
 }

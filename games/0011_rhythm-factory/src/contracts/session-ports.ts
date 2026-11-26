@@ -35,6 +35,7 @@ export interface SessionAudioPort {
   stop(token: Token): Result<void>;
   preview(track: PreparedTrack, startUs: Us, durationUs: Us, token: Token): Result<void>;
   convert(atMs: Ms, generation: Gen): Result<ConvertedTime>;
+  startPerformanceMs(generation: Gen): Ms | null;
   contextAt(atMs: Ms): SessionClockContext | null;
   monitor(atMs: Ms): Result<void>;
   applySettings(settings: GameSettings): void;

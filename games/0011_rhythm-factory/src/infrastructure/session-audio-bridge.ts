@@ -78,6 +78,7 @@ export function createSessionAudioBridge(
       return history.get(generation)?.clock.convertEventTime(atMs, generation)
         ?? failure('ERR-005', 'clock.noAnchor');
     },
+    startPerformanceMs: generation => history.get(generation)?.sinceMs ?? null,
     contextAt(atMs) {
       let candidate: GenerationClock | undefined;
       for (const record of history.values()) {
