@@ -19,11 +19,17 @@ export interface InputQueue extends Pick<Contracts, 'enqueueInput' | 'drainBefor
   readonly delaysOver50Ms: number;
   readonly lateInputs: number;
   readonly stopError: GameError | null;
+  openPause(boundary: Us): Result<void>;
+  resumeGeneration(next: Gen): Result<void>;
   seal(): void;
 }
 
 export function createInputQueue(sessionId: string, generation: Gen, closeJudgeUs: Us, offsetUs = 0 as Us): InputQueue {
+  let currentGeneration = generation;
+  let pauseBoundary: Us | null = null;
+  const previousBoundaries = new Map<Gen, Us | null>();
   let processedBeforeUs = Number.MIN_SAFE_INTEGER as Us;
+  let resumeFloor = Number.MIN_SAFE_INTEGER;
   let delaysOver50Ms = 0;
   let lateInputs = 0;
   let sealed = false;
@@ -53,9 +59,12 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
         ok: true, value: { eventId: input.eventId, accepted: reason === 'QUEUED', reason },
       });
 
-      if (input.sessionId !== sessionId || input.clockGeneration !== generation) return receipt('STALE_SESSION');
-      if (sealed) return receipt('IGNORED_STATE');
-      if (seen.has(input.eventId)) return receipt('DUPLICATE');
+      if (input.sessionId !== sessionId) return receipt('STALE_SESSION');
+      const stale = input.clockGeneration !== currentGeneration;
+      const oldBoundary = stale ? previousBoundaries.get(input.clockGeneration) : undefined;
+      if (sealed) return receipt(stale ? 'STALE_SESSION' : 'IGNORED_STATE');
+      if (seen.has(input.eventId)) return receipt(stale && oldBoundary === undefined ? 'STALE_SESSION' : 'DUPLICATE');
+      if (stale && (oldBoundary === undefined || oldBoundary === null)) return receipt('STALE_SESSION');
       if (fault) return { ok: false, error: fault };
       if (typeof input.eventId !== 'string' || !input.eventId.trim()
           || typeof input.inputId !== 'string' || !input.inputId.trim()
@@ -69,8 +78,13 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
         return inputFailure('ERR-018', 'input.invalidEvent', sessionId);
       }
       if (input.judgeTimeUs > closeJudgeUs) return receipt('IGNORED_STATE');
+      if (stale && oldBoundary !== undefined && oldBoundary !== null && input.judgeTimeUs > oldBoundary) {
+        return receipt('STALE_SESSION');
+      }
+      if (pauseBoundary !== null && !stale && input.judgeTimeUs > pauseBoundary) return receipt('IGNORED_STATE');
       if (input.receivedPerformanceMs - input.eventPerformanceMs > deliveryWaitUs / 1000) delaysOver50Ms++;
       if (input.judgeTimeUs < processedBeforeUs) {
+        if (!stale && previousBoundaries.size > 0 && input.judgeTimeUs < resumeFloor) return receipt('IGNORED_STATE');
         lateInputs++;
         return halt('ERR-007', 'input.lateEvent');
       }
@@ -102,6 +116,33 @@ export function createInputQueue(sessionId: string, generation: Gen, closeJudgeU
       pending = remaining;
       processedBeforeUs = watermark;
       return { ok: true, value: { processedBeforeUs, events: events.sort(compareInputs) } };
+    },
+    openPause(boundary) {
+      if (fault) return { ok: false, error: fault };
+      if (sealed || pauseBoundary !== null || !Number.isSafeInteger(boundary)
+          || !Number.isSafeInteger(boundary + 1) || boundary + 1 < processedBeforeUs) {
+        return halt('ERR-006', 'input.invalidPauseBoundary');
+      }
+      pauseBoundary = boundary;
+      pending = pending.filter(input => {
+        if (input.judgeTimeUs <= boundary) return true;
+        pendingOrder.delete(orderKey(input));
+        return false;
+      });
+      return { ok: true, value: undefined };
+    },
+    resumeGeneration(next) {
+      if (fault) return { ok: false, error: fault };
+      if (sealed || !Number.isSafeInteger(next) || next <= currentGeneration
+          || (pauseBoundary === null ? processedBeforeUs !== Number.MIN_SAFE_INTEGER || pending.length > 0
+            : processedBeforeUs !== pauseBoundary + 1 || pending.length > 0)) {
+        return halt('ERR-006', 'input.invalidResume');
+      }
+      previousBoundaries.set(currentGeneration, pauseBoundary);
+      resumeFloor = processedBeforeUs;
+      pauseBoundary = null;
+      currentGeneration = next;
+      return { ok: true, value: undefined };
     },
     seal() {
       sealed = true;

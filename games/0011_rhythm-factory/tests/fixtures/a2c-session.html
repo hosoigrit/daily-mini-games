@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A-2c セッション試験</title></head>
+  <body>
+    <h1>回転灯 セッション試験</h1>
+    <p>技術実証用。Playwrightの隔離プロファイルで使用します。</p>
+    <button id="prepare">準備</button>
+    <button id="start" disabled>開始</button>
+    <button id="pause" disabled>停止</button>
+    <button id="resume" disabled>再開</button>
+    <div>
+      <button id="lane-1" style="touch-action:none">1 / D</button>
+      <button id="lane-2" style="touch-action:none">2 / F</button>
+      <button id="lane-3" style="touch-action:none">3 / J</button>
+      <button id="lane-4" style="touch-action:none">4 / K</button>
+    </div>
+    <output id="state" aria-label="セッション状態"></output>
+    <script type="module" src="./a2c-session.ts"></script>
+  </body>
+</html>

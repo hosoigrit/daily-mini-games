@@ -1,6 +1,6 @@
 import type {
   ChartEvent, CommittedJudgementGroup, CompiledChart, Contracts, FinalResult,
-  GameError, Gen, JudgementResult, Lane, NormalizedInput, Result, ScoreEvent, Us,
+  GameError, Gen, HoldRuntimeState, JudgementResult, Lane, NormalizedInput, RenderNote, Result, ScoreEvent, Us,
 } from '../contracts/interface_contracts';
 import { createInputQueue, deliveryWaitUs, inputFailure } from './input-queue';
 import { createLifeState, createScoreState, reduceLife, reduceScore, summarizeScore } from './judgement-reducers';
@@ -19,7 +19,13 @@ interface Group {
 }
 
 type Ghost = Extract<ScoreEvent, { kind: 'GHOST' }>;
-type Options = { readonly sessionId: string; readonly generation: Gen; readonly offsetUs?: Us };
+type Options = {
+  readonly sessionId: string;
+  readonly generation: Gen;
+  readonly offsetUs?: Us;
+  readonly mode?: 'FORMAL' | 'PRACTICE';
+  readonly deferClear?: boolean;
+};
 
 function buildChartIndex(chart: CompiledChart) {
   if (!Number.isSafeInteger(chart.durationUs) || chart.durationUs <= 0
@@ -76,7 +82,9 @@ function buildChartIndex(chart: CompiledChart) {
   return { events, groups, holds, candidates };
 }
 
-export function createJudgementEngine(chart: CompiledChart, { sessionId, generation, offsetUs = 0 as Us }: Options) {
+export function createJudgementEngine(
+  chart: CompiledChart, { sessionId, generation, offsetUs = 0 as Us, mode = 'FORMAL', deferClear = false }: Options,
+) {
   const { chartId, musicId, difficulty, durationUs, totalJudgements } = chart;
   const index = buildChartIndex(chart);
   const lastTargetUs = index?.events.at(-1)?.targetTimeUs;
@@ -94,6 +102,13 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
   const laneOwners = new Map<Lane, string>();
   const ownedLanes = new Map<string, Lane>();
   const heldNotes = new Map<Lane, Hold>();
+  const suspendedHolds = new Map<Lane, Hold>();
+  let reholdWaiting = false;
+  let currentGeneration = generation;
+  let pauseBoundary: Us | null = null;
+  let pauseDrained = false;
+  let catchingUp = false;
+  const noteTypes = new Map(chart.notes.map(note => [note.id, note.type]));
   let deadlineIndex = 0;
   let groupIndex = 0;
   let ghostIndex = 0;
@@ -201,7 +216,9 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
       outcome, score, rank, counts: Object.freeze({ ...counts }), maxCombo, totalJudgements,
       remainingLifeUnits: lifeState.currentUnits, endJudgeTimeUs, durationUs,
     });
-    resolutions.clear();
+    const committedIds = new Set(scoreState.committedEventIds);
+    for (const eventId of resolutions.keys()) if (!committedIds.has(eventId)) resolutions.delete(eventId);
+    suspendedHolds.clear();
     laneOwners.clear();
     ownedLanes.clear();
     heldNotes.clear();
@@ -250,12 +267,12 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
       ghostIndex = nextGhostIndex;
       if (group?.timeUs === time) groupIndex++;
       official.push(...changes);
-      if (lifeState.currentUnits === 0) return finish('FAILED', time);
+      if (lifeState.currentUnits === 0 && mode === 'FORMAL') return finish('FAILED', time);
     }
   }
 
   const enqueueInput: Contracts['enqueueInput'] = input => {
-    if (stopError && input?.sessionId === sessionId && input.clockGeneration === generation) {
+    if (stopError && input?.sessionId === sessionId && input.clockGeneration === currentGeneration) {
       return { ok: false, error: stopError };
     }
     const receipt = inputQueue.enqueueInput(input);
@@ -263,10 +280,7 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
     return receipt;
   };
 
-  function advance(judgeNowUs: Us): Result<void> {
-    if (finalResult) return { ok: true, value: undefined };
-    if (stopError) return { ok: false, error: stopError };
-    const watermark = (Number.isSafeInteger(judgeNowUs) ? judgeNowUs - deliveryWaitUs : NaN) as Us;
+  function processBefore(watermark: Us): Result<void> {
     const batch = inputQueue.drainBefore(watermark);
     if (!batch.ok) {
       stopError = batch.error;
@@ -278,19 +292,129 @@ export function createJudgementEngine(chart: CompiledChart, { sessionId, generat
       stopError = result.error;
       return result;
     }
-    if (!finalResult && watermark > closeJudgeUs && groupIndex === groups.length) {
-      return finish('CLEAR', closeJudgeUs as Us);
-    }
     return result;
+  }
+
+  function completeClear(judgeNowUs: Us): Result<void> {
+    if (finalResult || pauseBoundary !== null || !Number.isSafeInteger(judgeNowUs)
+        || judgeNowUs - deliveryWaitUs <= closeJudgeUs || groupIndex !== groups.length
+        || inputQueue.processedBeforeUs <= closeJudgeUs || (lifeState.currentUnits === 0 && mode === 'FORMAL')) {
+      return { ok: true, value: undefined };
+    }
+    if (stopError) return { ok: false, error: stopError };
+    return finish('CLEAR', closeJudgeUs as Us);
+  }
+
+  function advance(judgeNowUs: Us): Result<void> {
+    if (finalResult) return { ok: true, value: undefined };
+    if (stopError) return { ok: false, error: stopError };
+    if (pauseBoundary !== null) return { ok: true, value: undefined };
+    const watermark = (Number.isSafeInteger(judgeNowUs) ? judgeNowUs - deliveryWaitUs : NaN) as Us;
+    if (catchingUp && watermark < inputQueue.processedBeforeUs) return { ok: true, value: undefined };
+    catchingUp = false;
+    const result = processBefore(watermark);
+    return result.ok && !deferClear ? completeClear(judgeNowUs) : result;
+  }
+
+  function openPause(boundary: Us): Result<void> {
+    if (finalResult) return inputFailure('ERR-018', 'judgement.sealed', sessionId);
+    if (stopError) return { ok: false, error: stopError };
+    const opened = inputQueue.openPause(boundary);
+    if (opened.ok) {
+      pauseBoundary = boundary;
+      pauseDrained = false;
+    } else stopError = opened.error;
+    return opened;
+  }
+
+  function drainThroughPause(boundary: Us): Result<void> {
+    if (stopError) return { ok: false, error: stopError };
+    if (pauseBoundary !== boundary || pauseDrained) {
+      return inputFailure('ERR-018', 'judgement.invalidPauseDrain', sessionId);
+    }
+    const drained = processBefore((boundary + 1) as Us);
+    if (!drained.ok || finalResult) return drained;
+    pauseDrained = true;
+    for (const [lane, hold] of heldNotes) {
+      hold.holder = null;
+      suspendedHolds.set(lane, hold);
+    }
+    heldNotes.clear();
+    laneOwners.clear();
+    ownedLanes.clear();
+    return drained;
+  }
+
+  function resumeGeneration(next: Gen, holders: ReadonlyMap<Lane, string>): Result<void> {
+    if (stopError) return { ok: false, error: stopError };
+    if (pauseBoundary !== null && !pauseDrained) return inputFailure('ERR-018', 'judgement.pauseNotDrained', sessionId);
+    const holderIds = [...holders.values()];
+    if (holders.size !== suspendedHolds.size || new Set(holderIds).size !== holderIds.length
+        || holderIds.some(id => !id.trim()) || [...holders.keys()].some(lane => !suspendedHolds.has(lane))) {
+      return inputFailure('ERR-018', 'judgement.invalidRehold', sessionId);
+    }
+    const rotated = inputQueue.resumeGeneration(next);
+    if (!rotated.ok) {
+      stopError = rotated.error;
+      return rotated;
+    }
+    for (const [lane, id] of holders) {
+      const hold = suspendedHolds.get(lane);
+      if (!hold) continue;
+      hold.holder = id;
+      heldNotes.set(lane, hold);
+      laneOwners.set(lane, id);
+      ownedLanes.set(id, lane);
+    }
+    suspendedHolds.clear();
+    reholdWaiting = false;
+    catchingUp = pauseBoundary !== null;
+    pauseBoundary = null;
+    pauseDrained = false;
+    currentGeneration = next;
+    return rotated;
+  }
+
+  function holdStates(): readonly HoldRuntimeState[] {
+    return [...holds].map(([noteId, hold]) => {
+      const start = resolutions.get(hold.start.eventId);
+      const end = resolutions.get(hold.end.eventId);
+      const committed = scoreState.committedEventIds.includes(hold.end.eventId);
+      const state = committed ? (end?.judgement === 'MISS' ? 'FAILED' : 'COMPLETED')
+        : end ? (end.judgement === 'MISS' ? 'BROKEN' : 'END_RESOLVED')
+          : hold.holder !== null ? 'HOLDING'
+            : suspendedHolds.has(hold.start.lane) && suspendedHolds.get(hold.start.lane) === hold
+              ? (reholdWaiting ? 'REHOLD_WAIT' : 'SUSPENDED') : finalResult?.outcome === 'FAILED' && start ? 'FAILED' : 'WAITING';
+      return Object.freeze({
+        noteId, lane: hold.start.lane, startEventId: hold.start.eventId, endEventId: hold.end.eventId,
+        startTimeUs: hold.start.targetTimeUs, endTimeUs: hold.end.targetTimeUs, state, activeInputId: hold.holder,
+        startJudgement: start?.judgement ?? null, endJudgement: end?.judgement ?? null,
+      });
+    });
+  }
+
+  function renderNotes(): readonly RenderNote[] {
+    const committedIds = new Set(scoreState.committedEventIds);
+    return events.map(event => {
+      const result = resolutions.get(event.eventId);
+      return Object.freeze({
+        eventId: event.eventId, noteId: event.noteId, lane: event.lane, targetUs: event.targetTimeUs,
+        endUs: holds.get(event.noteId)?.end.targetTimeUs ?? null, type: noteTypes.get(event.noteId) ?? 'TAP',
+        state: committedIds.has(event.eventId) ? 'COMMITTED' as const : result ? 'RESOLVED' as const : 'PENDING' as const,
+        judgement: result?.judgement ?? null,
+      });
+    });
   }
 
   return {
     ok: true,
     value: {
-      enqueueInput, advance,
+      enqueueInput, advance, openPause, drainThroughPause, resumeGeneration, completeClear, holdStates, renderNotes,
+      setReholdWaiting(waiting: boolean) { reholdWaiting = waiting; },
       getFinalResult: (): FinalResult | null => finalResult,
       read() {
         return {
+          generation: currentGeneration,
           summary: summarize(),
           lifeUnits: lifeState.currentUnits,
           processedBeforeUs: inputQueue.processedBeforeUs,
