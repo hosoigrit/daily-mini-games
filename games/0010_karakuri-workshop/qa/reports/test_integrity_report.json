@@ -1764,5 +1764,732 @@
         "CR010-R2-followup-QA-recovery.tar.gz"
       ]
     }
+  },
+  "CR010_R3_CONTINUATION": {
+    "candidate": "56334926fee679412c4978471f812d454e854525",
+    "evidenceBase": "a1ec021f677b56e9b74deffebb01e47961b37c3b",
+    "historicalTested": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+    "frozen": "d5bae9f0afe6b6d860257e2dfec25e028e557a4f",
+    "main": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+    "approval": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+    "effectiveScopeSHA256": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed",
+    "signedInputs": {
+      "CR010-gameplay-design.pdf": "c8859181220266d7632d35883449c8758e616de1505a7f327b83dd8a2a1254ae",
+      "CR010-gameplay-design.docx": "7af1b3986e7e973bfb7498f991ba9940269d34c4bc91057abd2cca752a120da4",
+      "CR010-board-proposals.json": "af85e58a9674746ad1950ecc30883fbd12662195697411b82bcb57710c8af3eb"
+    },
+    "frozenHashes": {
+      "00_project_overview.md": "32673356170fa4774b408790e2158a9dbc02f008b90a445965dbb0a0cda0e3c9",
+      "01_game_concept.md": "d9d28cd582620a5179f04cd4e5434148787210729d9ff295298625e2c537f250",
+      "02_requirements.md": "68e0769af45fbf5f617457b2c1029d3c3ee2028cd04d5b5ac8352a97ae14ae74",
+      "03_basic_design.md": "4cf6aea0d3e8a1b9180fc608b7eb3e069fc4ebfd4cebc015d90e7a8b080be71e",
+      "04_detailed_design.md": "6a039a97a0dad63e9ceac3484f94d51cedb6a44e03bef4ef2cf55b42cfd837fa",
+      "05_ui_ux_design.md": "8a286392b13aa00380050c8cfc25bf37987e870dc9658a6c1fa64eea68b7e047",
+      "06_data_design.md": "66c393460229efea4094e8b9dce59a32e5e9baa9d9b2c54b558163d651e8f2e0",
+      "07_test_specification.md": "c02a75c9ee329106feed6aee781275f5c9df52b281bd40f1789654a855446bcd",
+      "08_acceptance_criteria.md": "308b7eed2da91f3813b443531e98a2066d9d9c34054fe96ced5eae848f8cf9f8",
+      "09_implementation_plan.md": "e8f96e439db2fcd6acd005b0804dad8a31fe5d332a746e0ea56116301305144d",
+      "10_codex_instructions.md": "842abeb9f3d8296c998b83e6cadf0d24edd285380f06b7a05320e09b1587787e",
+      "11_traceability_matrix.md": "5cece7eadec346e63cce992b02dacc4bac843b563d0a206a7c40980120a1ccb2",
+      "12_risk_register.md": "bcd4d683e0511be5e439919d557da8f8c5607af683422ab76cb98ddfea9ef50e",
+      "13_approval_record.md": "a4e426643cb31eecbc1f02a2ba33aa41b64bf6cb22d389c22d0a0f5e2795fe20",
+      "14_loop_engineering_protocol.md": "a91b4ecac144df4237e496bb04790648bd53b75a31d035f44298fe9035341aa1",
+      "15_execution_policy.json": "b89f94b4bf800aefe5fd27c19a66b0a7715ccdb2f95d97af031b5984b6df3cfa",
+      "16_stage_adjustment_policy.json": "a7610e22770c1e095cef0c0a4e57322179c9d46ea62115866e0c9527467d4fec",
+      "17_visual_qa_protocol.md": "07776ab8096fceb2b1ad45188141eacb2a9c5b306f53c92312be1a2d6a2d76b9",
+      "18_test_execution_manifest.json": "b8781028fd58de806855c57e6e20f4dae69c49e82d5c80f23e473f1e9daecc26",
+      "19_allowed_paths.json": "e9b7f557cb26c535dd1ddb3f1903db060cd90ac49d2aa0d0d908d2174a98dbd6",
+      "20_checkpoint_schema.json": "6d8eb083c64a4fea4ba109fccc6c9fd8eb16041465dbaea54331aeab3887fe05",
+      "SHA256SUMS.txt": "002d01293ab2d48058167c7352fcd5e03f7f5596f35549865dca686a087cd845"
+    },
+    "unchangedOriginalTestHashes": {
+      "games/0010_karakuri-workshop/tests/d1-physics.test.js": "b451b30230cb9dfa09d54f64f01fbc1799fede090ff9794259f55a40403ed7d3",
+      "games/0010_karakuri-workshop/tests/d2-placement.test.js": "e1f9d0328a79cf6a92dbbaae1952cc7567595fc05673d9ee84b390cf6a11d479",
+      "games/0010_karakuri-workshop/tests/d2-seesaw.test.js": "1ae10ba8881f37deed5f8eccb58f8f9e060368d63b52dbea928edb5495c6a0f3",
+      "games/0010_karakuri-workshop/tests/d2-spring.test.js": "184ba79780cf738ee7db24d4a68293e874579044f9fd39615274e4198467bcb3",
+      "games/0010_karakuri-workshop/tests/d3-rules.test.js": "f1b4ee5999cde1b8b6c1fdfb559333368cb9219aba79a1e95341eb72aec81e36",
+      "games/0010_karakuri-workshop/tests/d4-stages.test.js": "7b72a659530020e96ab2e25a477ec3f0a40faf5328c6c5a853c64a8cd5c2e08c",
+      "games/0010_karakuri-workshop/tests/d5-save.test.js": "02354278693e9f6a12897308912a5b19839d6c0bc021101da69ade20f7c666b7",
+      "games/0010_karakuri-workshop/tests/d6-ui.test.js": "82918419032104d17141a6bd67f38e53d57eaac9683a7a456b48825b09953e29",
+      "games/0010_karakuri-workshop/tests/d7-integration.test.js": "40bd8bded27e2d02942ee58bb59320dcd6fbc3e1ec63e17f09fb69c8db44e322",
+      "games/0010_karakuri-workshop/tests/d8-governance.test.js": "1c7d0c71da9f7e471f2db7bf619d8cd4bfa12099f6aa2dc8c96b96af8b9e4e2e",
+      "games/0010_karakuri-workshop/tests/supplemental.test.js": "58961fd67b762f81738d319ff2ac1114a75f4ab129db8534aea7f2bab64a6072"
+    },
+    "releaseAssetInventory": [
+      {
+        "name": "assets/asset-manifest.json",
+        "bytes": 3248,
+        "sha256": "fc2150fd425eaf0819a40cf5f7a864c214e779651a2d785fafc6a3f6088346d6"
+      },
+      {
+        "name": "assets/characters/gear-normal.svg",
+        "bytes": 1699,
+        "sha256": "b6256a3c574f5ba427bbd74fd566695da272566b2816717d73cdb386cf22bb4e"
+      },
+      {
+        "name": "assets/characters/gear-praise.svg",
+        "bytes": 1873,
+        "sha256": "cff26ae05146bb4b483dab8a141aa165e5917bcf26e2eddad793cd94c15b92e4"
+      },
+      {
+        "name": "assets/characters/gear-thinking.svg",
+        "bytes": 1812,
+        "sha256": "33f0f372eee0e618ec82ec7a2acdc4d845f4b10abac7fd6a761bf98222204259"
+      },
+      {
+        "name": "assets/characters/luke-happy.svg",
+        "bytes": 1774,
+        "sha256": "2260b0bbdc85313cf8f0bed458bf38dfaf7908602f1b75f8e559d89e8d020ff8"
+      },
+      {
+        "name": "assets/characters/luke-normal.svg",
+        "bytes": 1713,
+        "sha256": "96009856db8f47056b350c22495451409294b7093f0e971dd4ce9c023d90e694"
+      },
+      {
+        "name": "assets/characters/luke-surprised.svg",
+        "bytes": 1708,
+        "sha256": "b80afbedad15b44cd4c84a6283a4ae7160d297ad654c7b53ae7f3444b02ba271"
+      },
+      {
+        "name": "assets/decoration/workshop-emblem.svg",
+        "bytes": 235,
+        "sha256": "f53b6420b547a4eae48ba0ad52af74bfa7e47d3dc8f8f9903ca3bdbdef8278af"
+      },
+      {
+        "name": "assets/decoration/workshop-pattern.svg",
+        "bytes": 212,
+        "sha256": "b7bd8d299270ff18c121d11675aae51074fcad12ea5f1a1edec0fe3da65a3977"
+      },
+      {
+        "name": "index.html",
+        "bytes": 6953,
+        "sha256": "09f891877165d9c4c9d4af8844c0f772a8f128115eecf536d11856f7d2c6c754"
+      },
+      {
+        "name": "src/app.js",
+        "bytes": 9482,
+        "sha256": "76b85d59c1c1a1e9939a8f5d1d7fe2cc85c7d7cf10e0c5a4cecc7387bae0801d"
+      },
+      {
+        "name": "src/app/controller.js",
+        "bytes": 18778,
+        "sha256": "aac7ebd280dec2de299c5188fe13f87e9342065cf58441ce49ca224bc2edc18a"
+      },
+      {
+        "name": "src/app/state-machine.js",
+        "bytes": 1091,
+        "sha256": "a32900ecbfa7c03cb31c7516f54beaa5ca2367c8fcb9bbb94cdec4ecd220c23f"
+      },
+      {
+        "name": "src/app/tutorial-controller.js",
+        "bytes": 11612,
+        "sha256": "ea7b4c7ce794150e354cdab57139193be735bfff6835fe6b6dd9019d7c7dd426"
+      },
+      {
+        "name": "src/data/legacy-stage-identities.js",
+        "bytes": 1945,
+        "sha256": "97f875f9c72f807038988f0106de72550af3512b8f96039438b3c4921d13b91c"
+      },
+      {
+        "name": "src/data/part-definitions.js",
+        "bytes": 796,
+        "sha256": "b98992064f7bd0c6a0d6b88a24ab35c3b6d79a74c9d933ba0ae6c54381ddcca7"
+      },
+      {
+        "name": "src/data/physics-config.js",
+        "bytes": 1526,
+        "sha256": "934cb4166a1f5d2b383f94d4bd09ecfaef489a1199fec623a0fe5c39ce7fa756"
+      },
+      {
+        "name": "src/data/stage-definitions.js",
+        "bytes": 13789,
+        "sha256": "b281afb505e1c496d02c0c8b1bcadbf3ad5ce8c348ed18e8eb14202b5d9aa740"
+      },
+      {
+        "name": "src/data/tutorial-definitions.js",
+        "bytes": 4091,
+        "sha256": "1b7419844c9f2d9d8c588cb69e0e31bb4f7cda48577e3a15269c9f52ec7e8fa8"
+      },
+      {
+        "name": "src/domain/design-editor.js",
+        "bytes": 7677,
+        "sha256": "f089ca44259dd2ede96f6e7e541850217b08d7b4488fb327c4428d6a048cd149"
+      },
+      {
+        "name": "src/domain/geometry.js",
+        "bytes": 2617,
+        "sha256": "4f12e2e9b246f55beaae9c5ff624e1eeeb4ee731e938a501679d74324fc050db"
+      },
+      {
+        "name": "src/domain/placement-validator.js",
+        "bytes": 2302,
+        "sha256": "7ebebefdbe5eb7a2bd4576780ab4666afc6442b6f2f36ccf6ae99f330fbb07cd"
+      },
+      {
+        "name": "src/domain/result-evaluator.js",
+        "bytes": 5787,
+        "sha256": "86e82cbd93301637ea26c67a81bfb723cda57be94213db61adfba09099b9e09b"
+      },
+      {
+        "name": "src/domain/score-service.js",
+        "bytes": 2287,
+        "sha256": "fdc4243dc90f3935243623aee7d8f4d074e16e918b54a3b994b92ed46a3c2c91"
+      },
+      {
+        "name": "src/domain/tutorial-evaluator.js",
+        "bytes": 5963,
+        "sha256": "891e0aa44cc76afb209894dd783648780a11deca0ae381f20e0e6e5338749216"
+      },
+      {
+        "name": "src/domain/undo-manager.js",
+        "bytes": 310,
+        "sha256": "c5de8ef64a45d4338cd35226bc08816174960096f61a66b571ca4eef77d70a36"
+      },
+      {
+        "name": "src/domain/usage-requirements.js",
+        "bytes": 1874,
+        "sha256": "6a7e116ac4c7ed7b9ce8258f8922fcde317018f85f97b344f9113c911d7bc340"
+      },
+      {
+        "name": "src/physics/adapter.js",
+        "bytes": 17832,
+        "sha256": "0dd6de7de8a8d42e858f745a0525462a56ef838bb3b70ca852bc1b8fd0595a19"
+      },
+      {
+        "name": "src/physics/body-factory.js",
+        "bytes": 2732,
+        "sha256": "8be2b57f25a58e87bcc5897a25ecab2234f202eb24b466e64d9680174a81b98b"
+      },
+      {
+        "name": "src/physics/seesaw-controller.js",
+        "bytes": 1089,
+        "sha256": "950fada5911af1637de7613c5568bd72196f90f1400241b2e20c08ff6ed416dd"
+      },
+      {
+        "name": "src/physics/simulation-controller.js",
+        "bytes": 1707,
+        "sha256": "62e291a08c6ae4d6c9fee40a84b21e3b34619e06786e795946d7603b5a5c554d"
+      },
+      {
+        "name": "src/physics/spring-controller.js",
+        "bytes": 10882,
+        "sha256": "4c00068e2fb765df7f1700a53cbec1b241da588aa95bb1c7e9bfa1178fb2b3fa"
+      },
+      {
+        "name": "src/physics/trajectory-recorder.js",
+        "bytes": 982,
+        "sha256": "bc81b406fcaf0a10b7b91e7fc79f0e17cabafdbe32b399074a34741beb3b0ed0"
+      },
+      {
+        "name": "src/presentation/audio-controller.js",
+        "bytes": 4727,
+        "sha256": "464f334b7a96ec527aa3fb2c84deab97037554144c597b4a10460ac731930f55"
+      },
+      {
+        "name": "src/presentation/character-controller.js",
+        "bytes": 1220,
+        "sha256": "5616ef73dc1bec1eee6ee782f78a788a2c418a432e218a38a8fa9d79f3f82561"
+      },
+      {
+        "name": "src/presentation/sound-definitions.js",
+        "bytes": 478,
+        "sha256": "1ee009657df18d07ad52c6d8bb8abf5055a7c4b301ea4d24b02c1064a8028046"
+      },
+      {
+        "name": "src/storage/lock-manager.js",
+        "bytes": 1400,
+        "sha256": "a3d21dab38054735c159410c0c336b2fb3829ed9a0dc449f9d49f215246d24bd"
+      },
+      {
+        "name": "src/storage/save-migration.js",
+        "bytes": 2574,
+        "sha256": "479954bdca8457d161b527839e1bb09e1eb778a1ea42f3e7eaaafce5fa5cbda8"
+      },
+      {
+        "name": "src/storage/save-repository.js",
+        "bytes": 9270,
+        "sha256": "4b695d4e7ed9b49ae174d0d493a356fd1ea0340ac5c7648ead9d837f39817488"
+      },
+      {
+        "name": "src/storage/save-validator.js",
+        "bytes": 8914,
+        "sha256": "3f5d3c7111ff5aaef765fc92fc8cfe9cea32d8b5ab55917040240d20e4c6f9be"
+      },
+      {
+        "name": "src/ui/canvas-renderer.js",
+        "bytes": 4058,
+        "sha256": "dddd5f185767e984d147e9cf6168e3f861c0f446fa3c9bd7ad4afd72632ba37f"
+      },
+      {
+        "name": "src/ui/input-controller.js",
+        "bytes": 3656,
+        "sha256": "31af38eb14583bcf25402b38325dc463d98dbdbdca727d3b66b363fdf562820e"
+      },
+      {
+        "name": "src/ui/ui-controller.js",
+        "bytes": 20786,
+        "sha256": "284b825a4b842149ed47d33e406112aff7c05b93918fcc674b683f51522fd84b"
+      },
+      {
+        "name": "styles.css",
+        "bytes": 5960,
+        "sha256": "23b6bc421e37ca6943a627095ce6f686f9de918d93d5a64698c6dd37b5603e40"
+      },
+      {
+        "name": "vendor/planck/LICENSE",
+        "bytes": 1078,
+        "sha256": "49fd3df949edd5f294edafb22e8905263dd7560b514bee6df2f17538069aafca"
+      },
+      {
+        "name": "vendor/planck/planck.mjs",
+        "bytes": 402646,
+        "sha256": "70d3eed1eb7714823f93718fd90b671a41b9c7920b568f06dde695172eda16f1"
+      }
+    ],
+    "frozenTraceDocuments": {
+      "02_requirements.md": "68e0769af45fbf5f617457b2c1029d3c3ee2028cd04d5b5ac8352a97ae14ae74",
+      "03_basic_design.md": "4cf6aea0d3e8a1b9180fc608b7eb3e069fc4ebfd4cebc015d90e7a8b080be71e",
+      "04_detailed_design.md": "6a039a97a0dad63e9ceac3484f94d51cedb6a44e03bef4ef2cf55b42cfd837fa",
+      "07_test_specification.md": "c02a75c9ee329106feed6aee781275f5c9df52b281bd40f1789654a855446bcd",
+      "11_traceability_matrix.md": "5cece7eadec346e63cce992b02dacc4bac843b563d0a206a7c40980120a1ccb2",
+      "18_test_execution_manifest.json": "b8781028fd58de806855c57e6e20f4dae69c49e82d5c80f23e473f1e9daecc26"
+    },
+    "frozenForwardCounts": {
+      "requirements": 190,
+      "basicDesign": 31,
+      "detailedDesignForward": 118,
+      "testParents": 296,
+      "testChildren": 982
+    },
+    "reverseDetailedDesignSupplement": [
+      {
+        "detailedDesignId": "DD-D2-019",
+        "requirements": [
+          "FR-040"
+        ],
+        "testCases": [
+          "TC-D3-027-C005"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D3-001",
+        "requirements": [
+          "FR-037"
+        ],
+        "testCases": [
+          "TC-D3-001-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D3-002",
+        "requirements": [
+          "FR-007",
+          "FR-037"
+        ],
+        "testCases": [
+          "TC-D3-001-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-010",
+        "requirements": [
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D4-029-C001",
+          "TC-D8-012-C003"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-011",
+        "requirements": [
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D4-027-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-012",
+        "requirements": [
+          "GOV-013",
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D8-011-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-014",
+        "requirements": [
+          "DR-013",
+          "GOV-018"
+        ],
+        "testCases": [
+          "TC-D4-030-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D5-001",
+        "requirements": [
+          "DR-008"
+        ],
+        "testCases": [
+          "TC-D5-002-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D6-012",
+        "requirements": [
+          "FR-067"
+        ],
+        "testCases": [
+          "TC-D6-046-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D6-015",
+        "requirements": [
+          "FR-001",
+          "FR-025"
+        ],
+        "testCases": [
+          "TC-D6-012-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-001",
+        "requirements": [
+          "GOV-010",
+          "GOV-019"
+        ],
+        "testCases": [
+          "TC-D8-021-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-004",
+        "requirements": [
+          "GOV-007"
+        ],
+        "testCases": [
+          "TC-D8-017-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-005",
+        "requirements": [
+          "NFR-003",
+          "QR-001"
+        ],
+        "testCases": [
+          "TC-D4-012-C010"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D8-001",
+        "requirements": [
+          "GOV-001",
+          "GOV-008",
+          "GOV-013"
+        ],
+        "testCases": [
+          "TC-D8-008-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      }
+    ],
+    "earlierIndependentStageHistory": [
+      {
+        "stage": "E0-L",
+        "priorTestedSHA": "d50fb5074d4af7a206bf1c07ffee7e5afe6e15b2",
+        "priorReviewKeys": [
+          "E0-L",
+          "EG-00"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e0_review",
+        "scopeAndOutcome": "Reconciled old68 labels, exact selectors, controls and current mutation; original EG00 HOLD kept.",
+        "currentRunIds": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS",
+          "CR009-E8-LEGACY-TWO-ASSERTIONS",
+          "CR009-E8-ISOLATED-MUT12-EXACT"
+        ]
+      },
+      {
+        "stage": "E1",
+        "priorTestedSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+        "priorReviewKeys": [
+          "CR005"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "CR004 finite matrix and real background, CR005 same raw A/B order accepted with equal response. PP01/02 rejection retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E1-MATRIX",
+          "CR009-E8-RETEST-E1-FORMAL",
+          "CR009-E8-RETEST-E1-CONTACTS",
+          "CR009-E8-RETEST-E1-VISIBILITY",
+          "CR009-E1-CR004-B-PP03-EXACT"
+        ]
+      },
+      {
+        "stage": "E2",
+        "priorTestedSHA": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+        "priorReviewKeys": [
+          "CR005-E2"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Placement and Undo assertions, legal versus invalid coordinates and fixed controls.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-NONPHYSICAL-NODE",
+          "CR009-E8-ISOLATED-MUT02-03-05"
+        ]
+      },
+      {
+        "stage": "E3",
+        "priorTestedSHA": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+        "priorReviewKeys": [
+          "CR005-E3",
+          "CR006-E3"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Independent fixture and equilibrium tests, chronology, tie, post-contact blocker and release, with old BLOCKED retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E3-INDEPENDENT",
+          "CR009-E8-RETEST-E3-NATIVE",
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-ISOLATED-MUT04"
+        ]
+      },
+      {
+        "stage": "E4",
+        "priorTestedSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+        "priorReviewKeys": [
+          "CR006-E4"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Native pivot, angle and load, plus new world resets with fixed settings.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-FOUNDATION-NODE",
+          "CR009-E8-NATIVE-VERDICTS"
+        ]
+      },
+      {
+        "stage": "E5",
+        "priorTestedSHA": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+        "priorReviewKeys": [
+          "CR006-E5",
+          "CR007-E5"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Real solver/goal required-use controls, joint CR007-C evidence with original physical microgap still BLOCKED.",
+        "currentRunIds": [
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-RETEST-E5-CR007-C",
+          "CR009-E8-ISOLATED-MUT01-06-07-08-09"
+        ]
+      },
+      {
+        "stage": "E6",
+        "priorTestedSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+        "priorReviewKeys": [
+          "CR007-E6"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "Complete stage oracles, canonical legal near placements, causal ablation and fixed identities.",
+        "currentRunIds": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-EXACT-HINTS",
+          "CR009-E8-DISTINCT-ALTERNATIVES"
+        ]
+      },
+      {
+        "stage": "E7",
+        "priorTestedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "priorReviewKeys": [
+          "CR007-E7-WIP",
+          "CR008-E7"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e7_revalidation_review",
+        "scopeAndOutcome": "E7 25 browser jobs plus exact chosen controls and native/synthetic separation with legacy failed driver excluded.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-BACKGROUND-DRAG",
+          "CR009-E8-RETEST-BFCACHE-LEASE",
+          "CR009-E8-RETEST-SELECT-ACHIEVE",
+          "CR009-E8-ISOLATED-MUT10-EXACT",
+          "CR009-E8-ISOLATED-MUT11",
+          "CR009-E7-AUDIO-EXACT"
+        ]
+      },
+      {
+        "stage": "E8",
+        "priorTestedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "priorReviewKeys": [
+          "CR008-E8"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "NFR-027 corrected; Planck ownership and pooled solver isolated, inspected 53-module QA/runtime graph and fresh candidate outcomes.",
+        "currentRunIds": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-CHROMIUM-MODE-CROSSCHECK",
+          "CR009-E8-EXISTING-REGRESSION",
+          "CR009-E8-EXISTING-BROWSER"
+        ],
+        "additionalReadOnlyReviewer": "/root/e0_review"
+      }
+    ],
+    "observedStageChangeRef": {
+      "run": "CR010-R2-DISCOVERY-10-04",
+      "scope": "Signed ST10 -1 grid only"
+    },
+    "reviewUnresolved": {
+      "caseId": "TC-D7-028-C015",
+      "state": "HOLD",
+      "reason": "The preserved first R2 reservation was established at 2150 s against its recorded 2100 s contract and already started before manual stop. Full debit, LS stop, explicit external R3 adjustment and independently measured replacement are retained. Frozen R case separately expects zero violations over applicable authority and execution history.",
+      "specifiedOriginalRequiredSeconds": 2100,
+      "originalCharged": 2150,
+      "originalRun": "CR010-R2-E8-ENDURANCE-1800",
+      "laterAuthorizedDedicatedCap": 4250,
+      "laterSettled": 1820,
+      "dedicatedUsed": 3970,
+      "neededDecision": "Whether recovered R2 reservation incident is a historical exception for current frozen GOV-013 audit, while preserving breach and actual charge."
+    },
+    "latestSettledTail": "fbd590aab1557cbf04319d3c228627f691ebe7310b27c2d02ff2a484b768dca0",
+    "usage": {
+      "automatedSeconds": 12227,
+      "formalSimulationsByPool": {
+        "E6": 3588,
+        "E8": 5697,
+        "INTERIM": 206,
+        "POST_HUMAN": 0
+      },
+      "formalTicksByPool": {
+        "E6": 826820,
+        "E8": 1624986,
+        "INTERIM": 66910,
+        "POST_HUMAN": 0
+      },
+      "generatedByStage": {
+        "10": 5977,
+        "01": 979,
+        "02": 951,
+        "03": 707,
+        "04": 775,
+        "05": 8828,
+        "06": 755,
+        "07": 6628,
+        "08": 42727,
+        "09": 38172
+      },
+      "githubSettledRunIds": [
+        "CR008-E7-GITHUB",
+        "CR008-E8-GITHUB"
+      ],
+      "physicsValidationSimulations": 13504,
+      "physicsValidationTicks": 754425,
+      "remediationByRootCause": {
+        "e0-budget-reservation-and-accounting": 6,
+        "e7-audio-availability-render-invalidates-pointer-target": 2,
+        "e7-batch-launch-bypassed-budget-reservation": 1,
+        "e7-navigation-and-background-state-boundary": 2,
+        "e8-audio-comparison-used-other-engine-oracle": 1,
+        "e8-mutation-budget-oracle-compared-error-count": 1,
+        "e8-mutation-readonly-fixture-missing-design-identities": 1,
+        "e8-remediation-stop-reason-propagation": 1,
+        "e8-rule-layer-native-physics-dependency": 1,
+        "cr010-usage-requirement-shape-validation": 1,
+        "cr010-search-eager-generation-unaccounted": 1,
+        "cr010-save-transition-and-generation-guard": 1,
+        "cr010-tutorial-transition-correctness": 1
+      },
+      "remediationTotal": 57,
+      "searchSimulationsByStage": {
+        "10": 4291,
+        "01": 302,
+        "02": 302,
+        "03": 316,
+        "04": 326,
+        "05": 2305,
+        "06": 332,
+        "07": 825,
+        "08": 1196,
+        "09": 1236
+      },
+      "searchTicksByStage": {
+        "10": 2349627,
+        "01": 83296,
+        "02": 69466,
+        "03": 94188,
+        "04": 72085,
+        "05": 806519,
+        "06": 132935,
+        "07": 317080,
+        "08": 263611,
+        "09": 362301
+      },
+      "stageAdjustmentsByStage": {
+        "10": 14,
+        "05": 6,
+        "08": 6
+      },
+      "remediationByStage": {
+        "E5": 1,
+        "E6": 1,
+        "E7": 2
+      },
+      "searchSecondsByStage": {
+        "10": 173,
+        "03": 1,
+        "04": 1,
+        "05": 10,
+        "06": 1,
+        "07": 14,
+        "08": 8,
+        "09": 16
+      }
+    },
+    "previousEnduranceRetained": true,
+    "newEnduranceLaunches": 0
   }
 }

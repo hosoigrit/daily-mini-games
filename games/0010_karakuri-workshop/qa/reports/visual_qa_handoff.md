@@ -1,3 +1,23 @@
+# 『からくり工房』CR-010 改訂候補・Phase 6 実機QA資料
+
+- 現行Tested SHA `56334926fee679412c4978471f812d454e854525`。専用開発ブランチは `codex/game-0010-development`。
+- 正式攻略配置は `qa/fixtures/cr010-certified-stages.json`。旧 `qa/fixtures/stages.json` は履歴として参照する。
+- 配布対象とSHA-256は、同候補の `runtime_asset_inventory` の46件。QA、テスト、旧証跡は移植対象外。
+- 正式耐久 `TC-D7-015-C002` は実行 `CR010-R3-E8-ENDURANCE-1800-02` でPASS。
+- **現時点はHOLD。自動品質ゲート承認後に実機QAを開始する。** 旧173件とCR-010追加5件は人間QA未実施。公開と最終受入は保留中。
+
+## 実機の記録条件
+
+対象は Galaxy S26 Android Chrome、iPhone SE2 iOS Safari、iPad mini 6 iPadOS Safari、Windows 11 Chrome、Windows 11 Edge。端末・OS・ブラウザ・候補SHA・画面設定・操作方式・実測・判定を端末別に記録する。実機手順は凍結 `handoffs/game-0010/17_visual_qa_protocol.md` のDT-01〜16とCR-010改訂契約を適用する。Sitesの実際の移植差分は人間工程の `TC-D7-029-C001` で照合する。
+
+- 通常10面では認定した星3配置を各環境で再現する。別解、初期未クリア、同じ部品IDの重複排除、ゴール表示とヒントを確認する。
+- ST00の12 STEP、初回表示、スキップ、途中再開、取消、背景復帰、表示倍率、タッチ・方向キーを確認する。
+- 新規保存とV1からの移行、旧原本の保全・書出し、競合・所有権交代、BFCache、音声と無音時の警告を確認する。他ゲームの保存データは変更しない。
+- 人間評価では前回51点を履歴に維持し、新規評価を記録する。合格条件は総合80点以上、全項目3以上、重大・Must違反なし。
+
+以下は過去の候補と証跡の履歴。
+
+
 # Game #0010『からくり工房』 Phase 6 実機・人間QA
 
 対象ソースは `14adae996b3ec398ecced875619ae05d28a9b0ec`、物理プロファイルはPP03です。開発ブランチは `codex/game-0010-development`、凍結設計は `d5bae9f0afe6b6d860257e2dfec25e028e557a4f` です。

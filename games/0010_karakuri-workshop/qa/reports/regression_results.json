@@ -1342,5 +1342,11 @@
         "CR010-R2-followup-QA-recovery.tar.gz"
       ]
     }
+  },
+  "CR010_R3_CONTINUATION": {
+    "unchangedOldGames": 9,
+    "priorExactTestsReused": 2019,
+    "priorExactBrowserBootsReused": 9,
+    "reason": "No code or canonical build assets were modified by the continuation."
   }
 }

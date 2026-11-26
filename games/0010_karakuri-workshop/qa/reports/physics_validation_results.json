@@ -4081,5 +4081,381 @@
       "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
     },
     "nativeReviewScope": "Native, oracle, and fixtures identified separately."
+  },
+  "CR010_R3_CONTINUATION": {
+    "verifiedTrialReceipts": [
+      {
+        "runId": "CR010-R3C-QUAL-GESTURES",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "daa93b52c1d4cd28467740ad70db1d69dc8a3b38649629e262a170c6bc81657d",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "rawSHA256": "f566561c778c5c5178a5bac567a5eb2d5af12a8568ad81c1401485b98d1bc0b6",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-UI-CONTRACTS",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "c31142edc2752fc8b809a0d0ba3b6a1c438d5ca8d55a67b99b31d6ab2f621f9a",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "1d13293158980b540d1f6c83d8c16a137edc619a16b3298cf3a86fa329f82a20",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-LAYOUT",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "f2a32075cabe086aeca64ce71b262c356215f36237d5b5b470c79fd31f18ab21",
+        "charged": {
+          "automatedSeconds": 5,
+          "formalSimulations": 4,
+          "formalTicks": 19
+        },
+        "rawSHA256": "6946b81c97128dbd50b7156d6102c29c3cdb505c58029ea4a15e9e7af3c2ccc7",
+        "stderrSHA256": "41a72f0a58e9a4069c51f4e53f55547dbc8870413df0a4fa278b31e1febb71cb"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-VISUAL",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "fd37db17fa69ad2800eda50d6e08705fd74c9c5abe246082dadf32d7bebcecf4",
+        "charged": {
+          "automatedSeconds": 17,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "rawSHA256": "1657c587d9ec683429a17b5315991d857429b95fbac15a24a8eb4ebbf14fe371",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-AUDIO-RATES",
+        "wholeRunStatus": 1,
+        "measurementError": null,
+        "terminal": "296e3659709c29c687466a757ce4fb26b7b247d5801cd7d12f6735ea6b4b60c3",
+        "charged": {
+          "automatedSeconds": 40
+        },
+        "rawSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "3cb34bdcbc836f6f7f3a821a058c5965e40bc0271d339cc6595a328469110e63"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-AUDIO-FAULT",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "b57771c2fa1c93e15e4f3e7f30fe390291feb1d791f6c5a0bc807c8737a0402f",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 2,
+          "formalTicks": 350
+        },
+        "rawSHA256": "b94465b7b4cae2a284da7dbadcf5b9f209620774bc8235e46d4617dc3caa13c7",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-AUDIO-RATES-02",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "0cf34eac4c22118edc8e27037089bc59310e0bff6aff34d6243129c3abb903a5",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "e2e778ef55fa2aa01c9b874c408bfb4836443440fcfab239c0469aad5341476e",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-ADJUSTMENT-STOP",
+        "wholeRunStatus": 1,
+        "measurementError": null,
+        "terminal": "6d2f1a0482288851361e2892e3aa3c90dd25554bbd969130907dce37579adb17",
+        "charged": {
+          "automatedSeconds": 15
+        },
+        "rawSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "6a65c7c3424e37579eb499be9dc2e5646e37d38edb27f2955212d04569b4cc15"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-BAD-SAVE",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "ce5208f455f5b35dae43dca47d44b7703d9b271c023010863a534751d18d643c",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "2c7da1c13bae69ada61bd3f1b19d4722f9f67501717abae0cf981721eddf4ae5",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-STORAGE-CAPACITY",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "1c63b30fb21d4f896a6abed88592504204c67663947317e34d150d917cf98255",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "2c8b760342842f103f916952ff8db816c4f4a75c3b729adb403b584e671bf952",
+        "stderrSHA256": "b9b34cdf0e4396c6b9ad4af0dfa8c645d25015f072d5a7288d2aa91f60bb3809"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-TUTORIAL-NEGATIVE",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "7cdd44f70446095bd56ff55d7ebaebfaf9324d02164998de14ad4b86e9d1d58a",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 16,
+          "physicsValidationTicks": 1918
+        },
+        "rawSHA256": "cb8a164239b3d231d72ea3a3ca0749ab16c7d8e4eec672aa06d3590870245ada",
+        "stderrSHA256": "cc7d411661a910605d8d40a6b4f512392bc16b6602c846d28007214544e42736"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-ADJUSTMENT-STOP-02",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "11a916258f0eedba0455212f37f4b56a7503e555ff0c79c428b3870ba2553542",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "rawSHA256": "bfbc443a7d02a6fd4d6d71523ee0c4d1688c8b2e69babedf327a5d733730b300",
+        "stderrSHA256": "6e8e05b6391468da583e30a711b982b86a1494ac07b459c27b0a840dd32bbb0f"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-STORAGE-FAULTS",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "8ba623790908a861d476c9f33c4d025173014e040be9c9d20a3fcc6b7470ddfe",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "rawSHA256": "53eedeed080961bfd13eac0338e2ba714e55db20f902a440bfb76b133c4ac75e",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-MIXED-SAVE",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "2ce50b3827de463858a4b6d994d5435dba347be118d2299c4d01fddc7d06b735",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "176c142d5d7793bc3b97b1c73a3db82c57521c3ef6d5ff07af6edc95c775e97f",
+        "stderrSHA256": "42358a492d938ad124f45d94e359fe06c58691a9dc64532c8c92cefb04b65d6e"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-BROWSER-RUNTIME",
+        "wholeRunStatus": 1,
+        "measurementError": "Exit status 1",
+        "terminal": "251096deb86c5291d5fe72792117427b6a41d4d611b7437a985c3f69261c5b5b",
+        "charged": {
+          "automatedSeconds": 75,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "rawSHA256": "30e57c532f7cfde62056b70d5bc839c495c103fce8e4290f085ed06755b1c6da",
+        "stderrSHA256": "9cc554e51de4fda92e14556885da15e9547e9edaeb192a19237874df078a7c73"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-BROWSER-RUNTIME-02",
+        "wholeRunStatus": 1,
+        "measurementError": "Exit status 1",
+        "terminal": "ff7858b1c4260172103ea56689dd66086138d7a3b83599b5ba764ade3d43a93d",
+        "charged": {
+          "automatedSeconds": 75,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "rawSHA256": "d306952006f04a0d44ab6278bee14d8d66dbf273ee08b17e4bef6cc51403475b",
+        "stderrSHA256": "af99c77dbf85402f1ce6ed1419e5560d11067f6ddb76cb9b0f210725b821c299"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-TUTORIAL-EXIT",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "a185ede4023f2e8f642f52de6630e5d1f863d7c2e5c38ef0c2025ff664213a3e",
+        "charged": {
+          "automatedSeconds": 3,
+          "formalSimulations": 1,
+          "formalTicks": 11
+        },
+        "rawSHA256": "ae45b6e2e275ae9c5de567ff7305d78a8acc83b80710a4abf5b87959db193b2f",
+        "stderrSHA256": "98fbb7a689b39df2b58107088e68ef03675159fb68d125a3fe7702ac6a5fd2e0"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-AUDIO-EDGES",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "d8735843eaf6621413fc15cafda76b50c3fb1bc7e22b4fefe4e85e62fbfed57f",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "rawSHA256": "9c305c39975498999a02d8a72c04467322aca41e5674ff1e75698ce6650785d6",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-ACCESS",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "43644d5450f8caded134349053587dafa834bb3cae1f8daef3aedc722586a1f9",
+        "charged": {
+          "automatedSeconds": 3
+        },
+        "rawSHA256": "b1886420b68465bafacb6cd735729c4c83bb5cd1918f700adb73978e9e239684",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-DIRECTIONS",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "85a9122a99d2abc328b10184bc40a511371b451d06b4777203cb5303a3721c1d",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "be1f2f64d252cd24457aa6bedb7e6275c18629f937f109c23f2e7e4ffafb6ff2",
+        "stderrSHA256": "7df19792678982e0948cb6df126726798e21bc5a07f2569a1aacf2fb217a1e80"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-AUDIO-VISIBILITY",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "ee19d996afc06beceb46161a411d50ae48746f250306ee7c49cebf321c6b84d4",
+        "charged": {
+          "automatedSeconds": 4
+        },
+        "rawSHA256": "f3eab370ba53558307f7a3c504ca9b5f412a7675eb2f2e253d636c3ce3149623",
+        "stderrSHA256": "26712a010b0fe8cea9d18a2c99e55eaafbebb3cb4f46876c496a931b039cd029"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-CONTROLLER-ISOLATION",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "875a66c316eb36b4047205e3fca2c5ed51ba888ea0bcbf5c559b63233b3b44ee",
+        "charged": {
+          "automatedSeconds": 1,
+          "physicsValidationSimulations": 2,
+          "physicsValidationTicks": 350
+        },
+        "rawSHA256": "72520cf64c3ea851719e817bb6b80a84aae7b676c98395859160519c763f9fc9",
+        "stderrSHA256": "bada984fffed6d2ad78279b04493b529d80653fa53957c7e12a8b45dcfc008ed"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-STARS-ONE",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "f302aa3f475c792d329ded1fd770fcd632005c81333ec7bf64d85a280d620c72",
+        "charged": {
+          "automatedSeconds": 9,
+          "formalSimulations": 1,
+          "formalTicks": 359
+        },
+        "rawSHA256": "0c6e53ed8929d164914ed0e68d3457f98fe66a2dac8dc6650b9ec9806d0386ed",
+        "stderrSHA256": "75c399d24d54da82e58663b00fe4aad6e64f82b20ecd2a574995bc2fe4c41189"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-IO-BROWSER",
+        "wholeRunStatus": 1,
+        "measurementError": "Exit status 1",
+        "terminal": "cf651c70e8430827e20a00fb08761a139be496df336510201fb0b4a06865adf1",
+        "charged": {
+          "automatedSeconds": 55,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "rawSHA256": "e12cb3ea6f5a4bfe14a0ec9801817f7461c755d061aa2eb9cd4f974fa1f01903",
+        "stderrSHA256": "8f9ca5e7307934517f9e30391c6458e3d1b39bd3d5b5c3553a6304113ebea678"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-ACTIVE-RELOAD",
+        "wholeRunStatus": 1,
+        "measurementError": "Exit status 1",
+        "terminal": "6b025ab3e8390b8e2c42a9ee8e7c427c9f7be055a8e6f77936396d6873914c53",
+        "charged": {
+          "automatedSeconds": 45,
+          "formalSimulations": 2,
+          "formalTicks": 2400
+        },
+        "rawSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "402dab8c8e03db40d27fc8b83743445fd4b079ee530244a3e85107f75b90cf66"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-ACTIVE-RELOAD-02",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "2943364c28ce2272db7b798d804bcca9f597b3835ac9cf1c42ba51f88da00da4",
+        "charged": {
+          "automatedSeconds": 5,
+          "formalSimulations": 2,
+          "formalTicks": 185
+        },
+        "rawSHA256": "1150f64fa0aa240049e6447fbac47c93e59037e996016fe1c23273c7203a63a5",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-RESULT-MATRIX",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "590f0aa0fb1c3604ba177989acda50bc25e21eed1edd1f01ef343fc1e6cff9e4",
+        "charged": {
+          "automatedSeconds": 1
+        },
+        "rawSHA256": "609f32b20e943dfae99cae38062befb0192b871c745860f827e923d79d2e422d",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "runId": "CR010-R3C-QUAL-RESET-EXACT",
+        "wholeRunStatus": 0,
+        "measurementError": null,
+        "terminal": "fbd590aab1557cbf04319d3c228627f691ebe7310b27c2d02ff2a484b768dca0",
+        "charged": {
+          "automatedSeconds": 2
+        },
+        "rawSHA256": "cf5139920a7390f7569a7f0fe7a8ac193989807c00bdae0adc8cd2939fab204f",
+        "stderrSHA256": "9eeb1d2131241e94c94709f595952d345b82fabacc4db3116868eb6ad5a653ca"
+      }
+    ],
+    "enduranceInherited": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "actualNativeSupplement": [
+      "TUTORIAL-NEGATIVE",
+      "TUTORIAL-EXIT",
+      "ACTIVE-RELOAD-02",
+      "STARS-ONE"
+    ],
+    "fixtureMethodsSeparatelyIdentified": true
   }
 }

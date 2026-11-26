@@ -5756,5 +5756,15 @@
         ]
       }
     ]
+  },
+  "CR010_R3_CONTINUATION": {
+    "layoutFixture": "qa/fixtures/cr010-certified-stages.json",
+    "layoutFixtureSHA256": "cd53f2c59d8e0d5cf1909433bf336003dd7d3a9298147908cbca4f98a35be510",
+    "previousR2StageEvidenceReusedUnchanged": true,
+    "verifiedStageCount": 10,
+    "separateAlternates": 7,
+    "repetitions": 1000,
+    "hints": 30,
+    "singleUnauthorizedAdjustmentTestControl": "CR010-R3C-QUAL-ADJUSTMENT-STOP-02"
   }
 }

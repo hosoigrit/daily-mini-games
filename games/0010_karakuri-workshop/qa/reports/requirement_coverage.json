@@ -10034,5 +10034,900 @@
         "TC-D8-023-C002"
       ]
     }
+  },
+  "CR010_R3_CONTINUATION": {
+    "requirements": {
+      "NFR-025": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "NFR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 7,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-077": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-018": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-019": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10,
+        "PASS_CURRENT_DIRECT_PROOF": 43
+      },
+      "FR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-003": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "NOT_RUN_HUMAN": 50
+      },
+      "FR-028": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 80
+      },
+      "FR-011": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 18
+      },
+      "NFR-005": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 74
+      },
+      "FR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-001": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-002": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-027": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-032": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-034": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-010": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2
+      },
+      "NFR-004": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-007": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 12,
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-080": {
+        "PASS_CURRENT_DIRECT_PROOF": 15,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 11
+      },
+      "FR-035": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 3
+      },
+      "NFR-030": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-009": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 6
+      },
+      "FR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "DR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-021": {
+        "PASS_CURRENT_DIRECT_PROOF": 14
+      },
+      "FR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "DR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 22,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 10
+      },
+      "FR-013": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5
+      },
+      "NFR-006": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "FR-081": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "BR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 12
+      },
+      "FR-025": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-020": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "DR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-061": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2
+      },
+      "FR-083": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-037": {
+        "PASS_CURRENT_DIRECT_PROOF": 13
+      },
+      "FR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "FR-038": {
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "FR-039": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-042": {
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "FR-043": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-036": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "FR-033": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-087": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-040": {
+        "PASS_CURRENT_DIRECT_PROOF": 35
+      },
+      "FR-079": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-057": {
+        "PASS_CURRENT_DIRECT_PROOF": 9,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "FR-058": {
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "BR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "FR-055": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "BR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-059": {
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "PASS_CURRENT_VERSIONED_LEGACY": 9,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-060": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-088": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "FR-062": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-045": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-084": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "DR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 5
+      },
+      "QR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 7
+      },
+      "BR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 3
+      },
+      "FR-046": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-050": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-051": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 31
+      },
+      "FR-052": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 31
+      },
+      "FR-054": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-053": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 31
+      },
+      "FR-056": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-028": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-001": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "GOV-016": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 20
+      },
+      "DR-013": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "QR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "QR-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-041": {
+        "PASS_CURRENT_DIRECT_PROOF": 17
+      },
+      "QR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 11
+      },
+      "QR-002": {
+        "PASS_CURRENT_DIRECT_PROOF": 10
+      },
+      "BR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "QR-005": {
+        "PASS_CURRENT_DIRECT_PROOF": 8
+      },
+      "BR-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "QR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 12,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "QR-009": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "QR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 12,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5
+      },
+      "QR-017": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 12
+      },
+      "QR-007": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 30,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-018": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 6
+      },
+      "FR-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "DR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-063": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 5,
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "DR-009": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 7,
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-066": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-065": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 1
+      },
+      "FR-064": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-070": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-068": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 4,
+        "PASS_CURRENT_DIRECT_PROOF": 24
+      },
+      "NFR-022": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 19
+      },
+      "DR-011": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "DR-010": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "PASS_CURRENT_VERSIONED_LEGACY": 9
+      },
+      "FR-067": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 16,
+        "PASS_CURRENT_DIRECT_PROOF": 7,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-086": {
+        "PASS_CURRENT_DIRECT_PROOF": 13,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 3
+      },
+      "QR-012": {
+        "PASS_CURRENT_DIRECT_PROOF": 13,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_VERSIONED_LEGACY": 3
+      },
+      "NFR-033": {
+        "PASS_CURRENT_DIRECT_PROOF": 11,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-016": {
+        "PASS_CURRENT_VERSIONED_LEGACY": 15,
+        "PASS_CURRENT_DIRECT_PROOF": 6
+      },
+      "NFR-037": {
+        "PASS_CURRENT_DIRECT_PROOF": 7,
+        "PASS_CURRENT_VERSIONED_LEGACY": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "DR-019": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_VERSIONED_LEGACY": 13
+      },
+      "FR-069": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-021": {
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "FR-001": {
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-002": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 4
+      },
+      "FR-026": {
+        "PASS_CURRENT_DIRECT_PROOF": 15
+      },
+      "FR-029": {
+        "PASS_CURRENT_DIRECT_PROOF": 16
+      },
+      "FR-085": {
+        "PASS_CURRENT_DIRECT_PROOF": 16
+      },
+      "FR-031": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-044": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-076": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-018": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-011": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-022": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-016": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-013": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 2,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "FR-082": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-013": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 82
+      },
+      "NFR-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-020": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-012": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "BR-009": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "NOT_RUN_HUMAN": 6,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-071": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "QR-010": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 4,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-072": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "NOT_RUN_HUMAN": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-018": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "FR-078": {
+        "PASS_CURRENT_DIRECT_PROOF": 24,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "FR-073": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-075": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-019": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "FR-074": {
+        "PASS_CURRENT_DIRECT_PROOF": 6,
+        "NOT_RUN_HUMAN": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 4
+      },
+      "QR-011": {
+        "PASS_CURRENT_DIRECT_PROOF": 28,
+        "NOT_RUN_HUMAN": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 6
+      },
+      "NFR-036": {
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 6,
+        "PASS_CURRENT_DIRECT_PROOF": 6,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "NFR-035": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "NOT_RUN_HUMAN": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 21
+      },
+      "NFR-017": {
+        "PASS_CURRENT_DIRECT_PROOF": 22,
+        "NOT_RUN_HUMAN": 1,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1
+      },
+      "FR-014": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 2
+      },
+      "FR-047": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-048": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "FR-049": {
+        "PASS_CURRENT_DIRECT_PROOF": 2,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-016": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "NOT_RUN_HUMAN": 1
+      },
+      "NFR-008": {
+        "NOT_RUN_HUMAN": 13,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "BR-008": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-023": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-024": {
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "NFR-026": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "DR-015": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "VERIFIED_OLD_UNCHANGED_LOCAL": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "NFR-031": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-015": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-003": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3
+      },
+      "GOV-004": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-006": {
+        "PASS_CURRENT_DIRECT_PROOF": 10,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2
+      },
+      "GOV-019": {
+        "PASS_CURRENT_DIRECT_PROOF": 28,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 4
+      },
+      "GOV-013": {
+        "PASS_CURRENT_DIRECT_PROOF": 29,
+        "HOLD_INCOMPLETE": 1
+      },
+      "GOV-007": {
+        "PASS_CURRENT_DIRECT_PROOF": 3,
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1
+      },
+      "DR-014": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "BR-010": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 4,
+        "HOLD_INCOMPLETE": 1
+      },
+      "NFR-029": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-001": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 3
+      },
+      "GOV-002": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "GOV-005": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 3,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "GOV-008": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 11
+      },
+      "GOV-009": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1,
+        "HOLD_INCOMPLETE": 1
+      },
+      "GOV-010": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 1
+      },
+      "GOV-011": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 9
+      },
+      "GOV-012": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 16
+      },
+      "GOV-014": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 1,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "GOV-017": {
+        "PASS_CURRENT_INDEPENDENT_REVIEW": 2,
+        "PASS_CURRENT_DIRECT_PROOF": 2
+      },
+      "QR-015": {
+        "NOT_RUN_HUMAN": 84
+      },
+      "QR-016": {
+        "NOT_RUN_HUMAN": 3
+      }
+    },
+    "reverseDetailedDesignSupplement": [
+      {
+        "detailedDesignId": "DD-D2-019",
+        "requirements": [
+          "FR-040"
+        ],
+        "testCases": [
+          "TC-D3-027-C005"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D3-001",
+        "requirements": [
+          "FR-037"
+        ],
+        "testCases": [
+          "TC-D3-001-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D3-002",
+        "requirements": [
+          "FR-007",
+          "FR-037"
+        ],
+        "testCases": [
+          "TC-D3-001-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-010",
+        "requirements": [
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D4-029-C001",
+          "TC-D8-012-C003"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-011",
+        "requirements": [
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D4-027-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-012",
+        "requirements": [
+          "GOV-013",
+          "GOV-016"
+        ],
+        "testCases": [
+          "TC-D8-011-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D4-014",
+        "requirements": [
+          "DR-013",
+          "GOV-018"
+        ],
+        "testCases": [
+          "TC-D4-030-C002"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D5-001",
+        "requirements": [
+          "DR-008"
+        ],
+        "testCases": [
+          "TC-D5-002-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D6-012",
+        "requirements": [
+          "FR-067"
+        ],
+        "testCases": [
+          "TC-D6-046-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D6-015",
+        "requirements": [
+          "FR-001",
+          "FR-025"
+        ],
+        "testCases": [
+          "TC-D6-012-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-001",
+        "requirements": [
+          "GOV-010",
+          "GOV-019"
+        ],
+        "testCases": [
+          "TC-D8-021-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-004",
+        "requirements": [
+          "GOV-007"
+        ],
+        "testCases": [
+          "TC-D8-017-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D7-005",
+        "requirements": [
+          "NFR-003",
+          "QR-001"
+        ],
+        "testCases": [
+          "TC-D4-012-C010"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      },
+      {
+        "detailedDesignId": "DD-D8-001",
+        "requirements": [
+          "GOV-001",
+          "GOV-008",
+          "GOV-013"
+        ],
+        "testCases": [
+          "TC-D8-008-C001"
+        ],
+        "source": "handoffs/game-0010/04_detailed_design.md"
+      }
+    ],
+    "scope": "All 190 requirements, 132 design links including explicit supplemental reverse links, 296 parents, 982 old child records and 78 additional records. Any remaining HOLD and unrun human case stays distinguished."
   }
 }

@@ -1648,5 +1648,209 @@
         "TC-D8-023-C002"
       ]
     }
+  },
+  "CR010_R3_CONTINUATION": {
+    "readOnlyReviewers": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review"
+    ],
+    "status": "HOLD",
+    "blockingDecisions": {
+      "TC-D7-028-C015": {
+        "caseId": "TC-D7-028-C015",
+        "state": "HOLD",
+        "reason": "The preserved first R2 reservation was established at 2150 s against its recorded 2100 s contract and already started before manual stop. Full debit, LS stop, explicit external R3 adjustment and independently measured replacement are retained. Frozen R case separately expects zero violations over applicable authority and execution history.",
+        "specifiedOriginalRequiredSeconds": 2100,
+        "originalCharged": 2150,
+        "originalRun": "CR010-R2-E8-ENDURANCE-1800",
+        "laterAuthorizedDedicatedCap": 4250,
+        "laterSettled": 1820,
+        "dedicatedUsed": 3970,
+        "neededDecision": "Whether recovered R2 reservation incident is a historical exception for current frozen GOV-013 audit, while preserving breach and actual charge."
+      },
+      "TC-D8-022-C002": {
+        "reason": "Earlier nine actual independent stage review records are preserved. The current Must finding from GOV-013 is unresolved, so zero major findings cannot be certified.",
+        "unresolvedReviewFindingCaseId": "TC-D7-028-C015",
+        "reviewProof": {
+          "file": "r3c-e8-review-material.json",
+          "sha256": "7c927f0ffd59a6244692af8392116776ec01f04d2b3fbd21dd52561aa7496223",
+          "reviewers": [
+            "/root/e8_coverage",
+            "/root/e0_review",
+            "/root/e1_test_plan",
+            "/root/e7_revalidation_review"
+          ]
+        }
+      }
+    },
+    "earlierStageReviewHistory": [
+      {
+        "stage": "E0-L",
+        "priorTestedSHA": "d50fb5074d4af7a206bf1c07ffee7e5afe6e15b2",
+        "priorReviewKeys": [
+          "E0-L",
+          "EG-00"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e0_review",
+        "scopeAndOutcome": "Reconciled old68 labels, exact selectors, controls and current mutation; original EG00 HOLD kept.",
+        "currentRunIds": [
+          "CR009-E8-LEGACY-FORMAL-CONTROLS",
+          "CR009-E8-LEGACY-TWO-ASSERTIONS",
+          "CR009-E8-ISOLATED-MUT12-EXACT"
+        ]
+      },
+      {
+        "stage": "E1",
+        "priorTestedSHA": "d272f3f22d184a440a845e9db7e2823942499432",
+        "priorReviewKeys": [
+          "CR005"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "CR004 finite matrix and real background, CR005 same raw A/B order accepted with equal response. PP01/02 rejection retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E1-MATRIX",
+          "CR009-E8-RETEST-E1-FORMAL",
+          "CR009-E8-RETEST-E1-CONTACTS",
+          "CR009-E8-RETEST-E1-VISIBILITY",
+          "CR009-E1-CR004-B-PP03-EXACT"
+        ]
+      },
+      {
+        "stage": "E2",
+        "priorTestedSHA": "4633e6a519fc5498ad7cb7b9fa0ba75427de0498",
+        "priorReviewKeys": [
+          "CR005-E2"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Placement and Undo assertions, legal versus invalid coordinates and fixed controls.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-NONPHYSICAL-NODE",
+          "CR009-E8-ISOLATED-MUT02-03-05"
+        ]
+      },
+      {
+        "stage": "E3",
+        "priorTestedSHA": "03336c4b3ef8f9a2fc53ae5b6dd782a593acefd2",
+        "priorReviewKeys": [
+          "CR005-E3",
+          "CR006-E3"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Independent fixture and equilibrium tests, chronology, tie, post-contact blocker and release, with old BLOCKED retained.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-E3-INDEPENDENT",
+          "CR009-E8-RETEST-E3-NATIVE",
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-ISOLATED-MUT04"
+        ]
+      },
+      {
+        "stage": "E4",
+        "priorTestedSHA": "2fb396579d86d7c9daa3dfacf4bc745e92a269d5",
+        "priorReviewKeys": [
+          "CR006-E4"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Native pivot, angle and load, plus new world resets with fixed settings.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-FOUNDATION-NODE",
+          "CR009-E8-NATIVE-VERDICTS"
+        ]
+      },
+      {
+        "stage": "E5",
+        "priorTestedSHA": "63eec132197d03f1ad3927cb039c6bdf89361bb4",
+        "priorReviewKeys": [
+          "CR006-E5",
+          "CR007-E5"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e1_test_plan",
+        "scopeAndOutcome": "Real solver/goal required-use controls, joint CR007-C evidence with original physical microgap still BLOCKED.",
+        "currentRunIds": [
+          "CR009-E8-NATIVE-VERDICTS",
+          "CR009-E8-RETEST-E5-CR007-C",
+          "CR009-E8-ISOLATED-MUT01-06-07-08-09"
+        ]
+      },
+      {
+        "stage": "E6",
+        "priorTestedSHA": "d76d176c74f76489c80f9b5d8f0dc75924fb0e76",
+        "priorReviewKeys": [
+          "CR007-E6"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "Complete stage oracles, canonical legal near placements, causal ablation and fixed identities.",
+        "currentRunIds": [
+          "CR009-E8-FORMAL-STAGES",
+          "CR009-E8-EXACT-HINTS",
+          "CR009-E8-DISTINCT-ALTERNATIVES"
+        ]
+      },
+      {
+        "stage": "E7",
+        "priorTestedSHA": "7fa88ec1654eea51057cbbd4016e7b5cbe7052df",
+        "priorReviewKeys": [
+          "CR007-E7-WIP",
+          "CR008-E7"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e7_revalidation_review",
+        "scopeAndOutcome": "E7 25 browser jobs plus exact chosen controls and native/synthetic separation with legacy failed driver excluded.",
+        "currentRunIds": [
+          "CR009-E8-RETEST-BACKGROUND-DRAG",
+          "CR009-E8-RETEST-BFCACHE-LEASE",
+          "CR009-E8-RETEST-SELECT-ACHIEVE",
+          "CR009-E8-ISOLATED-MUT10-EXACT",
+          "CR009-E8-ISOLATED-MUT11",
+          "CR009-E7-AUDIO-EXACT"
+        ]
+      },
+      {
+        "stage": "E8",
+        "priorTestedSHA": "bc1426cf1ff84cd18207073303e7d47fd83e5b12",
+        "priorReviewKeys": [
+          "CR008-E8"
+        ],
+        "currentTestedSHA": "14adae996b3ec398ecced875619ae05d28a9b0ec",
+        "readOnly": true,
+        "mode": "SEPARATE_CONTEXT_READ_ONLY",
+        "reviewer": "/root/e8_coverage",
+        "scopeAndOutcome": "NFR-027 corrected; Planck ownership and pooled solver isolated, inspected 53-module QA/runtime graph and fresh candidate outcomes.",
+        "currentRunIds": [
+          "CR009-E8-ARCHITECTURE-EXACT",
+          "CR009-E8-D8-020-EXACT",
+          "CR009-E8-CHROMIUM-MODE-CROSSCHECK",
+          "CR009-E8-EXISTING-REGRESSION",
+          "CR009-E8-EXISTING-BROWSER"
+        ],
+        "additionalReadOnlyReviewer": "/root/e0_review"
+      }
+    ],
+    "newCaseEvidenceAdmittedByPredicate": true
   }
 }

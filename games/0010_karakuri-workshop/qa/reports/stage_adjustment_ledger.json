@@ -305,5 +305,14 @@
       "08": 6
     },
     "r3Adjustments": 0
+  },
+  "CR010_R3_CONTINUATION": {
+    "currentStageAdjustments": {
+      "10": 14,
+      "05": 6,
+      "08": 6
+    },
+    "unchangedGenerationTotal": 106499,
+    "newAdjustments": 0
   }
 }

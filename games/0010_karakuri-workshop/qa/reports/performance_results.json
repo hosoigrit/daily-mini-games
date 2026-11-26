@@ -15100,5 +15100,17 @@
       "formalSimulations": 400,
       "formalTicks": 480000
     }
+  },
+  "CR010_R3_CONTINUATION": {
+    "dedicatedEnduranceFinal": {
+      "firstRetained": 2150,
+      "formalSecondCharged": 1820,
+      "used": 3970,
+      "ceiling": 4250,
+      "furtherTrialsAuthorized": 0
+    },
+    "heldOriginalRetained": true,
+    "continuedEvidenceSource": "CR010-R3-E8-ENDURANCE-1800-02",
+    "nativeRuntimeReleaseAssetPreserved": true
   }
 }

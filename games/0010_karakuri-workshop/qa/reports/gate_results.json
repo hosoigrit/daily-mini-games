@@ -1929,5 +1929,235 @@
     ],
     "historicalUserUX": 51,
     "humanQaCasesNotRun": 173
+  },
+  "CR010_R3_CONTINUATION": {
+    "authority": {
+      "approvalId": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "branch": "codex/game-0010-development",
+      "treatedAsR3Continuation": true,
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "previousEvidence": "a1ec021f677b56e9b74deffebb01e47961b37c3b",
+      "noAdditionalEnduranceAuthorized": true,
+      "effectivePathsDigest": "32876b3584b4326bf491511b143ca025fd3d34d1d52de981a0f984861bbfdaed"
+    },
+    "qualityGate": "HOLD",
+    "phase6": "HOLD",
+    "finalAcceptance": "HOLD",
+    "sitesVerification": "NOT_RUN",
+    "TestedSHA": "56334926fee679412c4978471f812d454e854525",
+    "priorEvidenceSHA": "a1ec021f677b56e9b74deffebb01e47961b37c3b",
+    "exactContinuationLedgerTail": "fbd590aab1557cbf04319d3c228627f691ebe7310b27c2d02ff2a484b768dca0",
+    "preparedGitHubReservation": {
+      "runId": "CR010-R3C-QUALIFICATION-PRESERVATION",
+      "approvalId": "EXEC-GAME-0010-CR010-R3-FINAL-QUALIFICATION",
+      "writerId": "GAME0010-CODEX-PRIMARY-01",
+      "expectedRemoteHead": "a1ec021f677b56e9b74deffebb01e47961b37c3b",
+      "targetRef": "refs/heads/codex/game-0010-development",
+      "testedCandidate": "56334926fee679412c4978471f812d454e854525",
+      "priorLedgerTail": "fbd590aab1557cbf04319d3c228627f691ebe7310b27c2d02ff2a484b768dca0",
+      "reservationSeconds": 180,
+      "purpose": "Permanent HOLD preservation and fresh independent GitHub byte readback"
+    },
+    "oldCases": {
+      "VERIFIED_OLD_UNCHANGED_LOCAL": 165,
+      "PASS_CURRENT_DIRECT_PROOF": 513,
+      "PASS_CURRENT_VERSIONED_LEGACY": 46,
+      "PASS_CURRENT_INDEPENDENT_REVIEW": 83,
+      "NOT_RUN_HUMAN": 173,
+      "HOLD_INCOMPLETE": 2
+    },
+    "additionalCases": {
+      "PASS": 73,
+      "NOT_RUN_HUMAN": 5
+    },
+    "pendingCaseIdsByStage": {
+      "E8": [
+        "TC-D7-028-C015",
+        "TC-D8-022-C002"
+      ]
+    },
+    "blockingDecisions": {
+      "TC-D7-028-C015": {
+        "caseId": "TC-D7-028-C015",
+        "state": "HOLD",
+        "reason": "The preserved first R2 reservation was established at 2150 s against its recorded 2100 s contract and already started before manual stop. Full debit, LS stop, explicit external R3 adjustment and independently measured replacement are retained. Frozen R case separately expects zero violations over applicable authority and execution history.",
+        "specifiedOriginalRequiredSeconds": 2100,
+        "originalCharged": 2150,
+        "originalRun": "CR010-R2-E8-ENDURANCE-1800",
+        "laterAuthorizedDedicatedCap": 4250,
+        "laterSettled": 1820,
+        "dedicatedUsed": 3970,
+        "neededDecision": "Whether recovered R2 reservation incident is a historical exception for current frozen GOV-013 audit, while preserving breach and actual charge."
+      },
+      "TC-D8-022-C002": {
+        "reason": "Earlier nine actual independent stage review records are preserved. The current Must finding from GOV-013 is unresolved, so zero major findings cannot be certified.",
+        "unresolvedReviewFindingCaseId": "TC-D7-028-C015",
+        "reviewProof": {
+          "file": "r3c-e8-review-material.json",
+          "sha256": "7c927f0ffd59a6244692af8392116776ec01f04d2b3fbd21dd52561aa7496223",
+          "reviewers": [
+            "/root/e8_coverage",
+            "/root/e0_review",
+            "/root/e1_test_plan",
+            "/root/e7_revalidation_review"
+          ]
+        }
+      }
+    },
+    "finalKnownUsageBeforePush": {
+      "automatedSeconds": 12227,
+      "formalSimulationsByPool": {
+        "E6": 3588,
+        "E8": 5697,
+        "INTERIM": 206,
+        "POST_HUMAN": 0
+      },
+      "formalTicksByPool": {
+        "E6": 826820,
+        "E8": 1624986,
+        "INTERIM": 66910,
+        "POST_HUMAN": 0
+      },
+      "generatedByStage": {
+        "10": 5977,
+        "01": 979,
+        "02": 951,
+        "03": 707,
+        "04": 775,
+        "05": 8828,
+        "06": 755,
+        "07": 6628,
+        "08": 42727,
+        "09": 38172
+      },
+      "githubSettledRunIds": [
+        "CR008-E7-GITHUB",
+        "CR008-E8-GITHUB"
+      ],
+      "physicsValidationSimulations": 13504,
+      "physicsValidationTicks": 754425,
+      "remediationByRootCause": {
+        "e0-budget-reservation-and-accounting": 6,
+        "e7-audio-availability-render-invalidates-pointer-target": 2,
+        "e7-batch-launch-bypassed-budget-reservation": 1,
+        "e7-navigation-and-background-state-boundary": 2,
+        "e8-audio-comparison-used-other-engine-oracle": 1,
+        "e8-mutation-budget-oracle-compared-error-count": 1,
+        "e8-mutation-readonly-fixture-missing-design-identities": 1,
+        "e8-remediation-stop-reason-propagation": 1,
+        "e8-rule-layer-native-physics-dependency": 1,
+        "cr010-usage-requirement-shape-validation": 1,
+        "cr010-search-eager-generation-unaccounted": 1,
+        "cr010-save-transition-and-generation-guard": 1,
+        "cr010-tutorial-transition-correctness": 1
+      },
+      "remediationTotal": 57,
+      "searchSimulationsByStage": {
+        "10": 4291,
+        "01": 302,
+        "02": 302,
+        "03": 316,
+        "04": 326,
+        "05": 2305,
+        "06": 332,
+        "07": 825,
+        "08": 1196,
+        "09": 1236
+      },
+      "searchTicksByStage": {
+        "10": 2349627,
+        "01": 83296,
+        "02": 69466,
+        "03": 94188,
+        "04": 72085,
+        "05": 806519,
+        "06": 132935,
+        "07": 317080,
+        "08": 263611,
+        "09": 362301
+      },
+      "stageAdjustmentsByStage": {
+        "10": 14,
+        "05": 6,
+        "08": 6
+      },
+      "remediationByStage": {
+        "E5": 1,
+        "E6": 1,
+        "E7": 2
+      },
+      "searchSecondsByStage": {
+        "10": 173,
+        "03": 1,
+        "04": 1,
+        "05": 10,
+        "06": 1,
+        "07": 14,
+        "08": 8,
+        "09": 16
+      }
+    },
+    "outstandingReservations": 0,
+    "endurance": {
+      "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+      "proof": {
+        "runId": "CR010-R3-E8-ENDURANCE-1800-02",
+        "rawSHA256": "9a9bb5b683a00ef1f34608a2b74da20c47ba79e3ff6c6591a732c3d699b36b9d",
+        "settledDigest": "6b771865094d9035e9b618b3099b9e94cbeda1acf53d022c96102e1880a521e6",
+        "sourceLine": 402
+      },
+      "actual": {
+        "formalSimulations": 400,
+        "formalTicks": 90550,
+        "automatedSeconds": 1820
+      },
+      "measured": {
+        "exactTenCycles": 100,
+        "realBrowserSoakSeconds": 1800.4342869650002,
+        "cycles": 300,
+        "pageStart": {
+          "ms": 193,
+          "visible": true,
+          "hasFocus": true
+        },
+        "pageEnd": {
+          "ms": 1800630.5999999978,
+          "visible": true,
+          "hasFocus": true
+        },
+        "detectedCrashes": 0,
+        "fixedPitchWorldsAndSubscriptionsMeasured": true,
+        "neverBackgrounded": true
+      },
+      "partialHistoricRun": "CR010-R2-E8-ENDURANCE-1800"
+    },
+    "dedicatedEnduranceSeconds": {
+      "firstRetained": 2150,
+      "formalSecondCharged": 1820,
+      "used": 3970,
+      "ceiling": 4250,
+      "furtherTrialsAuthorized": 0
+    },
+    "eligibilityOfPhase6Material": "PREPARED_WAITING_FOR_AUTOMATED_GATE",
+    "historicalUXScore": 51,
+    "independentReviewers": [
+      "/root/e0_review",
+      "/root/e8_coverage",
+      "/root/e1_test_plan",
+      "/root/e7_revalidation_review"
+    ],
+    "preservationArchive": {
+      "filename": "CR010-R3-continuation-recovery.tar.gz",
+      "sha256": "6f229079acb3b242bb3e5431720334406ae8f48ccba33e2db6a921084e72f594",
+      "verifiedMembers": 243,
+      "predecessorProofArchives": {
+        "CR010-R1-settlement.tar.gz": "a9e0b7345118c5dbb8efe405d31184e4ea369f7dec9492e8f32d97bb89494365",
+        "CR010-R2-HOLD-recovery.tar.gz": "f0e5578bd3afd7f356751475590d02387082fd482d59552c53b7e3c7950e0131",
+        "CR010-R2-followup-QA-recovery.tar.gz": "9a8a2bcec19af3bdbd7f1bc5587f131d40bb8c80157d5d62731e34322c4cb413",
+        "CR010-R3-QA-recovery.tar.gz": "b725d55bbc804ecb847e215832fa3e0d605c1304115562bd35286944fc6c0277",
+        "CR010-R3-GitHub-receipts.tar.gz": "6df18502244689dc040174922e9b0cdb41d856afcb68b770f429a56bd5a690a2"
+      }
+    }
   }
 }
