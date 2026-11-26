@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';

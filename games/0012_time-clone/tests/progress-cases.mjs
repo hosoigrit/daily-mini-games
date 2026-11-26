@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { ProgressStore, SAVE_KEY } from '../src/progress.mjs';
 import { runCase } from './adapter.mjs';
 

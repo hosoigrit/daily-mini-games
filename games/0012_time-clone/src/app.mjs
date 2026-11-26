@@ -163,6 +163,8 @@ function renderGame() {
   primary.dataset.command = resumeRequired ? 'RESUME' : button?.[1] ?? '';
   el('retry').hidden = !['REPLAYING', 'SOLO_CONTINUE'].includes(phase);
   el('rerecord').hidden = !['RECORDED', 'REPLAYING', 'SOLO_CONTINUE'].includes(phase);
+  el('retry').disabled = session.isPaused;
+  el('rerecord').disabled = session.isPaused;
   el('pause').hidden = !activePhase(phase) || resumeRequired;
   el('rearm').hidden = !resumeRequired;
   el('directions').hidden = !activePhase(phase) || resumeRequired;

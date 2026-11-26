@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { defineStage, directions, initialState, move, score, transition, validateRecord } from '../src/domain.mjs';
 import { stages } from '../src/stages.mjs';
 import { Session } from '../src/runtime.mjs';

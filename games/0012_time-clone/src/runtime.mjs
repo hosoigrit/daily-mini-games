@@ -31,9 +31,12 @@ export class InputQueue {
   }
 
   release(sourceId, { cancelled = false } = {}) {
+    const current = this.#sources.get(sourceId);
     this.#sources.delete(sourceId);
     this.#suppressed.delete(sourceId);
-    if (cancelled) this.#queue = this.#queue.filter(item => item.sourceId !== sourceId);
+    if (cancelled && current?.accepted) {
+      this.#queue = this.#queue.filter(item => item.sequence !== current.sequence);
+    }
   }
 
   take() {
@@ -141,8 +144,12 @@ export class Session {
     });
   }
 
+  get isPaused() {
+    return this.resumeRequired || this.reasons.size > 0;
+  }
+
   get canMove() {
-    return activePhase(this.state.phase) && !this.resumeRequired && this.reasons.size === 0;
+    return activePhase(this.state.phase) && !this.isPaused;
   }
 
   get logicalTick() {
@@ -150,6 +157,7 @@ export class Session {
   }
 
   command(command) {
+    if (this.isPaused) return false;
     const next = transition(this.stage, this.state, command);
     this.clock.stop();
     this.input.quarantine();

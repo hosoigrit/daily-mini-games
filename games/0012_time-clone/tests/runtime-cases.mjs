@@ -1,6 +1,6 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { transition } from '../src/domain.mjs';
-import { Session } from '../src/runtime.mjs';
+import { InputQueue, Session } from '../src/runtime.mjs';
 import { golden, stage1 } from './adapter.mjs';
 import { stages } from '../src/stages.mjs';
 
@@ -75,6 +75,89 @@ const paused = (f, tick) => {
   assert.equal(f.s.canMove, false);
   assert.equal(f.t.next, null);
 };
+
+export function registerCorrectionRuntime(add) {
+  const stops = [
+    ['USER', f => f.s.pause('USER')],
+    ['HIDDEN', f => f.s.visibility(true)],
+    ['PERFORMANCE', f => f.t.fire(1000)],
+    ['COMBINED', f => { f.t.fire(1000); f.s.pause('USER'); f.s.visibility(true); }],
+    ['RESUME-PENDING', f => { f.s.visibility(true); f.s.visibility(false); }]
+  ];
+  for (const [reason, stop] of stops) {
+    add('R01-F01-' + reason, () => {
+      const f = scenario();
+      f.tap(right, 'R');
+      f.t.fire();
+      f.s.command('FINISH_RECORD');
+      f.s.command('START_REPLAY');
+      f.tap(right, 'R');
+      f.t.fire();
+      stop(f);
+      const record = f.s.state.ghostRecord;
+      const state = f.s.state;
+      const snapshot = () => ({
+        state: f.s.state, tick: f.s.logicalTick, reasons: [...f.s.reasons],
+        resumeRequired: f.s.resumeRequired, timer: f.t.next, now: f.t.now(),
+        input: f.s.input.snapshot(), notifications: f.journal.length
+      });
+      const prior = structuredClone(snapshot());
+      const rejected = [];
+      for (const command of ['RETRY', 'RERECORD', 'START_REPLAY']) {
+        rejected.push(f.s.command(command));
+        assert.equal(rejected.at(-1), false);
+        assert.equal(f.s.state, state);
+        assert.equal(f.s.state.ghostRecord, record);
+        assert.deepEqual(snapshot(), prior);
+      }
+      if (f.s.reasons.has('HIDDEN')) {
+        assert.equal(f.s.resume(), false);
+        assert.deepEqual(snapshot(), prior);
+        f.s.visibility(false);
+        assert.equal(f.s.command('RERECORD'), false);
+        assert.equal(f.s.state.ghostRecord, record);
+      }
+      assert.equal(f.s.resume(), true);
+      assert.equal(f.t.next.due, f.t.now() + 500);
+      assert.equal(f.s.command('RETRY').state.phase, 'RECORDED');
+      assert.equal(f.s.state.ghostRecord, record);
+      assert.equal(f.s.command('RERECORD').state.phase, 'RECORDING');
+      assert.equal(f.s.state.ghostRecord, null);
+      return { before: prior, rejected, afterResume: { phase: f.s.state.phase, tick: f.s.logicalTick } };
+    });
+  }
+
+  add('R01-F02-REJECTED-CANCEL-NODE', () => {
+    const f = scenario();
+    const pointer = 'pointer:1';
+    assert.equal(f.tap(pointer, 'R'), 'ACCEPTED');
+    assert.equal(f.tap(up, 'U'), 'ACCEPTED');
+    const accepted = f.s.input.snapshot().queue;
+    assert.equal(f.s.press(pointer, 'L'), 'INPUT_REJECTED_FULL');
+    const rejected = f.s.input.snapshot().held[0];
+    assert.notEqual(rejected.sequence, accepted[0].sequence);
+    f.s.input.release(pointer, { cancelled: true });
+    assert.deepEqual(f.s.input.snapshot().queue, accepted);
+    f.ticks(3);
+    assert.deepEqual(f.actions(), ['R', 'U', '.']);
+    assert.deepEqual(f.s.state.playerPosition, [2, 1]);
+    return { accepted, rejected, consumed: f.actions(), player: f.s.state.playerPosition };
+  });
+
+  add('R01-F02-ACCEPTED-CANCEL-NODE', () => {
+    const queue = new InputQueue();
+    assert.equal(queue.press('pointer:1', 'R'), 'ACCEPTED');
+    queue.release('pointer:1');
+    assert.equal(queue.press('pointer:1', 'L'), 'ACCEPTED');
+    const before = queue.snapshot();
+    queue.release('pointer:1', { cancelled: true });
+    const after = queue.snapshot();
+    assert.deepEqual(after.queue, [before.queue[0]]);
+    assert.deepEqual(after.held, []);
+    assert.deepEqual([queue.take(), queue.take()], ['R', '.']);
+    return { before, after };
+  });
+}
 
 export function registerRuntime(add) {
   for (const [id, source] of [['INP-01', 'pointer:1'], ['INP-02', right]]) {
@@ -280,13 +363,16 @@ export function registerRuntime(add) {
       f.s.press('pointer:6', 'R');
       if (cancel) f.s.input.release('pointer:6', { cancelled: true });
       else f.s.visibility(true);
-      f.s.command('FINISH_RECORD');
-      f.s.command('START_REPLAY');
       if (!cancel) {
+        assert.equal(f.s.command('FINISH_RECORD'), false);
         assert.deepEqual(f.s.input.snapshot().suppressed, ['pointer:6']);
         f.s.visibility(false);
+        assert.equal(f.s.command('FINISH_RECORD'), false);
         assert.equal(f.s.resume(), true);
       }
+      f.s.command('FINISH_RECORD');
+      f.s.command('START_REPLAY');
+      if (!cancel) assert.deepEqual(f.s.input.snapshot().suppressed, ['pointer:6']);
       f.s.input.release('pointer:6');
       f.t.fire();
       assert.deepEqual(f.actions(), ['.']);

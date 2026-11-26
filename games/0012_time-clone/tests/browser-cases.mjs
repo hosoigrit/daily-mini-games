@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
@@ -188,6 +188,61 @@ export function registerBrowser(add, engine) {
         await f.context.close();
       }
     }, 'Chromium');
+  }
+
+  scenario('R01-F01-USER-CHROMIUM', async f => {
+    await record(f, 'R');
+    await f.click('primary');
+    await f.step('R');
+    await f.click('pause');
+    const { page } = f;
+    const snapshot = async () => ({
+      phase: await phase(page), tick: await logicalTick(page),
+      player: await checkMarker(page, 'player'), ghost: await checkMarker(page, 'ghost'),
+      action: await txt(page, 'primary')
+    });
+    const before = await snapshot();
+    assert.deepEqual(before, { phase: 'REPLAYING', tick: '1', player: [2, 1], ghost: [2, 1], action: '再開' });
+    for (const control of ['retry', 'rerecord']) {
+      const button = page.locator('#' + control);
+      assert.equal(await button.isDisabled(), true);
+      await button.dispatchEvent('click');
+      assert.deepEqual(await snapshot(), before);
+    }
+    await f.click('primary');
+    assert.equal(await page.locator('#retry').isEnabled(), true);
+    assert.equal(await page.locator('#rerecord').isEnabled(), true);
+    await f.click('retry');
+    assert.equal(await phase(page), 'RECORDED');
+    await f.click('rerecord');
+    assert.equal(await phase(page), 'RECORDING');
+    return { paused: before, afterResume: await phase(page), tick: await logicalTick(page) };
+  });
+
+  for (const kind of ['REJECTED', 'ACCEPTED']) {
+    scenario('R01-F02-' + kind + '-CANCEL-CHROMIUM', async f => {
+      await ready(f);
+      const { page } = f;
+      const pointer = { pointerId: 1, pointerType: 'mouse', button: 0, bubbles: true };
+      const right = page.locator('[data-direction="R"]');
+      const left = page.locator('[data-direction="L"]');
+      await right.dispatchEvent('pointerdown', pointer);
+      await right.dispatchEvent('pointerup', pointer);
+      if (kind === 'REJECTED') await page.keyboard.press('ArrowUp');
+      await left.dispatchEvent('pointerdown', pointer);
+      const notification = await txt(page, 'notice');
+      if (kind === 'REJECTED') assert.match(notification, /満杯/);
+      else assert.equal(notification, '');
+      await left.dispatchEvent('pointercancel', pointer);
+      const positions = [];
+      for (let tick = 1; tick <= 3; tick++) {
+        await f.tick();
+        assert.equal(await logicalTick(page), String(tick));
+        positions.push(await checkMarker(page, 'player'));
+      }
+      assert.deepEqual(positions, [[2, 1], [2, 1], [2, 1]]);
+      return { kind, notification, positions };
+    });
   }
 
   scenario('INP-13', async f => {

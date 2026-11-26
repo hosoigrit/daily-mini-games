@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from './evidence.mjs';
 import { defineStage, initialState, transition } from '../src/domain.mjs';
 import { stages } from '../src/stages.mjs';
 import { csv, goldenPath, json, recordPath, supplements } from './verify-h01.mjs';
