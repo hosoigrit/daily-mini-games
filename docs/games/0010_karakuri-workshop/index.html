@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b4636">
+  <title>からくり工房</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="workshop-header">
+    <button class="wordmark" type="button" data-command="title" aria-label="からくり工房 タイトル">
+      <img src="./assets/decoration/workshop-emblem.svg" alt="">からくり工房
+    </button>
+    <nav aria-label="工房メニュー">
+      <button type="button" data-command="enter">ステージ</button>
+      <button type="button" data-command="settings">設定</button>
+    </nav>
+  </header>
+  <main id="game" aria-busy="true">
+    <p id="audio-notice" role="status" hidden>この環境では音声を再生できません。実験は続けられます。</p>
+    <section id="title-screen" class="title-screen">
+      <div class="title-copy">
+        <h1>からくり工房</h1>
+        <p>道具を組み合わせて、球をゴールへ。</p>
+        <div class="button-row">
+          <button type="button" class="primary" data-command="enter">工房へ入る</button>
+          <button type="button" data-command="help">遊び方</button>
+        </div>
+      </div>
+      <div class="title-art">
+        <img src="./assets/characters/luke-normal.svg" alt="ルーク">
+        <img src="./assets/characters/gear-normal.svg" alt="ギア博士">
+      </div>
+    </section>
+    <section id="stage-screen" hidden>
+      <div class="section-head"><h1>ステージを選ぶ</h1><button type="button" data-command="achievements">達成状況</button></div>
+      <button type="button" data-command="tutorial-open">ST00 からくり講座</button>
+      <p id="stage-notice" role="status"></p>
+      <ol id="stage-list" class="stage-list"></ol>
+    </section>
+    <section id="workbench" hidden>
+      <div class="section-head">
+        <h1 id="stage-title"></h1><p id="save-state" role="status"></p>
+      </div>
+      <section id="tutorial-panel" hidden aria-labelledby="tutorial-step">
+        <h2 id="tutorial-step"></h2>
+        <p id="tutorial-instruction"></p><p id="tutorial-save" role="status"></p>
+        <div class="button-row">
+          <button type="button" data-command="help" id="tutorial-help">遊び方</button>
+          <button type="button" data-command="tutorial-exit">講座を終了</button>
+        </div>
+      </section>
+      <div class="workspace-layout">
+        <section class="board-panel" aria-label="実験盤">
+          <canvas id="board" width="960" height="720" tabindex="0" aria-label="実験盤。パーツ一覧と座標入力でも操作できます"></canvas>
+          <div class="board-status"><output id="run-time">0.00 秒</output><span id="required"></span></div>
+          <p id="trail-guide" hidden>前回の軌跡（予測ではありません）</p>
+          <p id="board-notice" role="status"></p>
+        </section>
+        <section class="workbench-tools" aria-label="操作">
+          <div id="edit-panel">
+            <h2>道具箱</h2>
+            <div id="stock" class="stock"></div>
+            <label for="parts">配置したパーツ</label>
+            <select id="parts"></select>
+            <div class="coord">
+              <label for="grid-x">横</label><input id="grid-x" type="number" min="0" max="40" value="20">
+              <label for="grid-y">縦</label><input id="grid-y" type="number" min="0" max="30" value="15">
+              <button type="button" id="place-coordinate">ここに置く</button>
+            </div>
+            <div class="button-row" aria-label="移動と回転">
+              <button type="button" data-direction="-1,0" aria-label="左へ">←</button>
+              <button type="button" data-direction="0,-1" aria-label="上へ">↑</button>
+              <button type="button" data-direction="0,1" aria-label="下へ">↓</button>
+              <button type="button" data-direction="1,0" aria-label="右へ">→</button>
+              <button type="button" data-rotate="-15" aria-label="反時計回りに回転">↶</button>
+              <button type="button" data-rotate="15" aria-label="時計回りに回転">↷</button>
+            </div>
+            <div class="button-row">
+              <button type="button" data-command="delete">削除</button>
+              <button type="button" data-command="undo">元に戻す</button>
+              <button type="button" data-command="request-reset">配置をリセット</button>
+              <button type="button" data-command="request-load-best" id="best-button">ベスト配置</button>
+              <button type="button" data-command="toggle-trail" id="trail-button" aria-pressed="true">前回の軌跡</button>
+              <button type="button" data-command="hint-open" id="hint-button">ヒント</button>
+            </div>
+            <div class="button-row confirmation" id="edit-confirm" hidden>
+              <p id="edit-confirm-text"></p>
+              <button type="button" data-command="confirm">確定</button>
+              <button type="button" data-command="cancel">取り消す</button>
+            </div>
+            <button type="button" class="primary" data-command="start" id="start-button">実験開始</button>
+          </div>
+          <div id="run-panel" hidden>
+            <h2 id="run-heading">実験中</h2>
+            <p id="pause-reason"></p>
+            <div class="button-row">
+              <button type="button" data-command="pause" id="pause-button">一時停止</button>
+              <button type="button" class="primary" data-command="resume" id="resume-button" hidden>明示的に再開</button>
+              <button type="button" data-command="abort">中止</button>
+            </div>
+          </div>
+          <div id="result-panel" hidden aria-live="polite">
+            <h2 id="result-heading"></h2>
+            <p id="result-details"></p><p id="result-achievement" hidden></p>
+            <div class="button-row">
+              <button type="button" class="primary" data-command="redesign">もう一度設計</button>
+              <button type="button" id="next-stage">次のステージ</button>
+              <button type="button" data-command="enter">ステージへ</button>
+              <button type="button" data-command="toggle-trail">前回の軌跡</button>
+            </div>
+          </div>
+          <figure class="guide" id="guide"></figure>
+        </section>
+      </div>
+    </section>
+    <p id="startup-error" role="alert" hidden>工房を起動できませんでした。ページを読み直してください。</p>
+  </main>
+  <dialog id="game-dialog" aria-labelledby="dialog-title">
+    <h2 id="dialog-title"></h2>
+    <div id="dialog-content"></div>
+    <div class="button-row" id="dialog-actions"></div>
+  </dialog>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+import {applyEditCommand, createDesignEditor} from '../domain/design-editor.js';
+import {unlockedStages} from '../domain/score-service.js';
+import {createResultSession} from '../domain/result-evaluator.js';
+import {createStageExperiment, resolveStageHint} from '../data/stage-definitions.js';
+import {TICK_SECONDS, MAX_TICKS_PER_FRAME, PAUSE_GAP_MS} from '../data/physics-config.js';
+import {encodePlacements, decodePlacements, parseSaveRaw} from '../storage/save-validator.js';
+import {createFrameClock, isEditCommand, permitsEdit} from './state-machine.js';
+import {createTutorialController} from './tutorial-controller.js';
+
+const failMessages = {
+  'FL-001':'球が左から盤面の外へ出ました。','FL-002':'球が右から盤面の外へ出ました。',
+  'FL-003':'球が盤面の下へ落ちました。','FL-004':'球が盤面の上へ飛び出しました。',
+  'FL-005':'20秒以内にゴールで止まりませんでした。','FL-006':'指定のパーツを有効に使ってください。',
+  PHYSICS_ERROR:'実験中に異常が発生しました。再設計できます。',
+};
+
+export function createGameController({stages, identities, hints, storage, change, sound,
+  schedule = requestAnimationFrame, cancelFrame = cancelAnimationFrame, makeExperiment = createStageExperiment}) {
+  let screen='TITLE', stage=null, editor=null, experiment=null, session=null, designId=0, frame=null, runSerial=0;
+  let snapshot=null, current=null, dialog=null, ghost=null, hintConfirmed=false, showTrail=true, pauseReason='';
+  let notice='';
+  let runGeneration=null, bestUpdated=false, newStars=0;
+  const saveData=()=>storage.read().data;
+  const identity=()=>identities[stage?.id];
+  const tutorial=createTutorialController({storage,sound,change:()=>update(),schedule,cancelFrame,makeExperiment});
+  const v2=()=>saveData().schemaVersion===2;
+  function progress(){
+    const records=saveData().stages;
+    const entries=Object.fromEntries(Object.entries(records).map(([id,entry])=>{
+      const unpack=best=>best?{compatibility:best.compatibilityId,placedCount:best.usedParts,stars:best.stars,
+        placements:decodePlacements(best.placements)}:null;
+      return [id,{cleared:entry.progress.cleared,historicalStars:entry.progress.historicalBestStars,
+        best:unpack(entry.currentBest),previousBest:unpack(entry.previousBest)}];
+    }));
+    return {stages:entries,currentOnly:v2(),achievements:{
+      allCleared:Object.values(entries).every(r=>v2()?r.best:r.cleared),
+      allStars:Object.values(entries).every(r=>v2()?r.best?.stars===3:r.historicalStars===3),
+    }};
+  }
+  function state(){
+    const normal={screen,stage,editor,snapshot,current,dialog,ghost,showTrail,pauseReason,notice,stages,
+      unlocked:unlockedStages(progress()),progress:saveData(),save:storage.read(),result:session?.read().result,
+      failure:failMessages[session?.read().result?.code],previousTrajectory:session?.read().previousTrajectory,
+      bestUpdated,newStars,audioUnavailable:sound.unavailable?.()??false};
+    if(!tutorial.active())return normal;
+    const practice=tutorial.state();
+    return {...normal,...practice,ghost:null,result:practice.result};
+  }
+  const update=()=>change(state());
+  function saveStage(next,generation=storage.read().generation){
+    const before=saveData();
+    storage.commit({...before,stages:{...before.stages,[stage.id]:next}},generation);
+  }
+  function loadDesign(next){
+    dispose();
+    sound.stop();
+    stage=next;
+    const row=saveData().stages[stage.id];
+    const storedBest=row.currentBest??(v2()?null:row.previousBest);
+    editor=createDesignEditor({placements:decodePlacements(row.draft?.placements??[]),
+      best:storedBest?decodePlacements(storedBest.placements):null});
+    session=createResultSession({stageId:stage.id,progress:progress(),onTerminal:finish});
+    screen='DESIGN';snapshot=null;current=null;ghost=null;dialog=null;hintConfirmed=false;
+  }
+  function dispose(){
+    if(frame!==null)cancelFrame(frame);
+    frame=null;
+    experiment?.dispose();
+    experiment=null;
+    clock.reset();
+  }
+  function finish(result){
+    screen=result.status==='CLEARED'?'CLEARED':result.status==='ERROR'?'ERROR':'FAILED';
+    ghost=null;
+    if(result.status==='CLEARED'){
+      const saved=saveData().stages[stage.id];
+      const state=session.read().progress.stages[stage.id];
+      const pack=entry=>entry?{compatibilityId:entry.compatibility,physicsRulesVersion:identity().physicsRulesVersion,
+        usedParts:entry.placedCount,stars:entry.stars,placements:encodePlacements(entry.placements)}:null;
+      const best=pack(state.best);
+      newStars=v2()?Math.max(0,best.stars-(saved.currentBest?.stars??0)):
+        Math.max(0,state.historicalStars-(saved.progress.historicalBestStars??0));
+      bestUpdated=!saved.currentBest||best.usedParts<saved.currentBest.usedParts;
+      if(runGeneration===storage.read().generation){
+        saveStage({...saved,progress:{cleared:true,historicalBestStars:state.historicalStars},
+          currentBest:best,previousBest:saved.previousBest},runGeneration);
+        editor={...editor,best:decodePlacements(best.placements)};
+        if(result.achievements.includes('ALL_CLEARED'))dialog={type:'ACHIEVEMENTS'};
+      }else{
+        bestUpdated=false;
+        notice='保存権限の変更により、この実験結果は一時表示です。';
+      }
+    }
+    sound.end({...result,newStars});
+    dispose();
+  }
+  function step(){
+    if(screen!=='RUNNING'||!experiment)return false;
+    const next=experiment.step();
+    if(!next)return false;
+    current=next;
+    if(next.usage)sound.observe(experiment.runId,next);
+    session.step(experiment.runId,()=>next);
+    return true;
+  }
+  const clock=createFrameClock({step,pause,tickMs:TICK_SECONDS*1000,maxTicks:MAX_TICKS_PER_FRAME,pauseGap:PAUSE_GAP_MS});
+  function animate(now){
+    frame=null;
+    if(screen!=='RUNNING')return;
+    clock.advance(now);
+    update();
+    if(screen==='RUNNING')frame=schedule(animate);
+  }
+  function pause(reason='手動'){
+    if(screen!=='RUNNING')return;
+    session.pause();
+    sound.stop();
+    screen='PAUSED';pauseReason=reason;
+    if(frame!==null)cancelFrame(frame);
+    frame=null;
+    clock.reset();
+  }
+  function start(){
+    if(screen!=='DESIGN'||editor.selection.state==='CONFIRMING')return false;
+    const id=`karakuri-${++runSerial}`;
+    const settled=applyEditCommand(editor,stage,{type:'cancel'});
+    editor=settled.state;
+    ghost=null;dialog=null;snapshot=null;current=null;
+    bestUpdated=false;newStars=0;runGeneration=storage.read().generation;
+    experiment=makeExperiment(stage,editor.placements,{
+      runId:id,observe:obs=>{snapshot=obs;},observePresentation:true,
+    });
+    session.start({id,initialPosition:stage.ball,placements:editor.placements,stageId:stage.id,
+      compatibility:identity().compatibilityId,star3Target:stage.star3Target});
+    sound.begin(id);
+    clock.reset();
+    screen='RUNNING';
+    frame=schedule(animate);
+    return true;
+  }
+  function edit(command){
+    if(!permitsEdit(screen)||dialog)return false;
+    const before=editor;
+    const outcome=applyEditCommand(editor,stage,command);
+    editor=outcome.state;
+    if(!outcome.ok){notice='その操作はできません。';return false;}
+    if(editor.revision!==before.revision){
+      const saved=saveData().stages[stage.id];
+      saveStage({...saved,draft:{geometryId:identity().geometryId,placements:encodePlacements(editor.placements)}});
+      if(before.selection.operation==='reset')session.clearTrajectory();
+      const previousPart = before.placements.find(part=>part.id===(command.id??before.selection.id));
+      const changedPart = editor.placements.find(part=>part.id===previousPart?.id);
+      if(previousPart&&changedPart&&(previousPart.gridX!==changedPart.gridX||previousPart.gridY!==changedPart.gridY)){
+        ghost=null;
+      }
+      if(['add','commit-draft'].includes(command.type))sound.play('place');
+    }
+    if(command.type==='rotate'||command.type==='rotate-draft')sound.play('rotate');
+    return true;
+  }
+  function dispatch(command){
+    notice='';
+    if(tutorial.active()){
+      if(command.type==='enter'||command.type==='title'||command.type==='tutorial-exit'){
+        dialog={type:'TUTORIAL_EXIT',toTitle:command.type==='title'};tutorial.hide('講座の終了を確認中');
+        update();return true;
+      }
+      if(command.type==='tutorial-exit-confirm'||command.type==='tutorial-exit-skip'){
+        if(dialog?.type!=='TUTORIAL_EXIT')return false;
+        if(command.type==='tutorial-exit-skip'&&tutorial.state().tutorial.graduated)return false;
+        const saved=tutorial.leave(command.type==='tutorial-exit-skip');
+        if(command.type==='tutorial-exit-skip'&&!saved)notice='スキップを保存できませんでした。';
+        screen=dialog.toTitle?'TITLE':'STAGES';dialog=null;stage=null;editor=null;session=null;
+        update();return true;
+      }
+      if(command.type==='help'){
+        dialog={type:'HELP',lessonHelp:true};
+        update();return true;
+      }
+      if(command.type==='close-dialog'&&dialog){
+        const lessonHelp=dialog.type==='HELP'&&dialog.lessonHelp;
+        dialog=null;
+        if(lessonHelp)dialog={type:'TUTORIAL_HELP_CLOSING'};
+        update();return true;
+      }
+      if(command.type==='tutorial-help-returned'){
+        if(dialog?.type!=='TUTORIAL_HELP_CLOSING')return false;
+        dialog=null;
+      }else if(dialog)return false;
+      const accepted=tutorial.dispatch(command);
+      update();return accepted;
+    }
+    if(dialog?.type==='SAVE_MIGRATION'&&dialog.pending)return false;
+    let accepted=true;
+    if(['RUNNING','PAUSED'].includes(screen)&&['enter','title','stage','redesign'].includes(command.type))return false;
+    if(isEditCommand(command)){
+      accepted=edit(command);
+    }else switch(command.type){
+      case 'enter':
+        dispose();sound.stop();screen='STAGES';dialog=null;
+        if(storage.read().migrationAvailable)dialog={type:'SAVE_MIGRATION'};
+        else if(v2()&&!tutorial.shown()&&saveData().tutorial.state==='unseen')dialog={type:'TUTORIAL_INTRO'};
+        break;
+      case 'tutorial-open':
+        if(!v2()){accepted=false;break;}
+        dialog={type:'TUTORIAL_INTRO'};break;
+      case 'tutorial-start': {
+        if(dialog?.type!=='TUTORIAL_INTRO'){accepted=false;break;}
+        const next=command.fromBeginning?1:Math.min(12,saveData().tutorial.nextStep);
+        accepted=tutorial.start(saveData().tutorial.state==='completed'?1:next);
+        if(accepted)dialog=null;
+        break;
+      }
+      case 'tutorial-skip-request':
+        if(dialog?.type!=='TUTORIAL_INTRO'){accepted=false;break;}
+        dialog={type:'TUTORIAL_SKIP'};break;
+      case 'tutorial-skip-confirm':
+        if(dialog?.type!=='TUTORIAL_SKIP'){accepted=false;break;}
+        accepted=tutorial.skipIntro();dialog=null;
+        if(!accepted)notice='講座の選択を保存できませんでした。';
+        break;
+      case 'tutorial-later':
+        tutorial.defer();dialog=null;break;
+      case 'migration-open':
+        if(!storage.read().migrationAvailable){accepted=false;break;}
+        dialog={type:'SAVE_MIGRATION'};break;
+      case 'migration-confirm':
+        if(dialog?.type!=='SAVE_MIGRATION'){accepted=false;break;}
+        dialog={type:'SAVE_MIGRATION',pending:true};
+        storage.migrateV1(true,storage.read().generation).then(ok=>{
+          if(dialog?.type!=='SAVE_MIGRATION'||!dialog.pending)return;
+          if(ok)dialog=screen==='STAGES'&&!tutorial.shown()?{type:'TUTORIAL_INTRO'}:null;
+          else dialog={type:'SAVE_MIGRATION',error:'移行を確認できませんでした。保存権限と空き容量を確認してください。'};
+          update();
+        });
+        break;
+      case 'archives':
+        dialog={type:'SAVE_ARCHIVES',keys:storage.archiveKeys()};break;
+      case 'archive-raw-export':
+        if(!storage.read().legacyBlocked){accepted=false;break;}
+        dialog={type:'SAVE_ARCHIVE',value:{raw:storage.blockedV1Raw(),blocked:true}};break;
+      case 'archive-draft-request':
+        if(dialog?.type!=='SAVE_ARCHIVE'||!dialog.value||dialog.value.blocked||screen!=='DESIGN'||!stage){
+          accepted=false;break;
+        }
+        dialog={type:'SAVE_DRAFT_CONFIRM',value:dialog.value,stageId:stage.id};break;
+      case 'archive-draft-confirm': {
+        if(dialog?.type!=='SAVE_DRAFT_CONFIRM'||dialog.stageId!==stage?.id){accepted=false;break;}
+        const draft=parseSaveRaw(dialog.value.raw).stages[stage.id].draft;
+        if(!draft){dialog=null;notice='このステージの旧配置がありません。';accepted=false;break;}
+        const request=applyEditCommand({...editor,best:decodePlacements(draft.placements)},stage,{type:'request-load-best'});
+        const imported=request.ok?applyEditCommand(request.state,stage,{type:'confirm'}):request;
+        dialog=null;
+        if(!imported.ok){notice='旧配置は現在の盤面には置けません。';accepted=false;break;}
+        editor={...imported.state,best:editor.best};ghost=null;
+        const row=saveData().stages[stage.id];
+        saveStage({...row,draft:{geometryId:identity().geometryId,placements:encodePlacements(editor.placements)}});
+        break;
+      }
+      case 'archive-open': {
+        if(dialog?.type!=='SAVE_ARCHIVES'||!dialog.keys.includes(command.key)){accepted=false;break;}
+        const origin=dialog;
+        storage.readArchive(command.key).then(value=>{
+          if(dialog!==origin)return;
+          dialog={type:'SAVE_ARCHIVE',key:command.key,value};
+          update();
+        });
+        break;
+      }
+      case 'title': dispose();sound.stop();screen='TITLE';dialog=null;break;
+      case 'stage': {
+        const candidate=stages.find(s=>s.id===command.id);
+        accepted=Boolean(candidate&&unlockedStages(progress()).includes(candidate.id));
+        if(accepted)loadDesign(candidate);
+        else notice='前のステージをクリアすると解放されます。';
+        break;
+      }
+      case 'start': accepted=start();break;
+      case 'pause': pause();break;
+      case 'resume':
+        if(screen==='PAUSED'&&!dialog){
+          clock.reset();
+          session.resume();
+          screen='RUNNING';
+          sound.resume(experiment.runId);
+          frame=schedule(animate);
+        }else accepted=false;
+        break;
+      case 'abort':
+        if(!['PAUSED','RUNNING'].includes(screen)){accepted=false;break;}
+        session.abort();dispose();sound.stop();screen='DESIGN';current=null;snapshot=null;break;
+      case 'redesign':
+        if(!['CLEARED','FAILED','ERROR'].includes(screen)){accepted=false;break;}
+        sound.stop();screen='DESIGN';dialog=null;snapshot=null;current=null;break;
+      case 'edit-preparation': edit({type:'cancel'});break;
+      case 'clear-selection':
+        if(screen==='DESIGN'&&!dialog){
+          editor={...editor,selection:{state:'IDLE'}};
+        }else accepted=false;
+        break;
+      case 'toggle-trail': showTrail=!showTrail;break;
+      case 'settings':
+        if(screen==='RUNNING')pause('設定');
+        dialog={type:'SETTINGS'};break;
+      case 'help': dialog={type:'HELP'};break;
+      case 'achievements': dialog={type:'ACHIEVEMENTS'};break;
+      case 'close-dialog':
+        if(dialog?.type==='TUTORIAL_INTRO')tutorial.defer();
+        dialog=null;break;
+      case 'setting':
+        if(dialog?.type!=='SETTINGS'){accepted=false;break;}
+        storage.commit({...saveData(),settings:{...saveData().settings,[command.key]:command.value}});
+        sound.configure(saveData().settings);
+        break;
+      case 'reset-request': dialog={type:'SAVE_RESET'};break;
+      case 'recover-request': dialog={type:'RECOVER_SAVE'};break;
+      case 'recover-confirm':
+        if(dialog?.type!=='RECOVER_SAVE'){accepted=false;break;}
+        accepted=storage.reset(true,true);
+        if(accepted&&stage&&screen==='DESIGN')loadDesign(stage);
+        dialog=null;break;
+      case 'reacquire': {
+        if(storage.read().dirty){
+          dialog={type:'REACQUIRE',confirmation:storage.captureReacquire()};
+        }else storage.start().then(() => {
+          if(stage&&screen==='DESIGN')loadDesign(stage);
+          update();
+        });
+        break;
+      }
+      case 'reacquire-confirm': {
+        const confirmation=dialog?.confirmation;
+        if(dialog?.type!=='REACQUIRE'||!confirmation){accepted=false;break;}
+        dialog=null;
+        storage.start({confirmation}).then((loaded) => {
+          if(loaded&&stage&&screen==='DESIGN')loadDesign(stage);
+          if(!loaded)notice='保存状況が変わりました。確認して再取得してください。';
+          update();
+        });
+        break;
+      }
+      case 'reset-confirm':
+        if(dialog?.type!=='SAVE_RESET'){accepted=false;break;}
+        accepted=storage.reset(true);
+        if(accepted){dispose();sound.stop();screen='TITLE';stage=null;editor=null;session=null;ghost=null;}
+        dialog=null;break;
+      case 'hint-open':
+        if(screen!=='DESIGN'){accepted=false;break;}
+        dialog={type:'HINT',level:1,hint:resolveStageHint(identity(),hints[stage.id]??[],1)};
+        break;
+      case 'hint':
+        if(dialog?.type!=='HINT'){accepted=false;break;}
+        if(command.level===3&&!hintConfirmed){dialog={type:'HINT_CONFIRM'};break;}
+        dialog={type:'HINT',level:command.level,hint:resolveStageHint(identity(),hints[stage.id]??[],command.level,true)};
+        ghost=command.level===3?dialog.hint?.parts??null:ghost;break;
+      case 'hint-confirm':
+        if(dialog?.type!=='HINT_CONFIRM'){accepted=false;break;}
+        hintConfirmed=true;
+        dialog={type:'HINT',level:3,hint:resolveStageHint(identity(),hints[stage.id]??[],3,true)};
+        ghost=dialog.hint?.parts??null;break;
+      case 'hint-cancel':
+        dialog={type:'HINT',level:1,hint:resolveStageHint(identity(),hints[stage.id]??[],1)};break;
+      default: accepted=false;
+    }
+    update();return accepted;
+  }
+  return {
+    state,dispatch,
+    hidden(){
+      if(tutorial.active()){tutorial.hide('バックグラウンド');update();return;}
+      if(screen==='DESIGN')editor=applyEditCommand(editor,stage,{type:'orientation-change'}).state;
+      pause('バックグラウンド');update();
+    },
+    rotated(){
+      if(tutorial.active()){tutorial.hide('画面回転');update();return;}
+      if(screen==='DESIGN')editor=applyEditCommand(editor,stage,{type:'orientation-change'}).state;
+      pause('画面回転');update();
+    },
+    restoreView(){if(tutorial.active())tutorial.restore();else if(stage&&screen==='DESIGN')loadDesign(stage);update();},
+    detached(){if(tutorial.active())tutorial.detach();else pause('ページを離れました');sound.stop();update();},
+  };
+}
