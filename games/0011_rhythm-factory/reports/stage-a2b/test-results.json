@@ -1,0 +1,829 @@
+{
+  "stage": "A-2b",
+  "baselineCommit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+  "reviewedImplementationCommit": "7a036e3df661c4a259c1e0b443d420f2fa2cd755",
+  "executor": "/root",
+  "environment": {
+    "os": "Linux x86_64 managed task environment",
+    "node": "26.13.1",
+    "npm": "11.20.0",
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0",
+    "webkit": "27.2",
+    "browsers": "Playwright 1.65.1",
+    "touch": "browser emulation"
+  },
+  "vitest": {
+    "commit": "7a036e3df661c4a259c1e0b443d420f2fa2cd755",
+    "command": "./node_modules/.bin/vitest run --reporter=json --outputFile=<evidence>",
+    "exitCode": 0,
+    "total": 161,
+    "passed": 161,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      {
+        "path": "tests/component/foundation-screen.test.tsx",
+        "cases": 2,
+        "passed": 2
+      },
+      {
+        "path": "tests/integration/composition.test.ts",
+        "cases": 1,
+        "passed": 1
+      },
+      {
+        "path": "tests/integration/stage-a2b-replay.test.ts",
+        "cases": 8,
+        "passed": 8
+      },
+      {
+        "path": "tests/unit/audio-clock.test.ts",
+        "cases": 7,
+        "passed": 7
+      },
+      {
+        "path": "tests/unit/audio-preparation.test.ts",
+        "cases": 2,
+        "passed": 2
+      },
+      {
+        "path": "tests/unit/chart-compiler.test.ts",
+        "cases": 57,
+        "passed": 57
+      },
+      {
+        "path": "tests/unit/game-store.test.ts",
+        "cases": 4,
+        "passed": 4
+      },
+      {
+        "path": "tests/unit/judgement-engine.test.ts",
+        "cases": 37,
+        "passed": 37
+      },
+      {
+        "path": "tests/unit/judgement-reducers.test.ts",
+        "cases": 19,
+        "passed": 19
+      },
+      {
+        "path": "tests/unit/keyboard-pointer-input.test.ts",
+        "cases": 10,
+        "passed": 10
+      },
+      {
+        "path": "tests/unit/web-audio-clock-adapter.test.ts",
+        "cases": 3,
+        "passed": 3
+      },
+      {
+        "path": "tests/contract/audio-events.test.ts",
+        "cases": 1,
+        "passed": 1
+      },
+      {
+        "path": "tests/contract/public-types.test.ts",
+        "cases": 3,
+        "passed": 3
+      },
+      {
+        "path": "tests/contract/render-snapshot.test.ts",
+        "cases": 7,
+        "passed": 7
+      }
+    ]
+  },
+  "browser": {
+    "commit": "7a036e3df661c4a259c1e0b443d420f2fa2cd755",
+    "command": "./node_modules/.bin/playwright test --reporter=json --output=<evidence>",
+    "exitCode": 1,
+    "passed": 25,
+    "failed": 14,
+    "skipped": 0,
+    "flaky": 0,
+    "scopesByBrowser": {
+      "a2a_audio": {
+        "chromium": {
+          "passed": 8
+        },
+        "firefox": {
+          "failed": 7,
+          "passed": 1
+        },
+        "webkit": {
+          "failed": 7,
+          "passed": 1
+        }
+      },
+      "new_input": {
+        "chromium": {
+          "passed": 3
+        },
+        "firefox": {
+          "passed": 3
+        },
+        "webkit": {
+          "passed": 3
+        }
+      },
+      "a1_subpath": {
+        "chromium": {
+          "passed": 2
+        },
+        "firefox": {
+          "passed": 2
+        },
+        "webkit": {
+          "passed": 2
+        }
+      }
+    },
+    "knownCloudFailures": [
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 natural trial 1",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 natural trial 1",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -100667,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 natural trial 2",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 natural trial 2",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -98333,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 natural trial 3",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 natural trial 3",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -100667,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 stop-restart trial 1",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 stop-restart trial 1",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -107333,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 stop-restart trial 2",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 stop-restart trial 2",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -100667,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a-R CASE-05 stop-restart trial 3",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "a2ar-trial-cycle.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a-R CASE-05 stop-restart trial 3",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop",
+        "lastSignedDifferenceUs": -99333,
+        "lastClockResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        },
+        "findings": [
+          "clock.outOfSync"
+        ]
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "firefox",
+        "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "testStatus": "failed",
+        "probeStatus": "activation-unavailable"
+      },
+      {
+        "file": "stage-a2a-audio.spec.ts",
+        "browser": "webkit",
+        "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+        "testStatus": "failed",
+        "probeStatus": "safety-stop"
+      }
+    ],
+    "unclassifiedFailures": []
+  },
+  "qaRegression": {
+    "basis": "Clean baseline worktree. R3 QA, its transitive runtime imports, and original fixtures are unchanged in A-2b.",
+    "dependencyReconstruction": {
+      "command": "npm ci --offline --no-audit --no-fund",
+      "exitCode": 0
+    },
+    "vitest": {
+      "commit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+      "command": "./node_modules/.bin/vitest run --config qa/device-audio-clock/vitest.config.ts --reporter=json",
+      "exitCode": 0,
+      "total": 34,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        {
+          "path": "qa/device-audio-clock/tests/controller.test.ts",
+          "cases": 18,
+          "passed": 18
+        },
+        {
+          "path": "qa/device-audio-clock/tests/export.test.ts",
+          "cases": 6,
+          "passed": 6
+        },
+        {
+          "path": "qa/device-audio-clock/tests/fixtures.test.ts",
+          "cases": 1,
+          "passed": 1
+        },
+        {
+          "path": "qa/device-audio-clock/tests/model.test.ts",
+          "cases": 9,
+          "passed": 9
+        }
+      ]
+    },
+    "build": {
+      "command": "./node_modules/.bin/vite build --config qa/device-audio-clock/vite.config.ts",
+      "exitCode": 0
+    },
+    "devBrowser": {
+      "commit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+      "command": "./node_modules/.bin/playwright test --config qa/device-audio-clock/playwright.config.ts --reporter=json",
+      "exitCode": 0,
+      "passed": 22,
+      "failed": 0,
+      "skipped": 28,
+      "flaky": 0,
+      "scopesByBrowser": {
+        "r3_qa": {
+          "chromium-desktop": {
+            "passed": 8,
+            "skipped": 2
+          },
+          "firefox-desktop": {
+            "passed": 5,
+            "skipped": 5
+          },
+          "webkit-desktop": {
+            "passed": 4,
+            "skipped": 6
+          },
+          "chromium-android-emulation": {
+            "skipped": 8,
+            "passed": 2
+          },
+          "webkit-ios-emulation": {
+            "skipped": 7,
+            "passed": 3
+          }
+        }
+      },
+      "knownCloudFailures": [],
+      "unclassifiedFailures": []
+    },
+    "builtBrowser": {
+      "commit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+      "command": "STAGE_A2A_QA_TEST_PREVIEW=1 ./node_modules/.bin/playwright test --config qa/device-audio-clock/playwright.config.ts --reporter=json",
+      "exitCode": 0,
+      "passed": 22,
+      "failed": 0,
+      "skipped": 28,
+      "flaky": 0,
+      "scopesByBrowser": {
+        "r3_qa": {
+          "chromium-desktop": {
+            "passed": 8,
+            "skipped": 2
+          },
+          "firefox-desktop": {
+            "passed": 5,
+            "skipped": 5
+          },
+          "webkit-desktop": {
+            "passed": 4,
+            "skipped": 6
+          },
+          "chromium-android-emulation": {
+            "skipped": 8,
+            "passed": 2
+          },
+          "webkit-ios-emulation": {
+            "skipped": 7,
+            "passed": 3
+          }
+        }
+      },
+      "knownCloudFailures": [],
+      "unclassifiedFailures": []
+    }
+  },
+  "regressionContext": {
+    "counting": "Existing 30 game Vitest, including A-1 18, are inside the final Vitest count. Existing 30 game E2E, including A-1 6, are inside the final browser count. Earlier runs below are repeats.",
+    "initialImplementationExistingBrowser": {
+      "commit": "d8ab4aba3984820ded109420fd77618dee588235",
+      "command": "./node_modules/.bin/playwright test a2ar-trial-cycle.spec.ts a2ar2-playback.spec.ts stage-a2a-audio.spec.ts subpath.spec.ts --reporter=json --output=<evidence>",
+      "exitCode": 1,
+      "passed": 13,
+      "failed": 17,
+      "skipped": 0,
+      "flaky": 0,
+      "scopesByBrowser": {
+        "a2a_audio": {
+          "chromium": {
+            "failed": 3,
+            "passed": 5
+          },
+          "firefox": {
+            "failed": 7,
+            "passed": 1
+          },
+          "webkit": {
+            "failed": 7,
+            "passed": 1
+          }
+        },
+        "a1_subpath": {
+          "chromium": {
+            "passed": 2
+          },
+          "firefox": {
+            "passed": 2
+          },
+          "webkit": {
+            "passed": 2
+          }
+        }
+      },
+      "knownCloudFailures": [
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "chromium",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -20047,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 natural trial 1",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -101667,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "chromium",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -20045,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 natural trial 2",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "chromium",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -61133,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 natural trial 3",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -106333,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 stop-restart trial 1",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -100667,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 stop-restart trial 2",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -99333,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "a2ar-trial-cycle.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a-R CASE-05 stop-restart trial 3",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop",
+          "lastSignedDifferenceUs": -98333,
+          "lastClockResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          },
+          "findings": [
+            "clock.outOfSync"
+          ]
+        },
+        {
+          "file": "stage-a2a-audio.spec.ts",
+          "browser": "firefox",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "testStatus": "failed",
+          "probeStatus": "activation-unavailable"
+        },
+        {
+          "file": "stage-a2a-audio.spec.ts",
+          "browser": "webkit",
+          "case": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "testStatus": "failed",
+          "probeStatus": "safety-stop"
+        }
+      ],
+      "unclassifiedFailures": []
+    },
+    "unmodifiedChromiumComparison": {
+      "commit": "b7ac8a4f7626dd49d513e8a34c00e617aa60b6af",
+      "command": "./node_modules/.bin/playwright test a2ar-trial-cycle.spec.ts --project=chromium --grep \"natural trial\" --reporter=json --output=<evidence>",
+      "exitCode": 0,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "scopesByBrowser": {
+        "a2a_audio": {
+          "chromium": {
+            "passed": 3
+          }
+        }
+      },
+      "knownCloudFailures": [],
+      "unclassifiedFailures": []
+    }
+  },
+  "qualityChecks": [
+    {
+      "name": "strict",
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "name": "lint",
+      "command": "npm run lint -- --ignore-pattern '**/dist/**'",
+      "exitCode": 0
+    },
+    {
+      "name": "architecture",
+      "command": "npm run check:architecture",
+      "exitCode": 0
+    },
+    {
+      "name": "productionBuild",
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "name": "baselineProductionBuild",
+      "command": "npm exec -- vite build --outDir <evidence>/build-baseline",
+      "exitCode": 0
+    },
+    {
+      "name": "productFilesByteComparison",
+      "command": "diff -rq dist <evidence>/build-baseline",
+      "exitCode": 0
+    }
+  ],
+  "productAssetSha256": [
+    "98c31e8850ef3d4facacab299e78eec527c0ac01ab8c4da27473de03ea9cb6c0  ./assets/index-B3ekpQ5g.css",
+    "e436a27a63a1dcc45e7d5ae20f0c4570f6f610975a8ef5c3d7fac57aabaf5031  ./assets/index-RmQXfrQk.js",
+    "8a864d6aad712ea36f1e36de5dcbe5b5cc7a805183deff527487caa82fce3615  ./index.html"
+  ],
+  "trialChart": {
+    "notes": 63,
+    "judgements": 82,
+    "inputFixtureDurationUs": 24000000,
+    "ideal": {
+      "outcome": "CLEAR",
+      "score": 1000000,
+      "rank": "SS",
+      "perfect": 82,
+      "great": 0,
+      "good": 0,
+      "miss": 0,
+      "ghost": 0,
+      "unplayed": 0,
+      "maxCombo": 82,
+      "remainingLifeUnits": 200
+    },
+    "noInput": {
+      "outcome": "FAILED",
+      "score": 0,
+      "miss": 10,
+      "unplayed": 72,
+      "ghost": 0,
+      "remainingLifeUnits": 0,
+      "endJudgeTimeUs": 2750000
+    },
+    "missingInput": {
+      "outcome": "CLEAR",
+      "perfect": 81,
+      "miss": 1,
+      "ghost": 0,
+      "chartValidation": "CHART-E14"
+    },
+    "determinismSeeds": [
+      1,
+      42,
+      100,
+      20261126
+    ]
+  },
+  "notRun": [
+    "A-2b physical devices",
+    "physical A-2a JSON independent recomputation (approved exception)",
+    "A-2c pause boundary, rehold, full GameSession and persistence",
+    "A-2d actual playback plus judgement session integration",
+    "15 formal charts and formal audio fixtures"
+  ]
+}
