@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" width="512" height="640">
+<title>ルーク surprised</title>
+<ellipse cx="256" cy="610" rx="165" ry="18" fill="#594435" opacity=".15"/>
+<path d="M96 601q-3-157 103-205h110q107 48 107 205Z" fill="#426f91" stroke="#574638" stroke-width="9" stroke-linejoin="round"/>
+<path d="M223 350h64v73q-31 25-64 0Z" fill="#f2bd91" stroke="#694737" stroke-width="8"/>
+<path d="M191 420l64 51 63-51M257 473v134" fill="none" stroke="#36556a" stroke-width="9"/><rect x="279" y="501" width="60" height="49" rx="4" fill="#537e9c" stroke="#36556a" stroke-width="6"/>
+<ellipse cx="145" cy="255" rx="24" ry="27" fill="#f2bd91" stroke="#80533b" stroke-width="7"/>
+<ellipse cx="367" cy="255" rx="24" ry="27" fill="#f2bd91" stroke="#80533b" stroke-width="7"/>
+<path d="M153 217q8-98 108-98q96 5 100 99v51q0 110-105 122q-100-9-103-118Z" fill="#f2bd91" stroke="#80533b" stroke-width="8"/>
+<path d="M131 252Q91 184 138 126Q177 81 233 89Q314 62 381 144Q404 211 372 251L350 203Q316 200 290 151Q235 205 176 188L156 249Z" fill="#6b4230" stroke="#53362b" stroke-width="8"/>
+<g stroke="#553d2c" stroke-width="10"><path d="M125 151Q255 80 391 150" fill="none"/><circle cx="205" cy="145" r="35" fill="#b68c50"/><circle cx="301" cy="138" r="35" fill="#b68c50"/><circle cx="205" cy="145" r="23" fill="#b9d1d3"/><circle cx="301" cy="138" r="23" fill="#b9d1d3"/></g>
+<ellipse cx="203" cy="248" rx="7" ry="10" fill="#412e28"/><ellipse cx="308" cy="248" rx="7" ry="10" fill="#412e28"/>
+<path d="M251 263q-7 18 8 19" fill="none" stroke="#a9694e" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="256" cy="315" rx="23" ry="27" fill="#743b32" stroke="#54352b" stroke-width="6"/>
+
+</svg>

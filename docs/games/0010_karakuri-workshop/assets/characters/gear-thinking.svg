@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" width="512" height="640">
+<title>ギア博士 thinking</title>
+<ellipse cx="256" cy="610" rx="165" ry="18" fill="#594435" opacity=".15"/>
+<path d="M96 601q-3-157 103-205h110q107 48 107 205Z" fill="#84634b" stroke="#574638" stroke-width="9" stroke-linejoin="round"/>
+<path d="M223 350h64v73q-31 25-64 0Z" fill="#eab891" stroke="#694737" stroke-width="8"/>
+<path d="M200 435h112l30 172H174Z" fill="#aa8158" stroke="#604b39" stroke-width="8"/><path d="M204 495h105v58H204Z" fill="#caa77c" stroke="#604b39" stroke-width="6"/>
+<ellipse cx="145" cy="255" rx="24" ry="27" fill="#eab891" stroke="#80533b" stroke-width="7"/>
+<ellipse cx="367" cy="255" rx="24" ry="27" fill="#eab891" stroke="#80533b" stroke-width="7"/>
+<path d="M153 217q8-98 108-98q96 5 100 99v51q0 110-105 122q-100-9-103-118Z" fill="#eab891" stroke="#80533b" stroke-width="8"/>
+<path d="M128 232Q96 145 182 106Q221 78 273 99Q351 81 382 152Q392 194 372 227L345 193Q319 202 297 170Q235 210 182 172L160 232Z" fill="#f4eee1" stroke="#745c49" stroke-width="8"/><path d="M154 292Q187 337 213 332Q260 353 298 331Q328 334 361 290Q352 387 256 416Q161 386 154 292Z" fill="#f1ebe0" stroke="#745c49" stroke-width="8"/>
+<g fill="none" stroke="#6c5441" stroke-width="9"><circle cx="204" cy="250" r="37"/><circle cx="306" cy="250" r="37"/><path d="M242 251h27"/></g>
+<ellipse cx="203" cy="248" rx="7" ry="10" fill="#412e28"/><ellipse cx="308" cy="248" rx="7" ry="10" fill="#412e28"/>
+<path d="M251 263q-7 18 8 19" fill="none" stroke="#a9694e" stroke-width="5" stroke-linecap="round"/>
+<path d="M238 303q37 10 62-8" fill="none" stroke="#6d4232" stroke-width="8" stroke-linecap="round"/>
+<path d="M355 483q36-45 42-105q5-19 21-11l15 16q5 60-41 134Z" fill="#eab891" stroke="#674737" stroke-width="8"/>
+</svg>
