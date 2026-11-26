@@ -1,0 +1,519 @@
+{
+  "sameCgroupHostSamples": [
+    {
+      "epochMs": 1795656363082,
+      "cpuStat": "usage_usec 1749843200\nuser_usec 1490263728\nsystem_usec 259579472\nnice_usec 4000\nnr_periods 36958\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.57 0.71 0.67 2/649 34472"
+    },
+    {
+      "epochMs": 1795656364082,
+      "cpuStat": "usage_usec 1751133231\nuser_usec 1491269102\nsystem_usec 259864129\nnice_usec 4000\nnr_periods 36968\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.57 0.71 0.67 2/701 34537"
+    },
+    {
+      "epochMs": 1795656365082,
+      "cpuStat": "usage_usec 1751908069\nuser_usec 1491867820\nsystem_usec 260040249\nnice_usec 4000\nnr_periods 36975\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.57 0.71 0.67 3/720 34558"
+    },
+    {
+      "epochMs": 1795656366083,
+      "cpuStat": "usage_usec 1753311381\nuser_usec 1493023164\nsystem_usec 260288216\nnice_usec 4000\nnr_periods 36985\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.60 0.72 0.67 2/799 34638"
+    },
+    {
+      "epochMs": 1795656367083,
+      "cpuStat": "usage_usec 1754367766\nuser_usec 1494079550\nsystem_usec 260288216\nnice_usec 4000\nnr_periods 36995\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.60 0.72 0.67 2/799 34638"
+    },
+    {
+      "epochMs": 1795656368084,
+      "cpuStat": "usage_usec 1755422498\nuser_usec 1495134282\nsystem_usec 260288216\nnice_usec 4000\nnr_periods 37005\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.60 0.72 0.67 2/799 34638"
+    },
+    {
+      "epochMs": 1795656369084,
+      "cpuStat": "usage_usec 1756453992\nuser_usec 1496090736\nsystem_usec 260363256\nnice_usec 4000\nnr_periods 37015\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.60 0.72 0.67 2/809 34660"
+    },
+    {
+      "epochMs": 1795656370085,
+      "cpuStat": "usage_usec 1756532415\nuser_usec 1496142292\nsystem_usec 260390123\nnice_usec 4000\nnr_periods 37025\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.60 0.72 0.67 2/809 34660"
+    },
+    {
+      "epochMs": 1795656371086,
+      "cpuStat": "usage_usec 1756587767\nuser_usec 1496181125\nsystem_usec 260406642\nnice_usec 4000\nnr_periods 37035\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.55 0.70 0.66 1/809 34660"
+    },
+    {
+      "epochMs": 1795656372086,
+      "cpuStat": "usage_usec 1756651608\nuser_usec 1496234392\nsystem_usec 260417215\nnice_usec 4000\nnr_periods 37045\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.55 0.70 0.66 1/809 34660"
+    },
+    {
+      "epochMs": 1795656373087,
+      "cpuStat": "usage_usec 1756838640\nuser_usec 1496369981\nsystem_usec 260468658\nnice_usec 4000\nnr_periods 37055\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.55 0.70 0.66 2/814 34668"
+    },
+    {
+      "epochMs": 1795656374087,
+      "cpuStat": "usage_usec 1757196387\nuser_usec 1496644334\nsystem_usec 260552053\nnice_usec 4000\nnr_periods 37065\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.55 0.70 0.66 1/807 34671"
+    },
+    {
+      "epochMs": 1795656375088,
+      "cpuStat": "usage_usec 1757256009\nuser_usec 1496691007\nsystem_usec 260565001\nnice_usec 4000\nnr_periods 37075\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.55 0.70 0.66 1/807 34671"
+    },
+    {
+      "epochMs": 1795656376088,
+      "cpuStat": "usage_usec 1757321919\nuser_usec 1496740709\nsystem_usec 260581209\nnice_usec 4000\nnr_periods 37085\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.51 0.69 0.66 1/807 34671"
+    },
+    {
+      "epochMs": 1795656377089,
+      "cpuStat": "usage_usec 1757378997\nuser_usec 1496789037\nsystem_usec 260589960\nnice_usec 4000\nnr_periods 37095\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.51 0.69 0.66 1/807 34671"
+    },
+    {
+      "epochMs": 1795656378090,
+      "cpuStat": "usage_usec 1757458764\nuser_usec 1496852569\nsystem_usec 260606195\nnice_usec 4000\nnr_periods 37105\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.51 0.69 0.66 2/807 34671"
+    },
+    {
+      "epochMs": 1795656379092,
+      "cpuStat": "usage_usec 1757516960\nuser_usec 1496908059\nsystem_usec 260608900\nnice_usec 4000\nnr_periods 37115\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.51 0.69 0.66 2/807 34671"
+    },
+    {
+      "epochMs": 1795656380093,
+      "cpuStat": "usage_usec 1757658056\nuser_usec 1497019263\nsystem_usec 260638793\nnice_usec 4000\nnr_periods 37125\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.51 0.69 0.66 1/807 34682"
+    },
+    {
+      "epochMs": 1795656381096,
+      "cpuStat": "usage_usec 1757721910\nuser_usec 1497076592\nsystem_usec 260645318\nnice_usec 4000\nnr_periods 37135\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.47 0.68 0.66 1/807 34682"
+    },
+    {
+      "epochMs": 1795656382097,
+      "cpuStat": "usage_usec 1757830213\nuser_usec 1497173106\nsystem_usec 260657106\nnice_usec 4000\nnr_periods 37145\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.47 0.68 0.66 1/807 34682"
+    },
+    {
+      "epochMs": 1795656383098,
+      "cpuStat": "usage_usec 1757878727\nuser_usec 1497213451\nsystem_usec 260665276\nnice_usec 4000\nnr_periods 37155\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.47 0.68 0.66 1/807 34682"
+    },
+    {
+      "epochMs": 1795656384099,
+      "cpuStat": "usage_usec 1757946694\nuser_usec 1497270490\nsystem_usec 260676203\nnice_usec 4000\nnr_periods 37165\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.47 0.68 0.66 1/807 34682"
+    },
+    {
+      "epochMs": 1795656385100,
+      "cpuStat": "usage_usec 1758102159\nuser_usec 1497401867\nsystem_usec 260700291\nnice_usec 4000\nnr_periods 37175\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.47 0.68 0.66 2/807 34682"
+    },
+    {
+      "epochMs": 1795656386103,
+      "cpuStat": "usage_usec 1759566387\nuser_usec 1498502910\nsystem_usec 261063477\nnice_usec 4000\nnr_periods 37185\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.59 0.70 0.66 2/797 34769"
+    },
+    {
+      "epochMs": 1795656387103,
+      "cpuStat": "usage_usec 1760662795\nuser_usec 1499596112\nsystem_usec 261066683\nnice_usec 4000\nnr_periods 37195\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.59 0.70 0.66 2/797 34769"
+    },
+    {
+      "epochMs": 1795656388104,
+      "cpuStat": "usage_usec 1761756940\nuser_usec 1500648605\nsystem_usec 261108334\nnice_usec 4000\nnr_periods 37205\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.59 0.70 0.66 2/800 34772"
+    },
+    {
+      "epochMs": 1795656389107,
+      "cpuStat": "usage_usec 1762937247\nuser_usec 1501789503\nsystem_usec 261147743\nnice_usec 4000\nnr_periods 37215\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.59 0.70 0.66 3/802 34779"
+    },
+    {
+      "epochMs": 1795656390108,
+      "cpuStat": "usage_usec 1763618498\nuser_usec 1502336373\nsystem_usec 261282124\nnice_usec 4000\nnr_periods 37225\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.59 0.70 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656391108,
+      "cpuStat": "usage_usec 1763700718\nuser_usec 1502401770\nsystem_usec 261298947\nnice_usec 4000\nnr_periods 37235\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.54 0.69 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656392109,
+      "cpuStat": "usage_usec 1763760342\nuser_usec 1502438707\nsystem_usec 261321634\nnice_usec 4000\nnr_periods 37245\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.54 0.69 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656393110,
+      "cpuStat": "usage_usec 1763829721\nuser_usec 1502484014\nsystem_usec 261345707\nnice_usec 4000\nnr_periods 37255\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.54 0.69 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656394110,
+      "cpuStat": "usage_usec 1763885204\nuser_usec 1502536723\nsystem_usec 261348480\nnice_usec 4000\nnr_periods 37265\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.54 0.69 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656395111,
+      "cpuStat": "usage_usec 1763970809\nuser_usec 1502595244\nsystem_usec 261375565\nnice_usec 4000\nnr_periods 37275\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.54 0.69 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656396111,
+      "cpuStat": "usage_usec 1764024514\nuser_usec 1502642737\nsystem_usec 261381777\nnice_usec 4000\nnr_periods 37285\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.50 0.68 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656397111,
+      "cpuStat": "usage_usec 1764102031\nuser_usec 1502701762\nsystem_usec 261400269\nnice_usec 4000\nnr_periods 37295\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.50 0.68 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656398112,
+      "cpuStat": "usage_usec 1764156196\nuser_usec 1502737266\nsystem_usec 261418929\nnice_usec 4000\nnr_periods 37305\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.50 0.68 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656399113,
+      "cpuStat": "usage_usec 1764229532\nuser_usec 1502804336\nsystem_usec 261425196\nnice_usec 4000\nnr_periods 37316\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.50 0.68 0.66 1/811 34816"
+    },
+    {
+      "epochMs": 1795656400114,
+      "cpuStat": "usage_usec 1764279247\nuser_usec 1502849536\nsystem_usec 261429711\nnice_usec 4000\nnr_periods 37326\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.50 0.68 0.66 1/807 34816"
+    },
+    {
+      "epochMs": 1795656401114,
+      "cpuStat": "usage_usec 1764348438\nuser_usec 1502913862\nsystem_usec 261434575\nnice_usec 4000\nnr_periods 37336\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.46 0.67 0.65 1/807 34816"
+    },
+    {
+      "epochMs": 1795656402115,
+      "cpuStat": "usage_usec 1764396611\nuser_usec 1502961224\nsystem_usec 261435386\nnice_usec 4000\nnr_periods 37346\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.46 0.67 0.65 1/807 34816"
+    },
+    {
+      "epochMs": 1795656403115,
+      "cpuStat": "usage_usec 1764458196\nuser_usec 1503020792\nsystem_usec 261437404\nnice_usec 4000\nnr_periods 37356\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.46 0.67 0.65 1/807 34816"
+    },
+    {
+      "epochMs": 1795656404116,
+      "cpuStat": "usage_usec 1764559728\nuser_usec 1503057468\nsystem_usec 261502260\nnice_usec 4000\nnr_periods 37366\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.46 0.67 0.65 1/812 34825"
+    },
+    {
+      "epochMs": 1795656405116,
+      "cpuStat": "usage_usec 1764612407\nuser_usec 1503095676\nsystem_usec 261516731\nnice_usec 4000\nnr_periods 37376\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.46 0.67 0.65 5/812 34825"
+    },
+    {
+      "epochMs": 1795656406117,
+      "cpuStat": "usage_usec 1764661520\nuser_usec 1503138773\nsystem_usec 261522746\nnice_usec 4000\nnr_periods 37386\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.42 0.66 0.65 1/812 34826"
+    },
+    {
+      "epochMs": 1795656407117,
+      "cpuStat": "usage_usec 1764967189\nuser_usec 1503350242\nsystem_usec 261616947\nnice_usec 4000\nnr_periods 37396\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.42 0.66 0.65 2/817 34835"
+    },
+    {
+      "epochMs": 1795656408118,
+      "cpuStat": "usage_usec 1765252448\nuser_usec 1503601958\nsystem_usec 261650490\nnice_usec 4000\nnr_periods 37406\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.42 0.66 0.65 1/812 34838"
+    },
+    {
+      "epochMs": 1795656409119,
+      "cpuStat": "usage_usec 1765335878\nuser_usec 1503670036\nsystem_usec 261665841\nnice_usec 4000\nnr_periods 37416\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.42 0.66 0.65 2/812 34838"
+    },
+    {
+      "epochMs": 1795656410125,
+      "cpuStat": "usage_usec 1765417246\nuser_usec 1503741857\nsystem_usec 261675389\nnice_usec 4000\nnr_periods 37426\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.42 0.66 0.65 2/812 34839"
+    },
+    {
+      "epochMs": 1795656411125,
+      "cpuStat": "usage_usec 1765486022\nuser_usec 1503808695\nsystem_usec 261677327\nnice_usec 4000\nnr_periods 37436\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.39 0.64 0.64 4/812 34839"
+    },
+    {
+      "epochMs": 1795656412146,
+      "cpuStat": "usage_usec 1765544753\nuser_usec 1503863193\nsystem_usec 261681559\nnice_usec 4000\nnr_periods 37446\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.39 0.64 0.64 2/812 34840"
+    },
+    {
+      "epochMs": 1795656413147,
+      "cpuStat": "usage_usec 1765612062\nuser_usec 1503917597\nsystem_usec 261694465\nnice_usec 4000\nnr_periods 37456\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+      "cpuPressure": "UNAVAILABLE",
+      "cpuMax": "400000 100000",
+      "loadavg": "0.39 0.64 0.64 1/812 34840"
+    }
+  ],
+  "diagnosticTrials": [
+    {
+      "trial": 1,
+      "status": "safety-stop",
+      "metrics": {
+        "underrunDuration": {
+          "first": 0,
+          "last": 0,
+          "min": 0,
+          "max": 0,
+          "observations": 161
+        },
+        "underrunEvents": {
+          "first": 0,
+          "last": 0,
+          "min": 0,
+          "max": 0,
+          "observations": 161
+        },
+        "totalDuration": {
+          "first": 0.0026,
+          "last": 16.0334,
+          "min": 0.0026,
+          "max": 16.0334,
+          "observations": 161
+        },
+        "baseLatency": {
+          "first": 0.010020833333333333,
+          "last": 0.010020833333333333,
+          "min": 0.010020833333333333,
+          "max": 0.010020833333333333,
+          "observations": 161
+        },
+        "outputLatency": {
+          "first": 0.032,
+          "last": 0.032,
+          "min": 0.032,
+          "max": 0.032,
+          "observations": 161
+        }
+      },
+      "observations": 161,
+      "firstBreach": {
+        "firstOver20": {
+          "sample": 161,
+          "generation": 1,
+          "atMs": 19972.39999999851,
+          "intervalMs": 100.599999999628,
+          "outputTimeDeltaMs": 100.099999999628,
+          "outputContextDeltaMs": 80.137666666666,
+          "nativeCurrentTime": 16.224,
+          "nativeState": "running",
+          "predictedContextSec": "16.21367733333333333",
+          "signedMs": "-29.99900000000033000",
+          "absoluteMs": 29.99900000000033,
+          "stepMs": -19.962333332962,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        },
+        "stamp": {
+          "atMs": 19972,
+          "currentTime": 16.224,
+          "state": "running",
+          "raw": {
+            "contextTime": 16.183678333333333,
+            "performanceTime": 19966.89999999851
+          }
+        },
+        "metrics": {
+          "playbackStats": "AVAILABLE",
+          "underrunDuration": 0,
+          "underrunEvents": 0,
+          "totalDuration": 16.0334,
+          "baseLatency": 0.010020833333333333,
+          "outputLatency": 0.032
+        },
+        "cpuCgroupWindow": {
+          "before": {
+            "epochMs": 1795656385100,
+            "cpuStat": "usage_usec 1758102159\nuser_usec 1497401867\nsystem_usec 260700291\nnice_usec 4000\nnr_periods 37175\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+            "cpuPressure": "UNAVAILABLE",
+            "cpuMax": "400000 100000",
+            "loadavg": "0.47 0.68 0.66 2/807 34682"
+          },
+          "after": {
+            "epochMs": 1795656386103,
+            "cpuStat": "usage_usec 1759566387\nuser_usec 1498502910\nsystem_usec 261063477\nnice_usec 4000\nnr_periods 37185\nnr_throttled 72\nthrottled_usec 2937325\nnr_bursts 0\nburst_usec 0",
+            "cpuPressure": "UNAVAILABLE",
+            "cpuMax": "400000 100000",
+            "loadavg": "0.59 0.70 0.66 2/797 34769"
+          },
+          "delta": {
+            "user_usec": 1101043,
+            "throttled_usec": 0,
+            "system_usec": 363186,
+            "burst_usec": 0,
+            "nr_throttled": 0,
+            "usage_usec": 1464228,
+            "nr_bursts": 0,
+            "nr_periods": 10,
+            "nice_usec": 0
+          }
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "status": "natural-completed",
+      "metrics": {
+        "underrunDuration": {
+          "first": 0,
+          "last": 0,
+          "min": 0,
+          "max": 0,
+          "observations": 240
+        },
+        "underrunEvents": {
+          "first": 0,
+          "last": 0,
+          "min": 0,
+          "max": 0,
+          "observations": 240
+        },
+        "totalDuration": {
+          "first": 0.0027,
+          "last": 24.0473,
+          "min": 0.0027,
+          "max": 24.0473,
+          "observations": 240
+        },
+        "baseLatency": {
+          "first": 0.010020833333333333,
+          "last": 0.010020833333333333,
+          "min": 0.010020833333333333,
+          "max": 0.010020833333333333,
+          "observations": 240
+        },
+        "outputLatency": {
+          "first": 0.032,
+          "last": 0.032,
+          "min": 0.032,
+          "max": 0.032,
+          "observations": 240
+        }
+      },
+      "observations": 240,
+      "firstBreach": null
+    }
+  ],
+  "scope": "CPU samples cover the container cgroup only, at about 1Hz, and cannot identify audio thread scheduling or subprocess causality. Browser playbackStats is read only in this additional condition without forcing runtime flags; ordinary trials have no such browser sampling. Absent native metrics are UNAVAILABLE."
+}

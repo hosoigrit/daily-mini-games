@@ -1,0 +1,24 @@
+[firefox-original]
+2026-11-26T01:07:22.415Z pw:browser [pid=21937][err] 2026-11-26 01:07:22.415545 UTC - [Parent 21937: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T01:07:22.416Z pw:browser [pid=21937][err] 2026-11-26 01:07:22.416057 UTC - [Parent 21937: AudioIPC Server RPC]: E/cubeb context.rs:692: Error: error while waiting for pulse's context to be ready
+2026-11-26T01:07:22.416Z pw:browser [pid=21937][err] 2026-11-26 01:07:22.416157 UTC - [Parent 21937: AudioIPC Server RPC]: E/cubeb context.rs:201: Error: couldn't init pulse's context
+2026-11-26T01:07:22.427Z pw:browser [pid=21937][err] 2026-11-26 01:07:22.427713 UTC - [Child 22059: CubebOperation #1]: W/MediaTrackGraph Output number of channels is 0.
+
+[firefox-isolated]
+2026-11-26T01:07:58.657Z pw:browser [pid=24187][err] 2026-11-26 01:07:58.656845 UTC - [Parent 24187: AudioIPC Server RPC]: E/cubeb context.rs:66: libpulse loaded from /lib/x86_64-linux-gnu/libpulse.so.0
+2026-11-26T01:07:58.668Z pw:browser [pid=24187][err] 2026-11-26 01:07:58.668075 UTC - [Child 24317: Main Thread]: D/MediaTrackGraph <native-address>: AudioCallbackDriver <native-address> ctor - input: device 0x0, channel 0, output: device 0x0, channel 2
+2026-11-26T01:07:58.681Z pw:browser [pid=24187][err] 2026-11-26 01:07:58.681153 UTC - [Parent 24187: AudioIPC Server RPC]: E/cubeb stream.rs:878: Error: register_device_change_callback unimplemented
+2026-11-26T01:07:58.693Z pw:browser [pid=24187][err] 2026-11-26 01:07:58.693876 UTC - [Child 24317: MediaTrackGrph]: D/MediaTrackGraph <native-address>: AudioCallbackDriver <native-address> Fallback driver has stopped.
+
+[task PulseAudio daemon]
+I: [pulseaudio] main.c: Running in system mode: no
+I: [pulseaudio] sink.c: Created sink 0 "r2_test_null" with sample spec float32le 2ch 48000Hz and channel map front-left,front-right
+I: [pulseaudio] sink-input.c: Created input 0 "Web Audio probe" on r2_test_null with sample spec float32le 2ch 48000Hz and channel map front-left,front-right
+I: [pulseaudio] protocol-native.c: Final latency 50.00 ms = 18.75 ms + 2*6.25 ms + 18.75 ms
+W: [pulseaudio] server-lookup.c: Unable to contact D-Bus: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+I: [null-sink] util.c: Failed to acquire real-time scheduling: Input/output error
+I: [pulseaudio] main.c: Daemon startup complete.
+I: [pulseaudio] main.c: Exiting.
+
+[cleanup]
+PASS: task daemon exited; Unix socket and 0700 temporary runtime (including the cookie) removed. No system service changed.

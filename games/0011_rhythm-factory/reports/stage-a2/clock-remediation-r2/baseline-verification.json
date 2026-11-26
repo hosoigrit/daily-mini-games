@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "startHead": "277d8775ee2a0ef2350b695e89c79a5a0d361847",
+  "initialTree": "8c9b20c4efd81398dd7f74266de251c624ea4e15",
+  "reviewedRuntime": "e34e1345e4ecd0fa0b251176f7af64136a46b0ee",
+  "previousHold": "751a1d8cbc40d3f58b2871b9993056be16d36fc8",
+  "previousEvidenceOnlyDiff": {"added": 17, "runtimeChanges": 0},
+  "diffFromPreviousHold": {"added": 20, "modified": 3, "deleted": 0},
+  "diffFromA1": {"added": 39, "modified": 1, "deleted": 0},
+  "changedFileManifestsVerified": [23, 40],
+  "priorHandoffChecksumsVerified": 9,
+  "remoteAtStart": {
+    "main": "afbb965fe57c4772f91cbe67e59571180e9073f8",
+    "docs/game-0011-handoff": "3cc4dd46b644bb0b829cc97935f6e33de21ef3c4",
+    "codex/game-0011-rhythm-factory": "d6fd061bb986532307ed5b575a7cbd8b52261f26"
+  },
+  "workingTreeAtStart": "clean",
+  "workspaceRestoration": "existing workspace and prior verified bundle reused",
+  "archives": {"archiveBytes": 209523, "crc": "PASS", "zipAndTreeAndWorktreeFiles": 30, "outerManifest": 29, "innerManifest": 20},
+  "validatedDigests": {
+    "zip": "eb5e70388c5dd20cfbc5ae390d00c2ff88fa99449ab76e0ea1145bf194734075",
+    "manifest": "3519bc91abd165524de46f29b0550f2d8bc347a4f2b6001eb5707b4e14ec067b",
+    "nestedManifest": "9b199db7f0fdfda02600d78cc234899b7842b8f5aacac25be563f6fc75ffd004",
+    "lockfile": "5f5cce304c990aa7c647c0f8b7789c8cbc674ba77d0e1bdd1b4edaf127d8b8cc",
+    "sharedTypes": "db040783239fbd26a96b3ee18c01878d47917da6e73ec88d5a52d3dc02d840ed"
+  },
+  "preserved": {"tc": 310, "tcStatus": "NOT RUN", "traceability": 581, "at": 125, "if": 20, "qg": 11, "poc": 18}
+}

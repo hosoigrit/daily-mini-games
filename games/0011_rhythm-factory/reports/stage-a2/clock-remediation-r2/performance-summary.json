@@ -1,0 +1,924 @@
+{
+  "basis": "Each case measures the actual product render before waveform diagnostics. Nearest-rank P95/P99. Browser telemetry only; memory values are PCM payload size.",
+  "referenceMs": {
+    "median": 5000,
+    "maximum": 10000,
+    "scope": "Approved design cold-render reference; a synthetic load fixture is not qualification of an official music track."
+  },
+  "records": {
+    "chromium-approved": {
+      "natural-24": {
+        "generateMs": {
+          "count": 10,
+          "median": 3402.7999999988824,
+          "p95": 4218.299999998882,
+          "p99": 4218.299999998882,
+          "maximum": 4218.299999998882
+        },
+        "renderAttempts": 10,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          }
+        ]
+      },
+      "stop-restart-24": {
+        "generateMs": {
+          "count": 3,
+          "median": 3306.2000000011176,
+          "p95": 3478.0999999996275,
+          "p99": 3478.0999999996275,
+          "maximum": 3478.0999999996275
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          }
+        ]
+      },
+      "natural-84": {
+        "generateMs": {
+          "count": 2,
+          "median": 44864.799999999814,
+          "p95": 47601.90000000037,
+          "p99": 47601.90000000037,
+          "maximum": 47601.90000000037
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          },
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          }
+        ]
+      }
+    },
+    "chromium-diagnostics": {
+      "natural-24": {
+        "generateMs": {
+          "count": 2,
+          "median": 3426.4999999990687,
+          "p95": 3436.0999999996275,
+          "p99": 3436.0999999996275,
+          "maximum": 3436.0999999996275
+        },
+        "renderAttempts": 2,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          },
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548094272613525
+          }
+        ]
+      }
+    },
+    "chromium-84-completion": {
+      "natural-84": {
+        "generateMs": {
+          "count": 1,
+          "median": 41586.0,
+          "p95": 41586.0,
+          "p99": 41586.0,
+          "maximum": 41586.0
+        },
+        "renderAttempts": 1,
+        "frameAndPcm": [
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237667053937912,
+            "fourSfxPeak": 0.24950668215751648,
+            "mixedFirst100msPeak": 0.44548091292381287
+          }
+        ]
+      }
+    },
+    "firefox-isolated": {
+      "natural-24": {
+        "generateMs": {
+          "count": 10,
+          "median": 413.0,
+          "p95": 519.0,
+          "p99": 519.0,
+          "maximum": 519.0
+        },
+        "renderAttempts": 10,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          }
+        ]
+      },
+      "stop-restart-24": {
+        "generateMs": {
+          "count": 3,
+          "median": 408.0,
+          "p95": 432.0,
+          "p99": 432.0,
+          "maximum": 432.0
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          }
+        ]
+      },
+      "natural-84": {
+        "generateMs": {
+          "count": 3,
+          "median": 3578.0,
+          "p95": 3650.0,
+          "p99": 3650.0,
+          "maximum": 3650.0
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          },
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          },
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.2945835292339325,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          },
+          {
+            "singleSfxPeak": 0.0623767115175724,
+            "fourSfxPeak": 0.2495068460702896,
+            "mixedFirst100msPeak": 0.4455273151397705
+          }
+        ]
+      }
+    },
+    "webkit-approved": {
+      "natural-24": {
+        "generateMs": {
+          "count": 10,
+          "median": 2600.0,
+          "p95": 5023.0,
+          "p99": 5023.0,
+          "maximum": 5023.0
+        },
+        "renderAttempts": 10,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440730810165405,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          }
+        ]
+      },
+      "stop-restart-24": {
+        "generateMs": {
+          "count": 3,
+          "median": 3115.0,
+          "p95": 4665.0,
+          "p99": 4665.0,
+          "maximum": 4665.0
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          },
+          {
+            "length": 1152000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 9216000,
+            "float32": true,
+            "peak": 0.29440730810165405,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 48
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          }
+        ]
+      },
+      "natural-84": {
+        "generateMs": {
+          "count": 3,
+          "median": 39201.0,
+          "p95": 40862.0,
+          "p99": 40862.0,
+          "maximum": 40862.0
+        },
+        "renderAttempts": 3,
+        "frameAndPcm": [
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440736770629883,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          },
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          },
+          {
+            "length": 4032000,
+            "channels": 2,
+            "rate": 48000,
+            "pcmBytes": 32256000,
+            "float32": true,
+            "peak": 0.29440733790397644,
+            "nonfinite": 0,
+            "audibleHalfSecondBlocks": 168
+          }
+        ],
+        "mixPeaks": [
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          },
+          {
+            "singleSfxPeak": 0.06237666681408882,
+            "fourSfxPeak": 0.24950666725635529,
+            "mixedFirst100msPeak": 0.44548091292381287
+          }
+        ]
+      }
+    }
+  }
+}

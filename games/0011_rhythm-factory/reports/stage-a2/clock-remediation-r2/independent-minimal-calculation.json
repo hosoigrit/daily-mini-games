@@ -1,0 +1,1140 @@
+{
+  "firefox-original": {
+    "sourceSha256": "0b24cea8d297c8c03e46fbb15b1e0d53bc496ae6a6c9da573fadf7b5e4999b4a",
+    "stateAndResumeCounts": {
+      "pending/suspended": 15
+    },
+    "cases": [
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      }
+    ]
+  },
+  "firefox-isolated": {
+    "sourceSha256": "44a8f92c3e6f9b2414f6826bdc5c4f8136bb715503bd2033c6bfd78ee3385c14",
+    "stateAndResumeCounts": {
+      "fulfilled/running": 14,
+      "pending/suspended": 1
+    },
+    "cases": [
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1127,
+        "cutoffCurrentTime": 0.496,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1504,
+        "cutoffCurrentTime": 0.13333333333333333,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1547,
+        "cutoffCurrentTime": 0.096,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1386,
+        "cutoffCurrentTime": 0.24533333333333332,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1558,
+        "cutoffCurrentTime": 0.058666666666666666,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": {
+          "contextTime": 0.027416666666666666,
+          "performanceTime": 1742.75,
+          "atMs": 1774
+        },
+        "postAnchor": [],
+        "firstOver20": null,
+        "maximumAbsoluteMs": null
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "pending",
+        "state": "suspended",
+        "resumeLatencyMs": null,
+        "cutoffCurrentTime": 0,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1510,
+        "cutoffCurrentTime": 0.11466666666666667,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1521,
+        "cutoffCurrentTime": 0.096,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1412,
+        "cutoffCurrentTime": 0.24533333333333332,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1446,
+        "cutoffCurrentTime": 0.17066666666666666,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": {
+          "contextTime": 0.04608333333333334,
+          "performanceTime": 1672.75,
+          "atMs": 1704
+        },
+        "postAnchor": [
+          {
+            "atMs": 1804,
+            "contextAdvanceMs": 93.33333333333331,
+            "performanceAdvanceMs": 100.0,
+            "signedMs": -6.66666666666668,
+            "exactSignedMs": "-166666666666667/25000000000000",
+            "over20": false
+          }
+        ],
+        "firstOver20": null,
+        "maximumAbsoluteMs": 6.66666666666668
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 200,
+        "cutoffCurrentTime": 1.456,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1511,
+        "cutoffCurrentTime": 0.11466666666666667,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1513,
+        "cutoffCurrentTime": 0.096,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1447,
+        "cutoffCurrentTime": 0.17066666666666666,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "firefox",
+        "version": "159.0",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 1478,
+        "cutoffCurrentTime": 0.152,
+        "cutoffOutputLatency": 0.03125,
+        "anchor": {
+          "contextTime": 0.027416666666666666,
+          "performanceTime": 1650.75,
+          "atMs": 1682
+        },
+        "postAnchor": [
+          {
+            "atMs": 1783,
+            "contextAdvanceMs": 93.33333333333333,
+            "performanceAdvanceMs": 101.0,
+            "signedMs": -7.666666666666666,
+            "exactSignedMs": "-3833333333333333/500000000000000",
+            "over20": false
+          }
+        ],
+        "firstOver20": null,
+        "maximumAbsoluteMs": 7.666666666666666
+      }
+    ]
+  },
+  "webkit-approved": {
+    "sourceSha256": "f90dafe5ccac7aebc5d51617ebb7ba0d6a24284ae97ff2ab9b20e985df3070fe",
+    "stateAndResumeCounts": {
+      "fulfilled/running": 15
+    },
+    "cases": [
+      {
+        "trial": 1,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 24,
+        "cutoffCurrentTime": 1.6293333333333333,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 30,
+        "cutoffCurrentTime": 1.6453333333333333,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 25,
+        "cutoffCurrentTime": 1.616,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 22,
+        "cutoffCurrentTime": 1.616,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 1,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 25,
+        "cutoffCurrentTime": 1.616,
+        "cutoffOutputLatency": 0,
+        "anchor": {
+          "contextTime": 0.09066666599999999,
+          "performanceTime": 299,
+          "atMs": 209
+        },
+        "postAnchor": [
+          {
+            "atMs": 309,
+            "contextAdvanceMs": 98.66666700000003,
+            "performanceAdvanceMs": 197,
+            "signedMs": -98.33333299999997,
+            "exactSignedMs": "-9833333299999997/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 409,
+            "contextAdvanceMs": 200.0,
+            "performanceAdvanceMs": 400,
+            "signedMs": -200.0,
+            "exactSignedMs": "-19999999999999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 509,
+            "contextAdvanceMs": 301.33333400000004,
+            "performanceAdvanceMs": 602,
+            "signedMs": -300.66666599999996,
+            "exactSignedMs": "-30066666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 610,
+            "contextAdvanceMs": 400.00000000000006,
+            "performanceAdvanceMs": 799,
+            "signedMs": -398.99999999999994,
+            "exactSignedMs": "-9974999999999999/25000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 710,
+            "contextAdvanceMs": 501.33333400000004,
+            "performanceAdvanceMs": 1002,
+            "signedMs": -500.66666599999996,
+            "exactSignedMs": "-50066666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 810,
+            "contextAdvanceMs": 599.9999999999999,
+            "performanceAdvanceMs": 1200,
+            "signedMs": -600.0000000000001,
+            "exactSignedMs": "-60000000000000009/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 911,
+            "contextAdvanceMs": 701.333334,
+            "performanceAdvanceMs": 1402,
+            "signedMs": -700.666666,
+            "exactSignedMs": "-70066666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1011,
+            "contextAdvanceMs": 802.6666670000001,
+            "performanceAdvanceMs": 1605,
+            "signedMs": -802.3333329999999,
+            "exactSignedMs": "-80233333299999989/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1111,
+            "contextAdvanceMs": 901.333334,
+            "performanceAdvanceMs": 1802,
+            "signedMs": -900.666666,
+            "exactSignedMs": "-90066666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1213,
+            "contextAdvanceMs": 1002.6666670000001,
+            "performanceAdvanceMs": 2005,
+            "signedMs": -1002.3333329999999,
+            "exactSignedMs": "-100233333299999989/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1317,
+            "contextAdvanceMs": 1106.666667,
+            "performanceAdvanceMs": 2213,
+            "signedMs": -1106.333333,
+            "exactSignedMs": "-110633333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1421,
+            "contextAdvanceMs": 1210.666667,
+            "performanceAdvanceMs": 2421,
+            "signedMs": -1210.333333,
+            "exactSignedMs": "-121033333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1525,
+            "contextAdvanceMs": 1314.666667,
+            "performanceAdvanceMs": 2629,
+            "signedMs": -1314.333333,
+            "exactSignedMs": "-131433333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1629,
+            "contextAdvanceMs": 1418.666667,
+            "performanceAdvanceMs": 2837,
+            "signedMs": -1418.333333,
+            "exactSignedMs": "-141833333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1733,
+            "contextAdvanceMs": 1522.6666670000002,
+            "performanceAdvanceMs": 3045,
+            "signedMs": -1522.3333329999998,
+            "exactSignedMs": "-152233333299999989/100000000000000",
+            "over20": true
+          }
+        ],
+        "firstOver20": {
+          "atMs": 309,
+          "contextAdvanceMs": 98.66666700000003,
+          "performanceAdvanceMs": 197,
+          "signedMs": -98.33333299999997,
+          "exactSignedMs": "-9833333299999997/100000000000000",
+          "over20": true
+        },
+        "maximumAbsoluteMs": 1522.3333329999998
+      },
+      {
+        "trial": 2,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 24,
+        "cutoffCurrentTime": 1.6186666666666667,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 31,
+        "cutoffCurrentTime": 1.6213333333333333,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 34,
+        "cutoffCurrentTime": 1.6106666666666667,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 33,
+        "cutoffCurrentTime": 1.624,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 2,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 26,
+        "cutoffCurrentTime": 1.6186666666666667,
+        "cutoffOutputLatency": 0,
+        "anchor": {
+          "contextTime": 0.088,
+          "performanceTime": 287,
+          "atMs": 200
+        },
+        "postAnchor": [
+          {
+            "atMs": 300,
+            "contextAdvanceMs": 98.66666599999998,
+            "performanceAdvanceMs": 197,
+            "signedMs": -98.33333400000002,
+            "exactSignedMs": "-4916666700000001/50000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 400,
+            "contextAdvanceMs": 200.0,
+            "performanceAdvanceMs": 400,
+            "signedMs": -200.0,
+            "exactSignedMs": "-200",
+            "over20": true
+          },
+          {
+            "atMs": 500,
+            "contextAdvanceMs": 298.6666660000001,
+            "performanceAdvanceMs": 597,
+            "signedMs": -298.3333339999999,
+            "exactSignedMs": "-5966666679999999/20000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 600,
+            "contextAdvanceMs": 400.0,
+            "performanceAdvanceMs": 800,
+            "signedMs": -400.0,
+            "exactSignedMs": "-400",
+            "over20": true
+          },
+          {
+            "atMs": 705,
+            "contextAdvanceMs": 498.666666,
+            "performanceAdvanceMs": 997,
+            "signedMs": -498.333334,
+            "exactSignedMs": "-249166667/500000",
+            "over20": true
+          },
+          {
+            "atMs": 808,
+            "contextAdvanceMs": 608.0,
+            "performanceAdvanceMs": 1216,
+            "signedMs": -608.0,
+            "exactSignedMs": "-608",
+            "over20": true
+          },
+          {
+            "atMs": 908,
+            "contextAdvanceMs": 706.6666659999999,
+            "performanceAdvanceMs": 1413,
+            "signedMs": -706.3333340000001,
+            "exactSignedMs": "-7063333340000001/10000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1008,
+            "contextAdvanceMs": 808.0,
+            "performanceAdvanceMs": 1616,
+            "signedMs": -808.0,
+            "exactSignedMs": "-808",
+            "over20": true
+          },
+          {
+            "atMs": 1108,
+            "contextAdvanceMs": 906.666666,
+            "performanceAdvanceMs": 1813,
+            "signedMs": -906.333334,
+            "exactSignedMs": "-453166667/500000",
+            "over20": true
+          },
+          {
+            "atMs": 1209,
+            "contextAdvanceMs": 1008.0,
+            "performanceAdvanceMs": 2016,
+            "signedMs": -1008.0,
+            "exactSignedMs": "-1008",
+            "over20": true
+          },
+          {
+            "atMs": 1313,
+            "contextAdvanceMs": 1112.0,
+            "performanceAdvanceMs": 2224,
+            "signedMs": -1112.0,
+            "exactSignedMs": "-1112",
+            "over20": true
+          },
+          {
+            "atMs": 1417,
+            "contextAdvanceMs": 1216.0,
+            "performanceAdvanceMs": 2432,
+            "signedMs": -1216.0,
+            "exactSignedMs": "-1216",
+            "over20": true
+          },
+          {
+            "atMs": 1521,
+            "contextAdvanceMs": 1320.0,
+            "performanceAdvanceMs": 2640,
+            "signedMs": -1320.0,
+            "exactSignedMs": "-1320",
+            "over20": true
+          },
+          {
+            "atMs": 1625,
+            "contextAdvanceMs": 1424.0,
+            "performanceAdvanceMs": 2848,
+            "signedMs": -1424.0,
+            "exactSignedMs": "-1424",
+            "over20": true
+          },
+          {
+            "atMs": 1729,
+            "contextAdvanceMs": 1528.0,
+            "performanceAdvanceMs": 3056,
+            "signedMs": -1528.0,
+            "exactSignedMs": "-1528",
+            "over20": true
+          }
+        ],
+        "firstOver20": {
+          "atMs": 300,
+          "contextAdvanceMs": 98.66666599999998,
+          "performanceAdvanceMs": 197,
+          "signedMs": -98.33333400000002,
+          "exactSignedMs": "-4916666700000001/50000000000000",
+          "over20": true
+        },
+        "maximumAbsoluteMs": 1528.0
+      },
+      {
+        "trial": 3,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-01",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 21,
+        "cutoffCurrentTime": 1.6293333333333333,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "resume-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 33,
+        "cutoffCurrentTime": 1.624,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-02",
+        "sequence": "connect-first",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 27,
+        "cutoffCurrentTime": 1.6186666666666667,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-03",
+        "sequence": "prepared-before-click",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 23,
+        "cutoffCurrentTime": 1.624,
+        "cutoffOutputLatency": 0,
+        "anchor": null,
+        "postAnchor": []
+      },
+      {
+        "trial": 3,
+        "engine": "webkit",
+        "version": "27.2",
+        "case": "CASE-04",
+        "sequence": "scheduled-after-anchor",
+        "trusted": true,
+        "resume": "fulfilled",
+        "state": "running",
+        "resumeLatencyMs": 22,
+        "cutoffCurrentTime": 1.6266666666666667,
+        "cutoffOutputLatency": 0,
+        "anchor": {
+          "contextTime": 0.09066666599999999,
+          "performanceTime": 269,
+          "atMs": 181
+        },
+        "postAnchor": [
+          {
+            "atMs": 281,
+            "contextAdvanceMs": 101.33333400000001,
+            "performanceAdvanceMs": 203,
+            "signedMs": -101.66666599999999,
+            "exactSignedMs": "-10166666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 381,
+            "contextAdvanceMs": 200.0,
+            "performanceAdvanceMs": 400,
+            "signedMs": -200.0,
+            "exactSignedMs": "-19999999999999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 481,
+            "contextAdvanceMs": 301.33333400000004,
+            "performanceAdvanceMs": 603,
+            "signedMs": -301.66666599999996,
+            "exactSignedMs": "-30166666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 581,
+            "contextAdvanceMs": 400.00000000000006,
+            "performanceAdvanceMs": 800,
+            "signedMs": -399.99999999999994,
+            "exactSignedMs": "-9999999999999999/25000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 681,
+            "contextAdvanceMs": 501.33333400000004,
+            "performanceAdvanceMs": 1003,
+            "signedMs": -501.66666599999996,
+            "exactSignedMs": "-50166666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 782,
+            "contextAdvanceMs": 602.666667,
+            "performanceAdvanceMs": 1206,
+            "signedMs": -603.333333,
+            "exactSignedMs": "-60333333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 882,
+            "contextAdvanceMs": 701.333334,
+            "performanceAdvanceMs": 1403,
+            "signedMs": -701.666666,
+            "exactSignedMs": "-70166666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 982,
+            "contextAdvanceMs": 802.6666670000001,
+            "performanceAdvanceMs": 1606,
+            "signedMs": -803.3333329999999,
+            "exactSignedMs": "-80333333299999989/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1082,
+            "contextAdvanceMs": 901.333334,
+            "performanceAdvanceMs": 1803,
+            "signedMs": -901.666666,
+            "exactSignedMs": "-90166666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1186,
+            "contextAdvanceMs": 1005.333334,
+            "performanceAdvanceMs": 2011,
+            "signedMs": -1005.666666,
+            "exactSignedMs": "-100566666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1290,
+            "contextAdvanceMs": 1109.333334,
+            "performanceAdvanceMs": 2219,
+            "signedMs": -1109.666666,
+            "exactSignedMs": "-110966666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1399,
+            "contextAdvanceMs": 1218.666667,
+            "performanceAdvanceMs": 2438,
+            "signedMs": -1219.333333,
+            "exactSignedMs": "-121933333299999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1506,
+            "contextAdvanceMs": 1325.333334,
+            "performanceAdvanceMs": 2651,
+            "signedMs": -1325.666666,
+            "exactSignedMs": "-132566666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1610,
+            "contextAdvanceMs": 1429.333334,
+            "performanceAdvanceMs": 2859,
+            "signedMs": -1429.666666,
+            "exactSignedMs": "-142966666599999999/100000000000000",
+            "over20": true
+          },
+          {
+            "atMs": 1714,
+            "contextAdvanceMs": 1533.333334,
+            "performanceAdvanceMs": 3067,
+            "signedMs": -1533.666666,
+            "exactSignedMs": "-153366666599999999/100000000000000",
+            "over20": true
+          }
+        ],
+        "firstOver20": {
+          "atMs": 281,
+          "contextAdvanceMs": 101.33333400000001,
+          "performanceAdvanceMs": 203,
+          "signedMs": -101.66666599999999,
+          "exactSignedMs": "-10166666599999999/100000000000000",
+          "over20": true
+        },
+        "maximumAbsoluteMs": 1533.666666
+      }
+    ]
+  }
+}

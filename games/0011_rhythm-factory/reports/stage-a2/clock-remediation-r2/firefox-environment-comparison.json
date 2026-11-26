@@ -1,0 +1,225 @@
+{
+  "originalCondition": {
+    "minimalFreshLaunches": 3,
+    "minimalConditions": 15,
+    "nativeLogMatchCounts": {
+      "libpulseLoaded": 78,
+      "connectionFailed": 78,
+      "outputCh0": 120,
+      "outputCh2": 0,
+      "underrunDiagnosticLines": 0
+    },
+    "legacyPlaybackResults": {
+      "A-2a-R CASE-05 natural trial 1": "activation-unavailable",
+      "A-2a-R CASE-05 natural trial 2": "activation-unavailable",
+      "A-2a-R CASE-05 natural trial 3": "activation-unavailable",
+      "A-2a-R CASE-05 stop-restart trial 1": "activation-unavailable",
+      "A-2a-R CASE-05 stop-restart trial 2": "activation-unavailable",
+      "A-2a-R CASE-05 stop-restart trial 3": "activation-unavailable"
+    },
+    "legacyComparatorExemption": "Original environment consistently cannot activate. After original minimal conditions and all 6 unchanged live lifecycle regression tests, the additional repeated matrix was not started for this environment."
+  },
+  "isolatedCondition": {
+    "minimalFreshLaunches": 3,
+    "minimalConditions": 15,
+    "nativeLogMatchCounts": {
+      "libpulseLoaded": 3,
+      "connectionFailed": 0,
+      "outputCh0": 0,
+      "outputCh2": 15,
+      "underrunDiagnosticLines": 0
+    },
+    "multipleTrials": {
+      "natural-24": {
+        "planned": 10,
+        "executed": 10,
+        "unattempted": 0,
+        "statuses": {
+          "natural-completed": 6,
+          "safety-stop": 4
+        },
+        "testStatuses": {
+          "passed": 6,
+          "failed": 4
+        },
+        "validSamples": 2068,
+        "invalidSamples": 0,
+        "over20": 4,
+        "syncMs": {
+          "count": 2068,
+          "median": 4.666666666668,
+          "p95": 11.66666666666667,
+          "p99": 14.99999999999967,
+          "maximum": 78.99999999999866
+        },
+        "generationMs": {
+          "count": 10,
+          "median": 413.0,
+          "p95": 519.0,
+          "p99": 519.0,
+          "maximum": 519.0
+        },
+        "outgoingRequests": 0
+      },
+      "stop-restart-24": {
+        "planned": 3,
+        "executed": 3,
+        "unattempted": 0,
+        "statuses": {
+          "restart-completed": 3
+        },
+        "testStatuses": {
+          "passed": 3
+        },
+        "validSamples": 61,
+        "invalidSamples": 0,
+        "over20": 0,
+        "syncMs": {
+          "count": 61,
+          "median": 6.00000000000004,
+          "p95": 17.0,
+          "p99": 17.3333333333334,
+          "maximum": 17.3333333333334
+        },
+        "generationMs": {
+          "count": 3,
+          "median": 408.0,
+          "p95": 432.0,
+          "p99": 432.0,
+          "maximum": 432.0
+        },
+        "outgoingRequests": 0
+      },
+      "natural-84": {
+        "planned": 3,
+        "executed": 3,
+        "unattempted": 0,
+        "statuses": {
+          "safety-stop": 3
+        },
+        "testStatuses": {
+          "failed": 3
+        },
+        "validSamples": 342,
+        "invalidSamples": 0,
+        "over20": 3,
+        "syncMs": {
+          "count": 342,
+          "median": 4.666666666668,
+          "p95": 11.66666666666667,
+          "p99": 13.99999999999997,
+          "maximum": 28.666666666666664
+        },
+        "generationMs": {
+          "count": 3,
+          "median": 3578.0,
+          "p95": 3650.0,
+          "p99": 3650.0,
+          "maximum": 3650.0
+        },
+        "outgoingRequests": 0
+      }
+    },
+    "anchorsPerTrial": [
+      {
+        "scenario": "natural-24",
+        "trial": 1,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 2,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 3,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 4,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 5,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 6,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 7,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 8,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 9,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-24",
+        "trial": 10,
+        "anchors": 1,
+        "status": "natural-completed"
+      },
+      {
+        "scenario": "stop-restart-24",
+        "trial": 1,
+        "anchors": 2,
+        "status": "restart-completed"
+      },
+      {
+        "scenario": "stop-restart-24",
+        "trial": 2,
+        "anchors": 2,
+        "status": "restart-completed"
+      },
+      {
+        "scenario": "stop-restart-24",
+        "trial": 3,
+        "anchors": 2,
+        "status": "restart-completed"
+      },
+      {
+        "scenario": "natural-84",
+        "trial": 1,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-84",
+        "trial": 2,
+        "anchors": 1,
+        "status": "safety-stop"
+      },
+      {
+        "scenario": "natural-84",
+        "trial": 3,
+        "anchors": 1,
+        "status": "safety-stop"
+      }
+    ]
+  },
+  "difference": "Exact browser and launch settings, trusted gesture and product code. Only routing to task-private PulseAudio socket.",
+  "rootCauseConfirmed": "The previous environment could not initialize native Pulse output. Same Firefox could open the task socket, use a 2ch stream, resume and produce a valid output timestamp. This fixes the activation path in the isolated application runs.",
+  "sustainedClock": "FAIL. Measured valid output-clock excursions beyond 20 ms in 24-second and 84-second runs remain. Virtual output and non-RT environment only. No physical audition."
+}

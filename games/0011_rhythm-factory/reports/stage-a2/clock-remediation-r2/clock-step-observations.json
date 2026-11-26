@@ -1,0 +1,3193 @@
+{
+  "regression": {
+    "webkit A-2a-R CASE-05 natural trial 1": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3470,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 201.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.214333333",
+        "signedMs": "-99.66666700000001000",
+        "absoluteMs": 99.666667,
+        "stepMs": -99.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3470,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 201.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.214333333",
+          "signedMs": "-99.66666700000001000",
+          "absoluteMs": 99.666667,
+          "stepMs": -99.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 99.666667
+    },
+    "chromium A-2a-R CASE-05 natural trial 2": {
+      "samplesUntilStop": 66,
+      "firstOver20": {
+        "sample": 66,
+        "generation": 1,
+        "atMs": 10850.900000000373,
+        "intervalMs": 100.700000001118,
+        "outputTimeDeltaMs": 100.099999999627,
+        "outputContextDeltaMs": 90.1104999999995,
+        "nativeCurrentTime": 6.725333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "6.70397033333407833",
+        "signedMs": "-20.02300000074533000",
+        "absoluteMs": 20.02300000074533,
+        "stepMs": -9.9894999996275,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 63,
+          "generation": 1,
+          "atMs": 10549.599999999627,
+          "intervalMs": 100.099999999627,
+          "outputTimeDeltaMs": 100.099999999627,
+          "outputContextDeltaMs": 100.172333333334,
+          "nativeCurrentTime": 6.434666666666667,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "6.40337033333445133",
+          "signedMs": "-10.03216666778433000",
+          "absoluteMs": 10.03216666778433,
+          "stepMs": 0.072333333707,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10032
+            }
+          }
+        },
+        {
+          "sample": 64,
+          "generation": 1,
+          "atMs": 10649.699999999255,
+          "intervalMs": 100.099999999628,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.208333333333,
+          "nativeCurrentTime": 6.536,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "6.50357033333370633",
+          "signedMs": "-10.02383333370633000",
+          "absoluteMs": 10.02383333370633,
+          "stepMs": 0.008333334078,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10024
+            }
+          }
+        },
+        {
+          "sample": 65,
+          "generation": 1,
+          "atMs": 10750.199999999255,
+          "intervalMs": 100.5,
+          "outputTimeDeltaMs": 100.300000000745,
+          "outputContextDeltaMs": 100.2903333333335,
+          "nativeCurrentTime": 6.634666666666667,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "6.60387033333445133",
+          "signedMs": "-10.03350000111783000",
+          "absoluteMs": 10.03350000111783,
+          "stepMs": -0.0096666674115,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10034
+            }
+          }
+        },
+        {
+          "sample": 66,
+          "generation": 1,
+          "atMs": 10850.900000000373,
+          "intervalMs": 100.700000001118,
+          "outputTimeDeltaMs": 100.099999999627,
+          "outputContextDeltaMs": 90.1104999999995,
+          "nativeCurrentTime": 6.725333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "6.70397033333407833",
+          "signedMs": "-20.02300000074533000",
+          "absoluteMs": 20.02300000074533,
+          "stepMs": -9.9894999996275,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 10.13566666666667
+    },
+    "webkit A-2a-R CASE-05 natural trial 2": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3619,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 197.0,
+        "outputContextDeltaMs": 98.666667,
+        "nativeCurrentTime": 0.11466666666666667,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.210333333",
+        "signedMs": "-98.333333000",
+        "absoluteMs": 98.333333,
+        "stepMs": -98.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3619,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 197.0,
+          "outputContextDeltaMs": 98.666667,
+          "nativeCurrentTime": 0.11466666666666667,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.210333333",
+          "signedMs": "-98.333333000",
+          "absoluteMs": 98.333333,
+          "stepMs": -98.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 98.333333
+    },
+    "chromium A-2a-R CASE-05 natural trial 3": {
+      "samplesUntilStop": 229,
+      "firstOver20": {
+        "sample": 229,
+        "generation": 1,
+        "atMs": 26660.800000000745,
+        "intervalMs": 134.300000000745,
+        "outputTimeDeltaMs": 140.300000000746,
+        "outputContextDeltaMs": 100.229333333338,
+        "nativeCurrentTime": 23.069333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "23.06796933333407883",
+        "signedMs": "-40.04183333407483000",
+        "absoluteMs": 40.04183333407483,
+        "stepMs": -40.070666667408,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 226,
+          "generation": 1,
+          "atMs": 26326.300000000745,
+          "intervalMs": 100.200000001118,
+          "outputTimeDeltaMs": 100.299999998882,
+          "outputContextDeltaMs": 100.278333333333,
+          "nativeCurrentTime": 22.768,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "22.72726933333296083",
+          "signedMs": "0.08716666703917000",
+          "absoluteMs": 0.08716666703917,
+          "stepMs": -0.021666665549,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 87
+            }
+          }
+        },
+        {
+          "sample": 227,
+          "generation": 1,
+          "atMs": 26426.400000000373,
+          "intervalMs": 100.099999999628,
+          "outputTimeDeltaMs": 100.200000001118,
+          "outputContextDeltaMs": 100.148333333332,
+          "nativeCurrentTime": 22.869333333333334,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "22.82746933333407883",
+          "signedMs": "0.03549999925317000",
+          "absoluteMs": 0.03549999925317,
+          "stepMs": -0.051666667786,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 35
+            }
+          }
+        },
+        {
+          "sample": 228,
+          "generation": 1,
+          "atMs": 26526.5,
+          "intervalMs": 100.099999999627,
+          "outputTimeDeltaMs": 100.199999999254,
+          "outputContextDeltaMs": 100.193333333334,
+          "nativeCurrentTime": 22.968,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "22.92766933333333283",
+          "signedMs": "0.02883333333317000",
+          "absoluteMs": 0.02883333333317,
+          "stepMs": -0.00666666592,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 29
+            }
+          }
+        },
+        {
+          "sample": 229,
+          "generation": 1,
+          "atMs": 26660.800000000745,
+          "intervalMs": 134.300000000745,
+          "outputTimeDeltaMs": 140.300000000746,
+          "outputContextDeltaMs": 100.229333333338,
+          "nativeCurrentTime": 23.069333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "23.06796933333407883",
+          "signedMs": "-40.04183333407483000",
+          "absoluteMs": 40.04183333407483,
+          "stepMs": -40.070666667408,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 40.070666667408
+    },
+    "webkit A-2a-R CASE-05 natural trial 3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3735,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3735,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "webkit A-2a-R CASE-05 stop-restart trial 1": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3314,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3314,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "webkit A-2a-R CASE-05 stop-restart trial 2": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3150,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 212.0,
+        "outputContextDeltaMs": 106.666667,
+        "nativeCurrentTime": 0.12,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.222666666",
+        "signedMs": "-105.333333000",
+        "absoluteMs": 105.333333,
+        "stepMs": -105.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3150,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 212.0,
+          "outputContextDeltaMs": 106.666667,
+          "nativeCurrentTime": 0.12,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.222666666",
+          "signedMs": "-105.333333000",
+          "absoluteMs": 105.333333,
+          "stepMs": -105.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 105.333333
+    },
+    "webkit A-2a-R CASE-05 stop-restart trial 3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3190,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 197.0,
+        "outputContextDeltaMs": 98.66666599999999,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "UNAVAILABLE",
+        "predictedContextSec": "0.213",
+        "signedMs": "-98.33333400000001000",
+        "absoluteMs": 98.33333400000001,
+        "stepMs": -98.33333400000001,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar-trial-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3190,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 197.0,
+          "outputContextDeltaMs": 98.66666599999999,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "UNAVAILABLE",
+          "predictedContextSec": "0.213",
+          "signedMs": "-98.33333400000001000",
+          "absoluteMs": 98.33333400000001,
+          "stepMs": -98.33333400000001,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar-trial-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 98.33333400000001
+    }
+  },
+  "chromium-approved": {
+    "natural-24/1": {
+      "samplesUntilStop": 215,
+      "firstOver20": {
+        "sample": 215,
+        "generation": 1,
+        "atMs": 25392.89999999851,
+        "intervalMs": 101.5,
+        "outputTimeDeltaMs": 100.599999999627,
+        "outputContextDeltaMs": 80.12766666667,
+        "nativeCurrentTime": 21.645333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "21.62577433333296032",
+        "signedMs": "-20.84416666629032000",
+        "absoluteMs": 20.84416666629032,
+        "stepMs": -20.472333332957,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 212,
+          "generation": 1,
+          "atMs": 25088.699999999255,
+          "intervalMs": 101.099999999628,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.186333333333,
+          "nativeCurrentTime": 21.365333333333332,
+          "nativeState": "running",
+          "predictedContextSec": "21.32447433333221532",
+          "signedMs": "-0.09349999888232000",
+          "absoluteMs": 0.09349999888232,
+          "stepMs": -0.013666665922,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 93
+            }
+          }
+        },
+        {
+          "sample": 213,
+          "generation": 1,
+          "atMs": 25189.39999999851,
+          "intervalMs": 100.699999999255,
+          "outputTimeDeltaMs": 100.200000001118,
+          "outputContextDeltaMs": 100.219333333331,
+          "nativeCurrentTime": 21.466666666666665,
+          "nativeState": "running",
+          "predictedContextSec": "21.42467433333333332",
+          "signedMs": "-0.07416666666932000",
+          "absoluteMs": 0.07416666666932,
+          "stepMs": 0.019333332213,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 74
+            }
+          }
+        },
+        {
+          "sample": 214,
+          "generation": 1,
+          "atMs": 25291.39999999851,
+          "intervalMs": 102.0,
+          "outputTimeDeltaMs": 100.5,
+          "outputContextDeltaMs": 100.202333333336,
+          "nativeCurrentTime": 21.565333333333335,
+          "nativeState": "running",
+          "predictedContextSec": "21.52517433333333332",
+          "signedMs": "-0.37183333333332000",
+          "absoluteMs": 0.37183333333332,
+          "stepMs": -0.297666666664,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 372
+            }
+          }
+        },
+        {
+          "sample": 215,
+          "generation": 1,
+          "atMs": 25392.89999999851,
+          "intervalMs": 101.5,
+          "outputTimeDeltaMs": 100.599999999627,
+          "outputContextDeltaMs": 80.12766666667,
+          "nativeCurrentTime": 21.645333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "21.62577433333296032",
+          "signedMs": "-20.84416666629032000",
+          "absoluteMs": 20.84416666629032,
+          "stepMs": -20.472333332957,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 20.472333332957
+    },
+    "natural-24/2": {
+      "samplesUntilStop": 64,
+      "firstOver20": {
+        "sample": 64,
+        "generation": 1,
+        "atMs": 11320.599999999627,
+        "intervalMs": 103.099999999627,
+        "outputTimeDeltaMs": 161.100000001491,
+        "outputContextDeltaMs": 110.713166666667,
+        "nativeCurrentTime": 6.536,
+        "nativeState": "running",
+        "predictedContextSec": "6.54456133333370633",
+        "signedMs": "-50.54383333370633000",
+        "absoluteMs": 50.54383333370633,
+        "stepMs": -50.386833334824,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 61,
+          "generation": 1,
+          "atMs": 10964.699999999255,
+          "intervalMs": 101.400000000373,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.227333333333,
+          "nativeCurrentTime": 6.234666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "6.19296133333221533",
+          "signedMs": "-0.03983333221533000",
+          "absoluteMs": 0.03983333221533,
+          "stepMs": 0.027333334078,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 40
+            }
+          }
+        },
+        {
+          "sample": 62,
+          "generation": 1,
+          "atMs": 11066.199999999255,
+          "intervalMs": 101.5,
+          "outputTimeDeltaMs": 100.300000000745,
+          "outputContextDeltaMs": 100.300333333333,
+          "nativeCurrentTime": 6.333333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "6.29326133333296033",
+          "signedMs": "-0.03949999962733000",
+          "absoluteMs": 0.03949999962733,
+          "stepMs": 0.000333332588,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 39
+            }
+          }
+        },
+        {
+          "sample": 63,
+          "generation": 1,
+          "atMs": 11217.5,
+          "intervalMs": 151.300000000745,
+          "outputTimeDeltaMs": 90.199999999255,
+          "outputContextDeltaMs": 90.0825,
+          "nativeCurrentTime": 6.424,
+          "nativeState": "running",
+          "predictedContextSec": "6.38346133333221533",
+          "signedMs": "-0.15699999888233000",
+          "absoluteMs": 0.15699999888233,
+          "stepMs": -0.117499999255,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 157
+            }
+          }
+        },
+        {
+          "sample": 64,
+          "generation": 1,
+          "atMs": 11320.599999999627,
+          "intervalMs": 103.099999999627,
+          "outputTimeDeltaMs": 161.100000001491,
+          "outputContextDeltaMs": 110.713166666667,
+          "nativeCurrentTime": 6.536,
+          "nativeState": "running",
+          "predictedContextSec": "6.54456133333370633",
+          "signedMs": "-50.54383333370633000",
+          "absoluteMs": 50.54383333370633,
+          "stepMs": -50.386833334824,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 50.386833334824
+    },
+    "natural-24/3": {
+      "samplesUntilStop": 11,
+      "firstOver20": {
+        "sample": 11,
+        "generation": 1,
+        "atMs": 5510.200000001118,
+        "intervalMs": 142.1000000014905,
+        "outputTimeDeltaMs": 208.699999999255,
+        "outputContextDeltaMs": 43.0951666666666,
+        "nativeCurrentTime": 1.1626666666666667,
+        "nativeState": "running",
+        "predictedContextSec": "1.28878033333296082",
+        "signedMs": "-166.00849999962742000",
+        "absoluteMs": 166.00849999962742,
+        "stepMs": -165.6048333325884,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 8,
+          "generation": 1,
+          "atMs": 5099.5,
+          "intervalMs": 101.4000000003725,
+          "outputTimeDeltaMs": 100.2999999988825,
+          "outputContextDeltaMs": 100.2193333333333,
+          "nativeCurrentTime": 0.9226666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "0.88188033333258832",
+          "signedMs": "0.01250000074498000",
+          "absoluteMs": 0.01250000074498,
+          "stepMs": -0.0806666655492,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 13
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "generation": 1,
+          "atMs": 5200.5999999996275,
+          "intervalMs": 101.0999999996275,
+          "outputTimeDeltaMs": 102.1000000014905,
+          "outputContextDeltaMs": 100.6253333333333,
+          "nativeCurrentTime": 1.024,
+          "nativeState": "running",
+          "predictedContextSec": "0.98398033333407882",
+          "signedMs": "-1.46216666741222000",
+          "absoluteMs": 1.46216666741222,
+          "stepMs": -1.4746666681572,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 1462
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "generation": 1,
+          "atMs": 5368.0999999996275,
+          "intervalMs": 167.5,
+          "outputTimeDeltaMs": 96.099999999627,
+          "outputContextDeltaMs": 97.1585000000002,
+          "nativeCurrentTime": 1.1146666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "1.08008033333370582",
+          "signedMs": "-0.40366666703902000",
+          "absoluteMs": 0.40366666703902,
+          "stepMs": 1.0585000003732,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 404
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "generation": 1,
+          "atMs": 5510.200000001118,
+          "intervalMs": 142.1000000014905,
+          "outputTimeDeltaMs": 208.699999999255,
+          "outputContextDeltaMs": 43.0951666666666,
+          "nativeCurrentTime": 1.1626666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "1.28878033333296082",
+          "signedMs": "-166.00849999962742000",
+          "absoluteMs": 166.00849999962742,
+          "stepMs": -165.6048333325884,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 165.6048333325884
+    },
+    "natural-24/4": {
+      "samplesUntilStop": 7,
+      "firstOver20": {
+        "sample": 7,
+        "generation": 1,
+        "atMs": 5586.9000000003725,
+        "intervalMs": 112.5999999996275,
+        "outputTimeDeltaMs": 241.3999999985095,
+        "outputContextDeltaMs": 70.1918333333333,
+        "nativeCurrentTime": 0.744,
+        "nativeState": "running",
+        "predictedContextSec": "0.87225416666592168",
+        "signedMs": "-170.73333333258838000",
+        "absoluteMs": 170.7333333325884,
+        "stepMs": -171.2081666651762,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 4,
+          "generation": 1,
+          "atMs": 5170.300000000745,
+          "intervalMs": 101.300000000745,
+          "outputTimeDeltaMs": 100.1999999992545,
+          "outputContextDeltaMs": 100.2623333333334,
+          "nativeCurrentTime": 0.5226666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "0.48055416666666668",
+          "signedMs": "0.51733333333336000",
+          "absoluteMs": 0.51733333333336,
+          "stepMs": 0.0623333340789,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 517
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "generation": 1,
+          "atMs": 5272.200000001118,
+          "intervalMs": 101.900000000373,
+          "outputTimeDeltaMs": 101.0999999996275,
+          "outputContextDeltaMs": 100.76833333333326,
+          "nativeCurrentTime": 0.6213333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.58165416666629418",
+          "signedMs": "0.18566666703912000",
+          "absoluteMs": 0.18566666703912,
+          "stepMs": -0.33166666629424,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 186
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "generation": 1,
+          "atMs": 5474.300000000745,
+          "intervalMs": 202.099999999627,
+          "outputTimeDeltaMs": 49.200000001118,
+          "outputContextDeltaMs": 49.4891666666667,
+          "nativeCurrentTime": 0.672,
+          "nativeState": "running",
+          "predictedContextSec": "0.63085416666741218",
+          "signedMs": "0.47483333258782000",
+          "absoluteMs": 0.47483333258782,
+          "stepMs": 0.2891666655487,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 475
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "generation": 1,
+          "atMs": 5586.9000000003725,
+          "intervalMs": 112.5999999996275,
+          "outputTimeDeltaMs": 241.3999999985095,
+          "outputContextDeltaMs": 70.1918333333333,
+          "nativeCurrentTime": 0.744,
+          "nativeState": "running",
+          "predictedContextSec": "0.87225416666592168",
+          "signedMs": "-170.73333333258838000",
+          "absoluteMs": 170.7333333325884,
+          "stepMs": -171.2081666651762,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 171.2081666651762
+    },
+    "natural-24/8": {
+      "samplesUntilStop": 173,
+      "firstOver20": {
+        "sample": 173,
+        "generation": 1,
+        "atMs": 21083.5,
+        "intervalMs": 170.199999999255,
+        "outputTimeDeltaMs": 168.199999999255,
+        "outputContextDeltaMs": 100.429333333338,
+        "nativeCurrentTime": 17.448,
+        "nativeState": "running",
+        "predictedContextSec": "17.47418133333333382",
+        "signedMs": "-67.76133333332982000",
+        "absoluteMs": 67.76133333332982,
+        "stepMs": -67.770666665917,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 170,
+          "generation": 1,
+          "atMs": 20712.900000000373,
+          "intervalMs": 100.199999999255,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.245333333334,
+          "nativeCurrentTime": 17.14666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "17.10568133333333382",
+          "signedMs": "-0.06333333333382000",
+          "absoluteMs": 0.06333333333382,
+          "stepMs": 0.045333334079,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 63
+            }
+          }
+        },
+        {
+          "sample": 171,
+          "generation": 1,
+          "atMs": 20813.099999999627,
+          "intervalMs": 100.199999999254,
+          "outputTimeDeltaMs": 100.300000000745,
+          "outputContextDeltaMs": 100.193333333333,
+          "nativeCurrentTime": 17.248,
+          "nativeState": "running",
+          "predictedContextSec": "17.20598133333407882",
+          "signedMs": "-0.17000000074582000",
+          "absoluteMs": 0.17000000074582,
+          "stepMs": -0.106666667412,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 170
+            }
+          }
+        },
+        {
+          "sample": 172,
+          "generation": 1,
+          "atMs": 20913.300000000745,
+          "intervalMs": 100.200000001118,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 100.179333333333,
+          "nativeCurrentTime": 17.346666666666668,
+          "nativeState": "running",
+          "predictedContextSec": "17.30598133333407882",
+          "signedMs": "0.00933333258718000",
+          "absoluteMs": 0.00933333258718,
+          "stepMs": 0.179333333333,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 9
+            }
+          }
+        },
+        {
+          "sample": 173,
+          "generation": 1,
+          "atMs": 21083.5,
+          "intervalMs": 170.199999999255,
+          "outputTimeDeltaMs": 168.199999999255,
+          "outputContextDeltaMs": 100.429333333338,
+          "nativeCurrentTime": 17.448,
+          "nativeState": "running",
+          "predictedContextSec": "17.47418133333333382",
+          "signedMs": "-67.76133333332982000",
+          "absoluteMs": 67.76133333332982,
+          "stepMs": -67.770666665917,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 67.770666665917
+    },
+    "natural-24/9": {
+      "samplesUntilStop": 214,
+      "firstOver20": {
+        "sample": 214,
+        "generation": 1,
+        "atMs": 25282.299999998882,
+        "intervalMs": 121.799999998882,
+        "outputTimeDeltaMs": 239.700000001118,
+        "outputContextDeltaMs": 89.640500000002,
+        "nativeCurrentTime": 21.557333333333332,
+        "nativeState": "running",
+        "predictedContextSec": "21.66508833333370582",
+        "signedMs": "-150.31366666703782000",
+        "absoluteMs": 150.3136666670378,
+        "stepMs": -150.059500001116,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 211,
+          "generation": 1,
+          "atMs": 24787.299999998882,
+          "intervalMs": 103.0,
+          "outputTimeDeltaMs": 100.099999999628,
+          "outputContextDeltaMs": 100.203333333333,
+          "nativeCurrentTime": 21.266666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "21.22478833333296082",
+          "signedMs": "-0.18883333296082000",
+          "absoluteMs": 0.18883333296082,
+          "stepMs": 0.103333333705,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 189
+            }
+          }
+        },
+        {
+          "sample": 212,
+          "generation": 1,
+          "atMs": 24889.39999999851,
+          "intervalMs": 102.099999999628,
+          "outputTimeDeltaMs": 100.400000000372,
+          "outputContextDeltaMs": 100.136333333335,
+          "nativeCurrentTime": 21.365333333333332,
+          "nativeState": "running",
+          "predictedContextSec": "21.32518833333333282",
+          "signedMs": "-0.45249999999782000",
+          "absoluteMs": 0.45249999999782,
+          "stepMs": -0.263666667037,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 452
+            }
+          }
+        },
+        {
+          "sample": 213,
+          "generation": 1,
+          "atMs": 25160.5,
+          "intervalMs": 271.10000000149,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.398333333331,
+          "nativeCurrentTime": 21.466666666666665,
+          "nativeState": "running",
+          "predictedContextSec": "21.42538833333258782",
+          "signedMs": "-0.25416666592182000",
+          "absoluteMs": 0.25416666592182,
+          "stepMs": 0.198333334076,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 254
+            }
+          }
+        },
+        {
+          "sample": 214,
+          "generation": 1,
+          "atMs": 25282.299999998882,
+          "intervalMs": 121.799999998882,
+          "outputTimeDeltaMs": 239.700000001118,
+          "outputContextDeltaMs": 89.640500000002,
+          "nativeCurrentTime": 21.557333333333332,
+          "nativeState": "running",
+          "predictedContextSec": "21.66508833333370582",
+          "signedMs": "-150.31366666703782000",
+          "absoluteMs": 150.3136666670378,
+          "stepMs": -150.059500001116,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 150.059500001116
+    },
+    "natural-84/1": {
+      "samplesUntilStop": 325,
+      "firstOver20": {
+        "sample": 325,
+        "generation": 1,
+        "atMs": 75299.29999999888,
+        "intervalMs": 193.19999999925,
+        "outputTimeDeltaMs": 191.59999999963,
+        "outputContextDeltaMs": 80.53766666666,
+        "nativeCurrentTime": 32.648,
+        "nativeState": "running",
+        "predictedContextSec": "32.72922133333333332",
+        "signedMs": "-121.03416666667332000",
+        "absoluteMs": 121.03416666667331,
+        "stepMs": -111.06233333297,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 322,
+          "generation": 1,
+          "atMs": 74903.29999999888,
+          "intervalMs": 101.09999999963,
+          "outputTimeDeltaMs": 100.09999999963,
+          "outputContextDeltaMs": 100.20433333333,
+          "nativeCurrentTime": 32.368,
+          "nativeState": "running",
+          "predictedContextSec": "32.33712133333370332",
+          "signedMs": "-9.85950000037332000",
+          "absoluteMs": 9.85950000037332,
+          "stepMs": 0.1043333337,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 9860
+            }
+          }
+        },
+        {
+          "sample": 323,
+          "generation": 1,
+          "atMs": 75005,
+          "intervalMs": 101.70000000112,
+          "outputTimeDeltaMs": 101.09999999963,
+          "outputContextDeltaMs": 100.644333333336,
+          "nativeCurrentTime": 32.46933333333333,
+          "nativeState": "running",
+          "predictedContextSec": "32.43822133333333332",
+          "signedMs": "-10.31516666666732000",
+          "absoluteMs": 10.31516666666732,
+          "stepMs": -0.455666666294,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10315
+            }
+          }
+        },
+        {
+          "sample": 324,
+          "generation": 1,
+          "atMs": 75106.09999999963,
+          "intervalMs": 101.09999999963,
+          "outputTimeDeltaMs": 99.40000000037,
+          "outputContextDeltaMs": 99.743333333334,
+          "nativeCurrentTime": 32.568,
+          "nativeState": "running",
+          "predictedContextSec": "32.53762133333370332",
+          "signedMs": "-9.97183333370332000",
+          "absoluteMs": 9.97183333370332,
+          "stepMs": 0.343333332964,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 9972
+            }
+          }
+        },
+        {
+          "sample": 325,
+          "generation": 1,
+          "atMs": 75299.29999999888,
+          "intervalMs": 193.19999999925,
+          "outputTimeDeltaMs": 191.59999999963,
+          "outputContextDeltaMs": 80.53766666666,
+          "nativeCurrentTime": 32.648,
+          "nativeState": "running",
+          "predictedContextSec": "32.72922133333333332",
+          "signedMs": "-121.03416666667332000",
+          "absoluteMs": 121.03416666667331,
+          "stepMs": -111.06233333297,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 111.06233333297
+    },
+    "natural-84/2": {
+      "samplesUntilStop": 142,
+      "firstOver20": {
+        "sample": 142,
+        "generation": 1,
+        "atMs": 62422.5,
+        "intervalMs": 138.60000000149,
+        "outputTimeDeltaMs": 135.400000000375,
+        "outputContextDeltaMs": 38.275333333334,
+        "nativeCurrentTime": 14.290666666666667,
+        "nativeState": "running",
+        "predictedContextSec": "14.34757933333408332",
+        "signedMs": "-97.43883333408332000",
+        "absoluteMs": 97.43883333408333,
+        "stepMs": -97.124666667041,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 139,
+          "generation": 1,
+          "atMs": 62082,
+          "intervalMs": 101.70000000112,
+          "outputTimeDeltaMs": 98.099999999625,
+          "outputContextDeltaMs": 98.301333333333,
+          "nativeCurrentTime": 14.050666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "14.00917933333370832",
+          "signedMs": "-0.00983333370832000",
+          "absoluteMs": 0.00983333370832,
+          "stepMs": 0.201333333708,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10
+            }
+          }
+        },
+        {
+          "sample": 140,
+          "generation": 1,
+          "atMs": 62182.79999999888,
+          "intervalMs": 100.79999999888,
+          "outputTimeDeltaMs": 100.300000000745,
+          "outputContextDeltaMs": 100.211333333335,
+          "nativeCurrentTime": 14.152,
+          "nativeState": "running",
+          "predictedContextSec": "14.10947933333445332",
+          "signedMs": "-0.09850000111832000",
+          "absoluteMs": 0.09850000111832,
+          "stepMs": -0.08866666741,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 99
+            }
+          }
+        },
+        {
+          "sample": 141,
+          "generation": 1,
+          "atMs": 62283.89999999851,
+          "intervalMs": 101.09999999963,
+          "outputTimeDeltaMs": 102.699999999255,
+          "outputContextDeltaMs": 102.484333333331,
+          "nativeCurrentTime": 14.250666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "14.21217933333370832",
+          "signedMs": "-0.31416666704232000",
+          "absoluteMs": 0.31416666704232,
+          "stepMs": -0.215666665924,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 314
+            }
+          }
+        },
+        {
+          "sample": 142,
+          "generation": 1,
+          "atMs": 62422.5,
+          "intervalMs": 138.60000000149,
+          "outputTimeDeltaMs": 135.400000000375,
+          "outputContextDeltaMs": 38.275333333334,
+          "nativeCurrentTime": 14.290666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "14.34757933333408332",
+          "signedMs": "-97.43883333408332000",
+          "absoluteMs": 97.43883333408333,
+          "stepMs": -97.124666667041,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 97.124666667041
+    }
+  },
+  "chromium-diagnostics": {
+    "natural-24/1": {
+      "samplesUntilStop": 161,
+      "firstOver20": {
+        "sample": 161,
+        "generation": 1,
+        "atMs": 19972.39999999851,
+        "intervalMs": 100.599999999628,
+        "outputTimeDeltaMs": 100.099999999628,
+        "outputContextDeltaMs": 80.137666666666,
+        "nativeCurrentTime": 16.224,
+        "nativeState": "running",
+        "predictedContextSec": "16.21367733333333333",
+        "signedMs": "-29.99900000000033000",
+        "absoluteMs": 29.99900000000033,
+        "stepMs": -19.962333332962,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 158,
+          "generation": 1,
+          "atMs": 19668.89999999851,
+          "intervalMs": 100.099999999628,
+          "outputTimeDeltaMs": 100.299999998883,
+          "outputContextDeltaMs": 100.193333333336,
+          "nativeCurrentTime": 15.944,
+          "nativeState": "running",
+          "predictedContextSec": "15.91317733333333333",
+          "signedMs": "-10.08333333333333000",
+          "absoluteMs": 10.08333333333333,
+          "stepMs": -0.106666665547,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10083
+            }
+          }
+        },
+        {
+          "sample": 159,
+          "generation": 1,
+          "atMs": 19769.099999999627,
+          "intervalMs": 100.200000001117,
+          "outputTimeDeltaMs": 100.200000001117,
+          "outputContextDeltaMs": 100.205333333334,
+          "nativeCurrentTime": 16.045333333333332,
+          "nativeState": "running",
+          "predictedContextSec": "16.01337733333445033",
+          "signedMs": "-10.07800000111633000",
+          "absoluteMs": 10.07800000111633,
+          "stepMs": 0.005333332217,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10078
+            }
+          }
+        },
+        {
+          "sample": 160,
+          "generation": 1,
+          "atMs": 19871.799999998882,
+          "intervalMs": 102.699999999255,
+          "outputTimeDeltaMs": 100.199999999255,
+          "outputContextDeltaMs": 100.241333333333,
+          "nativeCurrentTime": 16.144,
+          "nativeState": "running",
+          "predictedContextSec": "16.11357733333370533",
+          "signedMs": "-10.03666666703833000",
+          "absoluteMs": 10.03666666703833,
+          "stepMs": 0.041333334078,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10037
+            }
+          }
+        },
+        {
+          "sample": 161,
+          "generation": 1,
+          "atMs": 19972.39999999851,
+          "intervalMs": 100.599999999628,
+          "outputTimeDeltaMs": 100.099999999628,
+          "outputContextDeltaMs": 80.137666666666,
+          "nativeCurrentTime": 16.224,
+          "nativeState": "running",
+          "predictedContextSec": "16.21367733333333333",
+          "signedMs": "-29.99900000000033000",
+          "absoluteMs": 29.99900000000033,
+          "stepMs": -19.962333332962,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 19.962333332962
+    }
+  },
+  "chromium-84-completion": {},
+  "firefox-isolated": {
+    "natural-24/3": {
+      "samplesUntilStop": 200,
+      "firstOver20": {
+        "sample": 200,
+        "generation": 1,
+        "atMs": 22665,
+        "intervalMs": 101.0,
+        "outputTimeDeltaMs": 101.0,
+        "outputContextDeltaMs": 93.333333333334,
+        "nativeCurrentTime": 20.149333333333335,
+        "nativeState": "running",
+        "predictedContextSec": "20.12106250066666666",
+        "signedMs": "-20.33333333333266000",
+        "absoluteMs": 20.33333333333266,
+        "stepMs": -7.666666666666,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 197,
+          "generation": 1,
+          "atMs": 22364,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 112.000000000002,
+          "nativeCurrentTime": 19.866666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "19.82006250066666666",
+          "signedMs": "-1.99999999999966000",
+          "absoluteMs": 1.99999999999966,
+          "stepMs": 12.000000000002,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 2000
+            }
+          }
+        },
+        {
+          "sample": 198,
+          "generation": 1,
+          "atMs": 22464,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 96.0,
+          "nativeCurrentTime": 19.962666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "19.92006250066666666",
+          "signedMs": "-5.99999999999966000",
+          "absoluteMs": 5.99999999999966,
+          "stepMs": -4.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 6000
+            }
+          }
+        },
+        {
+          "sample": 199,
+          "generation": 1,
+          "atMs": 22564,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.333333333333,
+          "nativeCurrentTime": 20.056,
+          "nativeState": "running",
+          "predictedContextSec": "20.02006250066666666",
+          "signedMs": "-12.66666666666666000",
+          "absoluteMs": 12.66666666666666,
+          "stepMs": -6.666666666667,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 12667
+            }
+          }
+        },
+        {
+          "sample": 200,
+          "generation": 1,
+          "atMs": 22665,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 93.333333333334,
+          "nativeCurrentTime": 20.149333333333335,
+          "nativeState": "running",
+          "predictedContextSec": "20.12106250066666666",
+          "signedMs": "-20.33333333333266000",
+          "absoluteMs": 20.33333333333266,
+          "stepMs": -7.666666666666,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 15.666666666668
+    },
+    "natural-24/6": {
+      "samplesUntilStop": 214,
+      "firstOver20": {
+        "sample": 214,
+        "generation": 1,
+        "atMs": 24110,
+        "intervalMs": 161.0,
+        "outputTimeDeltaMs": 161.0,
+        "outputContextDeltaMs": 74.666666666666,
+        "nativeCurrentTime": 21.554666666666666,
+        "nativeState": "running",
+        "predictedContextSec": "21.58427083366666667",
+        "signedMs": "-78.99999999999867000",
+        "absoluteMs": 78.99999999999866,
+        "stepMs": -86.333333333334,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 211,
+          "generation": 1,
+          "atMs": 23748,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.33333333333,
+          "nativeCurrentTime": 21.272,
+          "nativeState": "running",
+          "predictedContextSec": "21.22227083366666667",
+          "signedMs": "0.33333333333333000",
+          "absoluteMs": 0.33333333333333,
+          "stepMs": -6.66666666667,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 333
+            }
+          }
+        },
+        {
+          "sample": 212,
+          "generation": 1,
+          "atMs": 23849,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 96.0,
+          "nativeCurrentTime": 21.368,
+          "nativeState": "running",
+          "predictedContextSec": "21.32327083366666667",
+          "signedMs": "-4.66666666666667000",
+          "absoluteMs": 4.66666666666667,
+          "stepMs": -5.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 4667
+            }
+          }
+        },
+        {
+          "sample": 213,
+          "generation": 1,
+          "atMs": 23949,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 112.000000000002,
+          "nativeCurrentTime": 21.48,
+          "nativeState": "running",
+          "predictedContextSec": "21.42327083366666667",
+          "signedMs": "7.33333333333533000",
+          "absoluteMs": 7.33333333333533,
+          "stepMs": 12.000000000002,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 7333
+            }
+          }
+        },
+        {
+          "sample": 214,
+          "generation": 1,
+          "atMs": 24110,
+          "intervalMs": 161.0,
+          "outputTimeDeltaMs": 161.0,
+          "outputContextDeltaMs": 74.666666666666,
+          "nativeCurrentTime": 21.554666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "21.58427083366666667",
+          "signedMs": "-78.99999999999867000",
+          "absoluteMs": 78.99999999999866,
+          "stepMs": -86.333333333334,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 86.333333333334
+    },
+    "natural-24/8": {
+      "samplesUntilStop": 48,
+      "firstOver20": {
+        "sample": 48,
+        "generation": 1,
+        "atMs": 7440,
+        "intervalMs": 127.0,
+        "outputTimeDeltaMs": 127.0,
+        "outputContextDeltaMs": 111.999999999999,
+        "nativeCurrentTime": 4.930666666666666,
+        "nativeState": "running",
+        "predictedContextSec": "4.90629166666666666",
+        "signedMs": "-25.00000000000066000",
+        "absoluteMs": 25.00000000000066,
+        "stepMs": -15.000000000001,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 45,
+          "generation": 1,
+          "atMs": 7113,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 112.0,
+          "nativeCurrentTime": 4.629333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "4.57929166666666666",
+          "signedMs": "0.66666666666634000",
+          "absoluteMs": 0.66666666666634,
+          "stepMs": 11.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 667
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "generation": 1,
+          "atMs": 7213,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 96.0,
+          "nativeCurrentTime": 4.725333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "4.67929166666666666",
+          "signedMs": "-3.33333333333366000",
+          "absoluteMs": 3.33333333333366,
+          "stepMs": -4.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 3333
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "generation": 1,
+          "atMs": 7313,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.333333333334,
+          "nativeCurrentTime": 4.818666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "4.77929166666666666",
+          "signedMs": "-9.99999999999966000",
+          "absoluteMs": 9.99999999999966,
+          "stepMs": -6.666666666666,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10000
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "generation": 1,
+          "atMs": 7440,
+          "intervalMs": 127.0,
+          "outputTimeDeltaMs": 127.0,
+          "outputContextDeltaMs": 111.999999999999,
+          "nativeCurrentTime": 4.930666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "4.90629166666666666",
+          "signedMs": "-25.00000000000066000",
+          "absoluteMs": 25.00000000000066,
+          "stepMs": -15.000000000001,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 15.6666666666667
+    },
+    "natural-24/9": {
+      "samplesUntilStop": 166,
+      "firstOver20": {
+        "sample": 166,
+        "generation": 1,
+        "atMs": 18915,
+        "intervalMs": 104.0,
+        "outputTimeDeltaMs": 103.0,
+        "outputContextDeltaMs": 74.666666666665,
+        "nativeCurrentTime": 16.75733333333333,
+        "nativeState": "running",
+        "predictedContextSec": "16.73477083366666667",
+        "signedMs": "-26.33333333333467000",
+        "absoluteMs": 26.33333333333467,
+        "stepMs": -28.333333333335,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 163,
+          "generation": 1,
+          "atMs": 18611,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.333333333334,
+          "nativeCurrentTime": 16.474666666666668,
+          "nativeState": "running",
+          "predictedContextSec": "16.43177083366666667",
+          "signedMs": "-5.99999999999867000",
+          "absoluteMs": 5.99999999999867,
+          "stepMs": -6.666666666666,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 6000
+            }
+          }
+        },
+        {
+          "sample": 164,
+          "generation": 1,
+          "atMs": 18711,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 96.0,
+          "nativeCurrentTime": 16.570666666666668,
+          "nativeState": "running",
+          "predictedContextSec": "16.53177083366666667",
+          "signedMs": "-9.99999999999867000",
+          "absoluteMs": 9.99999999999867,
+          "stepMs": -4.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 10000
+            }
+          }
+        },
+        {
+          "sample": 165,
+          "generation": 1,
+          "atMs": 18811,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 111.999999999999,
+          "nativeCurrentTime": 16.682666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "16.63177083366666667",
+          "signedMs": "2.00000000000033000",
+          "absoluteMs": 2.00000000000033,
+          "stepMs": 11.999999999999,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 2000
+            }
+          }
+        },
+        {
+          "sample": 166,
+          "generation": 1,
+          "atMs": 18915,
+          "intervalMs": 104.0,
+          "outputTimeDeltaMs": 103.0,
+          "outputContextDeltaMs": 74.666666666665,
+          "nativeCurrentTime": 16.75733333333333,
+          "nativeState": "running",
+          "predictedContextSec": "16.73477083366666667",
+          "signedMs": "-26.33333333333467000",
+          "absoluteMs": 26.33333333333467,
+          "stepMs": -28.333333333335,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 28.333333333335
+    },
+    "natural-84/1": {
+      "samplesUntilStop": 116,
+      "firstOver20": {
+        "sample": 116,
+        "generation": 1,
+        "atMs": 16228,
+        "intervalMs": 114.0,
+        "outputTimeDeltaMs": 112.0,
+        "outputContextDeltaMs": 93.333333333333,
+        "nativeCurrentTime": 11.733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "11.70522916666666667",
+        "signedMs": "-21.33333333333367000",
+        "absoluteMs": 21.33333333333367,
+        "stepMs": -18.666666666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 113,
+          "generation": 1,
+          "atMs": 15912,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.333333333333,
+          "nativeCurrentTime": 11.432,
+          "nativeState": "running",
+          "predictedContextSec": "11.39122916666666667",
+          "signedMs": "-8.66666666666667000",
+          "absoluteMs": 8.66666666666667,
+          "stepMs": -6.666666666667,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 8667
+            }
+          }
+        },
+        {
+          "sample": 114,
+          "generation": 1,
+          "atMs": 16013,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 112.0,
+          "nativeCurrentTime": 11.544,
+          "nativeState": "running",
+          "predictedContextSec": "11.49222916666666667",
+          "signedMs": "2.33333333333333000",
+          "absoluteMs": 2.33333333333333,
+          "stepMs": 11.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 2333
+            }
+          }
+        },
+        {
+          "sample": 115,
+          "generation": 1,
+          "atMs": 16114,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 96.0,
+          "nativeCurrentTime": 11.64,
+          "nativeState": "running",
+          "predictedContextSec": "11.59322916666666667",
+          "signedMs": "-2.66666666666667000",
+          "absoluteMs": 2.66666666666667,
+          "stepMs": -5.0,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 2667
+            }
+          }
+        },
+        {
+          "sample": 116,
+          "generation": 1,
+          "atMs": 16228,
+          "intervalMs": 114.0,
+          "outputTimeDeltaMs": 112.0,
+          "outputContextDeltaMs": 93.333333333333,
+          "nativeCurrentTime": 11.733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "11.70522916666666667",
+          "signedMs": "-21.33333333333367000",
+          "absoluteMs": 21.33333333333367,
+          "stepMs": -18.666666666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 18.666666666667
+    },
+    "natural-84/2": {
+      "samplesUntilStop": 225,
+      "firstOver20": {
+        "sample": 225,
+        "generation": 1,
+        "atMs": 28903,
+        "intervalMs": 112.0,
+        "outputTimeDeltaMs": 111.0,
+        "outputContextDeltaMs": 93.333333333333,
+        "nativeCurrentTime": 22.664,
+        "nativeState": "running",
+        "predictedContextSec": "22.63652083366666667",
+        "signedMs": "-21.66666666666667000",
+        "absoluteMs": 21.66666666666667,
+        "stepMs": -17.666666666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 222,
+          "generation": 1,
+          "atMs": 28590,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 93.333333333335,
+          "nativeCurrentTime": 22.362666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "22.32452083366666667",
+          "signedMs": "-11.00000000000167000",
+          "absoluteMs": 11.00000000000167,
+          "stepMs": -6.666666666665,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 11000
+            }
+          }
+        },
+        {
+          "sample": 223,
+          "generation": 1,
+          "atMs": 28690,
+          "intervalMs": 100.0,
+          "outputTimeDeltaMs": 100.0,
+          "outputContextDeltaMs": 114.666666666668,
+          "nativeCurrentTime": 22.477333333333334,
+          "nativeState": "running",
+          "predictedContextSec": "22.42452083366666667",
+          "signedMs": "3.66666666666633000",
+          "absoluteMs": 3.66666666666633,
+          "stepMs": 14.666666666668,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 3667
+            }
+          }
+        },
+        {
+          "sample": 224,
+          "generation": 1,
+          "atMs": 28791,
+          "intervalMs": 101.0,
+          "outputTimeDeltaMs": 101.0,
+          "outputContextDeltaMs": 93.333333333334,
+          "nativeCurrentTime": 22.570666666666668,
+          "nativeState": "running",
+          "predictedContextSec": "22.52552083366666667",
+          "signedMs": "-3.99999999999967000",
+          "absoluteMs": 3.99999999999967,
+          "stepMs": -7.666666666666,
+          "harnessResult": {
+            "ok": true,
+            "value": {
+              "differenceUs": 4000
+            }
+          }
+        },
+        {
+          "sample": 225,
+          "generation": 1,
+          "atMs": 28903,
+          "intervalMs": 112.0,
+          "outputTimeDeltaMs": 111.0,
+          "outputContextDeltaMs": 93.333333333333,
+          "nativeCurrentTime": 22.664,
+          "nativeState": "running",
+          "predictedContextSec": "22.63652083366666667",
+          "signedMs": "-21.66666666666667000",
+          "absoluteMs": 21.66666666666667,
+          "stepMs": -17.666666666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 17.666666666667
+    },
+    "natural-84/3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 6351,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 102.0,
+        "outputContextDeltaMs": 130.66666666666666,
+        "nativeCurrentTime": 0.22666666666666666,
+        "nativeState": "running",
+        "predictedContextSec": "0.148708334000000004",
+        "signedMs": "28.666666666666666000",
+        "absoluteMs": 28.666666666666664,
+        "stepMs": 28.666666666666664,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 6351,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 102.0,
+          "outputContextDeltaMs": 130.66666666666666,
+          "nativeCurrentTime": 0.22666666666666666,
+          "nativeState": "running",
+          "predictedContextSec": "0.148708334000000004",
+          "signedMs": "28.666666666666666000",
+          "absoluteMs": 28.666666666666664,
+          "stepMs": 28.666666666666664,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 28.666666666666664
+    }
+  },
+  "webkit-approved": {
+    "natural-24/1": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 2979,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 198.0,
+        "outputContextDeltaMs": 98.66666599999999,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.214",
+        "signedMs": "-99.33333400000001000",
+        "absoluteMs": 99.33333400000001,
+        "stepMs": -99.33333400000001,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 2979,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 198.0,
+          "outputContextDeltaMs": 98.66666599999999,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.214",
+          "signedMs": "-99.33333400000001000",
+          "absoluteMs": 99.33333400000001,
+          "stepMs": -99.33333400000001,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 99.33333400000001
+    },
+    "natural-24/2": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3118,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 197.0,
+        "outputContextDeltaMs": 98.666667,
+        "nativeCurrentTime": 0.12,
+        "nativeState": "running",
+        "predictedContextSec": "0.215666666",
+        "signedMs": "-98.333333000",
+        "absoluteMs": 98.333333,
+        "stepMs": -98.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3118,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 197.0,
+          "outputContextDeltaMs": 98.666667,
+          "nativeCurrentTime": 0.12,
+          "nativeState": "running",
+          "predictedContextSec": "0.215666666",
+          "signedMs": "-98.333333000",
+          "absoluteMs": 98.333333,
+          "stepMs": -98.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 98.333333
+    },
+    "natural-24/3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3016,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 197.0,
+        "outputContextDeltaMs": 98.666667,
+        "nativeCurrentTime": 0.11466666666666667,
+        "nativeState": "running",
+        "predictedContextSec": "0.210333333",
+        "signedMs": "-98.333333000",
+        "absoluteMs": 98.333333,
+        "stepMs": -98.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3016,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 197.0,
+          "outputContextDeltaMs": 98.666667,
+          "nativeCurrentTime": 0.11466666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "0.210333333",
+          "signedMs": "-98.333333000",
+          "absoluteMs": 98.333333,
+          "stepMs": -98.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 98.333333
+    },
+    "natural-24/4": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3846,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 202.0,
+        "outputContextDeltaMs": 101.333334,
+        "nativeCurrentTime": 0.13066666666666665,
+        "nativeState": "running",
+        "predictedContextSec": "0.228666666",
+        "signedMs": "-100.666666000",
+        "absoluteMs": 100.666666,
+        "stepMs": -100.666666,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3846,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 202.0,
+          "outputContextDeltaMs": 101.333334,
+          "nativeCurrentTime": 0.13066666666666665,
+          "nativeState": "running",
+          "predictedContextSec": "0.228666666",
+          "signedMs": "-100.666666000",
+          "absoluteMs": 100.666666,
+          "stepMs": -100.666666,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 100.666666
+    },
+    "natural-24/5": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3062,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 197.0,
+        "outputContextDeltaMs": 98.666667,
+        "nativeCurrentTime": 0.11466666666666667,
+        "nativeState": "running",
+        "predictedContextSec": "0.210333333",
+        "signedMs": "-98.333333000",
+        "absoluteMs": 98.333333,
+        "stepMs": -98.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3062,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 197.0,
+          "outputContextDeltaMs": 98.666667,
+          "nativeCurrentTime": 0.11466666666666667,
+          "nativeState": "running",
+          "predictedContextSec": "0.210333333",
+          "signedMs": "-98.333333000",
+          "absoluteMs": 98.333333,
+          "stepMs": -98.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 98.333333
+    },
+    "natural-24/6": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3159,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 202.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.215333333",
+        "signedMs": "-100.66666700000001000",
+        "absoluteMs": 100.666667,
+        "stepMs": -100.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3159,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 202.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.215333333",
+          "signedMs": "-100.66666700000001000",
+          "absoluteMs": 100.666667,
+          "stepMs": -100.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 100.666667
+    },
+    "natural-24/7": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 2996,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 2996,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "natural-24/8": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3076,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3076,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "natural-24/9": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 5409,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 202.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.215333333",
+        "signedMs": "-100.66666700000001000",
+        "absoluteMs": 100.666667,
+        "stepMs": -100.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 5409,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 202.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.215333333",
+          "signedMs": "-100.66666700000001000",
+          "absoluteMs": 100.666667,
+          "stepMs": -100.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 100.666667
+    },
+    "natural-24/10": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 5750,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 208.0,
+        "outputContextDeltaMs": 104.0,
+        "nativeCurrentTime": 0.12,
+        "nativeState": "running",
+        "predictedContextSec": "0.221333333",
+        "signedMs": "-104.000000000",
+        "absoluteMs": 104.0,
+        "stepMs": -104.0,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 5750,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 208.0,
+          "outputContextDeltaMs": 104.0,
+          "nativeCurrentTime": 0.12,
+          "nativeState": "running",
+          "predictedContextSec": "0.221333333",
+          "signedMs": "-104.000000000",
+          "absoluteMs": 104.0,
+          "stepMs": -104.0,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 104.0
+    },
+    "stop-restart-24/1": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3613,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 198.0,
+        "outputContextDeltaMs": 98.666667,
+        "nativeCurrentTime": 0.12,
+        "nativeState": "running",
+        "predictedContextSec": "0.216666666",
+        "signedMs": "-99.333333000",
+        "absoluteMs": 99.333333,
+        "stepMs": -99.333333,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3613,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 198.0,
+          "outputContextDeltaMs": 98.666667,
+          "nativeCurrentTime": 0.12,
+          "nativeState": "running",
+          "predictedContextSec": "0.216666666",
+          "signedMs": "-99.333333000",
+          "absoluteMs": 99.333333,
+          "stepMs": -99.333333,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 99.333333
+    },
+    "stop-restart-24/2": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 5233,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 202.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.215333333",
+        "signedMs": "-100.66666700000001000",
+        "absoluteMs": 100.666667,
+        "stepMs": -100.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 5233,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 202.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.215333333",
+          "signedMs": "-100.66666700000001000",
+          "absoluteMs": 100.666667,
+          "stepMs": -100.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 100.666667
+    },
+    "stop-restart-24/3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 3328,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 202.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.215333333",
+        "signedMs": "-100.66666700000001000",
+        "absoluteMs": 100.666667,
+        "stepMs": -100.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 3328,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 202.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.215333333",
+          "signedMs": "-100.66666700000001000",
+          "absoluteMs": 100.666667,
+          "stepMs": -100.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 100.666667
+    },
+    "natural-84/1": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 39871,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 39871,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "natural-84/2": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 41764,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 41764,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    },
+    "natural-84/3": {
+      "samplesUntilStop": 1,
+      "firstOver20": {
+        "sample": 1,
+        "generation": 1,
+        "atMs": 37550,
+        "intervalMs": null,
+        "outputTimeDeltaMs": 203.0,
+        "outputContextDeltaMs": 101.333333,
+        "nativeCurrentTime": 0.11733333333333333,
+        "nativeState": "running",
+        "predictedContextSec": "0.216333333",
+        "signedMs": "-101.66666700000001000",
+        "absoluteMs": 101.666667,
+        "stepMs": -101.666667,
+        "harnessResult": {
+          "ok": false,
+          "error": {
+            "code": "ERR-006",
+            "severity": "ERROR",
+            "messageKey": "clock.outOfSync",
+            "recoverable": false,
+            "sessionId": "a2ar2-track-cycle"
+          }
+        }
+      },
+      "priorAndFailureObservations": [
+        {
+          "sample": 1,
+          "generation": 1,
+          "atMs": 37550,
+          "intervalMs": null,
+          "outputTimeDeltaMs": 203.0,
+          "outputContextDeltaMs": 101.333333,
+          "nativeCurrentTime": 0.11733333333333333,
+          "nativeState": "running",
+          "predictedContextSec": "0.216333333",
+          "signedMs": "-101.66666700000001000",
+          "absoluteMs": 101.666667,
+          "stepMs": -101.666667,
+          "harnessResult": {
+            "ok": false,
+            "error": {
+              "code": "ERR-006",
+              "severity": "ERROR",
+              "messageKey": "clock.outOfSync",
+              "recoverable": false,
+              "sessionId": "a2ar2-track-cycle"
+            }
+          }
+        }
+      ],
+      "maximumAbsoluteStepMs": 101.666667
+    }
+  }
+}

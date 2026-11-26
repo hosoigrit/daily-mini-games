@@ -1,0 +1,112 @@
+{
+  "conditions": {
+    "FF-R2-A": "Firefox 159.0, inherited approved A-1 browser settings, no task Pulse routing",
+    "FF-R2-B": "identical binary, browser args and approved A-1 settings, local isolated Pulse routing only"
+  },
+  "connection": {
+    "library_protocol_version": 35,
+    "server_protocol_version": 35,
+    "is_local": "yes",
+    "server_name": "pulseaudio",
+    "server_version": "17.0",
+    "default_sample_specification": "s16le 2ch 44100Hz",
+    "default_channel_map": "front-left,front-right",
+    "default_sink_name": "r2_test_null",
+    "default_source_name": "r2_test_null.monitor"
+  },
+  "defaultSink": {
+    "state": "IDLE",
+    "name": "r2_test_null",
+    "description": "Null Output",
+    "driver": "module-null-sink.c",
+    "sample_specification": "float32le 2ch 48000Hz",
+    "channel_map": "front-left,front-right"
+  },
+  "pulseProcess": {
+    "version": "pulseaudio 17.0",
+    "systemMode": false,
+    "uid": 1000,
+    "transport": "authenticated UNIX pathname socket in 0700 task directory; chmod 0600; no TCP listener; isolated client autospawn disabled",
+    "clientEnv": [
+      "PULSE_SERVER",
+      "PULSE_COOKIE",
+      "PULSE_CLIENTCONFIG"
+    ],
+    "systemPackagesInstalled": 0,
+    "systemServicesChanged": 0,
+    "physicalOutput": "Not tested. Virtual null sink discards physical output. Native stream presence was verified."
+  },
+  "liveSinkInput": "15\t0\t6\tprotocol-native.c\tfloat32le 2ch 48000Hz",
+  "liveSink": "0\tr2_test_null\tmodule-null-sink.c\tfloat32le 2ch 48000Hz\tRUNNING",
+  "debian": {
+    "distribution": "trixie amd64",
+    "archiveRelease": "https://deb.debian.org/debian/dists/trixie/InRelease",
+    "releaseTimestamp": "2026-11-21T09:15:44Z",
+    "signedIndex": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/Packages.xz",
+    "indexSha256": "be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+    "verifiedSigners": [
+      "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+      "41587F7DB8C774BCCF131416762F67A0B2C39DE4"
+    ],
+    "localTrust": [
+      "/usr/share/keyrings/debian-archive-trixie-automatic.pgp",
+      "/usr/share/keyrings/debian-archive-trixie-stable.pgp"
+    ],
+    "verifyAndExtract": [
+      "sqv --signatures 2 --keyring <trixie-automatic> --keyring <trixie-stable> --cleartext --output verified.Release InRelease",
+      "sha256sum -c packages.sha256",
+      "Check each package SHA-256 against the verified Packages.xz",
+      "dpkg-deb -x <package> <task-root>"
+    ],
+    "packages": {
+      "pulseaudio": {
+        "name": "pulseaudio",
+        "version": "17.0+dfsg1-2+b1",
+        "source": "pulseaudio (17.0+dfsg1-2)",
+        "url": "https://deb.debian.org/debian/pool/main/p/pulseaudio/pulseaudio_17.0+dfsg1-2+b1_amd64.deb",
+        "sha256": "e2961c81af7acd26d86faf1450fef37cb976343046641fd734089591a8d5e026",
+        "license": "LGPL-2.1-or-later, additional component terms in Debian copyright",
+        "bytes": 1176296,
+        "verifiedDebianCopyright": "/usr/share/doc/pulseaudio/copyright"
+      },
+      "pulseaudio-utils": {
+        "name": "pulseaudio-utils",
+        "version": "17.0+dfsg1-2+b1",
+        "source": "pulseaudio (17.0+dfsg1-2)",
+        "url": "https://deb.debian.org/debian/pool/main/p/pulseaudio/pulseaudio-utils_17.0+dfsg1-2+b1_amd64.deb",
+        "sha256": "4894448f98ea126b112682a3212c199e2c404d7429209a570eeb1bf6b567bfd9",
+        "license": "Debian source pulseaudio; LGPL-2.1-or-later and component terms",
+        "bytes": 88876,
+        "verifiedDebianCopyright": "/usr/share/doc/pulseaudio-utils/copyright"
+      },
+      "libspeexdsp1": {
+        "name": "libspeexdsp1",
+        "version": "1.2.1-3",
+        "source": "speexdsp",
+        "url": "https://deb.debian.org/debian/pool/main/s/speexdsp/libspeexdsp1_1.2.1-3_amd64.deb",
+        "sha256": "4f0f6fc83b2f9fbb85b5a1c1470033979bbcd4c72d2177fea98a55f014c4391e",
+        "license": "BSD-3-Clause for library; package documentation and Debian files list their own terms",
+        "bytes": 42864,
+        "verifiedDebianCopyright": "/usr/share/doc/libspeexdsp1/copyright"
+      }
+    }
+  },
+  "daemonFlags": [
+    "-n",
+    "-F <task-daemon.pa>",
+    "--dl-search-path=<task-module-directory>",
+    "--daemonize=no",
+    "--exit-idle-time=-1",
+    "--use-pid-file=no",
+    "--disallow-module-loading=yes",
+    "--disallow-exit=yes",
+    "--disable-shm=yes"
+  ],
+  "daemonConfig": [
+    "load-module module-native-protocol-unix socket=<task-socket> auth-anonymous=no auth-cookie=<task-cookie>",
+    "load-module module-null-sink sink_name=r2_test_null rate=48000 channels=2 channel_map=front-left,front-right format=float32le",
+    "set-default-sink r2_test_null"
+  ],
+  "nativeWarning": "Real-time scheduling and D-Bus unavailable. Daemon starts and accepts clients without RT priority or D-Bus.",
+  "cleanup": "PASS: task daemon exited; Unix socket and 0700 temporary runtime (including the cookie) removed. No system service changed."
+}

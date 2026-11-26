@@ -1,0 +1,5 @@
+id,severity,assessment,cause,evidence
+A2a-CLK-01,HIGH,OPEN,"ENVIRONMENT for native activation; sustained-sync cause UNKNOWN","Same Firefox via task-local PulseAudio recovered startup. R2 isolation recorded valid fixed-anchor excursions above 20 ms."
+A2a-CLK-02,HIGH,OPEN,BROWSER,"Approved WPE r2388 first sample breach; official source fix 330138 and backport; eligibility to execute any available binary in the frozen tooling unconfirmed."
+A2a-CLK-03,HIGH,OPEN,UNKNOWN,"Approved Chromium twice reproduced excursions in legacy and R2 nominal trials. Raw input and independent threshold agree."
+RV-A2AR-01,MEDIUM,CLOSED,IMPLEMENTATION,"Production exact threshold unchanged. Existing boundary suite passes."

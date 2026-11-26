@@ -1,0 +1,56 @@
+{
+  "verifiedDateUtc": "2026-11-26",
+  "bug": "https://bugs.webkit.org/show_bug.cgi?id=330138",
+  "upstreamFix": "82a63cbfae95099e50e62674de97b4619c2b9a54",
+  "upstreamBackport": "48cd9362c826339335f579207478158fd16f2e9b",
+  "wpeSourceRelease": {
+    "name": "WPE WebKit 2.54.3",
+    "sourceArchive": "https://wpewebkit.org/releases/wpewebkit-2.54.3.tar.xz",
+    "publisherPublishedSum": "https://wpewebkit.org/releases/wpewebkit-2.54.3.tar.xz.sums",
+    "publisherPublishedSha256": "787afd32ae23eac061621465390f44a462e874a9ebaba0b65521d7237fa8a5e4",
+    "publisherSignature": "https://wpewebkit.org/releases/wpewebkit-2.54.3.tar.xz.asc",
+    "releaseNotes": "https://wpewebkit.org/releases/wpewebkit-2.54.3.news",
+    "license": "LGPL and BSD families per WebKit source COPYING and per-file notices",
+    "playwrightCompatibility": "Source release alone does not supply a validated Playwright 1.65.1-compatible WPE binary.",
+    "fetchedSourceSha256": "787afd32ae23eac061621465390f44a462e874a9ebaba0b65521d7237fa8a5e4",
+    "fetchedSourceSumMatched": true,
+    "detachedSignatureVerified": false,
+    "sourceInspection": "WebKitWebAudioSourceGStreamer.cpp:294–303 contains corrected playbackTime from MonotonicTime::now() and pipeline timing as in backport."
+  },
+  "approvedPlaywrightBinary": {
+    "playwright": "1.65.1",
+    "browserVersion": "27.2",
+    "revision": 2388,
+    "waylandPort": "WPE",
+    "releasePatchBase": "5b391e6d3b14d549908dad2c6695999291313f30",
+    "protocolFileSha256": "1277f34c2ce287d2b20fb65adc8127ea65cae7712073aee929f0f7c003314cfd"
+  },
+  "inspectedArchive": {
+    "name": "Official Playwright main webkit-debian-13.zip",
+    "revision": 2401,
+    "browserVersionInArchive": "UNAVAILABLE",
+    "url": "https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2401/webkit-debian-13.zip",
+    "canonicalRedirect": "https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/webkit/2401/webkit-debian-13.zip",
+    "roll": "https://github.com/microsoft/playwright/pull/44379",
+    "buildCommitLink": "https://github.com/microsoft/playwright-webkit/commit/5b6b6ed0028c4357455d3643687e4a544c561245",
+    "buildCommitLinkStatus": "404 in public GitHub/API requests",
+    "httpBytes": 104566616,
+    "localSha256": "6a436e49adf1f7de171402b17811502635e1dfcf4890b2e8ceb12b2272c67b08",
+    "officialSignedDigest": "UNAVAILABLE",
+    "opaqueEtag": "0x54C825957BE3E45079809A0B4DD635863A9C031036D52CB94FF22B68A8BE28F0",
+    "embeddedWpeTimestamp": "2026-11-24T18:54:07.397770",
+    "embeddedGtkTimestamp": "2026-11-24T18:53:17.321614",
+    "embeddedSourceRevision": "UNAVAILABLE",
+    "protocolFileSha256": "3608f49e0ba60494ba017104539c3af76b01220e433cd31a9af27ae497be72f4",
+    "protocolDifference": "Compared with r2388, 3 added methods/events and 36 changed definitions including Playwright.createPage and 18 Network definitions",
+    "executed": false,
+    "installed": false
+  },
+  "comparisonGate": "BLOCKED",
+  "reasons": [
+    "Exact fix-bearing runtime source unverified",
+    "No authoritative archive checksum or signature found",
+    "Compatibility with approved Playwright 1.65.1 unverified with schema differences"
+  ],
+  "formalAdoption": "UNAUTHORIZED"
+}

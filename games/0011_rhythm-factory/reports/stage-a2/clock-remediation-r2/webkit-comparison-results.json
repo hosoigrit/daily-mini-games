@@ -1,0 +1,105 @@
+{
+  "approved": {
+    "version": "27.2",
+    "revision": 2388,
+    "wrapper": "Existing fixed WPE MiniBrowser",
+    "condition": {
+      "natural-24": {
+        "planned": 10,
+        "executed": 10,
+        "unattempted": 0,
+        "statuses": {
+          "safety-stop": 10
+        },
+        "testStatuses": {
+          "failed": 10
+        },
+        "validSamples": 10,
+        "invalidSamples": 0,
+        "over20": 10,
+        "syncMs": {
+          "count": 10,
+          "median": 100.6666665,
+          "p95": 104.0,
+          "p99": 104.0,
+          "maximum": 104.0
+        },
+        "generationMs": {
+          "count": 10,
+          "median": 2600.0,
+          "p95": 5023.0,
+          "p99": 5023.0,
+          "maximum": 5023.0
+        },
+        "outgoingRequests": 0
+      },
+      "stop-restart-24": {
+        "planned": 3,
+        "executed": 3,
+        "unattempted": 0,
+        "statuses": {
+          "safety-stop": 3
+        },
+        "testStatuses": {
+          "failed": 3
+        },
+        "validSamples": 3,
+        "invalidSamples": 0,
+        "over20": 3,
+        "syncMs": {
+          "count": 3,
+          "median": 100.666667,
+          "p95": 100.666667,
+          "p99": 100.666667,
+          "maximum": 100.666667
+        },
+        "generationMs": {
+          "count": 3,
+          "median": 3115.0,
+          "p95": 4665.0,
+          "p99": 4665.0,
+          "maximum": 4665.0
+        },
+        "outgoingRequests": 0
+      },
+      "natural-84": {
+        "planned": 3,
+        "executed": 3,
+        "unattempted": 0,
+        "statuses": {
+          "safety-stop": 3
+        },
+        "testStatuses": {
+          "failed": 3
+        },
+        "validSamples": 3,
+        "invalidSamples": 0,
+        "over20": 3,
+        "syncMs": {
+          "count": 3,
+          "median": 101.666667,
+          "p95": 101.666667,
+          "p99": 101.666667,
+          "maximum": 101.666667
+        },
+        "generationMs": {
+          "count": 3,
+          "median": 39201.0,
+          "p95": 40862.0,
+          "p99": 40862.0,
+          "maximum": 40862.0
+        },
+        "outgoingRequests": 0
+      }
+    },
+    "status": "FAIL"
+  },
+  "candidate": {
+    "status": "BLOCKED",
+    "runs": 0,
+    "planned": 16,
+    "reason": "No official candidate with a verified fix-bearing build, published integrity and compatible Playwright 1.65.1 protocol.",
+    "evidence": "webkit-candidate-provenance.json"
+  },
+  "formalAdoption": "UNAUTHORIZED"
+}
