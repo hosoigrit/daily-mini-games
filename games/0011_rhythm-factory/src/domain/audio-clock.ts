@@ -27,7 +27,7 @@ function failure(code: ClockError, sessionId: string, messageKey: string): Resul
 
 export function isUsableClockSample(sample: OutputClockSample | undefined): sample is OutputClockSample {
   return sample !== undefined
-    && Number.isFinite(sample.contextTime) && sample.contextTime >= 0
+    && Number.isFinite(sample.contextTime) && sample.contextTime > 0
     && Number.isFinite(sample.performanceTime) && sample.performanceTime > 0;
 }
 
@@ -74,13 +74,16 @@ export function createFixedAudioClock(anchor: PlaybackAnchor, offsetUs: Us): Res
           stopped = true;
           return failure('ERR-006', sessionId, 'clock.notAdvancing');
         }
-        const difference = Math.round(Math.abs(sample.contextTime - estimateAudioSeconds(sample.performanceTime)) * 1_000_000);
-        if (difference > maximumClockDifferenceUs) {
+        const predicted = estimateAudioSeconds(sample.performanceTime);
+        const limitSeconds = maximumClockDifferenceUs / 1_000_000;
+        // Compare the observed seconds against the inclusive band before rounding the reported difference to μs.
+        if (sample.contextTime < predicted - limitSeconds || sample.contextTime > predicted + limitSeconds) {
           stopped = true;
           return failure('ERR-006', sessionId, 'clock.outOfSync');
         }
         lastSample = { ...sample };
-        return { ok: true, value: { differenceUs: difference as Us } };
+        const differenceUs = Math.round(Math.abs(sample.contextTime - predicted) * 1_000_000) as Us;
+        return { ok: true, value: { differenceUs } };
       },
     },
   };

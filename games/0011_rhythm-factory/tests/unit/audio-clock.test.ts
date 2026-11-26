@@ -51,8 +51,23 @@ describe('IF-03/04 fixed-generation clock', () => {
     expect(clock.convertEventTime(1400 as Ms, anchor.generation).ok).toBe(false);
   });
 
+  it('stops on the first out-of-band sample before output diagnostics round to μs', () => {
+    const upper = unwrap(createFixedAudioClock(anchor, 0 as Us));
+    const lower = unwrap(createFixedAudioClock(anchor, 0 as Us));
+    expect(upper.observe({ contextTime: 10.1200001, performanceTime: 1100 })).toMatchObject({
+      ok: false, error: { code: 'ERR-006', messageKey: 'clock.outOfSync' },
+    });
+    expect(lower.observe({ contextTime: 10.0799999, performanceTime: 1100 })).toMatchObject({
+      ok: false, error: { code: 'ERR-006', messageKey: 'clock.outOfSync' },
+    });
+    expect(unwrap(unwrap(createFixedAudioClock(anchor, 0 as Us)).observe(
+      { contextTime: 10.08, performanceTime: 1100 },
+    )).differenceUs).toBe(20_000);
+  });
+
   it('rejects backward, stalled and unavailable observations, invalid opening anchors and stale generations', () => {
     expect(createFixedAudioClock({ ...anchor, anchorPerformanceMs: 0 as Ms }, 0 as Us).ok).toBe(false);
+    expect(createFixedAudioClock({ ...anchor, anchorAudioSec: 0 as Sec }, 0 as Us).ok).toBe(false);
     const clock = unwrap(createFixedAudioClock(anchor, 0 as Us));
     expect(clock.convertEventTime(2000 as Ms, 2 as Gen).ok).toBe(false);
     expect(clock.convertEventTime(NaN as Ms, 3 as Gen).ok).toBe(false);

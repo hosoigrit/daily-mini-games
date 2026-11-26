@@ -96,7 +96,7 @@ export function createWebAudio(
       const stamp = context.getOutputTimestamp();
       const { contextTime, performanceTime } = stamp;
       if (contextTime === undefined || performanceTime === undefined
-          || !Number.isFinite(contextTime) || contextTime < 0
+          || !Number.isFinite(contextTime) || contextTime <= 0
           || !Number.isFinite(performanceTime) || performanceTime <= 0) return undefined;
       return { contextTime, performanceTime };
     } catch {
