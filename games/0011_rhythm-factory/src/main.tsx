@@ -1,25 +1,24 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createCompositionRoot } from './app/composition-root';
-import { mountCanvasRenderer } from './infrastructure/canvas-renderer';
-import { FoundationScreen } from './presentation/FoundationScreen';
+import { createTrialRuntime } from './bootstrap/trial-runtime';
+import { TrialGame } from './presentation/TrialGame';
 
 const element = document.getElementById('root');
 if (!element) throw new Error('Missing application root');
 
-const services = createCompositionRoot();
+const runtime = createTrialRuntime(window);
 const root = createRoot(element);
-const mountCanvas = (canvas: HTMLCanvasElement) => mountCanvasRenderer(canvas, services.render);
+root.render(<StrictMode><TrialGame runtime={runtime} /></StrictMode>);
 
-root.render(
-  <StrictMode>
-    <FoundationScreen store={services.store} toggleProbeState={services.toggleProbeState} mountCanvas={mountCanvas} />
-  </StrictMode>,
-);
-
-if (import.meta.hot) {
-  import.meta.hot.dispose(() => {
-    root.unmount();
-    services.dispose();
-  });
+function dispose() {
+  window.removeEventListener('pagehide', unload);
+  root.unmount();
+  runtime.dispose();
 }
+
+function unload(event: PageTransitionEvent) {
+  if (!event.persisted) dispose();
+}
+
+window.addEventListener('pagehide', unload);
+if (import.meta.hot) import.meta.hot.dispose(dispose);

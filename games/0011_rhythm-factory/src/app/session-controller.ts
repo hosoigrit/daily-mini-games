@@ -47,6 +47,7 @@ interface ControllerOptions<Binding> {
   readonly audio: SessionAudioPort;
   readonly storage: SessionStorage<Binding>;
   readonly writer: { readonly status: () => WriterStatus; readonly currentLease: () => WriterLease | null };
+  readonly initialDifficulty?: Difficulty;
   readonly getMusic: (id: MusicId) => MusicDefinition | null;
   readonly getChart: (id: MusicId, difficulty: Difficulty) => CompiledChart | null;
   readonly getTutorial: (id: TutorialId) => SessionSelection | null;
@@ -86,7 +87,7 @@ export function createSessionController<Binding>(options: ControllerOptions<Bind
   const animationIds = new Set<string>();
   let screen: Screen = 'TITLE';
   let selectedMusicId: MusicId = 'music-01';
-  let difficulty: Difficulty = 'EASY';
+  let difficulty: Difficulty = options.initialDifficulty ?? 'EASY';
   let generation = 0;
   let prepared: { readonly definition: MusicDefinition; readonly track: PreparedTrack } | null = null;
   let prepareToken: Token | null = null;

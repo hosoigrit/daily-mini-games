@@ -14,7 +14,8 @@ const layers = {
   app: new Set(['contracts', 'domain', 'app']),
   infrastructure: new Set(['contracts', 'infrastructure']),
   presentation: new Set(['contracts', 'app', 'presentation']),
-  'main.tsx': new Set(['app', 'infrastructure', 'presentation']),
+  bootstrap: new Set(['contracts', 'app', 'content', 'domain', 'infrastructure', 'bootstrap']),
+  'main.tsx': new Set(['bootstrap', 'presentation']),
 };
 const external = {
   'main.tsx': new Set(['react', 'react-dom/client']),
