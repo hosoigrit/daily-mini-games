@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { AudioEvent, Ms, PlaybackAnchor, PreparedTrack, Sec, Token, Us } from '../../../src/contracts/interface_contracts';
+import type { AudioEvent, Ms, PlaybackAnchor, PreparedTrack, Result, Sec, Token, Us } from '../../../src/contracts/interface_contracts';
 import type { Preparation } from '../src/model';
 import { stageA2TrialMusic } from '../../../src/content/stage-a2-trial';
 
@@ -47,7 +47,7 @@ function productFixture() {
     enable: vi.fn(async () => { contextState = 'running'; return { ok: true }; }),
     currentTime: vi.fn(() => .12 as Sec),
     outputTimestamp: vi.fn(() => ready ? sample : undefined),
-    playAt: vi.fn((_track: PreparedTrack, offset: Us, startAt: Sec, token: Token) => {
+    playAt: vi.fn((_track: PreparedTrack, offset: Us, startAt: Sec, token: Token): Result<PlaybackAnchor> => {
       live = token;
       performanceNow += 100;
       active = {
@@ -188,6 +188,51 @@ describe('QA trial controller with fixed product clock and controlled native rea
     await Promise.all([controller.start(true), controller.start(true)]);
     expect(controlled.audio.playAt).toHaveBeenCalledTimes(1);
     await controller.release();
+  });
+
+  it('finalizes an abort even if the native offline promise never settles', async () => {
+    const controller = createHarnessController();
+    mock.prepare.mockImplementationOnce(() => new Promise(() => undefined));
+    void controller.prepare();
+    const aborted = controller.abort();
+    await vi.advanceTimersByTimeAsync(3000);
+    await aborted;
+    expect(controller.getState()).toMatchObject({
+      phase: 'finished', trials: [{ status: 'ABORTED', released: false }],
+    });
+    controller.nextTrial();
+    expect(controller.getState().phase).toBe('finished');
+  });
+
+  it('classifies a missing fresh playAt anchor as BLOCKED after readiness', async () => {
+    const controller = createHarnessController();
+    await controller.prepare();
+    await controller.enable(true);
+    controlled.audio.playAt.mockReturnValueOnce({
+      ok: false,
+      error: { code: 'ERR-005', severity: 'ERROR', messageKey: 'clock.noAnchor', recoverable: true },
+    });
+    await controller.start(true);
+    await vi.advanceTimersByTimeAsync(0);
+    expect(controller.getState().current).toMatchObject({ status: 'BLOCKED', anchor: 'FAIL', released: true });
+  });
+
+  it.each([false, true])('checks native elapsed frames before accepting ENDED (complete=%s)', async (complete) => {
+    const controller = await toPlaying();
+    const token = controlled.owner();
+    const anchor = controlled.anchor();
+    controlled.setSample(.106, 200);
+    await vi.advanceTimersByTimeAsync(100);
+    controlled.audio.currentTime.mockReturnValueOnce((anchor.startAudioSec + (complete ? 24 : .1)) as Sec);
+    controlled.emit({ ...token, kind: 'ENDED', playbackId: anchor.playbackId, clockGeneration: anchor.generation });
+    await vi.advanceTimersByTimeAsync(0);
+    expect(controller.getState().current).toMatchObject({
+      status: complete ? 'PASS' : 'FAIL', naturalCompletion: complete, released: true,
+    });
+    expect(controller.getState().current?.events).toEqual(expect.arrayContaining([expect.objectContaining({
+      kind: 'native-ended',
+      detail: expect.stringContaining('"expectedFrames":1152000'),
+    })]));
   });
 
   it('handles interruption from the matching owner without consuming another clock sample', async () => {

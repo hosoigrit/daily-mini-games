@@ -82,3 +82,13 @@ test('keeps all eight UI case routes aligned to their fixture and visible at 320
   await page.locator('#diagnostics').uncheck();
   await expect(page.locator('#clock-chart')).toBeHidden();
 });
+
+test('fits tablet portrait and landscape in the WebKit touch profile', async ({ page, browserName, isMobile }) => {
+  test.skip(browserName !== 'webkit' || !isMobile, 'Tablet screen geometry is checked in the WebKit touch profile.');
+  for (const viewport of [{ width: 768, height: 1024 }, { width: 1024, height: 768 }]) {
+    await page.setViewportSize(viewport);
+    await openQa(page);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(viewport.width);
+    await expect(page.locator('#prepare')).toBeVisible();
+  }
+});

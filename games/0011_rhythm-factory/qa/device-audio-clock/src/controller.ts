@@ -1,8 +1,8 @@
 import type { AudioEvent, Ms, PlaybackAnchor, PreparedTrack, Sec, Token, Us } from '../../../src/contracts/interface_contracts';
 import { clockSampleIntervalMs, createFixedAudioClock } from '../../../src/domain/audio-clock';
 import { buildMetadata, type BuildMetadata } from './build-metadata';
-import { TEST_CASES, type ClockObservation, type DeviceInput, type FixtureId, type Outcome, type TestCaseId, type Trial, type Viewport } from './model';
-import { createMeasuredProduct, hasExpectedPcm, prepareProduct } from './product';
+import { hasExpectedPcm, TEST_CASES, type ClockObservation, type DeviceInput, type FixtureId, type Outcome, type TestCaseId, type Trial, type Viewport } from './model';
+import { createMeasuredProduct, prepareProduct } from './product';
 
 type Phase = 'idle' | 'preparing' | 'prepared' | 'enabling' | 'enabled' | 'playing' | 'stopped'
   | 'releasing' | 'awaiting-export' | 'rerun-ready' | 'finished';
@@ -165,8 +165,9 @@ export function createHarnessController() {
     }
     // Pending offline synthesis must return before another context may render.
     if (rendering) {
-      await rendering.catch(() => undefined);
-      event('aborted-render-settled');
+      const settled = await browserBudget(rendering.then(() => true, () => true), releaseObservationLimitMs);
+      closed &&= settled === true;
+      event(settled ? 'aborted-render-settled' : 'aborted-render-not-confirmed');
     }
     const usage = owned?.audio.diagnostics();
     closed &&= !usage || (usage.cached === 0 && usage.rendering === 0 && usage.sources === 0 && usage.voices === 0);
@@ -183,7 +184,7 @@ export function createHarnessController() {
       after = 'finished';
     }
     trial.status = status;
-    trial.reason = closed ? reason : `${reason}; audio.releaseUnconfirmed`;
+    trial.reason = closed ? reason : `${reason} / audio.releaseUnconfirmed`;
     phase = after;
     if (after === 'finished') completed.push(trial);
     publish(after === 'awaiting-export'
@@ -201,11 +202,16 @@ export function createHarnessController() {
     } else if (notification.kind === 'ENDED' && notification.clockGeneration === active.anchor.generation) {
       cancelMonitor();
       playback = null;
-      if (!current) return;
-      current.naturalCompletion = true;
-      event('natural-end');
-      void settle(testCase().mode === 'natural' && active.validSamples > 0 ? 'PASS' : 'FAIL',
-        testCase().mode === 'natural' && active.validSamples > 0 ? 'trial.naturalComplete' : 'trial.unexpectedEnd');
+      if (!current || !track) return;
+      const endAudioSec = owner.audio.currentTime() ?? null;
+      const expectedFrames = Math.round((track.durationUs - active.anchor.startSongUs) * track.sampleRate / 1_000_000);
+      const playedFrames = endAudioSec === null || !Number.isFinite(endAudioSec)
+        ? null : Math.round((endAudioSec - active.anchor.startAudioSec) * track.sampleRate);
+      event('native-ended', JSON.stringify({ endAudioSec, playedFrames, expectedFrames }));
+      const natural = testCase().mode === 'natural' && active.validSamples > 0
+        && playedFrames !== null && playedFrames >= expectedFrames;
+      current.naturalCompletion = natural;
+      void settle(natural ? 'PASS' : 'FAIL', natural ? 'trial.naturalComplete' : 'trial.unexpectedEnd');
     }
   }
 
@@ -382,7 +388,7 @@ export function createHarnessController() {
     if (!result.ok) {
       trial.anchor = 'FAIL';
       event('anchor-rejected', JSON.stringify(owned.read()));
-      void settle('FAIL', result.error.messageKey);
+      void settle(result.error.code === 'ERR-005' ? 'BLOCKED' : 'FAIL', result.error.messageKey);
       return;
     }
     const anchor = result.value;

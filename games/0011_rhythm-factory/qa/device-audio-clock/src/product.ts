@@ -3,11 +3,11 @@ import type { Token } from '../../../src/contracts/interface_contracts';
 import { tickToUs } from '../../../src/domain/audio-clock';
 import { createWebAudio } from '../../../src/infrastructure/web-audio';
 import { a2ar2LoadTrack } from '../../../tests/fixtures/a2ar2-load-track';
-import type { FixtureId, Preparation } from './model';
+import { FIXTURE_SECONDS, type FixtureId, type Preparation } from './model';
 
 export const fixtures = {
-  'rotation-24': { definition: stageA2TrialMusic, durationSec: 24 },
-  'load-84': { definition: a2ar2LoadTrack, durationSec: 84 },
+  'rotation-24': { definition: stageA2TrialMusic, durationSec: FIXTURE_SECONDS['rotation-24'] },
+  'load-84': { definition: a2ar2LoadTrack, durationSec: FIXTURE_SECONDS['load-84'] },
 } as const;
 
 export function finite(value: number | undefined): number | null {
@@ -98,53 +98,38 @@ export async function prepareProduct(
   // Observe the native render already used by the product. It keeps its original promise and buffer.
   const capture: { buffer?: AudioBuffer } = {};
   const startedAtMs = performance.now();
-  try {
-    prototype.startRendering = function () {
-      const rendering = original.call(this);
-      void rendering.then((buffer) => { capture.buffer = buffer; }, () => undefined);
-      return rendering;
-    };
-    const pending = product.audio.renderMusic(fixtures[fixtureId].definition, token);
-    const maxSimultaneousRenders = product.audio.diagnostics().rendering;
-    const result = await pending;
-    const completedAtMs = performance.now();
-    const buffer = capture.buffer;
-    if (!result.ok || !buffer) return { result, preparation: null };
-    const diagnostics = product.audio.diagnostics();
-    const preparation: Preparation = {
-      startedAtMs,
-      completedAtMs,
-      generationMs: completedAtMs - startedAtMs,
-      durationSec: buffer.duration,
-      channels: buffer.numberOfChannels,
-      sampleRate: buffer.sampleRate,
-      frames: buffer.length,
-      pcmBytes: buffer.length * buffer.numberOfChannels * Float32Array.BYTES_PER_ELEMENT,
-      cacheCount: diagnostics.cached,
-      renderingCount: diagnostics.rendering,
-      maxSimultaneousRenders,
-      ...inspectPcm(buffer),
-    };
-    return { result, preparation };
-  } finally {
-    prototype.startRendering = original;
-  }
-}
-
-export function hasExpectedPcm(preparation: Preparation, fixture: FixtureId) {
-  const duration = fixtures[fixture].durationSec;
-  return preparation.durationSec === duration
-    && preparation.channels === 2
-    && preparation.sampleRate === 48_000
-    && preparation.frames === duration * 48_000
-    && preparation.pcmBytes === duration * 48_000 * 2 * Float32Array.BYTES_PER_ELEMENT
-    && preparation.float32
-    && preparation.nonfiniteSamples === 0
-    && preparation.bgmPeak !== null
-    && preparation.bgmPeak > 0
-    && preparation.bgmPeak <= 10 ** (-3 / 20)
-    && preparation.audibleHalfSecondBlocks >= duration * 2 - 1
-    && preparation.cacheCount === 1
-    && preparation.renderingCount === 0
-    && preparation.maxSimultaneousRenders === 1;
+  const pending = (() => {
+    try {
+      prototype.startRendering = function () {
+        const rendering = original.call(this);
+        void rendering.then((buffer) => { capture.buffer = buffer; }, () => undefined);
+        return rendering;
+      };
+      // The pinned renderer invokes startRendering before its first await.
+      return product.audio.renderMusic(fixtures[fixtureId].definition, token);
+    } finally {
+      prototype.startRendering = original;
+    }
+  })();
+  const maxSimultaneousRenders = product.audio.diagnostics().rendering;
+  const result = await pending;
+  const completedAtMs = performance.now();
+  const buffer = capture.buffer;
+  if (!result.ok || !buffer) return { result, preparation: null };
+  const diagnostics = product.audio.diagnostics();
+  const preparation: Preparation = {
+    startedAtMs,
+    completedAtMs,
+    generationMs: completedAtMs - startedAtMs,
+    durationSec: buffer.duration,
+    channels: buffer.numberOfChannels,
+    sampleRate: buffer.sampleRate,
+    frames: buffer.length,
+    pcmBytes: buffer.length * buffer.numberOfChannels * Float32Array.BYTES_PER_ELEMENT,
+    cacheCount: diagnostics.cached,
+    renderingCount: diagnostics.rendering,
+    maxSimultaneousRenders,
+    ...inspectPcm(buffer),
+  };
+  return { result, preparation };
 }

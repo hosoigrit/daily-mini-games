@@ -106,4 +106,14 @@ describe('QA evidence aggregation', () => {
     expect(maximumTooSlow.groups[0]?.summary.generationPerformance.status).toBe('FAIL');
     expect(resourceCap.groups[0]?.summary.generationPerformance).toMatchObject({ status: 'FAIL', resourceCapExceeded: true });
   });
+  it('keeps the generation gate failed when a fast render produces invalid PCM', () => {
+    const trials = [200, 210, 220].map((ms, index) => ({
+      ...TEST_FIXTURE, trialId: String(index), status: 'FAIL' as const,
+      preparations: [{ ...preparation(ms), nonfiniteSamples: 1, bgmPeak: null }],
+    }));
+    expect(makeEvidence(trials).groups[0]?.summary.generationPerformance).toMatchObject({
+      status: 'FAIL', sampleCount: 3, resourceCapExceeded: false,
+    });
+  });
+
 });

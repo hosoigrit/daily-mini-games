@@ -1,4 +1,5 @@
-export type FixtureId = 'rotation-24' | 'load-84';
+export const FIXTURE_SECONDS = { 'rotation-24': 24, 'load-84': 84 } as const;
+export type FixtureId = keyof typeof FIXTURE_SECONDS;
 export type Outcome = 'PASS' | 'FAIL' | 'BLOCKED' | 'ABORTED' | 'NOT RUN';
 
 export const TEST_CASES = [
@@ -61,6 +62,24 @@ export interface Preparation {
   cacheCount: number;
   renderingCount: number;
   maxSimultaneousRenders: number;
+}
+
+export function hasExpectedPcm(preparation: Preparation, fixture: FixtureId) {
+  const duration = FIXTURE_SECONDS[fixture];
+  return preparation.durationSec === duration
+    && preparation.channels === 2
+    && preparation.sampleRate === 48_000
+    && preparation.frames === duration * 48_000
+    && preparation.pcmBytes === duration * 48_000 * 2 * Float32Array.BYTES_PER_ELEMENT
+    && preparation.float32
+    && preparation.nonfiniteSamples === 0
+    && preparation.bgmPeak !== null
+    && preparation.bgmPeak > 0
+    && preparation.bgmPeak <= 10 ** (-3 / 20)
+    && preparation.audibleHalfSecondBlocks >= duration * 2 - 1
+    && preparation.cacheCount === 1
+    && preparation.renderingCount === 0
+    && preparation.maxSimultaneousRenders === 1;
 }
 
 export interface AnchorRecord {
@@ -222,13 +241,15 @@ function summarizeCondition(trials: readonly Trial[], plannedTrials: number) {
 }
 
 function assessGeneration(trials: readonly Trial[], generationMs: Distribution) {
-  const preparations = trials.filter(trial => trial.status !== 'NOT RUN').flatMap(trial => trial.preparations);
-  const resourceCapExceeded = preparations.some(preparation =>
+  const prepared = trials.filter(trial => trial.status !== 'NOT RUN').flatMap(trial =>
+    trial.preparations.map(preparation => ({ preparation, fixture: trial.fixtureId })));
+  const resourceCapExceeded = prepared.some(({ preparation }) =>
     preparation.cacheCount > 1 || preparation.renderingCount > 1 || preparation.maxSimultaneousRenders > 1);
+  const invalidPcm = prepared.some(({ preparation, fixture }) => !hasExpectedPcm(preparation, fixture));
   const sufficient = generationMs.count >= generationReference.minimumTrials;
   const tooSlow = (generationMs.max ?? 0) > generationReference.maxLimitMs ||
     (sufficient && (generationMs.median ?? 0) > generationReference.medianLimitMs);
-  const status: 'NOT RUN' | 'PASS' | 'FAIL' = resourceCapExceeded || tooSlow ? 'FAIL' : sufficient ? 'PASS' : 'NOT RUN';
+  const status: 'NOT RUN' | 'PASS' | 'FAIL' = resourceCapExceeded || invalidPcm || tooSlow ? 'FAIL' : sufficient ? 'PASS' : 'NOT RUN';
   return { ...generationReference, status, sampleCount: generationMs.count, resourceCapExceeded };
 }
 
