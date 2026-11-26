@@ -1,0 +1,1047 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:daily-mini-games:0011:stage-a2a-r3:device-audio-clock:1",
+  "title": "Game #0011 Stage A-2a-R3 device QA evidence",
+  "description": "Browser QA evidence. The time origin is local to each run. Unavailable and nonfinite values appear as null. Device identity is unavailable or manually reported. This file contains no physical-device verification attestation.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "formalStatus": {
+      "const": "HOLD"
+    },
+    "physicalDeviceVerified": {
+      "const": false
+    },
+    "percentileMethod": {
+      "const": "nearest-rank"
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "trials": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/trial"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "formalStatus",
+    "physicalDeviceVerified",
+    "percentileMethod",
+    "summary",
+    "groups",
+    "trials"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "viewport": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "orientation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "orientation"
+      ],
+      "additionalProperties": false
+    },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "fixtureId": {
+          "enum": [
+            "rotation-24",
+            "load-84"
+          ]
+        },
+        "fixtureHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "qaHarnessCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "productImplementationCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "baselineCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "deviceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "os": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "browser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "browserVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audioOutputType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "environmentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "powerState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "diagnosticsEnabled": {
+          "type": "boolean"
+        },
+        "visibilityAtStart": {
+          "type": "string"
+        },
+        "activationObservationLimitMs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "testCaseId": {
+          "enum": [
+            "DEV-AUD-01",
+            "DEV-AUD-02",
+            "DEV-AUD-03",
+            "DEV-AUD-04",
+            "DEV-AUD-05",
+            "DEV-AUD-06",
+            "DEV-AUD-07",
+            "DEV-AUD-08"
+          ]
+        },
+        "testProfile": {
+          "enum": [
+            "screening",
+            "repetition"
+          ]
+        },
+        "viewport": {
+          "$ref": "#/$defs/viewport"
+        }
+      },
+      "required": [
+        "fixtureId",
+        "fixtureHash",
+        "qaHarnessCommit",
+        "productImplementationCommit",
+        "baselineCommit",
+        "deviceType",
+        "os",
+        "browser",
+        "browserVersion",
+        "audioOutputType",
+        "environmentId",
+        "powerState",
+        "diagnosticsEnabled",
+        "visibilityAtStart",
+        "activationObservationLimitMs",
+        "testCaseId",
+        "testProfile",
+        "viewport"
+      ],
+      "additionalProperties": false
+    },
+    "testConditions": {
+      "type": "object",
+      "properties": {
+        "environmentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "powerState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "diagnosticsEnabled": {
+          "type": "boolean"
+        },
+        "visibilityAtStart": {
+          "type": "string"
+        },
+        "activationObservationLimitMs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source": {
+          "const": "browser-qa"
+        },
+        "physicalDeviceVerified": {
+          "const": false
+        },
+        "deviceFieldsSource": {
+          "const": "user"
+        },
+        "viewportSource": {
+          "const": "browser"
+        }
+      },
+      "required": [
+        "environmentId",
+        "powerState",
+        "diagnosticsEnabled",
+        "visibilityAtStart",
+        "activationObservationLimitMs",
+        "source",
+        "physicalDeviceVerified",
+        "deviceFieldsSource",
+        "viewportSource"
+      ],
+      "additionalProperties": false
+    },
+    "anchor": {
+      "type": "object",
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "a0": {
+          "type": "number"
+        },
+        "p0": {
+          "type": "number"
+        },
+        "performanceNow": {
+          "type": "number"
+        },
+        "currentTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "contextTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "performanceTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "audioContextState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "startAudioSec": {
+          "type": "number"
+        },
+        "startSongUs": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "generation",
+        "a0",
+        "p0",
+        "performanceNow",
+        "currentTime",
+        "contextTime",
+        "performanceTime",
+        "audioContextState",
+        "startAudioSec",
+        "startSongUs"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "a0": {
+          "type": "number"
+        },
+        "p0": {
+          "type": "number"
+        },
+        "performanceNow": {
+          "type": "number"
+        },
+        "currentTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "contextTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "performanceTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "audioContextState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intervalMs": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "signedResidualMs": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "absoluteDifferenceMs": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "overLimit": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "safetyStopReason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "generation",
+        "a0",
+        "p0",
+        "performanceNow",
+        "currentTime",
+        "contextTime",
+        "performanceTime",
+        "audioContextState",
+        "intervalMs",
+        "signedResidualMs",
+        "absoluteDifferenceMs",
+        "valid",
+        "overLimit",
+        "reason",
+        "safetyStopReason"
+      ],
+      "additionalProperties": false,
+      "description": "overLimit records the product decision before display rounding. An invalid observation is preserved."
+    },
+    "preparation": {
+      "type": "object",
+      "properties": {
+        "startedAtMs": {
+          "type": "number"
+        },
+        "completedAtMs": {
+          "type": "number"
+        },
+        "generationMs": {
+          "type": "number"
+        },
+        "durationSec": {
+          "type": "number"
+        },
+        "channels": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sampleRate": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frames": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pcmBytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonfiniteSamples": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "audibleHalfSecondBlocks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cacheCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "renderingCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maxSimultaneousRenders": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bgmPeak": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "float32": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "startedAtMs",
+        "completedAtMs",
+        "generationMs",
+        "durationSec",
+        "channels",
+        "sampleRate",
+        "frames",
+        "pcmBytes",
+        "nonfiniteSamples",
+        "audibleHalfSecondBlocks",
+        "cacheCount",
+        "renderingCount",
+        "maxSimultaneousRenders",
+        "bgmPeak",
+        "float32"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "atMs": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "atMs",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "trial": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "fixtureId": {
+          "enum": [
+            "rotation-24",
+            "load-84"
+          ]
+        },
+        "fixtureHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "qaHarnessCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "productImplementationCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "baselineCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "qaHarnessVersion": {
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "trialId": {
+          "type": "string"
+        },
+        "testCaseId": {
+          "enum": [
+            "DEV-AUD-01",
+            "DEV-AUD-02",
+            "DEV-AUD-03",
+            "DEV-AUD-04",
+            "DEV-AUD-05",
+            "DEV-AUD-06",
+            "DEV-AUD-07",
+            "DEV-AUD-08"
+          ]
+        },
+        "testProfile": {
+          "enum": [
+            "screening",
+            "repetition"
+          ]
+        },
+        "recordedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deviceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "os": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "browser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "browserVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audioOutputType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "viewport": {
+          "$ref": "#/$defs/viewport"
+        },
+        "testConditions": {
+          "$ref": "#/$defs/testConditions"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "ABORTED",
+            "NOT RUN"
+          ]
+        },
+        "activation": {
+          "enum": [
+            "SUCCESS",
+            "FAIL",
+            "PENDING",
+            "NOT RUN"
+          ]
+        },
+        "anchor": {
+          "enum": [
+            "SUCCESS",
+            "FAIL",
+            "NOT RUN"
+          ]
+        },
+        "naturalCompletion": {
+          "type": "boolean"
+        },
+        "restarted": {
+          "type": "boolean"
+        },
+        "released": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "anchors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/anchor"
+          }
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/observation"
+          }
+        },
+        "preparations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/preparation"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "fixtureId",
+        "fixtureHash",
+        "qaHarnessCommit",
+        "productImplementationCommit",
+        "baselineCommit",
+        "qaHarnessVersion",
+        "runId",
+        "trialId",
+        "testCaseId",
+        "testProfile",
+        "recordedAt",
+        "deviceType",
+        "os",
+        "browser",
+        "browserVersion",
+        "audioOutputType",
+        "viewport",
+        "testConditions",
+        "status",
+        "activation",
+        "anchor",
+        "naturalCompletion",
+        "restarted",
+        "released",
+        "reason",
+        "anchors",
+        "observations",
+        "preparations",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "distribution": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "median": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "p95": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "p99": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "count",
+        "median",
+        "p95",
+        "p99",
+        "max"
+      ],
+      "additionalProperties": false,
+      "description": "Median is the mean of the two central values for even sizes. P95/P99 are nearest-rank. Invalid observations never enter the distribution."
+    },
+    "overLimit": {
+      "type": "object",
+      "properties": {
+        "runId": {
+          "type": "string"
+        },
+        "trialId": {
+          "type": "string"
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "performanceNow": {
+          "type": "number"
+        },
+        "absoluteDifferenceMs": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "runId",
+        "trialId",
+        "generation",
+        "performanceNow",
+        "absoluteDifferenceMs"
+      ],
+      "additionalProperties": false
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "minimumTrials": {
+          "const": 3
+        },
+        "medianLimitMs": {
+          "const": 5000
+        },
+        "maxLimitMs": {
+          "const": 10000
+        },
+        "status": {
+          "enum": [
+            "NOT RUN",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "sampleCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resourceCapExceeded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "minimumTrials",
+        "medianLimitMs",
+        "maxLimitMs",
+        "status",
+        "sampleCount",
+        "resourceCapExceeded"
+      ],
+      "additionalProperties": false
+    },
+    "scopedPerformance": {
+      "type": "object",
+      "properties": {
+        "minimumTrials": {
+          "const": 3
+        },
+        "medianLimitMs": {
+          "const": 5000
+        },
+        "maxLimitMs": {
+          "const": 10000
+        },
+        "status": {
+          "enum": [
+            "NOT RUN",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "sampleCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resourceCapExceeded": {
+          "type": "boolean"
+        },
+        "condition": {
+          "$ref": "#/$defs/condition"
+        }
+      },
+      "required": [
+        "minimumTrials",
+        "medianLimitMs",
+        "maxLimitMs",
+        "status",
+        "sampleCount",
+        "resourceCapExceeded",
+        "condition"
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "plannedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "executedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "successfulTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blockedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "abortedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unexecutedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validObservations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "invalidObservations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "overLimitCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "restartSuccesses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "generationMs": {
+          "$ref": "#/$defs/distribution"
+        },
+        "syncDifferenceMs": {
+          "$ref": "#/$defs/distribution"
+        },
+        "firstOverLimit": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/overLimit"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mixedConditions": {
+          "type": "boolean"
+        },
+        "generationPerformance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scopedPerformance"
+          }
+        }
+      },
+      "required": [
+        "plannedTrials",
+        "executedTrials",
+        "successfulTrials",
+        "failedTrials",
+        "blockedTrials",
+        "abortedTrials",
+        "unexecutedTrials",
+        "validObservations",
+        "invalidObservations",
+        "overLimitCount",
+        "restartSuccesses",
+        "generationMs",
+        "syncDifferenceMs",
+        "firstOverLimit",
+        "mixedConditions",
+        "generationPerformance"
+      ],
+      "additionalProperties": false,
+      "description": "The mixed-condition summary keeps counts and uses null timing percentiles. Read groups for measurements under the same conditions."
+    },
+    "conditionSummary": {
+      "type": "object",
+      "properties": {
+        "plannedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "executedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "successfulTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blockedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "abortedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unexecutedTrials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validObservations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "invalidObservations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "overLimitCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "restartSuccesses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "generationMs": {
+          "$ref": "#/$defs/distribution"
+        },
+        "syncDifferenceMs": {
+          "$ref": "#/$defs/distribution"
+        },
+        "firstOverLimit": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/overLimit"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "generationPerformance": {
+          "$ref": "#/$defs/performance"
+        }
+      },
+      "required": [
+        "plannedTrials",
+        "executedTrials",
+        "successfulTrials",
+        "failedTrials",
+        "blockedTrials",
+        "abortedTrials",
+        "unexecutedTrials",
+        "validObservations",
+        "invalidObservations",
+        "overLimitCount",
+        "restartSuccesses",
+        "generationMs",
+        "syncDifferenceMs",
+        "firstOverLimit",
+        "generationPerformance"
+      ],
+      "additionalProperties": false
+    },
+    "group": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "$ref": "#/$defs/condition"
+        },
+        "trialIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "summary": {
+          "$ref": "#/$defs/conditionSummary"
+        }
+      },
+      "required": [
+        "condition",
+        "trialIds",
+        "summary"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="color-scheme" content="light">
+    <title>実機QA · リズムファクトリー</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-top">
+          <div class="hero-stage">Stage A-2a-R3 · 実機技術検証専用</div>
+          <span class="hold">正式判定 <strong>HOLD</strong></span>
+        </div>
+        <p class="game-number">Game #0011</p>
+        <h1>リズムファクトリー</h1>
+        <dl class="identity">
+          <div><dt>QAハーネス版</dt><dd id="harness-version">—</dd></div>
+          <div><dt>QAソース</dt><dd><code id="harness-commit">UNAVAILABLE</code></dd></div>
+          <div><dt>対象製品実装</dt><dd><code id="product-commit">—</code></dd></div>
+          <div><dt>R2基準コミット</dt><dd><code id="baseline-commit">—</code></dd></div>
+          <div><dt>fixture</dt><dd><code id="fixture-id">—</code></dd></div>
+          <div><dt>画面サイズ</dt><dd id="viewport">—</dd></div>
+          <div><dt>端末情報（申告）</dt><dd id="runtime-summary">UNAVAILABLE</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="card live-card" aria-labelledby="live-title">
+        <div class="section-title">
+          <h2 id="live-title">試行モニター</h2>
+          <span class="phase" id="phase" role="status">未開始</span>
+        </div>
+        <div class="meter-grid">
+          <div class="meter featured"><p>現在の同期差</p><strong id="sync-current">—</strong></div>
+          <div class="meter"><p>最大同期差</p><strong id="sync-max">—</strong></div>
+          <div class="meter"><p>音源生成</p><strong id="render-time">—</strong></div>
+          <div class="meter"><p>再生経過</p><strong id="elapsed-time">—</strong></div>
+        </div>
+        <dl class="status-grid">
+          <div><dt>AudioContext</dt><dd id="context-state">—</dd></div>
+          <div><dt>固定アンカー</dt><dd id="anchor-state">未取得</dd></div>
+          <div><dt>時計世代</dt><dd id="clock-generation">—</dd></div>
+          <div><dt>有効観測数</dt><dd id="valid-samples">0</dd></div>
+          <div><dt>20 ms超過</dt><dd id="excess-samples">0</dd></div>
+          <div><dt>試行の進捗</dt><dd id="progress">—</dd></div>
+        </dl>
+        <p id="run-note" class="help"></p>
+        <p id="stop-reason" class="warning" role="status" hidden></p>
+        <div class="safety-space">
+          <div class="stop-actions" id="safety-actions" role="group" aria-label="安全停止操作">
+            <button type="button" id="stop" class="secondary" disabled>停止</button>
+            <button type="button" id="abort" class="danger" disabled>試験中止</button>
+          </div>
+        </div>
+        <figure class="chart" id="clock-chart" hidden>
+          <figcaption>同期差の推移 <span>基準 20 ms</span></figcaption>
+          <svg id="chart-plot" viewBox="0 0 440 144" role="img" aria-label="同期差の時系列グラフ" preserveAspectRatio="none">
+            <line id="chart-limit" class="chart-limit" x1="16" x2="424" y1="30" y2="30"></line>
+            <line class="chart-axis" x1="16" x2="424" y1="128" y2="128"></line>
+            <path id="chart-series" class="chart-series" d=""></path>
+          </svg>
+          <p id="chart-label" class="chart-label">観測待ち</p>
+        </figure>
+      </section>
+
+      <section class="card" aria-labelledby="setup-title">
+        <div class="section-title"><h2 id="setup-title">試験条件と操作</h2></div>
+        <div class="form-grid">
+          <label for="test-case">試験ケース
+            <select id="test-case" name="testCase">
+              <optgroup label="スクリーニング">
+                <option value="DEV-AUD-01">01 · 音声有効化・初期アンカー</option>
+                <option value="DEV-AUD-02" selected>02 · 24秒正常再生</option>
+                <option value="DEV-AUD-03">03 · 停止・新世代再開</option>
+                <option value="DEV-AUD-04">04 · 84秒冷生成・正常再生</option>
+                <option value="DEV-AUD-05">05 · 結果保存・再実行</option>
+              </optgroup>
+              <optgroup label="詳細反復">
+                <option value="DEV-AUD-06">06 · 24秒正常完走 ×10</option>
+                <option value="DEV-AUD-07">07 · 停止・新世代再開 ×3</option>
+                <option value="DEV-AUD-08">08 · 84秒冷生成・正常完走 ×3</option>
+              </optgroup>
+            </select>
+          </label>
+          <label for="fixture">試験音源
+            <select id="fixture" name="fixture">
+              <option value="rotation-24">24秒 · 回転灯</option>
+              <option value="load-84">84秒 · 負荷検証用</option>
+            </select>
+          </label>
+        </div>
+        <p id="case-hint" class="help">音源を冷生成し、音声有効化ボタンを押してから再生します。</p>
+        <label for="diagnostics" class="check"><input type="checkbox" id="diagnostics" name="diagnostics">同期差グラフを表示</label>
+        <div class="actions">
+          <button type="button" id="prepare" class="primary">冷音源生成</button>
+          <button type="button" id="enable" class="secondary" disabled>音声有効化</button>
+          <button type="button" id="play" class="primary" disabled>再生開始</button>
+          <button type="button" id="resume" class="secondary" disabled>新世代で再開</button>
+          <button type="button" id="release" class="secondary" disabled>リソース解放</button>
+          <button type="button" id="next" class="secondary" disabled>次試行</button>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="device-title">
+        <div class="section-title"><h2 id="device-title">端末情報</h2><span class="muted">ユーザー申告</span></div>
+        <div class="form-grid">
+          <label for="environment">対象環境
+            <select id="environment" name="environment">
+              <option value="">未指定</option>
+              <option value="DEV-01">DEV-01 · Galaxy S26／Chrome</option>
+              <option value="DEV-02">DEV-02 · iPhone SE2／Safari</option>
+              <option value="DEV-03">DEV-03 · iPad mini 6／Safari</option>
+              <option value="DEV-04">DEV-04 · Windows 11／Chrome</option>
+              <option value="DEV-05">DEV-05 · Windows 11／Edge</option>
+            </select>
+          </label>
+          <label for="device-type">端末区分
+            <select id="device-type" name="deviceType">
+              <option value="">未指定</option>
+              <option value="スマートフォン">スマートフォン</option>
+              <option value="タブレット">タブレット</option>
+              <option value="PC">PC</option>
+            </select>
+          </label>
+          <label for="audio-output">音声出力
+            <select id="audio-output" name="audioOutput">
+              <option value="">未指定</option>
+              <option value="speaker">スピーカー</option>
+              <option value="wired">有線</option>
+              <option value="bluetooth">Bluetooth</option>
+            </select>
+          </label>
+          <label for="os">OS
+            <select id="os" name="os">
+              <option value="">未指定</option>
+              <option value="Android">Android</option>
+              <option value="iOS">iOS</option>
+              <option value="iPadOS">iPadOS</option>
+              <option value="Windows">Windows</option>
+              <option value="macOS">macOS</option>
+              <option value="Linux">Linux</option>
+              <option value="その他">その他</option>
+            </select>
+          </label>
+          <label for="os-version">OSバージョン
+            <input type="text" id="os-version" name="osVersion" value="" maxlength="24" placeholder="例 18.3" autocomplete="off" spellcheck="false">
+          </label>
+          <label for="browser">ブラウザ
+            <select id="browser" name="browser">
+              <option value="">未指定</option>
+              <option value="Chrome">Chrome</option>
+              <option value="Safari">Safari</option>
+              <option value="Edge">Edge</option>
+              <option value="Firefox">Firefox</option>
+              <option value="その他">その他</option>
+            </select>
+          </label>
+          <label for="browser-version">ブラウザバージョン
+            <input type="text" id="browser-version" name="browserVersion" value="" maxlength="24" placeholder="例 159.0" autocomplete="off" spellcheck="false">
+          </label>
+          <label for="power-mode">省電力状態（任意）
+            <select id="power-mode" name="powerMode">
+              <option value="">不明</option>
+              <option value="on">オン</option>
+              <option value="off">オフ</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card results-card" aria-labelledby="result-title">
+        <div class="section-title"><h2 id="result-title">試行結果</h2><span class="muted">正式判定 HOLD</span></div>
+        <p id="result-summary" class="result-summary">保存済みの試行はまだありません。</p>
+        <ol id="trial-results" class="result-list"></ol>
+        <div class="export-actions">
+          <button type="button" id="save-json" class="primary" disabled>JSONを保存</button>
+          <button type="button" id="copy-json" class="secondary" disabled>結果をコピー</button>
+          <button type="button" id="confirm-download" class="secondary confirm" hidden>保存を確認</button>
+        </div>
+        <p id="export-status" class="help" role="status"></p>
+        <div id="export-fallback" class="fallback" hidden>
+          <label for="json-output">JSON結果（手動保存・コピー用）</label>
+          <textarea id="json-output" rows="6" readonly spellcheck="false" wrap="off"></textarea>
+          <button type="button" id="confirm-manual-copy" class="secondary" hidden>手動コピー・保存を確認</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
