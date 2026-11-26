@@ -1,0 +1,6 @@
+﻿issueId,scope,plannedTestIds,decisionStatus,remainingGate
+DD-H11,Keyboard & pointer recovery,INP-21..26;PSE-04..05;UI-17,DRAFT_RECOMMENDED,not approved; no device QA
+DD-H12,500/1000 + cumulative 750 candidate,TIM-15..20,DRAFT_RECOMMENDED,no timing/device tests
+DD-H13,Corrupt save explicit double confirmation,SAV-16..22;UI-18,DRAFT_RECOMMENDED,no save recovery test
+DD-H14,Minimal move optimality proof gate,BAL-03;BAL-08..10,UNPROVEN_HOLD,proof and independent verification absent
+DD-H16,LocalStorage race between check and write across tabs,SAV-19,RESIDUAL_RISK_HOLD,Need explicit acceptance or stronger transactional design approval

@@ -1,0 +1,13 @@
+﻿reviewId,severity,finding,proposedResolution,tests,status,decision
+XR-01,High,GC-06 t16 SW_b_OFF missing,golden v0.2 candidate includes SW_b_OFF,"GC-06,events",PATCHED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-02,High,GC-07 t16 SW_c_OFF missing,golden v0.2 candidate includes SW_c_OFF,"GC-07,events",PATCHED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-03,Medium,LATCH unlock/door open event order,LATCH_UNLOCK precedes DOOR_OPEN,"GC-03,GC-07",PATCHED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-04,High,snapshot phase ambiguous,gamePhase and completed replay phase specified,GC-01..GC-07,PATCHED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-05,Medium,record padding confused with executed ticks,recordCompletedTicks + is_padding clarified,REC-01..REC-05,SPECIFIED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-06,Medium,door switch mapping string ab,requiredSwitchIds array normalized,"DAT-05,GC-03,GC-07",PATCHED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-07,High,multiple pause reasons / resume ambiguity,PauseState reasons Set + explicit resume contract,"PSE-01,PSE-02,PSE-03,TIM-08..TIM-12",SPECIFIED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-08,High,held inputs auto-reactivate after phase boundary,Chapter 14 input recovery with explicit rearm and key repeat suppression; INP-21..26,"INP-19,INP-20",DESIGN_PROPOSED_DD_H11,HOLD_UNTIL_APPROVAL
+XR-09,High,corrupt save overwritten by later progress,"Chapter 16 consented reset, raw equality guard, volatile fallback; SAV-16..22","SAV-13,SAV-14,SAV-15",DESIGN_PROPOSED_DD_H13,HOLD_UNTIL_APPROVAL
+XR-10,High,nominal 8 seconds versus real elapsed,Chapter 15 cumulative 750ms candidate plus single 1000ms lag; TIM-15..20,"TIM-14,DEV-01..DEV-05",DESIGN_PROPOSED_DD_H12,HOLD_UNTIL_APPROVAL
+XR-11,High,missing boundary reproducibility fixtures,three test-only map fixtures retained,"BT-GHO-DYNAMIC-01,BT-HELD-OPEN-01,BT-GHO-CLEAR-T16-01",FIXTURES_DEFINED_DRAFT,HOLD_UNTIL_APPROVAL
+XR-12,High,unbounded all-state search completion criteria,Chapter 17 proof gate; full search or rigorous lower bound; PARTIAL until independently verified,"BAL-03,BAL-07",PROOF_UNEXECUTED_DD_H14,HOLD_UNTIL_APPROVAL

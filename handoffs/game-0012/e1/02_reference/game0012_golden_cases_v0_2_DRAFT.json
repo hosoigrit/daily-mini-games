@@ -1,0 +1,3760 @@
+{
+  "metadata": {
+    "status": "DRAFT CROSS-REVIEW CANDIDATE — not product implementation results",
+    "recordTicks": 16,
+    "proposedTickMs": 500,
+    "coordinateOrigin": "top-left (0,0)",
+    "recordPaddingMeaning": "after early finish, positions are synthetic padding, not executed RECORDING ticks",
+    "replayTick16": "snapshot is post-disappearance if not cleared",
+    "version": "v0.2-review-candidate",
+    "baselineFile": "game0012_golden_cases_v0_1.json",
+    "baselineSHA256": "945c824ff8399e4ff3668e3c37eaf69acd2edd4674ec5e466a8694700d322d74",
+    "reviewDate": "2026-11-26",
+    "gamePhaseMeaning": "REPLAYING at ticks 0..15, SOLO_CONTINUE at t>=16 until cleared; CLEARED from completion tick",
+    "recordCompletedTicksMeaning": "actual RECORDING ticks, padded position entries are NOT executed game ticks",
+    "eventSequenceRule": "normal switch deltas -> latch unlock -> normal door deltas -> ghost disappearance -> disappearance-triggered switch deltas -> disappearance-triggered door deltas -> clear result (only on clear ticks; no disappearance on clear tick16)",
+    "sourceLimits": "Position/door/switch cross-checks passed for 7 scripted cases; full state-space, UI, real-time, and device tests not executed",
+    "changes": [
+      {
+        "case": "GC-03",
+        "tick": 4,
+        "fix": "order LATCH_L_UNLOCK before DOOR_L_OPEN"
+      },
+      {
+        "case": "GC-06",
+        "tick": 16,
+        "fix": "add SW_b_OFF post-disappearance"
+      },
+      {
+        "case": "GC-07",
+        "tick": 4,
+        "fix": "order LATCH_L_UNLOCK before DOOR_L_OPEN"
+      },
+      {
+        "case": "GC-07",
+        "tick": 16,
+        "fix": "add SW_c_OFF post-disappearance"
+      },
+      {
+        "case": "ALL",
+        "tick": null,
+        "fix": "normalize doorRules to requiredSwitchIds arrays"
+      }
+    ],
+    "doorRuleSchema": "doorRules is {doorId: {type: PRESSURE|LATCH, requiredSwitchIds: string[]}}; no concatenated IDs"
+  },
+  "cases": [
+    {
+      "caseId": "GC-01",
+      "stage": 1,
+      "route": "main",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 5,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 6,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 7,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 8,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 9,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 10,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 1
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 0,
+          "totalMoves": 2,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 1
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 1,
+          "totalMoves": 3,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 1
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 2,
+          "totalMoves": 4,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "DOOR_D_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 1
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 3,
+          "totalMoves": 5,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 1
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 4,
+          "totalMoves": 6,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 1
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 5,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 1
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 2,
+          "replayMoves": 6,
+          "totalMoves": 8,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "#########",
+        "#S.a.D.G#",
+        "#########"
+      ],
+      "doorRules": {
+        "D": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "a"
+          ]
+        }
+      },
+      "recordActions": [
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 2
+    },
+    {
+      "caseId": "GC-02",
+      "stage": 2,
+      "route": "main",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 2,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 5,
+          "x": 4,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 6,
+          "x": 5,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 7,
+          "x": 6,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 8,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 9,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 10,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 6,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 0,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 2
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 1,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 2,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 3,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 3,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 3,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 5,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 3,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 3,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "DOOR_D_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 4,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 5,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 6,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 7,
+          "totalMoves": 14,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 12,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "D": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 7,
+          "replayMoves": 8,
+          "totalMoves": 15,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###########",
+        "#.....a####",
+        "#.#########",
+        "#S...D...G#",
+        "###########"
+      ],
+      "doorRules": {
+        "D": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "a"
+          ]
+        }
+      },
+      "recordActions": [
+        "U",
+        "U",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "R",
+        "R",
+        ".",
+        ".",
+        ".",
+        ".",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 7
+    },
+    {
+      "caseId": "GC-03",
+      "stage": 3,
+      "route": "main",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 2,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 5,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 6,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 7,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 8,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 9,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 10,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 3,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 4,
+          "replayMoves": 0,
+          "totalMoves": 4,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 2
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 4,
+          "replayMoves": 1,
+          "totalMoves": 5,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 4,
+          "replayMoves": 2,
+          "totalMoves": 6,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "D",
+          "player": {
+            "x": 3,
+            "y": 4
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "L": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 4,
+          "replayMoves": 3,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [
+            "SW_b_ON"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": ".",
+          "player": {
+            "x": 3,
+            "y": 4
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a",
+            "b"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 3,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "LATCH_L_UNLOCK",
+            "DOOR_L_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": "U",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 4,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [
+            "SW_b_OFF"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 5,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 6,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 7,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 8,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 9,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "L": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 4,
+          "replayMoves": 10,
+          "totalMoves": 14,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###########",
+        "#..a#######",
+        "#.#########",
+        "#S...L...G#",
+        "###b#######",
+        "###########"
+      ],
+      "doorRules": {
+        "L": {
+          "type": "LATCH",
+          "requiredSwitchIds": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "recordActions": [
+        "U",
+        "U",
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "R",
+        "D",
+        ".",
+        "U",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 4
+    },
+    {
+      "caseId": "GC-04",
+      "stage": 4,
+      "route": "main",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 2,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 5,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 6,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 7,
+          "x": 4,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 8,
+          "x": 5,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 9,
+          "x": 6,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 10,
+          "x": 7,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 11,
+          "x": 8,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 12,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 0,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 2
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 1,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 2,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 3,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 3,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "DOOR_A_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 4,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 5,
+          "totalMoves": 14,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 6,
+          "totalMoves": 15,
+          "cleared": false,
+          "events": [
+            "SW_a_OFF",
+            "DOOR_A_CLOSED"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 3
+          },
+          "ghost": {
+            "x": 5,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 7,
+          "totalMoves": 16,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 8,
+          "totalMoves": 17,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": ".",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 7,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 8,
+          "totalMoves": 17,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": ".",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 8,
+          "totalMoves": 17,
+          "cleared": false,
+          "events": [
+            "SW_b_ON",
+            "DOOR_B_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 12,
+          "action": "R",
+          "player": {
+            "x": 10,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 9,
+          "totalMoves": 18,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 13,
+          "action": "R",
+          "player": {
+            "x": 11,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 10,
+          "totalMoves": 19,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 14,
+          "action": "R",
+          "player": {
+            "x": 12,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 11,
+          "totalMoves": 20,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 15,
+          "action": "R",
+          "player": {
+            "x": 13,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 12,
+          "totalMoves": 21,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###############",
+        "#..a....b######",
+        "#.#############",
+        "#S...A....B..G#",
+        "###############"
+      ],
+      "doorRules": {
+        "A": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "a"
+          ]
+        },
+        "B": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "b"
+          ]
+        }
+      },
+      "recordActions": [
+        "U",
+        "U",
+        "R",
+        "R",
+        ".",
+        ".",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "R",
+        "R",
+        ".",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        ".",
+        ".",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 11
+    },
+    {
+      "caseId": "GC-05",
+      "stage": 5,
+      "route": "upper",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 2,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 5,
+          "x": 4,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 6,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 7,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 8,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 9,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 10,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 4,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 0,
+          "totalMoves": 5,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 2
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 1,
+          "totalMoves": 6,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 2,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 3,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 3,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": ".",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 3,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "DOOR_A_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 4,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 5,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 6,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 7,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 8,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": "R",
+          "player": {
+            "x": 10,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 9,
+          "totalMoves": 14,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 12,
+          "action": "R",
+          "player": {
+            "x": 11,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 10,
+          "totalMoves": 15,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 13,
+          "action": "R",
+          "player": {
+            "x": 12,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 11,
+          "totalMoves": 16,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 14,
+          "action": "R",
+          "player": {
+            "x": 13,
+            "y": 3
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [
+            "a"
+          ],
+          "doors": {
+            "A": "OPEN",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 5,
+          "replayMoves": 12,
+          "totalMoves": 17,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###############",
+        "#...a##########",
+        "#.#############",
+        "#S...A.......G#",
+        "#.##########.##",
+        "#.b#########.##",
+        "#.##########.##",
+        "#....B.......##",
+        "###############"
+      ],
+      "doorRules": {
+        "A": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "a"
+          ]
+        },
+        "B": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "b"
+          ]
+        }
+      },
+      "recordActions": [
+        "U",
+        "U",
+        "R",
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "R",
+        "R",
+        ".",
+        ".",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 5
+    },
+    {
+      "caseId": "GC-06",
+      "stage": 5,
+      "route": "lower",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 4,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 5,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 5,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 5,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 6,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 7,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 8,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 9,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 10,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 2,
+          "y": 5,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 0,
+          "totalMoves": 3,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "D",
+          "player": {
+            "x": 1,
+            "y": 4
+          },
+          "ghost": {
+            "x": 1,
+            "y": 4
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 1,
+          "totalMoves": 4,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "D",
+          "player": {
+            "x": 1,
+            "y": 5
+          },
+          "ghost": {
+            "x": 1,
+            "y": 5
+          },
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 2,
+          "totalMoves": 5,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "D",
+          "player": {
+            "x": 1,
+            "y": 6
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 3,
+          "totalMoves": 6,
+          "cleared": false,
+          "events": [
+            "SW_b_ON",
+            "DOOR_B_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": "D",
+          "player": {
+            "x": 1,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 4,
+          "totalMoves": 7,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 5,
+          "totalMoves": 8,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 6,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 7,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 8,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 9,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 10,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 11,
+          "totalMoves": 14,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 12,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 12,
+          "totalMoves": 15,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 13,
+          "action": "R",
+          "player": {
+            "x": 10,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 13,
+          "totalMoves": 16,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 14,
+          "action": "R",
+          "player": {
+            "x": 11,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 14,
+          "totalMoves": 17,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 15,
+          "action": "R",
+          "player": {
+            "x": 12,
+            "y": 7
+          },
+          "ghost": {
+            "x": 2,
+            "y": 5
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "A": "CLOSED",
+            "B": "OPEN"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 15,
+          "totalMoves": 18,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 16,
+          "action": "U",
+          "player": {
+            "x": 12,
+            "y": 6
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 16,
+          "totalMoves": 19,
+          "cleared": false,
+          "events": [
+            "GHOST_DISAPPEARED",
+            "SW_b_OFF",
+            "DOOR_B_CLOSED"
+          ],
+          "gamePhase": "SOLO_CONTINUE"
+        },
+        {
+          "tick": 17,
+          "action": "U",
+          "player": {
+            "x": 12,
+            "y": 5
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 17,
+          "totalMoves": 20,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "SOLO_CONTINUE"
+        },
+        {
+          "tick": 18,
+          "action": "U",
+          "player": {
+            "x": 12,
+            "y": 4
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 18,
+          "totalMoves": 21,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "SOLO_CONTINUE"
+        },
+        {
+          "tick": 19,
+          "action": "U",
+          "player": {
+            "x": 12,
+            "y": 3
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 19,
+          "totalMoves": 22,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "SOLO_CONTINUE"
+        },
+        {
+          "tick": 20,
+          "action": "R",
+          "player": {
+            "x": 13,
+            "y": 3
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "A": "CLOSED",
+            "B": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 3,
+          "replayMoves": 20,
+          "totalMoves": 23,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###############",
+        "#...a##########",
+        "#.#############",
+        "#S...A.......G#",
+        "#.##########.##",
+        "#.b#########.##",
+        "#.##########.##",
+        "#....B.......##",
+        "###############"
+      ],
+      "doorRules": {
+        "A": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "a"
+          ]
+        },
+        "B": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "b"
+          ]
+        }
+      },
+      "recordActions": [
+        "D",
+        "D",
+        "R"
+      ],
+      "replayActions": [
+        "D",
+        "D",
+        "D",
+        "D",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "U",
+        "U",
+        "U",
+        "U",
+        "R"
+      ],
+      "recordCompletedTicks": 3
+    },
+    {
+      "caseId": "GC-07",
+      "stage": 6,
+      "route": "main",
+      "recordPositions": [
+        {
+          "tick": 0,
+          "x": 1,
+          "y": 3,
+          "padding": false
+        },
+        {
+          "tick": 1,
+          "x": 1,
+          "y": 2,
+          "padding": false
+        },
+        {
+          "tick": 2,
+          "x": 1,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 3,
+          "x": 2,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 4,
+          "x": 3,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 5,
+          "x": 4,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 6,
+          "x": 5,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 7,
+          "x": 6,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 8,
+          "x": 7,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 9,
+          "x": 8,
+          "y": 1,
+          "padding": false
+        },
+        {
+          "tick": 10,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 11,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 12,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 13,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 14,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 15,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        },
+        {
+          "tick": 16,
+          "x": 8,
+          "y": 1,
+          "padding": true
+        }
+      ],
+      "replaySnapshots": [
+        {
+          "tick": 0,
+          "action": "-",
+          "player": {
+            "x": 1,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 3
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED",
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 0,
+          "totalMoves": 9,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 1,
+          "action": "R",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 1,
+            "y": 2
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED",
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 1,
+          "totalMoves": 10,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 2,
+          "action": "D",
+          "player": {
+            "x": 2,
+            "y": 4
+          },
+          "ghost": {
+            "x": 1,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "CLOSED",
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 2,
+          "totalMoves": 11,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 3,
+          "action": "D",
+          "player": {
+            "x": 2,
+            "y": 5
+          },
+          "ghost": {
+            "x": 2,
+            "y": 1
+          },
+          "switchesOn": [
+            "b"
+          ],
+          "doors": {
+            "L": "CLOSED",
+            "D": "CLOSED"
+          },
+          "latched": [],
+          "recordMoves": 9,
+          "replayMoves": 3,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [
+            "SW_b_ON"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 4,
+          "action": ".",
+          "player": {
+            "x": 2,
+            "y": 5
+          },
+          "ghost": {
+            "x": 3,
+            "y": 1
+          },
+          "switchesOn": [
+            "a",
+            "b"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 3,
+          "totalMoves": 12,
+          "cleared": false,
+          "events": [
+            "SW_a_ON",
+            "LATCH_L_UNLOCK",
+            "DOOR_L_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 5,
+          "action": "U",
+          "player": {
+            "x": 2,
+            "y": 4
+          },
+          "ghost": {
+            "x": 4,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 4,
+          "totalMoves": 13,
+          "cleared": false,
+          "events": [
+            "SW_a_OFF",
+            "SW_b_OFF"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 6,
+          "action": "U",
+          "player": {
+            "x": 2,
+            "y": 3
+          },
+          "ghost": {
+            "x": 5,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 5,
+          "totalMoves": 14,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 7,
+          "action": "R",
+          "player": {
+            "x": 3,
+            "y": 3
+          },
+          "ghost": {
+            "x": 6,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 6,
+          "totalMoves": 15,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 8,
+          "action": "R",
+          "player": {
+            "x": 4,
+            "y": 3
+          },
+          "ghost": {
+            "x": 7,
+            "y": 1
+          },
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 7,
+          "totalMoves": 16,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 9,
+          "action": "R",
+          "player": {
+            "x": 5,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 8,
+          "totalMoves": 17,
+          "cleared": false,
+          "events": [
+            "SW_c_ON",
+            "DOOR_D_OPEN"
+          ],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 10,
+          "action": "R",
+          "player": {
+            "x": 6,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 9,
+          "totalMoves": 18,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 11,
+          "action": "R",
+          "player": {
+            "x": 7,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 10,
+          "totalMoves": 19,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 12,
+          "action": "R",
+          "player": {
+            "x": 8,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 11,
+          "totalMoves": 20,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 13,
+          "action": "R",
+          "player": {
+            "x": 9,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 12,
+          "totalMoves": 21,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 14,
+          "action": "R",
+          "player": {
+            "x": 10,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 13,
+          "totalMoves": 22,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 15,
+          "action": "R",
+          "player": {
+            "x": 11,
+            "y": 3
+          },
+          "ghost": {
+            "x": 8,
+            "y": 1
+          },
+          "switchesOn": [
+            "c"
+          ],
+          "doors": {
+            "L": "OPEN",
+            "D": "OPEN"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 14,
+          "totalMoves": 23,
+          "cleared": false,
+          "events": [],
+          "gamePhase": "REPLAYING"
+        },
+        {
+          "tick": 16,
+          "action": "R",
+          "player": {
+            "x": 12,
+            "y": 3
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 15,
+          "totalMoves": 24,
+          "cleared": false,
+          "events": [
+            "GHOST_DISAPPEARED",
+            "SW_c_OFF",
+            "DOOR_D_CLOSED"
+          ],
+          "gamePhase": "SOLO_CONTINUE"
+        },
+        {
+          "tick": 17,
+          "action": "R",
+          "player": {
+            "x": 13,
+            "y": 3
+          },
+          "ghost": null,
+          "switchesOn": [],
+          "doors": {
+            "L": "OPEN",
+            "D": "CLOSED"
+          },
+          "latched": [
+            "L"
+          ],
+          "recordMoves": 9,
+          "replayMoves": 16,
+          "totalMoves": 25,
+          "cleared": true,
+          "events": [
+            "CLEARED"
+          ],
+          "gamePhase": "CLEARED"
+        }
+      ],
+      "mapRows": [
+        "###############",
+        "#..a....c######",
+        "#.#############",
+        "#S..L....D...G#",
+        "##.############",
+        "##b############",
+        "###############"
+      ],
+      "doorRules": {
+        "L": {
+          "type": "LATCH",
+          "requiredSwitchIds": [
+            "a",
+            "b"
+          ]
+        },
+        "D": {
+          "type": "PRESSURE",
+          "requiredSwitchIds": [
+            "c"
+          ]
+        }
+      },
+      "recordActions": [
+        "U",
+        "U",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "replayActions": [
+        "R",
+        "D",
+        "D",
+        ".",
+        "U",
+        "U",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R",
+        "R"
+      ],
+      "recordCompletedTicks": 9
+    }
+  ]
+}

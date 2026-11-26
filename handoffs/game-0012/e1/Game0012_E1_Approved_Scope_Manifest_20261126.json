@@ -1,0 +1,200 @@
+{
+  "schema": "game0012-e1-approved-scope-manifest-v1",
+  "status": "APPROVED_CONTENT_FOR_E1_HANDOFF_ONLY_NO_GITHUB_WRITE",
+  "approvalDateJST": "2026-11-26",
+  "authority": "explicit user approval: はい承認します",
+  "repository": "hosoigrit/daily-mini-games",
+  "proposedDocsBranch": "docs/game-0012-e1-handoff",
+  "proposedTargetFolder": "handoffs/game-0012/e1/",
+  "branchCreationAuthorized": false,
+  "githubWriteAuthorized": false,
+  "codexImplementationAuthorized": false,
+  "originalFrozenHashes": {
+    "Game0012_Detailed_Design_v0.4_DRAFT.md": "02956f760a70e94e2d95ba49ff6bc6d41f7e2f92db2048599b108f080fe1c690",
+    "Game0012_Test_Spec_v0.3_DRAFT.md": "5d9d5f1bafd0330f77ddca77a962d66115050165ac6dc7a8eedfe083b8b970b4"
+  },
+  "approvedDecisions": [
+    "T0-03 BAL-03 one-cell P0 normalization",
+    "T0-08 P0 gate allocation with formal addendum",
+    "T0-09 GHO03 test-only fixture",
+    "supporting files explicitly enumerated and SHA-pinned"
+  ],
+  "testReadiness": {
+    "totalIndexed": 180,
+    "p0": 159,
+    "p1": 21,
+    "t1MandatoryP0": 153,
+    "gates": {
+      "T1": 143,
+      "T1_AFTER_FIXTURE_APPROVAL": 1,
+      "T1_WITH_T3_RECHECK": 7,
+      "T1_AND_T2": 2,
+      "T4_PROOF_GATE": 4,
+      "T3_DEVICE_QA": 2
+    },
+    "allNotRun": true
+  },
+  "riskAcceptance": {
+    "DD-H16": "ACCEPTED_WITH_MITIGATIONS_NOT_ATOMIC",
+    "DD-H14": "OPTIMALITY_UNPROVEN_T4_HOLD"
+  },
+  "files": [
+    {
+      "path": "01_frozen/Game0012_Detailed_Design_v0.4_DRAFT.md",
+      "category": "FROZEN_NORMATIVE",
+      "bytes": 32384,
+      "sha256": "02956f760a70e94e2d95ba49ff6bc6d41f7e2f92db2048599b108f080fe1c690",
+      "sourcePath": "01_frozen_approved/Game0012_Detailed_Design_v0.4_DRAFT.md",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "01_frozen/Game0012_Test_Spec_v0.3_DRAFT.md",
+      "category": "FROZEN_NORMATIVE",
+      "bytes": 22062,
+      "sha256": "5d9d5f1bafd0330f77ddca77a962d66115050165ac6dc7a8eedfe083b8b970b4",
+      "sourcePath": "01_frozen_approved/Game0012_Test_Spec_v0.3_DRAFT.md",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "00_provenance/Game0012_T0_Conditional_Freeze_Approval_20261126.md",
+      "category": "PREVIOUS_APPROVAL_PROVENANCE",
+      "bytes": 4587,
+      "sha256": "8a002bdd136eaba5152c62df535369df26fb3c17eacdf970cf92c2369a42afcd",
+      "sourcePath": "01_frozen_approved/Game0012_T0_Conditional_Freeze_Approval_20261126.md",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "00_provenance/Game0012_T0_Conditional_Freeze_Manifest_20261126.json",
+      "category": "PREVIOUS_APPROVAL_PROVENANCE",
+      "bytes": 3011,
+      "sha256": "de50075367ffaeea25fec5fe474ca0234f8295320d4daabfa1a2cb10890e0dc3",
+      "sourcePath": "01_frozen_approved/Game0012_T0_Conditional_Freeze_Manifest_20261126.json",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/game0012_golden_cases_v0_2_DRAFT.json",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 76542,
+      "sha256": "7eee3c12e14ed1a7d1cc94f63a5e59e6d8c90df62fdfec7ad2bfffcf88332df4",
+      "sourcePath": "02_reference_pending_approval/game0012_golden_cases_v0_2_DRAFT.json",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/game0012_golden_record_reference_v0_2_DRAFT.csv",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 10600,
+      "sha256": "cd466f9f1cc3779b6f6cc157c6d4bb27bedaac548feb194b43846dc9d9afd143",
+      "sourcePath": "02_reference_pending_approval/game0012_golden_record_reference_v0_2_DRAFT.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/game0012_golden_replay_snapshots_v0_2_DRAFT.csv",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 9919,
+      "sha256": "7cf265b2b4ecedb422734c3c951c2fefa40bf275c7037c00a49aadec1b08fe13",
+      "sourcePath": "02_reference_pending_approval/game0012_golden_replay_snapshots_v0_2_DRAFT.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/game0012_boundary_fixtures_v0_2_DRAFT.json",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 5994,
+      "sha256": "577d1a24bad6ac10beac6dc7cc43825590cc5728c9d4941814fd134b8140ddeb",
+      "sourcePath": "02_reference_pending_approval/game0012_boundary_fixtures_v0_2_DRAFT.json",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/Game0012_Requirement_Test_Trace_v0.3_DRAFT.csv",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 2871,
+      "sha256": "d152bd4b99569c893d8b2608f589267a924cc7b95ecd89e8ec0ef4b08bc5a001",
+      "sourcePath": "02_reference_pending_approval/Game0012_Requirement_Test_Trace_v0.3_DRAFT.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/Game0012_XR_Closure_Register_v0.3_DRAFT.csv",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 2055,
+      "sha256": "4403af11e118934f74f9cc5ea4fb499428f628b7c0c9d41d71e49c1c7aafef07",
+      "sourcePath": "02_reference_pending_approval/Game0012_XR_Closure_Register_v0.3_DRAFT.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "02_reference/Game0012_DD_H11_H14_Decision_Register_v0.3_DRAFT.csv",
+      "category": "APPROVED_SUPPORTING_REFERENCE",
+      "bytes": 646,
+      "sha256": "c85565d33e55a03e340983c2fef0dadafe571cc684237f5b57669afd9455ecbc",
+      "sourcePath": "02_reference_pending_approval/Game0012_DD_H11_H14_Decision_Register_v0.3_DRAFT.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_Test_Case_Index_v0.4_NORMALIZATION_CANDIDATE.csv",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 22284,
+      "sha256": "3966d93a6763bccb08dfa96e2267518205d96cdb26d94561b55abdcf4393c6e4",
+      "sourcePath": "03_preparation_candidates/Game0012_Test_Case_Index_v0.4_NORMALIZATION_CANDIDATE.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_P0_Concrete_Test_Vectors_v0.1_REVIEW_CANDIDATE.csv",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 57941,
+      "sha256": "685015bbe211bcb8ac4cabb8b61603248613084b9a983ee609f30811cdb652f8",
+      "sourcePath": "03_preparation_candidates/Game0012_P0_Concrete_Test_Vectors_v0.1_REVIEW_CANDIDATE.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_P0_Concrete_Test_Vectors_v0.1_REVIEW_CANDIDATE.json",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 99579,
+      "sha256": "cb5f6428e933eb2c2272664a8d20faf4f7f31d313a6736aeeb997ebbc51defe3",
+      "sourcePath": "03_preparation_candidates/Game0012_P0_Concrete_Test_Vectors_v0.1_REVIEW_CANDIDATE.json",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_P0_Execution_Gates_v0.1_CANDIDATE.csv",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 14799,
+      "sha256": "1b9e57aabc95b20b4849d4d705b804140348b39566a956a75331a901e119cb30",
+      "sourcePath": "03_preparation_candidates/Game0012_P0_Execution_Gates_v0.1_CANDIDATE.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_GHO03_Test_Only_Variant_v0.1_DRAFT.json",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 2031,
+      "sha256": "109a480599bade64a60ae323f284088029d24b0b0a36550d0c1bf9ea1f49bc29",
+      "sourcePath": "03_preparation_candidates/Game0012_GHO03_Test_Only_Variant_v0.1_DRAFT.json",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "03_test_plans/Game0012_PreHandoff_Open_Issues_v0.1.csv",
+      "category": "APPROVED_TEST_PLANNING",
+      "bytes": 1946,
+      "sha256": "0e0f95f0560cb860b5a1764d92574af0df6c57c1ab39814ebbe8ed394dc79d5d",
+      "sourcePath": "03_preparation_candidates/Game0012_PreHandoff_Open_Issues_v0.1.csv",
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "04_approval/Game0012_E1_PreUpload_Readiness_20261126.md",
+      "category": "NEW_E1_APPROVAL_OR_ADDENDUM",
+      "bytes": 1179,
+      "sha256": "20223a545b97a242ec312675e217f44c4908e4a230debfac37dc0ee91f649cc1",
+      "originalBytesUnchanged": false
+    },
+    {
+      "path": "04_approval/Game0012_E1_Scope_Approval_Record_20261126.md",
+      "category": "NEW_E1_APPROVAL_OR_ADDENDUM",
+      "bytes": 2400,
+      "sha256": "58fe4bf9b223e5c5d9b43be1973b4e083e467063ba63a86fe5a31d041179a26b",
+      "originalBytesUnchanged": false
+    },
+    {
+      "path": "04_approval/Game0012_T0_08_Execution_Gate_Addendum_20261126_APPROVED.md",
+      "category": "NEW_E1_APPROVAL_OR_ADDENDUM",
+      "bytes": 2869,
+      "sha256": "82b7b5a3fa56a015bda6301f2308f31da1a4b91c1277c78d3b448e4878d0e9b5",
+      "originalBytesUnchanged": false
+    }
+  ]
+}

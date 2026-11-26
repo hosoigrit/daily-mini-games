@@ -1,0 +1,79 @@
+{
+  "schema": "game0012-t0-conditional-freeze-v1",
+  "approvalDateJST": "2026-11-26",
+  "approvalAuthority": "explicit user statement in this conversation",
+  "approvalScope": "detailed-design-v0.4 and test-spec-v0.3 first-validation-only conditional freeze",
+  "status": "CONDITIONAL_FROZEN_APPROVED",
+  "t0AdministrativeClosure": "PENDING_REMAINING_ITEMS",
+  "ddH16": "RISK_ACCEPTED_WITH_MITIGATIONS_NOT_ELIMINATED",
+  "sourceArchive": {
+    "filename": "game0012_final_pre_freeze_review_v0_3_DRAFT.zip",
+    "sha256": "98b16f36645a870740a5d140f3f96b5c3f379a05c418c1ef603bf3193d7cd5bc"
+  },
+  "approvedFiles": {
+    "Game0012_Detailed_Design_v0.4_DRAFT.md": {
+      "sha256": "02956f760a70e94e2d95ba49ff6bc6d41f7e2f92db2048599b108f080fe1c690",
+      "bytes": 32384,
+      "status": "CONDITIONALLY_FROZEN_APPROVED",
+      "originalBytesUnchanged": true
+    },
+    "Game0012_Test_Spec_v0.3_DRAFT.md": {
+      "sha256": "5d9d5f1bafd0330f77ddca77a962d66115050165ac6dc7a8eedfe083b8b970b4",
+      "bytes": 22062,
+      "status": "CONDITIONALLY_FROZEN_APPROVED",
+      "originalBytesUnchanged": true
+    }
+  },
+  "referencedNotSeparatelyApprovedFiles": {
+    "game0012_golden_cases_v0_2_DRAFT.json": {
+      "sha256": "7eee3c12e14ed1a7d1cc94f63a5e59e6d8c90df62fdfec7ad2bfffcf88332df4",
+      "status": "REFERENCE_ONLY_NOT_SEPARATELY_APPROVED"
+    },
+    "game0012_golden_record_reference_v0_2_DRAFT.csv": {
+      "sha256": "cd466f9f1cc3779b6f6cc157c6d4bb27bedaac548feb194b43846dc9d9afd143",
+      "status": "REFERENCE_ONLY_NOT_SEPARATELY_APPROVED"
+    },
+    "game0012_golden_replay_snapshots_v0_2_DRAFT.csv": {
+      "sha256": "7cf265b2b4ecedb422734c3c951c2fefa40bf275c7037c00a49aadec1b08fe13",
+      "status": "REFERENCE_ONLY_NOT_SEPARATELY_APPROVED"
+    },
+    "game0012_boundary_fixtures_v0_2_DRAFT.json": {
+      "sha256": "577d1a24bad6ac10beac6dc7cc43825590cc5728c9d4941814fd134b8140ddeb",
+      "status": "REFERENCE_ONLY_NOT_SEPARATELY_APPROVED"
+    },
+    "Game0012_Test_Case_Index_v0.3_DRAFT.csv": {
+      "sha256": "bbd8826997ceb9f7959eb39974f82d82bc17c705c919c26d0915eff3b4f09bb8",
+      "status": "REFERENCE_ONLY_NOT_SEPARATELY_APPROVED"
+    }
+  },
+  "initialTestParameters": {
+    "tickMs": 500,
+    "inputQueueCapacity": 2,
+    "singleLagStopMs": 1000,
+    "cumulativeLagStopMs": 750,
+    "status": "CONDITIONAL_TEST_DEFAULTS_NOT_UX_APPROVED"
+  },
+  "futureGates": {
+    "T1": "NOT_RUN",
+    "T2": "NOT_RUN",
+    "T3": "NOT_RUN",
+    "T4": "HOLD_PENDING_OPTIMALITY_PROOF_AND_USER_APPROVAL"
+  },
+  "pendingItems": [
+    "T0-03 normalization decision",
+    "T0-04 P0 executable preconditions and expected values",
+    "T0-05 simultaneous lag trigger evidence",
+    "DD-H14 formal optimality proof"
+  ],
+  "unapprovedActions": [
+    "GitHub write",
+    "Codex Cloud implementation",
+    "PR",
+    "merge",
+    "publish"
+  ],
+  "approvalRecord": {
+    "filename": "Game0012_T0_Conditional_Freeze_Approval_20261126.md",
+    "sha256": "8a002bdd136eaba5152c62df535369df26fb3c17eacdf970cf92c2369a42afcd"
+  }
+}

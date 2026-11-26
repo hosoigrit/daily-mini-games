@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "status": "DRAFT / test-only fixtures / not product stages",
+    "version": "v0.2-review-candidate",
+    "noProductStageModification": true
+  },
+  "testOnlyCases": [
+    {
+      "id": "BT-GHO-DYNAMIC-01",
+      "purpose": "Legal record can occupy a pressure door, whereas ghost on same door does not hold closure open",
+      "mapRows": [
+        "########",
+        "#SaD.G.#",
+        "########"
+      ],
+      "start": [
+        1,
+        1
+      ],
+      "goal": [
+        5,
+        1
+      ],
+      "switches": {
+        "a": [
+          2,
+          1
+        ]
+      },
+      "doors": {
+        "D": {
+          "type": "PRESSURE",
+          "switches": [
+            "a"
+          ],
+          "position": [
+            3,
+            1
+          ]
+        }
+      },
+      "record": {
+        "actions": [
+          "R",
+          "R",
+          "R"
+        ],
+        "endTick": 3,
+        "expected": [
+          {
+            "tick": 1,
+            "player": [
+              2,
+              1
+            ],
+            "switchesOn": [
+              "a"
+            ],
+            "doorD": "OPEN"
+          },
+          {
+            "tick": 2,
+            "player": [
+              3,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "HELD_OPEN"
+          },
+          {
+            "tick": 3,
+            "player": [
+              4,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "CLOSED"
+          }
+        ]
+      },
+      "replay": {
+        "actions": [
+          ".",
+          ".",
+          "."
+        ],
+        "expected": [
+          {
+            "tick": 1,
+            "player": [
+              1,
+              1
+            ],
+            "ghost": [
+              2,
+              1
+            ],
+            "switchesOn": [
+              "a"
+            ],
+            "doorD": "OPEN"
+          },
+          {
+            "tick": 2,
+            "player": [
+              1,
+              1
+            ],
+            "ghost": [
+              3,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "CLOSED"
+          },
+          {
+            "tick": 3,
+            "player": [
+              1,
+              1
+            ],
+            "ghost": [
+              4,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "CLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BT-HELD-OPEN-01",
+      "purpose": "When the current player occupies a pressure door after switch is released, HELD_OPEN remains until successful exit",
+      "mapRows": [
+        "########",
+        "#SaD.G.#",
+        "########"
+      ],
+      "start": [
+        1,
+        1
+      ],
+      "goal": [
+        5,
+        1
+      ],
+      "switches": {
+        "a": [
+          2,
+          1
+        ]
+      },
+      "doors": {
+        "D": {
+          "type": "PRESSURE",
+          "switches": [
+            "a"
+          ],
+          "position": [
+            3,
+            1
+          ]
+        }
+      },
+      "record": {
+        "actions": [
+          "R",
+          "R",
+          "R"
+        ],
+        "endTick": 3,
+        "expected": [
+          {
+            "tick": 1,
+            "player": [
+              2,
+              1
+            ],
+            "switchesOn": [
+              "a"
+            ],
+            "doorD": "OPEN"
+          },
+          {
+            "tick": 2,
+            "player": [
+              3,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "HELD_OPEN"
+          },
+          {
+            "tick": 3,
+            "player": [
+              4,
+              1
+            ],
+            "switchesOn": [],
+            "doorD": "CLOSED"
+          }
+        ]
+      },
+      "replay": {
+        "actions": [
+          "R",
+          "R",
+          ".",
+          "R"
+        ],
+        "expected": [
+          {
+            "tick": 1,
+            "player": [
+              2,
+              1
+            ],
+            "ghost": [
+              2,
+              1
+            ],
+            "doorD": "OPEN"
+          },
+          {
+            "tick": 2,
+            "player": [
+              3,
+              1
+            ],
+            "ghost": [
+              3,
+              1
+            ],
+            "doorD": "HELD_OPEN"
+          },
+          {
+            "tick": 3,
+            "player": [
+              3,
+              1
+            ],
+            "ghost": [
+              4,
+              1
+            ],
+            "doorD": "HELD_OPEN"
+          },
+          {
+            "tick": 4,
+            "player": [
+              4,
+              1
+            ],
+            "ghost": [
+              4,
+              1
+            ],
+            "doorD": "CLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BT-GHO-CLEAR-T16-01",
+      "purpose": "Tick16 clear wins over ghost-disappearance transition, with no disappearance event",
+      "mapRows": [
+        "###################",
+        "#S...............G#",
+        "###################"
+      ],
+      "start": [
+        1,
+        1
+      ],
+      "goal": [
+        17,
+        1
+      ],
+      "switches": {},
+      "doors": {},
+      "record": {
+        "actions": [],
+        "endTick": 0,
+        "expectedPositionsCount": 17
+      },
+      "replay": {
+        "actions": [
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R",
+          "R"
+        ],
+        "expectedAtTick16": {
+          "phase": "CLEARED",
+          "player": [
+            17,
+            1
+          ],
+          "ghost": [
+            1,
+            1
+          ],
+          "events": [
+            "CLEARED"
+          ],
+          "mustNotEmit": [
+            "GHOST_DISAPPEARED"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+﻿issueId,severity,riskOrFinding,currentStatus,requiredAction
+T0-03,MEDIUM,BAL-03 priority nonstandard in original 180 index,CANDIDATE_READY_SIGNOFF_REQUIRED,Approve index normalized in exactly one cell; preserve legacy index and frozen spec bytes
+T0-04,HIGH,151 legacy index rows generic expected references,P0_TEST_VECTORS_PREPARED_NOT_EXECUTED,159 P0 rows now have candidate per-case setup/actions/assertions; engineering review and adapter contract before T1
+T0-05,MEDIUM,single/cumulative clock stop triggers overlap,ORACLE_PROPOSED_SIGNOFF_REQUIRED,"At lag 1000ms register one PERFORMANCE pause and ordered triggerReasons SINGLE_LAG,CUMULATIVE_LAG; do not execute tick"
+T0-08,HIGH,"P0 priority includes T3 device and T4 proof, while frozen text says T1 P0 all PASS",HOLD_FORMAL_GATE_DECISION,Approve separate execution phase mapping or formally revise frozen test spec version; do not silently waive P0
+T0-09,MEDIUM,GHO-03 no unchanged golden fixture ghost reaches goal,DRAFT_TEST_VARIANT_REVIEW,Approve test-only variant of existing corridor (record R16 replay WAIT16); no product stage changes
+DD-H14,HIGH,Gold minima and optimality unproven,HOLD_T4,Complete proof via state exploration or independently auditable lower bound; until then Gold formal release HOLD
+DD-H16,ACCEPTED_RISK,localStorage cross-tab CAS absent,RISK_ACCEPTED_BY_USER,"Two-stage destructive reset, preserve corrupt raw, detect observable conflicts; no guarantee atomicity"
+QA-SITES,HIGH,Sites owner-only permission and deployment SHA not yet verified,NOT_RUN_T3_HOLD,No public QA site; only fixed-source verified deployment with access control; else HOLD
+GITHUB,HIGH,Handoff repository base HEAD and branch not currently verified,UNAUTHORIZED_NO_WRITE,After explicit authorization check remote branch/base main SHA and create docs-only branch
+CODEX,HIGH,T1 implementation not approved,UNAUTHORIZED,Separate approval; no Codex Cloud instructions executed
