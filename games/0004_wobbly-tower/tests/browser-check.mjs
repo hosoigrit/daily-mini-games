@@ -73,14 +73,8 @@ try {
   assert(started.floor === "0/10", "start floor");
   assert(started.score === "0", "start score");
 
-  await touchHold(client, "#game-canvas", 60, false);
-  await delay(100);
-  const settling = await evaluate(client, `({
-    floor: document.querySelector('#floor-value').textContent,
-    status: document.querySelector('#status-message').textContent,
-  })`);
-  assert(settling.floor === "1/10", "normal landing updates floor during settling");
-  assert(settling.status === "着地成功", "normal settling feedback remains visible");
+  const settling = await touchDropAndObserve(client, "着地成功");
+  assert(settling.floor === "1/10", `normal landing updates floor during settling: ${JSON.stringify(settling)}`);
   const settlingScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
   await writeFile(settlingScreenshotPath, Buffer.from(settlingScreenshot.data, "base64"));
   const pauseStable = await touchHold(client, "#pause-button", 30);
@@ -95,7 +89,8 @@ try {
   assert(resumeStable, "resume button remains connected during touch hold");
   await delay(50);
   assert(await evaluate(client, `document.querySelector('#game-overlay').hidden`), "resume hides overlay");
-  await delay(100);
+  const nextFloor = await observeStatus(client, "2階目。タイミングを合わせて落としてください");
+  await nextFloor();
   const landed = await evaluate(client, `({
     floor: document.querySelector('#floor-value').textContent,
     score: Number(document.querySelector('#score-value').textContent.replaceAll(',', '')),
@@ -103,12 +98,7 @@ try {
   assert(landed.floor === "1/10", "pointer landing advances one floor");
   assert(landed.score >= 100, "pointer landing scores");
 
-  await touchHold(client, "#game-canvas", 60, false);
-  await delay(100);
-  assert(
-    await evaluate(client, `document.querySelector('#status-message').textContent === 'MISS'`),
-    "MISS settling feedback remains visible",
-  );
+  const miss = await touchDropAndObserve(client, "MISS");
   const missPauseStable = await touchHold(client, "#pause-button", 30);
   assert(missPauseStable, "MISS settling pause button remains connected during touch hold");
   await delay(50);
@@ -206,6 +196,7 @@ try {
     scrollWidth: initial.scrollWidth,
     canvasWidth: initial.canvasWidth,
     landed,
+    miss,
     touchButtons: {
       start: mobileStartStable,
       settlingPause: pauseStable,
@@ -226,6 +217,69 @@ try {
   client.close();
 } finally {
   chrome.kill();
+}
+
+async function touchDropAndObserve(client, expected) {
+  const status = await observeStatus(client, expected, { afterDrop: true });
+  await touchHold(client, "#game-canvas", 60, false);
+  return status();
+}
+
+// Register before input so a short-lived status can be recorded even if Node
+// receives its CDP response after the browser has already rendered another frame.
+async function observeStatus(client, expected, { afterDrop = false } = {}) {
+  await evaluate(client, `(() => {
+    const status = document.querySelector('#status-message');
+    const floor = document.querySelector('#floor-value');
+    const score = document.querySelector('#score-value');
+    const overlay = document.querySelector('#game-overlay');
+    const pause = document.querySelector('#pause-button');
+    const canvas = document.querySelector('#game-canvas');
+    const started = performance.now();
+    let dropAt;
+    const timeline = [];
+    const onDrop = () => { dropAt = performance.now(); };
+    if (${afterDrop}) canvas.addEventListener('pointerdown', onDrop, { capture: true, once: true });
+
+    const snapshot = () => ({
+      elapsedMs: Math.round(performance.now() - started),
+      sinceDropMs: dropAt === undefined ? null : Math.round(performance.now() - dropAt),
+      status: status.textContent,
+      floor: floor.textContent,
+      score: score.textContent,
+      overlayHidden: overlay.hidden,
+      overlayText: overlay.hidden ? '' : overlay.innerText.trim(),
+      pauseHidden: pause.hidden,
+      activeElement: document.activeElement?.id || document.activeElement?.tagName,
+    });
+    window.__browserCheckStatus = new Promise((resolve) => {
+      const matches = (state) => state.status === ${JSON.stringify(expected)}
+        && state.overlayHidden && !state.pauseHidden
+        && (!${afterDrop} || state.sinceDropMs !== null);
+      const finish = (matched, state) => {
+        observer.disconnect();
+        clearTimeout(timer);
+        canvas.removeEventListener('pointerdown', onDrop, true);
+        resolve({ matched, state, timeline });
+      };
+      const inspect = () => {
+        const state = snapshot();
+        timeline.push(state);
+        if (matches(state)) finish(true, state);
+      };
+      const observer = new MutationObserver(inspect);
+      observer.observe(status, { childList: true, characterData: true, subtree: true });
+      observer.observe(overlay, { attributes: true, attributeFilter: ['hidden'] });
+      const timer = setTimeout(() => finish(false, snapshot()), 2000);
+      inspect();
+    });
+    return true;
+  })()`);
+  return async () => {
+    const result = await evaluate(client, "window.__browserCheckStatus");
+    assert(result.matched, `expected browser status "${expected}" within 2000ms: ${JSON.stringify(result)}`);
+    return result.state;
+  };
 }
 
 async function touchHold(client, selector, holdMilliseconds, checkIdentity = true) {
