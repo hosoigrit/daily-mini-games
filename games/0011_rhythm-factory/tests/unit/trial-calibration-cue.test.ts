@@ -57,6 +57,10 @@ it('uses the scheduled cue origin for input and verifies the first 100ms native-
   expect(started.ok).toBe(true);
   const startAtMs = bridge.startPerformanceMs(token.generation);
   expect(startAtMs).toBeCloseTo(1150, 9);
+  expect(bridge.contextAt(999.999 as Ms)).toBeNull();
+  const early = bridge.contextAt(1000 as Ms);
+  expect(early).toMatchObject({ sessionId: 'calibration-1', clockGeneration: 1 });
+  expect(early?.clock.convertEventTime(1050 as Ms, token.generation)).toMatchObject({ ok: true, value: { songTimeUs: -100_000 } });
   expect(bridge.convert(startAtMs!, token.generation)).toMatchObject({ ok: true, value: { songTimeUs: 0 } });
   observation = { contextTime: 10.121, performanceTime: 1100 };
   expect(bridge.monitor(1099.999 as Ms).ok).toBe(true);

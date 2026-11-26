@@ -13,6 +13,7 @@ type FixedClock = Extract<ReturnType<SessionClockFactory>, { ok: true }>['value'
 interface GenerationClock {
   readonly anchor: PlaybackAnchor;
   readonly sinceMs: Ms;
+  readonly inputFromMs: Ms;
   readonly clock: FixedClock;
   readonly calibration: boolean;
 }
@@ -75,7 +76,9 @@ export function createSessionAudioBridge(
       const anchor = result.value;
       if (beats && cue && !cue.start(anchor.startAudioSec, beats)) return failure('ERR-004', 'audio.calibrationCueFailed');
       const beginsAt = anchor.anchorPerformanceMs + (anchor.startAudioSec - anchor.anchorAudioSec) * 1000;
-      const record = { anchor, sinceMs: Math.max(atMs, beginsAt) as Ms, clock: fixed.value, calibration: !!beats };
+      const sinceMs = Math.max(atMs, beginsAt) as Ms;
+      // Attribute pointer cancellation during the cue lead to the current calibration.
+      const record = { anchor, sinceMs, inputFromMs: beats ? atMs : sinceMs, clock: fixed.value, calibration: !!beats };
       history.set(result.value.generation, record);
       active = record;
       nextMonitorMs = atMs + monitorIntervalMs;
@@ -94,7 +97,7 @@ export function createSessionAudioBridge(
     contextAt(atMs) {
       let candidate: GenerationClock | undefined;
       for (const record of history.values()) {
-        if (atMs >= record.sinceMs && (!candidate || record.sinceMs >= candidate.sinceMs)) candidate = record;
+        if (atMs >= record.inputFromMs && (!candidate || record.inputFromMs >= candidate.inputFromMs)) candidate = record;
       }
       return candidate ? context(candidate) : null;
     },
