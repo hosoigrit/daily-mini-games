@@ -39,6 +39,18 @@ interface ClockReading {
   raw: AudioTimestamp;
 }
 
+type NativeMetric = number | 'UNAVAILABLE';
+
+interface ChromiumPlaybackDiagnostics {
+  readonly playbackStats: 'AVAILABLE' | 'UNAVAILABLE';
+  // Browser-reported durations and latencies are seconds. Underrun events are a count.
+  readonly underrunDuration: NativeMetric;
+  readonly underrunEvents: NativeMetric;
+  readonly totalDuration: NativeMetric;
+  readonly baseLatency: NativeMetric;
+  readonly outputLatency: NativeMetric;
+}
+
 interface ClockRecord {
   sampleNumber: number;
   atMs: number;
@@ -47,6 +59,7 @@ interface ClockRecord {
   timestamp: OutputClockSample | undefined;
   signedDifferenceUs: number | null;
   result: Result<{ readonly differenceUs: Us }>;
+  chromiumPlayback?: ChromiumPlaybackDiagnostics;
 }
 
 interface PcmObservation {
@@ -105,7 +118,10 @@ for (const { kind, durationSec, count } of scenarios) {
         page.on('request', (request) => requests.push(request.url()));
         await page.goto(appUrl);
 
-        await page.evaluate(async ({ url, kind, durationSec, activationWaitMs, stopAfterClockSamples, restartClockSamples }) => {
+        const chromiumDiagnostics = browserName === 'chromium' && condition === 'chromium-diagnostics';
+        await page.evaluate(async ({
+          url, kind, durationSec, activationWaitMs, stopAfterClockSamples, restartClockSamples, chromiumDiagnostics,
+        }) => {
           const definition = durationSec === 84
             ? (await import(url + 'tests/fixtures/a2ar2-load-track.ts') as typeof import('../fixtures/a2ar2-load-track')).a2ar2LoadTrack
             : (await import(url + 'src/content/stage-a2-trial.ts') as typeof import('../../src/content/stage-a2-trial')).stageA2TrialMusic;
@@ -300,6 +316,32 @@ for (const { kind, durationSec, count } of scenarios) {
             return button;
           };
 
+          const readNativeMetric = (owner: object | undefined, name: string): NativeMetric => {
+            try {
+              const value: unknown = owner ? Reflect.get(owner, name) : undefined;
+              return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : 'UNAVAILABLE';
+            } catch {
+              return 'UNAVAILABLE';
+            }
+          };
+          const readChromiumDiagnostics = (): ChromiumPlaybackDiagnostics => {
+            let stats: object | undefined;
+            try {
+              const value: unknown = context ? Reflect.get(context, 'playbackStats') : undefined;
+              if (typeof value === 'object' && value !== null) stats = value;
+            } catch {
+              // Feature missing or inaccessible in this browser context.
+            }
+            return {
+              playbackStats: stats ? 'AVAILABLE' : 'UNAVAILABLE',
+              underrunDuration: readNativeMetric(stats, 'underrunDuration'),
+              underrunEvents: readNativeMetric(stats, 'underrunEvents'),
+              totalDuration: readNativeMetric(stats, 'totalDuration'),
+              baseLatency: readNativeMetric(context, 'baseLatency'),
+              outputLatency: readNativeMetric(context, 'outputLatency'),
+            };
+          };
+
           const monitor = async (token: Token, anchor: PlaybackAnchor, clock: ReturnType<typeof createFixedAudioClock>) => {
             if (!clock.ok) {
               await finish('invalid-anchor', clock.error.code);
@@ -316,12 +358,14 @@ for (const { kind, durationSec, count } of scenarios) {
               const signedDifferenceUs = timestamp ? Math.round((timestamp.contextTime - (
                 anchor.anchorAudioSec + (timestamp.performanceTime - anchor.anchorPerformanceMs) / 1000
               )) * 1_000_000) : null;
-              record.samples.push({
+              const reading: ClockRecord = {
                 generation: token.generation, sampleNumber: ++sampleNumber, atMs: performance.now(),
                 raw, timestamp, signedDifferenceUs, result,
-              });
+              };
+              record.samples.push(reading);
+              if (!result.ok) audio.stop(token);
+              if (chromiumDiagnostics) reading.chromiumPlayback = readChromiumDiagnostics();
               if (!result.ok) {
-                audio.stop(token);
                 captureResources('safety-stop');
                 await finish('safety-stop', result.error.messageKey);
                 return;
@@ -410,7 +454,7 @@ for (const { kind, durationSec, count } of scenarios) {
           const restartButton = addButton('R2 restart', 'restart', () => start(replacement));
           record.status = 'ready-to-start';
           startButton.disabled = false;
-        }, { url: appUrl, kind, durationSec, activationWaitMs, stopAfterClockSamples, restartClockSamples });
+        }, { url: appUrl, kind, durationSec, activationWaitMs, stopAfterClockSamples, restartClockSamples, chromiumDiagnostics });
 
         let interactionFailure: string | undefined;
         try {
