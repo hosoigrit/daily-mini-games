@@ -1,0 +1,4535 @@
+{
+  "fixedBaseline": "0d510986b9edfe2dbc33d9d1092b42bcc226ad2a",
+  "fixedTests": "4c5f31be15a7eee2c0645c33a634b7b0ad013751",
+  "prodCodeEdits": 0,
+  "testCorrectionCycles": 1,
+  "physicalDevices": "NOT RUN",
+  "stageA2dTechnical": "HOLD",
+  "stageA2dProcess": "HOLD",
+  "trialConditions": {
+    "controlled": "Four groups with 3 trials, fresh browser context each, native synthesis and modeled output and DOM event timestamps",
+    "native": "Four groups with 3 trials, fresh browser context each, Chromium 159.0.8154.6, original output and trusted key timestamps, single dedicated worker with no other test-browser workload",
+    "integrationRerun": "Unaffected routes, single worker, local ports moved only in scratch while controlled repeat was running"
+  },
+  "evidence": {
+    "baseline-vitest.json": {
+      "source": {
+        "file": "baseline-vitest.json",
+        "sha256": "811f49788fa3ca06d28344471a022715d68eddea3071d2c6685d4220d2cf809c",
+        "bytes": 107599
+      },
+      "pass": 289,
+      "fail": 0
+    },
+    "r1-vitest.json": {
+      "source": {
+        "file": "r1-vitest.json",
+        "sha256": "29619c7d4e85c7a89a2de5155ee8d0ed939b6df0eac028bd373dfcbf53d124f0",
+        "bytes": 113050
+      },
+      "pass": 301,
+      "fail": 0
+    },
+    "r3-vitest.json": {
+      "source": {
+        "file": "r3-vitest.json",
+        "sha256": "62a48cbd7ad5fedeb4e417acc97584395d0879817c4574f76a6d4ca6c2bcf033",
+        "bytes": 14765
+      },
+      "pass": 34,
+      "fail": 0
+    },
+    "r1-06-controlled-4c5f31be.json": {
+      "source": {
+        "file": "r1-06-controlled-4c5f31be.json",
+        "sha256": "415f8b575fefbe6d5e191babdef429440ac2aa7e9d362d5caca71ef9debd1767",
+        "bytes": 6752750
+      },
+      "totals": {
+        "startTime": "2026-11-26T12:03:03.834Z",
+        "duration": 460306.734,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium/dev": {
+          "passed": 6
+        },
+        "chromium/dist": {
+          "passed": 6
+        }
+      },
+      "cases": [
+        {
+          "title": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:03:08.944Z",
+          "durationMs": 38160,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 37262.29999999702,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 37252.60000000149,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:05:41.394Z",
+          "durationMs": 36187,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 35312.30000000447,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 238,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 35303.70000000298,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "Stage A-2d / dev: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:12.985Z",
+          "durationMs": 36727,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 35764.79999999702,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 234,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 35758.19999999553,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:04:26.406Z",
+          "durationMs": 35651,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 34946.5,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 236,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 34940.10000000149,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:06:56.381Z",
+          "durationMs": 35155,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 34402,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 238,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 34394.60000000149,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "Stage A-2d / dist: clock fixture DOM completes the chart with controlled key timestamps",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:28.954Z",
+          "durationMs": 36177,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 35496,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 234,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 35491.39999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 1,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:03:47.273Z",
+          "durationMs": 39124,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3330,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 38335.90000000596,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 38326.90000000596,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:06:17.686Z",
+          "durationMs": 38685,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3318,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 37916,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 235,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 37906.80000000447,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:49.800Z",
+          "durationMs": 39144,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3323,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 38301.69999999553,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 235,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 38291.5,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:05:02.069Z",
+          "durationMs": 38862,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3317,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 38175.5,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 38167.39999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:07:31.546Z",
+          "durationMs": 40957,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3319,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 40176,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 40169.30000000447,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        },
+        {
+          "title": "clock fixture DOM rehold release resets the countdown and the new generation retains the hold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:10:05.141Z",
+          "durationMs": 38903,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3314,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 38186.20000000298,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 236,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 38180.20000000298,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "controlledSourceCount": 2,
+          "modeledDispatchCount": 158
+        }
+      ]
+    },
+    "r1-07-native-4c5f31be.json": {
+      "source": {
+        "file": "r1-07-native-4c5f31be.json",
+        "sha256": "016ed2a2d517252d4c89e6310e6f1af2966fdf550496b4983d8702d74ee6c48e",
+        "bytes": 6296236
+      },
+      "totals": {
+        "startTime": "2026-11-26T12:15:41.481Z",
+        "duration": 381000.375,
+        "expected": 7,
+        "skipped": 0,
+        "unexpected": 5,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium/dev": {
+          "passed": 3,
+          "failed": 3
+        },
+        "chromium/dist": {
+          "passed": 4,
+          "failed": 2
+        }
+      },
+      "cases": [
+        {
+          "title": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:15:44.944Z",
+          "durationMs": 36977,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 35266.70000000298,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 35259.39999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 237,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:17:25.893Z",
+          "durationMs": 36495,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 34779.89999999851,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 237,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 34772.89999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 237,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio completes the chart with trusted key replay",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:19:53.251Z",
+          "durationMs": 36389,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 34656,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 238,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 34645.89999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 238,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:16:22.039Z",
+          "durationMs": 13320,
+          "description": [
+            "Error: Native replay stopped before 2000000us: ERR-006"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 12886.70000000298,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 15,
+          "audioErrors": [
+            {
+              "atMs": 12875.79999999702,
+              "rawDifferenceUs": 20088.333331843787,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 12882.10000000149,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 15,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:18:02.539Z",
+          "durationMs": 34204,
+          "description": [
+            "Error: Native replay stopped before 20000000us: ERR-006"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 33805.59999999404,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 194,
+          "audioErrors": [
+            {
+              "atMs": 33800.89999999851,
+              "rawDifferenceUs": 30029.333327371787,
+              "generation": 4,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 33803.29999999702,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 2,
+          "nativeCorrelated": 194,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:20:29.749Z",
+          "durationMs": 11050,
+          "description": [
+            "Error: Native replay stopped before 0us: ERR-006"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 10886.10000000149,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 1,
+          "audioErrors": [
+            {
+              "atMs": 10881.29999999702,
+              "rawDifferenceUs": 50047.33333631392,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 10884.10000000149,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 1,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:16:36.239Z",
+          "durationMs": 36990,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 35216.39999999851,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 234,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 35209.5,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 234,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:18:37.188Z",
+          "durationMs": 36216,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "lastUiObservation": {
+            "performanceMs": 34549.20000000298,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 235,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 34541.40000000596,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 235,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio completes the chart with trusted key replay",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:20:41.210Z",
+          "durationMs": 41110,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"RESULT\"",
+            "Received: \"MENU\"",
+            "Timeout:  6000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 34671.20000000298,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 231,
+          "audioErrors": [
+            {
+              "atMs": 34665.29999999702,
+              "rawDifferenceUs": 30039.83333035265,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 34666.79999999702,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 231,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:17:13.337Z",
+          "durationMs": 11838,
+          "description": [
+            "Error: Native replay stopped before 0us: ERR-006"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 11623,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 1,
+          "audioErrors": [
+            {
+              "atMs": 11612.70000000298,
+              "rawDifferenceUs": 40030.000004469795,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 11617.80000000447,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 1,
+          "nativeCorrelated": 1,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:19:13.482Z",
+          "durationMs": 39195,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3312,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 37752.89999999851,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 234,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 37745.89999999851,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 2,
+          "nativeCorrelated": 234,
+          "nativeActiveSources": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio performs a held HOLD release and new-generation rehold",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:21:22.844Z",
+          "durationMs": 39471,
+          "save": {
+            "revision": 1,
+            "clearCount": 1,
+            "score": 1000000,
+            "counts": {
+              "perfect": 82,
+              "great": 0,
+              "good": 0,
+              "miss": 0,
+              "ghost": 0,
+              "unplayed": 0
+            },
+            "maxCombo": 82,
+            "remainingLifeUnits": 200,
+            "receiptMatchesResult": true
+          },
+          "rehold": {
+            "lane": 1,
+            "firstGeneration": 3,
+            "resumedGeneration": 4,
+            "reholdElapsedMs": 3312,
+            "pausedScore": "182,927"
+          },
+          "lastUiObservation": {
+            "performanceMs": 37894.5,
+            "screen": "RESULT",
+            "state": "CLEAR",
+            "writer": "OWNED",
+            "generation": "4",
+            "saveStatus": "SAVED",
+            "error": null
+          },
+          "audioObservationCount": 234,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 37888.09999999404,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          },
+          "nativeBgmStarts": 2,
+          "nativeCorrelated": 234,
+          "nativeActiveSources": []
+        }
+      ]
+    },
+    "integration-rerun.json": {
+      "source": {
+        "file": "integration-rerun.json",
+        "sha256": "7a44c7b7b3a27f3f0c0df14c39cab91ef932f55588b77f146848650d94b1d614",
+        "bytes": 3078148
+      },
+      "totals": {
+        "startTime": "2026-11-26T12:07:21.291Z",
+        "duration": 499292.593,
+        "expected": 26,
+        "skipped": 16,
+        "unexpected": 12,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium/dev": {
+          "passed": 9
+        },
+        "firefox/dev": {
+          "passed": 2,
+          "failed": 3,
+          "skipped": 4
+        },
+        "webkit/dev": {
+          "passed": 2,
+          "failed": 3,
+          "skipped": 4
+        },
+        "chromium/dist": {
+          "passed": 9
+        },
+        "firefox/dist": {
+          "passed": 2,
+          "failed": 3,
+          "skipped": 4
+        },
+        "webkit/dist": {
+          "passed": 2,
+          "failed": 3,
+          "skipped": 4
+        }
+      },
+      "cases": [
+        {
+          "title": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:07:25.214Z",
+          "durationMs": 890
+        },
+        {
+          "title": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:11:39.936Z",
+          "durationMs": 2658
+        },
+        {
+          "title": "Stage A-2d / dev: product subpath, responsive routes and local resources",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:13:26.608Z",
+          "durationMs": 1222
+        },
+        {
+          "title": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:07:26.267Z",
+          "durationMs": 8939
+        },
+        {
+          "title": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:11:43.354Z",
+          "durationMs": 2809
+        },
+        {
+          "title": "Stage A-2d / dev: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:13:27.937Z",
+          "durationMs": 9924
+        },
+        {
+          "title": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:07:35.213Z",
+          "durationMs": 15081
+        },
+        {
+          "title": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:11:46.180Z",
+          "durationMs": 13626,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1376,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio, no-input FAILED and one persisted result",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:13:37.883Z",
+          "durationMs": 17902,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 8800,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:07:50.303Z",
+          "durationMs": 15361
+        },
+        {
+          "title": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:12:00.498Z",
+          "durationMs": 14930,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1979,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dev: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:13:56.236Z",
+          "durationMs": 18685,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 9558,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:16.971Z",
+          "durationMs": 20288
+        },
+        {
+          "title": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:12:32.529Z",
+          "durationMs": 803
+        },
+        {
+          "title": "Stage A-2d / dev: native preview ends naturally and leaves records untouched",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:14:33.748Z",
+          "durationMs": 174
+        },
+        {
+          "title": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:35.022Z",
+          "durationMs": 415
+        },
+        {
+          "title": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:12:34.520Z",
+          "durationMs": 1150
+        },
+        {
+          "title": "Stage A-2d / dist: product subpath, responsive routes and local resources",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:14:34.511Z",
+          "durationMs": 1171
+        },
+        {
+          "title": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:35.448Z",
+          "durationMs": 7555
+        },
+        {
+          "title": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:12:35.700Z",
+          "durationMs": 2213
+        },
+        {
+          "title": "Stage A-2d / dist: native Web Locks and LocalStorage enforce the integrated writer gates",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:14:35.693Z",
+          "durationMs": 8038
+        },
+        {
+          "title": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:43.012Z",
+          "durationMs": 14382
+        },
+        {
+          "title": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:12:37.931Z",
+          "durationMs": 13490,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1216,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio, no-input FAILED and one persisted result",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:14:43.743Z",
+          "durationMs": 17642,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 8622,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:57.401Z",
+          "durationMs": 14192
+        },
+        {
+          "title": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:12:52.188Z",
+          "durationMs": 14639,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1881,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dist: native audio pauses, resumes in a new generation and aborts without a record",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:15:01.844Z",
+          "durationMs": 18213,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 9177,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 0,
+          "audioErrors": []
+        },
+        {
+          "title": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:10:22.735Z",
+          "durationMs": 20039
+        },
+        {
+          "title": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:13:23.658Z",
+          "durationMs": 827
+        },
+        {
+          "title": "Stage A-2d / dist: native preview ends naturally and leaves records untouched",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:15:39.472Z",
+          "durationMs": 213
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:05.675Z",
+          "durationMs": 11285
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:12:16.530Z",
+          "durationMs": 14821,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1955,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 1959,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 1
+          }
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:14:15.456Z",
+          "durationMs": 17766,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 8723,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 1,
+          "audioErrors": [
+            {
+              "atMs": 8719,
+              "rawDifferenceUs": 108666.666,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 8721,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          }
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:37.274Z",
+          "durationMs": 14517
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:12:33.712Z",
+          "durationMs": 255
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:14:34.009Z",
+          "durationMs": 154
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:08:51.805Z",
+          "durationMs": 32394
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:12:33.985Z",
+          "durationMs": 305
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:14:34.175Z",
+          "durationMs": 172
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:09:24.216Z",
+          "durationMs": 10796
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:12:34.300Z",
+          "durationMs": 207
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:14:34.357Z",
+          "durationMs": 144
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:10:11.605Z",
+          "durationMs": 11122
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:13:07.938Z",
+          "durationMs": 14538,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"INITIALIZING\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 1801,
+            "screen": "GAME",
+            "state": "INITIALIZING",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": null
+          },
+          "audioObservationCount": 0,
+          "audioErrors": [],
+          "lastResources": {
+            "atMs": 1805,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 1
+          }
+        },
+        {
+          "title": "native audio accepts a trusted DOM touch without horizontal overflow",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T12:15:20.613Z",
+          "durationMs": 18284,
+          "description": [
+            "Error: expect(locator).toHaveAttribute(expected) failed",
+            "",
+            "Locator:  locator('main[data-screen]')",
+            "Expected: \"PLAYING\"",
+            "Received: \"ERROR\"",
+            "Timeout:  12000ms",
+            "",
+            "Call log:"
+          ],
+          "lastUiObservation": {
+            "performanceMs": 9168,
+            "screen": "MENU",
+            "state": "ERROR",
+            "writer": "OWNED",
+            "generation": "3",
+            "saveStatus": "IDLE",
+            "error": "ERR-006"
+          },
+          "audioObservationCount": 1,
+          "audioErrors": [
+            {
+              "atMs": 9164,
+              "rawDifferenceUs": 107333.33299999972,
+              "generation": 3,
+              "error": "clock.outOfSync",
+              "errorCode": "ERR-006"
+            }
+          ],
+          "lastResources": {
+            "atMs": 9167,
+            "cacheTracks": 1,
+            "activeRenders": 0,
+            "activeSources": 0,
+            "voices": 0,
+            "activeRafLoops": 0
+          }
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:10:42.784Z",
+          "durationMs": 13893
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:13:24.914Z",
+          "durationMs": 440
+        },
+        {
+          "title": "result UI recovers an unreadable first commit without applying the result twice",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:15:39.928Z",
+          "durationMs": 163
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:10:56.684Z",
+          "durationMs": 32150
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:13:25.370Z",
+          "durationMs": 288
+        },
+        {
+          "title": "clock fixture DOM practice completion records tutorial progress only",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:15:40.122Z",
+          "durationMs": 178
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:11:28.842Z",
+          "durationMs": 10649
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:13:25.667Z",
+          "durationMs": 235
+        },
+        {
+          "title": "clock fixture DOM calibration applies the measured timing offset",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T12:15:40.310Z",
+          "durationMs": 158
+        }
+      ]
+    },
+    "old-browser.json": {
+      "source": {
+        "file": "old-browser.json",
+        "sha256": "fb716b3d83e52fdf4d8a8aa17479e3b2b33be41d07c0dcfb3fea196949c96650",
+        "bytes": 413551
+      },
+      "totals": {
+        "startTime": "2026-11-26T11:55:39.809Z",
+        "duration": 202659.717,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 18,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium/suite": {
+          "failed": 4,
+          "passed": 10
+        },
+        "firefox/suite": {
+          "failed": 7,
+          "passed": 7
+        },
+        "webkit/suite": {
+          "failed": 7,
+          "passed": 7
+        },
+        "chromium/dev": {
+          "passed": 1
+        },
+        "firefox/dev": {
+          "passed": 1
+        },
+        "webkit/dev": {
+          "passed": 1
+        },
+        "chromium/dist": {
+          "passed": 1
+        },
+        "firefox/dist": {
+          "passed": 1
+        },
+        "webkit/dist": {
+          "passed": 1
+        }
+      },
+      "cases": [
+        {
+          "title": "A-2a-R CASE-05 natural trial 1",
+          "mode": null,
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:55:43.320Z",
+          "durationMs": 9751,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 1",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:22.972Z",
+          "durationMs": 5354,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 1",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:16.758Z",
+          "durationMs": 3452,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 2",
+          "mode": null,
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:55:53.691Z",
+          "durationMs": 7710,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 2",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:28.745Z",
+          "durationMs": 4788,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 2",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:20.715Z",
+          "durationMs": 3234,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 3",
+          "mode": null,
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:56:01.885Z",
+          "durationMs": 20594,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 3",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:33.991Z",
+          "durationMs": 5116,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 natural trial 3",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:24.358Z",
+          "durationMs": 3493,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"natural-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 1",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:23.172Z",
+          "durationMs": 7186
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 1",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:39.640Z",
+          "durationMs": 6505,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 1",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:28.293Z",
+          "durationMs": 3333,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 2",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:30.439Z",
+          "durationMs": 8116
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 2",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:46.606Z",
+          "durationMs": 6818,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 2",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:32.025Z",
+          "durationMs": 3599,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 3",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:38.569Z",
+          "durationMs": 7958
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 3",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:57:54.036Z",
+          "durationMs": 5665,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"activation-unavailable\""
+          ]
+        },
+        {
+          "title": "A-2a-R CASE-05 stop-restart trial 3",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:36.005Z",
+          "durationMs": 4047,
+          "description": [
+            "Error: expect(received).toBe(expected) // Object.is equality",
+            "",
+            "Expected: \"restart-completed\"",
+            "Received: \"safety-stop\""
+          ]
+        },
+        {
+          "title": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+          "mode": null,
+          "profile": "chromium",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:56:46.552Z",
+          "durationMs": 21215,
+          "description": [
+            "Error: expect(received).toBeLessThanOrEqual(expected)",
+            "",
+            "Expected: <= 5000",
+            "Received:    5434.29999999702"
+          ]
+        },
+        {
+          "title": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:00.129Z",
+          "durationMs": 4870
+        },
+        {
+          "title": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:40.448Z",
+          "durationMs": 10786
+        },
+        {
+          "title": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:08.336Z",
+          "durationMs": 7532
+        },
+        {
+          "title": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "mode": null,
+          "profile": "firefox",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:05.429Z",
+          "durationMs": 2933,
+          "description": [
+            "Error: expect(received).toMatchObject(expected)",
+            "",
+            "- Expected  - 15",
+            "+ Received  +  1",
+            "",
+            "  Object {",
+            "-   \"disposed\": Object {",
+            "-     \"cached\": 0,"
+          ]
+        },
+        {
+          "title": "A-2a / POC-02: real output clock stays within the approved fixed-anchor bound",
+          "mode": null,
+          "profile": "webkit",
+          "status": "failed",
+          "reporterStartTime": "2026-11-26T11:58:51.319Z",
+          "durationMs": 3322,
+          "description": [
+            "Error: expect(received).toMatchObject(expected)",
+            "",
+            "- Expected  - 14",
+            "+ Received  +  1",
+            "",
+            "  Object {",
+            "-   \"disposed\": Object {",
+            "-     \"cached\": 0,"
+          ]
+        },
+        {
+          "title": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:16.037Z",
+          "durationMs": 457
+        },
+        {
+          "title": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:09.010Z",
+          "durationMs": 1812
+        },
+        {
+          "title": "Stage A-2b / real keyboard uses physical lanes, IF-04 and a distinct feedback path",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:55.059Z",
+          "durationMs": 332
+        },
+        {
+          "title": "Stage A-2b / native pointer capture keeps release on the starting lane",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:16.527Z",
+          "durationMs": 220
+        },
+        {
+          "title": "Stage A-2b / native pointer capture keeps release on the starting lane",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:11.224Z",
+          "durationMs": 601
+        },
+        {
+          "title": "Stage A-2b / native pointer capture keeps release on the starting lane",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:55.470Z",
+          "durationMs": 327
+        },
+        {
+          "title": "native touch events reach the real DOM and normalize once per direction",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:16.760Z",
+          "durationMs": 176
+        },
+        {
+          "title": "native touch events reach the real DOM and normalize once per direction",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:11.842Z",
+          "durationMs": 535
+        },
+        {
+          "title": "native touch events reach the real DOM and normalize once per direction",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:55.816Z",
+          "durationMs": 282
+        },
+        {
+          "title": "A-2c native composition readies original offline track and protected storage on the subpath",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:16.954Z",
+          "durationMs": 3626
+        },
+        {
+          "title": "A-2c native composition readies original offline track and protected storage on the subpath",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:12.397Z",
+          "durationMs": 1271
+        },
+        {
+          "title": "A-2c native composition readies original offline track and protected storage on the subpath",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:56.115Z",
+          "durationMs": 3870
+        },
+        {
+          "title": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:20.608Z",
+          "durationMs": 340
+        },
+        {
+          "title": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:13.694Z",
+          "durationMs": 741
+        },
+        {
+          "title": "Stage A-2c / native exclusive ifAvailable allows one writer and reports takeover state",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:59:00.002Z",
+          "durationMs": 715
+        },
+        {
+          "title": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:20.958Z",
+          "durationMs": 152
+        },
+        {
+          "title": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+          "mode": null,
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:14.446Z",
+          "durationMs": 352
+        },
+        {
+          "title": "Stage A-2c / native LocalStorage receipt prevents double commit after caught readback failure",
+          "mode": null,
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:59:00.724Z",
+          "durationMs": 345
+        },
+        {
+          "title": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+          "mode": "dev",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:21.145Z",
+          "durationMs": 589
+        },
+        {
+          "title": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+          "mode": "dev",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:14.825Z",
+          "durationMs": 700
+        },
+        {
+          "title": "POC-16 / dev: starts under the subpath, paints and loads scoped assets",
+          "mode": "dev",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:59:01.090Z",
+          "durationMs": 761
+        },
+        {
+          "title": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+          "mode": "dist",
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:21.747Z",
+          "durationMs": 314
+        },
+        {
+          "title": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+          "mode": "dist",
+          "profile": "firefox",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:58:15.539Z",
+          "durationMs": 551
+        },
+        {
+          "title": "POC-16 / dist: starts under the subpath, paints and loads scoped assets",
+          "mode": "dist",
+          "profile": "webkit",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:59:01.863Z",
+          "durationMs": 505
+        }
+      ]
+    },
+    "quiet-legacy-poc01.json": {
+      "source": {
+        "file": "quiet-legacy-poc01.json",
+        "sha256": "c0dc8c43a9ac06f0f97a85e3b126ffe62b1770283fff1e7549ec499cacee5961",
+        "bytes": 6892
+      },
+      "totals": {
+        "startTime": "2026-11-26T12:22:04.673Z",
+        "duration": 17874.76,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium/suite": {
+          "passed": 1
+        }
+      },
+      "cases": [
+        {
+          "title": "A-2a / POC-01: renders the original QA track and measures four SFX voices",
+          "mode": null,
+          "profile": "chromium",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T12:22:07.842Z",
+          "durationMs": 14535
+        }
+      ]
+    },
+    "r3-dev.json": {
+      "source": {
+        "file": "r3-dev.json",
+        "sha256": "70629f6db9ee02caf541e872292c4d63aab3ec9746df1572a7bbc3b635a443fb",
+        "bytes": 174970
+      },
+      "totals": {
+        "startTime": "2026-11-26T11:54:43.952Z",
+        "duration": 70265.112,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium-desktop/suite": {
+          "passed": 8,
+          "skipped": 2
+        },
+        "firefox-desktop/suite": {
+          "passed": 5,
+          "skipped": 5
+        },
+        "webkit-desktop/suite": {
+          "passed": 4,
+          "skipped": 6
+        },
+        "chromium-android-emulation/suite": {
+          "skipped": 8,
+          "passed": 2
+        },
+        "webkit-ios-emulation/suite": {
+          "skipped": 7,
+          "passed": 3
+        }
+      },
+      "cases": [
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:54:44.798Z",
+          "durationMs": 5075
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:20.757Z",
+          "durationMs": 2390
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:35.479Z",
+          "durationMs": 4380
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:47.825Z",
+          "durationMs": 63
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:49.418Z",
+          "durationMs": 271
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:54:50.006Z",
+          "durationMs": 7555
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:23.707Z",
+          "durationMs": 189
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:39.968Z",
+          "durationMs": 220
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:47.985Z",
+          "durationMs": 37
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:49.814Z",
+          "durationMs": 179
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:54:57.571Z",
+          "durationMs": 3869
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:23.918Z",
+          "durationMs": 191
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:40.206Z",
+          "durationMs": 222
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.034Z",
+          "durationMs": 30
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:50.004Z",
+          "durationMs": 167
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:01.450Z",
+          "durationMs": 3893
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:24.117Z",
+          "durationMs": 3633
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:40.442Z",
+          "durationMs": 4270
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.072Z",
+          "durationMs": 44
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:50.186Z",
+          "durationMs": 171
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:05.354Z",
+          "durationMs": 38
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:27.761Z",
+          "durationMs": 4074
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:44.729Z",
+          "durationMs": 181
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.129Z",
+          "durationMs": 32
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:50.373Z",
+          "durationMs": 160
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:05.399Z",
+          "durationMs": 8606
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:31.851Z",
+          "durationMs": 213
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:44.926Z",
+          "durationMs": 190
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.169Z",
+          "durationMs": 33
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:50.547Z",
+          "durationMs": 155
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:14.015Z",
+          "durationMs": 5701
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:32.073Z",
+          "durationMs": 289
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:45.126Z",
+          "durationMs": 185
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.212Z",
+          "durationMs": 37
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:50.712Z",
+          "durationMs": 210
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:19.734Z",
+          "durationMs": 241
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:32.390Z",
+          "durationMs": 637
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:45.341Z",
+          "durationMs": 923
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:48.265Z",
+          "durationMs": 229
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:50.952Z",
+          "durationMs": 708
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:19.986Z",
+          "durationMs": 310
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:33.040Z",
+          "durationMs": 966
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:46.273Z",
+          "durationMs": 874
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:48.505Z",
+          "durationMs": 369
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:51.677Z",
+          "durationMs": 1037
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:20.313Z",
+          "durationMs": 35
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:34.013Z",
+          "durationMs": 778
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:47.159Z",
+          "durationMs": 193
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:55:48.884Z",
+          "durationMs": 34
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:52.725Z",
+          "durationMs": 1311
+        }
+      ]
+    },
+    "r3-dist.json": {
+      "source": {
+        "file": "r3-dist.json",
+        "sha256": "722777a15f0fdfbb2644142c3512b884ba1fea5594b914996afb2802e6e43c19",
+        "bytes": 174950
+      },
+      "totals": {
+        "startTime": "2026-11-26T11:55:55.040Z",
+        "duration": 85601.68599999999,
+        "expected": 22,
+        "skipped": 28,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "groups": {
+        "chromium-desktop/suite": {
+          "passed": 8,
+          "skipped": 2
+        },
+        "firefox-desktop/suite": {
+          "passed": 5,
+          "skipped": 5
+        },
+        "webkit-desktop/suite": {
+          "passed": 4,
+          "skipped": 6
+        },
+        "chromium-android-emulation/suite": {
+          "skipped": 8,
+          "passed": 2
+        },
+        "webkit-ios-emulation/suite": {
+          "skipped": 7,
+          "passed": 3
+        }
+      },
+      "cases": [
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:55:56.121Z",
+          "durationMs": 4397
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:35.797Z",
+          "durationMs": 4313
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:55.774Z",
+          "durationMs": 7145
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:12.822Z",
+          "durationMs": 62
+        },
+        {
+          "title": "exports a retained BLOCKED trial and supports copy and denied-copy fallback",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:15.353Z",
+          "durationMs": 234
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:00.622Z",
+          "durationMs": 7583
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:40.658Z",
+          "durationMs": 297
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:03.076Z",
+          "durationMs": 356
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:12.979Z",
+          "durationMs": 40
+        },
+        {
+          "title": "requires download confirmation and runs DEV-AUD-05 again with a fresh generation (simulated clock)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:15.686Z",
+          "durationMs": 205
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:08.215Z",
+          "durationMs": 4339
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:40.970Z",
+          "durationMs": 351
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:03.454Z",
+          "durationMs": 216
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:13.034Z",
+          "durationMs": 52
+        },
+        {
+          "title": "retains the first over-limit sample and releases resources (simulated clock)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:15.910Z",
+          "durationMs": 550
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:12.563Z",
+          "durationMs": 4837
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:41.342Z",
+          "durationMs": 3381
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:03.685Z",
+          "durationMs": 5698
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:13.093Z",
+          "durationMs": 54
+        },
+        {
+          "title": "records the native short-track activation and clock outcome without forcing PASS",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:16.480Z",
+          "durationMs": 211
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:17.410Z",
+          "durationMs": 47
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:44.735Z",
+          "durationMs": 4877
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:09.408Z",
+          "durationMs": 380
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:13.163Z",
+          "durationMs": 44
+        },
+        {
+          "title": "prepares, exports, and releases the native 84-second load fixture in Firefox",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:16.717Z",
+          "durationMs": 195
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:17.471Z",
+          "durationMs": 11195
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:49.637Z",
+          "durationMs": 311
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:09.803Z",
+          "durationMs": 180
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:13.216Z",
+          "durationMs": 47
+        },
+        {
+          "title": "keeps manual fallback distinct from clipboard and restarts only after confirmation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:16.928Z",
+          "durationMs": 217
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:28.678Z",
+          "durationMs": 6012
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:49.984Z",
+          "durationMs": 741
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:10.000Z",
+          "durationMs": 205
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:13.277Z",
+          "durationMs": 53
+        },
+        {
+          "title": "stops visibly and resumes through a distinct fixed clock generation (TEST FIXTURE)",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:17.158Z",
+          "durationMs": 181
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:34.712Z",
+          "durationMs": 170
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:50.828Z",
+          "durationMs": 1250
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:10.228Z",
+          "durationMs": 840
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:13.351Z",
+          "durationMs": 372
+        },
+        {
+          "title": "serves the isolated QA endpoint in a managed browser at desktop or touch viewport",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:17.366Z",
+          "durationMs": 740
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:34.896Z",
+          "durationMs": 294
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:56:52.178Z",
+          "durationMs": 1036
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:11.078Z",
+          "durationMs": 1069
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:13.740Z",
+          "durationMs": 971
+        },
+        {
+          "title": "keeps all eight UI case routes aligned to their fixture and visible at 320px",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:18.121Z",
+          "durationMs": 1041
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "chromium-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:35.209Z",
+          "durationMs": 36
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "firefox-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:56:53.250Z",
+          "durationMs": 1384
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "webkit-desktop",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:12.157Z",
+          "durationMs": 206
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "chromium-android-emulation",
+          "status": "skipped",
+          "reporterStartTime": "2026-11-26T11:57:14.725Z",
+          "durationMs": 64
+        },
+        {
+          "title": "fits tablet portrait and landscape in the WebKit touch profile",
+          "mode": null,
+          "profile": "webkit-ios-emulation",
+          "status": "passed",
+          "reporterStartTime": "2026-11-26T11:57:19.179Z",
+          "durationMs": 1273
+        }
+      ]
+    },
+    "perf-r1-controlled.json": {
+      "source": {
+        "file": "perf-r1-controlled.json",
+        "sha256": "c5934fc7c3580907899ca3cc491cf5876f5e96603dd37942f750f92d5c032996",
+        "bytes": 28306
+      },
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "coldMenuStatus": "UNMEASURED",
+        "coldPreparationMs": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "coldPreparationStatus": "UNMEASURED",
+        "initialTransferBytes": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "initialTransferStatus": "UNMEASURED",
+        "exceedsInternalTransferBudget": null
+      },
+      "lifecycle": {
+        "result": "PARTIAL_OR_BLOCKED",
+        "completed": 13,
+        "requested": 20,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main[data-state=\"PLAYING\"]') to be visible\u001b[22m\n",
+        "save": {
+          "revision": 14,
+          "failures": [
+            14
+          ]
+        },
+        "observedFailureCount": 14,
+        "expectedFailureCount": 13,
+        "saveExactlyOnce": false,
+        "trace": [
+          {
+            "cycle": 1,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "2",
+            "playingBrowserListeners": 231,
+            "generationAfter": "3",
+            "retryReadyBrowserListeners": 308
+          },
+          {
+            "cycle": 2,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "4",
+            "playingBrowserListeners": 324,
+            "generationAfter": "5",
+            "retryReadyBrowserListeners": 399
+          },
+          {
+            "cycle": 3,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "6",
+            "playingBrowserListeners": 415,
+            "generationAfter": "7",
+            "retryReadyBrowserListeners": 487
+          },
+          {
+            "cycle": 4,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "8",
+            "playingBrowserListeners": 505,
+            "generationAfter": "9",
+            "retryReadyBrowserListeners": 575
+          },
+          {
+            "cycle": 5,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "10",
+            "playingBrowserListeners": 589,
+            "generationAfter": "11",
+            "retryReadyBrowserListeners": 659
+          },
+          {
+            "cycle": 6,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "12",
+            "playingBrowserListeners": 673,
+            "generationAfter": "13",
+            "retryReadyBrowserListeners": 737
+          },
+          {
+            "cycle": 7,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "14",
+            "playingBrowserListeners": 753,
+            "generationAfter": "15",
+            "retryReadyBrowserListeners": 815
+          },
+          {
+            "cycle": 8,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "16",
+            "playingBrowserListeners": 831,
+            "generationAfter": "17",
+            "retryReadyBrowserListeners": 893
+          },
+          {
+            "cycle": 9,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "18",
+            "playingBrowserListeners": 909,
+            "generationAfter": "19",
+            "retryReadyBrowserListeners": 961
+          },
+          {
+            "cycle": 10,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "20",
+            "playingBrowserListeners": 979,
+            "generationAfter": "21",
+            "retryReadyBrowserListeners": 1029
+          },
+          {
+            "cycle": 11,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "22",
+            "playingBrowserListeners": 1045,
+            "generationAfter": "23",
+            "retryReadyBrowserListeners": 228
+          },
+          {
+            "cycle": 12,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "24",
+            "playingBrowserListeners": 244,
+            "generationAfter": "25",
+            "retryReadyBrowserListeners": 296
+          },
+          {
+            "cycle": 13,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "26",
+            "playingBrowserListeners": 312,
+            "generationAfter": "27",
+            "retryReadyBrowserListeners": 360
+          },
+          {
+            "cycle": 14,
+            "steps": [
+              "PLAYING",
+              "PAUSED"
+            ],
+            "generationBefore": "28",
+            "playingBrowserListeners": 213
+          }
+        ],
+        "browserListeners": {
+          "method": "Chromium CDP Performance.getMetrics JSEventListeners",
+          "scope": "Aggregate browser listeners, including framework and diagnostics; compared within the same lifecycle phase",
+          "selection": 205,
+          "playing": {
+            "sampleCount": 14,
+            "invalidSampleCount": 0,
+            "median": 547,
+            "p95": 1045,
+            "p99": 1045,
+            "maximum": 1045
+          },
+          "retryReady": {
+            "sampleCount": 13,
+            "invalidSampleCount": 0,
+            "median": 575,
+            "p95": 1029,
+            "p99": 1029,
+            "maximum": 1029
+          },
+          "final": 241
+        }
+      }
+    },
+    "perf-r1-controlled-latch.json": {
+      "source": {
+        "file": "perf-r1-controlled-latch.json",
+        "sha256": "0169629e571c12c23002d6a418d5fa4bab04f7323c5a50f02d15736acac1fb3a",
+        "bytes": 41301
+      },
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "coldMenuStatus": "UNMEASURED",
+        "coldPreparationMs": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "coldPreparationStatus": "UNMEASURED",
+        "initialTransferBytes": {
+          "sampleCount": 0,
+          "invalidSampleCount": 0,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "maximum": null
+        },
+        "initialTransferStatus": "UNMEASURED",
+        "exceedsInternalTransferBudget": null
+      },
+      "lifecycle": {
+        "result": "OBSERVED",
+        "completed": 20,
+        "requested": 20,
+        "error": null,
+        "save": {
+          "revision": 20,
+          "failures": [
+            20
+          ],
+          "failedRecords": [
+            {
+              "failureCount": 20,
+              "latestEndJudgeTimeUs": 2750000,
+              "latestCounts": {
+                "perfect": 0,
+                "great": 0,
+                "good": 0,
+                "miss": 10,
+                "ghost": 0,
+                "unplayed": 72
+              }
+            }
+          ]
+        },
+        "observedFailureCount": 20,
+        "expectedFailureCount": 20,
+        "saveExactlyOnce": true,
+        "trace": [
+          {
+            "cycle": 1,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "2",
+            "playingBrowserListeners": 231,
+            "resumeClockLatch": {
+              "atMs": 10521.30000000447,
+              "judgeTimeUs": 137067,
+              "songTimeUs": 137067,
+              "state": "PLAYING",
+              "generation": 3
+            },
+            "generationAfter": "3",
+            "retryReadyBrowserListeners": 310
+          },
+          {
+            "cycle": 2,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "4",
+            "playingBrowserListeners": 326,
+            "resumeClockLatch": {
+              "atMs": 20061.20000000298,
+              "judgeTimeUs": 184100,
+              "songTimeUs": 184100,
+              "state": "PLAYING",
+              "generation": 5
+            },
+            "generationAfter": "5",
+            "retryReadyBrowserListeners": 399
+          },
+          {
+            "cycle": 3,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "6",
+            "playingBrowserListeners": 413,
+            "resumeClockLatch": {
+              "atMs": 29531.20000000298,
+              "judgeTimeUs": 149367,
+              "songTimeUs": 149367,
+              "state": "PLAYING",
+              "generation": 7
+            },
+            "generationAfter": "7",
+            "retryReadyBrowserListeners": 492
+          },
+          {
+            "cycle": 4,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "8",
+            "playingBrowserListeners": 506,
+            "resumeClockLatch": {
+              "atMs": 38901.20000000298,
+              "judgeTimeUs": 149200,
+              "songTimeUs": 149200,
+              "state": "PLAYING",
+              "generation": 9
+            },
+            "generationAfter": "9",
+            "retryReadyBrowserListeners": 584
+          },
+          {
+            "cycle": 5,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "10",
+            "playingBrowserListeners": 598,
+            "resumeClockLatch": {
+              "atMs": 48231.20000000298,
+              "judgeTimeUs": 223433,
+              "songTimeUs": 223433,
+              "state": "PLAYING",
+              "generation": 11
+            },
+            "generationAfter": "11",
+            "retryReadyBrowserListeners": 672
+          },
+          {
+            "cycle": 6,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "12",
+            "playingBrowserListeners": 686,
+            "resumeClockLatch": {
+              "atMs": 57551.20000000298,
+              "judgeTimeUs": 209367,
+              "songTimeUs": 209367,
+              "state": "PLAYING",
+              "generation": 13
+            },
+            "generationAfter": "13",
+            "retryReadyBrowserListeners": 762
+          },
+          {
+            "cycle": 7,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "14",
+            "playingBrowserListeners": 776,
+            "resumeClockLatch": {
+              "atMs": 66901.30000000447,
+              "judgeTimeUs": 210033,
+              "songTimeUs": 210033,
+              "state": "PLAYING",
+              "generation": 15
+            },
+            "generationAfter": "15",
+            "retryReadyBrowserListeners": 852
+          },
+          {
+            "cycle": 8,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "16",
+            "playingBrowserListeners": 868,
+            "resumeClockLatch": {
+              "atMs": 76251.20000000298,
+              "judgeTimeUs": 239433,
+              "songTimeUs": 239433,
+              "state": "PLAYING",
+              "generation": 17
+            },
+            "generationAfter": "17",
+            "retryReadyBrowserListeners": 942
+          },
+          {
+            "cycle": 9,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "18",
+            "playingBrowserListeners": 956,
+            "resumeClockLatch": {
+              "atMs": 85561.20000000298,
+              "judgeTimeUs": 206500,
+              "songTimeUs": 206500,
+              "state": "PLAYING",
+              "generation": 19
+            },
+            "generationAfter": "19",
+            "retryReadyBrowserListeners": 1032
+          },
+          {
+            "cycle": 10,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "20",
+            "playingBrowserListeners": 1046,
+            "resumeClockLatch": {
+              "atMs": 94881.20000000298,
+              "judgeTimeUs": 205267,
+              "songTimeUs": 205267,
+              "state": "PLAYING",
+              "generation": 21
+            },
+            "generationAfter": "21",
+            "retryReadyBrowserListeners": 262
+          },
+          {
+            "cycle": 11,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "22",
+            "playingBrowserListeners": 276,
+            "resumeClockLatch": {
+              "atMs": 104211.30000000447,
+              "judgeTimeUs": 218567,
+              "songTimeUs": 218567,
+              "state": "PLAYING",
+              "generation": 23
+            },
+            "generationAfter": "23",
+            "retryReadyBrowserListeners": 350
+          },
+          {
+            "cycle": 12,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "24",
+            "playingBrowserListeners": 366,
+            "resumeClockLatch": {
+              "atMs": 113541.20000000298,
+              "judgeTimeUs": 264433,
+              "songTimeUs": 264433,
+              "state": "PLAYING",
+              "generation": 25
+            },
+            "generationAfter": "25",
+            "retryReadyBrowserListeners": 268
+          },
+          {
+            "cycle": 13,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "26",
+            "playingBrowserListeners": 284,
+            "resumeClockLatch": {
+              "atMs": 122881.20000000298,
+              "judgeTimeUs": 284467,
+              "songTimeUs": 284467,
+              "state": "PLAYING",
+              "generation": 27
+            },
+            "generationAfter": "27",
+            "retryReadyBrowserListeners": 358
+          },
+          {
+            "cycle": 14,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "28",
+            "playingBrowserListeners": 200,
+            "resumeClockLatch": {
+              "atMs": 132211.30000000447,
+              "judgeTimeUs": 291367,
+              "songTimeUs": 291367,
+              "state": "PLAYING",
+              "generation": 29
+            },
+            "generationAfter": "29",
+            "retryReadyBrowserListeners": 274
+          },
+          {
+            "cycle": 15,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "30",
+            "playingBrowserListeners": 290,
+            "resumeClockLatch": {
+              "atMs": 141511.20000000298,
+              "judgeTimeUs": 284367,
+              "songTimeUs": 284367,
+              "state": "PLAYING",
+              "generation": 31
+            },
+            "generationAfter": "31",
+            "retryReadyBrowserListeners": 232
+          },
+          {
+            "cycle": 16,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "32",
+            "playingBrowserListeners": 248,
+            "resumeClockLatch": {
+              "atMs": 150831.30000000447,
+              "judgeTimeUs": 285200,
+              "songTimeUs": 285200,
+              "state": "PLAYING",
+              "generation": 33
+            },
+            "generationAfter": "33",
+            "retryReadyBrowserListeners": 320
+          },
+          {
+            "cycle": 17,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "34",
+            "playingBrowserListeners": 336,
+            "resumeClockLatch": {
+              "atMs": 160111.20000000298,
+              "judgeTimeUs": 286733,
+              "songTimeUs": 286733,
+              "state": "PLAYING",
+              "generation": 35
+            },
+            "generationAfter": "35",
+            "retryReadyBrowserListeners": 240
+          },
+          {
+            "cycle": 18,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "36",
+            "playingBrowserListeners": 256,
+            "resumeClockLatch": {
+              "atMs": 169431.20000000298,
+              "judgeTimeUs": 285600,
+              "songTimeUs": 285600,
+              "state": "PLAYING",
+              "generation": 37
+            },
+            "generationAfter": "37",
+            "retryReadyBrowserListeners": 328
+          },
+          {
+            "cycle": 19,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "38",
+            "playingBrowserListeners": 344,
+            "resumeClockLatch": {
+              "atMs": 178781.20000000298,
+              "judgeTimeUs": 310000,
+              "songTimeUs": 310000,
+              "state": "PLAYING",
+              "generation": 39
+            },
+            "generationAfter": "39",
+            "retryReadyBrowserListeners": 246
+          },
+          {
+            "cycle": 20,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "40",
+            "playingBrowserListeners": 262,
+            "resumeClockLatch": {
+              "atMs": 188081.20000000298,
+              "judgeTimeUs": 282433,
+              "songTimeUs": 282433,
+              "state": "PLAYING",
+              "generation": 41
+            },
+            "generationAfter": "41",
+            "retryReadyBrowserListeners": 336
+          }
+        ],
+        "browserListeners": {
+          "method": "Chromium CDP Performance.getMetrics JSEventListeners",
+          "scope": "Aggregate browser listeners, including framework and diagnostics; compared within the same lifecycle phase",
+          "selection": 205,
+          "playing": {
+            "sampleCount": 20,
+            "invalidSampleCount": 0,
+            "median": 340,
+            "p95": 956,
+            "p99": 1046,
+            "maximum": 1046
+          },
+          "retryReady": {
+            "sampleCount": 20,
+            "invalidSampleCount": 0,
+            "median": 343,
+            "p95": 942,
+            "p99": 1032,
+            "maximum": 1032
+          },
+          "final": 197
+        }
+      }
+    },
+    "perf-r1-native.json": {
+      "source": {
+        "file": "perf-r1-native.json",
+        "sha256": "dac937a9c69738f94e55e44fc9f264a9ae5dc561f80c78c6ef069b24ff3cfbdf",
+        "bytes": 911057
+      },
+      "aggregate": {
+        "coldMenuMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 2318.39999999851,
+          "p95": 2388,
+          "p99": 2388,
+          "maximum": 2388
+        },
+        "coldMenuStatus": "WITHIN_REFERENCE",
+        "coldPreparationMs": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 3554.5999999940395,
+          "p95": 3784.60000000149,
+          "p99": 3784.60000000149,
+          "maximum": 3784.60000000149
+        },
+        "coldPreparationStatus": "WITHIN_REFERENCE",
+        "initialTransferBytes": {
+          "sampleCount": 3,
+          "invalidSampleCount": 0,
+          "median": 367004,
+          "p95": 367004,
+          "p99": 367004,
+          "maximum": 367004
+        },
+        "initialTransferStatus": "WITHIN_REFERENCE",
+        "exceedsInternalTransferBudget": false
+      },
+      "lifecycle": {
+        "result": "PARTIAL_OR_BLOCKED",
+        "completed": 15,
+        "requested": 20,
+        "error": "No-input playback did not reach FAILED; observed ERROR ERR-006",
+        "save": {
+          "revision": 15,
+          "failures": [
+            15
+          ]
+        },
+        "observedFailureCount": 15,
+        "expectedFailureCount": 15,
+        "saveExactlyOnce": true,
+        "trace": [
+          {
+            "cycle": 1,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "2",
+            "playingBrowserListeners": 231,
+            "generationAfter": "3",
+            "retryReadyBrowserListeners": 308
+          },
+          {
+            "cycle": 2,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "4",
+            "playingBrowserListeners": 322,
+            "generationAfter": "5",
+            "retryReadyBrowserListeners": 399
+          },
+          {
+            "cycle": 3,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "6",
+            "playingBrowserListeners": 413,
+            "generationAfter": "7",
+            "retryReadyBrowserListeners": 492
+          },
+          {
+            "cycle": 4,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "8",
+            "playingBrowserListeners": 506,
+            "generationAfter": "9",
+            "retryReadyBrowserListeners": 585
+          },
+          {
+            "cycle": 5,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "10",
+            "playingBrowserListeners": 599,
+            "generationAfter": "11",
+            "retryReadyBrowserListeners": 676
+          },
+          {
+            "cycle": 6,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "12",
+            "playingBrowserListeners": 690,
+            "generationAfter": "13",
+            "retryReadyBrowserListeners": 769
+          },
+          {
+            "cycle": 7,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "14",
+            "playingBrowserListeners": 783,
+            "generationAfter": "15",
+            "retryReadyBrowserListeners": 860
+          },
+          {
+            "cycle": 8,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "16",
+            "playingBrowserListeners": 874,
+            "generationAfter": "17",
+            "retryReadyBrowserListeners": 953
+          },
+          {
+            "cycle": 9,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "18",
+            "playingBrowserListeners": 967,
+            "generationAfter": "19",
+            "retryReadyBrowserListeners": 1046
+          },
+          {
+            "cycle": 10,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "20",
+            "playingBrowserListeners": 1060,
+            "generationAfter": "21",
+            "retryReadyBrowserListeners": 1139
+          },
+          {
+            "cycle": 11,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "22",
+            "playingBrowserListeners": 208,
+            "generationAfter": "23",
+            "retryReadyBrowserListeners": 287
+          },
+          {
+            "cycle": 12,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "24",
+            "playingBrowserListeners": 301,
+            "generationAfter": "25",
+            "retryReadyBrowserListeners": 378
+          },
+          {
+            "cycle": 13,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "26",
+            "playingBrowserListeners": 211,
+            "generationAfter": "27",
+            "retryReadyBrowserListeners": 290
+          },
+          {
+            "cycle": 14,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "28",
+            "playingBrowserListeners": 304,
+            "generationAfter": "29",
+            "retryReadyBrowserListeners": 381
+          },
+          {
+            "cycle": 15,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "FAILED",
+              "RETRY_READY"
+            ],
+            "generationBefore": "30",
+            "playingBrowserListeners": 206,
+            "generationAfter": "31",
+            "retryReadyBrowserListeners": 283
+          },
+          {
+            "cycle": 16,
+            "steps": [
+              "PLAYING",
+              "PAUSED",
+              "PLAYING_NEW_GENERATION",
+              "ERROR"
+            ],
+            "generationBefore": "32",
+            "playingBrowserListeners": 297,
+            "generationAfter": "33",
+            "appError": "ERR-006"
+          }
+        ],
+        "browserListeners": {
+          "method": "Chromium CDP Performance.getMetrics JSEventListeners",
+          "scope": "Aggregate browser listeners, including framework and diagnostics; compared within the same lifecycle phase",
+          "selection": 205,
+          "playing": {
+            "sampleCount": 16,
+            "invalidSampleCount": 0,
+            "median": 367.5,
+            "p95": 1060,
+            "p99": 1060,
+            "maximum": 1060
+          },
+          "retryReady": {
+            "sampleCount": 15,
+            "invalidSampleCount": 0,
+            "median": 492,
+            "p95": 1139,
+            "p99": 1139,
+            "maximum": 1139
+          },
+          "final": 188
+        }
+      }
+    }
+  }
+}
