@@ -53,7 +53,9 @@ export async function startBrowser() {
   };
 }
 
-async function setup(engine, { level = 1, raw = defaultProgress(level), mobile = false, prepare = '', virtual = true } = {}) {
+export async function setup(engine, {
+  level = 1, raw = defaultProgress(level), mobile = false, prepare = '', virtual = true, dismissTutorial = true
+} = {}) {
   const context = await engine.browser.newContext({
     viewport: mobile ? { width: 320, height: 720 } : { width: 900, height: 820 },
     hasTouch: mobile, isMobile: mobile, acceptDownloads: true
@@ -96,7 +98,10 @@ async function setup(engine, { level = 1, raw = defaultProgress(level), mobile =
     return {
       page, context, errors, outbound, level,
       click: id => page.locator('#' + id).click(),
-      choose: () => page.locator('[data-stage="' + level + '"]').click(),
+      async choose() {
+        await page.locator('[data-stage="' + level + '"]').click();
+        if (dismissTutorial) await dismissFirstTutorial(page);
+      },
       tick: () => page.clock.runFor(500),
       stored: () => page.evaluate(key => localStorage.getItem(key), SAVE_KEY),
       async step(action, code = codes[action]) {
@@ -107,6 +112,14 @@ async function setup(engine, { level = 1, raw = defaultProgress(level), mobile =
   } catch (error) {
     await context.close();
     throw error;
+  }
+}
+
+export async function dismissFirstTutorial(page) {
+  const tutorial = page.locator('#tutorial');
+  if (await tutorial.isVisible()) {
+    await tutorial.getByRole('button', { name: 'スキップ' }).click();
+    await tutorial.waitFor({ state: 'hidden' });
   }
 }
 

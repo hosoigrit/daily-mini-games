@@ -30,6 +30,7 @@
       <div class="stage-header">
         <h2 id="level-title" tabindex="-1"></h2>
         <p id="phase" role="status"></p>
+        <button id="show-tutorial" type="button" aria-haspopup="dialog">遊び方</button>
       </div>
       <p id="guide"></p>
       <div id="board" role="img" aria-label="ステージマップ"></div>
@@ -47,8 +48,8 @@
       <div id="controls">
         <div class="actions">
           <button id="primary" class="primary" type="button"></button>
-          <button id="retry" type="button" hidden>再挑戦</button>
-          <button id="rerecord" type="button" hidden>再記録</button>
+          <button id="retry" type="button" aria-describedby="retry-help" hidden>再挑戦</button>
+          <button id="rerecord" type="button" aria-describedby="rerecord-help" hidden>再記録</button>
           <button id="pause" type="button" hidden>一時停止</button>
           <button id="rearm" type="button" hidden>入力状態をリセット</button>
         </div>
@@ -59,6 +60,10 @@
           <button class="right" type="button" data-direction="R" aria-label="右">→</button>
         </div>
       </div>
+      <div class="restart-help">
+        <p id="retry-help" hidden>再挑戦：今の記録を使って、再生を最初からやり直します。</p>
+        <p id="rerecord-help" hidden>再記録：今の記録を破棄して、動きを記録し直します。</p>
+      </div>
       <section id="result" aria-labelledby="result-heading" hidden>
         <h3 id="result-heading">クリア</h3>
         <p id="stars"></p>
@@ -67,6 +72,18 @@
       </section>
     </section>
   </main>
+
+  <dialog id="tutorial" aria-labelledby="tutorial-title" aria-describedby="tutorial-description tutorial-detail">
+    <p id="tutorial-step" class="tutorial-step"></p>
+    <h2 id="tutorial-title" tabindex="-1"></h2>
+    <p id="tutorial-description"></p>
+    <p id="tutorial-detail" class="tutorial-detail"></p>
+    <div class="actions tutorial-actions">
+      <button id="tutorial-next" class="primary" type="button">次へ</button>
+      <button id="tutorial-back" type="button" hidden>戻る</button>
+      <button id="tutorial-skip" type="button">スキップ</button>
+    </div>
+  </dialog>
 
   <dialog id="confirmation" aria-labelledby="confirm-title">
     <form method="dialog">

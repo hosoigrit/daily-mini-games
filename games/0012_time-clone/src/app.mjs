@@ -14,13 +14,29 @@ const phaseNames = {
   REPLAYING: '分身と再生中', SOLO_CONTINUE: '一人で続行', CLEARED: 'クリア'
 };
 const guides = {
-  READY: '方向ボタン、矢印キー、WASDで移動。最大16枠の足取りを記録できます。',
-  RECORDING: '記録を途中で終えると、残りの枠はその場で待機します。',
-  RECORDED: 'スタートへ戻りました。再生すると分身が記録した位置をたどります。',
-  REPLAYING: '分身と協力して扉を開け、プレイヤーをゴールへ。',
-  SOLO_CONTINUE: '分身は16枠で消滅しました。プレイヤーはゴールまで進めます。',
-  CLEARED: '星の数は記録と再生で成功した移動の合計で決まります。'
+  READY: 'まず「記録を開始」を押して、方向ボタン、矢印キー、WASDで動きを記録しましょう。',
+  RECORDING: '最大16枠の動きを記録できます。「記録を終了」で途中でも終えられます。残りの枠はその場で待機します。',
+  RECORDED: 'スタートへ戻りました。「分身を再生」を押すと、記録した位置をたどる分身と協力できます。',
+  REPLAYING: '分身と協力して扉を開け、緑色のプレイヤー自身をゴール◎へ進めましょう。',
+  SOLO_CONTINUE: '分身は16枠で消滅しました。プレイヤーは引き続き操作でき、ゴール◎へ進めます。',
+  CLEARED: 'クリア！ 星の数は記録と再生で成功した移動の合計で決まります。'
 };
+const tutorialPages = [
+  {
+    title: 'ゴールを目指そう！',
+    description: '緑色のプレイヤーを◎まで進めればクリア！ スイッチを踏むと扉が開くよ。'
+  },
+  {
+    title: '自分の動きを記録！',
+    description: 'まず最大16枠の動きを記録しよう。記録を終えると、同じ動きを繰り返す分身が作れるよ。',
+    detail: '記録中は◎に着いても記録が続きます。'
+  },
+  {
+    title: '分身と協力しよう！',
+    description: '分身にスイッチを任せて、自分はゴールへ！ 行き詰まったら再挑戦や再記録でやり直せるよ。',
+    detail: '再生中や一人で続行中に、プレイヤー自身が◎に着くとクリアです。分身が消えた後も続けられ、時間切れでゲームオーバーにはなりません。'
+  }
+];
 
 const storage = new ProgressStore({
   getItem: key => localStorage.getItem(key),
@@ -30,6 +46,56 @@ let session = null;
 let tiles = [];
 let notice = '';
 let prompt = null;
+const tutorial = el('tutorial');
+const tutorialReleases = new Set();
+let tutorialPage = 0;
+let tutorialReturnFocus = null;
+let firstStageTutorialShown = false;
+
+function renderTutorial() {
+  const page = tutorialPages[tutorialPage];
+  el('tutorial-step').textContent = (tutorialPage + 1) + ' / ' + tutorialPages.length;
+  el('tutorial-title').textContent = page.title;
+  el('tutorial-description').textContent = page.description;
+  const detail = page.detail ?? (session.stage.id === '1' ? 'ステージ1では、スイッチ a を踏んでいる間、扉 D が開きます。' : '');
+  el('tutorial-detail').textContent = detail;
+  el('tutorial-detail').hidden = !detail;
+  el('tutorial-next').textContent = tutorialPage === tutorialPages.length - 1 ? 'ステージへ進む' : '次へ';
+  el('tutorial-back').hidden = tutorialPage === 0;
+}
+
+function showTutorial(trigger) {
+  if (!session || tutorialReturnFocus || prompt) return false;
+  tutorialReturnFocus = trigger;
+  if (session.canMove) session.pause('USER');
+  tutorialPage = 0;
+  renderTutorial();
+  tutorial.showModal();
+  el('tutorial-title').focus();
+  return true;
+}
+
+function releaseDirection(source, options) {
+  if (tutorialReturnFocus) {
+    // Pause already quarantined held sources. Apply releases only after the modal closes.
+    tutorialReleases.add(source);
+    return;
+  }
+  session?.input.release(source, options);
+}
+
+function finishTutorial() {
+  const trigger = tutorialReturnFocus;
+  tutorialReturnFocus = null;
+  for (const source of tutorialReleases) session?.input.release(source);
+  tutorialReleases.clear();
+  trigger?.focus();
+}
+
+function closeTutorial() {
+  tutorial.close();
+  finishTutorial();
+}
 
 function showSave() {
   const volatile = storage.mode === 'VOLATILE_ONLY';
@@ -98,6 +164,9 @@ function choose(id) {
   renderGame();
   if (document.hidden) session.visibility(true);
   el('level-title').focus();
+  if (id === '1' && !firstStageTutorialShown && !storage.stage('1')?.cleared) {
+    firstStageTutorialShown = showTutorial(el('level-title'));
+  }
 }
 
 function marker(kind, overlap = false) {
@@ -142,7 +211,13 @@ function renderGame() {
   el('game').dataset.tick = phase === 'RECORDING' || phase === 'RECORDED' ? recordTick : replayTick;
   el('phase').textContent = phaseNames[phase] + (resumeRequired ? ' / 停止中' : '');
   const padded = ghostRecord ? RECORD_LIMIT - ghostRecord.recordCompletedTicks : 0;
-  el('guide').textContent = guides[phase] + (phase === 'RECORDED' && padded ? ' 残り' + padded + '枠は待機です。' : '');
+  let guidance = guides[phase];
+  if (phase === 'RECORDED' && padded) guidance += ' 残り' + padded + '枠は待機です。';
+  const nextUnlocked = storage.isUnlocked(Number(stage.id) + 1);
+  if (phase === 'CLEARED') {
+    guidance += nextUnlocked ? '「次のステージ」へ進めます。' : 'ステージ一覧からもう一度遊べます。';
+  }
+  el('guide').textContent = guidance;
   el('turn').textContent = phase === 'RECORDING' || phase === 'RECORDED'
     ? '記録 ' + recordTick + ' / 16 枠' : activePhase(phase) || clearResult ? '再生 ' + replayTick + ' 枠' : '';
   const completed = phase === 'RECORDING' || phase === 'RECORDED' ? recordTick : replayTick;
@@ -163,6 +238,8 @@ function renderGame() {
   primary.dataset.command = resumeRequired ? 'RESUME' : button?.[1] ?? '';
   el('retry').hidden = !['REPLAYING', 'SOLO_CONTINUE'].includes(phase);
   el('rerecord').hidden = !['RECORDED', 'REPLAYING', 'SOLO_CONTINUE'].includes(phase);
+  el('retry-help').hidden = el('retry').hidden;
+  el('rerecord-help').hidden = el('rerecord').hidden;
   el('retry').disabled = session.isPaused;
   el('rerecord').disabled = session.isPaused;
   el('pause').hidden = !activePhase(phase) || resumeRequired;
@@ -172,11 +249,12 @@ function renderGame() {
   if (clearResult) {
     el('stars').textContent = '★'.repeat(clearResult.stars) + '☆'.repeat(3 - clearResult.stars);
     el('moves').textContent = '合計 ' + clearResult.totalMoves + ' 手（記録 ' + clearResult.recordMoves + '・再生 ' + clearResult.replayMoves + '）';
-    el('next').hidden = !storage.isUnlocked(Number(stage.id) + 1);
+    el('next').hidden = !nextUnlocked;
   }
 }
 
 function showPrompt(title, description, confirmLabel, onDecision) {
+  if (tutorialReturnFocus || prompt) return;
   prompt = onDecision;
   const dialog = el('confirmation');
   dialog.returnValue = 'cancel';
@@ -185,6 +263,45 @@ function showPrompt(title, description, confirmLabel, onDecision) {
   el('confirm').textContent = confirmLabel;
   dialog.showModal();
 }
+
+el('show-tutorial').addEventListener('click', event => showTutorial(event.currentTarget));
+el('tutorial-next').addEventListener('click', () => {
+  if (tutorialPage === tutorialPages.length - 1) {
+    closeTutorial();
+    return;
+  }
+  tutorialPage++;
+  renderTutorial();
+  el('tutorial-title').focus();
+});
+el('tutorial-back').addEventListener('click', () => {
+  if (!tutorialPage) return;
+  tutorialPage--;
+  renderTutorial();
+  el('tutorial-title').focus();
+});
+el('tutorial-skip').addEventListener('click', closeTutorial);
+tutorial.addEventListener('cancel', event => {
+  event.preventDefault();
+  closeTutorial();
+});
+tutorial.addEventListener('close', () => {
+  if (!tutorial.open && tutorialReturnFocus) finishTutorial();
+});
+tutorial.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const buttons = [...tutorial.querySelectorAll('button:not([hidden])')];
+  const first = buttons[0];
+  const last = buttons.at(-1);
+  const active = document.activeElement;
+  if (event.shiftKey ? active === first || !buttons.includes(active) : active === last) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus();
+  }
+});
+document.querySelector('main').addEventListener('click', event => {
+  if (tutorialReturnFocus) event.stopPropagation();
+}, { capture: true });
 
 el('confirmation').addEventListener('close', event => {
   const action = prompt;
@@ -227,6 +344,7 @@ el('export-save').addEventListener('click', () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 el('reset-save').addEventListener('click', () => {
+  if (tutorialReturnFocus || prompt) return;
   if (!storage.beginReset()) return;
   if (session?.canMove) session.pause('USER');
   showPrompt('保存データを初期化', 'このゲームの保存データと一時進捗は失われ、元には戻せません。先に同じゲームを開いている別タブ・別ウィンドウを閉じてください。必要な元データは保存してから進んでください。', '内容を確認しました', accepted => {
@@ -250,23 +368,23 @@ el('reset-save').addEventListener('click', () => {
 
 window.addEventListener('keydown', event => {
   const direction = keyboardDirections[event.code];
-  if (!session || !direction || event.altKey || event.ctrlKey || event.metaKey || el('confirmation').open) return;
+  if (!session || !direction || event.altKey || event.ctrlKey || event.metaKey || tutorialReturnFocus || el('confirmation').open) return;
   if (session.canMove && event.code.startsWith('Arrow')) event.preventDefault();
   session.press('key:' + event.code, direction, { repeat: event.repeat });
 });
 window.addEventListener('keyup', event => {
-  if (keyboardDirections[event.code]) session?.input.release('key:' + event.code);
+  if (keyboardDirections[event.code]) releaseDirection('key:' + event.code);
 });
 for (const button of el('directions').querySelectorAll('button')) {
   button.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || !session) return;
+    if (event.button !== 0 || !session || tutorialReturnFocus) return;
     event.preventDefault();
     if (event.isTrusted) button.setPointerCapture(event.pointerId);
     session.press('pointer:' + event.pointerId, button.dataset.direction);
   });
 }
-window.addEventListener('pointerup', event => session?.input.release('pointer:' + event.pointerId));
-window.addEventListener('pointercancel', event => session?.input.release('pointer:' + event.pointerId, { cancelled: true }));
+window.addEventListener('pointerup', event => releaseDirection('pointer:' + event.pointerId));
+window.addEventListener('pointercancel', event => releaseDirection('pointer:' + event.pointerId, { cancelled: true }));
 window.addEventListener('blur', () => {
   if (session && activePhase(session.state.phase)) session.pause(document.hidden ? 'HIDDEN' : null);
 });
