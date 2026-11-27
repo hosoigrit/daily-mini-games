@@ -105,7 +105,7 @@ it('draws four lanes, the judgement line, hold rail/release, chord connector and
   browser.frame(16);
   expect(browser.context.fillRect.mock.calls).toEqual(expect.arrayContaining([
     [0, 0, 100, 300], [100, 0, 100, 300], [200, 0, 100, 300], [300, 0, 100, 300],
-    [0, 239, 400, 3], [142, 160, 16, 96], [50, 174, 200, 4],
+    [0, 238.5, 400, 3], [142, 160, 16, 96], [50, 174, 200, 4],
   ]));
   expect(browser.context.fillText.mock.calls.map(call => call.slice(0, 3))).toEqual([
     ['TAP', 50, 240], ['HOLD', 150, 256], ['END', 150, 160], ['CHORD', 50, 176], ['CHORD', 250, 176], ['RAPID', 355, 112],

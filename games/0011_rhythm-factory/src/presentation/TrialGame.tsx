@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore, type ComponentPropsWithRef, type Ref } from 'react';
 import type { ErrorCode, FinalResult, GameSettings, GameState, Lane, SaveStatus } from '../contracts/interface_contracts';
 import type { TrialCommand, TrialRuntime, TrialScreen, TrialSnapshot } from '../contracts/trial-runtime';
+import { trialJudgeLineRatio } from '../contracts/trial-playfield';
 import './trial-game.css';
 
 const lanes = [1, 2, 3, 4] as const;
@@ -72,7 +73,7 @@ function Scoreboard({ ui }: Pick<TrialSnapshot, 'ui'>) {
   );
 }
 
-function LaneButton({ lane, keyCode, rehold, reheld, ref }: {
+function LaneTarget({ lane, keyCode, rehold, reheld, ref }: {
   readonly lane: Lane;
   readonly keyCode: string;
   readonly rehold: boolean;
@@ -83,7 +84,7 @@ function LaneButton({ lane, keyCode, rehold, reheld, ref }: {
   return (
     <button type="button" ref={ref} className="trial-lane" aria-label={`レーン${lane} ${key}`}
       data-lane={lane} data-rehold={rehold} data-reheld={reheld}>
-      <span aria-hidden="true">{lane} <kbd>{key}</kbd></span>
+      <kbd aria-hidden="true">{key}</kbd>
     </button>
   );
 }
@@ -140,16 +141,20 @@ function PlayView({ runtime, snapshot, perform }: {
           <span key={item.id}>{index > 0 ? ' / ' : ''}{item.label}{showTiming && item.timing ? ` · ${item.timing}` : ''}</span>
         ))}
       </p>
+      <p id="trial-line-instruction" className="trial-line-instruction">ノーツが白い線に重なった瞬間に、そのレーンの線を押します。</p>
       <div className="trial-field" data-testid="trial-playfield">
         <div className="trial-board">
           <canvas className="trial-canvas" ref={canvas} aria-label="4レーンの譜面と判定ライン" />
-          {paused && <p className="trial-board-banner">{reholding ? '指定レーンを押したまま再開します' : phase}</p>}
-        </div>
-        <div className="trial-lanes" aria-label="4レーンの入力">
-          <LaneButton ref={left} {...controls(1)} />
-          <LaneButton ref={middleLeft} {...controls(2)} />
-          <LaneButton ref={middleRight} {...controls(3)} />
-          <LaneButton ref={right} {...controls(4)} />
+          {paused && <p className="trial-board-banner" data-reholding={reholding}>
+            {reholding ? '光っている線を押したままにしてください' : phase}
+          </p>}
+          <div className="trial-lanes" role="group" aria-label="判定ラインの4レーン"
+            aria-describedby="trial-line-instruction" style={{ top: `${trialJudgeLineRatio * 100}%` }}>
+            <LaneTarget ref={left} {...controls(1)} />
+            <LaneTarget ref={middleLeft} {...controls(2)} />
+            <LaneTarget ref={middleRight} {...controls(3)} />
+            <LaneTarget ref={right} {...controls(4)} />
+          </div>
         </div>
       </div>
       {reholding && <p role="status">再保持 {reheldLanes.length} / {ui.reholdLanes.length} · レーン {ui.reholdLanes.join('・')}</p>}

@@ -1,8 +1,8 @@
 import type { Lane, RenderNote, RenderSnapshot, Us } from '../contracts/interface_contracts';
 import type { RenderPort } from '../contracts/ports';
+import { trialJudgeLineRatio } from '../contracts/trial-playfield';
 
 const lanes: readonly Lane[] = [1, 2, 3, 4];
-const judgeLineRatio = 0.8;
 const pixelsPerMicrosecond = 0.00032;
 const noteColors: Record<RenderNote['type'], string> = {
   TAP: '#9cf2d7',
@@ -77,7 +77,7 @@ function paintMarker(context: CanvasRenderingContext2D, { note, x, y }: Marker, 
 function paintField(context: CanvasRenderingContext2D, viewport: Viewport, snapshot: RenderSnapshot): void {
   const { width, height } = viewport;
   const laneWidth = width / lanes.length;
-  const lineY = height * judgeLineRatio;
+  const lineY = height * trialJudgeLineRatio;
   const markerWidth = Math.min(88, laneWidth * 0.76);
 
   context.fillStyle = '#0d171b';
@@ -124,7 +124,7 @@ function paintField(context: CanvasRenderingContext2D, viewport: Viewport, snaps
   }
 
   context.fillStyle = '#f7f9ed';
-  context.fillRect(0, lineY - 1, width, 3);
+  context.fillRect(0, lineY - 1.5, width, 3);
   if (markerWidth <= 24) return;
   context.textAlign = 'center';
   context.textBaseline = 'middle';
