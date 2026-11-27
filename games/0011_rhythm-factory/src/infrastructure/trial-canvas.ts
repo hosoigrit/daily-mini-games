@@ -20,25 +20,43 @@ interface Viewport {
   readonly height: number;
 }
 
-interface Marker {
+interface NotePosition {
+  readonly y: number;
+  readonly missSeenUs: Us | null;
+}
+
+interface Marker extends NotePosition {
   readonly note: RenderNote;
   readonly x: number;
-  readonly y: number;
 }
 
-function noteAlpha(note: RenderNote): number {
-  if (note.state === 'PENDING') return 1;
-  if (note.judgement === 'MISS') return 0.38;
-  return note.state === 'RESOLVED' ? 0.85 : 0.58;
+const missOpacity = 0.48;
+const markerHalfHeight = 12;
+
+function notePosition(
+  note: RenderNote, { judgeTimeUs, noteSpeed }: RenderSnapshot, lineY: number, misses: Map<string, Us>,
+): NotePosition | null {
+  if (note.state === 'PENDING' || note.judgement === null) {
+    return { y: Math.min(lineY, trialNoteY(note.targetUs, judgeTimeUs, lineY, noteSpeed)), missSeenUs: null };
+  }
+  if (note.judgement !== 'MISS') return null;
+
+  // The snapshot has no resolution timestamp. Anchor at the first displayed MISS
+  // using the shared judge clock, so an overdue note starts dropping from the line.
+  const missSeenUs = misses.get(note.eventId) ?? judgeTimeUs;
+  misses.set(note.eventId, missSeenUs);
+  const initialY = Math.min(lineY, trialNoteY(note.targetUs, missSeenUs, lineY, noteSpeed));
+  const elapsedUs = Math.max(0, judgeTimeUs - missSeenUs);
+  return { y: initialY + pixelsPerMicrosecond * noteSpeed * elapsedUs, missSeenUs };
 }
 
-function paintMarker(context: CanvasRenderingContext2D, { note, x, y }: Marker, width: number): void {
+function paintMarker(context: CanvasRenderingContext2D, { note, x, y }: Marker, width: number, opacity: number): void {
   const halfWidth = width / 2;
   const isHoldEnd = note.type === 'HOLD' && note.targetUs === note.endUs;
   const height = isHoldEnd ? 16 : 24;
   const left = x - halfWidth;
   const top = y - height / 2;
-  context.globalAlpha = noteAlpha(note);
+  context.globalAlpha = opacity;
   context.fillStyle = noteColors[note.type];
   context.beginPath();
   switch (note.type) {
@@ -74,7 +92,31 @@ function paintMarker(context: CanvasRenderingContext2D, { note, x, y }: Marker, 
   context.globalAlpha = 1;
 }
 
-function paintField(context: CanvasRenderingContext2D, viewport: Viewport, snapshot: RenderSnapshot): void {
+function paintHoldRail(
+  context: CanvasRenderingContext2D, x: number, startY: number, endY: number,
+  lineY: number, height: number, missed: boolean,
+): void {
+  const top = Math.max(0, endY);
+  const bottom = Math.min(height, startY);
+  if (top >= bottom) return;
+
+  if (missed) {
+    const fade = context.createLinearGradient(0, lineY, 0, height);
+    fade.addColorStop(0, 'rgba(164, 201, 255, 0.48)');
+    fade.addColorStop(1, 'rgba(164, 201, 255, 0)');
+    context.fillStyle = fade;
+    context.fillRect(x - 8, top, 16, bottom - top);
+    return;
+  }
+  context.fillStyle = '#5c82aa';
+  context.fillRect(x - 8, top, 16, bottom - top);
+  context.fillStyle = '#c5daf2';
+  context.fillRect(x - 1, top, 2, bottom - top);
+}
+
+function paintField(
+  context: CanvasRenderingContext2D, viewport: Viewport, snapshot: RenderSnapshot, misses: Map<string, Us>,
+): void {
   const { width, height } = viewport;
   const laneWidth = width / lanes.length;
   const lineY = height * trialJudgeLineRatio;
@@ -96,23 +138,30 @@ function paintField(context: CanvasRenderingContext2D, viewport: Viewport, snaps
 
   const markers: Marker[] = [];
   const chordStarts = new Map<string, number>();
-  const yFor = (timeUs: Us) => trialNoteY(timeUs, snapshot.judgeTimeUs, lineY, snapshot.noteSpeed);
-  for (const note of snapshot.notes) {
+  const positions = snapshot.notes.map(note => ({ note, position: notePosition(note, snapshot, lineY, misses) }));
+  const holdEnds = new Map<string, NotePosition | null>();
+  for (const { note, position } of positions) {
+    if (note.type === 'HOLD' && note.targetUs === note.endUs) holdEnds.set(note.noteId, position);
+  }
+  for (const { note, position } of positions) {
     const x = laneWidth * (note.lane - 0.5);
-    const y = yFor(note.targetUs);
     if (note.type === 'HOLD' && note.endUs !== null && note.targetUs < note.endUs) {
-      const top = Math.max(0, yFor(note.endUs));
-      const bottom = Math.min(height, y);
-      if (top < bottom) {
-        context.fillStyle = note.judgement === 'MISS' ? '#435767' : '#5c82aa';
-        context.fillRect(x - 8, top, 16, bottom - top);
-        context.fillStyle = '#c5daf2';
-        context.fillRect(x - 1, top, 2, bottom - top);
+      const end = holdEnds.get(note.noteId);
+      if (end !== null) {
+        const endY = end?.y ?? Math.min(lineY, trialNoteY(note.endUs, snapshot.judgeTimeUs, lineY, snapshot.noteSpeed));
+        const missedAt = end?.missSeenUs ?? null;
+        // A successful head stays hidden. If the tail fails, its residual rail
+        // leaves the line with the same clock and velocity as the failed tail.
+        const startY = position?.y ?? (missedAt === null ? lineY
+          : Math.max(lineY, trialNoteY(missedAt, snapshot.judgeTimeUs, lineY, snapshot.noteSpeed)));
+        paintHoldRail(context, x, startY, endY, lineY, height,
+          position?.missSeenUs != null || missedAt !== null);
       }
     }
-    if (y < -12 || y > height + 12) continue;
-    markers.push({ note, x, y });
-    if (note.type !== 'CHORD') continue;
+    if (!position || position.y < -markerHalfHeight || position.y >= height + markerHalfHeight) continue;
+    const { y } = position;
+    markers.push({ note, x, ...position });
+    if (note.type !== 'CHORD' || position.missSeenUs !== null) continue;
     const chordKey = `${note.noteId}:${note.targetUs}`;
     const otherX = chordStarts.get(chordKey);
     if (otherX === undefined) {
@@ -129,7 +178,11 @@ function paintField(context: CanvasRenderingContext2D, viewport: Viewport, snaps
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.font = '700 10px system-ui, sans-serif';
-  for (const marker of markers) paintMarker(context, marker, markerWidth);
+  for (const marker of markers) {
+    const opacity = marker.missSeenUs === null ? 1
+      : missOpacity * Math.min(1, (height + markerHalfHeight - marker.y) / (height + markerHalfHeight - lineY));
+    paintMarker(context, marker, markerWidth, opacity);
+  }
 }
 
 export function mountTrialCanvas(
@@ -166,12 +219,19 @@ export function mountTrialCanvas(
     viewport = { width, height };
   };
 
+  const misses = new Map<string, Us>();
+  let renderedSession: RenderSnapshot['sessionId'];
   const draw = (atMs: number) => {
     if (!active) return;
     const currentDpr = Number.isFinite(view.devicePixelRatio) && view.devicePixelRatio > 0 ? view.devicePixelRatio : 1;
     if (needsMeasure || dpr !== currentDpr) measure(currentDpr);
     if (viewport) {
-      paintField(context, viewport, render.getRenderSnapshot());
+      const snapshot = render.getRenderSnapshot();
+      if (renderedSession !== snapshot.sessionId) {
+        renderedSession = snapshot.sessionId;
+        misses.clear();
+      }
+      paintField(context, viewport, snapshot, misses);
       onFrame?.(atMs);
     }
     if (active) frameId = view.requestAnimationFrame(draw);
