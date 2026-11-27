@@ -106,8 +106,95 @@ async function assertAlignment(page: Page, zoomed = false) {
     expect(Math.abs(hit.y - line)).toBeLessThan(0.51);
     expect(Math.abs(hit.left - (layout.field.left + layout.field.width * index / 4))).toBeLessThan(0.51);
     expect(Math.abs(hit.right - (layout.field.left + layout.field.width * (index + 1) / 4))).toBeLessThan(0.51);
-    if (index > 0) expect(hit.left).toBeGreaterThanOrEqual(layout.hits[index - 1]!.right);
+    if (index > 0) {
+      // DOMRect edge sums in Firefox differ from the next left edge by up to 2^-15 CSS px
+      // in the tested layouts (2^-16 at 125% zoom). Input probes below use real hit testing.
+      const edgeDifference = hit.left - layout.hits[index - 1]!.right;
+      expect(Math.abs(edgeDifference), `shared edge ${index}/${index + 1}: ${edgeDifference} CSS px`).toBeLessThanOrEqual(2 ** -15);
+    }
   }
+  return layout;
+}
+
+type PointerSample = {
+  readonly type: string;
+  readonly lane: number | null;
+  readonly x: number;
+  readonly y: number;
+  readonly id: number;
+  readonly trusted: boolean;
+};
+
+async function watchBoundaryPointers(page: Page) {
+  await page.evaluate(() => {
+    const samples: PointerSample[] = [];
+    Reflect.set(window, 'crBoundaryPointers', samples);
+    for (const type of ['pointerdown', 'pointerup']) {
+      document.addEventListener(type, event => {
+        const pointer = event as PointerEvent;
+        const lane = (event.target as Element).closest<HTMLButtonElement>('button[data-lane]');
+        samples.push({ type, lane: lane ? Number(lane.dataset.lane) : null,
+          x: pointer.clientX, y: pointer.clientY, id: pointer.pointerId, trusted: pointer.isTrusted });
+      }, { capture: true });
+    }
+  });
+}
+
+async function pressedLanes(page: Page): Promise<number[]> {
+  return page.locator('.trial-board button[data-pressed="true"]').evaluateAll(buttons =>
+    buttons.map(button => Number((button as HTMLButtonElement).dataset.lane)));
+}
+
+async function assertBoundaryInput(page: Page, { hits }: Awaited<ReturnType<typeof assertAlignment>>) {
+  const evidence = [];
+  for (const [index, left] of hits.slice(0, -1).entries()) {
+    const right = hits[index + 1]!;
+    const seam = (left.right + right.left) / 2;
+    const leftLane = index + 1;
+    const rightLane = index + 2;
+    // Use whole CSS-pixel side probes at least two pixels from the edge.
+    // The seam itself is sent as measured; the browser may quantize the delivered coordinates.
+    const probes = [
+      { kind: 'left', x: Math.floor(seam) - 2, allowed: [leftLane] },
+      { kind: 'seam', x: seam, allowed: [leftLane, rightLane] },
+      { kind: 'right', x: Math.ceil(seam) + 2, allowed: [rightLane] },
+    ];
+    const rows = [];
+    for (const { kind, x, allowed } of probes) {
+      const y = left.y;
+      const hitRows = await page.evaluate(({ x, ys }) => ys.map(y => {
+        const owner = document.elementFromPoint(x, y)?.closest<HTMLButtonElement>('button[data-lane]');
+        return { y, owner: owner ? Number(owner.dataset.lane) : null,
+          stack: document.elementsFromPoint(x, y).filter(node => node.matches('button[data-lane]'))
+            .map(node => Number((node as HTMLButtonElement).dataset.lane)) };
+      }), { x, ys: [Math.max(left.top, right.top) + 1, y, Math.min(left.bottom, right.bottom) - 1] });
+      for (const hit of hitRows) {
+        // WebKit can list both adjoining boxes at their common edge. The hit owner is the topmost one.
+        expect(allowed, `boundary ${leftLane}/${rightLane}, ${kind} at ${x},${hit.y}`).toContain(hit.owner);
+        expect(hit.stack[0]).toBe(hit.owner);
+        if (kind === 'seam') expect(hit.stack.every(lane => allowed.includes(lane))).toBe(true);
+        else expect(hit.stack).toEqual(allowed);
+      }
+      const count = await page.evaluate(() => (Reflect.get(window, 'crBoundaryPointers') as PointerSample[]).length);
+      await page.mouse.move(x, y);
+      await page.mouse.down();
+      const pressed = await pressedLanes(page);
+      await page.mouse.up();
+      const after = await pressedLanes(page);
+      const samples = await page.evaluate(from => (Reflect.get(window, 'crBoundaryPointers') as PointerSample[]).slice(from), count);
+      expect(pressed, `boundary ${leftLane}/${rightLane}, native ${kind}`).toHaveLength(1);
+      expect(allowed).toContain(pressed[0]);
+      expect(after).toEqual([]);
+      expect(samples).toEqual([
+        expect.objectContaining({ type: 'pointerdown', lane: pressed[0], trusted: true }),
+        expect.objectContaining({ type: 'pointerup', lane: pressed[0], trusted: true, id: samples[0]?.id }),
+      ]);
+      rows.push({ kind, requested: { x, y }, hitRows, samples, pressed, after });
+    }
+    evidence.push({ boundary: [leftLane, rightLane], seam, leftRight: left.right, rightLeft: right.left,
+      deltaCssPx: right.left - left.right, rows });
+  }
+  return evidence;
 }
 
 test('CR-T01/02/03/12–16: Canvas pixels and independent DOM hit targets align at all layouts', async ({ browser, browserName }, info) => {
@@ -120,16 +207,26 @@ test('CR-T01/02/03/12–16: Canvas pixels and independent DOM hit targets align 
     await prepare(page);
     await openPlayfieldWithoutAudio(page);
     await expect(page.getByText('ノーツが白い線に重なった瞬間に、そのレーンの線を押します。')).toBeVisible();
+    const edgeMeasurements = [];
     for (const viewport of [...viewports, { width: 1024, height: 768 }, viewports[0]]) {
       await page.setViewportSize(viewport);
       await expect(async () => assertAlignment(page)).toPass({ timeout: 4_000 });
+      const { hits } = await assertAlignment(page);
+      edgeMeasurements.push({ viewport, edges: hits.slice(1).map((hit, index) => ({
+        leftRight: hits[index]!.right, rightLeft: hit.left, deltaCssPx: hit.left - hits[index]!.right,
+      })) });
       if (browserName === 'chromium') {
         await info.attach(`line-${viewport.width}x${viewport.height}`, { body: await page.screenshot(), contentType: 'image/png' });
       }
     }
+    await info.attach('layout-edge-measurements', { body: JSON.stringify(edgeMeasurements), contentType: 'application/json' });
     await page.evaluate(() => { document.body.style.zoom = '1.25'; });
     await page.setViewportSize({ width: 540, height: 950 });
     await expect(async () => assertAlignment(page, true)).toPass({ timeout: 4_000 });
+    await watchBoundaryPointers(page);
+    const layout = await assertAlignment(page, true);
+    const boundaries = await assertBoundaryInput(page, layout);
+    await info.attach('css-zoom-125-boundaries', { body: JSON.stringify({ layout, boundaries }), contentType: 'application/json' });
     if (browserName === 'chromium') {
       const cdp = await context.newCDPSession(page);
       await cdp.send('Emulation.setDeviceMetricsOverride', { mobile: false, width: 540, height: 950, deviceScaleFactor: 1.5 });
@@ -143,7 +240,7 @@ test('CR-T01/02/03/12–16: Canvas pixels and independent DOM hit targets align 
   }
 });
 
-test('CR-T08/09/16: trusted multi-touch owns its starting lanes across a drag, ignores the field above the line and cancels safely', async ({ browserName, browser }) => {
+test('CR-T08/09/16: trusted multi-touch owns its starting lanes across a drag, ignores the field above the line and cancels safely', async ({ browserName, browser }, info) => {
   test.skip(browserName !== 'chromium', 'Trusted multi-touch uses the Chromium protocol.');
   test.setTimeout(45_000);
   const context = await browser.newContext({ viewport: viewports[0], hasTouch: true });
@@ -166,7 +263,36 @@ test('CR-T08/09/16: trusted multi-touch owns its starting lanes across a drag, i
     await prepare(page);
     await button(page, '演奏を始める').click();
     await expect(screen(page)).toHaveAttribute('data-state', 'PLAYING', { timeout: 12_000 });
+    await watchBoundaryPointers(page);
+    const layout = await assertAlignment(page);
+    const boundaries = await assertBoundaryInput(page, layout);
+    const boundaryInputs = await page.evaluate(() => (Reflect.get(window, 'crInputs') as unknown[]).splice(0));
+    expect(boundaryInputs).toEqual(boundaries.flatMap(({ rows }) => rows.flatMap(({ pressed }) => [
+      { lane: pressed[0], action: 'DOWN' }, { lane: pressed[0], action: 'UP' },
+    ])));
+    await info.attach('normalized-boundary-inputs', { body: JSON.stringify({ boundaries, boundaryInputs }), contentType: 'application/json' });
     const cdp = await context.newCDPSession(page);
+    const dualTouch = [];
+    for (const { boundary, rows } of boundaries) {
+      const [leftLane, rightLane] = boundary;
+      const left = { ...rows[0]!.requested, id: 1 };
+      const right = { ...rows[2]!.requested, id: 2 };
+      const moved = { x: right.x + 2, y: right.y + 3, id: left.id };
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [left, right] });
+      expect(await pressedLanes(page)).toEqual(boundary);
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [moved, right] });
+      expect(await pressedLanes(page)).toEqual(boundary);
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      expect(await pressedLanes(page)).toEqual([]);
+      const inputs = await page.evaluate(() => (Reflect.get(window, 'crInputs') as unknown[]).splice(0));
+      expect(inputs).toHaveLength(4);
+      expect(inputs).toEqual(expect.arrayContaining([
+        { lane: leftLane, action: 'DOWN' }, { lane: rightLane, action: 'DOWN' },
+        { lane: leftLane, action: 'UP' }, { lane: rightLane, action: 'UP' },
+      ]));
+      dualTouch.push({ boundary, left, right, moved, inputs });
+    }
+    await info.attach('simultaneous-boundary-touches', { body: JSON.stringify(dualTouch), contentType: 'application/json' });
     const first = { ...await center(page, 1), id: 1 };
     const third = { ...await center(page, 3), id: 3 };
     const second = await center(page, 2);
@@ -270,7 +396,7 @@ test('CR-T10: default keys and saved physical bindings light the corresponding l
   await expect(target(page, 1)).toHaveAttribute('data-pressed', 'false');
 });
 
-test('CR-T11: line rehold release resets the countdown and pointer rehold establishes the new generation', async ({ page, browserName }) => {
+test('CR-T11: line rehold release resets the countdown and pointer rehold establishes the new generation', async ({ page, browserName }, info) => {
   test.skip(browserName !== 'chromium', 'Uses the fixed R1 controlled audio timestamp fixture.');
   test.setTimeout(45_000);
   const hold = chart.events.find(event => event.type === 'HOLD_START')!;
@@ -290,16 +416,32 @@ test('CR-T11: line rehold release resets the countdown and pointer rehold establ
   await page.keyboard.up(keys[hold.lane - 1]!);
   await button(page, '再開').click();
   await expect(target(page, hold.lane)).toHaveAttribute('data-rehold', 'true');
-  const { x, y } = await center(page, hold.lane);
-  await page.mouse.move(x, y);
-  await page.mouse.down();
+  await watchBoundaryPointers(page);
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 2 });
+  const start = { ...await center(page, hold.lane), id: 1 };
+  const adjacent = await center(page, hold.lane === 4 ? 3 : hold.lane + 1);
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [start] });
   await expect(screen(page)).toHaveAttribute('data-state', 'RESUMING');
-  await page.mouse.up();
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
   await expect(screen(page)).toHaveAttribute('data-state', 'REHOLD_WAIT');
-  await page.mouse.down();
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [start] });
   await expect(screen(page)).toHaveAttribute('data-state', 'PLAYING', { timeout: 8_000 });
   await expect(screen(page)).toHaveAttribute('data-generation', String(generation + 1));
-  await page.mouse.up();
+  const pointer = await page.evaluate(() => (Reflect.get(window, 'crBoundaryPointers') as PointerSample[]).at(-1));
+  expect(pointer).toMatchObject({ type: 'pointerdown', lane: hold.lane, trusted: true });
+  expect(await target(page, hold.lane).evaluate((button, id) => button.hasPointerCapture(id), pointer!.id)).toBe(true);
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ ...adjacent, id: start.id }] });
+  expect(await pressedLanes(page)).toEqual([hold.lane]);
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  expect(await pressedLanes(page)).toEqual([]);
+  const samples = await page.evaluate(() => Reflect.get(window, 'crBoundaryPointers') as PointerSample[]);
+  expect(samples.map(({ type, lane, trusted }) => [type, lane, trusted])).toEqual([
+    ['pointerdown', hold.lane, true], ['pointerup', hold.lane, true],
+    ['pointerdown', hold.lane, true], ['pointerup', hold.lane, true],
+  ]);
+  await info.attach('resumed-hold-capture', { body: JSON.stringify({ startingLane: hold.lane, start, adjacent, samples }),
+    contentType: 'application/json' });
   await button(page, '演奏を中断').click();
   await expect(screen(page)).toHaveAttribute('data-screen', 'MENU');
   expect(await save(page)).toMatchObject({ revision: 0, records: {} });
